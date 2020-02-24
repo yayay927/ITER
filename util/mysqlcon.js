@@ -7,9 +7,9 @@ const multipleStatements = (process.env.NODE_ENV === 'test');
 const mysqlConfig = {
     production: { // for EC2 machine
         host: "localhost",
-        user: "root",
-        password: "123456",
-        database: "stylish"
+        user: "arthurlin",
+        password: "1234",
+        database: "stylish_backend"
     },
     development: { // for localhost development
         host: "localhost",
