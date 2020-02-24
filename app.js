@@ -7,6 +7,7 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const app = express();
 
+app.set('trust proxy', 'loopback');
 app.set('json spaces', 2);
 
 app.use(express.static("public"));
