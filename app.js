@@ -35,7 +35,7 @@ app.use("/api/" + API_VERSION,
 );
 
 // Error handling
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
     console.log(err);
     res.status(500).send('Internal Server Error');
 });

@@ -1,4 +1,3 @@
-const _ = require('lodash');
 const cache = require('../../util/cache');
 const {getProductsWithDetail} = require('./product_controller');
 const Marketing = require('../models/marketing_model');
@@ -10,8 +9,8 @@ const getCampaigns = async (req, res) => {
     let cacheCampaigns;
     try {
         cacheCampaigns = await cache.get(CACHE_CAMPAIGN_KEY);
-    } catch {
-        console.error("Get campaign cache error");
+    } catch (e) {
+        console.error(`Get campaign cache error: ${e}`);
     }
 
     if (cacheCampaigns) {
@@ -27,8 +26,8 @@ const getCampaigns = async (req, res) => {
 
     try {
         await cache.set(CACHE_CAMPAIGN_KEY, JSON.stringify(campaigns));
-    } catch {
-        console.error("Set campaign cache error");
+    } catch (e) {
+        console.error(`Set campaign cache error: ${e}`);
     }
 
     res.json({data: campaigns})
@@ -38,8 +37,8 @@ const getHots = async (req, res) => {
     let cacheHots;
     try {
         cacheHots = await cache.get(CACHE_HOT_KEY);
-    } catch {
-        console.error("Get hot cache error");
+    } catch (e) {
+        console.error(`Get hot cache error: ${e}`);
     }
 
     if (cacheHots) {
@@ -60,8 +59,8 @@ const getHots = async (req, res) => {
 
     try {
         await cache.set(CACHE_HOT_KEY, JSON.stringify(hots_with_detail));
-    } catch {
-        console.error("Set hot cache error");
+    } catch (e) {
+        console.error(`Set hot cache error: ${e}`);
     }
 
     res.json({data: hots_with_detail});
@@ -89,7 +88,7 @@ const createHot = async (req, res) => {
         const title = req.body.title;
         const productIds = req.body.product_ids.split(",");
     
-        const result = await Marketing.createHot(title, productIds);
+        await Marketing.createHot(title, productIds);
 
         res.status(200).send({status: "OK"})
     } catch (error) {

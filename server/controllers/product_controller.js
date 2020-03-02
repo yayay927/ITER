@@ -51,18 +51,22 @@ const getProducts = async (req, res) => {
                 return await Product.getProducts(pageSize, paging);
             case 'men': case 'women': case 'accessories':
                 return await Product.getProducts(pageSize, paging, {category})
-            case 'search':
+            case 'search': {
                 const keyword = req.query.keyword;
                 if (keyword) {
                     return await Product.getProducts(pageSize, paging, {keyword})
                 }
-            case 'hot':
+                break;
+            }
+            case 'hot': {
                 return await Product.getProducts(null, null, {category})
-            case 'details':
+            }
+            case 'details': {
                 const id = parseInt(req.query.id);
                 if (Number.isInteger(id)) {
                     return await Product.getProducts(pageSize, paging, {id})
                 }
+            }
         }
         return Promise.resolve({});
     }

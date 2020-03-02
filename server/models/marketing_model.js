@@ -14,7 +14,7 @@ const createHot = async (title, productIds) => {
         await query("insert into hot_product(hot_id, product_id) values ?", [hotProductMapping])
         await commit();
         return true
-    } catch {
+    } catch (e) {
         await rollback()
         return false
     }

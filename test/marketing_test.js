@@ -2,14 +2,17 @@ const {assert, requester} = require('./set_up');
 const {query} = require('../util/mysqlcon');
 const sinon = require('sinon');
 
+let stub1;
+let stub2;
+
 describe('marketing', () => {
 
     before(() => {
         const cache = require('../util/cache');
 
         // let cache do nothing
-        stub = sinon.stub(cache, 'get').callsFake((key) => {})
-        stub = sinon.stub(cache, 'set').callsFake((key, value) => {})
+        stub1 = sinon.stub(cache, 'get').callsFake(() => {})
+        stub2 = sinon.stub(cache, 'set').callsFake(() => {})
     })
 
     it('get campaign data', async () => {
@@ -106,5 +109,10 @@ describe('marketing', () => {
         const hots = await query("SELECT * FROM hot ORDER BY id DESC LIMIT 1");
         const products = await query("SELECT * FROM hot_product WHERE hot_id = ?", hots[0].id)
         assert.deepEqual(products.map(x => x.product_id), [1,2,3]);
+    })
+
+    after(() => {
+        stub1.restore();
+        stub2.restore();
     })
 })

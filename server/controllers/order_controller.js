@@ -1,5 +1,4 @@
 require('dotenv').config();
-const _ = require('lodash');
 const {TAPPAY_PARTNER_KEY} = process.env;
 const User = require('../models/user_model');
 const Order = require('../models/order_model');
