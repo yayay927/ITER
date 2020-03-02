@@ -1,4 +1,4 @@
-const cache = require('../../util/cache');
+const Cache = require('../../util/cache');
 const {getProductsWithDetail} = require('./product_controller');
 const Marketing = require('../models/marketing_model');
 const Product = require('../models/product_model');
@@ -8,7 +8,7 @@ const CACHE_HOT_KEY = "cacheHots";
 const getCampaigns = async (req, res) => {
     let cacheCampaigns;
     try {
-        cacheCampaigns = await cache.get(CACHE_CAMPAIGN_KEY);
+        cacheCampaigns = await Cache.get(CACHE_CAMPAIGN_KEY);
     } catch (e) {
         console.error(`Get campaign cache error: ${e}`);
     }
@@ -25,7 +25,7 @@ const getCampaigns = async (req, res) => {
     })
 
     try {
-        await cache.set(CACHE_CAMPAIGN_KEY, JSON.stringify(campaigns));
+        await Cache.set(CACHE_CAMPAIGN_KEY, JSON.stringify(campaigns));
     } catch (e) {
         console.error(`Set campaign cache error: ${e}`);
     }
@@ -36,7 +36,7 @@ const getCampaigns = async (req, res) => {
 const getHots = async (req, res) => {
     let cacheHots;
     try {
-        cacheHots = await cache.get(CACHE_HOT_KEY);
+        cacheHots = await Cache.get(CACHE_HOT_KEY);
     } catch (e) {
         console.error(`Get hot cache error: ${e}`);
     }
@@ -58,7 +58,7 @@ const getHots = async (req, res) => {
     }));
 
     try {
-        await cache.set(CACHE_HOT_KEY, JSON.stringify(hots_with_detail));
+        await Cache.set(CACHE_HOT_KEY, JSON.stringify(hots_with_detail));
     } catch (e) {
         console.error(`Set hot cache error: ${e}`);
     }
@@ -77,6 +77,7 @@ const createCampaign = async (req, res) => {
     console.log(campaign);
     try {    
         const campaignId = await Marketing.createCampaign(campaign);
+        await Cache.del(CACHE_CAMPAIGN_KEY);
         res.send({campaignId});
     } catch (error) {
         res.status(500).send({error});
@@ -89,6 +90,7 @@ const createHot = async (req, res) => {
         const productIds = req.body.product_ids.split(",");
     
         await Marketing.createHot(title, productIds);
+        await Cache.del(CACHE_HOT_KEY);
 
         res.status(200).send({status: "OK"})
     } catch (error) {
