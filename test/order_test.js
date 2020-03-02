@@ -91,12 +91,10 @@ describe('order', () => {
 
         const orderModel = require('../server/models/order_model');
         const fakePayOrderByPrime = (tappayKey, prime, order) => {
-            console.log(prime);
             return new Promise((resolve, reject) => {
                 if (prime === VALID_PRIME) {
                     resolve(fakeTappayResponse);
                 } else {
-                    console.log("HEHEH")
                     reject(INVALID_PRIME_ERROR);
                 }
             })

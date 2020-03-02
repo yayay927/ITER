@@ -31,21 +31,10 @@ const promiseQuery = (query, bindings) => {
     return promisify(mysqlCon.query).bind(mysqlCon)(query, bindings);
 };
 
-const promiseTransaction = () => {
-    return promisify(mysqlCon.beginTransaction).bind(mysqlCon);
-}
-
-const promiseCommit = () => {
-    return promisify(mysqlCon.commit).bind(mysqlCon);
-}
-
-const promiseRollback = () => {
-    return promisify(mysqlCon.rollback).bind(mysqlCon);
-}
-
-const promiseEnd = () => {
-    return promisify(mysqlCon.end).bind(mysqlCon);
-}
+const promiseTransaction = promisify(mysqlCon.beginTransaction).bind(mysqlCon);
+const promiseCommit = promisify(mysqlCon.commit).bind(mysqlCon);
+const promiseRollback = promisify(mysqlCon.rollback).bind(mysqlCon);
+const promiseEnd = promisify(mysqlCon.end).bind(mysqlCon);
 
 module.exports={
 	core: mysql,

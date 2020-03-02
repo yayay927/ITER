@@ -42,6 +42,9 @@ typings/
 # Optional npm cache directory
 .npm
 
+# Optional redis cache file
+dump.rdb
+
 # Optional eslint cache
 .eslintcache
 

@@ -1,7 +1,17 @@
 const {assert, requester} = require('./set_up');
 const {query} = require('../util/mysqlcon');
+const sinon = require('sinon');
 
 describe('marketing', () => {
+
+    before(() => {
+        const cache = require('../util/cache');
+
+        // let cache do nothing
+        stub = sinon.stub(cache, 'get').callsFake((key) => {})
+        stub = sinon.stub(cache, 'set').callsFake((key, value) => {})
+    })
+
     it('get campaign data', async () => {
         const res = await requester
             .get('/api/1.0/marketing/campaigns');
