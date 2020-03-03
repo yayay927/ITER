@@ -8,7 +8,7 @@ const users = [
         access_token: 'test1accesstoken',
         access_expired: (60*60), // 1hr by second
         login_at: new Date('2020-01-01')
-    }, 
+    },
     {
         provider: 'facebook',
         email: 'test2@gmail.com',
@@ -28,8 +28,8 @@ const users = [
         access_token: 'test3accesstoken',
         access_expired: 0,
         login_at: new Date('2020-01-01')
-    }, 
-]
+    },
+];
 
 const products = [
     {
@@ -252,18 +252,18 @@ const variants = [
         stock: 2,
         product_id: 2,
     },
-]
+];
 
-hots = [
+const hots = [
     {
         title: 'hot1'
     },
     {
         title: 'hot2'
     }
-]
+];
 
-hot_products = [
+const hot_products = [
     {
         hot_id: 1,
         product_id: 1
@@ -284,25 +284,25 @@ hot_products = [
         hot_id: 2,
         product_id: 4
     },
-]
+];
 
-campaigns = [
+const campaigns = [
     {
         product_id: 1,
         picture: 'keyvisual.jpg',
-        story: `測試1`
+        story: '測試1'
     },
     {
         product_id: 2,
         picture: 'keyvisual.jpg',
-        story: `測試2`
+        story: '測試2'
     },
     {
         product_id: 3,
         picture: 'keyvisual.jpg',
-        story: `測試3`
+        story: '測試3'
     }
-]
+];
 
 module.exports = {
     users,
@@ -311,4 +311,4 @@ module.exports = {
     hots,
     hot_products,
     campaigns,
-}
+};
