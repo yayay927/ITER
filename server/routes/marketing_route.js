@@ -6,9 +6,9 @@ const {
 } = require('../controllers/marketing_controller');
 
 router.route('/marketing/campaigns')
-    .get(getCampaigns)
+    .get(getCampaigns);
 
 router.route('/marketing/hots')
-    .get(getHots)
+    .get(getHots);
 
 module.exports = router;

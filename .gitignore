@@ -65,3 +65,6 @@ dump.rdb
 
 # package-lock
 package-lock.json
+
+# vscode
+.vscode

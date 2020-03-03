@@ -12,3 +12,7 @@ parserOptions:
 rules:
   no-console: off
   no-unused-vars: ["error", { "vars": "all", "args": "none"}]
+  linebreak-style: ["error", "unix"]
+  quotes: ["error", "single"]
+  semi: ["error", "always"]
+  no-trailing-spaces: ["error"]

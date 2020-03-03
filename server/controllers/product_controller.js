@@ -4,7 +4,7 @@ const Product = require('../models/product_model');
 const pageSize = 6;
 
 const createProduct = async (req, res) => {
-    const body = req.body;    
+    const body = req.body;
     const product = {
         id: body.product_id,
         category: body.category,
@@ -20,25 +20,25 @@ const createProduct = async (req, res) => {
     product.main_image = req.files.main_image[0].filename;
     product.images = req.files.other_images.map(img => img.filename).join(',');
 
-    const colorCodes = body.color_codes.split(",");
-    const colorNames = body.color_names.split(",");
-    const sizes = body.sizes.split(",");
+    const colorCodes = body.color_codes.split(',');
+    const colorNames = body.color_names.split(',');
+    const sizes = body.sizes.split(',');
 
     let variants = sizes.flatMap((size) => {
         return colorCodes.map((color_code, i) => {
             return [
-                color_code, 
+                color_code,
                 colorNames[i],
                 size,
                 Math.round(Math.random()*10),
                 product.id
-            ]
-        })
-    })
+            ];
+        });
+    });
 
     const productId = await Product.createProduct(product, variants);
     res.status(200).send({productId});
-}
+};
 
 // TODO: error handling
 const getProducts = async (req, res) => {
@@ -50,21 +50,21 @@ const getProducts = async (req, res) => {
             case 'all':
                 return await Product.getProducts(pageSize, paging);
             case 'men': case 'women': case 'accessories':
-                return await Product.getProducts(pageSize, paging, {category})
+                return await Product.getProducts(pageSize, paging, {category});
             case 'search': {
                 const keyword = req.query.keyword;
                 if (keyword) {
-                    return await Product.getProducts(pageSize, paging, {keyword})
+                    return await Product.getProducts(pageSize, paging, {keyword});
                 }
                 break;
             }
             case 'hot': {
-                return await Product.getProducts(null, null, {category})
+                return await Product.getProducts(null, null, {category});
             }
             case 'details': {
                 const id = parseInt(req.query.id);
                 if (Number.isInteger(id)) {
-                    return await Product.getProducts(pageSize, paging, {id})
+                    return await Product.getProducts(pageSize, paging, {id});
                 }
             }
         }
@@ -72,15 +72,15 @@ const getProducts = async (req, res) => {
     }
     const {products, productCount} = await findProduct(category);
     if (!products) {
-        res.status(400).send({error:"Wrong Request"});
+        res.status(400).send({error:'Wrong Request'});
         return;
-    } 
+    }
 
     if (products.length == 0) {
         if (category === 'details') {
-            res.status(200).json({data: null})
+            res.status(200).json({data: null});
         } else {
-            res.status(200).json({data: []})
+            res.status(200).json({data: []});
         }
         return;
     }
@@ -96,10 +96,10 @@ const getProducts = async (req, res) => {
         next_paging: paging + 1
     } : {
         data: productsWithDetail,
-    }
+    };
 
     res.status(200).json(result);
-}
+};
 
 const getProductsWithDetail = async (protocol, hostname, products) => {
     const productIds = products.map(p => p.id);
@@ -123,17 +123,17 @@ const getProductsWithDetail = async (protocol, hostname, products) => {
         const allColors = variants.map(v => ({
             code: v.color_code,
             name: v.color_name,
-        }))
+        }));
         p.colors = _.uniqBy(allColors, c => c.code);
 
-        const allSizes = variants.map(v => v.size)
+        const allSizes = variants.map(v => v.size);
         p.sizes = _.uniq(allSizes);
         return p;
-    })
-}
+    });
+};
 
 module.exports = {
     createProduct,
     getProductsWithDetail,
     getProducts,
-}
+};

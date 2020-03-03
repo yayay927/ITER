@@ -2,8 +2,8 @@ const Cache = require('../../util/cache');
 const {getProductsWithDetail} = require('./product_controller');
 const Marketing = require('../models/marketing_model');
 const Product = require('../models/product_model');
-const CACHE_CAMPAIGN_KEY = "cacheCampaigns"
-const CACHE_HOT_KEY = "cacheHots";
+const CACHE_CAMPAIGN_KEY = 'cacheCampaigns';
+const CACHE_HOT_KEY = 'cacheHots';
 
 const getCampaigns = async (req, res) => {
     let cacheCampaigns;
@@ -14,15 +14,15 @@ const getCampaigns = async (req, res) => {
     }
 
     if (cacheCampaigns) {
-        console.log("Get campaign from cache");
-        res.json({data: JSON.parse(cacheCampaigns)})
-        return 
+        console.log('Get campaign from cache');
+        res.json({data: JSON.parse(cacheCampaigns)});
+        return;
     }
 
     const campaigns = await Marketing.getCampaigns();
     campaigns.map(campaign => {
-        return campaign.picture = `/assets/${campaign.product_id}/${campaign.picture}`
-    })
+        return campaign.picture = `/assets/${campaign.product_id}/${campaign.picture}`;
+    });
 
     try {
         await Cache.set(CACHE_CAMPAIGN_KEY, JSON.stringify(campaigns));
@@ -30,8 +30,8 @@ const getCampaigns = async (req, res) => {
         console.error(`Set campaign cache error: ${e}`);
     }
 
-    res.json({data: campaigns})
-}
+    res.json({data: campaigns});
+};
 
 const getHots = async (req, res) => {
     let cacheHots;
@@ -42,9 +42,9 @@ const getHots = async (req, res) => {
     }
 
     if (cacheHots) {
-        console.log("Get hot from cache");
-        res.json({data: JSON.parse(cacheHots)})
-        return 
+        console.log('Get hot from cache');
+        res.json({data: JSON.parse(cacheHots)});
+        return;
     }
 
     const hots = await Marketing.getHots();
@@ -54,7 +54,7 @@ const getHots = async (req, res) => {
         return {
             title: hot.title,
             products: products_with_detail
-        }
+        };
     }));
 
     try {
@@ -64,7 +64,7 @@ const getHots = async (req, res) => {
     }
 
     res.json({data: hots_with_detail});
-}
+};
 
 const createCampaign = async (req, res) => {
     const body = req.body;
@@ -75,32 +75,32 @@ const createCampaign = async (req, res) => {
         story: body.story
     };
     console.log(campaign);
-    try {    
+    try {
         const campaignId = await Marketing.createCampaign(campaign);
         await Cache.del(CACHE_CAMPAIGN_KEY);
         res.send({campaignId});
     } catch (error) {
         res.status(500).send({error});
     }
-}
+};
 
 const createHot = async (req, res) => {
     try {
         const title = req.body.title;
-        const productIds = req.body.product_ids.split(",");
-    
+        const productIds = req.body.product_ids.split(',');
+
         await Marketing.createHot(title, productIds);
         await Cache.del(CACHE_HOT_KEY);
 
-        res.status(200).send({status: "OK"})
+        res.status(200).send({status: 'OK'});
     } catch (error) {
-        res.status(500).send({error})
+        res.status(500).send({error});
     }
-}
+};
 
 module.exports = {
     createCampaign,
     createHot,
     getCampaigns,
     getHots
-}
+};

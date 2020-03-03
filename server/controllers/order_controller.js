@@ -6,17 +6,17 @@ const Order = require('../models/order_model');
 const checkout = async (req, res) => {
     const data = req.body;
 	if (!data.order || !data.order.total || !data.order.list || !data.prime) {
-        res.status(400).send({error:"Create Order Error: Wrong Data Format"});
+        res.status(400).send({error:'Create Order Error: Wrong Data Format'});
 		return;
 	}
-    const token = req.get("Authorization");
-    const accessToken = token ? token.replace("Bearer ", "") : token;
+    const token = req.get('Authorization');
+    const accessToken = token ? token.replace('Bearer ', '') : token;
 
     const result = await User.getUserProfile(accessToken);
     const user = result.data;
 
     const now = new Date();
-    const number = "" + now.getMonth() + now.getDate() + (now.getTime()%(24*60*60*1000)) + Math.floor(Math.random()*10);
+    const number = '' + now.getMonth() + now.getDate() + (now.getTime()%(24*60*60*1000)) + Math.floor(Math.random()*10);
     const orderRecord = {
         number: number,
         time: now.getTime(),
@@ -37,8 +37,8 @@ const checkout = async (req, res) => {
         res.status(500).send({error});
         return;
     }
-}
+};
 
 module.exports = {
     checkout
-}
+};
