@@ -21,7 +21,7 @@ const upload = multer({
             cb(null, customFileName + '.' + fileExtension);
         }
     })
-})
+});
 
 const getImagePath = (protocol, hostname, productId) => {
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
@@ -29,9 +29,9 @@ const getImagePath = (protocol, hostname, productId) => {
     } else {
         return protocol + '://' + hostname + '/assets/' + productId + '/';
     }
-}
+};
 
 module.exports = {
     upload,
     getImagePath
-}
+};
