@@ -1,6 +1,6 @@
 require('dotenv').config();
-const {API_VERSION} = process.env;
-const port = process.env.PORT;
+const {PORT_TEST, PORT, NODE_ENV, API_VERSION} = process.env;
+const port = NODE_ENV == 'test' ? PORT_TEST : PORT;
 
 // Express Initialization
 const express = require('express');
