@@ -1,3 +1,4 @@
+const {NODE_ENV} = process.env;
 const {
     users,
     products,
@@ -8,19 +9,19 @@ const {
 } = require('./fake_data');
 const {transaction, commit, query, end} = require('../util/mysqlcon.js');
 
-function createFakeUser() {
+function _createFakeUser() {
     return query('INSERT INTO user (provider, email, password, name, picture, access_token, access_expired, login_at) VALUES ?', [users.map(x => Object.values(x))]);
 }
 
-function createFakeProduct() {
+function _createFakeProduct() {
     return query('INSERT INTO product (category, title, description, price, texture, wash, place, note, story, main_image, images) VALUES ?', [products.map(x => Object.values(x))]);
 }
 
-function createFakeVariant() {
+function _createFakeVariant() {
     return query('INSERT INTO variant (color_code, color_name, size, stock, product_id) VALUES ?', [variants.map(x => Object.values(x))]);
 }
 
-async function createFakeHot() {
+async function _createFakeHot() {
     await transaction();
     await query('INSERT INTO hot (title) VALUES ?', [hots.map(x => Object.values(x))]);
     await query('INSERT INTO hot_product (hot_id, product_id) VALUES ?', [hot_products.map(x => Object.values(x))]);
@@ -28,21 +29,31 @@ async function createFakeHot() {
     return Promise.resolve();
 }
 
-function createFakeCampaign() {
+function _createFakeCampaign() {
     return query('INSERT INTO campaign (product_id, picture, story) VALUES ?', [campaigns.map(x => Object.values(x))]);
 
 }
 
 function createFakeData() {
-    return createFakeProduct()
-        .then(() => {return createFakeUser();})
-        .then(() => {return createFakeVariant();})
-        .then(() => {return createFakeHot();})
-        .then(() => {return createFakeCampaign();})
+    if (NODE_ENV !== 'test') {
+        console.log('Not in test env');
+        return;
+    }
+
+    return _createFakeProduct()
+        .then(() => {return _createFakeUser();})
+        .then(() => {return _createFakeVariant();})
+        .then(() => {return _createFakeHot();})
+        .then(() => {return _createFakeCampaign();})
         .catch(console.log);
 }
 
 function truncateFakeData() {
+    if (NODE_ENV !== 'test') {
+        console.log('Not in test env');
+        return;
+    }
+
     console.log('truncate fake data');
     const setForeignKey = (status) => {
         return query('SET FOREIGN_KEY_CHECKS = ?', status);
