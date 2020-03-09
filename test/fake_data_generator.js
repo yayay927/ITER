@@ -41,10 +41,10 @@ function createFakeData() {
     }
 
     return _createFakeProduct()
-        .then(() => {return _createFakeUser();})
-        .then(() => {return _createFakeVariant();})
-        .then(() => {return _createFakeHot();})
-        .then(() => {return _createFakeCampaign();})
+        .then(_createFakeUser)
+        .then(_createFakeVariant)
+        .then(_createFakeHot)
+        .then(_createFakeCampaign)
         .catch(console.log);
 }
 
@@ -64,15 +64,15 @@ function truncateFakeData() {
     };
 
     return setForeignKey(0)
-        .then(() => {return truncateTable('user');})
-        .then(() => {return truncateTable('product');})
-        .then(() => {return truncateTable('variant');})
-        .then(() => {return truncateTable('hot');})
-        .then(() => {return truncateTable('hot_product');})
-        .then(() => {return truncateTable('campaign');})
-        .then(() => {return truncateTable('order_table');})
-        .then(() => {return truncateTable('payment');})
-        .then(() => {return setForeignKey(1);})
+        .then(truncateTable('user'))
+        .then(truncateTable('product'))
+        .then(truncateTable('variant'))
+        .then(truncateTable('hot'))
+        .then(truncateTable('hot_product'))
+        .then(truncateTable('campaign'))
+        .then(truncateTable('order_table'))
+        .then(truncateTable('payment'))
+        .then(setForeignKey(1))
         .catch(console.log);
 }
 
@@ -84,8 +84,8 @@ function closeConnection() {
 if (require.main === module) {
     console.log('main');
     truncateFakeData()
-        .then(() => {return createFakeData();})
-        .then(() => {return closeConnection();});
+        .then(createFakeData)
+        .then(closeConnection);
 }
 
 module.exports = {
