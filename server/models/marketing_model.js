@@ -1,7 +1,7 @@
 const {transaction, commit, rollback, query} = require('../../util/mysqlcon.js');
 
 const createCampaign = async (campaign) => {
-    const result = await query('insert into campaign set ?', campaign);
+    const result = await query('INSERT INTO campaign SET ?', campaign);
     return result.insertId;
 };
 
@@ -11,7 +11,7 @@ const createHot = async (title, productIds) => {
         const hot = await query('INSERT INTO hot SET ?', {title});
         const hotId = hot.insertId;
         const hotProductMapping = productIds.map(productId => [hotId, productId]);
-        await query('insert into hot_product(hot_id, product_id) values ?', [hotProductMapping]);
+        await query('INSERT INTO hot_product(hot_id, product_id) VALUES ?', [hotProductMapping]);
         await commit();
         return true;
     } catch (e) {

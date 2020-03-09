@@ -2,15 +2,15 @@ const {query, transaction, commit, rollback} = require('../../util/mysqlcon.js')
 const request = require('request');
 
 const createOrder = async (order) => {
-    const result = await query('insert into order_table set ?', order);
+    const result = await query('INSERT INTO order_table SET ?', order);
     return result.insertId;
 };
 
 const createPayment = async function(payment){
     try {
         await transaction();
-        await query('insert into payment set ?', payment);
-        await query('update order_table set status = ?', [0]);
+        await query('INSERT INTO payment SET ?', payment);
+        await query('UPDATE order_table SET status = ?', [0]);
         await commit();
         return true;
     } catch (error) {

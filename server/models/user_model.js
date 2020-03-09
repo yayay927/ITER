@@ -6,7 +6,7 @@ const signUp = async (name, email, password, expire) => {
     try {
         await transaction(); // TODO error handling
 
-        const emails = await query('select email from user where email = ? for update', [email]);
+        const emails = await query('SELECT email FROM user WHERE email = ? FOR UPDATE', [email]);
         if (emails.length > 0){
             return {error: 'Email Already Exists'};
         }
@@ -25,7 +25,7 @@ const signUp = async (name, email, password, expire) => {
             access_expired: expire,
             login_at: loginAt
         };
-        const queryStr = 'insert into user set ?';
+        const queryStr = 'INSERT INTO user SET ?';
 
         const result = await query(queryStr, user);
         user.id = result.insertId;
@@ -42,7 +42,7 @@ const nativeSignIn = async (email, password, expire) => {
     try {
         await transaction();
 
-        const users = await query('select * from user where email = ? and password = ?', [email, password]);
+        const users = await query('SELECT * FROM user WHERE email = ? AND password = ?', [email, password]);
         if (users.length === 0){
             return {error: 'Sign In Error'};
         }
@@ -53,7 +53,7 @@ const nativeSignIn = async (email, password, expire) => {
         sha.update(email + password + loginAt);
         const accessToken = sha.digest('hex');
 
-        const queryStr = 'update user set access_token = ?, access_expired = ?, login_at = ? where id = ?';
+        const queryStr = 'UPDATE user SET access_token = ?, access_expired = ?, login_at = ? WHERE id = ?';
         await query(queryStr, [accessToken, expire, loginAt, user.id]);
 
         await commit();
@@ -80,7 +80,7 @@ const facebookSignIn = async (id, name, email, accessToken, expire) => {
             login_at: loginAt
         };
 
-        const users = await query('select id from user where email = ? and provider = \'facebook\' for update', [email]);
+        const users = await query('SELECT id FROM user WHERE email = ? AND provider = \'facebook\' FOR UPDATE', [email]);
         let userId;
         if (users.length === 0) { // Insert new user
             const queryStr = 'insert into user set ?';
@@ -88,7 +88,7 @@ const facebookSignIn = async (id, name, email, accessToken, expire) => {
             userId = result.insertId;
         } else { // Update existed user
             userId = users[0].id;
-            const queryStr = 'update user set access_token = ?, access_expired = ?, login_at = ?  where id = ?';
+            const queryStr = 'UPDATE user SET access_token = ?, access_expired = ?, login_at = ?  WHERE id = ?';
             await query(queryStr, [accessToken, expire, loginAt, userId]);
         }
         user.id = userId;
@@ -103,7 +103,7 @@ const facebookSignIn = async (id, name, email, accessToken, expire) => {
 };
 
 const getUserProfile = async (accessToken) => {
-    const results = await query('select * from user where access_token = ?', [accessToken]);
+    const results = await query('SELECT * FROM user WHERE access_token = ?', [accessToken]);
     if (results.length === 0) {
         return {error: 'Invalid Access Token'};
     } else {
