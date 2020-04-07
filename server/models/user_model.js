@@ -8,6 +8,7 @@ const signUp = async (name, email, password, expire) => {
 
         const emails = await query('SELECT email FROM user WHERE email = ? FOR UPDATE', [email]);
         if (emails.length > 0){
+            await commit();
             return {error: 'Email Already Exists'};
         }
 
