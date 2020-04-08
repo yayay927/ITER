@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt');
+const salt = 10;
 const User = require('../models/user_model');
 const expire = (30 * 24 * 60 * 60); // 30 days by seconds
 

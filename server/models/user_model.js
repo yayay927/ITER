@@ -1,6 +1,8 @@
-const {query, transaction, commit, rollback} = require('../../util/mysqlcon.js');
+const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const request = require('request');
+const {query, transaction, commit, rollback} = require('../../util/mysqlcon.js');
+const salt = 10;
 
 const signUp = async (name, email, password, expire) => {
     try {
@@ -19,7 +21,7 @@ const signUp = async (name, email, password, expire) => {
         const user = {
             provider: 'native',
             email: email,
-            password: password,
+            password: bcrypt.hashSync(password, salt),
             name: name,
             picture: null,
             access_token: accessToken,
@@ -43,12 +45,13 @@ const nativeSignIn = async (email, password, expire) => {
     try {
         await transaction();
 
-        const users = await query('SELECT * FROM user WHERE email = ? AND password = ?', [email, password]);
-        if (users.length === 0){
-            return {error: 'Sign In Error'};
+        const users = await query('SELECT * FROM user WHERE email = ?', [email]);
+        const user = users[0];
+
+        if (!bcrypt.compareSync(password, user.password)){
+            return {error: 'Password is wrong'};
         }
 
-        const user = users[0];
         const loginAt = new Date();
         const sha = crypto.createHash('sha256');
         sha.update(email + password + loginAt);
