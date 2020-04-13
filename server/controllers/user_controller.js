@@ -1,12 +1,9 @@
-const bcrypt = require('bcrypt');
-const salt = 10;
 const User = require('../models/user_model');
 const expire = (30 * 24 * 60 * 60); // 30 days by seconds
 
 const signUp = async (req, res) => {
     const {name, email, password} = req.body;
 	if(!name || !email || !password) {
-        // TODO: make error message a const;
 		res.status(400).send({error:'Request Error: name, email and password are required.'});
 		return;
     }
