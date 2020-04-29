@@ -15,6 +15,7 @@ describe('marketing', () => {
         // let cache do nothing
         stub1 = sinon.stub(cache, 'get').callsFake(() => {});
         stub2 = sinon.stub(cache, 'set').callsFake(() => {});
+        stub2 = sinon.stub(cache, 'del').callsFake(() => {});
     });
 
     it('get campaign data', async () => {
@@ -87,7 +88,7 @@ describe('marketing', () => {
     });
 
 
-    it('create hot dat', async () => {
+    it('create hot data', async () => {
         await requester
             .post('/api/1.0/admin/hot')
             .send({

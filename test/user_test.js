@@ -1,9 +1,10 @@
+require('dotenv').config();
 const {assert, requester} = require('./set_up');
 const {users} = require('./fake_data');
 const sinon = require('sinon');
 const {query} = require('../util/mysqlcon');
 
-const expectedExpireTime = 30*24*60*60; // TODO: Should get from app.js or model or controller
+const expectedExpireTime = process.env.TOKEN_EXPIRE;
 const fbTokenSignInFirstTime = 'fbTokenFirstLogin';
 const fbTokenSignInAgain = 'fbTokenLoginAgain';
 const fbProfileSignInFirstTime = {
@@ -208,7 +209,7 @@ describe('order', () => {
             .post('/api/1.0/user/signin')
             .send(user);
 
-        assert.equal(res.body.error, 'Sign In Error');
+        assert.equal(res.body.error, 'Password is wrong');
     });
 
     /**
@@ -350,8 +351,6 @@ describe('order', () => {
 
         assert.equal(res.body.error, 'Invalid Access Token');
     });
-
-    // TODO: check token expired;
 
     after(() => {
         stub.restore();

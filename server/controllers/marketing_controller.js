@@ -75,27 +75,25 @@ const createCampaign = async (req, res) => {
         story: body.story
     };
     console.log(campaign);
+    const campaignId = await Marketing.createCampaign(campaign);
     try {
-        const campaignId = await Marketing.createCampaign(campaign);
         await Cache.del(CACHE_CAMPAIGN_KEY);
-        res.send({campaignId});
     } catch (error) {
-        res.status(500).send({error});
+        console.error(`Delete campaign cache error: ${error}`);
     }
+    res.send({campaignId});
 };
 
 const createHot = async (req, res) => {
+    const title = req.body.title;
+    const productIds = req.body.product_ids.split(',');
+    await Marketing.createHot(title, productIds);
     try {
-        const title = req.body.title;
-        const productIds = req.body.product_ids.split(',');
-
-        await Marketing.createHot(title, productIds);
         await Cache.del(CACHE_HOT_KEY);
-
-        res.status(200).send({status: 'OK'});
     } catch (error) {
-        res.status(500).send({error});
+        console.error(`Delete hot cache error: ${error}`);
     }
+    res.status(200).send({status: 'OK'});
 };
 
 module.exports = {

@@ -1,4 +1,6 @@
+require('dotenv').config();
 const {NODE_ENV} = process.env;
+const bcrypt = require('bcrypt');
 const {
     users,
     products,
@@ -8,9 +10,23 @@ const {
     campaigns,
 } = require('./fake_data');
 const {transaction, commit, query, end} = require('../util/mysqlcon.js');
+const salt = parseInt(process.env.BCRYPT_SALT);
 
 function _createFakeUser() {
-    return query('INSERT INTO user (provider, email, password, name, picture, access_token, access_expired, login_at) VALUES ?', [users.map(x => Object.values(x))]);
+    const encryped_users = users.map(user => {
+        const encryped_user = {
+            provider: user.provider,
+            email: user.email,
+            password: user.password ? bcrypt.hashSync(user.password, salt) : null,
+            name: user.name,
+            picture: user.picture,
+            access_token: user.access_token,
+            access_expired: user.access_expired,
+            login_at: user.login_at
+        };
+        return encryped_user;
+    });
+    return query('INSERT INTO user (provider, email, password, name, picture, access_token, access_expired, login_at) VALUES ?', [encryped_users.map(x => Object.values(x))]);
 }
 
 function _createFakeProduct() {

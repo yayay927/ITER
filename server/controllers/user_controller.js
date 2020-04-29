@@ -1,5 +1,6 @@
+require('dotenv').config();
 const User = require('../models/user_model');
-const expire = (30 * 24 * 60 * 60); // 30 days by seconds
+const expire = process.env.TOKEN_EXPIRE; // 30 days by seconds
 
 const signUp = async (req, res) => {
     const {name, email, password} = req.body;

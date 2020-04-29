@@ -1,12 +1,13 @@
+require('dotenv').config();
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const request = require('request');
 const {query, transaction, commit, rollback} = require('../../util/mysqlcon.js');
-const salt = 10;
+const salt = parseInt(process.env.BCRYPT_SALT);
 
 const signUp = async (name, email, password, expire) => {
     try {
-        await transaction(); // TODO error handling
+        await transaction();
 
         const emails = await query('SELECT email FROM user WHERE email = ? FOR UPDATE', [email]);
         if (emails.length > 0){

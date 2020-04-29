@@ -40,7 +40,6 @@ const createProduct = async (req, res) => {
     res.status(200).send({productId});
 };
 
-// TODO: error handling
 const getProducts = async (req, res) => {
     const category = req.params.category;
     const paging = parseInt(req.query.paging) || 0;
