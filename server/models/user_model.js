@@ -49,6 +49,7 @@ const nativeSignIn = async (email, password, expire) => {
         const user = users[0];
 
         if (!bcrypt.compareSync(password, user.password)){
+            await commit();
             return {error: 'Password is wrong'};
         }
 
