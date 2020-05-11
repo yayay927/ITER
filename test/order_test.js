@@ -120,7 +120,7 @@ describe('order', () => {
             .set('Authorization', `Bearer ${accessToken}`)
             .send(invalidOrderData);
 
-        assert.equal(res.statusCode, 500);
+        assert.equal(res.statusCode, 400);
         assert.equal(res.body.error, INVALID_PRIME_ERROR);
     });
 

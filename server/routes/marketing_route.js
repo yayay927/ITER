@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const {wrapAsync} = require('../../util/util');
 
 const {
     getCampaigns,
@@ -6,9 +7,9 @@ const {
 } = require('../controllers/marketing_controller');
 
 router.route('/marketing/campaigns')
-    .get(getCampaigns);
+    .get(wrapAsync(getCampaigns));
 
 router.route('/marketing/hots')
-    .get(getHots);
+    .get(wrapAsync(getHots));
 
 module.exports = router;

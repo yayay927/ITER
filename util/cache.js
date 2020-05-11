@@ -1,3 +1,4 @@
+require('dotenv').config();
 const {promisify} = require('util'); // util from native nodejs library
 const redis = require('redis');
 const redisClient = redis.createClient({host : 'localhost', port : 6379});
@@ -7,7 +8,9 @@ redisClient.on('ready',function() {
 });
 
 redisClient.on('error',function() {
-    console.log('Error in Redis');
+    if (process.env.NODE_ENV != 'test') {
+        console.log('Error in Redis');
+    }
 });
 
 const get = promisify(redisClient.get).bind(redisClient);

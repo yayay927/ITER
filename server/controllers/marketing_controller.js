@@ -15,7 +15,7 @@ const getCampaigns = async (req, res) => {
 
     if (cacheCampaigns) {
         console.log('Get campaign from cache');
-        res.json({data: JSON.parse(cacheCampaigns)});
+        res.status(200).json({data: JSON.parse(cacheCampaigns)});
         return;
     }
 
@@ -30,7 +30,7 @@ const getCampaigns = async (req, res) => {
         console.error(`Set campaign cache error: ${e}`);
     }
 
-    res.json({data: campaigns});
+    res.status(200).json({data: campaigns});
 };
 
 const getHots = async (req, res) => {
@@ -43,7 +43,7 @@ const getHots = async (req, res) => {
 
     if (cacheHots) {
         console.log('Get hot from cache');
-        res.json({data: JSON.parse(cacheHots)});
+        res.status(200).json({data: JSON.parse(cacheHots)});
         return;
     }
 
@@ -63,7 +63,7 @@ const getHots = async (req, res) => {
         console.error(`Set hot cache error: ${e}`);
     }
 
-    res.json({data: hots_with_detail});
+    res.status(200).json({data: hots_with_detail});
 };
 
 const createCampaign = async (req, res) => {

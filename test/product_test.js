@@ -55,6 +55,15 @@ describe('products', async () => {
         assert.equal(data[0].title, 'test searchkey product13');
     });
 
+    it('select products with wrong parameter', async () => {
+        // men
+        const res = await requester
+            .get('/api/1.0/products/wrong_parameter');
+
+        assert.equal(res.status, 400);
+        assert.deepEqual(JSON.parse(res.text), { error: 'Wrong Request' });
+    });
+
     it('select products with category', async () => {
         // men
         const res1 = await requester

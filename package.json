@@ -8,7 +8,8 @@
     },
     "scripts": {
         "test": "NODE_ENV=test mocha --exit",
-        "fakedata": "NODE_ENV=test node test/fake_data_generator.js"
+        "fakedata": "NODE_ENV=test node test/fake_data_generator.js",
+        "lint": "./node_modules/.bin/eslint . --fix"
     },
     "repository": {
         "type": "git",

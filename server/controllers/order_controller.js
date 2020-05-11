@@ -34,7 +34,7 @@ const checkout = async (req, res) => {
         await Order.createPayment(payment);
         res.send({data: {number}});
     } catch (error) {
-        res.status(500).send({error});
+        res.status(400).send({error});
         return;
     }
 };

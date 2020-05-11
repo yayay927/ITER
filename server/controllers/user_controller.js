@@ -10,7 +10,6 @@ const signUp = async (req, res) => {
     }
 
     const result = await User.signUp(name, email, password, expire);
-
     if (result.error) {
         res.status(403).send({error: result.error});
         return;
@@ -40,7 +39,7 @@ const signUp = async (req, res) => {
 
 const nativeSignIn = async (email, password) => {
     if(!email || !password){
-        return {error: 'Request Error: email and password are required.'};
+        return {error: 'Request Error: email and password are required.', status: 400};
     }
 
     try {
@@ -52,7 +51,7 @@ const nativeSignIn = async (email, password) => {
 
 const facebookSignIn = async (accessToken) => {
     if (!accessToken) {
-        return {error: 'Request Error: access token is required.'};
+        return {error: 'Request Error: access token is required.', status: 400};
     }
 
     try {
@@ -60,7 +59,7 @@ const facebookSignIn = async (accessToken) => {
         const {id, name, email} = profile;
 
         if(!id || !name || !email){
-            return {error: 'Permissions Error: id, name, email are required.'};
+            return {error: 'Permissions Error: id, name, email are required.', status: 403};
         }
 
         return await User.facebookSignIn(id, name, email, accessToken, expire);
@@ -85,7 +84,8 @@ const signIn = async (req, res) => {
     }
 
     if (result.error) {
-        res.status(403).send({error: result.error});
+        const status_code = result.status ? result.status : 403;
+        res.status(status_code).send({error: result.error});
         return;
     }
 
@@ -116,7 +116,7 @@ const getUserProfile = async (req, res) => {
 	if (accessToken) {
 		accessToken = accessToken.replace('Bearer ', '');
 	} else {
-		res.status(403).send({error: 'Wrong Request: authorization is required.'});
+		res.status(400).send({error: 'Wrong Request: authorization is required.'});
 		return;
     }
     const profile = await User.getUserProfile(accessToken);

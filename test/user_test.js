@@ -183,6 +183,7 @@ describe('order', () => {
             .post('/api/1.0/user/signin')
             .send(userNoEmail);
 
+        assert.equal(res1.status, 400);
         assert.equal(res1.body.error, 'Request Error: email and password are required.');
 
         const userNoPassword = {
@@ -194,6 +195,7 @@ describe('order', () => {
             .post('/api/1.0/user/signin')
             .send(userNoPassword);
 
+        assert.equal(res2.status, 400);
         assert.equal(res2.body.error, 'Request Error: email and password are required.');
     });
 
@@ -209,6 +211,7 @@ describe('order', () => {
             .post('/api/1.0/user/signin')
             .send(user);
 
+        assert.equal(res.status, 403);
         assert.equal(res.body.error, 'Password is wrong');
     });
 
@@ -287,6 +290,7 @@ describe('order', () => {
             .post('/api/1.0/user/signin')
             .send(user);
 
+        assert.equal(res.status, 400);
         assert.equal(res.body.error, 'Request Error: access token is required.');
     });
 
@@ -341,6 +345,7 @@ describe('order', () => {
         const res = await requester
             .get('/api/1.0/user/profile');
 
+        assert.equal(res.status, 400);
         assert.equal(res.body.error, 'Wrong Request: authorization is required.');
     });
 
@@ -349,6 +354,7 @@ describe('order', () => {
             .get('/api/1.0/user/profile')
             .set('Authorization', 'Bearer wrong_token');
 
+        assert.equal(res.status, 403);
         assert.equal(res.body.error, 'Invalid Access Token');
     });
 
