@@ -24,19 +24,20 @@ const checkout = async (req, res) => {
         details: JSON.stringify(data.order)
     };
     orderRecord.user_id = (user && user.id) ? user.id : null;
+    const orderId = await Order.createOrder(orderRecord);
+    let paymentResult;
     try {
-        const orderId = await Order.createOrder(orderRecord);
-        const paymentResult = await Order.payOrderByPrime(TAPPAY_PARTNER_KEY, data.prime, data.order);
-        const payment = {
-            order_id: orderId,
-            details: JSON.stringify(paymentResult)
-        };
-        await Order.createPayment(payment);
-        res.send({data: {number}});
+        paymentResult = await Order.payOrderByPrime(TAPPAY_PARTNER_KEY, data.prime, data.order);
     } catch (error) {
         res.status(400).send({error});
         return;
     }
+    const payment = {
+        order_id: orderId,
+        details: JSON.stringify(paymentResult)
+    };
+    await Order.createPayment(payment);
+    res.send({data: {number}});
 };
 
 module.exports = {

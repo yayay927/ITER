@@ -19,7 +19,7 @@ const createPayment = async function(payment){
     }
 };
 
-const payOrderByPrime = function(tappayKey, prime, order){
+const payOrderByPrime = async function(tappayKey, prime, order){
     return new Promise((resolve, reject) => {
         request({
             url:'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime',
