@@ -40,6 +40,8 @@ app.use(function(err, req, res, next) {
     res.status(500).send('Internal Server Error');
 });
 
-app.listen(port, () => {console.log(`Listening on port: ${port}`);});
+if (NODE_ENV != 'production'){
+    app.listen(port, () => {console.log(`Listening on port: ${port}`);});
+}
 
 module.exports = app;
