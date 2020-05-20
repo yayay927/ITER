@@ -1,5 +1,6 @@
 require('dotenv');
 const {assert, requester} = require('./set_up');
+const {AUTHENTICATION_CODE} = process.env;
 const {PORT} = process.env;
 const {query} = require('../util/mysqlcon');
 const sinon = require('sinon');
@@ -93,7 +94,8 @@ describe('marketing', () => {
             .post('/api/1.0/admin/hot')
             .send({
                 title: 'new hots',
-                product_ids: '1,2,3'
+                product_ids: '1,2,3',
+                authentication_code: AUTHENTICATION_CODE
             });
 
         const hots = await query('SELECT * FROM hot ORDER BY id DESC LIMIT 1');
@@ -106,7 +108,8 @@ describe('marketing', () => {
             .post('/api/1.0/admin/hot')
             .send({
                 title: 'new hots',
-                product_ids: '1,2,3'
+                product_ids: '1,2,3',
+                authentication_code: AUTHENTICATION_CODE
             });
 
         const hots = await query('SELECT * FROM hot ORDER BY id DESC LIMIT 1');

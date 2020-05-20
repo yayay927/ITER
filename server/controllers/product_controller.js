@@ -2,9 +2,16 @@ const _ = require('lodash');
 const util = require('../../util/util');
 const Product = require('../models/product_model');
 const pageSize = 6;
+const {AUTHENTICATION_CODE} = process.env;
 
 const createProduct = async (req, res) => {
     const body = req.body;
+
+    if (body.authentication_code != AUTHENTICATION_CODE) {
+        res.status(200).send('Authentication code is wrong');
+        return;
+    }
+
     const product = {
         id: body.product_id,
         category: body.category,
