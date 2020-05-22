@@ -59,7 +59,7 @@ const facebookSignIn = async (accessToken) => {
         const {id, name, email} = profile;
 
         if(!id || !name || !email){
-            return {error: 'Permissions Error: id, name, email are required.', status: 403};
+            return {error: 'Permissions Error: facebook access token can not get user id, name or email'};
         }
 
         return await User.facebookSignIn(id, name, email, accessToken, expire);

@@ -1,5 +1,5 @@
 const {query, transaction, commit, rollback} = require('../../util/mysqlcon.js');
-const request = require('request');
+const got = require('got');
 
 const createOrder = async (order) => {
     const result = await query('INSERT INTO order_table SET ?', order);
@@ -20,35 +20,27 @@ const createPayment = async function(payment){
 };
 
 const payOrderByPrime = async function(tappayKey, prime, order){
-    return new Promise((resolve, reject) => {
-        request({
-            url:'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime',
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json',
-                'x-api-key': tappayKey
+    let res = await got.post('https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime', {
+        headers: {
+            'Content-Type':'application/json',
+            'x-api-key': tappayKey
+        },
+        json: {
+            'prime': prime,
+            'partner_key': tappayKey,
+            'merchant_id': 'AppWorksSchool_CTBC',
+            'details': 'Stylish Payment',
+            'amount': order.total,
+            'cardholder': {
+                'phone_number': order.recipient.phone,
+                'name': order.recipient.name,
+                'email': order.recipient.email
             },
-            json:{
-                'prime': prime,
-                'partner_key': tappayKey,
-                'merchant_id': 'AppWorksSchool_CTBC',
-                'details': 'Stylish Payment',
-                'amount': order.total,
-                'cardholder': {
-                    'phone_number': order.recipient.phone,
-                    'name': order.recipient.name,
-                    'email': order.recipient.email
-                },
-                'remember': false
-            }
-        }, (error, response, body) => {
-            if (error) {
-                reject(error);
-            } else {
-                resolve(body);
-            }
-        });
+            'remember': false
+        },
+        responseType: 'json'
     });
+    return res.body;
 };
 
 module.exports = {

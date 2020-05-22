@@ -1,7 +1,7 @@
 require('dotenv').config();
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
-const request = require('request');
+const got = require('got');
 const {query, transaction, commit, rollback} = require('../../util/mysqlcon.js');
 const salt = parseInt(process.env.BCRYPT_SALT);
 
@@ -125,25 +125,16 @@ const getUserProfile = async (accessToken) => {
     }
 };
 
-
-const getFacebookProfile = function(accessToken){
-    return new Promise((resolve, reject) => {
-        if (!accessToken) {
-            resolve(null);
-            return;
-        }
-        request.get(
-            'https://graph.facebook.com/me?fields=id,name,email&access_token=' + accessToken,
-            function(error, response, body) {
-                body = JSON.parse(body);
-                if(body.error) {
-                    reject(body.error);
-                } else {
-                    resolve(body);
-                }
-            }
-        );
-    });
+const getFacebookProfile = async function(accessToken){
+    try {
+        let res = await got('https://graph.facebook.com/me?fields=id,name,email&access_token=' + accessToken, {
+            responseType: 'json'
+        });
+        return res.body;
+    } catch (e) {
+        console.log(e);
+        throw('Permissions Error: facebook access token is wrong');
+    }
 };
 
 module.exports = {
