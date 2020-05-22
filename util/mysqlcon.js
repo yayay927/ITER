@@ -4,7 +4,6 @@ const {promisify} = require('util'); // util from native nodejs library
 const env = process.env.NODE_ENV || 'production';
 const multipleStatements = (process.env.NODE_ENV === 'test');
 const {HOST, USERNAME, PASSWORD, DATABASE, DATABASE_TEST} = process.env;
-console.log(HOST, USERNAME, PASSWORD, DATABASE, DATABASE_TEST)
 
 const mysqlConfig = {
     production: { // for EC2 machine
