@@ -119,6 +119,20 @@ describe('order', () => {
         assert.equal(res.body.error, 'Email Already Exists');
     });
 
+    it('sign up with malicious email', async () => {
+        const user = {
+            name: users[0].name,
+            email: '<script>alert(1)</script>',
+            password: 'password'
+        };
+
+        const res = await requester
+            .post('/api/1.0/user/signup')
+            .send(user);
+
+        assert.equal(res.body.error, 'Request Error: Invalid email format');
+    });
+
     /**
      * Native Sign In
      */
@@ -214,6 +228,23 @@ describe('order', () => {
         assert.equal(res.status, 403);
         assert.equal(res.body.error, 'Password is wrong');
     });
+
+    it('native sign in with malicious password', async () => {
+        const user1 = users[0];
+        const user = {
+            provider: user1.provider,
+            email: user1.email,
+            password: '" OR 1=1; -- '
+        };
+
+        const res = await requester
+            .post('/api/1.0/user/signin')
+            .send(user);
+
+        assert.equal(res.status, 403);
+        assert.equal(res.body.error, 'Password is wrong');
+    });
+
 
     /**
      * Facebook Sign In

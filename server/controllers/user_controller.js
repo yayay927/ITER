@@ -1,13 +1,23 @@
 require('dotenv').config();
+const validator = require('validator');
 const User = require('../models/user_model');
 const expire = process.env.TOKEN_EXPIRE; // 30 days by seconds
 
 const signUp = async (req, res) => {
-    const {name, email, password} = req.body;
-	if(!name || !email || !password) {
+    let {name} = req.body;
+    const {email, password} = req.body;
+
+    if(!name || !email || !password) {
 		res.status(400).send({error:'Request Error: name, email and password are required.'});
 		return;
     }
+
+    if (!validator.isEmail(email)) {
+		res.status(400).send({error:'Request Error: Invalid email format'});
+		return;
+    }
+
+    name = validator.escape(name);
 
     const result = await User.signUp(name, email, password, expire);
     if (result.error) {

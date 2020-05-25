@@ -1,4 +1,5 @@
 require('dotenv').config();
+const validator = require('validator');
 const {TAPPAY_PARTNER_KEY} = process.env;
 const User = require('../models/user_model');
 const Order = require('../models/order_model');
@@ -21,7 +22,7 @@ const checkout = async (req, res) => {
         number: number,
         time: now.getTime(),
         status: -1, // -1 for init (not pay yet)
-        details: JSON.stringify(data.order)
+        details: validator.blacklist(JSON.stringify(data.order), '<>')
     };
     orderRecord.user_id = (user && user.id) ? user.id : null;
     const orderId = await Order.createOrder(orderRecord);
@@ -34,7 +35,7 @@ const checkout = async (req, res) => {
     }
     const payment = {
         order_id: orderId,
-        details: JSON.stringify(paymentResult)
+        details: validator.blacklist(JSON.stringify(paymentResult), '<>')
     };
     await Order.createPayment(payment);
     res.send({data: {number}});

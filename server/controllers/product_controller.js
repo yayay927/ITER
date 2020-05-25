@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const validator = require('validator');
 const util = require('../../util/util');
 const Product = require('../models/product_model');
 const pageSize = 6;
