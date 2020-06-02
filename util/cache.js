@@ -8,7 +8,7 @@ redisClient.on('ready',function() {
 });
 
 redisClient.on('error',function() {
-    if (process.env.NODE_ENV != 'test') {
+    if (process.env.NODE_ENV == 'production') {
         console.log('Error in Redis');
     }
 });
@@ -18,6 +18,7 @@ const set = promisify(redisClient.set).bind(redisClient);
 const del = promisify(redisClient.del).bind(redisClient);
 
 module.exports = {
+    redis,
     get,
     set,
     del

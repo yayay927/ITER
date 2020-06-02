@@ -9,7 +9,9 @@ const {AUTHENTICATION_CODE} = process.env;
 const getCampaigns = async (req, res) => {
     let cacheCampaigns;
     try {
-        cacheCampaigns = await Cache.get(CACHE_CAMPAIGN_KEY);
+        if (Cache.redis.ready) {
+            cacheCampaigns = await Cache.get(CACHE_CAMPAIGN_KEY);
+        }
     } catch (e) {
         console.error(`Get campaign cache error: ${e}`);
     }
@@ -26,7 +28,9 @@ const getCampaigns = async (req, res) => {
     });
 
     try {
-        await Cache.set(CACHE_CAMPAIGN_KEY, JSON.stringify(campaigns));
+        if (Cache.redis.ready) {
+            await Cache.set(CACHE_CAMPAIGN_KEY, JSON.stringify(campaigns));
+        }
     } catch (e) {
         console.error(`Set campaign cache error: ${e}`);
     }
@@ -37,7 +41,9 @@ const getCampaigns = async (req, res) => {
 const getHots = async (req, res) => {
     let cacheHots;
     try {
-        cacheHots = await Cache.get(CACHE_HOT_KEY);
+        if (Cache.redis.ready) {
+            cacheHots = await Cache.get(CACHE_HOT_KEY);
+        }
     } catch (e) {
         console.error(`Get hot cache error: ${e}`);
     }
@@ -59,7 +65,9 @@ const getHots = async (req, res) => {
     }));
 
     try {
-        await Cache.set(CACHE_HOT_KEY, JSON.stringify(hots_with_detail));
+        if (Cache.redis.ready) {
+            await Cache.set(CACHE_HOT_KEY, JSON.stringify(hots_with_detail));
+        }
     } catch (e) {
         console.error(`Set hot cache error: ${e}`);
     }
@@ -82,7 +90,9 @@ const createCampaign = async (req, res) => {
     console.log(campaign);
     const campaignId = await Marketing.createCampaign(campaign);
     try {
-        await Cache.del(CACHE_CAMPAIGN_KEY);
+        if (Cache.redis.ready) {
+            await Cache.del(CACHE_CAMPAIGN_KEY);
+        }
     } catch (error) {
         console.error(`Delete campaign cache error: ${error}`);
     }
@@ -99,7 +109,9 @@ const createHot = async (req, res) => {
     const productIds = body.product_ids.split(',');
     await Marketing.createHot(title, productIds);
     try {
-        await Cache.del(CACHE_HOT_KEY);
+        if (Cache.redis.ready) {
+            await Cache.del(CACHE_HOT_KEY);
+        }
     } catch (error) {
         console.error(`Delete hot cache error: ${error}`);
     }
