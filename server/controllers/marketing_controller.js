@@ -7,7 +7,6 @@ const CACHE_HOT_KEY = 'cacheHots';
 const {AUTHENTICATION_CODE} = process.env;
 
 const getCampaigns = async (req, res) => {
-    console.log(Cache.client.ready)
     let cacheCampaigns;
     try {
         if (Cache.client.ready) {
