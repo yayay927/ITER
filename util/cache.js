@@ -18,7 +18,7 @@ const set = promisify(redisClient.set).bind(redisClient);
 const del = promisify(redisClient.del).bind(redisClient);
 
 module.exports = {
-    redis,
+    client: redisClient,
     get,
     set,
     del

@@ -7,9 +7,10 @@ const CACHE_HOT_KEY = 'cacheHots';
 const {AUTHENTICATION_CODE} = process.env;
 
 const getCampaigns = async (req, res) => {
+    console.log(Cache.client.ready)
     let cacheCampaigns;
     try {
-        if (Cache.redis.ready) {
+        if (Cache.client.ready) {
             cacheCampaigns = await Cache.get(CACHE_CAMPAIGN_KEY);
         }
     } catch (e) {
@@ -28,7 +29,7 @@ const getCampaigns = async (req, res) => {
     });
 
     try {
-        if (Cache.redis.ready) {
+        if (Cache.client.ready) {
             await Cache.set(CACHE_CAMPAIGN_KEY, JSON.stringify(campaigns));
         }
     } catch (e) {
@@ -41,7 +42,7 @@ const getCampaigns = async (req, res) => {
 const getHots = async (req, res) => {
     let cacheHots;
     try {
-        if (Cache.redis.ready) {
+        if (Cache.client.ready) {
             cacheHots = await Cache.get(CACHE_HOT_KEY);
         }
     } catch (e) {
@@ -65,7 +66,7 @@ const getHots = async (req, res) => {
     }));
 
     try {
-        if (Cache.redis.ready) {
+        if (Cache.client.ready) {
             await Cache.set(CACHE_HOT_KEY, JSON.stringify(hots_with_detail));
         }
     } catch (e) {
@@ -90,7 +91,7 @@ const createCampaign = async (req, res) => {
     console.log(campaign);
     const campaignId = await Marketing.createCampaign(campaign);
     try {
-        if (Cache.redis.ready) {
+        if (Cache.client.ready) {
             await Cache.del(CACHE_CAMPAIGN_KEY);
         }
     } catch (error) {
@@ -109,7 +110,7 @@ const createHot = async (req, res) => {
     const productIds = body.product_ids.split(',');
     await Marketing.createHot(title, productIds);
     try {
-        if (Cache.redis.ready) {
+        if (Cache.client.ready) {
             await Cache.del(CACHE_HOT_KEY);
         }
     } catch (error) {
