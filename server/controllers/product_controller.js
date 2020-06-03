@@ -117,22 +117,22 @@ const getProductsWithDetail = async (protocol, hostname, products) => {
         p.main_image = p.main_image ? imagePath + p.main_image : null;
         p.images = p.images ? p.images.split(',').map(img => imagePath + img) : null;
 
-        const variants = variantsMap[p.id];
-        if (!variants) { return p; }
+        const productVariants = variantsMap[p.id];
+        if (!productVariants) { return p; }
 
-        p.variants = variants.map(v => ({
+        p.variants = productVariants.map(v => ({
             color_code: v.color_code,
             size: v.size,
-            stock: v.stock
+            stock: v.stock,
         }));
 
-        const allColors = variants.map(v => ({
+        const allColors = productVariants.map(v => ({
             code: v.color_code,
             name: v.color_name,
         }));
         p.colors = _.uniqBy(allColors, c => c.code);
 
-        const allSizes = variants.map(v => v.size);
+        const allSizes = productVariants.map(v => v.size);
         p.sizes = _.uniq(allSizes);
         return p;
     });
