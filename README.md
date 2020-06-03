@@ -8,7 +8,7 @@
     1. ```mysql -u <user_name> -p <stylish_db_name> < stylish_backend.sql```
     2. ```mysql -u <user_name> -p <stylish_test_db_name> < stylish_test.sql``` (Optional)
 4. Modidy the `API_HOST` in config: ```./public/js/config.js```. The front-end code will use this address to call API. You should change it to `localhost` or `your own ip address`
-5. Create config: ```.env``` for backend (see: template: ```.env-template```)
+5. Create config: ```.env``` for backend (You can copy the schema from template: ```.env-template```)
     1. set `HOST`, `USERNAME`, `PASSWORD`, `DATABASE` for MySQL server (`DATABASE_TEST` is Optional)
     2. set `NODE_ENV` to `development` for development
     3. set `TAPPAY_PARTNER_KEY` for cash flow (copy from your STYLiSH project)
