@@ -8,13 +8,13 @@ const signUp = async (req, res) => {
     const {email, password} = req.body;
 
     if(!name || !email || !password) {
-		res.status(400).send({error:'Request Error: name, email and password are required.'});
-		return;
+        res.status(400).send({error:'Request Error: name, email and password are required.'});
+        return;
     }
 
     if (!validator.isEmail(email)) {
-		res.status(400).send({error:'Request Error: Invalid email format'});
-		return;
+        res.status(400).send({error:'Request Error: Invalid email format'});
+        return;
     }
 
     name = validator.escape(name);
