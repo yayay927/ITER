@@ -14,7 +14,7 @@
     3. set `TAPPAY_PARTNER_KEY` for cash flow (copy from your STYLiSH project)
     4. set `AUTHENTICATION_CODE` for creating products & campaigns, you can choose arbitrary value for it. (look at `product_controller.js` and `marketing_controller.js` for more detail)
     5. set `BCRYPT_SALT` for password encryption (Optional)
-6. Start a redis server in `localhost` at port `6379` (Optional, the server can still work without this, see ```marketing_controller``` for more detail)
+6. Start a redis server in `localhost` at port `6379` (Optional, the server can still work without this, see ```marketing_controller.js``` for more detail)
 7. Start server: ```nodemon app.js```
 
 ### Integration Test (Optional)
