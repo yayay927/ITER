@@ -6,6 +6,49 @@ const CACHE_CAMPAIGN_KEY = 'cacheCampaigns';
 const CACHE_HOT_KEY = 'cacheHots';
 const {AUTHENTICATION_CODE} = process.env;
 
+const createCampaign = async (req, res) => {
+    const body = req.body;
+    if (body.authentication_code != AUTHENTICATION_CODE) {
+        res.status(401).send('Authentication code is wrong');
+        return;
+    }
+    const image = req.files.main_image[0].filename;
+    const campaign = {
+        product_id: parseInt(body.product_id),
+        picture: image,
+        story: body.story
+    };
+    console.log(campaign);
+    const campaignId = await Marketing.createCampaign(campaign);
+    try {
+        if (Cache.client.ready) {
+            await Cache.del(CACHE_CAMPAIGN_KEY);
+        }
+    } catch (error) {
+        console.error(`Delete campaign cache error: ${error}`);
+    }
+    res.send({campaignId});
+};
+
+const createHot = async (req, res) => {
+    const body = req.body;
+    if (body.authentication_code != AUTHENTICATION_CODE) {
+        res.status(401).send('Authentication code is wrong');
+        return;
+    }
+    const title = body.title;
+    const productIds = body.product_ids.split(',');
+    await Marketing.createHot(title, productIds);
+    try {
+        if (Cache.client.ready) {
+            await Cache.del(CACHE_HOT_KEY);
+        }
+    } catch (error) {
+        console.error(`Delete hot cache error: ${error}`);
+    }
+    res.status(200).send({status: 'OK'});
+};
+
 const getCampaigns = async (req, res) => {
     let cacheCampaigns;
     try {
@@ -73,49 +116,6 @@ const getHots = async (req, res) => {
     }
 
     res.status(200).json({data: hots_with_detail});
-};
-
-const createCampaign = async (req, res) => {
-    const body = req.body;
-    if (body.authentication_code != AUTHENTICATION_CODE) {
-        res.status(200).send('Authentication code is wrong');
-        return;
-    }
-    const image = req.files.main_image[0].filename;
-    const campaign = {
-        product_id: parseInt(body.product_id),
-        picture: image,
-        story: body.story
-    };
-    console.log(campaign);
-    const campaignId = await Marketing.createCampaign(campaign);
-    try {
-        if (Cache.client.ready) {
-            await Cache.del(CACHE_CAMPAIGN_KEY);
-        }
-    } catch (error) {
-        console.error(`Delete campaign cache error: ${error}`);
-    }
-    res.send({campaignId});
-};
-
-const createHot = async (req, res) => {
-    const body = req.body;
-    if (body.authentication_code != AUTHENTICATION_CODE) {
-        res.status(200).send('Authentication code is wrong');
-        return;
-    }
-    const title = body.title;
-    const productIds = body.product_ids.split(',');
-    await Marketing.createHot(title, productIds);
-    try {
-        if (Cache.client.ready) {
-            await Cache.del(CACHE_HOT_KEY);
-        }
-    } catch (error) {
-        console.error(`Delete hot cache error: ${error}`);
-    }
-    res.status(200).send({status: 'OK'});
 };
 
 module.exports = {

@@ -1,5 +1,4 @@
 const _ = require('lodash');
-const validator = require('validator');
 const util = require('../../util/util');
 const Product = require('../models/product_model');
 const pageSize = 6;
@@ -9,7 +8,7 @@ const createProduct = async (req, res) => {
     const body = req.body;
 
     if (body.authentication_code != AUTHENTICATION_CODE) {
-        res.status(200).send('Authentication code is wrong');
+        res.status(401).send('Authentication code is wrong');
         return;
     }
 
