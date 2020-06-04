@@ -3,35 +3,32 @@ const mysql = require('mysql');
 const {promisify} = require('util'); // util from native nodejs library
 const env = process.env.NODE_ENV || 'production';
 const multipleStatements = (process.env.NODE_ENV === 'test');
-const {HOST, USERNAME, PASSWORD, DATABASE, DATABASE_TEST} = process.env;
+const {DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_DATABASE_TEST} = process.env;
 
 const mysqlConfig = {
     production: { // for EC2 machine
-        host: HOST,
-        user: USERNAME,
-        password: PASSWORD,
-        database: DATABASE
+        host: DB_HOST,
+        user: DB_USERNAME,
+        password: DB_PASSWORD,
+        database: DB_DATABASE
     },
     development: { // for localhost development
-        host: HOST,
-        user: USERNAME,
-        password: PASSWORD,
-        database: DATABASE
+        host: DB_HOST,
+        user: DB_USERNAME,
+        password: DB_PASSWORD,
+        database: DB_DATABASE
     },
     test: { // for automation testing (command: npm run test)
-        host: HOST,
-        user: USERNAME,
-        password: PASSWORD,
-        database: DATABASE_TEST
+        host: DB_HOST,
+        user: DB_USERNAME,
+        password: DB_PASSWORD,
+        database: DB_DATABASE_TEST
     }
 };
 
 const mysqlCon = mysql.createConnection(mysqlConfig[env], {multipleStatements});
 
-const promiseQuery = (query, bindings) => {
-    return promisify(mysqlCon.query).bind(mysqlCon)(query, bindings);
-};
-
+const promiseQuery = promisify(mysqlCon.query).bind(mysqlCon);
 const promiseTransaction = promisify(mysqlCon.beginTransaction).bind(mysqlCon);
 const promiseCommit = promisify(mysqlCon.commit).bind(mysqlCon);
 const promiseRollback = promisify(mysqlCon.rollback).bind(mysqlCon);
