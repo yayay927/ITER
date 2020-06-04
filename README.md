@@ -16,6 +16,7 @@
     5. set `BCRYPT_SALT` for password encryption (Optional)
 6. Start a redis server in `localhost` at port `6379` (Optional, the server can still work without this, see ```marketing_controller.js``` for more detail)
 7. Start server: ```nodemon app.js```
+8. Clear Browser localStorage if needed. The same address will use the same space to records localStorage key-value pairs and it may conflict with mine. (Optional)
 
 ### Integration Test (Optional)
 
