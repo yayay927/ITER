@@ -9,4 +9,4 @@ require('greenlock-express').create({
     app: require('./app.js'),
     store: require('greenlock-store-fs')
 //, debug: true
-}).listen(3000, 3005);
+}).listen(80, 443);
