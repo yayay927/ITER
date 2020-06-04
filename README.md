@@ -22,4 +22,9 @@
 
 1. Import ```stylish_test.sql``` into database 
 2. Set  ```DATABASE_TEST``` key to ```stylish_test``` 
+
+#### For Macbook or Linux
 3. Run integration test: ```npm run test```
+
+#### For Windows:
+3. Run integration test: ```npm run test_windows```
