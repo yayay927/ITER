@@ -6,23 +6,27 @@ function _createFakeOrder(orders) {
     return query('INSERT INTO order_table (number, time, status, details, user_id) VALUES ?', [orders.map(x => Object.values(x))]);
 }
 
-function createFakeData() {
-    let orders = [];
-    for (let i = 0; i < ORDER_QUANTITY; i++) {
-        let order = {
-            number: i,
-            time: Date.now(),
-            status: 0,
-            details: JSON.stringify({
-                total: Math.floor(Math.random() * 1000)
-            }),
-            user_id: 1 + Math.floor(Math.random() * 5)
-        };
-        orders.push(order);
+async function createFakeData() {
+    let i = 0;
+    while (i < ORDER_QUANTITY) {
+        let j = 0;
+        let orders = [];
+        while (j < 10000){
+            let order = {
+                number: i,
+                time: Date.now(),
+                status: 0,
+                details: JSON.stringify({
+                    total: Math.floor(Math.random() * 1000)
+                }),
+                user_id: 1 + Math.floor(Math.random() * 5)
+            };
+            orders.push(order);
+            j += 1;
+        }
+        i += j;
+        await _createFakeOrder(orders);
     }
-    console.log(orders);
-    return _createFakeOrder(orders)
-        .catch(console.log);
 }
 
 function truncateFakeData() {

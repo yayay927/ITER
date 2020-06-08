@@ -43,7 +43,7 @@ const payOrderByPrime = async function(tappayKey, prime, order){
     return res.body;
 };
 
-const getOrders = async () => {
+const getUserPayments = async () => {
     const orders = await query('SELECT * FROM order_table');
     return orders;
 };
@@ -52,5 +52,5 @@ module.exports = {
     createOrder,
     createPayment,
     payOrderByPrime,
-    getOrders,
+    getUserPayments,
 };

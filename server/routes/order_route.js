@@ -3,14 +3,14 @@ const {wrapAsync} = require('../../util/util');
 
 const {
     checkout,
-    getOrders
+    getUserPayments,
 } = require('../controllers/order_controller');
 
 router.route('/order/checkout')
     .post(wrapAsync(checkout));
 
 // only for load test (Not in API Docs)
-router.route('/orders')
-    .get(wrapAsync(getOrders));
+router.route('/order/payments')
+    .get(wrapAsync(getUserPayments));
 
 module.exports = router;

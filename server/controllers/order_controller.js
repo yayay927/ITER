@@ -41,8 +41,8 @@ const checkout = async (req, res) => {
     res.send({data: {number}});
 };
 
-const getOrders = async (req, res) => {
-    const orders = await Order.getOrders();
+const getUserPayments = async (req, res) => {
+    const orders = await Order.getUserPayments();
     const user_payments = orders.map(order => {
         let details = JSON.parse(order.details);
         return {user_id: order.user_id, total: details.total};
@@ -59,5 +59,5 @@ const getOrders = async (req, res) => {
 
 module.exports = {
     checkout,
-    getOrders
+    getUserPayments
 };
