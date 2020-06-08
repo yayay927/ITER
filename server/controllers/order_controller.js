@@ -41,6 +41,23 @@ const checkout = async (req, res) => {
     res.send({data: {number}});
 };
 
+const getOrders = async (req, res) => {
+    const orders = await Order.getOrders();
+    const user_payments = orders.map(order => {
+        let details = JSON.parse(order.details);
+        return {user_id: order.user_id, total: details.total};
+    }).reduce((obj, order) => {
+        let user_id = order.user_id;
+        if (!(user_id in obj)) {
+            obj[user_id] = 0;
+        }
+        obj[user_id] += order.total;
+        return obj;
+    }, {});
+    res.status(200).send({data: user_payments});
+};
+
 module.exports = {
-    checkout
+    checkout,
+    getOrders
 };
