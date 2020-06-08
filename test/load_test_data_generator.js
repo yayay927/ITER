@@ -1,6 +1,6 @@
 require('dotenv').config();
 const {query, end} = require('../util/mysqlcon.js');
-const ORDER_QUANTITY = 1000;
+const ORDER_QUANTITY = 5000;
 
 function _createFakeOrder(orders) {
     return query('INSERT INTO order_table (number, time, status, details, user_id) VALUES ?', [orders.map(x => Object.values(x))]);
@@ -11,7 +11,7 @@ async function createFakeData() {
     while (i < ORDER_QUANTITY) {
         let j = 0;
         let orders = [];
-        while (j < 10000){
+        while (j < Math.min(10000, ORDER_QUANTITY)){
             let order = {
                 number: i,
                 time: Date.now(),
