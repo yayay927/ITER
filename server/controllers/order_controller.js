@@ -54,7 +54,13 @@ const getUserPayments = async (req, res) => {
         obj[user_id] += order.total;
         return obj;
     }, {});
-    res.status(200).send({data: user_payments});
+    const user_payments_data = Object.keys(user_payments).map(user_id => {
+        return {
+            user_id,
+            total_payment: user_payments[user_id]
+        };
+    });
+    res.status(200).send({data: user_payments_data});
 };
 
 module.exports = {
