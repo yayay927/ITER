@@ -41,6 +41,7 @@ const checkout = async (req, res) => {
     res.send({data: {number}});
 };
 
+// For Load Test
 const getUserPayments = async (req, res) => {
     const orders = await Order.getUserPayments();
     const user_payments = orders.map(order => {
