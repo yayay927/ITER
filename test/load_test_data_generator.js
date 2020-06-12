@@ -1,27 +1,27 @@
+/* eslint-disable no-unused-vars */
 require('dotenv').config();
 const {query, end} = require('../util/mysqlcon.js');
-const ORDER_QUANTITY = 5000;
+const {getTotalOrders} = require('./load_test_data');
+const totalOrders = getTotalOrders();
 
 function _createFakeOrder(orders) {
-    return query('INSERT INTO order_table (number, time, status, details, user_id) VALUES ?', [orders.map(x => Object.values(x))]);
+    return query('INSERT INTO order_table (number, time, status, details) VALUES ?',
+        [orders.map((x, i) => ([
+            i,
+            Date.now(),
+            0,
+            JSON.stringify(x),
+        ]))]
+    );
 }
 
 async function createFakeData() {
     let i = 0;
-    while (i < ORDER_QUANTITY) {
+    while (i < totalOrders.length) {
         let j = 0;
         let orders = [];
-        while (j < Math.min(10000, ORDER_QUANTITY)){
-            let order = {
-                number: i,
-                time: Date.now(),
-                status: 0,
-                details: JSON.stringify({
-                    total: Math.floor(Math.random() * 1000)
-                }),
-                user_id: 1 + Math.floor(Math.random() * 5)
-            };
-            orders.push(order);
+        while (j < Math.min(10000, totalOrders.length)){
+            orders.push(totalOrders[i+j]);
             j += 1;
         }
         i += j;
@@ -52,7 +52,7 @@ function closeConnection() {
 if (require.main === module) {
     console.log('main');
     truncateFakeData()
-            .then(createFakeData)
+        .then(createFakeData)
         .then(closeConnection);
 }
 
