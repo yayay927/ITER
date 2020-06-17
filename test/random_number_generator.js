@@ -1,4 +1,3 @@
-
 function beta_trans(n) {
     return Math.sin((n*Math.PI)/2) ** 2;
 }
@@ -11,11 +10,6 @@ function beta_left_trans(n) {
 function beta_right_trans(n) {
     let beta = beta_trans(n);
     return (beta > 0.5) ? 2*beta-1 : 2*(1-beta)-1;
-}
-
-function beta_left_middle_trans(n) {
-    let beta = beta_trans(n);
-    return (beta < 0.7) ? 2*beta : 2*(1-beta);
 }
 
 function Generator(range, beta_func) {
@@ -34,6 +28,5 @@ module.exports = {
     beta_trans,
     beta_left_trans,
     beta_right_trans,
-    beta_left_middle_trans,
     Generator
 };
