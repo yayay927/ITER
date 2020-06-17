@@ -9,6 +9,7 @@ globals:
   SharedArrayBuffer: readonly
 parserOptions:
   ecmaVersion: 2018
+ignorePatterns: ["*.ejs"]
 rules:
   no-console: off
   no-unused-vars: ["error", { "vars": "all", "args": "none"}]

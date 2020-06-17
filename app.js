@@ -5,6 +5,7 @@ const port = NODE_ENV == 'test' ? PORT_TEST : PORT;
 // Express Initialization
 const express = require('express');
 const bodyparser = require('body-parser');
+const cors = require('cors');
 const app = express();
 
 app.set('trust proxy', 'loopback');
@@ -14,14 +15,8 @@ app.use(express.static('public'));
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
 
-// CORS Control
-app.use('/api/', function(req, res, next){
-	res.set('Access-Control-Allow-Origin', '*');
-	res.set('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept, Authorization');
-	res.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-	res.set('Access-Control-Allow-Credentials', 'true');
-	next();
-});
+// CORS allow all
+app.use(cors());
 
 // API routes
 app.use('/api/' + API_VERSION,

@@ -7,16 +7,15 @@
 3. Import database:
     1. ```mysql -u <user_name> -p <stylish_db_name> < stylish_backend.sql```
     2. ```mysql -u <user_name> -p <stylish_test_db_name> < stylish_test.sql``` (Optional)
-4. Modidy the `API_HOST` in config: ```./public/js/config.js```. The front-end code will use this address to call API. You should change it to `localhost` or `your own ip address`
-5. Create config: ```.env``` for backend (You can copy the schema from template: ```.env-template```)
+4. Create config: ```.env``` for backend (You can copy the schema from template: ```.env-template```)
     1. set `DB_HOST`, `DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE` for MySQL server (`DB_DATABASE_TEST` is Optional)
     2. set `NODE_ENV` to `development` for development
     3. set `TAPPAY_PARTNER_KEY` for cash flow (copy from your STYLiSH project)
     4. set `AUTHENTICATION_CODE` for creating products & campaigns, you can choose arbitrary value for it. (look at `product_controller.js` and `marketing_controller.js` for more detail)
     5. set `BCRYPT_SALT` for password encryption (Optional)
-6. Start a redis server in `localhost` at port `6379` (Optional, the server can still work without this, see ```marketing_controller.js``` for more detail)
-7. Start server: ```nodemon app.js```
-8. Clear Browser localStorage if needed. The same address will use the same space to records localStorage key-value pairs and it may conflict with mine. (Optional)
+5. Start a redis server in `localhost` at port `6379` (Optional, the server can still work without this, see ```marketing_controller.js``` for more detail)
+6. Start server: ```nodemon app.js```
+7. Clear Browser localStorage if needed. The same address will use the same space to records localStorage key-value pairs and it may conflict with mine. (Optional)
 
 ### Integration Test (Optional)
 
