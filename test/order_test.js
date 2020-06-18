@@ -16,7 +16,6 @@ let userId;
 
 const VALID_PRIME = 'valid prime';
 const INVALID_PRIME = 'invalid prime';
-const INVALID_PRIME_ERROR = 'invalid prime error';
 const orderData = {
     prime: VALID_PRIME,
     order: {
@@ -94,8 +93,8 @@ describe('order', () => {
             return new Promise((resolve, reject) => {
                 if (prime === VALID_PRIME) {
                     resolve(fakeTappayResponse);
-                } else {
-                    reject(INVALID_PRIME_ERROR);
+                } else if (prime === INVALID_PRIME) {
+                    resolve({status: 500});
                 }
             });
         };
@@ -121,7 +120,7 @@ describe('order', () => {
             .send(invalidOrderData);
 
         assert.equal(res.statusCode, 400);
-        assert.equal(res.body.error, INVALID_PRIME_ERROR);
+        assert.equal(res.body.error, "Invalid prime");
     });
 
     it('checkout order with valid data and user', async () => {
