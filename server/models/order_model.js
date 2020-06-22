@@ -48,9 +48,15 @@ const getUserPayments = async () => {
     return orders;
 };
 
+const getUserPaymentsGroupByDB = async () => {
+    const orders = await query('SELECT user_id, SUM(total) as total_payment FROM order_table GROUP BY user_id');
+    return orders;
+};
+
 module.exports = {
     createOrder,
     createPayment,
     payOrderByPrime,
     getUserPayments,
+    getUserPaymentsGroupByDB,
 };

@@ -59,14 +59,20 @@ const getUserPayments = async (req, res) => {
     }, {});
     const user_payments_data = Object.keys(user_payments).map(user_id => {
         return {
-            user_id,
+            user_id: parseInt(user_id),
             total_payment: user_payments[user_id]
         };
     });
     res.status(200).send({data: user_payments_data});
 };
 
+const getUserPaymentsGroupByDB = async (req, res) => {
+    const orders = await Order.getUserPaymentsGroupByDB();
+    res.status(200).send({data: orders});
+};
+
 module.exports = {
     checkout,
-    getUserPayments
+    getUserPayments,
+    getUserPaymentsGroupByDB
 };
