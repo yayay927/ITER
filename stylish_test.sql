@@ -108,6 +108,7 @@ CREATE TABLE `order_table` (
   `status` tinyint(4) NOT NULL,
   `details` json NOT NULL,
   `user_id` bigint(20) unsigned DEFAULT NULL,
+  `total` float DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`user_id`),
   CONSTRAINT `order_table_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
@@ -120,7 +121,7 @@ CREATE TABLE `order_table` (
 
 LOCK TABLES `order_table` WRITE;
 /*!40000 ALTER TABLE `order_table` DISABLE KEYS */;
-INSERT INTO `order_table` VALUES (1,'124215005818',1582523900581,0,'{\"list\": [{\"id\": 1, \"qty\": 1, \"name\": \"前開衩扭結洋裝\", \"size\": \"S\", \"color\": {\"code\": \"FFFFFF\", \"name\": \"白色\"}, \"price\": 1000, \"stock\": 2, \"main_image\": \"https://test/1/main.jpg\"}], \"total\": 1060, \"freight\": 60, \"payment\": \"credit_card\", \"shipping\": \"delivery\", \"subtotal\": 1000, \"recipient\": {\"name\": \"test\", \"time\": \"anytime\", \"email\": \"test@gmail.com\", \"phone\": \"0912345678\", \"address\": \"testaddress\"}}',1),(2,'124215005885',1582523900588,0,'{\"list\": [{\"id\": 1, \"qty\": 1, \"name\": \"前開衩扭結洋裝\", \"size\": \"S\", \"color\": {\"code\": \"FFFFFF\", \"name\": \"白色\"}, \"price\": 1000, \"stock\": 2, \"main_image\": \"https://test/1/main.jpg\"}], \"total\": 1060, \"freight\": 60, \"payment\": \"credit_card\", \"shipping\": \"delivery\", \"subtotal\": 1000, \"recipient\": {\"name\": \"test\", \"time\": \"anytime\", \"email\": \"test@gmail.com\", \"phone\": \"0912345678\", \"address\": \"testaddress\"}}',1),(3,'124215005966',1582523900596,0,'{\"list\": [{\"id\": 1, \"qty\": 1, \"name\": \"前開衩扭結洋裝\", \"size\": \"S\", \"color\": {\"code\": \"FFFFFF\", \"name\": \"白色\"}, \"price\": 1000, \"stock\": 2, \"main_image\": \"https://test/1/main.jpg\"}], \"total\": 1060, \"freight\": 60, \"payment\": \"credit_card\", \"shipping\": \"delivery\", \"subtotal\": 1000, \"recipient\": {\"name\": \"test\", \"time\": \"anytime\", \"email\": \"test@gmail.com\", \"phone\": \"0912345678\", \"address\": \"testaddress\"}}',NULL);
+INSERT INTO `order_table` VALUES (1,'54218103205',1591250610320,0,'{\"list\": [{\"id\": 1, \"qty\": 1, \"name\": \"前開衩扭結洋裝\", \"size\": \"S\", \"color\": {\"code\": \"FFFFFF\", \"name\": \"白色\"}, \"price\": 1000, \"stock\": 2, \"main_image\": \"https://test/1/main.jpg\"}], \"total\": 1060, \"freight\": 60, \"payment\": \"credit_card\", \"shipping\": \"delivery\", \"subtotal\": 1000, \"recipient\": {\"name\": \"test\", \"time\": \"anytime\", \"email\": \"test@gmail.com\", \"phone\": \"0912345678\", \"address\": \"testaddress\"}}',1,NULL),(2,'54218103269',1591250610326,0,'{\"list\": [{\"id\": 1, \"qty\": 1, \"name\": \"前開衩扭結洋裝\", \"size\": \"S\", \"color\": {\"code\": \"FFFFFF\", \"name\": \"白色\"}, \"price\": 1000, \"stock\": 2, \"main_image\": \"https://test/1/main.jpg\"}], \"total\": 1060, \"freight\": 60, \"payment\": \"credit_card\", \"shipping\": \"delivery\", \"subtotal\": 1000, \"recipient\": {\"name\": \"test\", \"time\": \"anytime\", \"email\": \"test@gmail.com\", \"phone\": \"0912345678\", \"address\": \"testaddress\"}}',1,NULL),(3,'54218103352',1591250610335,0,'{\"list\": [{\"id\": 1, \"qty\": 1, \"name\": \"前開衩扭結洋裝\", \"size\": \"S\", \"color\": {\"code\": \"FFFFFF\", \"name\": \"白色\"}, \"price\": 1000, \"stock\": 2, \"main_image\": \"https://test/1/main.jpg\"}], \"total\": 1060, \"freight\": 60, \"payment\": \"credit_card\", \"shipping\": \"delivery\", \"subtotal\": 1000, \"recipient\": {\"name\": \"test\", \"time\": \"anytime\", \"email\": \"test@gmail.com\", \"phone\": \"0912345678\", \"address\": \"testaddress\"}}',NULL,NULL);
 /*!40000 ALTER TABLE `order_table` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -216,7 +217,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'native','test1@gmail.com','test1password','test1',NULL,'2c5a4e50e9084a468ddffb84dc2c69af0996130c515389c76f19496bc8ecff7f',2592000,'2020-02-24 05:58:21'),(2,'facebook','test2@gmail.com',NULL,'test2','https://graph.facebook.com/1/picture?type=large','fbTokenLoginAgain',2592000,'2020-02-24 05:58:21'),(3,'native','test3@gmail.com','test3passwod','test3',NULL,'test3accesstoken',0,'2020-01-01 00:00:00'),(4,'native','arthur@gmail.com','password','arthur',NULL,'638e3b98e2333e696eed1db607b142deeaf3db4774fe76a3b8f0a79dd4d5f6b1',2592000,'2020-02-24 05:58:21'),(5,'facebook','fakefbuser@gmail.com',NULL,'fake fb user','https://graph.facebook.com/1111/picture?type=large','fbTokenFirstLogin',2592000,'2020-02-24 05:58:21');
+INSERT INTO `user` VALUES (1,'native','test1@gmail.com','$2b$10$xQIXLgeIpnFP4KGWSdA8jOqWuipfoBbiU16ThGpMtDbwtiG1wVasO','test1',NULL,'7b2dfc63af604278a796c946ee3f8f2ddafbf82669f0b8cee620849500fe1690',2592000,'2020-06-04 06:03:31'),(2,'facebook','test2@gmail.com',NULL,'test2','https://graph.facebook.com/1/picture?type=large','fbTokenLoginAgain',2592000,'2020-06-04 06:03:31'),(3,'native','test3@gmail.com','$2b$10$BHnLMkdhyb5zWNAowa6wheBwnpTWQr13AhYH0SDk092o1wsabl3VC','test3',NULL,'test3accesstoken',0,'2020-01-01 00:00:00'),(4,'native','arthur@gmail.com','$2b$10$JBuA1TBA7/1Wb7ImolwMt.5CMdIfzq0UUJ743oejniesD5/MhWefW','arthur',NULL,'2c4a2c1107d3f860b0f8bb7c5c4ad1f3173c5b0960b9885717933a3f5ef898ea',2592000,'2020-06-04 06:03:30'),(5,'facebook','fakefbuser@gmail.com',NULL,'fake fb user','https://graph.facebook.com/1111/picture?type=large','fbTokenFirstLogin',2592000,'2020-06-04 06:03:31');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,4 +260,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-24 14:49:00
+-- Dump completed on 2020-06-22 16:33:21

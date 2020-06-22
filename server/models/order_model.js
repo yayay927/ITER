@@ -44,7 +44,7 @@ const payOrderByPrime = async function(tappayKey, prime, order){
 };
 
 const getUserPayments = async () => {
-    const orders = await query('SELECT * FROM order_table');
+    const orders = await query('SELECT user_id, total FROM order_table');
     return orders;
 };
 

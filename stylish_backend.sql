@@ -108,10 +108,11 @@ CREATE TABLE `order_table` (
   `status` tinyint(4) NOT NULL,
   `details` json NOT NULL,
   `user_id` bigint(20) unsigned DEFAULT NULL,
+  `total` float DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`user_id`),
   CONSTRAINT `order_table_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1468 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,7 +121,6 @@ CREATE TABLE `order_table` (
 
 LOCK TABLES `order_table` WRITE;
 /*!40000 ALTER TABLE `order_table` DISABLE KEYS */;
-INSERT INTO `order_table` VALUES (1467,'124235923422',1582525992342,0,'{\"list\": [{\"id\": 201807202140, \"qty\": 3, \"name\": \"透肌澎澎防曬襯衫\", \"size\": \"S\", \"color\": {\"code\": \"DDFFBB\", \"name\": \"亮綠\"}, \"price\": 599, \"stock\": 7, \"main_image\": \"http://localhost:3000/assets/201807202140/main.jpg\"}, {\"id\": 201807242222, \"qty\": 1, \"name\": \"經典商務西裝\", \"size\": \"XL\", \"color\": {\"code\": \"334455\", \"name\": \"深藍\"}, \"price\": 3999, \"stock\": 9, \"main_image\": \"http://localhost:3000/assets/201807242222/main.jpg\"}], \"total\": 5856, \"freight\": 60, \"payment\": \"credit_card\", \"shipping\": \"delivery\", \"subtotal\": 5796, \"recipient\": {\"name\": \"Arthur\", \"time\": \"anytime\", \"email\": \"arthur@gmail.com\", \"phone\": \"0912345678\", \"address\": \"Arthur home\"}}',NULL);
 /*!40000 ALTER TABLE `order_table` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,7 +138,7 @@ CREATE TABLE `payment` (
   PRIMARY KEY (`id`),
   KEY `order_table` (`order_id`),
   CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `order_table` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=842 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=850 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +147,6 @@ CREATE TABLE `payment` (
 
 LOCK TABLES `payment` WRITE;
 /*!40000 ALTER TABLE `payment` DISABLE KEYS */;
-INSERT INTO `payment` VALUES (841,1467,'{\"msg\": \"Success\", \"amount\": 5856, \"status\": 0, \"acquirer\": \"TW_CTBC\", \"currency\": \"TWD\", \"auth_code\": \"062014\", \"card_info\": {\"type\": 1, \"level\": \"\", \"issuer\": \"\", \"bank_id\": \"\", \"country\": \"UNITED KINGDOM\", \"funding\": 0, \"bin_code\": \"424242\", \"last_four\": \"4242\", \"country_code\": \"GB\", \"issuer_zh_tw\": \"\"}, \"merchant_id\": \"AppWorksSchool_CTBC\", \"order_number\": \"\", \"rec_trade_id\": \"D20200224lBj8Ho\", \"bank_result_msg\": \"\", \"card_identifier\": \"dee921560b074be7a860a6b44a80c21b\", \"bank_result_code\": \"\", \"bank_transaction_id\": \"TP20200224lBj8Ho\", \"bank_transaction_time\": {\"end_time_millis\": \"1582525992550\", \"start_time_millis\": \"1582525992550\"}, \"transaction_time_millis\": 1582525992505}');
 /*!40000 ALTER TABLE `payment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -201,13 +200,13 @@ CREATE TABLE `user` (
   `password` varchar(255) DEFAULT NULL,
   `name` varchar(127) NOT NULL,
   `picture` varchar(255) DEFAULT NULL,
-  `access_token` varchar(255) NOT NULL,
+  `access_token` varchar(512) NOT NULL DEFAULT '',
   `access_expired` bigint(20) unsigned NOT NULL,
   `login_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user` (`provider`,`email`,`password`),
   KEY `access_token` (`access_token`)
-) ENGINE=InnoDB AUTO_INCREMENT=10043 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10050 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -216,7 +215,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (10042,'facebook','gn01168178@yahoo.com.tw',NULL,'林鼎棋','https://graph.facebook.com/3006215332763756/picture?type=large','EAAJ9Lv4JLxEBAPzXBJ6BdJ8cCz1IW6xGHNVzRWtU9H3dlMLyRcnbAc642yzbymRK1Ixn3hZBgqQSZAxFGp3DYpxPnl0eNUJmSY4UDWSE16RZASGrWSkowykvYbltxuaOmniKC51fEXEnl4UuMMW24V7146fBytKyApk9FeYVbGQcPZBCCt968WMlzUmMhQbo2O9ftvwfkAZDZD',2592000,'2020-02-24 06:30:31');
+INSERT INTO `user` VALUES (10042,'facebook','gn01168178@yahoo.com.tw',NULL,'林鼎棋','https://graph.facebook.com/3006215332763756/picture?type=large','EAAJ9Lv4JLxEBAHeBqOZB9AzUr7ZA7F8fuaiuuSR98RzWhUBcvMFRZA8EpdhetEwZCmnVtXQFyh6D4xd4kc6urunO0UpbRKCnGvwyZC0jKTj6nrcTaGwOcmJtQ7D3viXiNdL5QOASzvkiZCmrrVjGVce3Ks6Tz3oK9yZB7F3GIZCutvCo5vvgZAIjZB',2592000,'2020-05-22 03:50:37'),(10043,'native','arthur@gmail.com','password','arthur',NULL,'e03bc1d85aa2f1f873c2320bc1e37404609919fe68da2cf4f76e75a0d78ac519',2592000,'2020-03-06 00:50:15');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,4 +258,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-24 14:45:43
+-- Dump completed on 2020-06-22 16:38:33

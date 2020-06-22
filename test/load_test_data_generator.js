@@ -7,13 +7,14 @@ const {Generator, beta_trans} = require('./random_number_generator');
 const user_id_generator = new Generator(5, beta_trans);
 
 function _createFakeOrder(orders) {
-    return query('INSERT INTO order_table (user_id, number, time, status, details) VALUES ?',
+    return query('INSERT INTO order_table (user_id, number, time, status, details, total) VALUES ?',
         [orders.map((x, i) => ([
             1 + user_id_generator.generate(),
             i,
             Date.now(),
             0,
             JSON.stringify(x),
+            x.total,
         ]))]
     );
 }

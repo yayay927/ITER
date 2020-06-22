@@ -22,6 +22,7 @@ const checkout = async (req, res) => {
         number: number,
         time: now.getTime(),
         status: -1, // -1 for init (not pay yet)
+        total: data.order.total,
         details: validator.blacklist(JSON.stringify(data.order), '<>')
     };
     orderRecord.user_id = (user && user.id) ? user.id : null;
@@ -48,10 +49,7 @@ const checkout = async (req, res) => {
 // For Load Testing
 const getUserPayments = async (req, res) => {
     const orders = await Order.getUserPayments();
-    const user_payments = orders.map(order => {
-        let details = JSON.parse(order.details);
-        return {user_id: order.user_id, total: details.total};
-    }).reduce((obj, order) => {
+    const user_payments = orders.reduce((obj, order) => {
         let user_id = order.user_id;
         if (!(user_id in obj)) {
             obj[user_id] = 0;
