@@ -30,7 +30,7 @@ const checkout = async (req, res) => {
     try {
         paymentResult = await Order.payOrderByPrime(TAPPAY_PARTNER_KEY, data.prime, data.order);
         if (paymentResult.status != 0) {
-            res.status(400).send({error: "Invalid prime"});
+            res.status(400).send({error: 'Invalid prime'});
             return;
         }
     } catch (error) {
