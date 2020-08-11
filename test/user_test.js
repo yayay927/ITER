@@ -65,7 +65,7 @@ describe('order', () => {
         };
 
         assert.deepEqual(data.user, userExpect);
-        assert.equal(data.access_token.length, 64);
+        assert.isString(data.access_token);
         assert.equal(data.access_expired, expectedExpireTime);
         assert.closeTo(new Date(data.login_at).getTime(), Date.now(), 1000);
     });
@@ -159,7 +159,7 @@ describe('order', () => {
         };
 
         assert.deepEqual(data.user, userExpect);
-        assert.equal(data.access_token.length, 64);
+        assert.isString(data.access_token);
         assert.equal(data.access_expired, expectedExpireTime);
 
         // make sure DB is changed, too
