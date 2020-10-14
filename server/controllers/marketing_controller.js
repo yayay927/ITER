@@ -2,6 +2,7 @@ const Cache = require('../../util/cache');
 const {getProductsWithDetail} = require('./product_controller');
 const Marketing = require('../models/marketing_model');
 const Product = require('../models/product_model');
+const util = require('../../util/util');
 const CACHE_CAMPAIGN_KEY = 'cacheCampaigns';
 const CACHE_HOT_KEY = 'cacheHots';
 const {AUTHENTICATION_CODE} = process.env;
@@ -67,7 +68,9 @@ const getCampaigns = async (req, res) => {
 
     const campaigns = await Marketing.getCampaigns();
     campaigns.map(campaign => {
-        return campaign.picture = `/assets/${campaign.product_id}/${campaign.picture}`;
+        const imagePath = util.getImagePath(req.protocol, req.hostname, campaign.product_id);
+        campaign.picture = imagePath + campaign.picture;
+        return campaign;
     });
 
     try {
