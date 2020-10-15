@@ -28,19 +28,19 @@ describe('marketing', () => {
             {
                 'id': 1,
                 'product_id': 1,
-                'picture': '/assets/1/keyvisual.jpg',
+                'picture': `http://127.0.0.1:${PORT}/assets/1/keyvisual.jpg`,
                 'story': '測試1'
             },
             {
                 'id': 2,
                 'product_id': 2,
-                'picture': '/assets/2/keyvisual.jpg',
+                'picture': `http://127.0.0.1:${PORT}/assets/2/keyvisual.jpg`,
                 'story': '測試2'
             },
             {
                 'id': 3,
                 'product_id': 3,
-                'picture': '/assets/3/keyvisual.jpg',
+                'picture': `http://127.0.0.1:${PORT}/assets/3/keyvisual.jpg`,
                 'story': '測試3'
             }
         ];
