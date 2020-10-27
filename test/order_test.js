@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const {assert, requester} = require('./set_up');
 const {users} = require('./fake_data');
-const {query} = require('../util/mysqlcon');
+const {query} = require('../server/models/mysqlcon');
 const sinon = require('sinon');
 let stub;
 

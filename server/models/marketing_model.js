@@ -1,4 +1,4 @@
-const {transaction, commit, rollback, query} = require('../../util/mysqlcon.js');
+const {transaction, commit, rollback, query} = require('./mysqlcon');
 
 const createCampaign = async (campaign) => {
     const result = await query('INSERT INTO campaign SET ?', campaign);

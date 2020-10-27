@@ -2,7 +2,7 @@ require('dotenv');
 const {assert, requester} = require('./set_up');
 const {AUTHENTICATION_CODE} = process.env;
 const {PORT} = process.env;
-const {query} = require('../util/mysqlcon');
+const {query} = require('../server/models/mysqlcon');
 const sinon = require('sinon');
 
 let stub1;

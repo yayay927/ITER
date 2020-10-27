@@ -2,7 +2,7 @@ require('dotenv').config();
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const got = require('got');
-const {query, transaction, commit, rollback} = require('../../util/mysqlcon.js');
+const {query, transaction, commit, rollback} = require('./mysqlcon');
 const salt = parseInt(process.env.BCRYPT_SALT);
 
 const signUp = async (name, email, password, expire) => {

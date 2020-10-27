@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 require('dotenv').config();
-const {query, end} = require('../util/mysqlcon.js');
+const {query, end} = require('../server/models/mysqlcon');
 const {getTotalOrders} = require('./load_test_data');
 const totalOrders = getTotalOrders();
 const {Generator, beta_trans} = require('./random_number_generator');

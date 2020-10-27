@@ -2,7 +2,7 @@ require('dotenv').config();
 const {assert, requester} = require('./set_up');
 const {users} = require('./fake_data');
 const sinon = require('sinon');
-const {query} = require('../util/mysqlcon');
+const {query} = require('../server/models/mysqlcon')
 
 const expectedExpireTime = process.env.TOKEN_EXPIRE;
 const fbTokenSignInFirstTime = 'fbTokenFirstLogin';

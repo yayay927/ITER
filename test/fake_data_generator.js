@@ -9,7 +9,7 @@ const {
     hot_products,
     campaigns,
 } = require('./fake_data');
-const {transaction, commit, query, end} = require('../util/mysqlcon.js');
+const {transaction, commit, query, end} = require('../server/models/mysqlcon');
 const salt = parseInt(process.env.BCRYPT_SALT);
 
 function _createFakeUser() {

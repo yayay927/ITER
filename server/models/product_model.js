@@ -1,4 +1,4 @@
-const {transaction, commit, rollback, query} = require('../../util/mysqlcon.js');
+const {transaction, commit, rollback, query} = require('./mysqlcon');
 
 const createProduct = async (product, variants) => {
     try {
