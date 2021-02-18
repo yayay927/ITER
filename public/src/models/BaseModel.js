@@ -1,8 +1,6 @@
-import Cart from "../utils/Cart.js";
-
 class BaseModel {
-  constructor() {
-    this.cart = new Cart();
+  constructor(cart) {
+    this.cart = cart;
   }
 }
 

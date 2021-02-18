@@ -43,12 +43,10 @@ class Tappay {
   }
 
   getPrime() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       window.TPDirect.card.getPrime((result) => {
         if (result.status === 0) {
           resolve(result.card.prime);
-        } else {
-          reject("付款資料有誤");
         }
       });
     });

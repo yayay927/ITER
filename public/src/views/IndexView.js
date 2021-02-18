@@ -3,17 +3,16 @@ import BaseView from "./BaseView.js";
 class IndexView extends BaseView {
   constructor() {
     super();
+
+    this.scrollToBottomOffset = 240;
     this.products = this.getElement("#products");
+    this.noProducts = this.getElement("#no-products");
     this.campaigns = this.getElement("#campaigns");
     this.campaignList = [];
     this.dotList = [];
-
-    this.fb.setup();
   }
 
   renderProducts(products) {
-    this.products.innerHTML = "";
-
     products.forEach((product) => {
       this.createElement("a", {
         classList: ["product"],
@@ -48,6 +47,13 @@ class IndexView extends BaseView {
           }),
         ],
       });
+    });
+  }
+
+  renderNoProductsText() {
+    this.createElement("h2", {
+      parent: this.noProducts,
+      children: ["搜尋不到產品喔"],
     });
   }
 
@@ -111,7 +117,10 @@ class IndexView extends BaseView {
 
   bindScrollToBottom(handler) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY + window.innerHeight > document.body.scrollHeight) {
+      if (
+        document.body.getBoundingClientRect().bottom - window.innerHeight <
+        this.scrollToBottomOffset
+      ) {
         handler();
       }
     });

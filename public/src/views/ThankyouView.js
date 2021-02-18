@@ -5,8 +5,6 @@ class ThankyouView extends BaseView {
     super();
 
     this.number = this.getElement("#number");
-
-    this.fb.setup();
   }
 
   renderNumber(number) {

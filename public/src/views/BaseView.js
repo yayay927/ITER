@@ -1,18 +1,11 @@
-import Fb from "../utils/Fb.js";
-
 class BaseView {
   constructor() {
-    this.tag = this.getTag();
     this.tagMen = this.getElement(".tag-men");
     this.tagWomen = this.getElement(".tag-women");
     this.tagAccessories = this.getElement(".tag-accessories");
     this.inputSearch = this.getElement("input#search");
     this.profile = this.getElement("#profile");
-    this.fb = new Fb();
-
-    this.handleTag();
-    this.bindInputSearchKeydown(this.redirectToIndexPageWithTag);
-    this.bindClickProfile(this.fb.handleClickProfile.bind(this.fb));
+    this.count = this.getElement(".count");
   }
 
   createElement(tagName, props) {
@@ -45,13 +38,8 @@ class BaseView {
     return element;
   }
 
-  getTag() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("tag");
-  }
-
-  handleTag() {
-    switch (this.tag) {
+  handleTag(tag) {
+    switch (tag) {
       case "men":
         this.tagMen.classList.add("tag--active");
         break;
@@ -61,13 +49,11 @@ class BaseView {
       case "accessories":
         this.tagAccessories.classList.add("tag--active");
         break;
+      case "all":
+        break;
       default:
-        this.inputSearch.value = this.tag;
+        this.inputSearch.value = tag;
     }
-  }
-
-  redirectToIndexPageWithTag(tag) {
-    window.location.href = `/?tag=${tag}`;
   }
 
   bindInputSearchPressEnter(handle) {
@@ -83,6 +69,10 @@ class BaseView {
     this.profile.addEventListener("click", () => {
       handle();
     });
+  }
+
+  renderCount(count) {
+    this.count.textContent = count;
   }
 }
 

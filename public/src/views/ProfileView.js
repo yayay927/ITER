@@ -5,12 +5,6 @@ class ProfileView extends BaseView {
     super();
 
     this.member = this.getElement("#member");
-
-    this.fb.setup(this.getFbLoginStatusCallback.bind(this));
-  }
-
-  getFbLoginStatusCallback(proflie) {
-    this.renderProfile(proflie);
   }
 
   renderProfile(profile) {

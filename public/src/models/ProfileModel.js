@@ -1,8 +1,8 @@
 import BaseModel from "./BaseModel.js";
 
 class ProfileModel extends BaseModel {
-  constructor() {
-    super();
+  constructor(cart) {
+    super(cart);
   }
 }
 

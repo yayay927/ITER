@@ -1,17 +1,24 @@
-import api from "../utils/Api.js";
+import BaseController from "./BaseController.js";
 import CartView from "../views/CartView.js";
 import CartModel from "../models/CartModel.js";
+
+import api from "../utils/Api.js";
 import Cart from "../utils/Cart.js";
+import Fb from "../utils/Fb.js";
 import Tappay from "../utils/Tappay.js";
 
-class CartController {
-  constructor(model, view, tappay) {
-    this.model = model;
-    this.view = view;
-    this.tappay = tappay;
+class CartController extends BaseController {
+  constructor(model, view, fb, tappay) {
+    super(model, view, fb, tappay);
+    /**
+     * Ref: https://www.w3resource.com/javascript/form/javascript-form-validation.php
+     */
+    this.emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    this.phoneRegex = /^\d{10}$/;
 
-    this.onCartItemsChanged(this.model.cart.getItems());
+    this.onCartItemsChanged(this.model.cart.items);
     this.view.bindClickCheckout(this.handleClickCheckout.bind(this));
+    this.fb.setup();
     this.tappay.setup();
   }
 
@@ -23,12 +30,30 @@ class CartController {
 
   handleChangeItemQuantity(index, quantity) {
     this.model.changeCartItemQuantity(index, quantity);
-    this.onCartItemsChanged(this.model.cart.getItems());
+    this.view.renderCount(this.model.cart.items.length);
+    this.onCartItemsChanged(this.model.cart.items);
   }
 
   handleRemoveItem(index) {
     this.model.removeCartItem(index);
-    this.onCartItemsChanged(this.model.cart.getItems());
+    this.view.renderCount(this.model.cart.items.length);
+    this.onCartItemsChanged(this.model.cart.items);
+  }
+
+  validateRecipient(recipient) {
+    if (!recipient.name) {
+      return "請輸入收件人姓名";
+    }
+    if (!recipient.email.match(this.emailRegex)) {
+      return "Email有誤";
+    }
+    if (!recipient.phone.match(this.phoneRegex)) {
+      return "手機號碼有誤";
+    }
+    if (!recipient.address) {
+      return "請輸入收件地址";
+    }
+    return null;
   }
 
   makeCheckoutData(prime, cartItems, recipient) {
@@ -47,25 +72,37 @@ class CartController {
   }
 
   async handleClickCheckout(recipient) {
-    const cartItems = this.model.cart.getItems();
+    const cartItems = this.model.cart.items;
+    if (cartItems.length === 0) {
+      window.alert("購物車空空的耶");
+      return;
+    }
+
+    const recipientError = this.validateRecipient(recipient);
+    if (recipientError) {
+      window.alert(recipientError);
+      return;
+    }
 
     if (this.tappay.canGetPrime) {
-      let prime;
-      try {
-        prime = await this.tappay.getPrime();
-      } catch (error) {
-        window.alert(error);
-      }
+      const prime = await this.tappay.getPrime();
       const data = this.makeCheckoutData(prime, cartItems, recipient);
-
-      api.checkout(data).then(({ data: { number } }) => {
-        this.model.cart.setItems([]);
-        window.location.href = `/thankyou.html?number=${number}`;
-      });
+      api
+        .checkout(data, this.fb.auth?.accessToken)
+        .then(({ data: { number } }) => {
+          this.model.cart.items = [];
+          this.model.cart.update();
+          window.location.href = `/thankyou.html?number=${number}`;
+        });
     } else {
       window.alert(this.tappay.cannotGetPrimeReason);
     }
   }
 }
 
-const app = new CartController(new CartModel(), new CartView(), new Tappay());
+const app = new CartController(
+  new CartModel(new Cart()),
+  new CartView(),
+  new Fb(),
+  new Tappay()
+);

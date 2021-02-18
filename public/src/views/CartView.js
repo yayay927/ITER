@@ -12,8 +12,6 @@ class CartView extends BaseView {
     this.checkout = this.getElement("#checkout");
     this.itemSelectList = undefined;
     this.itemRemoveList = undefined;
-
-    this.fb.setup();
   }
 
   renderCartItems(items) {
@@ -131,7 +129,7 @@ class CartView extends BaseView {
 
   bindClickItemRemove(handle) {
     this.itemRemoveList.forEach((itemRemove, index) => {
-      itemRemove.addEventListener("click", (e) => {
+      itemRemove.addEventListener("click", () => {
         handle(index);
       });
     });
@@ -140,10 +138,10 @@ class CartView extends BaseView {
   bindClickCheckout(handle) {
     this.checkout.addEventListener("click", () => {
       const recipient = {
-        name: this.getElement("#name").value,
-        phone: this.getElement("#phone").value,
-        email: this.getElement("#email").value,
-        address: this.getElement("#address").value,
+        name: this.getElement("#name").value.trim(),
+        phone: this.getElement("#phone").value.trim(),
+        email: this.getElement("#email").value.trim(),
+        address: this.getElement("#address").value.trim(),
         time: this.getElement("input[name=time]:checked").value,
       };
       handle(recipient);

@@ -59,14 +59,6 @@ class Fb {
     });
   }
 
-  handleClickProfile() {
-    if (this.auth) {
-      window.location.href = "/profile.html";
-    } else {
-      this.loginToFb();
-    }
-  }
-
   loginToFb() {
     window.FB.login(
       (response) => {
@@ -78,13 +70,16 @@ class Fb {
 
   getProfile() {
     return new Promise((resolve, reject) => {
-      window.FB.api("/me?fields=id,name,email,picture.height(2048)", (response) => {
-        if (response.error) {
-          reject(response.error);
-        } else {
-          resolve(response);
+      window.FB.api(
+        "/me?fields=id,name,email,picture.height(2048)",
+        (response) => {
+          if (response.error) {
+            reject(response.error);
+          } else {
+            resolve(response);
+          }
         }
-      });
+      );
     });
   }
 }

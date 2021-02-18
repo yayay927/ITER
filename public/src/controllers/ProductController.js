@@ -1,20 +1,18 @@
-import api from "../utils/Api.js";
+import BaseController from "./BaseController.js";
 import ProductView from "../views/ProductView.js";
 import ProductModel from "../models/ProductModel.js";
 
-class ProductController {
-  constructor(model, view) {
-    this.model = model;
-    this.view = view;
+import api from "../utils/Api.js";
+import Cart from "../utils/Cart.js";
+import Fb from "../utils/Fb.js";
+import Tappay from "../utils/Tappay.js";
 
-    this.id = this.getId();
+class ProductController extends BaseController {
+  constructor(model, view, fb, tappay) {
+    super(model, view, fb, tappay);
 
     this.getProduct();
-  }
-
-  getId() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("id");
+    this.fb.setup();
   }
 
   handleClickColorCode(index) {
@@ -59,6 +57,7 @@ class ProductController {
 
   handleClickAddToCart() {
     this.model.addToCart();
+    this.view.renderCount(this.model.cart.items.length);
   }
 
   onProductChanged(product, selectedColorCode, selectedSize, quantity) {
@@ -88,7 +87,7 @@ class ProductController {
   }
 
   getProduct() {
-    api.getProduct(this.id).then(({ data: product }) => {
+    api.getProduct(this.paramsId).then(({ data: product }) => {
       this.model.setProduct(product);
       this.onProductChanged(
         this.model.product,
@@ -100,4 +99,9 @@ class ProductController {
   }
 }
 
-const app = new ProductController(new ProductModel(), new ProductView());
+const app = new ProductController(
+  new ProductModel(new Cart()),
+  new ProductView(),
+  new Fb(),
+  new Tappay()
+);

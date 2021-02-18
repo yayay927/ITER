@@ -1,20 +1,18 @@
 import BaseModel from "./BaseModel.js";
 
 class CartModel extends BaseModel {
-  constructor() {
-    super();
+  constructor(cart) {
+    super(cart);
   }
 
   changeCartItemQuantity(index, quantity) {
-    const cartItems = this.cart.getItems();
-    cartItems[index].qty = quantity;
-    this.cart.setItems(cartItems);
+    this.cart.items[index].qty = quantity;
+    this.cart.update();
   }
 
   removeCartItem(index) {
-    const cartItems = this.cart.getItems();
-    cartItems.splice(index, 1);
-    this.cart.setItems(cartItems);
+    this.cart.items.splice(index, 1);
+    this.cart.update();
     window.alert("已從購物車移除");
   }
 }

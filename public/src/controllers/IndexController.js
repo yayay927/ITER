@@ -1,13 +1,15 @@
-import api from "../utils/Api.js";
+import BaseController from "./BaseController.js";
 import IndexView from "../views/IndexView.js";
 import IndexModel from "../models/IndexModel.js";
 
-class IndexController {
-  constructor(model, view) {
-    this.model = model;
-    this.view = view;
+import api from "../utils/Api.js";
+import Cart from "../utils/Cart.js";
+import Fb from "../utils/Fb.js";
+import Tappay from "../utils/Tappay.js";
+class IndexController extends BaseController {
+  constructor(model, view, fb, tappay) {
+    super(model, view, fb, tappay);
 
-    this.tag = this.getTag();
     this.nextPaging = 0;
     this.isFetching = false;
 
@@ -18,15 +20,11 @@ class IndexController {
     this.getCampaigns();
 
     this.view.bindScrollToBottom(this.getMoreProducts.bind(this));
-  }
-
-  getTag() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("tag") || "all";
+    this.fb.setup();
   }
 
   get isPredefinedTag() {
-    return ["women", "men", "accessories", "all"].indexOf(this.tag) > -1;
+    return ["women", "men", "accessories", "all"].indexOf(this.paramsTag) > -1;
   }
 
   getMoreProducts() {
@@ -35,12 +33,12 @@ class IndexController {
     this.isFetching = true;
 
     (this.isPredefinedTag
-      ? api.getProducts(this.tag, this.nextPaging)
-      : api.searchProducts(this.tag, this.nextPaging)
+      ? api.getProducts(this.paramsTag, this.nextPaging)
+      : api.searchProducts(this.paramsTag, this.nextPaging)
     ).then(({ data: products, next_paging }) => {
       this.isFetching = false;
       this.nextPaging = next_paging;
-      this.model.appendProducts(products);
+      this.model.setProducts(products);
       this.onProductsChanged(this.model.products);
     });
   }
@@ -57,7 +55,11 @@ class IndexController {
   }
 
   onProductsChanged(products) {
-    this.view.renderProducts(products);
+    if (products.length === 0) {
+      this.view.renderNoProductsText();
+    } else {
+      this.view.renderProducts(products);
+    }
   }
 
   onCampaignsChanged(campaigns, index) {
@@ -93,4 +95,9 @@ class IndexController {
   }
 }
 
-const app = new IndexController(new IndexModel(), new IndexView());
+const app = new IndexController(
+  new IndexModel(new Cart()),
+  new IndexView(),
+  new Fb(),
+  new Tappay()
+);
