@@ -1,15 +1,16 @@
 import BaseModel from "./BaseModel.js";
 
 class IndexModel extends BaseModel {
-  constructor() {
-    super();
+  constructor(cart) {
+    super(cart);
+
     this.products = [];
     this.campaigns = [];
     this.activeCampaignIndex = 0;
   }
 
-  appendProducts(products) {
-    this.products.push(...products);
+  setProducts(products) {
+    this.products = products;
   }
 
   setCampaigns(campaigns) {

@@ -1,8 +1,9 @@
 import BaseModel from "./BaseModel.js";
 
 class ProductModel extends BaseModel {
-  constructor() {
-    super()
+  constructor(cart) {
+    super(cart);
+
     this.product = undefined;
     this.selectedColorCode = undefined;
     this.selectedSize = undefined;
@@ -37,10 +38,15 @@ class ProductModel extends BaseModel {
     const isChanged = this.selectedColorCode !== targetColorCode;
     if (isChanged) {
       this.selectedColorCode = targetColorCode;
-      this.selectedSize = this.findFirstValidVariant(
-        this.product,
-        this.selectedColorCode
-      ).size;
+      if (
+        this.findEqualVariant(this.selectedColorCode, this.selectedSize)
+          .stock === 0
+      ) {
+        this.selectedSize = this.findFirstValidVariant(
+          this.product,
+          this.selectedColorCode
+        ).size;
+      }
       this.quantity = 1;
     }
   }
@@ -71,7 +77,7 @@ class ProductModel extends BaseModel {
   }
 
   addToCart() {
-    const cartItems = this.cart.getItems();
+    const cartItems = this.cart.items;
     const sameProductIndex = cartItems.findIndex(
       (item) =>
         item.id === this.product.id &&
@@ -98,7 +104,7 @@ class ProductModel extends BaseModel {
         ).stock,
       });
     }
-    this.cart.setItems(cartItems);
+    this.cart.update();
     window.alert("已加入購物車");
   }
 }

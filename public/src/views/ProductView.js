@@ -3,6 +3,7 @@ import BaseView from "./BaseView.js";
 class ProductView extends BaseView {
   constructor() {
     super();
+
     this.product = this.getElement("#product");
     this.productMainImage = this.getElement(".product__main-image");
     this.productTitle = this.getElement(".product__title");
@@ -23,8 +24,6 @@ class ProductView extends BaseView {
     this.addToCart = this.getElement("#add-to-cart");
     this.productColorList = [];
     this.productSizeList = [];
-
-    this.fb.setup();
   }
 
   renderProductDetail(product) {

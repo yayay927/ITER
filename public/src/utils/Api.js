@@ -27,12 +27,18 @@ class Api {
     return await response.json();
   }
 
-  async checkout(data) {
+  async checkout(data, accessToken) {
+    const headers = new Headers({
+      "Content-Type": "application/json",
+    });
+
+    if (accessToken) {
+      headers.set("Authorization", `Bearer ${accessToken}`);
+    }
+
     const response = await fetch(`${this.API_HOST}/order/checkout`, {
       body: JSON.stringify(data),
-      headers: {
-        "content-type": "application/json",
-      },
+      headers,
       method: "POST",
     });
     return await response.json();
@@ -41,9 +47,9 @@ class Api {
   async signin(data) {
     const response = await fetch(`${this.API_HOST}/user/signin`, {
       body: JSON.stringify(data),
-      headers: {
-        "content-type": "application/json",
-      },
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
       method: "POST",
     });
     return await response.json();

@@ -1,7 +1,6 @@
 class Cart {
   constructor() {
-    this.cartItems = JSON.parse(window.localStorage.getItem("cart") || "[]");
-    this.renderCart(this.cartItems);
+    this.items = JSON.parse(window.localStorage.getItem("cart") || "[]");
   }
 
   static calculateSubtotal(items) {
@@ -11,18 +10,8 @@ class Cart {
     );
   }
 
-  renderCart(items) {
-    document.querySelector(".count").textContent = items.length;
-  }
-
-  getItems() {
-    return this.cartItems;
-  }
-
-  setItems(items) {
-    this.cartItems = items;
-    this.renderCart(this.cartItems);
-    window.localStorage.setItem("cart", JSON.stringify(this.cartItems));
+  update() {
+    window.localStorage.setItem("cart", JSON.stringify(this.items));
   }
 }
 
