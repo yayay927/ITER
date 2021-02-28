@@ -1,5 +1,8 @@
 const router = require('express').Router();
-const {wrapAsync} = require('../../util/util');
+const {
+    wrapAsync,
+    authentication
+} = require('../../util/util');
 
 const {
     checkout,
@@ -8,7 +11,7 @@ const {
 } = require('../controllers/order_controller');
 
 router.route('/order/checkout')
-    .post(wrapAsync(checkout));
+    .post(authentication(), wrapAsync(checkout));
 
 // For load testing (Not in API Docs)
 router.route('/order/payments')

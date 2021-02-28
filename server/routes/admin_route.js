@@ -15,13 +15,19 @@ const {
     createHot
 } = require('../controllers/marketing_controller');
 
+const {
+    wrapAsync,
+    USER_ROLE,
+    authentication
+} = require('../../util/util');
+
 router.route('/admin/product')
-    .post(cpUpload, createProduct);
+    .post(authentication(USER_ROLE.ADMIN), cpUpload, wrapAsync(createProduct));
 
 router.route('/admin/campaign')
-    .post(cpUpload, createCampaign);
+    .post(authentication(USER_ROLE.ADMIN), cpUpload, wrapAsync(createCampaign));
 
 router.route('/admin/hot')
-    .post(createHot);
+    .post(authentication(USER_ROLE.ADMIN), wrapAsync(createHot));
 
 module.exports = router;

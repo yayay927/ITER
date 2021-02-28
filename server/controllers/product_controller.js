@@ -6,12 +6,6 @@ const {AUTHENTICATION_CODE} = process.env;
 
 const createProduct = async (req, res) => {
     const body = req.body;
-
-    if (body.authentication_code != AUTHENTICATION_CODE) {
-        res.status(401).send('Authentication code is wrong');
-        return;
-    }
-
     const product = {
         id: body.product_id,
         category: body.category,
@@ -26,7 +20,6 @@ const createProduct = async (req, res) => {
     };
     product.main_image = req.files.main_image[0].filename;
     product.images = req.files.other_images.map(img => img.filename).join(',');
-
     const colorCodes = body.color_codes.split(',');
     const colorNames = body.color_names.split(',');
     const sizes = body.sizes.split(',');
