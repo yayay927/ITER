@@ -4,8 +4,10 @@ const crypto = require('crypto');
 const got = require('got');
 const {query, transaction, commit, rollback} = require('./mysqlcon');
 const salt = parseInt(process.env.BCRYPT_SALT);
+const {TOKEN_EXPIRE, TOKEN_SECRET} = process.env; // 30 days by seconds
+const jwt = require('jsonwebtoken');
 
-const signUp = async (name, email, password, expire) => {
+const signUp = async (name, email, password) => {
     try {
         await transaction();
 
@@ -16,75 +18,89 @@ const signUp = async (name, email, password, expire) => {
         }
 
         const loginAt = new Date();
-        const sha = crypto.createHash('sha256');
-        sha.update(email + password + loginAt);
-        const accessToken = sha.digest('hex');
+
         const user = {
             provider: 'native',
             email: email,
             password: bcrypt.hashSync(password, salt),
             name: name,
             picture: null,
-            access_token: accessToken,
-            access_expired: expire,
+            access_expired: TOKEN_EXPIRE,
             login_at: loginAt
         };
         const queryStr = 'INSERT INTO user SET ?';
 
         const result = await query(queryStr, user);
         user.id = result.insertId;
+        const accessToken = jwt.sign({
+            provider: user.provider,
+            name: user.name,
+            email: user.email,
+            picture: user.picture
+        }, TOKEN_SECRET);
+        user.access_token = accessToken;
 
         await commit();
-        return {accessToken, loginAt, user};
+        return {user};
     } catch (error) {
         await rollback();
         return {error};
     }
 };
 
-const nativeSignIn = async (email, password, expire) => {
+const nativeSignIn = async (email, password) => {
     try {
         await transaction();
 
         const users = await query('SELECT * FROM user WHERE email = ?', [email]);
         const user = users[0];
-
         if (!bcrypt.compareSync(password, user.password)){
             await commit();
             return {error: 'Password is wrong'};
         }
 
         const loginAt = new Date();
-        const sha = crypto.createHash('sha256');
-        sha.update(email + password + loginAt);
-        const accessToken = sha.digest('hex');
+        const accessToken = jwt.sign({
+            provider: user.provider,
+            name: user.name,
+            email: user.email,
+            picture: user.picture
+        }, TOKEN_SECRET);
 
         const queryStr = 'UPDATE user SET access_token = ?, access_expired = ?, login_at = ? WHERE id = ?';
-        await query(queryStr, [accessToken, expire, loginAt, user.id]);
+        await query(queryStr, [accessToken, TOKEN_EXPIRE, loginAt, user.id]);
 
         await commit();
-
-        return {accessToken, loginAt, user};
+        
+        user.access_token = accessToken;
+        user.login_at = loginAt;
+        user.access_expired = TOKEN_EXPIRE;
+        return {user};
     } catch (error) {
         await rollback();
         return {error};
     }
 };
 
-const facebookSignIn = async (id, name, email, accessToken, expire) => {
+const facebookSignIn = async (id, name, email) => {
     try {
         await transaction();
-
         const loginAt = new Date();
         let user = {
             provider: 'facebook',
             email: email,
             name: name,
             picture:'https://graph.facebook.com/' + id + '/picture?type=large',
-            access_token: accessToken,
-            access_expired: expire,
+            access_expired: TOKEN_EXPIRE,
             login_at: loginAt
         };
+        const accessToken = jwt.sign({
+            provider: user.provider,
+            name: user.name,
+            email: user.email,
+            picture: user.picture
+        }, TOKEN_SECRET);
+        user.access_token = accessToken;
 
         const users = await query('SELECT id FROM user WHERE email = ? AND provider = \'facebook\' FOR UPDATE', [email]);
         let userId;
@@ -95,13 +111,13 @@ const facebookSignIn = async (id, name, email, accessToken, expire) => {
         } else { // Update existed user
             userId = users[0].id;
             const queryStr = 'UPDATE user SET access_token = ?, access_expired = ?, login_at = ?  WHERE id = ?';
-            await query(queryStr, [accessToken, expire, loginAt, userId]);
+            await query(queryStr, [accessToken, TOKEN_EXPIRE, loginAt, userId]);
         }
         user.id = userId;
 
         await commit();
 
-        return {accessToken, loginAt, user};
+        return {user};
     } catch (error) {
         await rollback();
         return {error};

@@ -19,7 +19,7 @@ const fbProfileSignInAgain = {
 };
 let stub;
 
-describe('order', () => {
+describe('user', () => {
 
     before(() => {
         const userModel = require('../server/models/user_model');
@@ -272,14 +272,14 @@ describe('order', () => {
 
         assert.deepEqual(data.user, expectedUser);
 
-        assert.equal(data.access_token, fbTokenSignInFirstTime);
         assert.equal(data.access_expired, expectedExpireTime);
         assert.closeTo(new Date(data.login_at).getTime(), Date.now(), 1000);
     });
 
-    it('facebook sign in again with correct token', async () => {
+    it('facebook sign in again with correct email and password', async () => {
         const user = {
             provider: 'facebook',
+            email: fbProfileSignInFirstTime.email,
             access_token: fbTokenSignInAgain
         };
 
@@ -299,13 +299,12 @@ describe('order', () => {
 
         assert.deepEqual(data.user, expectedUser);
 
-        assert.equal(data.access_token, fbTokenSignInAgain);
         assert.equal(data.access_expired, expectedExpireTime);
 
         // make sure DB is changed, too
         const loginTime = await query(
-            'SELECT login_at FROM user WHERE provider = ? AND access_token = ?',
-            [user.provider, user.access_token]
+            'SELECT login_at FROM user WHERE provider = ? AND email = ?',
+            [user.provider, user.email]
         );
 
         assert.closeTo(new Date(data.login_at).getTime(), Date.now(), 1000);
@@ -355,14 +354,12 @@ describe('order', () => {
         const user1 = res1.body.data.user;
 
         const accessToken = res1.body.data.access_token;
-
         const res2 = await requester
             .get('/api/1.0/user/profile')
             .set('Authorization', `Bearer ${accessToken}`);
-
+        
         const user2 = res2.body.data;
         const expectedUser = {
-            id: user1.id,
             provider: user1.provider,
             name: fbProfileSignInFirstTime.name,
             email: fbProfileSignInFirstTime.email,

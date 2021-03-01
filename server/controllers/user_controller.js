@@ -1,7 +1,8 @@
 require('dotenv').config();
 const validator = require('validator');
 const User = require('../models/user_model');
-const expire = process.env.TOKEN_EXPIRE; // 30 days by seconds
+const jwt = require('jsonwebtoken');
+const {TOKEN_SECRET} = process.env; // 30 days by seconds
 
 const signUp = async (req, res) => {
     let {name} = req.body;
@@ -19,13 +20,13 @@ const signUp = async (req, res) => {
 
     name = validator.escape(name);
 
-    const result = await User.signUp(name, email, password, expire);
+    const result = await User.signUp(name, email, password);
     if (result.error) {
         res.status(403).send({error: result.error});
         return;
     }
 
-    const {accessToken, loginAt, user} = result;
+    const user = result.user;
     if (!user) {
         res.status(500).send({error: 'Database Query Error'});
         return;
@@ -33,9 +34,9 @@ const signUp = async (req, res) => {
 
     res.status(200).send({
         data: {
-            access_token: accessToken,
-            access_expired: expire,
-            login_at: loginAt,
+            access_token: user.access_token,
+            access_expired: user.access_expired,
+            login_at: user.login_at,
             user: {
                 id: user.id,
                 provider: user.provider,
@@ -53,7 +54,7 @@ const nativeSignIn = async (email, password) => {
     }
 
     try {
-        return await User.nativeSignIn(email, password, expire);
+        return await User.nativeSignIn(email, password);
     } catch (error) {
         return {error};
     }
@@ -72,7 +73,7 @@ const facebookSignIn = async (accessToken) => {
             return {error: 'Permissions Error: facebook access token can not get user id, name or email'};
         }
 
-        return await User.facebookSignIn(id, name, email, accessToken, expire);
+        return await User.facebookSignIn(id, name, email);
     } catch (error) {
         return {error: error};
     }
@@ -99,7 +100,7 @@ const signIn = async (req, res) => {
         return;
     }
 
-    const {accessToken, loginAt, user} = result;
+    const user = result.user;
     if (!user) {
         res.status(500).send({error: 'Database Query Error'});
         return;
@@ -107,9 +108,9 @@ const signIn = async (req, res) => {
 
     res.status(200).send({
         data: {
-            access_token: accessToken,
-            access_expired: expire,
-            login_at: loginAt,
+            access_token: user.access_token,
+            access_expired: user.access_expired,
+            login_at: user.login_at,
             user: {
                 id: user.id,
                 provider: user.provider,
@@ -126,15 +127,24 @@ const getUserProfile = async (req, res) => {
 	if (accessToken) {
 		accessToken = accessToken.replace('Bearer ', '');
 	} else {
-		res.status(400).send({error: 'Wrong Request: authorization is required.'});
+		res.status(400).send({error: "Wrong Request: authorization is required."});
 		return;
     }
-    const profile = await User.getUserProfile(accessToken);
-    if (profile.error) {
-        res.status(403).send({error: profile.error});
+
+    try {
+        const user = jwt.verify(accessToken, TOKEN_SECRET);
+        res.status(200).send({
+            data: {
+                provider: user.provider,
+                name: user.name,
+                email: user.email,
+                picture: user.picture
+            }
+        });
         return;
-    } else {
-        res.status(200).send(profile);
+    } catch(err) {
+        res.status(403).send({error: "Invalid Access Token"});
+        return;
     }
 };
 
