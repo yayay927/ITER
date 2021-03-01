@@ -10,12 +10,8 @@ const checkout = async (req, res) => {
         res.status(400).send({error:'Create Order Error: Wrong Data Format'});
 		return;
 	}
-    const token = req.get('Authorization');
-    const accessToken = token ? token.replace('Bearer ', '') : token;
-
-    const result = await User.getUserProfile(accessToken);
-    const user = result.data;
-
+    const user = req.user;
+    console.log("USER:", user);
     const now = new Date();
     const number = '' + now.getMonth() + now.getDate() + (now.getTime()%(24*60*60*1000)) + Math.floor(Math.random()*10);
     const orderRecord = {

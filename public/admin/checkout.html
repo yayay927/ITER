@@ -129,10 +129,11 @@
 					alert('get prime error '+result.msg);
 					return;
 				}
-				alert('get prime 成功，prime: '+result.card.prime);
+                alert('get prime 成功，prime: '+result.card.prime);
+                const localStorage = window.localStorage;
 				let req=new XMLHttpRequest();
 				req.open("post", "http://18.214.165.31/api/1.0/order/checkout");
-				req.setRequestHeader("Authorization", "Bearer "+"EAAca49qKZCDkBAKVRG3WDOSYNi6c5HZBMCZAcKP2DOOvfsOSZB9qL8LzkhLiaRMqHONAuJuW3FIhmIf89XLD1mVKPcLpVETKcZA6wo68IMbtVVoD1iL1UdQJJNE9nCeEkvk3kIEuVjHbIJFaZAyguaodtPhPmABWecFSyUmYXbs8vV3rCZCJ0LASn9iuKygv90ZD");
+				req.setRequestHeader("Authorization", "Bearer " + localStorage.getItem('stylish_access_token'));
 				req.setRequestHeader("Content-Type", "application/json");
 				let data={
 					prime:result.card.prime,

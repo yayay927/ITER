@@ -1,5 +1,9 @@
 const router = require('express').Router();
-const {wrapAsync} = require('../../util/util');
+
+const {
+    wrapAsync,
+    authentication
+} = require('../../util/util');
 
 const {
     signUp,
@@ -14,6 +18,6 @@ router.route('/user/signin')
     .post(wrapAsync(signIn));
 
 router.route('/user/profile')
-    .get(wrapAsync(getUserProfile));
+    .get(authentication(), wrapAsync(getUserProfile));
 
 module.exports = router;

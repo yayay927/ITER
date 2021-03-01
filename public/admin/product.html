@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stylish Product Management</title>
@@ -52,4 +53,29 @@ input{
 		<input type="submit" value="Create" />
 	</form>
 </body>
+<script>
+    const localStorage = window.localStorage;
+    $(document).on("submit", "form", function(event) {
+        event.preventDefault();
+        $.ajax({
+            url: $(this).attr("action"),
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem('stylish_access_token')
+            },
+            type: $(this).attr("method"),
+            dataType: "JSON",
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            success: function (data, status)
+            {
+                console.log(data);
+            },
+            error: function (xhr, desc, err)
+            {
+                console.log(err);
+            }
+        });
+    });
+</script>
 </html>

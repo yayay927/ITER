@@ -124,20 +124,12 @@ const facebookSignIn = async (id, name, email) => {
     }
 };
 
-const getUserProfile = async (accessToken) => {
-    const results = await query('SELECT * FROM user WHERE access_token = ?', [accessToken]);
-    if (results.length === 0) {
-        return {error: 'Invalid Access Token'};
-    } else {
-        return {
-            data:{
-                id: results[0].id,
-                provider: results[0].provider,
-                name: results[0].name,
-                email: results[0].email,
-                picture: results[0].picture
-            }
-        };
+const getUserWithRole = async (userId, roleId) => {
+    try {
+        const users = await query('SELECT * FROM user WHERE id = ? AND role_id = ?', [userId, roleId]);
+        return users[0];
+    } catch {
+        return null;
     }
 };
 
@@ -157,6 +149,6 @@ module.exports = {
     signUp,
     nativeSignIn,
     facebookSignIn,
-    getUserProfile,
+    getUserWithRole,
     getFacebookProfile,
 };
