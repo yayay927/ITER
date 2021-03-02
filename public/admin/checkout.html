@@ -60,6 +60,7 @@
 	<div class="tpfield" id="card-ccv"></div>
 	<button onclick="checkout();">Check Out</button>
 	<script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+	<script type="module" src="fb.js"></script>
 	<script>
 		TPDirect.setupSDK(12348, "app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF", "sandbox");
 		TPDirect.card.setup({
@@ -118,6 +119,10 @@
 			}
 		});
 		function checkout(){
+			if (!window.fb.jwtToken) {
+				window.fb.login();
+				return;
+			}
 			let tappayStatus=TPDirect.card.getTappayFieldsStatus();
 			if(!tappayStatus.canGetPrime){
 				alert('can not get prime');
@@ -133,7 +138,7 @@
                 const localStorage = window.localStorage;
 				let req=new XMLHttpRequest();
 				req.open("post", "http://18.214.165.31/api/1.0/order/checkout");
-				req.setRequestHeader("Authorization", "Bearer " + localStorage.getItem('stylish_access_token'));
+				req.setRequestHeader("Authorization", "Bearer " + window.fb.jwtToken);
 				req.setRequestHeader("Content-Type", "application/json");
 				let data={
 					prime:result.card.prime,
