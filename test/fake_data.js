@@ -1,6 +1,7 @@
 const users = [
     {
         provider: 'native',
+        role_id: 1,
         email: 'test1@gmail.com',
         password: 'test1password',
         name: 'test1',
@@ -11,6 +12,7 @@ const users = [
     },
     {
         provider: 'facebook',
+        role_id: 2,
         email: 'test2@gmail.com',
         password: null,
         name: 'test2',
@@ -21,6 +23,7 @@ const users = [
     },
     {
         provider: 'native',
+        role_id: 2,
         email: 'test3@gmail.com',
         password: 'test3passwod',
         name: 'test3',

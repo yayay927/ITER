@@ -123,29 +123,15 @@ const signIn = async (req, res) => {
 };
 
 const getUserProfile = async (req, res) => {
-    let accessToken = req.get('Authorization');
-	if (accessToken) {
-		accessToken = accessToken.replace('Bearer ', '');
-	} else {
-		res.status(400).send({error: "Wrong Request: authorization is required."});
-		return;
-    }
-
-    try {
-        const user = jwt.verify(accessToken, TOKEN_SECRET);
-        res.status(200).send({
-            data: {
-                provider: user.provider,
-                name: user.name,
-                email: user.email,
-                picture: user.picture
-            }
-        });
-        return;
-    } catch(err) {
-        res.status(403).send({error: "Invalid Access Token"});
-        return;
-    }
+    res.status(200).send({
+        data: {
+            provider: req.user.provider,
+            name: req.user.name,
+            email: req.user.email,
+            picture: req.user.picture
+        }
+    });
+    return;
 };
 
 module.exports = {

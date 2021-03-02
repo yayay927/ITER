@@ -373,8 +373,7 @@ describe('user', () => {
         const res = await requester
             .get('/api/1.0/user/profile');
 
-        assert.equal(res.status, 400);
-        assert.equal(res.body.error, 'Wrong Request: authorization is required.');
+        assert.equal(res.status, 401);
     });
 
     it('get profile with invalid access_token', async () => {
@@ -383,7 +382,6 @@ describe('user', () => {
             .set('Authorization', 'Bearer wrong_token');
 
         assert.equal(res.status, 403);
-        assert.equal(res.body.error, 'Invalid Access Token');
     });
 
     after(() => {

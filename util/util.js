@@ -5,6 +5,8 @@ const multer = require('multer');
 const path = require('path');
 const port = process.env.PORT;
 const User = require('../server/models/user_model');
+const {TOKEN_EXPIRE, TOKEN_SECRET} = process.env; // 30 days by seconds
+const jwt = require('jsonwebtoken');
 
 const upload = multer({
     storage: multer.diskStorage({
@@ -41,42 +43,44 @@ const wrapAsync = (fn) => {
     };
 };
 
-const USER_ROLE = {
-    ADMIN: 1,
-    USER: 2
-}
 const authentication = (roleId) => {
     return async function (req, res, next) {
         let accessToken = req.get('Authorization');
-        console.log(accessToken);
-        if (accessToken) {
-            accessToken = accessToken.replace('Bearer ', '');
-        } else {
+        if (!accessToken) {
             res.status(401).send({error: 'Unauthorized'});
             return;
         }
 
-        // parse token;
-        const user = {
-            "id": 10044,
-            "provider": "native",
-            "name": "arthur",
-            "email": "arthur@gmail.com",
-            "picture": "aaa"
+        accessToken = accessToken.replace('Bearer ', '');
+        if (accessToken == 'null') {
+            res.status(401).send({error: 'Unauthorized'});
+            return;
         }
-        req.user = user;
-        console.log(roleId);
-        if (!roleId) {
-            next();
-        } else {
-            const userWithRole = await User.getUserWithRole(user.id, roleId);
-            console.log(userWithRole);
-            if (!userWithRole) {
-                res.status(403).send({error: 'Forbidden'});    
-            } else {
-                next();
-            }
 
+        try {
+            const user = jwt.verify(accessToken, TOKEN_SECRET);
+            req.user = user;
+            if (roleId == null) {
+                next();
+            } else {
+                let userDetail;
+                if (roleId == User.USER_ROLE.ALL) {
+                    userDetail = await User.getUserDetail(user.email);
+                } else {
+                    userDetail = await User.getUserDetail(user.email, roleId);
+                }
+                if (!userDetail) {
+                    res.status(403).send({error: 'Forbidden'});    
+                } else {
+                    req.user.id = userDetail.id;
+                    req.user.role_id = userDetail.role_id;
+                    next();
+                }
+            }
+            return;
+        } catch(err) {
+            res.status(403).send({error: 'Forbidden'});
+            return;
         }
     }
 }
@@ -85,6 +89,5 @@ module.exports = {
     upload,
     getImagePath,
     wrapAsync,
-    USER_ROLE,
     authentication
 };

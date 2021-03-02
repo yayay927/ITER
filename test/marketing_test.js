@@ -5,18 +5,49 @@ const {PORT} = process.env;
 const {query} = require('../server/models/mysqlcon');
 const sinon = require('sinon');
 
+const {users} = require('./fake_data');
+const user1 = {
+    provider: users[0].provider,
+    email: users[0].email,
+    password: users[0].password
+};
+let accessToken1;
+let userId1;
+
+const user2 = {
+    provider: users[2].provider,
+    email: users[2].email,
+    password: users[2].password
+};
+let accessToken2;
+let userId2;
+
 let stub1;
 let stub2;
 
 describe('marketing', () => {
 
-    before(() => {
+    before(async () => {
         const cache = require('../util/cache');
 
         // let cache do nothing
         stub1 = sinon.stub(cache, 'get').callsFake(() => {});
         stub2 = sinon.stub(cache, 'set').callsFake(() => {});
         stub2 = sinon.stub(cache, 'del').callsFake(() => {});
+
+        const res1 = await requester
+            .post('/api/1.0/user/signin')
+            .send(user1);
+        const data1 = res1.body.data;
+        userId1 = data1.user.id;
+        accessToken1 = data1.access_token;
+
+        const res2 = await requester
+            .post('/api/1.0/user/signin')
+            .send(user2);
+        const data2 = res2.body.data;
+        userId2 = data2.user.id;
+        accessToken2 = data2.access_token;
     });
 
     it('get campaign data', async () => {
@@ -88,10 +119,10 @@ describe('marketing', () => {
         assert.deepEqual(product1, expect);
     });
 
-
     it('create hot data', async () => {
         await requester
             .post('/api/1.0/admin/hot')
+            .set('Authorization', `Bearer ${accessToken1}`)
             .send({
                 title: 'new hots',
                 product_ids: '1,2,3',
@@ -103,9 +134,34 @@ describe('marketing', () => {
         assert.deepEqual(products.map(x => x.product_id), [1,2,3]);
     });
 
+    it('create hot data without login', async () => {
+        const res = await requester
+            .post('/api/1.0/admin/hot')
+            .send({
+                title: 'new hots',
+                product_ids: '1,2,3',
+                authentication_code: AUTHENTICATION_CODE
+            });
+        assert.equal(res.statusCode, 401);
+    });
+
+    it('create hot data without admin role', async () => {
+        const res = await requester
+            .post('/api/1.0/admin/hot')
+            .set('Authorization', `Bearer ${accessToken2}`)
+            .send({
+                title: 'new hots',
+                product_ids: '1,2,3',
+                authentication_code: AUTHENTICATION_CODE
+            });
+
+        assert.equal(res.statusCode, 403);
+    });
+
     it('create campaign', async () => {
         await requester
             .post('/api/1.0/admin/hot')
+            .set('Authorization', `Bearer ${accessToken1}`)
             .send({
                 title: 'new hots',
                 product_ids: '1,2,3',

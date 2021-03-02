@@ -1,7 +1,6 @@
 require('dotenv').config();
 const validator = require('validator');
 const {TAPPAY_PARTNER_KEY} = process.env;
-const User = require('../models/user_model');
 const Order = require('../models/order_model');
 
 const checkout = async (req, res) => {
@@ -11,7 +10,6 @@ const checkout = async (req, res) => {
 		return;
 	}
     const user = req.user;
-    console.log("USER:", user);
     const now = new Date();
     const number = '' + now.getMonth() + now.getDate() + (now.getTime()%(24*60*60*1000)) + Math.floor(Math.random()*10);
     const orderRecord = {

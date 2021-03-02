@@ -10,8 +10,12 @@ const {
     getUserPaymentsGroupByDB,
 } = require('../controllers/order_controller');
 
+const {
+    USER_ROLE
+} = require('../models/user_model');
+
 router.route('/order/checkout')
-    .post(authentication(), wrapAsync(checkout));
+    .post(authentication(USER_ROLE.ALL), wrapAsync(checkout));
 
 // For load testing (Not in API Docs)
 router.route('/order/payments')

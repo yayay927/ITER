@@ -16,6 +16,7 @@ function _createFakeUser() {
     const encryped_users = users.map(user => {
         const encryped_user = {
             provider: user.provider,
+            role_id: user.role_id,
             email: user.email,
             password: user.password ? bcrypt.hashSync(user.password, salt) : null,
             name: user.name,
@@ -26,7 +27,7 @@ function _createFakeUser() {
         };
         return encryped_user;
     });
-    return query('INSERT INTO user (provider, email, password, name, picture, access_token, access_expired, login_at) VALUES ?', [encryped_users.map(x => Object.values(x))]);
+    return query('INSERT INTO user (provider, role_id, email, password, name, picture, access_token, access_expired, login_at) VALUES ?', [encryped_users.map(x => Object.values(x))]);
 }
 
 function _createFakeProduct() {

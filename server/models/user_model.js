@@ -1,11 +1,16 @@
 require('dotenv').config();
 const bcrypt = require('bcrypt');
-const crypto = require('crypto');
 const got = require('got');
 const {query, transaction, commit, rollback} = require('./mysqlcon');
 const salt = parseInt(process.env.BCRYPT_SALT);
 const {TOKEN_EXPIRE, TOKEN_SECRET} = process.env; // 30 days by seconds
 const jwt = require('jsonwebtoken');
+
+const USER_ROLE = {
+    ALL: -1,
+    ADMIN: 1,
+    USER: 2
+}
 
 const signUp = async (name, email, password) => {
     try {
@@ -124,10 +129,15 @@ const facebookSignIn = async (id, name, email) => {
     }
 };
 
-const getUserWithRole = async (userId, roleId) => {
+const getUserDetail = async (email, roleId) => {
     try {
-        const users = await query('SELECT * FROM user WHERE id = ? AND role_id = ?', [userId, roleId]);
-        return users[0];
+        if (roleId) {
+            const users = await query('SELECT * FROM user WHERE email = ? AND role_id = ?', [email, roleId]);
+            return users[0];
+        } else {
+            const users = await query('SELECT * FROM user WHERE email = ?', [email]);
+            return users[0];
+        }
     } catch {
         return null;
     }
@@ -146,9 +156,10 @@ const getFacebookProfile = async function(accessToken){
 };
 
 module.exports = {
+    USER_ROLE,
     signUp,
     nativeSignIn,
     facebookSignIn,
-    getUserWithRole,
+    getUserDetail,
     getFacebookProfile,
 };

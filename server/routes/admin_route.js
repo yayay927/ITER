@@ -17,9 +17,12 @@ const {
 
 const {
     wrapAsync,
-    USER_ROLE,
     authentication
 } = require('../../util/util');
+
+const {
+    USER_ROLE
+} = require('../models/user_model');
 
 router.route('/admin/product')
     .post(authentication(USER_ROLE.ADMIN), cpUpload, wrapAsync(createProduct));
