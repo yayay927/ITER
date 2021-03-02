@@ -3,7 +3,7 @@ import api from "./Api.js";
 class Fb {
   constructor() {
     window.fbAsyncInit = this.init.bind(this);
-    this.auth = undefined;
+    this.jwtToken = undefined;
   }
 
   setup(getLoginStatusCallback) {
@@ -33,33 +33,10 @@ class Fb {
 
     window.FB.getLoginStatus((response) => {
       this.handleLoginStatus(response);
-      if (typeof this.getLoginStatusCallback === "function") {
-        if (this.auth) {
-          this.getProfile().then((profile) => {
-            this.getLoginStatusCallback(profile);
-          });
-        } else {
-          window.location.href = "/";
-        }
-      }
     });
   }
 
-  handleLoginStatus(response) {
-    if (response.status === "connected") {
-      this.auth = response.authResponse;
-      this.loginToServer();
-    }
-  }
-
-  loginToServer() {
-    api.signin({
-      provider: "facebook",
-      access_token: this.auth.accessToken,
-    });
-  }
-
-  loginToFb() {
+  login() {
     window.FB.login(
       (response) => {
         this.handleLoginStatus(response);
@@ -68,19 +45,22 @@ class Fb {
     );
   }
 
-  getProfile() {
-    return new Promise((resolve, reject) => {
-      window.FB.api(
-        "/me?fields=id,name,email,picture.height(2048)",
-        (response) => {
-          if (response.error) {
-            reject(response.error);
-          } else {
-            resolve(response);
-          }
-        }
-      );
-    });
+  async handleLoginStatus(response) {
+    if (response.status === "connected") {
+      const { data } = await api.signin({
+        provider: "facebook",
+        access_token: response.authResponse.accessToken,
+      });
+      this.jwtToken = data.access_token;
+      this.profile = data.user;
+    }
+    if (typeof this.getLoginStatusCallback === "function") {
+      if (this.profile) {
+        this.getLoginStatusCallback(this.profile);
+      } else {
+        window.location.href = "/";
+      }
+    }
   }
 }
 
