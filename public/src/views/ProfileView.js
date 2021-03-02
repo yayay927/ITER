@@ -10,14 +10,14 @@ class ProfileView extends BaseView {
   renderProfile(profile) {
     this.createElement("img", {
       attributes: {
-        src: profile.picture.data.url,
+        src: profile.picture,
       },
       parent: this.member,
     });
     this.createElement("div", {
       classList: ["member__detail"],
       attributes: {
-        src: profile.picture.data.url,
+        src: profile.picture,
       },
       parent: this.member,
       children: [

@@ -1,6 +1,7 @@
 class Api {
   constructor() {
     this.API_HOST = "https://api.appworks-school.tw/api/1.0";
+    this.accessToken = undefined;
   }
 
   async getProducts(category, paging) {
@@ -27,20 +28,24 @@ class Api {
     return await response.json();
   }
 
-  async checkout(data, accessToken) {
-    const headers = new Headers({
-      "Content-Type": "application/json",
-    });
-
-    if (accessToken) {
-      headers.set("Authorization", `Bearer ${accessToken}`);
+  async checkout(data) {
+    if (!this.accessToken) {
+      throw new Error("請先登入");
     }
-
     const response = await fetch(`${this.API_HOST}/order/checkout`, {
       body: JSON.stringify(data),
-      headers,
+      headers: new Headers({
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
       method: "POST",
     });
+    if (response.status === 401) {
+      throw new Error("請先登入");
+    }
+    if (response.status === 403) {
+      throw new Error("內容錯誤或權限不足");
+    }
     return await response.json();
   }
 
@@ -52,7 +57,9 @@ class Api {
       }),
       method: "POST",
     });
-    return await response.json();
+    const json = await response.json();
+    this.accessToken = json.data.access_token;
+    return json;
   }
 }
 

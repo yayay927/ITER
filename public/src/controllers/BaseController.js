@@ -33,10 +33,10 @@ class BaseController {
   }
 
   handleClickProfile() {
-    if (this.fb.auth) {
+    if (this.fb.jwtToken) {
       window.location.href = "/profile.html";
     } else {
-      this.fb.loginToFb();
+      this.fb.login();
     }
   }
 }

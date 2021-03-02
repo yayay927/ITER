@@ -88,11 +88,14 @@ class CartController extends BaseController {
       const prime = await this.tappay.getPrime();
       const data = this.makeCheckoutData(prime, cartItems, recipient);
       api
-        .checkout(data, this.fb.auth?.accessToken)
+        .checkout(data)
         .then(({ data: { number } }) => {
           this.model.cart.items = [];
           this.model.cart.update();
           window.location.href = `/thankyou.html?number=${number}`;
+        })
+        .catch((e) => {
+          window.alert(e.message);
         });
     } else {
       window.alert(this.tappay.cannotGetPrimeReason);
