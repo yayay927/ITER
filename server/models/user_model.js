@@ -12,7 +12,7 @@ const USER_ROLE = {
     USER: 2
 };
 
-const signUp = async (name, email, password) => {
+const signUp = async (name, roleId, email, password) => {
     try {
         await transaction();
 
@@ -26,6 +26,7 @@ const signUp = async (name, email, password) => {
 
         const user = {
             provider: 'native',
+            role_id: roleId,
             email: email,
             password: bcrypt.hashSync(password, salt),
             name: name,
@@ -33,10 +34,6 @@ const signUp = async (name, email, password) => {
             access_expired: TOKEN_EXPIRE,
             login_at: loginAt
         };
-        const queryStr = 'INSERT INTO user SET ?';
-
-        const result = await query(queryStr, user);
-        user.id = result.insertId;
         const accessToken = jwt.sign({
             provider: user.provider,
             name: user.name,
@@ -45,9 +42,14 @@ const signUp = async (name, email, password) => {
         }, TOKEN_SECRET);
         user.access_token = accessToken;
 
+        const queryStr = 'INSERT INTO user SET ?';
+        const result = await query(queryStr, user);
+
+        user.id = result.insertId;
         await commit();
         return {user};
     } catch (error) {
+        console.log(error);
         await rollback();
         return {error};
     }
@@ -87,12 +89,13 @@ const nativeSignIn = async (email, password) => {
     }
 };
 
-const facebookSignIn = async (id, name, email) => {
+const facebookSignIn = async (id, roleId, name, email) => {
     try {
         await transaction();
         const loginAt = new Date();
         let user = {
             provider: 'facebook',
+            role_id: roleId,
             email: email,
             name: name,
             picture:'https://graph.facebook.com/' + id + '/picture?type=large',

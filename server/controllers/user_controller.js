@@ -18,7 +18,7 @@ const signUp = async (req, res) => {
 
     name = validator.escape(name);
 
-    const result = await User.signUp(name, email, password);
+    const result = await User.signUp(name, User.USER_ROLE.USER, email, password);
     if (result.error) {
         res.status(403).send({error: result.error});
         return;
@@ -71,7 +71,7 @@ const facebookSignIn = async (accessToken) => {
             return {error: 'Permissions Error: facebook access token can not get user id, name or email'};
         }
 
-        return await User.facebookSignIn(id, name, email);
+        return await User.facebookSignIn(id, User.USER_ROLE.USER, name, email);
     } catch (error) {
         return {error: error};
     }
