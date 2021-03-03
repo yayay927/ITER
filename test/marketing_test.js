@@ -12,7 +12,6 @@ const user1 = {
     password: users[0].password
 };
 let accessToken1;
-let userId1;
 
 const user2 = {
     provider: users[2].provider,
@@ -20,7 +19,6 @@ const user2 = {
     password: users[2].password
 };
 let accessToken2;
-let userId2;
 
 let stub1;
 let stub2;
@@ -39,14 +37,12 @@ describe('marketing', () => {
             .post('/api/1.0/user/signin')
             .send(user1);
         const data1 = res1.body.data;
-        userId1 = data1.user.id;
         accessToken1 = data1.access_token;
 
         const res2 = await requester
             .post('/api/1.0/user/signin')
             .send(user2);
         const data2 = res2.body.data;
-        userId2 = data2.user.id;
         accessToken2 = data2.access_token;
     });
 

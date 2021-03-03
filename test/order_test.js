@@ -119,7 +119,7 @@ describe('order', () => {
             .send(invalidOrderData);
 
         assert.equal(res.statusCode, 400);
-        assert.equal(res.body.error, "Invalid prime");
+        assert.equal(res.body.error, 'Invalid prime');
     });
 
     it('checkout order with valid data and user', async () => {

@@ -34,6 +34,17 @@ const users = [
     },
 ];
 
+const roles = [
+    {
+        id: 1,
+        name: 'admin'
+    },
+    {
+        id: 2,
+        name: 'user'
+    }
+]
+
 const products = [
     {
         category: 'men',
@@ -309,6 +320,7 @@ const campaigns = [
 
 module.exports = {
     users,
+    roles,
     products,
     variants,
     hots,

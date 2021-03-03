@@ -2,7 +2,7 @@ require('dotenv').config();
 const {assert, requester} = require('./set_up');
 const {users} = require('./fake_data');
 const sinon = require('sinon');
-const {query} = require('../server/models/mysqlcon')
+const {query} = require('../server/models/mysqlcon');
 
 const expectedExpireTime = process.env.TOKEN_EXPIRE;
 const fbTokenSignInFirstTime = 'fbTokenFirstLogin';
@@ -357,7 +357,7 @@ describe('user', () => {
         const res2 = await requester
             .get('/api/1.0/user/profile')
             .set('Authorization', `Bearer ${accessToken}`);
-        
+
         const user2 = res2.body.data;
         const expectedUser = {
             provider: user1.provider,

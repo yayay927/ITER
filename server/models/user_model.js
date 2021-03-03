@@ -10,7 +10,7 @@ const USER_ROLE = {
     ALL: -1,
     ADMIN: 1,
     USER: 2
-}
+};
 
 const signUp = async (name, email, password) => {
     try {
@@ -76,7 +76,7 @@ const nativeSignIn = async (email, password) => {
         await query(queryStr, [accessToken, TOKEN_EXPIRE, loginAt, user.id]);
 
         await commit();
-        
+
         user.access_token = accessToken;
         user.login_at = loginAt;
         user.access_expired = TOKEN_EXPIRE;
@@ -138,7 +138,7 @@ const getUserDetail = async (email, roleId) => {
             const users = await query('SELECT * FROM user WHERE email = ?', [email]);
             return users[0];
         }
-    } catch {
+    } catch (e) {
         return null;
     }
 };

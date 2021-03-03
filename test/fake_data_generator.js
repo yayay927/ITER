@@ -3,6 +3,7 @@ const {NODE_ENV} = process.env;
 const bcrypt = require('bcrypt');
 const {
     users,
+    roles,
     products,
     variants,
     hots,
@@ -28,6 +29,10 @@ function _createFakeUser() {
         return encryped_user;
     });
     return query('INSERT INTO user (provider, role_id, email, password, name, picture, access_token, access_expired, login_at) VALUES ?', [encryped_users.map(x => Object.values(x))]);
+}
+
+function _createFakeRole() {
+    return query('INSERT INTO role (id, name) VALUES ?', [roles.map(x => Object.values(x))]);
 }
 
 function _createFakeProduct() {
@@ -58,6 +63,7 @@ function createFakeData() {
     }
 
     return _createFakeProduct()
+        .then(_createFakeRole)
         .then(_createFakeUser)
         .then(_createFakeVariant)
         .then(_createFakeHot)
@@ -82,6 +88,7 @@ function truncateFakeData() {
 
     return setForeignKey(0)
         .then(truncateTable('user'))
+        .then(truncateTable('role'))
         .then(truncateTable('product'))
         .then(truncateTable('variant'))
         .then(truncateTable('hot'))

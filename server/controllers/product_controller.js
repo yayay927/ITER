@@ -2,7 +2,6 @@ const _ = require('lodash');
 const util = require('../../util/util');
 const Product = require('../models/product_model');
 const pageSize = 6;
-const {AUTHENTICATION_CODE} = process.env;
 
 const createProduct = async (req, res) => {
     const body = req.body;

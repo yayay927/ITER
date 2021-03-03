@@ -5,7 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const port = process.env.PORT;
 const User = require('../server/models/user_model');
-const {TOKEN_EXPIRE, TOKEN_SECRET} = process.env; // 30 days by seconds
+const {TOKEN_SECRET} = process.env; // 30 days by seconds
 const jwt = require('jsonwebtoken');
 
 const upload = multer({
@@ -70,7 +70,7 @@ const authentication = (roleId) => {
                     userDetail = await User.getUserDetail(user.email, roleId);
                 }
                 if (!userDetail) {
-                    res.status(403).send({error: 'Forbidden'});    
+                    res.status(403).send({error: 'Forbidden'});
                 } else {
                     req.user.id = userDetail.id;
                     req.user.role_id = userDetail.role_id;
@@ -82,8 +82,8 @@ const authentication = (roleId) => {
             res.status(403).send({error: 'Forbidden'});
             return;
         }
-    }
-}
+    };
+};
 
 module.exports = {
     upload,
