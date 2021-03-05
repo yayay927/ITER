@@ -1,7 +1,7 @@
 const Cache = require('./cache');
 const client = Cache.client;
 const QUOTA = 10; // 10 requests;
-const WINDOW = 1; // 2 seconds
+const WINDOW = 1; // 1 seconds
 
 const rateLimiter = (req, res, next) => {
     try {
