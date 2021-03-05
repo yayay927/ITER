@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { rateLimiter } = require('./util/ratelimiter');
 const {PORT_TEST, PORT, NODE_ENV, API_VERSION} = process.env;
 const port = NODE_ENV == 'test' ? PORT_TEST : PORT;
 
@@ -8,7 +9,8 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 const app = express();
 
-app.set('trust proxy', 'loopback');
+app.set('trust proxy', true);
+// app.set('trust proxy', 'loopback');
 app.set('json spaces', 2);
 
 app.use(express.static('public'));
@@ -19,7 +21,9 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.use(cors());
 
 // API routes
+// app.use(rateLimiter);
 app.use('/api/' + API_VERSION,
+    rateLimiter,
     [
         require('./server/routes/admin_route'),
         require('./server/routes/product_route'),
