@@ -5,14 +5,9 @@ const Product = require('../models/product_model');
 const util = require('../../util/util');
 const CACHE_CAMPAIGN_KEY = 'cacheCampaigns';
 const CACHE_HOT_KEY = 'cacheHots';
-const {AUTHENTICATION_CODE} = process.env;
 
 const createCampaign = async (req, res) => {
     const body = req.body;
-    if (body.authentication_code != AUTHENTICATION_CODE) {
-        res.status(401).send('Authentication code is wrong');
-        return;
-    }
     const image = req.files.main_image[0].filename;
     const campaign = {
         product_id: parseInt(body.product_id),
@@ -33,10 +28,6 @@ const createCampaign = async (req, res) => {
 
 const createHot = async (req, res) => {
     const body = req.body;
-    if (body.authentication_code != AUTHENTICATION_CODE) {
-        res.status(401).send('Authentication code is wrong');
-        return;
-    }
     const title = body.title;
     const productIds = body.product_ids.split(',');
     await Marketing.createHot(title, productIds);
