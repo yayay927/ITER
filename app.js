@@ -5,7 +5,6 @@ const port = NODE_ENV == 'test' ? PORT_TEST : PORT;
 
 // Express Initialization
 const express = require('express');
-const bodyparser = require('body-parser');
 const cors = require('cors');
 const app = express();
 
@@ -14,14 +13,13 @@ app.set('trust proxy', true);
 app.set('json spaces', 2);
 
 app.use(express.static('public'));
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({extended:true}));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 
 // CORS allow all
 app.use(cors());
 
 // API routes
-// app.use(rateLimiter);
 app.use('/api/' + API_VERSION,
     rateLimiter,
     [
