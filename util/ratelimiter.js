@@ -1,9 +1,9 @@
 require('dotenv').config();
-const {NODE_ENV} = process.env;
+const {NODE_ENV, RATE_LIMIT_WINDOW, RATE_LIMIT_COUNT} = process.env;
 const Cache = require('./cache');
 const client = Cache.client;
-const QUOTA = (NODE_ENV == 'test' ? 10000 : 10); // 10 requests;
-const WINDOW = 1; // 1 seconds
+const QUOTA = (NODE_ENV == 'test' ? 10000 : (RATE_LIMIT_COUNT || 10));
+const WINDOW = (RATE_LIMIT_WINDOW || 1); // 1 seconds
 
 const rateLimiter = (req, res, next) => {
     try {
