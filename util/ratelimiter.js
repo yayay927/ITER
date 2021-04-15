@@ -18,7 +18,7 @@ const rateLimiter = (req, res, next) => {
                 }
                 const reqCount = replies[1];
                 if (reqCount > QUOTA) {
-                    return res.status(403).send(`Quota of ${QUOTA} per ${WINDOW}sec exceeded`);
+                    return res.status(429).send(`Quota of ${QUOTA} per ${WINDOW}sec exceeded`);
                 }
                 return next();
             });
