@@ -37,7 +37,7 @@ class Tappay {
     });
   }
 
-  setup() {
+  init() {
     this.setupSdk();
     this.setupCard();
   }

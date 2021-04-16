@@ -1,12 +1,7 @@
 import BaseController from './BaseController.js';
-import CartView from '../views/CartView.js';
-import CartModel from '../models/CartModel.js';
 
 import api from '../utils/Api.js';
 import Cart from '../utils/Cart.js';
-import Fb from '../utils/Fb.js';
-import Tappay from '../utils/Tappay.js';
-
 class CartController extends BaseController {
   constructor(model, view, fb, tappay) {
     super(model, view, fb, tappay);
@@ -16,10 +11,14 @@ class CartController extends BaseController {
     this.emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     this.phoneRegex = /^\d{10}$/;
 
-    this.onCartItemsChanged(this.model.cart.items);
     this.view.bindClickCheckout(this.handleClickCheckout.bind(this));
-    this.fb.setup();
-    this.tappay.setup();
+  }
+
+  init() {
+    super.init();
+    this.fb.init();
+    this.tappay.init();
+    this.onCartItemsChanged(this.model.cart.items);
   }
 
   onCartItemsChanged(cartItems) {
@@ -103,9 +102,4 @@ class CartController extends BaseController {
   }
 }
 
-const app = new CartController(
-  new CartModel(new Cart()),
-  new CartView(),
-  new Fb(),
-  new Tappay()
-);
+export default CartController;

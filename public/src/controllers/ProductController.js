@@ -1,18 +1,16 @@
 import BaseController from './BaseController.js';
-import ProductView from '../views/ProductView.js';
-import ProductModel from '../models/ProductModel.js';
 
 import api from '../utils/Api.js';
-import Cart from '../utils/Cart.js';
-import Fb from '../utils/Fb.js';
-import Tappay from '../utils/Tappay.js';
 
 class ProductController extends BaseController {
   constructor(model, view, fb, tappay) {
     super(model, view, fb, tappay);
+  }
 
+  init() {
+    super.init();
+    this.fb.init();
     this.getProduct();
-    this.fb.setup();
   }
 
   handleClickColorCode(index) {
@@ -99,9 +97,4 @@ class ProductController extends BaseController {
   }
 }
 
-const app = new ProductController(
-  new ProductModel(new Cart()),
-  new ProductView(),
-  new Fb(),
-  new Tappay()
-);
+export default ProductController;
