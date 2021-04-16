@@ -1,1 +1,1 @@
-import "./controllers/ProductController.js";
+import './controllers/ProductController.js';

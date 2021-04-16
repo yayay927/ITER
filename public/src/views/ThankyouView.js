@@ -1,10 +1,10 @@
-import BaseView from "./BaseView.js";
+import BaseView from './BaseView.js';
 
 class ThankyouView extends BaseView {
   constructor() {
     super();
 
-    this.number = this.getElement("#number");
+    this.number = this.getElement('#number');
   }
 
   renderNumber(number) {

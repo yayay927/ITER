@@ -1,1 +1,1 @@
-import "./controllers/IndexController.js";
+import './controllers/IndexController.js';

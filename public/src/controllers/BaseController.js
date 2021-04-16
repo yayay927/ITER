@@ -12,15 +12,15 @@ class BaseController {
   }
 
   get paramsNumber() {
-    return this.getParams("number");
+    return this.getParams('number');
   }
 
   get paramsId() {
-    return this.getParams("id");
+    return this.getParams('id');
   }
 
   get paramsTag() {
-    return this.getParams("tag") || "all";
+    return this.getParams('tag') || 'all';
   }
 
   getParams(key) {
@@ -34,7 +34,7 @@ class BaseController {
 
   handleClickProfile() {
     if (this.fb.jwtToken) {
-      window.location.href = "/profile.html";
+      window.location.href = '/profile.html';
     } else {
       this.fb.login();
     }

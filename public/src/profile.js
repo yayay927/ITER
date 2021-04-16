@@ -1,1 +1,1 @@
-import "./controllers/ProfileController.js";
+import './controllers/ProfileController.js';

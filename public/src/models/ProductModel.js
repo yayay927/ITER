@@ -1,4 +1,4 @@
-import BaseModel from "./BaseModel.js";
+import BaseModel from './BaseModel.js';
 
 class ProductModel extends BaseModel {
   constructor(cart) {
@@ -105,7 +105,7 @@ class ProductModel extends BaseModel {
       });
     }
     this.cart.update();
-    window.alert("已加入購物車");
+    window.alert('已加入購物車');
   }
 }
 

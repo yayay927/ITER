@@ -1,4 +1,4 @@
-import BaseModel from "./BaseModel.js";
+import BaseModel from './BaseModel.js';
 
 class CartModel extends BaseModel {
   constructor(cart) {
@@ -13,7 +13,7 @@ class CartModel extends BaseModel {
   removeCartItem(index) {
     this.cart.items.splice(index, 1);
     this.cart.update();
-    window.alert("已從購物車移除");
+    window.alert('已從購物車移除');
   }
 }
 

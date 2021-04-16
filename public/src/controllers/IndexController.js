@@ -1,11 +1,11 @@
-import BaseController from "./BaseController.js";
-import IndexView from "../views/IndexView.js";
-import IndexModel from "../models/IndexModel.js";
+import BaseController from './BaseController.js';
+import IndexView from '../views/IndexView.js';
+import IndexModel from '../models/IndexModel.js';
 
-import api from "../utils/Api.js";
-import Cart from "../utils/Cart.js";
-import Fb from "../utils/Fb.js";
-import Tappay from "../utils/Tappay.js";
+import api from '../utils/Api.js';
+import Cart from '../utils/Cart.js';
+import Fb from '../utils/Fb.js';
+import Tappay from '../utils/Tappay.js';
 class IndexController extends BaseController {
   constructor(model, view, fb, tappay) {
     super(model, view, fb, tappay);
@@ -24,7 +24,7 @@ class IndexController extends BaseController {
   }
 
   get isPredefinedTag() {
-    return ["women", "men", "accessories", "all"].indexOf(this.paramsTag) > -1;
+    return ['women', 'men', 'accessories', 'all'].indexOf(this.paramsTag) > -1;
   }
 
   getMoreProducts() {

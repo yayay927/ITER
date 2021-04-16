@@ -1,4 +1,4 @@
-import api from "./Api.js";
+import api from './Api.js';
 
 class Fb {
   constructor() {
@@ -18,17 +18,17 @@ class Fb {
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = "https://connect.facebook.net/zh_TW/sdk.js";
+      js.src = 'https://connect.facebook.net/zh_TW/sdk.js';
       fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
+    })(document, 'script', 'facebook-jssdk');
   }
 
   init() {
     window.FB.init({
-      appId: "700590737403665",
+      appId: '700590737403665',
       cookie: true,
       xfbml: true,
-      version: "v3.1",
+      version: 'v3.1',
     });
 
     window.FB.getLoginStatus((response) => {
@@ -41,24 +41,24 @@ class Fb {
       (response) => {
         this.handleLoginStatus(response);
       },
-      { scope: "public_profile,email" }
+      { scope: 'public_profile,email' }
     );
   }
 
   async handleLoginStatus(response) {
-    if (response.status === "connected") {
+    if (response.status === 'connected') {
       const { data } = await api.signin({
-        provider: "facebook",
+        provider: 'facebook',
         access_token: response.authResponse.accessToken,
       });
       this.jwtToken = data.access_token;
       this.profile = data.user;
     }
-    if (typeof this.getLoginStatusCallback === "function") {
+    if (typeof this.getLoginStatusCallback === 'function') {
       if (this.profile) {
         this.getLoginStatusCallback(this.profile);
       } else {
-        window.location.href = "/";
+        window.location.href = '/';
       }
     }
   }

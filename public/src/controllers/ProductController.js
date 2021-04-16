@@ -1,11 +1,11 @@
-import BaseController from "./BaseController.js";
-import ProductView from "../views/ProductView.js";
-import ProductModel from "../models/ProductModel.js";
+import BaseController from './BaseController.js';
+import ProductView from '../views/ProductView.js';
+import ProductModel from '../models/ProductModel.js';
 
-import api from "../utils/Api.js";
-import Cart from "../utils/Cart.js";
-import Fb from "../utils/Fb.js";
-import Tappay from "../utils/Tappay.js";
+import api from '../utils/Api.js';
+import Cart from '../utils/Cart.js';
+import Fb from '../utils/Fb.js';
+import Tappay from '../utils/Tappay.js';
 
 class ProductController extends BaseController {
   constructor(model, view, fb, tappay) {
