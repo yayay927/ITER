@@ -15,9 +15,11 @@
     6. set `BCRYPT_SALT` for password encryption (Optional)
 5. Modify API_HOST destination in front-end:
     1. cd `public`
-    2. change `this.API_HOST` value to `http://localhost:3000/api/1.0`
-    3. npm install
-    4. npm run build (The five js files under `public/dist` will be modified)
+    2. modify file `src/util/Api.js`
+        1. change `this.API_HOST` value to `http://localhost:3000/api/1.0`
+    3. under `public` folder
+        1. npm install
+        2. npm run build (The five js files under `public/dist` will be modified)
 6. Start a redis server in `localhost` at port `6379` (Optional, the server can still work without redis server, see ```marketing_controller.js``` for more detail)
 7. Start server: ```nodemon app.js```
 8. Clear Browser localStorage if needed. The same address will use the same space to records localStorage key-value pairs and it may conflict with mine. (Optional)
