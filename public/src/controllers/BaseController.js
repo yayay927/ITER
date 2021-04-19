@@ -5,22 +5,25 @@ class BaseController {
     this.fb = fb;
     this.tappay = tappay;
 
-    this.view.renderCount(this.model.cart.items.length);
-    this.view.handleTag(this.paramsTag);
     this.view.bindInputSearchPressEnter(this.redirectToIndexPageWithTag);
     this.view.bindClickProfile(this.handleClickProfile.bind(this));
   }
 
+  init() {
+    this.view.handleTag(this.paramsTag);
+    this.view.renderCount(this.model.cart.items.length);
+  }
+
   get paramsNumber() {
-    return this.getParams("number");
+    return this.getParams('number');
   }
 
   get paramsId() {
-    return this.getParams("id");
+    return this.getParams('id');
   }
 
   get paramsTag() {
-    return this.getParams("tag") || "all";
+    return this.getParams('tag') || 'all';
   }
 
   getParams(key) {
@@ -32,11 +35,14 @@ class BaseController {
     window.location.href = `/?tag=${tag}`;
   }
 
-  handleClickProfile() {
+  async handleClickProfile() {
     if (this.fb.jwtToken) {
-      window.location.href = "/profile.html";
+      window.location.href = '/profile.html';
     } else {
-      this.fb.login();
+      const profile = await this.fb.login();
+      if (profile) {
+        window.alert('登入成功！');
+      }
     }
   }
 }

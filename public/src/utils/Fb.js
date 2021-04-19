@@ -1,14 +1,8 @@
-import api from "./Api.js";
+import api from './Api.js';
 
 class Fb {
   constructor() {
-    window.fbAsyncInit = this.init.bind(this);
     this.jwtToken = undefined;
-  }
-
-  setup(getLoginStatusCallback) {
-    this.getLoginStatusCallback = getLoginStatusCallback;
-    this.loadSdk();
   }
 
   loadSdk() {
@@ -18,49 +12,54 @@ class Fb {
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = "https://connect.facebook.net/zh_TW/sdk.js";
+      js.src = 'https://connect.facebook.net/zh_TW/sdk.js';
       fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
+    })(document, 'script', 'facebook-jssdk');
   }
 
-  init() {
+  async init() {
+    await new Promise((resolve) => {
+      window.fbAsyncInit = resolve;
+      this.loadSdk();
+    });
+
     window.FB.init({
-      appId: "700590737403665",
+      appId: '700590737403665',
       cookie: true,
       xfbml: true,
-      version: "v3.1",
+      version: 'v10.0',
     });
 
-    window.FB.getLoginStatus((response) => {
-      this.handleLoginStatus(response);
+    const response = await new Promise((resolve) => {
+      window.FB.getLoginStatus(resolve);
     });
+
+    return await this.handleLoginStatus(response);
   }
 
-  login() {
-    window.FB.login(
-      (response) => {
-        this.handleLoginStatus(response);
-      },
-      { scope: "public_profile,email" }
-    );
+  async login() {
+    const response = await new Promise((resolve) => {
+      window.FB.login(resolve, { scope: 'public_profile,email' });
+    });
+    return await this.handleLoginStatus(response);
   }
 
   async handleLoginStatus(response) {
-    if (response.status === "connected") {
+    if (response.status === 'connected') {
       const { data } = await api.signin({
-        provider: "facebook",
+        provider: 'facebook',
         access_token: response.authResponse.accessToken,
       });
       this.jwtToken = data.access_token;
-      this.profile = data.user;
+      const profile = data.user;
+      return profile;
     }
-    if (typeof this.getLoginStatusCallback === "function") {
-      if (this.profile) {
-        this.getLoginStatusCallback(this.profile);
-      } else {
-        window.location.href = "/";
-      }
-    }
+  }
+
+  async logout() {
+    await new Promise((resolve) => {
+      window.FB.logout(resolve);
+    });
   }
 }
 

@@ -1,11 +1,6 @@
-import BaseController from "./BaseController.js";
-import IndexView from "../views/IndexView.js";
-import IndexModel from "../models/IndexModel.js";
+import BaseController from './BaseController.js';
 
-import api from "../utils/Api.js";
-import Cart from "../utils/Cart.js";
-import Fb from "../utils/Fb.js";
-import Tappay from "../utils/Tappay.js";
+import api from '../utils/Api.js';
 class IndexController extends BaseController {
   constructor(model, view, fb, tappay) {
     super(model, view, fb, tappay);
@@ -16,15 +11,18 @@ class IndexController extends BaseController {
     this.interval = undefined;
     this.intervalTime = 5000;
 
-    this.getMoreProducts();
-    this.getCampaigns();
-
     this.view.bindScrollToBottom(this.getMoreProducts.bind(this));
-    this.fb.setup();
+  }
+
+  init() {
+    super.init();
+    this.fb.init();
+    this.getCampaigns();
+    this.getMoreProducts();
   }
 
   get isPredefinedTag() {
-    return ["women", "men", "accessories", "all"].indexOf(this.paramsTag) > -1;
+    return ['women', 'men', 'accessories', 'all'].indexOf(this.paramsTag) > -1;
   }
 
   getMoreProducts() {
@@ -95,9 +93,4 @@ class IndexController extends BaseController {
   }
 }
 
-const app = new IndexController(
-  new IndexModel(new Cart()),
-  new IndexView(),
-  new Fb(),
-  new Tappay()
-);
+export default IndexController;

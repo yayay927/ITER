@@ -1,12 +1,7 @@
-import BaseController from "./BaseController.js";
-import CartView from "../views/CartView.js";
-import CartModel from "../models/CartModel.js";
+import BaseController from './BaseController.js';
 
-import api from "../utils/Api.js";
-import Cart from "../utils/Cart.js";
-import Fb from "../utils/Fb.js";
-import Tappay from "../utils/Tappay.js";
-
+import api from '../utils/Api.js';
+import Cart from '../utils/Cart.js';
 class CartController extends BaseController {
   constructor(model, view, fb, tappay) {
     super(model, view, fb, tappay);
@@ -16,10 +11,14 @@ class CartController extends BaseController {
     this.emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     this.phoneRegex = /^\d{10}$/;
 
-    this.onCartItemsChanged(this.model.cart.items);
     this.view.bindClickCheckout(this.handleClickCheckout.bind(this));
-    this.fb.setup();
-    this.tappay.setup();
+  }
+
+  init() {
+    super.init();
+    this.fb.init();
+    this.tappay.init();
+    this.onCartItemsChanged(this.model.cart.items);
   }
 
   onCartItemsChanged(cartItems) {
@@ -42,16 +41,16 @@ class CartController extends BaseController {
 
   validateRecipient(recipient) {
     if (!recipient.name) {
-      return "請輸入收件人姓名";
+      return '請輸入收件人姓名';
     }
     if (!recipient.email.match(this.emailRegex)) {
-      return "Email有誤";
+      return 'Email有誤';
     }
     if (!recipient.phone.match(this.phoneRegex)) {
-      return "手機號碼有誤";
+      return '手機號碼有誤';
     }
     if (!recipient.address) {
-      return "請輸入收件地址";
+      return '請輸入收件地址';
     }
     return null;
   }
@@ -59,8 +58,8 @@ class CartController extends BaseController {
   makeCheckoutData(prime, cartItems, recipient) {
     const subtotal = Cart.calculateSubtotal(cartItems);
     const order = {
-      shipping: "delivery",
-      payment: "credit_card",
+      shipping: 'delivery',
+      payment: 'credit_card',
       subtotal: subtotal,
       freight: 60,
       total: subtotal + 60,
@@ -74,7 +73,7 @@ class CartController extends BaseController {
   async handleClickCheckout(recipient) {
     const cartItems = this.model.cart.items;
     if (cartItems.length === 0) {
-      window.alert("購物車空空的耶");
+      window.alert('購物車空空的耶');
       return;
     }
 
@@ -103,9 +102,4 @@ class CartController extends BaseController {
   }
 }
 
-const app = new CartController(
-  new CartModel(new Cart()),
-  new CartView(),
-  new Fb(),
-  new Tappay()
-);
+export default CartController;

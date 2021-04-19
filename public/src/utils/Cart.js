@@ -1,6 +1,6 @@
 class Cart {
   constructor() {
-    this.items = JSON.parse(window.localStorage.getItem("cart") || "[]");
+    this.items = JSON.parse(window.localStorage.getItem('cart') || '[]');
   }
 
   static calculateSubtotal(items) {
@@ -11,7 +11,7 @@ class Cart {
   }
 
   update() {
-    window.localStorage.setItem("cart", JSON.stringify(this.items));
+    window.localStorage.setItem('cart', JSON.stringify(this.items));
   }
 }
 

@@ -1,32 +1,32 @@
-import BaseView from "./BaseView.js";
-import Cart from "../utils/Cart.js";
+import BaseView from './BaseView.js';
+import Cart from '../utils/Cart.js';
 
 class CartView extends BaseView {
   constructor() {
     super();
 
-    this.items = this.getElement("#items");
-    this.cartTitle = this.getElement("#title");
-    this.cartSubtotal = this.getElement("#subtotal span");
-    this.cartTotal = this.getElement("#total span");
-    this.checkout = this.getElement("#checkout");
+    this.items = this.getElement('#items');
+    this.cartTitle = this.getElement('#title');
+    this.cartSubtotal = this.getElement('#subtotal span');
+    this.cartTotal = this.getElement('#total span');
+    this.checkout = this.getElement('#checkout');
     this.itemSelectList = undefined;
     this.itemRemoveList = undefined;
   }
 
   renderCartItems(items) {
-    this.items.innerHTML = "";
+    this.items.innerHTML = '';
     this.itemSelectList = [];
     this.itemRemoveList = [];
 
     items.forEach((item) => {
-      const itemSelect = this.createElement("select", {
+      const itemSelect = this.createElement('select', {
         children: new Array(item.stock).fill().map((_, index) => {
           const attributes = {
             value: index + 1,
           };
-          if (index + 1 === item.qty) attributes.selected = "selected";
-          return this.createElement("option", {
+          if (index + 1 === item.qty) attributes.selected = 'selected';
+          return this.createElement('option', {
             children: [index + 1],
             attributes,
           });
@@ -35,74 +35,74 @@ class CartView extends BaseView {
 
       this.itemSelectList.push(itemSelect);
 
-      const itemRemove = this.createElement("div", {
-        classList: ["item__remove"],
+      const itemRemove = this.createElement('div', {
+        classList: ['item__remove'],
         children: [
-          this.createElement("img", {
-            attributes: { src: "./images/cart-remove.png" },
+          this.createElement('img', {
+            attributes: { src: './images/cart-remove.png' },
           }),
         ],
       });
 
       this.itemRemoveList.push(itemRemove);
 
-      this.createElement("div", {
-        classList: ["item"],
+      this.createElement('div', {
+        classList: ['item'],
         parent: this.items,
         children: [
-          this.createElement("img", {
-            classList: ["item__image"],
+          this.createElement('img', {
+            classList: ['item__image'],
             attributes: {
               src: item.image,
             },
           }),
-          this.createElement("div", {
-            classList: ["item__detail"],
+          this.createElement('div', {
+            classList: ['item__detail'],
             children: [
-              this.createElement("div", {
-                classList: ["item__name"],
+              this.createElement('div', {
+                classList: ['item__name'],
                 children: [item.name],
               }),
-              this.createElement("div", {
-                classList: ["item__id"],
+              this.createElement('div', {
+                classList: ['item__id'],
                 children: [item.id],
               }),
-              this.createElement("div", {
-                classList: ["item__color"],
+              this.createElement('div', {
+                classList: ['item__color'],
                 children: [`顏色｜${item.color.name}`],
               }),
-              this.createElement("div", {
-                classList: ["item__size"],
+              this.createElement('div', {
+                classList: ['item__size'],
                 children: [`尺寸｜${item.size}`],
               }),
             ],
           }),
-          this.createElement("div", {
-            classList: ["item__quantity"],
+          this.createElement('div', {
+            classList: ['item__quantity'],
             children: [
-              this.createElement("div", {
-                classList: ["mobile-text"],
-                children: ["數量"],
+              this.createElement('div', {
+                classList: ['mobile-text'],
+                children: ['數量'],
               }),
               itemSelect,
             ],
           }),
-          this.createElement("div", {
-            classList: ["item__price"],
+          this.createElement('div', {
+            classList: ['item__price'],
             children: [
-              this.createElement("div", {
-                classList: ["mobile-text"],
-                children: ["單價"],
+              this.createElement('div', {
+                classList: ['mobile-text'],
+                children: ['單價'],
               }),
               `NT.${item.price}`,
             ],
           }),
-          this.createElement("div", {
-            classList: ["item__subtotal"],
+          this.createElement('div', {
+            classList: ['item__subtotal'],
             children: [
-              this.createElement("div", {
-                classList: ["mobile-text"],
-                children: ["小計"],
+              this.createElement('div', {
+                classList: ['mobile-text'],
+                children: ['小計'],
               }),
               `NT.${item.price * item.qty}`,
             ],
@@ -121,7 +121,7 @@ class CartView extends BaseView {
 
   bindChangeItemSelect(handle) {
     this.itemSelectList.forEach((itemSelect, index) => {
-      itemSelect.addEventListener("change", (e) => {
+      itemSelect.addEventListener('change', (e) => {
         handle(index, Number(e.target.value));
       });
     });
@@ -129,20 +129,20 @@ class CartView extends BaseView {
 
   bindClickItemRemove(handle) {
     this.itemRemoveList.forEach((itemRemove, index) => {
-      itemRemove.addEventListener("click", () => {
+      itemRemove.addEventListener('click', () => {
         handle(index);
       });
     });
   }
 
   bindClickCheckout(handle) {
-    this.checkout.addEventListener("click", () => {
+    this.checkout.addEventListener('click', () => {
       const recipient = {
-        name: this.getElement("#name").value.trim(),
-        phone: this.getElement("#phone").value.trim(),
-        email: this.getElement("#email").value.trim(),
-        address: this.getElement("#address").value.trim(),
-        time: this.getElement("input[name=time]:checked").value,
+        name: this.getElement('#name').value.trim(),
+        phone: this.getElement('#phone').value.trim(),
+        email: this.getElement('#email').value.trim(),
+        address: this.getElement('#address').value.trim(),
+        time: this.getElement('input[name=time]:checked').value,
       };
       handle(recipient);
     });
