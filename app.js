@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { rateLimiter } = require('./util/ratelimiter');
+const { rateLimiterRoute } = require('./util/ratelimiter');
 const {PORT_TEST, PORT, NODE_ENV, API_VERSION} = process.env;
 const port = NODE_ENV == 'test' ? PORT_TEST : PORT;
 
@@ -21,7 +21,7 @@ app.use(cors());
 
 // API routes
 app.use('/api/' + API_VERSION,
-    rateLimiter,
+    rateLimiterRoute,
     [
         require('./server/routes/admin_route'),
         require('./server/routes/product_route'),
