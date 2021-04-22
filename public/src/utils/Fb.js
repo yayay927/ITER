@@ -24,7 +24,7 @@ class Fb {
     });
 
     window.FB.init({
-      appId: '700590737403665',
+      appId: '439495414017369',
       cookie: true,
       xfbml: true,
       version: 'v10.0',

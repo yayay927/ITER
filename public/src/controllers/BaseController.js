@@ -37,7 +37,7 @@ class BaseController {
 
   async handleClickProfile() {
     if (this.fb.jwtToken) {
-      window.location.href = '/profile.html';
+      window.location.href = './profile.html';
     } else {
       const profile = await this.fb.login();
       if (profile) {
