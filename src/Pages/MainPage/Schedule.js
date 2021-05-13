@@ -1,7 +1,7 @@
 //include map, calendar, and spots
 import React from "react";
 
-import ScheduleMap from "./schedule_map.js";
+import ScheduleMap from "./scheduleMap.js";
 import Calendar from "./calendar.js";
 
 function Schedule() {
