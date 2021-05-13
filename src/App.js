@@ -1,11 +1,11 @@
 // import logo from "./logo.svg";
-// import "./App.css";
+import "./App.css";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Header from "./Components/header";
 import Footer from "./Components/footer";
-import Map from "./Pages/LandingPage/Map";
-import Calendar from "./Pages/MainPage/Calendar";
-import ScheduleMap from "./Pages/MainPage/ScheduleMap";
+import Map from "./Pages/Landing Page/map";
+import Calendar from "./Pages/Main Page/calendar";
+import ScheduleMap from "./Pages/Main Page/schedule_map";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 // Map part in main page
 
-// import "./App.css";
+import "./App.css";
 import React from "react";
 
 function ScheduleMap() {
