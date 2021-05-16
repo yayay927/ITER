@@ -10,6 +10,7 @@ import ScheduleMap from "./ScheduleMap.js";
 import { Calendar } from "@fullcalendar/core";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import { mockComponent } from "react-dom/test-utils";
+import { useParams } from "react-router-dom";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -41,6 +42,8 @@ const AddSchedule = styled.input`
 `;
 
 function CalendarTable() {
+  let { cityName } = useParams();
+  console.log(cityName);
   const test = () => {
     console.log("1");
   };
@@ -49,7 +52,8 @@ function CalendarTable() {
   return (
     <CalendarPage>
       <MapAndAttractions>
-        <CityName>Cuba</CityName>
+        {/* <CityName>Cuba</CityName> */}
+        <CityName>{cityName}</CityName>
         <Map>
           <ScheduleMap />
         </Map>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const TheHeader = styled.div`
@@ -17,21 +18,36 @@ const Input = styled.input`
 `;
 
 function Header() {
-  // let history = useHistory();
-  // const [inputValue, setInputValue] = useState("");
-  // const getParamValue = (event) => {
-  //   event.preventDefault();
-  //   history.push(`/${inputValue}`);
-  //   console.log(inputValue);
-  // };
+  let history = useHistory();
+  const [inputValue, setInputValue] = useState("");
+  const getParamValue = (event) => {
+    event.preventDefault();
+    history.push(`/city/${inputValue}`);
+    console.log(inputValue);
+  };
 
   return (
     <div className="App">
       <TheHeader className="App-header">
-        <Logo src={anchor} />
+        <a href="./">
+          <Logo src={anchor} />
+        </a>
+        <form onSubmit={getParamValue}>
+          <Input
+            placeholder="Search a city you want to go"
+            onChange={(e) => setInputValue(e.target.value)}
+          />
+        </form>
 
-        <Input type="text" placeholder="Search a city you want to go" />
-        <span>This is header part.</span>
+        {/* <form onSubmit={getParamValue} method="get">
+          <input
+            name="tag"
+            id="search"
+            onChange={(e) => setInputValue(e.target.value)}
+          />
+        </form> */}
+
+        {/* <Input type="text" placeholder="Search a city you want to go" /> */}
 
         {/* <p>
           Edit header<code>src/App.js</code> and save to reload.

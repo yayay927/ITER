@@ -19,7 +19,9 @@ function App() {
         <Route path="/schedule_map">
           <ScheduleMap></ScheduleMap>
         </Route>
-
+        <Route path="/city/:cityName">
+          <Calendar></Calendar>
+        </Route>
         <Route path="/">
           <Map></Map>
         </Route>
