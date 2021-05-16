@@ -12,13 +12,13 @@ import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import { mockComponent } from "react-dom/test-utils";
 
 const CalendarPage = styled.div`
-  margin: 50px;
+  margin: 20px 50px;
   width: 100vw;
   display: flex;
 `;
 
 const MapAndAttractions = styled.div`
-  margin-right: 10px;
+  margin-right: 20px;
   width: 45%;
 `;
 
@@ -49,7 +49,7 @@ function CalendarTable() {
   return (
     <CalendarPage>
       <MapAndAttractions>
-        <CityName>City Name</CityName>
+        <CityName>Cuba</CityName>
         <Map>
           <ScheduleMap />
         </Map>
@@ -71,6 +71,7 @@ function CalendarTable() {
           draggable={true}
           droppable={true}
           weekends={true}
+          height="1000px"
           events={[
             {
               title: "Cuba music festival",
