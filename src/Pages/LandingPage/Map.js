@@ -1,6 +1,4 @@
-// Landing Page
-// import logo from "./logo.svg";
-// import "./App.css";
+import styled from "styled-components";
 
 function Map() {
   return (

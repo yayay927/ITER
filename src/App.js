@@ -6,6 +6,7 @@ import Footer from "./Components/footer";
 import Map from "./Pages/LandingPage/Map";
 import Calendar from "./Pages/MainPage/Calendar";
 import ScheduleMap from "./Pages/MainPage/ScheduleMap";
+import Test from "./Pages/MainPage/Test";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/schedule_map">
           <ScheduleMap></ScheduleMap>
+        </Route>
+        <Route path="/city/:cityName">
+          <Calendar></Calendar>
         </Route>
         <Route path="/">
           <Map></Map>

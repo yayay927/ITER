@@ -1,10 +1,16 @@
-// import "./App.css";
+import styled from "styled-components";
+
+const TheFooter = styled.div`
+  background-color: #e1d3ec;
+  height: 100px;
+`;
 
 function Footer() {
   return (
-    <div className="App">
+    <TheFooter className="App">
       <header className="App-header">
-        <p>
+        <p>This is footer part.</p>
+        {/* <p>
           Edit footer<code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -14,9 +20,9 @@ function Footer() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
-    </div>
+    </TheFooter>
   );
 }
 
