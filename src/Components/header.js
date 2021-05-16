@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
+import { useHistory } from "react-router-dom";
 
 const TheHeader = styled.div`
   background-color: #e1d3ec;
@@ -16,6 +17,14 @@ const Input = styled.input`
 `;
 
 function Header() {
+  // let history = useHistory();
+  // const [inputValue, setInputValue] = useState("");
+  // const getParamValue = (event) => {
+  //   event.preventDefault();
+  //   history.push(`/${inputValue}`);
+  //   console.log(inputValue);
+  // };
+
   return (
     <div className="App">
       <TheHeader className="App-header">
