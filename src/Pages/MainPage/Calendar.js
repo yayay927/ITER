@@ -11,6 +11,8 @@ import { Calendar } from "@fullcalendar/core";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
+import TouristAttractions from "./TouristAttractions.js";
+import Transportations from "./Transportations.js";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -41,35 +43,6 @@ const AddSchedule = styled.input`
   height: 50px;
 `;
 
-const TouristAttractions = styled.div`
-  width: 100%;
-  font-size: 45px;
-  margin: 10px 0;
-`;
-const Attraction = styled.div`
-  height: 120px;
-  width: 120px;
-  font-size: 20px;
-  margin: 5px;
-  background-color: #b6e13d;
-`;
-const AttractionName = styled.div``;
-const AttractionImage = styled.div``;
-const Transportations = styled.div`
-  width: 100%;
-  font-size: 45px;
-  margin: 10px 0;
-`;
-const Transportation = styled.div`
-  height: 120px;
-  width: 120px;
-  font-size: 20px;
-  margin: 5px;
-  background-color: #b6e13d;
-`;
-const TransportationIcon = styled.div``;
-const TransportationTime = styled.div``;
-
 function CalendarTable() {
   let { cityName } = useParams();
   console.log(cityName);
@@ -99,20 +72,8 @@ function CalendarTable() {
         </Map>
         <AddSchedule type="text" placeholder="Create your event" />
         <RenderEventContent></RenderEventContent>
-        <TouristAttractions>
-          Top 10 Tourist Attractions
-          <Attraction>
-            <AttractionName>Charles River</AttractionName>
-            <AttractionImage></AttractionImage>
-          </Attraction>
-        </TouristAttractions>
-        <Transportations>
-          Transportations
-          <Transportation>
-            <TransportationIcon>Train</TransportationIcon>
-            <TransportationTime>1 H</TransportationTime>
-          </Transportation>
-        </Transportations>
+        <TouristAttractions></TouristAttractions>
+        <Transportations> </Transportations>
       </MapAndAttractions>
       <CalendarSpace>
         <FullCalendar
