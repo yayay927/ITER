@@ -1,7 +1,8 @@
 import styled from "styled-components";
+// import * as React from "react";
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-// import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
 import { ZoomControl } from "mapbox-gl-controls";
 import L from "leaflet";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -36,7 +37,28 @@ function Map() {
   const map = useRef(null);
   const [lng, setLng] = useState(3);
   const [lat, setLat] = useState(38);
-  const [zoom, setZoom] = useState(1.4);
+  const [zoom, setZoom] = useState(1.3);
+  const [marker, setMarker] = useState(null);
+
+  console.log(marker);
+  // const [viewport, setViewport] = React.useState({
+  //   longitude: -122.45,
+  //   latitude: 37.78,
+  //   zoom: 14,
+  // });
+  // const markers = React.useMemo(
+  //   () =>
+  //     data.map((city) => (
+  //       <Marker
+  //         key={city.name}
+  //         longitude={city.longitude}
+  //         latitude={city.latitude}
+  //       >
+  //         <img src="pin.png" />
+  //       </Marker>
+  //     )),
+  //   [props.data]
+  // );
 
   // var n = require("country-js");
   // console.log(n);
@@ -52,6 +74,85 @@ function Map() {
       zoom: zoom,
     });
 
+    //havana
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([-82.383, 23.133])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Havana</h1>"))
+        .addTo(map.current)
+    );
+    //taipei
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([121.597366, 25.105497])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Taipei</h1>"))
+        .addTo(map.current)
+    );
+    //venice
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([12.3327, 45.4371])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Venice</h1>"))
+        .addTo(map.current)
+    );
+    //kyoto
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([135.768326, 35.011665])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Kyoto</h1>"))
+        .addTo(map.current)
+    );
+    //boston
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([-71.057083, 42.361145])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Boston</h1>"))
+        .addTo(map.current)
+    );
+    //istanbul
+    // setMarker(
+    //   new mapboxgl.Marker().setLngLat([28.97953, 41.015137]).addTo(map.current)
+    // );
+    //vancouver
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([-123.116226, 49.246292])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Vancouver</h1>"))
+        .addTo(map.current)
+    );
+    //cairo
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([31.233334, 30.033333])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Cairo</h1>"))
+        .addTo(map.current)
+    );
+    //cape town
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([18.4233, -33.918861])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Cape Town</h1>"))
+        .addTo(map.current)
+    );
+    //buenos aires
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([-58.381592, -34.603722])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Buenos Aires</h1>"))
+        .addTo(map.current)
+    );
+    //st.petersburg
+    // setMarker(
+    //   new mapboxgl.Marker().setLngLat([30.308611, 59.9375]).addTo(map.current)
+    // );
+    //moscow
+    setMarker(
+      new mapboxgl.Marker()
+        .setLngLat([37.618423, 55.751244])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Moscow</h1>"))
+        .addTo(map.current)
+    );
+
     // map.addControl(new mapboxgl.NavigationControl());
     // map.addControl(new ZoomControl(), "top-right");
   });
@@ -63,6 +164,7 @@ function Map() {
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
     });
+    console.log(map);
   });
 
   // useEffect(() => {
@@ -84,13 +186,15 @@ function Map() {
   //     }
   //   ).addTo(mymap);
   // });
+  console.log(marker);
 
   return (
     <div>
       <SideBar className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </SideBar>
-      <MainMap ref={mapContainer} className="map-container" />
+      <MainMap ref={mapContainer} className="map-container"></MainMap>
+
       {/* <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

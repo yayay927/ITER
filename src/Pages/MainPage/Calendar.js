@@ -51,7 +51,7 @@ function CalendarTable() {
   };
   test();
 
-  function RenderEventContent(eventInfo) {
+  function renderEventContent(eventInfo) {
     console.log(eventInfo);
     return (
       <>
@@ -71,7 +71,7 @@ function CalendarTable() {
           <ScheduleMap />
         </Map>
         <AddSchedule type="text" placeholder="Create your event" />
-        <RenderEventContent></RenderEventContent>
+        {/* <RenderEventContent></RenderEventContent> */}
         <TouristAttractions></TouristAttractions>
         <Transportations> </Transportations>
       </MapAndAttractions>
@@ -92,6 +92,7 @@ function CalendarTable() {
           droppable={true}
           weekends={true}
           height="1000px"
+          eventContent={renderEventContent}
           events={[
             {
               title: "Cuba music festival",
