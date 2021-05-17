@@ -49,6 +49,17 @@ function CalendarTable() {
   };
   test();
 
+  function RenderEventContent(eventInfo) {
+    console.log(eventInfo);
+    return (
+      <>
+        <b>{eventInfo.timeText}</b>
+        {/* <i>{eventInfo.event.title}</i> */}
+      </>
+    );
+  }
+  // RenderEventContent();
+
   return (
     <CalendarPage>
       <MapAndAttractions>
@@ -58,6 +69,7 @@ function CalendarTable() {
           <ScheduleMap />
         </Map>
         <AddSchedule type="text" placeholder="Create your event" />
+        <RenderEventContent></RenderEventContent>
       </MapAndAttractions>
       <CalendarSpace>
         <FullCalendar
