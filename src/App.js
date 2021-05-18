@@ -23,7 +23,7 @@ function App() {
           <Calendar></Calendar>
         </Route>
         <Route path="/">
-          <Map></Map>
+          <Map id="map"></Map>
         </Route>
         {/* <Route path="/:tag">
           <Main></Main>

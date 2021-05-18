@@ -11,6 +11,8 @@ import { Calendar } from "@fullcalendar/core";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
+import TouristAttractions from "./TouristAttractions.js";
+import Transportations from "./Transportations.js";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -49,6 +51,17 @@ function CalendarTable() {
   };
   test();
 
+  function renderEventContent(eventInfo) {
+    console.log(eventInfo);
+    return (
+      <>
+        <b>{eventInfo.timeText}</b>
+        {/* <i>{eventInfo.event.title}</i> */}
+      </>
+    );
+  }
+  // RenderEventContent();
+
   return (
     <CalendarPage>
       <MapAndAttractions>
@@ -58,6 +71,9 @@ function CalendarTable() {
           <ScheduleMap />
         </Map>
         <AddSchedule type="text" placeholder="Create your event" />
+        {/* <RenderEventContent></RenderEventContent> */}
+        <TouristAttractions></TouristAttractions>
+        <Transportations> </Transportations>
       </MapAndAttractions>
       <CalendarSpace>
         <FullCalendar
@@ -76,6 +92,7 @@ function CalendarTable() {
           droppable={true}
           weekends={true}
           height="1000px"
+          eventContent={renderEventContent}
           events={[
             {
               title: "Cuba music festival",

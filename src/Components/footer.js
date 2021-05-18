@@ -3,6 +3,7 @@ import styled from "styled-components";
 const TheFooter = styled.div`
   background-color: #e1d3ec;
   height: 100px;
+  margin-top: -15px;
 `;
 
 function Footer() {
