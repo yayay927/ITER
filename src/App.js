@@ -1,16 +1,24 @@
 // import logo from "./logo.svg";
 // import "./App.css";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  HashRouter,
+  Switch,
+  Route,
+} from "react-router-dom";
 import Header from "./Components/header";
 import Footer from "./Components/footer";
 import Map from "./Pages/LandingPage/Map";
 import Calendar from "./Pages/MainPage/Calendar";
 import ScheduleMap from "./Pages/MainPage/ScheduleMap";
 import Test from "./Pages/MainPage/Test";
+import ConfirmSchedule from "./Pages/Confirm/Confirm.js";
+import ManageSchedule from "./Pages/ManagePage/Manage.js";
+import VerificationStep from "./Pages/Verification/Verification.js";
 
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <Header></Header>
       <Switch>
         <Route path="/calendar">
@@ -22,15 +30,25 @@ function App() {
         <Route path="/city/:cityName">
           <Calendar></Calendar>
         </Route>
+        <Route path="/confirm">
+          <ConfirmSchedule>confirm</ConfirmSchedule>
+        </Route>
+        <Route path="/manage">
+          <ManageSchedule>manage</ManageSchedule>
+        </Route>
+        <Route path="/verification">
+          <VerificationStep>verification</VerificationStep>
+        </Route>
         <Route path="/">
           <Map id="map"></Map>
         </Route>
+
         {/* <Route path="/:tag">
           <Main></Main>
         </Route> */}
       </Switch>
       <Footer></Footer>
-    </HashRouter>
+    </Router>
 
     /* <div className="App">
       <header className="App-header">

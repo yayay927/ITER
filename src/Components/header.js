@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
+import contract from "./contract.png";
+import suitcase from "./suitcase.png";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const TheHeader = styled.div`
   background-color: #e1d3ec;
+  display: flex;
 `;
 
 const Logo = styled.img`
@@ -38,6 +41,14 @@ function Header() {
             onChange={(e) => setInputValue(e.target.value)}
           />
         </form>
+        <a href="./confirm">
+          <Logo src={contract} />
+          Confirm Schedule
+        </a>
+        <a href="./manage">
+          <Logo src={suitcase} />
+          Manage Schedule
+        </a>
 
         {/* <form onSubmit={getParamValue} method="get">
           <input
