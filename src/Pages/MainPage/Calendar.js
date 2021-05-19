@@ -23,6 +23,8 @@ const CalendarPage = styled.div`
 const MapAndAttractions = styled.div`
   margin-right: 20px;
   width: 45%;
+  height: 1000px;
+  overflow: scroll;
 `;
 
 const CityName = styled.div`
@@ -46,17 +48,17 @@ const AddSchedule = styled.input`
 function CalendarTable() {
   let { cityName } = useParams();
   console.log(cityName);
-  const test = () => {
-    console.log("1");
-  };
+  const test = () => {};
   test();
 
   function renderEventContent(eventInfo) {
     console.log(eventInfo);
+    console.log(eventInfo.timeText);
+    console.log(eventInfo.event.title);
     return (
       <>
         <b>{eventInfo.timeText}</b>
-        {/* <i>{eventInfo.event.title}</i> */}
+        <i>{eventInfo.event.title}</i>
       </>
     );
   }
