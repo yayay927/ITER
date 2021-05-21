@@ -23,6 +23,7 @@ const SideBar = styled.div`
 const MainMap = styled.div`
   height: 81vh;
   margin-bottom: 0px;
+  margin-top: 80px;
 `;
 
 const LeafletMap = styled.div`

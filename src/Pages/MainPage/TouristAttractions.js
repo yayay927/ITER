@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Firebase from "../../Utils/Firebase.js";
 // import TouristAttractionData from "../../Utils/TouristAttractionAPI.js";
 
 const TouristAttractions = styled.div`
@@ -91,6 +92,18 @@ function TouristAttraction() {
           ></AttractionImage>
           <AttractionName>El Morro</AttractionName>
         </Attraction>
+
+        <Firebase>
+          {/* <Attraction>
+            <AttractionImage
+              style={{
+                background: `url(${spotUrl})`,
+                backgroundSize: `cover`,
+              }}
+            ></AttractionImage>
+            <AttractionName>`${spotName}`</AttractionName>
+          </Attraction> */}
+        </Firebase>
       </AllAttractions>
     </TouristAttractions>
   );

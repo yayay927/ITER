@@ -8,6 +8,14 @@ import { useHistory } from "react-router-dom";
 const TheHeader = styled.div`
   background-color: #e1d3ec;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 3;
 `;
 
 const Logo = styled.img`
@@ -32,7 +40,7 @@ function Header() {
   return (
     <div className="App">
       <TheHeader className="App-header">
-        <a href="./">
+        <a href="../">
           <Logo src={anchor} />
         </a>
         <form onSubmit={getParamValue}>
@@ -41,11 +49,11 @@ function Header() {
             onChange={(e) => setInputValue(e.target.value)}
           />
         </form>
-        <a href="./confirm">
+        <a href="../confirm">
           <Logo src={contract} />
           Confirm Schedule
         </a>
-        <a href="./manage">
+        <a href="../manage">
           <Logo src={suitcase} />
           Manage Schedule
         </a>

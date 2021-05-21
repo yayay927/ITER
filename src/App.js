@@ -42,10 +42,6 @@ function App() {
         <Route path="/">
           <Map id="map"></Map>
         </Route>
-
-        {/* <Route path="/:tag">
-          <Main></Main>
-        </Route> */}
       </Switch>
       <Footer></Footer>
     </Router>
