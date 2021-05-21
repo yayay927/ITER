@@ -3,16 +3,6 @@ import "firebase/firestore";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD7gCInahUDjz1COa5HHkzRZUngyxHwXjY",
-  authDomain: "iter-e3ef2.firebaseapp.com",
-  projectId: "iter-e3ef2",
-  storageBucket: "iter-e3ef2.appspot.com",
-  messagingSenderId: "976859718189",
-  appId: "1:976859718189:web:e3aff5ad58fa5552050ea4",
-  measurementId: "G-CJP4GMTYTP",
-};
-
 const Attraction = styled.div`
   height: 160px;
   width: 18%;
@@ -31,15 +21,16 @@ const AttractionImage = styled.div`
   /* border-radius: 10px; */
 `;
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+// const db = firebase.firestore();
 const i = 1;
 
 function Firebase() {
   const [spotName, setSpotName] = useState();
   const [spotUrl, setSpotUrl] = useState();
   useEffect(() => {
-    var docRef = db
+    // var docRef = db
+    var docRef = firebase
+      .firestore()
       .collection("world_cities")
       .doc("Kyoto")
       .collection("spots")
