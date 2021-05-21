@@ -18,11 +18,14 @@ const CalendarPage = styled.div`
   margin: 20px 50px;
   width: 100vw;
   display: flex;
+  margin-top: 100px;
 `;
 
 const MapAndAttractions = styled.div`
   margin-right: 20px;
   width: 45%;
+  height: 1000px;
+  overflow: scroll;
 `;
 
 const CityName = styled.div`
@@ -43,20 +46,27 @@ const AddSchedule = styled.input`
   height: 50px;
 `;
 
+const ConfirmButton = styled.button`
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+`;
+
 function CalendarTable() {
   let { cityName } = useParams();
   console.log(cityName);
-  const test = () => {
-    console.log("1");
-  };
+  const test = () => {};
   test();
 
   function renderEventContent(eventInfo) {
     console.log(eventInfo);
+    console.log(eventInfo.timeText);
+    console.log(eventInfo.event.title);
     return (
       <>
         <b>{eventInfo.timeText}</b>
-        {/* <i>{eventInfo.event.title}</i> */}
+        <i>{eventInfo.event.title}</i>
       </>
     );
   }
@@ -105,6 +115,7 @@ function CalendarTable() {
             { title: "Italian restaurant gala", date: "2021-05-22" },
           ]}
         />
+        <ConfirmButton>Finish Edit</ConfirmButton>
       </CalendarSpace>
     </CalendarPage>
   );
