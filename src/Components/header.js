@@ -25,7 +25,13 @@ const Logo = styled.img`
 
 const Input = styled.input`
   margin: 10px;
-  width: 200px;
+  width: 400px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px lightgray solid;
+  font-size: 18px;
+  padding-left: 20px;
+  outline: none;
 `;
 
 function Header() {
@@ -49,10 +55,7 @@ function Header() {
             onChange={(e) => setInputValue(e.target.value)}
           />
         </form>
-        <a href="../confirm">
-          <Logo src={contract} />
-          Confirm Schedule
-        </a>
+
         <a href="../manage">
           <Logo src={suitcase} />
           Manage Schedule

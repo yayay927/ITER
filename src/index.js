@@ -10,7 +10,6 @@ import firebase from "firebase/app";
 //   +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 // );
 
-console.log("1");
 const firebaseConfig = {
   apiKey: "AIzaSyD7gCInahUDjz1COa5HHkzRZUngyxHwXjY",
   authDomain: "iter-e3ef2.firebaseapp.com",

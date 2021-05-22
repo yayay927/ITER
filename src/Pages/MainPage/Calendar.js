@@ -115,7 +115,9 @@ function CalendarTable() {
             { title: "Italian restaurant gala", date: "2021-05-22" },
           ]}
         />
-        <ConfirmButton>Finish Edit</ConfirmButton>
+        <a href="../confirm">
+          <ConfirmButton>Finish Edit</ConfirmButton>
+        </a>
       </CalendarSpace>
     </CalendarPage>
   );

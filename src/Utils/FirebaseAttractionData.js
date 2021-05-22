@@ -24,7 +24,7 @@ const AttractionImage = styled.div`
 // const db = firebase.firestore();
 const i = 1;
 
-function Firebase() {
+function FirebaseAttractionData() {
   const [spotName, setSpotName] = useState();
   const [spotUrl, setSpotUrl] = useState();
   useEffect(() => {
@@ -66,4 +66,4 @@ function Firebase() {
   );
 }
 
-export default Firebase;
+export default FirebaseAttractionData;
