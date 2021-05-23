@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { getAttractionData } from "../../Utils/firebase";
 
 const Attraction = styled.div`
   height: 160px;
@@ -21,37 +22,19 @@ const AttractionImage = styled.div`
   /* border-radius: 10px; */
 `;
 
-// const db = firebase.firestore();
-const i = 1;
-
 function FirebaseAttractionData() {
+  const i = 1;
   const [spotName, setSpotName] = useState();
   const [spotUrl, setSpotUrl] = useState();
-  useEffect(() => {
-    // var docRef = db
-    var docRef = firebase
-      .firestore()
-      .collection("world_cities")
-      .doc("Kyoto")
-      .collection("spots")
-      .doc(`${i}`);
 
-    docRef
-      .get()
-      .then((doc) => {
-        setSpotName(doc.data().name);
-        setSpotUrl(doc.data().url);
-        // spotName = doc.data().name;
-        // spotUrl = doc.data().url;
-        console.log("Document data:", doc.data());
-        console.log(spotName);
-        console.log(spotUrl);
-        // console.log(doc.data().name);
-      })
-      .catch((error) => {
-        console.log("Error getting document:", error);
-      });
-  });
+  getAttractionData();
+
+  // setSpotName(attractionData.name);
+  // setSpotUrl(attractionData.url);
+  // console.log("Document data:", doc.data());
+  console.log(spotName);
+  console.log(spotUrl);
+  // console.log(doc.data().name);
 
   return (
     <Attraction>

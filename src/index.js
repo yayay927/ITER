@@ -10,16 +10,16 @@ import firebase from "firebase/app";
 //   +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 // );
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD7gCInahUDjz1COa5HHkzRZUngyxHwXjY",
-  authDomain: "iter-e3ef2.firebaseapp.com",
-  projectId: "iter-e3ef2",
-  storageBucket: "iter-e3ef2.appspot.com",
-  messagingSenderId: "976859718189",
-  appId: "1:976859718189:web:e3aff5ad58fa5552050ea4",
-  measurementId: "G-CJP4GMTYTP",
-};
-firebase.initializeApp(firebaseConfig);
+// const firebaseConfig = {
+//   apiKey: "AIzaSyD7gCInahUDjz1COa5HHkzRZUngyxHwXjY",
+//   authDomain: "iter-e3ef2.firebaseapp.com",
+//   projectId: "iter-e3ef2",
+//   storageBucket: "iter-e3ef2.appspot.com",
+//   messagingSenderId: "976859718189",
+//   appId: "1:976859718189:web:e3aff5ad58fa5552050ea4",
+//   measurementId: "G-CJP4GMTYTP",
+// };
+// firebase.initializeApp(firebaseConfig);
 
 // function Index() {
 ReactDOM.render(

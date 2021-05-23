@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import FirebaseAttractionData from "../../Utils/FirebaseAttractionData.js";
+import FirebaseAttractionData from "./FirebaseAttractionData.js";
 
 const TouristAttractions = styled.div`
   width: 100%;
