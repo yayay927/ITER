@@ -196,7 +196,7 @@ function Map() {
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </SideBar>
       <MainMap ref={mapContainer} className="map-container"></MainMap>
-      <audio controls src={ocean} autoplay="autoplay" loop>
+      <audio controls src={ocean} autoplay="true" loop>
         Your browser does not support the
         <code>audio</code> element.
       </audio>

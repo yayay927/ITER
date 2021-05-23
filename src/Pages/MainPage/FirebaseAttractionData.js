@@ -2,7 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { getAttractionData } from "../../Utils/firebase";
+import { getAttractionData } from "../../Utils/firebase.js";
 
 const Attraction = styled.div`
   height: 160px;
