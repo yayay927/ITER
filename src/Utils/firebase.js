@@ -75,6 +75,7 @@ function fireAuthLogOut() {
     .signOut()
     .then(() => {
       // Sign-out successful.
+      console.log("log out successfully");
     })
     .catch((error) => {
       // An error happened.
