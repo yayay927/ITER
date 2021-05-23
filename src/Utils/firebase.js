@@ -41,6 +41,8 @@ function fireAuthLogIn(email, password) {
       var user = userCredential.user;
       console.log(user.uid);
       console.log(user.email);
+      var userNow = firebase.auth().currentUser;
+      console.log(userNow);
       // ...
     })
     .catch((error) => {
@@ -76,6 +78,8 @@ function fireAuthLogOut() {
     .then(() => {
       // Sign-out successful.
       console.log("log out successfully");
+      var user = firebase.auth().currentUser;
+      console.log(user);
     })
     .catch((error) => {
       // An error happened.
