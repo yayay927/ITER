@@ -5,6 +5,7 @@ import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-load
 import ReactMapGL, { Marker } from "react-map-gl";
 import { ZoomControl } from "mapbox-gl-controls";
 import L from "leaflet";
+import ocean from "../../Components/ocean.wav";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const SideBar = styled.div`
@@ -195,7 +196,10 @@ function Map() {
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </SideBar>
       <MainMap ref={mapContainer} className="map-container"></MainMap>
-
+      <audio controls src={ocean} autoplay="autoplay" loop>
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
       {/* <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

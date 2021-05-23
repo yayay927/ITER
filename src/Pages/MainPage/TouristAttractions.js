@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Firebase from "../../Utils/Firebase.js";
-// import TouristAttractionData from "../../Utils/TouristAttractionAPI.js";
+import FirebaseAttractionData from "./FirebaseAttractionData.js";
 
 const TouristAttractions = styled.div`
   width: 100%;
@@ -93,7 +92,7 @@ function TouristAttraction() {
           <AttractionName>El Morro</AttractionName>
         </Attraction>
 
-        <Firebase>
+        <FirebaseAttractionData>
           {/* <Attraction>
             <AttractionImage
               style={{
@@ -103,7 +102,7 @@ function TouristAttraction() {
             ></AttractionImage>
             <AttractionName>`${spotName}`</AttractionName>
           </Attraction> */}
-        </Firebase>
+        </FirebaseAttractionData>
       </AllAttractions>
     </TouristAttractions>
   );

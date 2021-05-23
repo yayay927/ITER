@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ocean from "./ocean.wav";
 
 const TheFooter = styled.div`
   background-color: #e1d3ec;
@@ -12,10 +11,7 @@ function Footer() {
     <TheFooter className="App">
       <header className="App-header">
         <p>This is footer part.</p>
-        <audio controls src={ocean} autoplay="autoplay" loop>
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
+
         {/* <p>
           Edit footer<code>src/App.js</code> and save to reload.
         </p>
