@@ -85,6 +85,15 @@ const Past = styled.div`
   align-items: center;
   margin-bottom: 100px;
 `;
+const HistoryTrips = styled.div`
+  margin-top: 50px;
+  height: 200px;
+  border-right: 1px solid lightpink;
+  width: 100px;
+  margin-right: 20px;
+  display: block;
+  position: inline-block;
+`;
 
 function ManageSchedule() {
   return (
@@ -124,7 +133,7 @@ function ManageSchedule() {
             </Details>
           </Current>
           <Past>
-            <CurrentTrips>History Trips</CurrentTrips>
+            <HistoryTrips>History Trips</HistoryTrips>
             <Details>
               <EachTrip>
                 <TripName>Trip Name: Havana Heaven</TripName>
