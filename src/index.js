@@ -3,6 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./Reducers/VerificationData.js";
+
+// const store = createStore(reducer);
 
 // const store = createStore(
 //   reducer /* preloadedState, */,
@@ -12,7 +17,9 @@ import reportWebVitals from "./reportWebVitals";
 // function Index() {
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Provider store={store}> */}
     <App />
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -72,7 +72,9 @@ function ConfirmSchedule() {
     <div>
       <Confirm>
         <Calendar>
-          <Previous>Go Back</Previous>
+          <a href="../calendar">
+            <Previous>Go Back</Previous>
+          </a>
           <h1>
             Congrantulations on finishing your schedule! If you want to do any
             change, please click go back to edit your schedule.

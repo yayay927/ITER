@@ -23,18 +23,25 @@ const AttractionImage = styled.div`
 `;
 
 function FirebaseAttractionData() {
-  const i = 1;
   const [spotName, setSpotName] = useState();
   const [spotUrl, setSpotUrl] = useState();
 
-  getAttractionData();
+  // async () => {
+  //   let attractionData = await getAttractionData("Havana");
+  //   console.log(attractionData);
+  // };
+
+  const renderAttractionData = async () => {
+    let attractionData = await getAttractionData("Havana");
+    console.log(attractionData);
+  };
+  renderAttractionData();
 
   // setSpotName(attractionData.name);
   // setSpotUrl(attractionData.url);
-  // console.log("Document data:", doc.data());
-  console.log(spotName);
-  console.log(spotUrl);
-  // console.log(doc.data().name);
+
+  // console.log(spotName);
+  // console.log(spotUrl);
 
   return (
     <Attraction>
