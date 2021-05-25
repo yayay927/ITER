@@ -4,6 +4,12 @@ import styled from "styled-components";
 const Manage = styled.div`
   margin-top: 100px;
 `;
+const Message = styled.div`
+  margin: 50px auto;
+  width: 50%;
+  font-size: 30px;
+  font-weight: bolder;
+`;
 const Profile = styled.div`
   margin: 50px auto;
   width: 50%;
@@ -50,16 +56,18 @@ const Current = styled.div`
 `;
 const CurrentTrips = styled.div`
   margin-top: 50px;
-  height: 200px;
+  height: 250px;
   border-right: 1px solid lightpink;
-  width: 100px;
+  width: 150px;
   margin-right: 20px;
   display: block;
   position: inline-block;
+  font-weight: bold;
+  font-size: 30px;
 `;
 const Details = styled.div`
   margin-top: 50px;
-  width: calc(100% - 100px);
+  width: calc(100% - 120px);
 `;
 const EachTrip = styled.div`
   border: 1px solid lightgrey;
@@ -72,6 +80,9 @@ const EachTrip = styled.div`
 const TripName = styled.div``;
 const Location = styled.div``;
 const More = styled.div``;
+const Owner = styled.div`
+  width: 100px;
+`;
 const Date = styled.div``;
 const Share = styled.div`
   margin-top: 20px;
@@ -87,19 +98,21 @@ const Past = styled.div`
 `;
 const HistoryTrips = styled.div`
   margin-top: 50px;
-  height: 200px;
+  height: 250px;
   border-right: 1px solid lightpink;
-  width: 100px;
+  width: 150px;
   margin-right: 20px;
   display: block;
   position: inline-block;
+  font-weight: bold;
+  font-size: 30px;
 `;
 
 function ManageSchedule() {
   return (
     <div>
       <Manage>
-        <h1>You can manage your current and history trips here!</h1>
+        <Message>You can manage your current and history trips here!</Message>
         <Profile>
           <Photo />
           <Name>Name: Ellie Yang</Name>
@@ -120,6 +133,7 @@ function ManageSchedule() {
                   <Share>Share with: _____________</Share>
                   <Link>Get link</Link>
                 </More>
+                <Owner>Owner: me</Owner>
               </EachTrip>
               <EachTrip>
                 <TripName>Trip Name: Havana Heaven</TripName>
@@ -129,6 +143,7 @@ function ManageSchedule() {
                   <Share>Share with: _____________</Share>
                   <Link>Get link</Link>
                 </More>
+                <Owner>Owner: Shelly</Owner>
               </EachTrip>
             </Details>
           </Current>
@@ -143,6 +158,7 @@ function ManageSchedule() {
                   <Share>Share with: _____________</Share>
                   <Link>Get link</Link>
                 </More>
+                <Owner>Owner: Phil</Owner>
               </EachTrip>
               <EachTrip>
                 <TripName>Trip Name: Havana Heaven</TripName>
@@ -152,6 +168,7 @@ function ManageSchedule() {
                   <Share>Share with: _____________</Share>
                   <Link>Get link</Link>
                 </More>
+                <Owner>Owner: me</Owner>
               </EachTrip>
             </Details>
           </Past>

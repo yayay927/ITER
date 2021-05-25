@@ -1,7 +1,7 @@
 // Calendar part in main page
 // import logo from "./logo.svg";
 // import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -24,7 +24,7 @@ const CalendarPage = styled.div`
 const MapAndAttractions = styled.div`
   margin-right: 20px;
   width: 45%;
-  height: 1000px;
+  height: 100%;
   overflow: scroll;
 `;
 
@@ -40,10 +40,35 @@ const Map = styled.div`
 const CalendarSpace = styled.div`
   width: 45%;
 `;
-
+const OwnEvent = styled.div`
+  width: 100%;
+  font-size: 42px;
+  margin-top: 30px;
+`;
+const Input = styled.div`
+  width: 100%;
+`;
+const Events = styled.div`
+  width: 99%;
+  border: 1px solid lightgrey;
+  height: 300px;
+  margin-top: 10px;
+`;
 const AddSchedule = styled.input`
   width: 50%;
   height: 50px;
+  margin-right: 20px;
+  font-size: 20px;
+  padding-left: 5px;
+`;
+const CreateEvent = styled.button`
+  width: 100px;
+  height: 50px;
+`;
+const EachEvent = styled.button`
+  width: 50px;
+  height: 50px;
+  background-color: lightpink;
 `;
 
 const ConfirmButton = styled.button`
@@ -55,34 +80,59 @@ const ConfirmButton = styled.button`
 
 function CalendarTable() {
   let { cityName } = useParams();
-  console.log(cityName);
+  const [eventTitle, setEventTitle] = useState("");
+
+  // console.log(cityName);
+
+  if (cityName === "BuenosAires") {
+    cityName = "Buenos Aires";
+  } else if (cityName === "CapeTown") {
+    cityName = "Cape Town";
+  }
+
   const test = () => {};
   test();
 
-  function renderEventContent(eventInfo) {
-    console.log(eventInfo);
-    console.log(eventInfo.timeText);
-    console.log(eventInfo.event.title);
+  function renderEventContent(/*eventInfo*/) {
+    // console.log(eventInfo);
+    // console.log(eventInfo.timeText);
+    // console.log(eventInfo.event.title);
+    console.log(eventTitle);
     return (
-      <>
-        <b>{eventInfo.timeText}</b>
-        <i>{eventInfo.event.title}</i>
-      </>
+      <EachEvent>
+        {/* <b>{eventInfo.timeText}</b> */}
+        <b>{"2021 - 05 - 27"}</b>
+        {/* <i>{eventInfo.event.title}</i> */}
+        <i>{eventTitle}</i>
+      </EachEvent>
     );
   }
-  // RenderEventContent();
+
+  const handleChangeTitleInput = (e) => {
+    setEventTitle(e.target.value);
+    // console.log(eventTitle);
+  };
 
   return (
     <CalendarPage>
       <MapAndAttractions>
-        {/* <CityName>Cuba</CityName> */}
         <CityName>{cityName}</CityName>
         <Map>
           <ScheduleMap />
         </Map>
-        <AddSchedule type="text" placeholder="Create your event" />
-        {/* <RenderEventContent></RenderEventContent> */}
         <TouristAttractions></TouristAttractions>
+        <OwnEvent>
+          You can also create your own event here.
+          <Input>
+            <AddSchedule
+              type="text"
+              onChange={handleChangeTitleInput}
+              placeholder="Please enter event title."
+            />
+            <CreateEvent onClick={renderEventContent}>Create</CreateEvent>
+          </Input>
+          <Events>{renderEventContent}</Events>
+        </OwnEvent>
         <Transportations> </Transportations>
       </MapAndAttractions>
       <CalendarSpace>
@@ -102,7 +152,7 @@ function CalendarTable() {
           droppable={true}
           weekends={true}
           height="1000px"
-          eventContent={renderEventContent}
+          // eventContent={renderEventContent}
           events={[
             {
               title: "Cuba music festival",

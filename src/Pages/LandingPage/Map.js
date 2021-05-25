@@ -42,7 +42,6 @@ function Map() {
   const [zoom, setZoom] = useState(1.3);
   const [marker, setMarker] = useState(null);
 
-  console.log(marker);
   // const [viewport, setViewport] = React.useState({
   //   longitude: -122.45,
   //   latitude: 37.78,
@@ -133,10 +132,12 @@ function Map() {
         )
         .addTo(map.current)
     );
+
     //istanbul
     // setMarker(
     //   new mapboxgl.Marker().setLngLat([28.97953, 41.015137]).addTo(map.current)
     // );
+
     //vancouver
     setMarker(
       new mapboxgl.Marker()
@@ -208,7 +209,6 @@ function Map() {
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
     });
-    console.log(map);
   });
 
   // useEffect(() => {
@@ -230,7 +230,6 @@ function Map() {
   //     }
   //   ).addTo(mymap);
   // });
-  console.log(marker);
 
   return (
     <div>
