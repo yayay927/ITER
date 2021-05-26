@@ -5,9 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import reducer from "./Reducers/VerificationData.js";
+import reducer from "./Reducers/index.js";
 
-// const store = createStore(reducer);
+const store = createStore(reducer);
 
 // const store = createStore(
 //   reducer /* preloadedState, */,
@@ -17,9 +17,9 @@ import reducer from "./Reducers/VerificationData.js";
 // function Index() {
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-    <App />
-    {/* </Provider> */}
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
