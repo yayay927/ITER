@@ -16,16 +16,30 @@ const Verification = styled.div`
 `;
 
 function VerificationStep() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+
+  // Redux 寫法
+  const dispatch = useDispatch();
+  const userEmail = useSelector((state) => state.userEmail);
+  const userPassword = useSelector((state) => state.userPassword);
+  // const userName = useSelector((state) => state.userName);
+  // const userUID = useSelector((state) => state.userUID);
+
+  // dispatch({ type: "UPDATE_USERNAME", data: firebaseActivityData });
+  // dispatch({ type: "UPDATE_USERUID", data: firebaseActivityData });
+
   const handleChangeEmailInput = (e) => {
-    setEmail(e.target.value);
-    // console.log(email);
+    // setEmail(e.target.value);
+    dispatch({ type: "UPDATE_USEREMAIL", data: e.target.value });
+    // console.log(userEmail);
   };
   const handleChangePasswordInput = (e) => {
-    setPassword(e.target.value);
+    // setPassword(e.target.value);
+    dispatch({ type: "UPDATE_USERPASSWORD", data: e.target.value });
     // console.log(password);
   };
+  console.log(userEmail);
 
   return (
     <div>
@@ -47,14 +61,14 @@ function VerificationStep() {
         <div>
           <button
             onClick={() => {
-              fireAuthLogIn(email, password);
+              fireAuthLogIn(userEmail, userPassword);
             }}
           >
             Log In
           </button>
           <button
             onClick={() => {
-              fireAuthSignUp(email, password);
+              fireAuthSignUp(userEmail, userPassword);
             }}
           >
             Sign Up
