@@ -97,6 +97,7 @@ function CalendarTable() {
     // console.log(eventInfo);
     // console.log(eventInfo.timeText);
     // console.log(eventInfo.event.title);
+    // calendar.addEvent( event [, source ] )
     console.log(eventTitle);
     return (
       <EachEvent>
@@ -139,9 +140,42 @@ function CalendarTable() {
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
-            left: "prev, next, today",
+            left: "prev, next, today, myCustomButton",
             center: "title",
             right: "dayGridMonth, timeGridWeek, timeGridDay",
+          }}
+          customButtons={{
+            myCustomButton: {
+              text: "create event",
+              click: function () {
+                // alert("clicked the custom button!");
+                let dateStr = prompt("Enter a start date in YYYY-MM-DD format");
+                let title = prompt("Enter a title for your event");
+                let days = prompt("Enter how many days the trip is");
+                let date = new Date(dateStr + "T00:00:00");
+
+                if (!isNaN(date.valueOf())) {
+                  // $("#calendar").fullCalendar("renderEvent", {
+                  //   title: "dynamic event",
+                  //   start: date,
+                  //   allDay: true,
+                  // });
+                  FullCalendar.addEvent({
+                    title: "Cuba music festival",
+                    start: date,
+                    date: "2021-05-16",
+                  });
+                  // calendar.addEvent({
+                  //   title: title,
+                  //   start: date,
+                  //   allDay: true,
+                  // });
+                  alert("Great. Now, update your database...");
+                } else {
+                  alert("Invalid date.");
+                }
+              },
+            },
           }}
           initialView="dayGridMonth"
           editable={true}
@@ -151,6 +185,10 @@ function CalendarTable() {
           draggable={true}
           droppable={true}
           weekends={true}
+          nowIndicator={true}
+          // allDaySlot={false}
+          minTime="06:00:00"
+          // maxTime="24:00:00"
           height="1000px"
           // eventContent={renderEventContent}
           events={[
