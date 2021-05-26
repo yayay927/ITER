@@ -12,24 +12,29 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-function getAttractionData() {
-  var docRef = firebase
-    .firestore()
-    .collection("world_cities")
-    .doc("Kyoto")
-    .collection("spots")
-    // .doc(`${i}`);
-    .get()
-    .then((doc) => {
-      const attractionData = [];
-      for (let i = 0; i < 10; i++) {
-        attractionData.push(doc[i].data());
-      }
-      return attractionData;
-    })
-    .catch((error) => {
-      console.log("Error getting document:", error);
-    });
+function getAttractionData(cityName) {
+  return (
+    firebase
+      .firestore()
+      .collection("world_cities")
+      // .doc("Kyoto")
+      .doc(cityName)
+      .collection("spots")
+      .get()
+      .then((doc) => {
+        const attractionData = [];
+        // for (let i = 0; i < 10; i++) {
+        //   attractionData.push(doc[i].data());
+        // }
+        doc.forEach((spot) => {
+          attractionData.push(spot.data());
+        });
+        return attractionData;
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      })
+  );
 }
 
 function fireAuthLogIn(email, password) {

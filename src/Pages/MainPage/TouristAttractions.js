@@ -5,7 +5,7 @@ import FirebaseAttractionData from "./FirebaseAttractionData.js";
 const TouristAttractions = styled.div`
   width: 100%;
   font-size: 45px;
-  margin: 20px 0;
+  margin: 30px 0;
 `;
 const AllAttractions = styled.div`
   width: 100%;
@@ -34,9 +34,9 @@ const AttractionImage = styled.div`
 function TouristAttraction() {
   return (
     <TouristAttractions>
-      Top 10 Tourist Attractions
+      Top 30 Tourist Attractions
       {/* <TouristAttractionData></TouristAttractionData> */}
-      <AllAttractions>
+      {/* <AllAttractions>
         <Attraction>
           <AttractionImage
             style={{
@@ -91,19 +91,8 @@ function TouristAttraction() {
           ></AttractionImage>
           <AttractionName>El Morro</AttractionName>
         </Attraction>
-
-        <FirebaseAttractionData>
-          {/* <Attraction>
-            <AttractionImage
-              style={{
-                background: `url(${spotUrl})`,
-                backgroundSize: `cover`,
-              }}
-            ></AttractionImage>
-            <AttractionName>`${spotName}`</AttractionName>
-          </Attraction> */}
-        </FirebaseAttractionData>
-      </AllAttractions>
+      </AllAttractions> */}
+      <FirebaseAttractionData></FirebaseAttractionData>
     </TouristAttractions>
   );
 }

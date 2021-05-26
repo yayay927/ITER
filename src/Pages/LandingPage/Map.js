@@ -42,7 +42,6 @@ function Map() {
   const [zoom, setZoom] = useState(1.3);
   const [marker, setMarker] = useState(null);
 
-  console.log(marker);
   // const [viewport, setViewport] = React.useState({
   //   longitude: -122.45,
   //   latitude: 37.78,
@@ -71,76 +70,116 @@ function Map() {
       container: mapContainer.current,
       // style: "mapbox://styles/mapbox/light-v10", //streets-v11
       style: "mapbox://styles/yayay927/ckorc7d8m3p9d17p6x7w8lry3",
-
       center: [lng, lat],
       zoom: zoom,
     });
+
+    // const hrefHavana = "../city/Havana";
 
     //havana
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([-82.383, 23.133])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Havana</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Havana</h1><a href="../city/Havana"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
+
     //taipei
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([121.597366, 25.105497])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Taipei</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Taipei</h1><a href="../city/Taipei"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
     //venice
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([12.3327, 45.4371])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Venice</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Venice</h1><a href="../city/Venice"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
     //kyoto
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([135.768326, 35.011665])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Kyoto</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Kyoto</h1><a href="../city/Kyoto"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
     //boston
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([-71.057083, 42.361145])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Boston</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Boston</h1><a href="../city/Boston"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
+
     //istanbul
     // setMarker(
     //   new mapboxgl.Marker().setLngLat([28.97953, 41.015137]).addTo(map.current)
     // );
+
     //vancouver
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([-123.116226, 49.246292])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Vancouver</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Vancouver</h1><a href="../city/Vancouver"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
     //cairo
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([31.233334, 30.033333])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Cairo</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Cairo</h1><a href="../city/Cairo"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
     //cape town
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([18.4233, -33.918861])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Cape Town</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Cape Town</h1><a href="../city/CapeTown"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
     //buenos aires
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([-58.381592, -34.603722])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Buenos Aires</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Buenos Aires</h1><a href="../city/BuenosAires"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
     //st.petersburg
@@ -151,7 +190,11 @@ function Map() {
     setMarker(
       new mapboxgl.Marker()
         .setLngLat([37.618423, 55.751244])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Moscow</h1>"))
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            '<h3>Take me to </h3><h1>Moscow</h1><a href="../city/Moscow"><button>Go!</button></a>'
+          )
+        )
         .addTo(map.current)
     );
 
@@ -166,7 +209,6 @@ function Map() {
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
     });
-    console.log(map);
   });
 
   // useEffect(() => {
@@ -188,7 +230,6 @@ function Map() {
   //     }
   //   ).addTo(mymap);
   // });
-  console.log(marker);
 
   return (
     <div>
@@ -196,7 +237,7 @@ function Map() {
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </SideBar>
       <MainMap ref={mapContainer} className="map-container"></MainMap>
-      <audio controls src={ocean} autoplay="autoplay" loop>
+      <audio controls src={ocean} autoplay="true" loop>
         Your browser does not support the
         <code>audio</code> element.
       </audio>

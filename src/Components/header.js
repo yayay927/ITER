@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
-import contract from "./contract.png";
 import suitcase from "./suitcase.png";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
