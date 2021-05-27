@@ -18,6 +18,8 @@
     "country-js": "0.0.9",
     "firebase": "^8.6.1",
     "fullcalendar": "^5.7.0",
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1",
     "leaflet": "^1.7.1",
     "mapbox-gl": "^2.2.0",
     "mapbox-gl-controls": "^2.3.0",

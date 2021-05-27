@@ -9,7 +9,7 @@ import ScheduleMap from "./Pages/MainPage/ScheduleMap";
 import Test from "./Pages/MainPage/Test";
 import ConfirmSchedule from "./Pages/Confirm/Confirm.js";
 import ManageSchedule from "./Pages/ManagePage/Manage.js";
-import VerificationStep from "./Pages/Verification/Verification.js";
+import VerificationStep from "./Pages/Verification/verification.js";
 
 function App() {
   return (

@@ -5,14 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import reducer from "./Reducers/index.js";
+import reducer from "./Redux/reducers/index.js";
 
-const store = createStore(reducer);
+// const store = createStore(reducer);
 
-// const store = createStore(
-//   reducer /* preloadedState, */,
-//   +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
+const store = createStore(
+  reducer /* preloadedState, */,
+  +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 // function Index() {
 ReactDOM.render(

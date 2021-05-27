@@ -13,6 +13,8 @@ import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
 import TouristAttractions from "./TouristAttractions.js";
 import Transportations from "./Transportations.js";
+import { render } from "@testing-library/react";
+import caption from "../../Components/caption.jpg";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -99,14 +101,32 @@ function CalendarTable() {
     // console.log(eventInfo.event.title);
     // calendar.addEvent( event [, source ] )
     console.log(eventTitle);
+
     return (
+      // <>
+      //   <div
+      //     //   id="draggable-el"
+      //     data-event='{ "title": "test event" }'
+      //     className="fc-event"
+      //   >
+      //     test
+      //   </div>
       <EachEvent>
         {/* <b>{eventInfo.timeText}</b> */}
         <b>{"2021 - 05 - 27"}</b>
         {/* <i>{eventInfo.event.title}</i> */}
         <i>{eventTitle}</i>
       </EachEvent>
+      // </>
     );
+    // componentDidMount() {
+    //   $("#external-events .fc-event").each(function () {
+    //     new Draggable($(this).get(0), {
+
+    //     });
+
+    //   });
+    // }
   }
 
   const handleChangeTitleInput = (e) => {
@@ -133,6 +153,20 @@ function CalendarTable() {
             <CreateEvent onClick={renderEventContent}>Create</CreateEvent>
           </Input>
           <Events>{renderEventContent}</Events>
+          <div
+            data-event='{ "title": "montecarlo" }'
+            className="fc-event"
+            style={{
+              background: `url(${caption})`,
+              backgroundSize: `cover`,
+              height: "100px",
+              width: "200px",
+              cursor: "pointer",
+              fontSize: "20px",
+            }}
+          >
+            montecarlo
+          </div>
         </OwnEvent>
         <Transportations> </Transportations>
       </MapAndAttractions>
@@ -160,11 +194,13 @@ function CalendarTable() {
                   //   start: date,
                   //   allDay: true,
                   // });
-                  FullCalendar.addEvent({
-                    title: "Cuba music festival",
-                    start: date,
-                    date: "2021-05-16",
-                  });
+
+                  // FullCalendar.addEvent({
+                  //   title: "Cuba music festival",
+                  //   start: date,
+                  //   date: "2021-05-16",
+                  // });
+
                   // calendar.addEvent({
                   //   title: title,
                   //   start: date,

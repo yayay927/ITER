@@ -6,6 +6,7 @@ import ReactMapGL, { Marker } from "react-map-gl";
 import { ZoomControl } from "mapbox-gl-controls";
 import L from "leaflet";
 import ocean from "../../Components/ocean.wav";
+import anchor from "../../Components/anchor.png";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const SideBar = styled.div`
@@ -40,7 +41,7 @@ function Map() {
   const [lng, setLng] = useState(3);
   const [lat, setLat] = useState(38);
   const [zoom, setZoom] = useState(1.3);
-  const [marker, setMarker] = useState(null);
+  // const [marker, setMarker] = useState(null);
 
   // const [viewport, setViewport] = React.useState({
   //   longitude: -122.45,
@@ -75,63 +76,71 @@ function Map() {
     });
 
     // const hrefHavana = "../city/Havana";
+    // var el = document.createElement("div");
+    // el.className = "marker";
+    // el.style.backgroundImage = `url${anchor}`;
+    // el.style.width = "10px";
+    // el.style.height = "10px";
+    // el.style.backgroundSize = "100%";
 
+    // + marker.properties.iconSize.join("/") + "/)"
+    // el.style.width = marker.properties.iconSize[0] + "px";
     //havana
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([-82.383, 23.133])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Havana</h1><a href="../city/Havana"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([-82.383, 23.133])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Havana</h1><a href="../city/Havana"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
 
     //taipei
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([121.597366, 25.105497])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Taipei</h1><a href="../city/Taipei"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([121.597366, 25.105497])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Taipei</h1><a href="../city/Taipei"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
     //venice
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([12.3327, 45.4371])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Venice</h1><a href="../city/Venice"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([12.3327, 45.4371])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Venice</h1><a href="../city/Venice"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
     //kyoto
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([135.768326, 35.011665])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Kyoto</h1><a href="../city/Kyoto"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([135.768326, 35.011665])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Kyoto</h1><a href="../city/Kyoto"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
     //boston
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([-71.057083, 42.361145])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Boston</h1><a href="../city/Boston"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([-71.057083, 42.361145])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Boston</h1><a href="../city/Boston"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
 
     //istanbul
     // setMarker(
@@ -139,64 +148,67 @@ function Map() {
     // );
 
     //vancouver
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([-123.116226, 49.246292])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Vancouver</h1><a href="../city/Vancouver"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([-123.116226, 49.246292])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Vancouver</h1><a href="../city/Vancouver"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
     //cairo
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([31.233334, 30.033333])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Cairo</h1><a href="../city/Cairo"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([31.233334, 30.033333])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Cairo</h1><a href="../city/Cairo"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
     //cape town
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([18.4233, -33.918861])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Cape Town</h1><a href="../city/CapeTown"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([18.4233, -33.918861])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Cape Town</h1><a href="../city/CapeTown"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
     //buenos aires
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([-58.381592, -34.603722])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Buenos Aires</h1><a href="../city/BuenosAires"><button>Go!</button></a>'
-          )
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([-58.381592, -34.603722])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Buenos Aires</h1><a href="../city/BuenosAires"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
     //st.petersburg
     // setMarker(
     //   new mapboxgl.Marker().setLngLat([30.308611, 59.9375]).addTo(map.current)
     // );
     //moscow
-    setMarker(
-      new mapboxgl.Marker()
-        .setLngLat([37.618423, 55.751244])
-        .setPopup(
-          new mapboxgl.Popup().setHTML(
-            '<h3>Take me to </h3><h1>Moscow</h1><a href="../city/Moscow"><button>Go!</button></a>'
-          )
+
+    // setMarker(
+    new mapboxgl.Marker()
+      .setLngLat([37.618423, 55.751244])
+      .setPopup(
+        new mapboxgl.Popup().setHTML(
+          '<h3>Take me to </h3><h1>Moscow</h1><a href="../city/Moscow"><button>Go!</button></a>'
         )
-        .addTo(map.current)
-    );
+      )
+      .addTo(map.current);
+    // );
+
+    // el.style.backgroundImage = { anchor };
 
     // map.addControl(new mapboxgl.NavigationControl());
     // map.addControl(new ZoomControl(), "top-right");
