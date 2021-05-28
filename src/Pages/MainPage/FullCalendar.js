@@ -69,14 +69,15 @@ class CalendarCompo extends React.Component {
       //     // right: "dayGridMonth, timeGridWeek, timeGridDay",
       //   },
       headerToolbar: {
-        left: "prev,next today",
-        center: "title, myCustomButton",
+        left: "prev,next today, myCustomButton",
+        center: "title",
         right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
       },
-      height: "500px",
+      //   height: "500px",
       //   width: "500px",
       editable: true,
       dayHeaders: true,
+      nowIndicator: true,
       customButtons: {
         myCustomButton: {
           text: "create event",

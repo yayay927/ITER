@@ -1,7 +1,7 @@
 // Calendar part in main page
 // import logo from "./logo.svg";
 // import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -80,7 +80,7 @@ const ConfirmButton = styled.button`
   margin-top: 5px;
 `;
 
-function CalendarTable() {
+function CityPage() {
   let { cityName } = useParams();
   const [eventTitle, setEventTitle] = useState("");
 
@@ -95,39 +95,54 @@ function CalendarTable() {
   const test = () => {};
   test();
 
-  function renderEventContent(/*eventInfo*/) {
-    // console.log(eventInfo);
-    // console.log(eventInfo.timeText);
-    // console.log(eventInfo.event.title);
-    // calendar.addEvent( event [, source ] )
-    console.log(eventTitle);
+  const INITIAL_EVENTS = [
+    {
+      title: "event 0",
+      date: new Date().toISOString().substr(0, 10),
+    },
+  ];
 
-    return (
-      // <>
-      //   <div
-      //     //   id="draggable-el"
-      //     data-event='{ "title": "test event" }'
-      //     className="fc-event"
-      //   >
-      //     test
-      //   </div>
-      <EachEvent>
-        {/* <b>{eventInfo.timeText}</b> */}
-        <b>{"2021 - 05 - 27"}</b>
-        {/* <i>{eventInfo.event.title}</i> */}
-        <i>{eventTitle}</i>
-      </EachEvent>
-      // </>
-    );
-    // componentDidMount() {
-    //   $("#external-events .fc-event").each(function () {
-    //     new Draggable($(this).get(0), {
+  useEffect(() => {
+    const containerEl = document.querySelector("#events");
+    console.log("a");
+    new Draggable(containerEl, {
+      itemSelector: ".event",
+      eventData: (eventEl) => {
+        return {
+          title: eventEl.innerText,
+        };
+      },
+    });
+  }, []);
 
-    //     });
-
-    //   });
-    // }
-  }
+  // function RenderEventContent() {
+  //   useEffect(() => {
+  //     const containerEl = document.querySelector("#events");
+  //     new Draggable(containerEl, {
+  //       itemSelector: ".event",
+  //       eventData: (eventEl) => {
+  //         return {
+  //           title: eventEl.innerText,
+  //         };
+  //       },
+  //     });
+  //   }, []);
+  //   return (
+  //     <>
+  //       <FullCalendar
+  //         plugins={[dayGridPlugin, interactionPlugin]}
+  //         initialEvents={INITIAL_EVENTS}
+  //         editable
+  //         droppable
+  //       />
+  //       <ul id="events">
+  //         <li className="event">event 1</li>
+  //         <li className="event">event 2</li>
+  //         <li className="event">event 3</li>
+  //       </ul>
+  //     </>
+  //   );
+  // }
 
   const handleChangeTitleInput = (e) => {
     setEventTitle(e.target.value);
@@ -150,9 +165,9 @@ function CalendarTable() {
               onChange={handleChangeTitleInput}
               placeholder="Please enter event title."
             />
-            <CreateEvent onClick={renderEventContent}>Create</CreateEvent>
+            {/* <CreateEvent onClick={RenderEventContent}>Create</CreateEvent> */}
           </Input>
-          <Events>{renderEventContent}</Events>
+          {/* <Events>{RenderEventContent}</Events> */}
           <div
             data-event='{ "title": "montecarlo" }'
             className="fc-event"
@@ -171,6 +186,10 @@ function CalendarTable() {
         <Transportations> </Transportations>
       </MapAndAttractions>
       <CalendarSpace>
+        <ul id="events">
+          {/* <li className="event">event 1</li> */}
+          <TouristAttractions className="event"></TouristAttractions>
+        </ul>
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
@@ -214,6 +233,7 @@ function CalendarTable() {
             },
           }}
           initialView="dayGridMonth"
+          initialEvents={INITIAL_EVENTS}
           editable={true}
           selectable={true}
           selectMirror={true}
@@ -242,9 +262,10 @@ function CalendarTable() {
         <a href="../confirm">
           <ConfirmButton>Finish Edit</ConfirmButton>
         </a>
+        {/* {RenderEventContent()} */}
       </CalendarSpace>
     </CalendarPage>
   );
 }
 
-export default CalendarTable;
+export default CityPage;

@@ -57,7 +57,7 @@ function FirebaseAttractionData() {
         const spotName = attraction.name;
         const spotUrl = attraction.url;
         return (
-          <Attraction key={spotName}>
+          <Attraction key={spotName} className="event">
             <AttractionImage
               style={{
                 background: `url(${spotUrl})`,
