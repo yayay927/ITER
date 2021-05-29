@@ -9,6 +9,12 @@ import {
 
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import {
+  Application,
+  CalendarCompo,
+  External,
+} from "../MainPage/TestFullCalendar";
+import { MainFullCalendar } from "../MainPage/MainFullCalendar";
 
 const Verification = styled.div`
   margin-top: 80px;
@@ -81,6 +87,8 @@ function VerificationStep() {
           <button onClick={fireAuthLogOut}>Log Out</button>
         </div>
       </Verification>
+      <Application></Application>
+      <MainFullCalendar></MainFullCalendar>
     </div>
   );
 }

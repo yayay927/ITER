@@ -18,6 +18,7 @@ const Attraction = styled.div`
   font-size: 20px;
   margin: 5px;
   background-color: lightgrey;
+  cursor: grab;
   /* border-radius: 10px; */
 `;
 const AttractionName = styled.div`
@@ -57,7 +58,7 @@ function FirebaseAttractionData() {
         const spotName = attraction.name;
         const spotUrl = attraction.url;
         return (
-          <Attraction key={spotName}>
+          <Attraction key={spotName} className="event">
             <AttractionImage
               style={{
                 background: `url(${spotUrl})`,

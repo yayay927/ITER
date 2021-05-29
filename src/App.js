@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/header";
 import Footer from "./Components/footer";
 import Map from "./Pages/LandingPage/Map";
-import Calendar from "./Pages/MainPage/Calendar";
+import CityPage from "./Pages/MainPage/CityPage";
 import ScheduleMap from "./Pages/MainPage/ScheduleMap";
 import Test from "./Pages/MainPage/Test";
 import ConfirmSchedule from "./Pages/Confirm/Confirm.js";
 import ManageSchedule from "./Pages/ManagePage/Manage.js";
-import VerificationStep from "./Pages/Verification/Verification.js";
+import VerificationStep from "./Pages/Verification/verification.js";
 
 function App() {
   return (
@@ -17,13 +17,13 @@ function App() {
       <Header></Header>
       <Switch>
         <Route path="/calendar">
-          <Calendar></Calendar>
+          <CityPage></CityPage>
         </Route>
         <Route path="/schedule_map">
           <ScheduleMap></ScheduleMap>
         </Route>
         <Route path="/city/:cityName">
-          <Calendar></Calendar>
+          <CityPage></CityPage>
         </Route>
         <Route path="/confirm">
           <ConfirmSchedule>confirm</ConfirmSchedule>

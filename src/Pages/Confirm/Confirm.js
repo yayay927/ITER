@@ -120,7 +120,7 @@ function ConfirmSchedule() {
                 }}
                 initialView="timeGrid"
                 // initialView="timeline"
-                duration={{ days: 10 }}
+                duration={{ days: 7 }}
                 visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
                 editable={true}
                 selectable={true}
@@ -130,7 +130,7 @@ function ConfirmSchedule() {
                 droppable={true}
                 weekends={true}
                 minTime="06:00:00"
-                height="1200px"
+                height="1300px"
                 eventContent={renderEventContent}
                 events={[
                   {
