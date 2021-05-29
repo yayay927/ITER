@@ -1,16 +1,9 @@
 import $ from "jquery";
 import styled from "styled-components";
-// import "jquery-ui/themes/base/core.css";
-// import "jquery-ui/themes/base/theme.css";
-// import "jquery-ui/themes/base/selectable.css";
-// import "jquery-ui/ui/core";
-// import "jquery-ui/ui/widgets/selectable";
-// import "jquery-ui/ui/widgets/draggable";
 import React, { useRef, useEffect, useState } from "react";
 // import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
-
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import { Calendar /*as FullCalendar*/ } from "@fullcalendar/core";
 import "@fullcalendar/common/main.css";
@@ -18,7 +11,7 @@ import anchor from "../../Components/anchor.png";
 import citiesofartistsin from "../../Components/cities-of-artists-in.jpg";
 import sempre from "../../Components/montecarlo-e-sempre-un.jpg";
 import caption from "../../Components/caption.jpg";
-// import "@fullcalendar/core/main.css";
+
 const Container = styled.div`
   display: flex;
   margin-bottom: 100px;
@@ -44,30 +37,10 @@ class CalendarCompo extends React.Component {
     return <div id="calendar"></div>;
   }
   componentDidMount() {
-    // let calendar = new Calendar(calendarEl, {
-    //   plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
-    //   initialView: "dayGridMonth",
-    //   headerToolbar: {
-    //     left: "prev,next today",
-    //     center: "title",
-    //     right: "dayGridMonth,timeGridWeek,listWeek",
-    //   },
-    // });
-
     console.log($("#calendar").get(0));
     const fullCalendar = new Calendar($("#calendar").get(0), {
-      //   themeSystem: "jquery-ui",
       plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
-      //   defaultView: "timelineDay",
       initialView: "dayGridMonth",
-      //   initialView: "dayGridWeek",
-      //   header: {
-      //     left: "prev,next today",
-      //     center: "title, myCustomButton",
-      //     // right: "month,agendaWeek,agendaDay ",
-      //     right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
-      //     // right: "dayGridMonth, timeGridWeek, timeGridDay",
-      //   },
       headerToolbar: {
         left: "prev,next today, myCustomButton",
         center: "title",
@@ -82,7 +55,6 @@ class CalendarCompo extends React.Component {
         myCustomButton: {
           text: "create event",
           click: function () {
-            // alert("clicked the custom button!");
             let dateStr = prompt("Enter a start date in YYYY-MM-DD format");
             let title = prompt("Enter a title for your event");
             // let days = prompt("Enter how many days the trip is");
@@ -93,21 +65,14 @@ class CalendarCompo extends React.Component {
               //     title: title,
               //     start: date,
               //     allDay: true,
-              //     duration: days,
               //   });
 
               fullCalendar.addEvent({
                 title: title,
                 start: date,
                 allDay: true,
-                // duration: days,
               });
 
-              // calendar.addEvent({
-              //   title: title,
-              //   start: date,
-              //   allDay: true,
-              // });
               alert("Great. Now, update your database...");
             } else {
               alert("Invalid date.");
@@ -222,8 +187,3 @@ class External extends React.Component {
 }
 
 export { Application, CalendarCompo, External };
-
-/*
- * Render the above component into the div#app
- */
-// React.render(<Application />, document.getElementById("app"));

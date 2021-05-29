@@ -9,7 +9,12 @@ import {
 
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Application, Calendar, External } from "../MainPage/FullCalendar";
+import {
+  Application,
+  CalendarCompo,
+  External,
+} from "../MainPage/TestFullCalendar";
+import { MainFullCalendar } from "../MainPage/MainFullCalendar";
 
 const Verification = styled.div`
   margin-top: 80px;
@@ -83,6 +88,7 @@ function VerificationStep() {
         </div>
       </Verification>
       <Application></Application>
+      <MainFullCalendar></MainFullCalendar>
     </div>
   );
 }

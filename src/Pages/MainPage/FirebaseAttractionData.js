@@ -18,6 +18,7 @@ const Attraction = styled.div`
   font-size: 20px;
   margin: 5px;
   background-color: lightgrey;
+  cursor: grab;
   /* border-radius: 10px; */
 `;
 const AttractionName = styled.div`
