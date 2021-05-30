@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const TheHeader = styled.div`
-  background-color: #e1d3ec;
+  background-color: #91ccb9;
   display: flex;
   justify-content: space-between;
   align-items: center;

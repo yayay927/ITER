@@ -36,7 +36,7 @@ const SideBar = styled.div`
 const MainMap = styled.div`
   height: 300px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 `;
 
 function ScheduleMap() {

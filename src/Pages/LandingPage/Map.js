@@ -28,6 +28,10 @@ const MainMap = styled.div`
   margin-top: 80px;
 `;
 
+const Audio = styled.div`
+  background-color: #91ccb9;
+`;
+
 const LeafletMap = styled.div`
   height: 180px;
   id: "mapid";
@@ -249,10 +253,12 @@ function Map() {
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </SideBar>
       <MainMap ref={mapContainer} className="map-container"></MainMap>
-      <audio controls src={ocean} autoplay="true" loop>
-        Your browser does not support the
-        <code>audio</code> element.
-      </audio>
+      <Audio>
+        <audio controls src={ocean} autoplay="true" loop>
+          Your browser does not support the
+          <code>audio</code> element.
+        </audio>
+      </Audio>
       {/* <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

@@ -16,8 +16,11 @@ import { MainFullCalendar } from "./MainFullCalendar.js";
 const CalendarPage = styled.div`
   margin: 20px 50px;
   width: 100vw;
-  display: flex;
+  /* display: flex; */
   margin-top: 100px;
+`;
+const MainPart = styled.div`
+  display: flex;
 `;
 
 const MapAndAttractions = styled.div`
@@ -30,6 +33,7 @@ const MapAndAttractions = styled.div`
 const CityName = styled.div`
   width: 100%;
   font-size: 55px;
+  margin-bottom: 30px;
 `;
 
 const Map = styled.div`
@@ -122,108 +126,112 @@ function CityPage() {
 
   return (
     <CalendarPage>
-      <MapAndAttractions>
-        <CityName>{cityName}</CityName>
-        <Map>
-          <ScheduleMap />
-        </Map>
-        <Transportations> </Transportations>
-      </MapAndAttractions>
-      <CalendarSpace>
-        <ul id="events">
-          {/* <li className="event">event 1</li> */}
-          <TouristAttractions className="event"></TouristAttractions>
-        </ul>
-        {/* <MainFullCalendar></MainFullCalendar> */}
-        <FullCalendar
-          id="FullCalendar"
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-          headerToolbar={{
-            left: "prev, next, today, myCustomButton",
-            center: "title",
-            right: "dayGridMonth, timeGridWeek, timeGridDay",
-          }}
-          ref={calendarRef}
-          customButtons={{
-            myCustomButton: {
-              text: "create event",
-              click: function () {
-                // setEvents([
-                //   ...events,
-                //   {
-                //     title: "event 1",
-                //     date: new Date().toISOString().substr(0, 10),
-                //   },
-                // ]);
+      <CityName>{cityName}</CityName>
+      <MainPart>
+        <MapAndAttractions>
+          <Map>
+            <ScheduleMap />
+          </Map>
+          <ul id="events">
+            {/* <li className="event">event 1</li> */}
+            <TouristAttractions className="event"></TouristAttractions>
+          </ul>
+          <Transportations> </Transportations>
+        </MapAndAttractions>
+        <CalendarSpace>
+          {/* <MainFullCalendar></MainFullCalendar> */}
+          <FullCalendar
+            id="FullCalendar"
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            headerToolbar={{
+              left: "prev, next, today, myCustomButton",
+              center: "title",
+              right: "dayGridMonth, timeGridWeek, timeGridDay",
+            }}
+            ref={calendarRef}
+            customButtons={{
+              myCustomButton: {
+                text: "create event",
+                click: function () {
+                  // setEvents([
+                  //   ...events,
+                  //   {
+                  //     title: "event 1",
+                  //     date: new Date().toISOString().substr(0, 10),
+                  //   },
+                  // ]);
 
-                // alert("clicked the custom button!");
-                let dateStr = prompt("Enter a start date in YYYY-MM-DD format");
-                let title = prompt("Enter a title for your event");
-                let date = new Date(dateStr + "T00:00:00");
-                let dateT = new Date(dateStr).toISOString();
-                let dateTest = new Date(dateStr).toISOString().substr(0, 10);
-                console.log(new Date(dateStr));
-                console.log(date);
-                console.log(dateT);
-                console.log(dateTest);
-                // let startTime;
-                // let endTime;
-                // const [startTime, setStartTime] = useState();
+                  // alert("clicked the custom button!");
+                  let dateStr = prompt(
+                    "Enter a start date in YYYY-MM-DD format"
+                  );
+                  let title = prompt("Enter a title for your event");
+                  let date = new Date(dateStr + "T00:00:00");
+                  let dateT = new Date(dateStr).toISOString();
+                  let dateTest = new Date(dateStr).toISOString().substr(0, 10);
+                  console.log(new Date(dateStr));
+                  console.log(date);
+                  console.log(dateT);
+                  console.log(dateTest);
+                  // let startTime;
+                  // let endTime;
+                  // const [startTime, setStartTime] = useState();
 
-                // console.log(startTime);
-                // console.log(endTime);
+                  // console.log(startTime);
+                  // console.log(endTime);
 
-                console.log(FullCalendar);
-                if (!isNaN(date.valueOf())) {
-                  calendarRef.current.getApi().addEvent({
-                    title: title,
-                    // start: date,
-                    // date: new Date().toISOString().substr(0, 10),
-                    date: date,
-                    allDay: true,
-                    // start: date + startTime,
-                    // end: date + endTime,
-                  });
+                  console.log(FullCalendar);
+                  if (!isNaN(date.valueOf())) {
+                    calendarRef.current.getApi().addEvent({
+                      title: title,
+                      // start: date,
+                      // date: new Date().toISOString().substr(0, 10),
+                      date: date,
+                      allDay: true,
+                      // start: date + startTime,
+                      // end: date + endTime,
+                    });
 
-                  console.log(events);
+                    console.log(events);
 
-                  alert("Great. Now, update your database...");
-                } else {
-                  alert("Invalid date.");
-                }
+                    alert("Great. Now, update your database...");
+                  } else {
+                    alert("Invalid date.");
+                  }
+                },
               },
-            },
-          }}
-          initialView="dayGridMonth"
-          initialEvents={INITIAL_EVENTS}
-          editable={true}
-          selectable={true}
-          selectMirror={true}
-          dayMaxEvents={true}
-          draggable={true}
-          droppable={true}
-          weekends={true}
-          nowIndicator={true}
-          // allDaySlot={false}
-          minTime="06:00:00"
-          // maxTime="24:00:00"
-          height="1000px"
-          events={[
-            {
-              title: "Cuba music festival",
-              date: "2021-05-14",
-              color: "pink",
-              // textColor: "green",
-              start: "2021-05-20T10:30:00",
-              end: "2021-05-22T11:30:00",
-            },
-            { title: "Italian restaurant gala", date: "2021-05-22" },
-          ]}
-        />
-        <a href="../confirm">
-          <ConfirmButton>Finish Edit</ConfirmButton>
-        </a>
-      </CalendarSpace>
+            }}
+            initialView="dayGridMonth"
+            initialEvents={INITIAL_EVENTS}
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            draggable={true}
+            droppable={true}
+            weekends={true}
+            nowIndicator={true}
+            // allDaySlot={false}
+            minTime="06:00:00"
+            // maxTime="24:00:00"
+            height="1000px"
+            events={[
+              {
+                title: "Cuba music festival",
+                date: "2021-05-14",
+                color: "pink",
+                // textColor: "green",
+                start: "2021-05-20T10:30:00",
+                end: "2021-05-22T11:30:00",
+              },
+              { title: "Italian restaurant gala", date: "2021-05-22" },
+            ]}
+          />
+          <a href="../confirm">
+            <ConfirmButton>Finish Edit</ConfirmButton>
+          </a>
+        </CalendarSpace>
+      </MainPart>
     </CalendarPage>
   );
 }
