@@ -4,6 +4,7 @@ import styled from "styled-components";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import ReactMapGL, { Marker } from "react-map-gl";
 import { ZoomControl } from "mapbox-gl-controls";
+import { useParams } from "react-router-dom";
 // import mapboxgl from 'mapbox-gl';
 
 // import MapboxDirections from "@mapbox/mapbox-gl-directions";
@@ -46,9 +47,51 @@ function ScheduleMap() {
   // const [lng, setLng] = useState(3);
   // const [lat, setLat] = useState(38);
   // const [zoom, setZoom] = useState(1.3);
-  const [lng, setLng] = useState(31.233334);
-  const [lat, setLat] = useState(30.033333);
+
   const [zoom, setZoom] = useState(12);
+
+  let { cityName } = useParams();
+  console.log(cityName);
+  let latitude;
+  let longitude;
+
+  if (cityName === "Taipei") {
+    latitude = 25.032969;
+    longitude = 121.565414;
+  } else if (cityName === "Kyoto") {
+    latitude = 35.044635;
+    longitude = 135.768036;
+  } else if (cityName === "Havana") {
+    latitude = 23.137627795121898;
+    longitude = -82.36905265971663;
+  } else if (cityName === "Boston") {
+    latitude = 42.36071137021659;
+    longitude = -71.05828198182688;
+  } else if (cityName === "Vancouver") {
+    latitude = 49.26029;
+    longitude = -123.11417;
+  } else if (cityName === "BuenosAires") {
+    latitude = -34.61186;
+    longitude = -58.43624;
+  } else if (cityName === "Venice") {
+    latitude = 45.44421624139197;
+    longitude = 12.315229925283642;
+  } else if (cityName === "Moscow") {
+    latitude = 55.74893;
+    longitude = 37.61862;
+  } else if (cityName === "Cairo") {
+    latitude = 30.045051609169334;
+    longitude = 31.235549047124817;
+  } else if (cityName === "CapeTown") {
+    latitude = -33.92942; //18.460899515329125
+    longitude = 18.41747; //-33.877741185805036
+  }
+
+  console.log(latitude);
+  console.log(longitude);
+
+  const [lng, setLng] = useState(/*31.233334*/ longitude);
+  const [lat, setLat] = useState(/*30.033333*/ latitude);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
