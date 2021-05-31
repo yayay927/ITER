@@ -78,7 +78,7 @@ function ScheduleMap() {
     longitude = 12.315229925283642;
   } else if (cityName === "Moscow") {
     latitude = 55.74893;
-    longitude = 37.61862;
+    longitude = 37.60862;
   } else if (cityName === "Cairo") {
     latitude = 30.045051609169334;
     longitude = 31.235549047124817;

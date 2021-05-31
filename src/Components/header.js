@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
-import suitcase from "./suitcase.png";
+import user from "./user.png";
+import suitcaseNew from "./suitcaseNew.png";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -54,11 +55,14 @@ function Header() {
             onChange={(e) => setInputValue(e.target.value)}
           />
         </form>
-
-        <a href="../manage">
-          <Logo src={suitcase} />
-          Manage Schedule
-        </a>
+        <div>
+          <a href="../manage">
+            <Logo src={suitcaseNew} />
+          </a>
+          <a href="../verification">
+            <Logo src={user} />
+          </a>
+        </div>
 
         {/* <form onSubmit={getParamValue} method="get">
           <input

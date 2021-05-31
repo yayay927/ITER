@@ -270,9 +270,9 @@ function CityPage() {
               ]
             }
           />
-          {/* <a href="../confirm"> */}
-          <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
-          {/* </a> */}
+          <a href="../confirm">
+            <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
+          </a>
         </CalendarSpace>
       </MainPart>
     </CalendarPage>
