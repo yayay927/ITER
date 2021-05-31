@@ -11,7 +11,8 @@ import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
 import TouristAttractions from "./TouristAttractions.js";
 import Transportations from "./Transportations.js";
-import { MainFullCalendar } from "./MainFullCalendar.js";
+// import { MainFullCalendar } from "./MainFullCalendar.js";
+import { useSelector, useDispatch } from "react-redux";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -111,15 +112,19 @@ function CityPage() {
   test();
 
   const INITIAL_EVENTS = [
-    {
-      title: "event 0",
-      date: new Date().toISOString().substr(0, 10),
-    },
+    // {
+    //   title: "event 0",
+    //   date: new Date().toISOString().substr(0, 10),
+    // },
   ];
 
   const [events, setEvents] = useState(INITIAL_EVENTS);
   const calendarRef = useRef();
-  console.log(events);
+  const dispatch = useDispatch();
+  const eventTitle = useSelector((state) => state.eventTitle);
+  const startTime = useSelector((state) => state.startTime);
+  const endTime = useSelector((state) => state.endTime);
+  // console.log(events);
 
   useEffect(() => {
     const containerEl = document.querySelector("#events");
@@ -146,16 +151,23 @@ function CityPage() {
     });
   }, []);
 
-  // const handleChangeTitleInput = (e) => {
-  //   setEventTitle(e.target.value);
-  //   // console.log(eventTitle);
-  // };
-
   //get events and save
   function getEvents() {
-    console.log("getEvents");
     let e = calendarRef.current.getApi().getEvents();
     console.log(e);
+    let saveEvents = [];
+    e.forEach(function (item) {
+      // console.log(item._def.title);
+      let eTitle = item._def.title;
+      // console.log(item._instance.range.start.toISOString().substr(0, 19));
+      let eStart = item._instance.range.start.toISOString().substr(0, 19);
+      // console.log(item._instance.range.end.toISOString().substr(0, 19));
+      let eEnd = item._instance.range.end.toISOString().substr(0, 19);
+      saveEvents.push({ title: eTitle, start: eStart, end: eEnd });
+      setEvents({ title: eTitle, start: eStart, end: eEnd });
+    });
+    console.log(saveEvents);
+    console.log(events);
   }
 
   return (
@@ -209,11 +221,11 @@ function CityPage() {
                   let title = prompt("Enter a title for your event");
                   let date = new Date(dateStr + "T00:00:00");
                   let dateT = new Date(dateStr).toISOString();
-                  let dateTest = new Date(dateStr).toISOString().substr(0, 10);
-                  console.log(new Date(dateStr));
-                  console.log(date);
-                  console.log(dateT);
-                  console.log(dateTest);
+                  let dateTest = new Date(dateStr).toISOString().substr(0, 19);
+                  console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
+                  console.log(date); //Sun May 30 2021 00:00:00 GMT+0800 (台北標準時間)
+                  console.log(dateT); //2021-05-30T00:00:00.000Z
+                  console.log(dateTest); //2021-05-30 //substr(0,10)
                   // let startTime;
                   // let endTime;
                   // const [startTime, setStartTime] = useState();
@@ -227,7 +239,7 @@ function CityPage() {
                       title: title,
                       // start: date,
                       // date: new Date().toISOString().substr(0, 10),
-                      date: date,
+                      date: dateTest,
                       allDay: true,
                       // start: date + startTime,
                       // end: date + endTime,
@@ -270,9 +282,9 @@ function CityPage() {
               ]
             }
           />
-          <a href="../confirm">
-            <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
-          </a>
+          {/* <a href="../confirm"> */}
+          <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
+          {/* </a> */}
         </CalendarSpace>
       </MainPart>
     </CalendarPage>

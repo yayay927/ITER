@@ -51,7 +51,7 @@ function ScheduleMap() {
   const [zoom, setZoom] = useState(12);
 
   let { cityName } = useParams();
-  console.log(cityName);
+  // console.log(cityName);
   let latitude;
   let longitude;
 
@@ -87,11 +87,8 @@ function ScheduleMap() {
     longitude = 18.41747; //-33.877741185805036
   }
 
-  console.log(latitude);
-  console.log(longitude);
-
-  const [lng, setLng] = useState(/*31.233334*/ longitude);
-  const [lat, setLat] = useState(/*30.033333*/ latitude);
+  const [lng, setLng] = useState(longitude);
+  const [lat, setLat] = useState(latitude);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
