@@ -72,7 +72,7 @@ function ScheduleMap() {
     longitude = -123.11417;
   } else if (cityName === "BuenosAires") {
     latitude = -34.61186;
-    longitude = -58.43624;
+    longitude = -58.45624;
   } else if (cityName === "Venice") {
     latitude = 45.44421624139197;
     longitude = 12.315229925283642;

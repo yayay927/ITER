@@ -18,9 +18,15 @@ const CalendarPage = styled.div`
   width: 100vw;
   /* display: flex; */
   margin-top: 100px;
+  @media (max-width: 768px) {
+    margin: 80px 0px;
+  }
 `;
 const MainPart = styled.div`
   display: flex;
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const MapAndAttractions = styled.div`
@@ -28,12 +34,18 @@ const MapAndAttractions = styled.div`
   width: 45%;
   height: 100%;
   overflow: scroll;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const CityName = styled.div`
   width: 100%;
   font-size: 55px;
   margin-bottom: 30px;
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const Map = styled.div`
@@ -42,6 +54,9 @@ const Map = styled.div`
 
 const CalendarSpace = styled.div`
   width: 45%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const OwnEvent = styled.div`
   width: 100%;

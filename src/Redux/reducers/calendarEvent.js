@@ -2,7 +2,8 @@ const initialState = {
   eventTitle: "",
   eventTime: "",
   eventDate: "",
-  duration: "",
+  startTime: "",
+  endTime: "",
 };
 
 export default function calendarEvent(state = initialState, action) {
