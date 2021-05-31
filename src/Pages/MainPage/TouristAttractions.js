@@ -35,7 +35,6 @@ function TouristAttraction() {
   return (
     <TouristAttractions>
       Top 30 Tourist Attractions
-      {/* <TouristAttractionData></TouristAttractionData> */}
       {/* <AllAttractions>
         <Attraction>
           <AttractionImage

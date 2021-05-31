@@ -123,7 +123,6 @@ function CityPage() {
 
   useEffect(() => {
     const containerEl = document.querySelector("#events");
-    console.log("a");
     new Draggable(containerEl, {
       itemSelector: ".event",
       eventData: (eventEl) => {
@@ -134,10 +133,30 @@ function CityPage() {
     });
   }, []);
 
+  useEffect(() => {
+    const containerEl = document.querySelector("#trans");
+    new Draggable(containerEl, {
+      itemSelector: ".trans",
+      eventData: (eventEl) => {
+        return {
+          title: eventEl.innerText,
+          color: "#b6e13d",
+        };
+      },
+    });
+  }, []);
+
   // const handleChangeTitleInput = (e) => {
   //   setEventTitle(e.target.value);
   //   // console.log(eventTitle);
   // };
+
+  //get events and save
+  function getEvents() {
+    console.log("getEvents");
+    let e = calendarRef.current.getApi().getEvents();
+    console.log(e);
+  }
 
   return (
     <CalendarPage>
@@ -147,11 +166,18 @@ function CityPage() {
           <Map>
             <ScheduleMap />
           </Map>
-          <ul id="events">
+          <div id="events">
             {/* <li className="event">event 1</li> */}
             <TouristAttractions className="event"></TouristAttractions>
-          </ul>
-          <Transportations> </Transportations>
+          </div>
+          <div id="trans">
+            {/* <li className="trans">Driving</li>
+            <li className="trans">Walking</li>
+            <li className="trans">Cycling</li> */}
+            <Transportations className="trans">
+              {/* <TouristAttractions className="event"></TouristAttractions> */}
+            </Transportations>
+          </div>
         </MapAndAttractions>
         <CalendarSpace>
           {/* <MainFullCalendar></MainFullCalendar> */}
@@ -230,21 +256,23 @@ function CityPage() {
             minTime="06:00:00"
             // maxTime="24:00:00"
             height="1000px"
-            events={[
-              {
-                title: "Cuba music festival",
-                date: "2021-05-14",
-                color: "pink",
-                // textColor: "green",
-                start: "2021-05-20T10:30:00",
-                end: "2021-05-22T11:30:00",
-              },
-              { title: "Italian restaurant gala", date: "2021-05-22" },
-            ]}
+            events={
+              [
+                // {
+                //   title: "Cuba music festival",
+                //   date: "2021-05-14",
+                //   color: "pink",
+                //   // textColor: "green",
+                //   start: "2021-05-20T10:30:00",
+                //   end: "2021-05-22T11:30:00",
+                // },
+                // { title: "Italian restaurant gala", date: "2021-05-22" },
+              ]
+            }
           />
-          <a href="../confirm">
-            <ConfirmButton>Finish Edit</ConfirmButton>
-          </a>
+          {/* <a href="../confirm"> */}
+          <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
+          {/* </a> */}
         </CalendarSpace>
       </MainPart>
     </CalendarPage>

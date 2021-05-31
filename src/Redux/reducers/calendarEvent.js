@@ -1,10 +1,19 @@
-const initialState = {
-  eventTitle: "",
-  eventTime: "",
-  eventDate: "",
-  startTime: "",
-  endTime: "",
-};
+const initialState = [
+  {
+    eventTitle: "",
+    eventTime: "",
+    eventDate: "",
+    startTime: "",
+    endTime: "",
+  },
+  {
+    eventTitle: "",
+    eventTime: "",
+    eventDate: "",
+    startTime: "",
+    endTime: "",
+  },
+];
 
 export default function calendarEvent(state = initialState, action) {
   switch (action.type) {
