@@ -168,15 +168,9 @@ function getEventsData(id) {
       .doc(id)
       .get()
       .then((doc) => {
-        // return eventsData;
-        // console.log(eventsData);
         console.log(doc);
         console.log(doc.data());
-        // const eventsData = [];
-        // doc.data().forEach((evt) => {
-        //   eventsData.push(evt.data());
-        // });
-        // eventsData.push(doc.data());
+
         return doc.data().saveEvents;
         // return eventsData;
       })

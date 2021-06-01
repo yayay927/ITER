@@ -84,8 +84,8 @@ function ConfirmSchedule() {
 
   function renderEventContent(eventInfo) {
     console.log(eventInfo);
-    console.log(eventInfo.timeText);
-    console.log(eventInfo.event.title);
+    // console.log(eventInfo.timeText);
+    // console.log(eventInfo.event.title);
     return (
       <>
         <b>{eventInfo.timeText}</b>
@@ -102,6 +102,7 @@ function ConfirmSchedule() {
   let url = window.location.search;
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
+  let cityName = params.get("city");
   // let tripId = "Y0ynOuM8PMTKUtj77JdN";
 
   useEffect(() => {
@@ -114,13 +115,19 @@ function ConfirmSchedule() {
     renderEventsData();
   }, []);
 
+  // console.log(cityName);
+
+  function backToEdit() {
+    document.location.href = `../city/${cityName}?number=${tripId}`;
+  }
+
   return (
     <div>
       <Confirm>
         <Calendar>
-          <a href="../calendar">
-            <Previous>Go Back</Previous>
-          </a>
+          {/* <a href="../calendar"> */}
+          <Previous onClick={backToEdit}>Go Back</Previous>
+          {/* </a> */}
           <h1>
             Congrantulations on finishing your schedule! If you want to do any
             change, please click go back to edit your schedule.

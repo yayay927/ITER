@@ -15,7 +15,7 @@ import Transportations from "./Transportations.js";
 import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/firestore";
-import { storeEventsData } from "../../Utils/firebase.js";
+import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -36,7 +36,8 @@ const MainPart = styled.div`
 const MapAndAttractions = styled.div`
   margin-right: 20px;
   width: 45%;
-  height: 100%;
+  /* height: 100%; */
+  height: 87vh;
   overflow: scroll;
   @media (max-width: 768px) {
     width: 100%;
@@ -102,6 +103,12 @@ const ConfirmButton = styled.button`
 
 function CityPage() {
   let { cityName } = useParams();
+  let url = window.location.search;
+  let params = new URLSearchParams(url);
+  let tripId = params.get("number");
+  console.log(tripId);
+  // let renderEvent;
+  const [renderEvent, setRenderEvent] = useState();
 
   // console.log(cityName);
 
@@ -173,10 +180,24 @@ function CityPage() {
     async function idData() {
       let idNumber = await storeEventsData(saveEvents);
       console.log(idNumber);
-      document.location.href = `../confirm?number=${idNumber}`;
+      document.location.href = `../confirm?city=${cityName}&number=${idNumber}`;
     }
     idData();
   }
+
+  useEffect(() => {
+    console.log(tripId);
+    if (tripId) {
+      const renderEventsData = async () => {
+        let data = await getEventsData(tripId);
+        console.log(data);
+
+        setRenderEvent(data);
+        // renderEvent(tripId);
+      };
+      renderEventsData();
+    }
+  }, []);
 
   return (
     <CalendarPage>
@@ -275,19 +296,20 @@ function CityPage() {
             // allDaySlot={false}
             minTime="06:00:00"
             // maxTime="24:00:00"
-            height="1000px"
+            height="80vh" //"1000px"
             events={
-              [
-                // {
-                //   title: "Cuba music festival",
-                //   date: "2021-05-14",
-                //   color: "pink",
-                //   // textColor: "green",
-                //   start: "2021-05-20T10:30:00",
-                //   end: "2021-05-22T11:30:00",
-                // },
-                // { title: "Italian restaurant gala", date: "2021-05-22" },
-              ]
+              renderEvent
+              // [
+              // {
+              //   title: "Cuba music festival",
+              //   date: "2021-05-14",
+              //   color: "pink",
+              //   // textColor: "green",
+              //   start: "2021-05-20T10:30:00",
+              //   end: "2021-05-22T11:30:00",
+              // },
+              // { title: "Italian restaurant gala", date: "2021-05-22" },
+              // ]
             }
           />
           {/* <a> */}
