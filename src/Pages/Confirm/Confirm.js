@@ -5,9 +5,12 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import adaptivePlugin from "@fullcalendar/adaptive";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 // import { ComponentToPrint } from "../../ComponentToPrint";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import { getEventsData } from "../../Utils/firebase.js";
 
 const Confirm = styled.div`
   margin: 100px 20px 40px 20px;
@@ -27,6 +30,12 @@ const Calendar = styled.div`
 const Additional = styled.div`
   margin-left: 100px;
   /* visibility: hidden; */
+`;
+const Save = styled.button`
+  margin-top: 65px;
+  height: 100px;
+  width: 300px;
+  cursor: pointer;
 `;
 const Export = styled.button`
   margin-top: 65px;
@@ -71,6 +80,7 @@ function ConfirmSchedule() {
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
+  const [eventsData, setEventsData] = useState([]);
 
   function renderEventContent(eventInfo) {
     console.log(eventInfo);
@@ -88,6 +98,27 @@ function ConfirmSchedule() {
     Additional.style.visibility = "hidden";
     window.print();
   }
+
+  let id = "Y0ynOuM8PMTKUtj77JdN";
+  // useEffect(() => {
+  //   let data = getEventsData(id);
+  //   console.log(data);
+
+  //   setEventsData(data);
+  // }, []);
+
+  useEffect(() => {
+    const renderEventsData = async () => {
+      // let rawData = await getAttractionData("Havana");
+      // let rawData = await getAttractionData(`${cityName}`);
+
+      let data = await getEventsData(id);
+      console.log(data);
+
+      setEventsData(data);
+    };
+    renderEventsData();
+  }, []);
 
   return (
     <div>
@@ -132,29 +163,38 @@ function ConfirmSchedule() {
                 minTime="06:00:00"
                 height="1300px"
                 eventContent={renderEventContent}
-                events={[
-                  {
-                    title: "Cuba music festival",
-                    date: "2021-05-14",
-                    // start: moment().add(7, "days"),
-                    // end: moment().add(14, "days"),
-                    color: "pink",
-                    // textColor: "green",
-                    display: "background",
-                  },
-                  { title: "Italian restaurant gala", date: "2021-05-22" },
-                ]}
+                events={
+                  eventsData
+                  // {
+                  //   title: "Cuba music festival",
+                  //   date: "2021-05-14",
+                  //   // start: moment().add(7, "days"),
+                  //   // end: moment().add(14, "days"),
+                  //   color: "pink",
+                  //   // textColor: "green",
+                  //   display: "background",
+                  // },
+                  // { title: "Italian restaurant gala", date: "2021-05-22" },
+                  // {
+                  //   title: "Centro Storico di Venezia",
+                  //   start: "2021-06-21T00:00:00",
+                  //   end: "2021-06-22T00:00:00",
+                  // },
+                }
               />
             </div>
           </ComponentToPrint>
         </Calendar>
         <Additional media="print" type="text/css">
+          {/* <div>
+            <Save>Save to my trip</Save>
+          </div> */}
           <div>
             <Export onClick={handlePrint} /* onClick={exportPDF}*/>
               Export
             </Export>
           </div>
-
+          {/* <div>{JSON.stringify(eventsData)}</div> */}
           <div>
             <Share>Share</Share>
           </div>

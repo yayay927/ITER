@@ -13,6 +13,9 @@ import TouristAttractions from "./TouristAttractions.js";
 import Transportations from "./Transportations.js";
 // import { MainFullCalendar } from "./MainFullCalendar.js";
 import { useSelector, useDispatch } from "react-redux";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import { storeEventsData } from "../../Utils/firebase.js";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -168,6 +171,7 @@ function CityPage() {
     });
     console.log(saveEvents);
     console.log(events);
+    storeEventsData(saveEvents);
   }
 
   return (
@@ -282,7 +286,8 @@ function CityPage() {
               ]
             }
           />
-          {/* <a href="../confirm"> */}
+          {/* <a href=`../confirm?number=${doc.id}`> */}
+          {/* ./thankyou.html?number=${data.data.number} */}
           <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
           {/* </a> */}
         </CalendarSpace>
