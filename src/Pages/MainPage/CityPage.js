@@ -127,7 +127,6 @@ function CityPage() {
   const eventTitle = useSelector((state) => state.eventTitle);
   const startTime = useSelector((state) => state.startTime);
   const endTime = useSelector((state) => state.endTime);
-  // console.log(events);
 
   useEffect(() => {
     const containerEl = document.querySelector("#events");
@@ -170,8 +169,13 @@ function CityPage() {
       setEvents({ title: eTitle, start: eStart, end: eEnd });
     });
     console.log(saveEvents);
-    console.log(events);
-    storeEventsData(saveEvents);
+
+    async function idData() {
+      let idNumber = await storeEventsData(saveEvents);
+      console.log(idNumber);
+      document.location.href = `../confirm?number=${idNumber}`;
+    }
+    idData();
   }
 
   return (
@@ -286,8 +290,7 @@ function CityPage() {
               ]
             }
           />
-          {/* <a href=`../confirm?number=${doc.id}`> */}
-          {/* ./thankyou.html?number=${data.data.number} */}
+          {/* <a> */}
           <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
           {/* </a> */}
         </CalendarSpace>

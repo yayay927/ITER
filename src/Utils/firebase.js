@@ -139,22 +139,25 @@ function checkUserStatus() {
 
 function storeEventsData(saveEvents) {
   console.log("run store events");
-  firebase
-    .firestore()
-    .collection("user_trips_history")
-    // .doc()
-    // .set(
-    .add(
-      { saveEvents }
-      // name: `${spotData}`,
-      // url: `${spotUrl}`,
-    )
-    .then((docRef) => {
-      console.log("Document written with ID: ", docRef.id);
-    })
-    .catch((error) => {
-      console.error("Error adding document: ", error);
-    });
+  return (
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      // .doc()
+      // .set(
+      .add(
+        { saveEvents }
+        // name: `${spotData}`,
+        // url: `${spotUrl}`,
+      )
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        return docRef.id;
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      })
+  );
 }
 
 function getEventsData(id) {
@@ -169,7 +172,7 @@ function getEventsData(id) {
         // console.log(eventsData);
         console.log(doc);
         console.log(doc.data());
-        const eventsData = [];
+        // const eventsData = [];
         // doc.data().forEach((evt) => {
         //   eventsData.push(evt.data());
         // });

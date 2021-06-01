@@ -99,20 +99,14 @@ function ConfirmSchedule() {
     window.print();
   }
 
-  let id = "Y0ynOuM8PMTKUtj77JdN";
-  // useEffect(() => {
-  //   let data = getEventsData(id);
-  //   console.log(data);
-
-  //   setEventsData(data);
-  // }, []);
+  let url = window.location.search;
+  let params = new URLSearchParams(url);
+  let tripId = params.get("number");
+  // let tripId = "Y0ynOuM8PMTKUtj77JdN";
 
   useEffect(() => {
     const renderEventsData = async () => {
-      // let rawData = await getAttractionData("Havana");
-      // let rawData = await getAttractionData(`${cityName}`);
-
-      let data = await getEventsData(id);
+      let data = await getEventsData(tripId);
       console.log(data);
 
       setEventsData(data);
@@ -153,7 +147,7 @@ function ConfirmSchedule() {
                 // initialView="timeline"
                 duration={{ days: 7 }}
                 visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
-                editable={true}
+                // editable={true}
                 selectable={true}
                 selectMirror={true}
                 dayMaxEvents={true}
