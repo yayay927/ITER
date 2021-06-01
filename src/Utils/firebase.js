@@ -137,7 +137,7 @@ function checkUserStatus() {
   });
 }
 
-function storeEventsData(saveEvents) {
+function storeEventsData(saveEvents, cityName, UID, tripName) {
   console.log("run store events");
   return (
     firebase
@@ -145,11 +145,7 @@ function storeEventsData(saveEvents) {
       .collection("user_trips_history")
       // .doc()
       // .set(
-      .add(
-        { saveEvents }
-        // name: `${spotData}`,
-        // url: `${spotUrl}`,
-      )
+      .add({ saveEvents, city: cityName, owner: UID, tripTitle: tripName })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
         return docRef.id;
@@ -161,24 +157,92 @@ function storeEventsData(saveEvents) {
 }
 
 function getEventsData(id) {
+  return firebase
+    .firestore()
+    .collection("user_trips_history")
+    .doc(id)
+    .get()
+    .then((doc) => {
+      console.log(doc);
+      console.log(doc.data());
+
+      return doc.data().saveEvents;
+      // return eventsData;
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
+}
+
+function getTripDataByUID(UID) {
   return (
     firebase
       .firestore()
       .collection("user_trips_history")
-      .doc(id)
+      .where("owner", "==", UID)
+      // .doc(id)
       .get()
-      .then((doc) => {
-        console.log(doc);
-        console.log(doc.data());
+      .then((data) => {
+        let tripData = [];
+        data.forEach((doc) => {
+          console.log(doc.id, " => ", doc.data());
+          tripData.push([doc.id, doc.data()]);
+        });
+        // console.log(doc);
+        // console.log(doc.data());
 
-        return doc.data().saveEvents;
-        // return eventsData;
+        return tripData;
       })
-      // .then((querySnapshot) => {
-      //   querySnapshot.forEach((doc) => {
-      //     console.log(doc.id, "=>", doc.data());
-      //   });
-      // })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      })
+  );
+}
+
+function getTripDataByCanEdit(UID) {
+  return (
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      .where("can_edit", "==", UID)
+      // .doc(id)
+      .get()
+      .then((data) => {
+        let tripData = [];
+        data.forEach((doc) => {
+          console.log(doc.id, " => ", doc.data());
+          tripData.push([doc.id, doc.data()]);
+        });
+        // console.log(doc);
+        // console.log(doc.data());
+
+        return tripData;
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      })
+  );
+}
+
+function getTripDataByCanView(UID) {
+  return (
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      .where("can_view", "==", UID)
+      // .doc(id)
+      .get()
+      .then((data) => {
+        let tripData = [];
+        data.forEach((doc) => {
+          console.log(doc.id, " => ", doc.data());
+          tripData.push([doc.id, doc.data()]);
+        });
+        // console.log(doc);
+        // console.log(doc.data());
+
+        return tripData;
+      })
       .catch((error) => {
         console.log("Error getting document:", error);
       })
@@ -194,6 +258,9 @@ export {
   checkUserStatus,
   storeEventsData,
   getEventsData,
+  getTripDataByUID,
+  getTripDataByCanEdit,
+  getTripDataByCanView,
 };
 
 // user.displayName: 顯示名稱

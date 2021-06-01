@@ -43,6 +43,11 @@ function Header() {
     console.log(inputValue);
   };
 
+  let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+  function managePage() {
+    document.location.href = `../manage?number=${UID}`;
+  }
+
   return (
     <div className="App">
       <TheHeader className="App-header">
@@ -56,7 +61,7 @@ function Header() {
           />
         </form>
         <div>
-          <a href="../manage">
+          <a onClick={managePage}>
             <Logo src={suitcaseNew} />
           </a>
           <a href="../verification">
