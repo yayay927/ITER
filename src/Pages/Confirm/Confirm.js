@@ -5,9 +5,12 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import adaptivePlugin from "@fullcalendar/adaptive";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 // import { ComponentToPrint } from "../../ComponentToPrint";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import { getEventsData } from "../../Utils/firebase.js";
 
 const Confirm = styled.div`
   margin: 100px 20px 40px 20px;
@@ -27,6 +30,12 @@ const Calendar = styled.div`
 const Additional = styled.div`
   margin-left: 100px;
   /* visibility: hidden; */
+`;
+const Save = styled.button`
+  margin-top: 65px;
+  height: 100px;
+  width: 300px;
+  cursor: pointer;
 `;
 const Export = styled.button`
   margin-top: 65px;
@@ -71,11 +80,12 @@ function ConfirmSchedule() {
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
+  const [eventsData, setEventsData] = useState([]);
 
   function renderEventContent(eventInfo) {
     console.log(eventInfo);
-    console.log(eventInfo.timeText);
-    console.log(eventInfo.event.title);
+    // console.log(eventInfo.timeText);
+    // console.log(eventInfo.event.title);
     return (
       <>
         <b>{eventInfo.timeText}</b>
@@ -89,13 +99,35 @@ function ConfirmSchedule() {
     window.print();
   }
 
+  let url = window.location.search;
+  let params = new URLSearchParams(url);
+  let tripId = params.get("number");
+  let cityName = params.get("city");
+  // let tripId = "Y0ynOuM8PMTKUtj77JdN";
+
+  useEffect(() => {
+    const renderEventsData = async () => {
+      let data = await getEventsData(tripId);
+      console.log(data);
+
+      setEventsData(data);
+    };
+    renderEventsData();
+  }, []);
+
+  // console.log(cityName);
+
+  function backToEdit() {
+    document.location.href = `../city/${cityName}?number=${tripId}`;
+  }
+
   return (
     <div>
       <Confirm>
         <Calendar>
-          <a href="../calendar">
-            <Previous>Go Back</Previous>
-          </a>
+          {/* <a href="../calendar"> */}
+          <Previous onClick={backToEdit}>Go Back</Previous>
+          {/* </a> */}
           <h1>
             Congrantulations on finishing your schedule! If you want to do any
             change, please click go back to edit your schedule.
@@ -122,7 +154,7 @@ function ConfirmSchedule() {
                 // initialView="timeline"
                 duration={{ days: 7 }}
                 visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
-                editable={true}
+                // editable={true}
                 selectable={true}
                 selectMirror={true}
                 dayMaxEvents={true}
@@ -132,29 +164,38 @@ function ConfirmSchedule() {
                 minTime="06:00:00"
                 height="1300px"
                 eventContent={renderEventContent}
-                events={[
-                  {
-                    title: "Cuba music festival",
-                    date: "2021-05-14",
-                    // start: moment().add(7, "days"),
-                    // end: moment().add(14, "days"),
-                    color: "pink",
-                    // textColor: "green",
-                    display: "background",
-                  },
-                  { title: "Italian restaurant gala", date: "2021-05-22" },
-                ]}
+                events={
+                  eventsData
+                  // {
+                  //   title: "Cuba music festival",
+                  //   date: "2021-05-14",
+                  //   // start: moment().add(7, "days"),
+                  //   // end: moment().add(14, "days"),
+                  //   color: "pink",
+                  //   // textColor: "green",
+                  //   display: "background",
+                  // },
+                  // { title: "Italian restaurant gala", date: "2021-05-22" },
+                  // {
+                  //   title: "Centro Storico di Venezia",
+                  //   start: "2021-06-21T00:00:00",
+                  //   end: "2021-06-22T00:00:00",
+                  // },
+                }
               />
             </div>
           </ComponentToPrint>
         </Calendar>
         <Additional media="print" type="text/css">
+          {/* <div>
+            <Save>Save to my trip</Save>
+          </div> */}
           <div>
             <Export onClick={handlePrint} /* onClick={exportPDF}*/>
               Export
             </Export>
           </div>
-
+          {/* <div>{JSON.stringify(eventsData)}</div> */}
           <div>
             <Share>Share</Share>
           </div>

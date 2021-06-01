@@ -11,6 +11,7 @@ const firebaseConfig = {
   measurementId: "G-CJP4GMTYTP",
 };
 firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 function getAttractionData(cityName) {
   return (
@@ -136,6 +137,54 @@ function checkUserStatus() {
   });
 }
 
+function storeEventsData(saveEvents) {
+  console.log("run store events");
+  return (
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      // .doc()
+      // .set(
+      .add(
+        { saveEvents }
+        // name: `${spotData}`,
+        // url: `${spotUrl}`,
+      )
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        return docRef.id;
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      })
+  );
+}
+
+function getEventsData(id) {
+  return (
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      .doc(id)
+      .get()
+      .then((doc) => {
+        console.log(doc);
+        console.log(doc.data());
+
+        return doc.data().saveEvents;
+        // return eventsData;
+      })
+      // .then((querySnapshot) => {
+      //   querySnapshot.forEach((doc) => {
+      //     console.log(doc.id, "=>", doc.data());
+      //   });
+      // })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      })
+  );
+}
+
 export {
   getAttractionData,
   fireAuthLogIn,
@@ -143,6 +192,8 @@ export {
   fireAuthLogOut,
   firebaseGoogle,
   checkUserStatus,
+  storeEventsData,
+  getEventsData,
 };
 
 // user.displayName: 顯示名稱

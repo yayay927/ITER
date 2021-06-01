@@ -41,7 +41,7 @@ function FirebaseAttractionData() {
     const renderAttractionData = async () => {
       // let rawData = await getAttractionData("Havana");
       let rawData = await getAttractionData(`${cityName}`);
-      // console.log(rawData);
+      console.log(rawData);
       let filterData = rawData.filter(
         (attraction) => attraction.url !== undefined && attraction.name !== ""
       );

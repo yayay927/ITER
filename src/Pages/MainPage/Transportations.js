@@ -5,6 +5,10 @@ const Transportations = styled.div`
   width: 100%;
   font-size: 45px;
   margin: 10px 0;
+  /* display: flex; */
+`;
+const AllTransportations = styled.div`
+  display: flex;
 `;
 const TransportationWay = styled.div`
   height: 120px;
@@ -12,6 +16,7 @@ const TransportationWay = styled.div`
   font-size: 20px;
   margin: 5px;
   background-color: #b6e13d;
+  cursor: grab;
 `;
 const TransportationIcon = styled.div``;
 const TransportationTime = styled.div``;
@@ -20,10 +25,23 @@ function Transportation() {
   return (
     <Transportations>
       Transportations
-      <TransportationWay>
-        <TransportationIcon>Train</TransportationIcon>
-        <TransportationTime>1 H</TransportationTime>
-      </TransportationWay>
+      <AllTransportations>
+        <TransportationWay className="trans">
+          <TransportationIcon>Driving</TransportationIcon>
+          <TransportationTime></TransportationTime>
+        </TransportationWay>
+        <TransportationWay className="trans">
+          <TransportationIcon>Walking</TransportationIcon>
+          <TransportationTime></TransportationTime>
+        </TransportationWay>
+        <TransportationWay className="trans">
+          <TransportationIcon>Cycling</TransportationIcon>
+          <TransportationTime></TransportationTime>
+        </TransportationWay>
+        {/* <li className="event">Driving</li>
+      <li className="event">Walking</li>
+      <li className="event">Cycling</li> */}
+      </AllTransportations>
     </Transportations>
   );
 }
