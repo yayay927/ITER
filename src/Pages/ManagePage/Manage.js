@@ -9,6 +9,8 @@ import {
   getTripDataByCanEdit,
   getTripDataByCanView,
   uploadImage,
+  storeProfileData,
+  getProfileData,
 } from "../../Utils/firebase.js";
 
 const Manage = styled.div`
@@ -136,6 +138,9 @@ const HistoryTrips = styled.div`
 `;
 
 function ManageSchedule() {
+  let url = window.location.search;
+  let params = new URLSearchParams(url);
+  let UID = params.get("number");
   let history = useHistory();
   const [trip, setTrip] = useState([]);
   const [tripEdit, setTripEdit] = useState([]);
@@ -144,7 +149,21 @@ function ManageSchedule() {
   const [tripUID, setTripUID] = useState([]);
   const [photoFile, setPhotoFile] = useState([]);
   const [photoUrl, setPhotoUrl] = useState([]);
-  let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+  const [profileData, setProfileData] = useState([]);
+  // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+  console.log(UID);
+
+  useEffect(() => {
+    const renderProfileData = async () => {
+      let resProfileData = await getProfileData(UID);
+
+      console.log(resProfileData);
+      setProfileData(resProfileData);
+    };
+    renderProfileData();
+  }, []);
+  console.log(profileData);
+
   useEffect(() => {
     const renderEventsData = async () => {
       let tripData = await getTripDataByUID(UID);
@@ -153,27 +172,27 @@ function ManageSchedule() {
     };
     renderEventsData();
   }, []);
-  console.log(trip);
+  // console.log(trip);
 
   useEffect(() => {
     const renderEventsData = async () => {
       let tripDataEdit = await getTripDataByCanEdit(UID);
-      console.log(tripDataEdit);
+      // console.log(tripDataEdit);
       setTripEdit(tripDataEdit);
     };
     renderEventsData();
   }, []);
-  console.log(tripEdit);
+  // console.log(tripEdit);
 
   useEffect(() => {
     const renderEventsData = async () => {
       let tripDataView = await getTripDataByCanView(UID);
-      console.log(tripDataView);
+      // console.log(tripDataView);
       setTripView(tripDataView);
     };
     renderEventsData();
   }, []);
-  console.log(tripView);
+  // console.log(tripView);
 
   function checkTrip(tripCity, tripUID) {
     history.push(`/confirm?city=${tripCity}&number=${tripUID}`);
@@ -186,11 +205,12 @@ function ManageSchedule() {
     alert("successfully upload!");
     console.log(url);
     setPhotoUrl(url);
+    storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
   }
 
-  useEffect(() => {
-    console.log(photoFile);
-  }, [photoFile]);
+  // useEffect(() => {
+  //   console.log(photoFile);
+  // }, [photoFile]);
 
   return (
     <div>
@@ -207,9 +227,9 @@ function ManageSchedule() {
             ></input>
           </form>
           <SavePhoto onClick={savePhoto}>Save photo</SavePhoto>
-          <Name>Name: Ellie Yang</Name>
-          <UserID>UID: GMRfBP2uJVcIeG3pGGfJHXLTG4e2</UserID>
-          <Email>Email: isabelleya927@gmail.com</Email>
+          <Name>{profileData.name}</Name>
+          <UserID>{profileData.uid}</UserID>
+          <Email>{profileData.email}</Email>
         </Profile>
         {/* <Map>
           <Marker></Marker>
@@ -224,18 +244,16 @@ function ManageSchedule() {
                 <More>
                   <Date>Date/ Share/ Link</Date>
                 </More>
-                <Owner>Owner</Owner>
+                {/* <Owner>Owner</Owner> */}
                 <CanEdit>Can Edit</CanEdit>
                 <CanView>Can View</CanView>
               </EachTrip>
               {trip.map((trip) => {
                 const city = trip[1].city;
-                const owner = trip[1].owner;
+                /* const owner = trip[1].owner; */
                 /* const tripName = trip[1].tripTitle; */
                 const tripName = "Wander";
                 const UID = trip[0];
-                /* setTripCity(city); */
-                /* setTripUID(UID); */
                 return (
                   <EachTrip>
                     <TripName onClick={() => checkTrip(city, UID)}>
@@ -245,9 +263,9 @@ function ManageSchedule() {
                     <More>
                       <Date>2021/05/17~2021/05/28</Date>
                     </More>
-                    <Owner>
+                    {/* <Owner>
                       <h5>{owner}</h5>
-                    </Owner>
+                    </Owner> */}
                     <CanEdit>Sara</CanEdit>
                     <CanView>George</CanView>
                   </EachTrip>

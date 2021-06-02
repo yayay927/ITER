@@ -140,7 +140,6 @@ function checkUserStatus() {
 }
 
 function storeEventsData(saveEvents, cityName, UID, tripName) {
-  console.log("run store events");
   return (
     firebase
       .firestore()
@@ -169,7 +168,6 @@ function getEventsData(id) {
       console.log(doc.data());
 
       return doc.data().saveEvents;
-      // return eventsData;
     })
     .catch((error) => {
       console.log("Error getting document:", error);
@@ -187,11 +185,9 @@ function getTripDataByUID(UID) {
       .then((data) => {
         let tripData = [];
         data.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
+          // console.log(doc.id, " => ", doc.data());
           tripData.push([doc.id, doc.data()]);
         });
-        // console.log(doc);
-        // console.log(doc.data());
 
         return tripData;
       })
@@ -212,11 +208,9 @@ function getTripDataByCanEdit(UID) {
       .then((data) => {
         let tripData = [];
         data.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
+          // console.log(doc.id, " => ", doc.data());
           tripData.push([doc.id, doc.data()]);
         });
-        // console.log(doc);
-        // console.log(doc.data());
 
         return tripData;
       })
@@ -237,11 +231,9 @@ function getTripDataByCanView(UID) {
       .then((data) => {
         let tripData = [];
         data.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
+          // console.log(doc.id, " => ", doc.data());
           tripData.push([doc.id, doc.data()]);
         });
-        // console.log(doc);
-        // console.log(doc.data());
 
         return tripData;
       })
@@ -256,40 +248,40 @@ function uploadImage(file) {
   return storageRef.put(file).then((snapshot) => {
     return snapshot.ref.getDownloadURL();
   });
+}
 
-  // // Create a reference with an initial file path and name
-  // var storage = firebase.storage();
-  // var pathReference = storage.ref("images/stars.jpg");
-  // // Create a reference to the file we want to download
-  // var starsRef = storageRef.child("images/stars.jpg");
+function storeProfileData(name, email, photoUrl /*, UID*/) {
+  console.log("store profile data");
+  console.log(photoUrl);
+  return (
+    firebase
+      .firestore()
+      .collection("account_data")
+      // .doc()
+      // .set(
+      .add({ name: name, email: email, picture_url: photoUrl }) /*, uid: UID*/
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        return docRef.id;
+      })
+  );
+}
 
-  // // Get the download URL
-  // starsRef
-  //   .getDownloadURL()
-  //   .then((url) => {
-  //     // Insert url into an <img> tag to "download"
-  //   })
-  //   .catch((error) => {
-  //     // A full list of error codes is available at
-  //     // https://firebase.google.com/docs/storage/web/handle-errors
-  //     switch (error.code) {
-  //       case "storage/object-not-found":
-  //         // File doesn't exist
-  //         break;
-  //       case "storage/unauthorized":
-  //         // User doesn't have permission to access the object
-  //         break;
-  //       case "storage/canceled":
-  //         // User canceled the upload
-  //         break;
+function getProfileData(UID) {
+  return firebase
+    .firestore()
+    .collection("account_data")
+    .doc(UID)
+    .get()
+    .then((doc) => {
+      console.log(doc);
+      console.log(doc.data());
 
-  //       // ...
-
-  //       case "storage/unknown":
-  //         // Unknown error occurred, inspect the server response
-  //         break;
-  //     }
-  //   });
+      return doc.data();
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
 }
 
 export {
@@ -305,6 +297,8 @@ export {
   getTripDataByCanEdit,
   getTripDataByCanView,
   uploadImage,
+  storeProfileData,
+  getProfileData,
 };
 
 // user.displayName: 顯示名稱

@@ -112,7 +112,7 @@ function ConfirmSchedule() {
   let tripId = params.get("number");
   let cityName = params.get("city");
   // let tripId = "Y0ynOuM8PMTKUtj77JdN";
-  console.log(window.location.href);
+  // console.log(window.location.href);
 
   useEffect(() => {
     const renderEventsData = async () => {
@@ -235,17 +235,17 @@ function ConfirmSchedule() {
             <div id="copy">{window.location.href}</div>
             <Copy onClick={copy}>Copy trip link</Copy>
           </div>
-          <div>
+          {/* <div>
             <Hotel>Book Hotels</Hotel>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <Restaurant>Find Restaurants</Restaurant>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <Ticket>Buy Tickets</Ticket>
-          </div>
+          </div> */}
 
           <div>
             <Weather>Local Weather</Weather>
