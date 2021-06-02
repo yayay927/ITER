@@ -17,6 +17,18 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
+// ES6 Modules or TypeScript
+import Swal from "sweetalert2";
+
+// CommonJS
+// const Swal = require("sweetalert2");
+
+// Swal.fire({
+//   title: "Error!",
+//   text: "Do you want to continue",
+//   icon: "error",
+//   confirmButtonText: "Cool",
+// });
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -255,40 +267,79 @@ function CityPage() {
                   //     date: new Date().toISOString().substr(0, 10),
                   //   },
                   // ]);
-
                   // alert("clicked the custom button!");
-                  let dateStr = prompt(
-                    "Enter a start date in YYYY-MM-DD format"
-                  );
+
+                  const answer1 = async function test() {
+                    const { value: evtDate } = await Swal.fire({
+                      title: "Enter your event date",
+                      input: "text",
+                      inputLabel: "in YYYY-MM-DD format",
+                      inputValue: "",
+                      showCancelButton: true,
+                      inputValidator: (value) => {
+                        if (!value) {
+                          return "You need to write something!";
+                        }
+                      },
+                    });
+
+                    if (evtDate) {
+                      Swal.fire(`Your event date is ${evtDate}`);
+                    }
+
+                    console.log(evtDate);
+                    let dateTest = new Date(evtDate)
+                      .toISOString()
+                      .substr(0, 19);
+                    return dateTest;
+                  };
+                  console.log(answer1);
+
+                  async function test2() {
+                    const { value: evtTitle } = await Swal.fire({
+                      title: "Enter your event title",
+                      input: "text",
+                      inputLabel: "in YYYY-MM-DD format",
+                      inputValue: "",
+                      showCancelButton: true,
+                      inputValidator: (value) => {
+                        if (!value) {
+                          return "You need to write something!";
+                        }
+                      },
+                    });
+
+                    if (evtTitle) {
+                      Swal.fire(`Your event title is ${evtTitle}`);
+                    }
+
+                    console.log(evtTitle);
+                    return evtTitle;
+                  }
+                  test2();
+
+                  // let dateStr = prompt(
+                  //   "Enter a start date in YYYY-MM-DD format"
+                  // );
                   let title = prompt("Enter a title for your event");
-                  let date = new Date(dateStr + "T00:00:00");
-                  let dateT = new Date(dateStr).toISOString();
-                  let dateTest = new Date(dateStr).toISOString().substr(0, 19);
-                  console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
-                  console.log(date); //Sun May 30 2021 00:00:00 GMT+0800 (台北標準時間)
-                  console.log(dateT); //2021-05-30T00:00:00.000Z
-                  console.log(dateTest); //2021-05-30 //substr(0,10)
-                  // let startTime;
-                  // let endTime;
-                  // const [startTime, setStartTime] = useState();
+                  // let date = new Date(dateStr + "T00:00:00"); //Sun May 30 2021 00:00:00 GMT+0800 (台北標準時間)
+                  // let dateT = new Date(dateStr).toISOString(); //2021-05-30T00:00:00.000Z
+                  // let dateTest = new Date(answer1).toISOString().substr(0, 19); //2021-05-30T00:00:00
+                  // console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
 
-                  // console.log(startTime);
-                  // console.log(endTime);
-
-                  console.log(FullCalendar);
-                  if (!isNaN(date.valueOf())) {
+                  if (!isNaN(answer1.valueOf())) {
                     calendarRef.current.getApi().addEvent({
                       title: title,
                       // start: date,
                       // date: new Date().toISOString().substr(0, 10),
-                      date: dateTest,
+                      date: answer1,
                       allDay: true,
                       color: "pink",
                       // start: date + startTime,
                       // end: date + endTime,
                     });
 
-                    console.log(events);
+                    // console.log(events);
 
                     alert("Great. Now, update your database...");
                   } else {

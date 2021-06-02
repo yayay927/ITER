@@ -12,6 +12,14 @@ import {
   storeProfileData,
   getProfileData,
 } from "../../Utils/firebase.js";
+import Swal from "sweetalert2";
+
+// Swal.fire({
+//   title: "Error!",
+//   text: "Do you want to continue",
+//   icon: "error",
+//   confirmButtonText: "Cool",
+// });
 
 const Manage = styled.div`
   margin-top: 100px;
