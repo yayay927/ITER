@@ -318,21 +318,21 @@ function CityPage() {
                   }
                   test2();
 
-                  // let dateStr = prompt(
-                  //   "Enter a start date in YYYY-MM-DD format"
-                  // );
+                  let dateStr = prompt(
+                    "Enter a start date in YYYY-MM-DD format"
+                  );
                   let title = prompt("Enter a title for your event");
                   // let date = new Date(dateStr + "T00:00:00"); //Sun May 30 2021 00:00:00 GMT+0800 (台北標準時間)
                   // let dateT = new Date(dateStr).toISOString(); //2021-05-30T00:00:00.000Z
-                  // let dateTest = new Date(answer1).toISOString().substr(0, 19); //2021-05-30T00:00:00
+                  let dateTest = new Date(dateStr).toISOString().substr(0, 19); //2021-05-30T00:00:00
                   // console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
 
-                  if (!isNaN(answer1.valueOf())) {
+                  if (!isNaN(dateTest.valueOf())) {
                     calendarRef.current.getApi().addEvent({
                       title: title,
                       // start: date,
                       // date: new Date().toISOString().substr(0, 10),
-                      date: answer1,
+                      date: dateTest,
                       allDay: true,
                       color: "pink",
                       // start: date + startTime,

@@ -12,10 +12,13 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import { getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Confirm = styled.div`
-  margin: 100px 20px 40px 20px;
+  margin: 160px 20px 40px 20px;
   display: flex;
+  width: 80%;
+  margin: 160px auto 40px auto;
 `;
 const Previous = styled.button`
   cursor: pointer;
@@ -33,31 +36,37 @@ const Additional = styled.div`
   /* visibility: hidden; */
 `;
 const Save = styled.button`
-  margin-top: 65px;
-  height: 100px;
+  /* margin-top: 60px; */
+  height: 80px;
   width: 300px;
   cursor: pointer;
 `;
 const Export = styled.button`
-  margin-top: 65px;
-  height: 100px;
+  margin-top: 60px;
+  height: 80px;
+  width: 300px;
+  cursor: pointer;
+`;
+const GoBack = styled.button`
+  margin-top: 60px;
+  height: 80px;
   width: 300px;
   cursor: pointer;
 `;
 const Share = styled.button`
-  margin-top: 65px;
-  height: 100px;
+  margin-top: 60px;
+  height: 80px;
   width: 300px;
   cursor: pointer;
 `;
 const Copy = styled.button`
-  margin-top: 65px;
-  height: 100px;
+  margin-top: 60px;
+  height: 80px;
   width: 300px;
   cursor: pointer;
 `;
 const Hotel = styled.button`
-  margin-top: 65px;
+  margin-top: 60px;
   height: 100px;
   width: 300px;
   cursor: pointer;
@@ -75,8 +84,8 @@ const Ticket = styled.button`
   cursor: pointer;
 `;
 const Weather = styled.button`
-  margin-top: 65px;
-  height: 100px;
+  margin-top: 60px;
+  height: 80px;
   width: 300px;
   cursor: pointer;
 `;
@@ -89,6 +98,11 @@ function ConfirmSchedule() {
     content: () => componentRef.current,
   });
   const [eventsData, setEventsData] = useState([]);
+
+  Swal.fire(
+    "Congratulations on completing your schedule! Please click the go back button to re-edit the trip."
+  );
+  console.log("1");
 
   function renderEventContent(eventInfo) {
     console.log(eventInfo);
@@ -158,12 +172,12 @@ function ConfirmSchedule() {
       <Confirm>
         <Calendar>
           {/* <a href="../calendar"> */}
-          <Previous onClick={backToEdit}>Go Back</Previous>
+          {/* <Previous>Go Back</Previous> */}
           {/* </a> */}
-          <h1>
+          {/* <h1>
             Congrantulations on finishing your schedule! If you want to do any
             change, please click go back to edit your schedule.
-          </h1>
+          </h1> */}
           <ComponentToPrint
             width="800px"
             pageStyle={pageStyle}
@@ -194,7 +208,7 @@ function ConfirmSchedule() {
                 droppable={true}
                 weekends={true}
                 minTime="06:00:00"
-                height="1300px"
+                // height="1300px"
                 eventContent={renderEventContent}
                 events={
                   eventsData
@@ -227,12 +241,15 @@ function ConfirmSchedule() {
               Export to PDF/ Print
             </Export>
           </div>
+          <div>
+            <GoBack onClick={backToEdit}>Go back to edit trip</GoBack>
+          </div>
           {/* <div>{JSON.stringify(eventsData)}</div> */}
           <div>
             <Share onClick={share}>Share</Share>
           </div>
           <div>
-            <div id="copy">{window.location.href}</div>
+            {/* <div id="copy">{window.location.href}</div> */}
             <Copy onClick={copy}>Copy trip link</Copy>
           </div>
           {/* <div>

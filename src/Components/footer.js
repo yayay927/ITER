@@ -3,42 +3,35 @@ import github from "../Components/github.png";
 
 const TheFooter = styled.div`
   background-color: #91ccb9;
-  height: 80px;
+  height: 40px;
   /* margin-top: -10px; */
-  position: relative;
+  /* position: relative; */
+  /* display: felx; */
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;
-// const Link = styled.div`
-//   position: absolute;
-//   left: 0px;
-// `;
+const CopyRight = styled.div`
+  color: white;
+  /* margin: auto; */
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
+`;
 const Icon = styled.img`
   height: 50px;
   margin: 10px;
-  margin-left: 90vw;
+  /* margin-left: 90vw; */
 `;
 
 function Footer() {
   return (
     <TheFooter className="App">
-      {/* <header className="App-header"> */}
-      {/* <div>This is footer part.</div> */}
-      {/* <p>
-          Edit footer<code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      {/* </header> */}
-      {/* <Link> */}
-      <a href="https://github.com/yayay927/ITER">
+      <CopyRight>Copyright © 2021 TingYaYang All rights reserved.</CopyRight>
+      {/* <a href="https://github.com/yayay927/ITER">
         <Icon src={github} />
-      </a>
-      {/* </Link> */}
+      </a> */}
     </TheFooter>
   );
 }
