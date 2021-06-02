@@ -21,6 +21,7 @@ const TheHeader = styled.div`
 const Logo = styled.img`
   height: 50px;
   margin: 10px;
+  cursor: pointer;
 `;
 
 const Input = styled.input`
@@ -43,6 +44,12 @@ function Header() {
     console.log(inputValue);
   };
 
+  let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+  function managePage() {
+    history.push(`/manage?number=${UID}`);
+    // document.location.href = `../manage?number=${UID}`;
+  }
+
   return (
     <div className="App">
       <TheHeader className="App-header">
@@ -56,7 +63,7 @@ function Header() {
           />
         </form>
         <div>
-          <a href="../manage">
+          <a onClick={managePage}>
             <Logo src={suitcaseNew} />
           </a>
           <a href="../verification">

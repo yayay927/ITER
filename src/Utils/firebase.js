@@ -1,6 +1,8 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import "firebase/storage";
+
 const firebaseConfig = {
   apiKey: "AIzaSyD7gCInahUDjz1COa5HHkzRZUngyxHwXjY",
   authDomain: "iter-e3ef2.firebaseapp.com",
@@ -137,19 +139,14 @@ function checkUserStatus() {
   });
 }
 
-function storeEventsData(saveEvents) {
-  console.log("run store events");
+function storeEventsData(saveEvents, cityName, UID, tripName) {
   return (
     firebase
       .firestore()
       .collection("user_trips_history")
       // .doc()
       // .set(
-      .add(
-        { saveEvents }
-        // name: `${spotData}`,
-        // url: `${spotUrl}`,
-      )
+      .add({ saveEvents, city: cityName, owner: UID, tripTitle: tripName })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
         return docRef.id;
@@ -161,28 +158,130 @@ function storeEventsData(saveEvents) {
 }
 
 function getEventsData(id) {
+  return firebase
+    .firestore()
+    .collection("user_trips_history")
+    .doc(id)
+    .get()
+    .then((doc) => {
+      console.log(doc);
+      console.log(doc.data());
+
+      return doc.data().saveEvents;
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
+}
+
+function getTripDataByUID(UID) {
   return (
     firebase
       .firestore()
       .collection("user_trips_history")
-      .doc(id)
+      .where("owner", "==", UID)
+      // .doc(id)
       .get()
-      .then((doc) => {
-        console.log(doc);
-        console.log(doc.data());
+      .then((data) => {
+        let tripData = [];
+        data.forEach((doc) => {
+          // console.log(doc.id, " => ", doc.data());
+          tripData.push([doc.id, doc.data()]);
+        });
 
-        return doc.data().saveEvents;
-        // return eventsData;
+        return tripData;
       })
-      // .then((querySnapshot) => {
-      //   querySnapshot.forEach((doc) => {
-      //     console.log(doc.id, "=>", doc.data());
-      //   });
-      // })
       .catch((error) => {
         console.log("Error getting document:", error);
       })
   );
+}
+
+function getTripDataByCanEdit(UID) {
+  return (
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      .where("can_edit", "==", UID)
+      // .doc(id)
+      .get()
+      .then((data) => {
+        let tripData = [];
+        data.forEach((doc) => {
+          // console.log(doc.id, " => ", doc.data());
+          tripData.push([doc.id, doc.data()]);
+        });
+
+        return tripData;
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      })
+  );
+}
+
+function getTripDataByCanView(UID) {
+  return (
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      .where("can_view", "==", UID)
+      // .doc(id)
+      .get()
+      .then((data) => {
+        let tripData = [];
+        data.forEach((doc) => {
+          // console.log(doc.id, " => ", doc.data());
+          tripData.push([doc.id, doc.data()]);
+        });
+
+        return tripData;
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      })
+  );
+}
+
+function uploadImage(file) {
+  let storageRef = firebase.storage().ref(file.name);
+  return storageRef.put(file).then((snapshot) => {
+    return snapshot.ref.getDownloadURL();
+  });
+}
+
+function storeProfileData(name, email, photoUrl /*, UID*/) {
+  console.log("store profile data");
+  console.log(photoUrl);
+  return (
+    firebase
+      .firestore()
+      .collection("account_data")
+      // .doc()
+      // .set(
+      .add({ name: name, email: email, picture_url: photoUrl }) /*, uid: UID*/
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        return docRef.id;
+      })
+  );
+}
+
+function getProfileData(UID) {
+  return firebase
+    .firestore()
+    .collection("account_data")
+    .doc(UID)
+    .get()
+    .then((doc) => {
+      console.log(doc);
+      console.log(doc.data());
+
+      return doc.data();
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+    });
 }
 
 export {
@@ -194,6 +293,12 @@ export {
   checkUserStatus,
   storeEventsData,
   getEventsData,
+  getTripDataByUID,
+  getTripDataByCanEdit,
+  getTripDataByCanView,
+  uploadImage,
+  storeProfileData,
+  getProfileData,
 };
 
 // user.displayName: 顯示名稱

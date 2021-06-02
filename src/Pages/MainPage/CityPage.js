@@ -16,6 +16,7 @@ import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
+import { useHistory } from "react-router-dom";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -102,12 +103,12 @@ const ConfirmButton = styled.button`
 `;
 
 function CityPage() {
+  let history = useHistory();
   let { cityName } = useParams();
   let url = window.location.search;
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
   console.log(tripId);
-  // let renderEvent;
   const [renderEvent, setRenderEvent] = useState();
 
   // console.log(cityName);
@@ -118,8 +119,8 @@ function CityPage() {
     cityName = "Cape Town";
   }
 
-  const test = () => {};
-  test();
+  // const test = () => {};
+  // test();
 
   const INITIAL_EVENTS = [
     // {
@@ -172,15 +173,27 @@ function CityPage() {
       let eStart = item._instance.range.start.toISOString().substr(0, 19);
       // console.log(item._instance.range.end.toISOString().substr(0, 19));
       let eEnd = item._instance.range.end.toISOString().substr(0, 19);
-      saveEvents.push({ title: eTitle, start: eStart, end: eEnd });
-      setEvents({ title: eTitle, start: eStart, end: eEnd });
+      let eColor = item._def.ui.backgroundColor;
+      console.log(eColor);
+      saveEvents.push({
+        title: eTitle,
+        start: eStart,
+        end: eEnd,
+        color: eColor,
+      });
+      setEvents({ title: eTitle, start: eStart, end: eEnd, color: eColor });
     });
+    // setEvents([..., city:] );
     console.log(saveEvents);
 
+    // let cityData = [city: cityName]
+    let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+    let tripName = "";
     async function idData() {
-      let idNumber = await storeEventsData(saveEvents);
+      let idNumber = await storeEventsData(saveEvents, cityName, UID, tripName);
       console.log(idNumber);
-      document.location.href = `../confirm?city=${cityName}&number=${idNumber}`;
+      history.push(`/confirm?city=${cityName}&number=${idNumber}`);
+      // document.location.href = `../confirm?city=${cityName}&number=${idNumber}`;
     }
     idData();
   }
@@ -270,6 +283,7 @@ function CityPage() {
                       // date: new Date().toISOString().substr(0, 10),
                       date: dateTest,
                       allDay: true,
+                      color: "pink",
                       // start: date + startTime,
                       // end: date + endTime,
                     });

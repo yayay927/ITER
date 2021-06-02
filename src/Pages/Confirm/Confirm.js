@@ -11,6 +11,7 @@ import { useReactToPrint } from "react-to-print";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { getEventsData } from "../../Utils/firebase.js";
+import { useHistory } from "react-router-dom";
 
 const Confirm = styled.div`
   margin: 100px 20px 40px 20px;
@@ -49,6 +50,12 @@ const Share = styled.button`
   width: 300px;
   cursor: pointer;
 `;
+const Copy = styled.button`
+  margin-top: 65px;
+  height: 100px;
+  width: 300px;
+  cursor: pointer;
+`;
 const Hotel = styled.button`
   margin-top: 65px;
   height: 100px;
@@ -76,6 +83,7 @@ const Weather = styled.button`
 const pageStyle = `{ size: 2.5in 4in}`;
 
 function ConfirmSchedule() {
+  let history = useHistory();
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -104,6 +112,7 @@ function ConfirmSchedule() {
   let tripId = params.get("number");
   let cityName = params.get("city");
   // let tripId = "Y0ynOuM8PMTKUtj77JdN";
+  // console.log(window.location.href);
 
   useEffect(() => {
     const renderEventsData = async () => {
@@ -118,7 +127,30 @@ function ConfirmSchedule() {
   // console.log(cityName);
 
   function backToEdit() {
-    document.location.href = `../city/${cityName}?number=${tripId}`;
+    history.push(`/city/${cityName}?number=${tripId}`);
+    // document.location.href = `../city/${cityName}?number=${tripId}`;
+  }
+
+  function save() {
+    alert("Please log in first in order to save your trip.");
+    alert(
+      "The trip has been saved to your database! You can check and edit the trip anytime in the manage page."
+    );
+  }
+
+  function share() {
+    let edit_UID = prompt("Enter the email you want to share with.");
+    alert(
+      "or share the link with friends to view:       " + window.location.href
+    );
+  }
+
+  function copy() {
+    // var copyText = document.getElementById("copy");
+    // copyText.select();
+    // document.execCommand("copy");
+
+    alert("Copied the text: " + window.location.href);
   }
 
   return (
@@ -187,30 +219,33 @@ function ConfirmSchedule() {
           </ComponentToPrint>
         </Calendar>
         <Additional media="print" type="text/css">
-          {/* <div>
-            <Save>Save to my trip</Save>
-          </div> */}
+          <div>
+            <Save onClick={save}>Save to my trip</Save>
+          </div>
           <div>
             <Export onClick={handlePrint} /* onClick={exportPDF}*/>
-              Export
+              Export to PDF/ Print
             </Export>
           </div>
           {/* <div>{JSON.stringify(eventsData)}</div> */}
           <div>
-            <Share>Share</Share>
+            <Share onClick={share}>Share</Share>
           </div>
-
           <div>
+            <div id="copy">{window.location.href}</div>
+            <Copy onClick={copy}>Copy trip link</Copy>
+          </div>
+          {/* <div>
             <Hotel>Book Hotels</Hotel>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <Restaurant>Find Restaurants</Restaurant>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <Ticket>Buy Tickets</Ticket>
-          </div>
+          </div> */}
 
           <div>
             <Weather>Local Weather</Weather>
