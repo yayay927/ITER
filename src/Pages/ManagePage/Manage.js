@@ -1,12 +1,14 @@
 //Manage trips page
 import styled from "styled-components";
 import React, { useEffect, useRef, useState } from "react";
+import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import {
   getTripDataByUID,
   getTripDataByCanEdit,
   getTripDataByCanView,
+  uploadImage,
 } from "../../Utils/firebase.js";
 
 const Manage = styled.div`
@@ -32,6 +34,7 @@ const Photo = styled.img`
   height: 100px;
   display: block;
 `;
+const SavePhoto = styled.button``;
 const Name = styled.div`
   margin: 0px auto;
   font-size: 30px;
@@ -133,11 +136,14 @@ const HistoryTrips = styled.div`
 `;
 
 function ManageSchedule() {
+  let history = useHistory();
   const [trip, setTrip] = useState([]);
   const [tripEdit, setTripEdit] = useState([]);
   const [tripView, setTripView] = useState([]);
   const [tripCity, setTripCity] = useState([]);
   const [tripUID, setTripUID] = useState([]);
+  const [photoFile, setPhotoFile] = useState([]);
+  const [photoUrl, setPhotoUrl] = useState([]);
   let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
   useEffect(() => {
     const renderEventsData = async () => {
@@ -169,16 +175,38 @@ function ManageSchedule() {
   }, []);
   console.log(tripView);
 
-  function checkTrip() {
-    document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
+  function checkTrip(tripCity, tripUID) {
+    history.push(`/confirm?city=${tripCity}&number=${tripUID}`);
+    // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
+
+  // let file = "../../Components";
+  async function savePhoto() {
+    const url = await uploadImage(photoFile);
+    alert("successfully upload!");
+    console.log(url);
+    setPhotoUrl(url);
+  }
+
+  useEffect(() => {
+    console.log(photoFile);
+  }, [photoFile]);
 
   return (
     <div>
       <Manage>
         <Message>You can manage your current and history trips here!</Message>
         <Profile>
-          <Photo />
+          <Photo src={photoUrl} />
+          <form action="/somewhere/to/upload" enctype="multipart/form-data">
+            <input
+              // name="progressbarTW_img"
+              type="file"
+              accept="image/gif, image/jpeg, image/png"
+              onChange={(e) => setPhotoFile(e.target.files[0])}
+            ></input>
+          </form>
+          <SavePhoto onClick={savePhoto}>Save photo</SavePhoto>
           <Name>Name: Ellie Yang</Name>
           <UserID>UID: GMRfBP2uJVcIeG3pGGfJHXLTG4e2</UserID>
           <Email>Email: isabelleya927@gmail.com</Email>
@@ -210,7 +238,9 @@ function ManageSchedule() {
                 /* setTripUID(UID); */
                 return (
                   <EachTrip>
-                    <TripName onClick={checkTrip}>{tripName}</TripName>
+                    <TripName onClick={() => checkTrip(city, UID)}>
+                      {tripName}
+                    </TripName>
                     <Location>{city}</Location>
                     <More>
                       <Date>2021/05/17~2021/05/28</Date>

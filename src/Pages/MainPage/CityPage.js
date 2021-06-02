@@ -16,6 +16,7 @@ import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
+import { useHistory } from "react-router-dom";
 
 const CalendarPage = styled.div`
   margin: 20px 50px;
@@ -102,6 +103,7 @@ const ConfirmButton = styled.button`
 `;
 
 function CityPage() {
+  let history = useHistory();
   let { cityName } = useParams();
   let url = window.location.search;
   let params = new URLSearchParams(url);
@@ -190,7 +192,8 @@ function CityPage() {
     async function idData() {
       let idNumber = await storeEventsData(saveEvents, cityName, UID, tripName);
       console.log(idNumber);
-      document.location.href = `../confirm?city=${cityName}&number=${idNumber}`;
+      history.push(`/confirm?city=${cityName}&number=${idNumber}`);
+      // document.location.href = `../confirm?city=${cityName}&number=${idNumber}`;
     }
     idData();
   }

@@ -11,6 +11,7 @@ import { useReactToPrint } from "react-to-print";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { getEventsData } from "../../Utils/firebase.js";
+import { useHistory } from "react-router-dom";
 
 const Confirm = styled.div`
   margin: 100px 20px 40px 20px;
@@ -82,6 +83,7 @@ const Weather = styled.button`
 const pageStyle = `{ size: 2.5in 4in}`;
 
 function ConfirmSchedule() {
+  let history = useHistory();
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -125,7 +127,8 @@ function ConfirmSchedule() {
   // console.log(cityName);
 
   function backToEdit() {
-    document.location.href = `../city/${cityName}?number=${tripId}`;
+    history.push(`/city/${cityName}?number=${tripId}`);
+    // document.location.href = `../city/${cityName}?number=${tripId}`;
   }
 
   function save() {

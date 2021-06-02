@@ -21,6 +21,7 @@ const TheHeader = styled.div`
 const Logo = styled.img`
   height: 50px;
   margin: 10px;
+  cursor: pointer;
 `;
 
 const Input = styled.input`
@@ -45,7 +46,8 @@ function Header() {
 
   let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
   function managePage() {
-    document.location.href = `../manage?number=${UID}`;
+    history.push(`/manage?number=${UID}`);
+    // document.location.href = `../manage?number=${UID}`;
   }
 
   return (
