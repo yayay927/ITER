@@ -162,6 +162,10 @@ function ManageSchedule() {
   console.log(UID);
 
   useEffect(() => {
+    Swal.fire("You can manage current and history trips here.");
+  }, []);
+
+  useEffect(() => {
     const renderProfileData = async () => {
       let resProfileData = await getProfileData(UID);
 
@@ -223,7 +227,6 @@ function ManageSchedule() {
   return (
     <div>
       <Manage>
-        <Message>You can manage your current and history trips here!</Message>
         <Profile>
           <Photo src={photoUrl} />
           <form action="/somewhere/to/upload" enctype="multipart/form-data">
@@ -292,7 +295,7 @@ function ManageSchedule() {
             </Details>
           </Current>
           <Past>
-            <HistoryTrips>Share with me</HistoryTrips>
+            <HistoryTrips>Shared Trips</HistoryTrips>
             <Details>
               <EachTrip>
                 <TripName>Trip Name</TripName>

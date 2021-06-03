@@ -99,9 +99,10 @@ function ConfirmSchedule() {
   });
   const [eventsData, setEventsData] = useState([]);
 
-  Swal.fire(
-    "Congratulations on completing your schedule! Please click the go back button to re-edit the trip."
-  );
+  useEffect(() => {
+    Swal.fire("Congratulations on completing your schedule!");
+  }, []);
+
   console.log("1");
 
   function renderEventContent(eventInfo) {

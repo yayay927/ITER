@@ -11,6 +11,7 @@ const TheFooter = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 3;
 `;
 const CopyRight = styled.div`
   color: white;

@@ -120,7 +120,7 @@ function CityPage() {
   let url = window.location.search;
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
-  console.log(tripId);
+  // console.log(tripId);
   const [renderEvent, setRenderEvent] = useState();
 
   // console.log(cityName);
@@ -130,9 +130,6 @@ function CityPage() {
   } else if (cityName === "CapeTown") {
     cityName = "Cape Town";
   }
-
-  // const test = () => {};
-  // test();
 
   const INITIAL_EVENTS = [
     // {
@@ -147,6 +144,10 @@ function CityPage() {
   const eventTitle = useSelector((state) => state.eventTitle);
   const startTime = useSelector((state) => state.startTime);
   const endTime = useSelector((state) => state.endTime);
+
+  useEffect(() => {
+    Swal.fire("Feel free to explore the city!");
+  }, []);
 
   useEffect(() => {
     const containerEl = document.querySelector("#events");
@@ -179,11 +180,8 @@ function CityPage() {
     console.log(e);
     let saveEvents = [];
     e.forEach(function (item) {
-      // console.log(item._def.title);
       let eTitle = item._def.title;
-      // console.log(item._instance.range.start.toISOString().substr(0, 19));
       let eStart = item._instance.range.start.toISOString().substr(0, 19);
-      // console.log(item._instance.range.end.toISOString().substr(0, 19));
       let eEnd = item._instance.range.end.toISOString().substr(0, 19);
       let eColor = item._def.ui.backgroundColor;
       console.log(eColor);
@@ -195,8 +193,7 @@ function CityPage() {
       });
       setEvents({ title: eTitle, start: eStart, end: eEnd, color: eColor });
     });
-    // setEvents([..., city:] );
-    console.log(saveEvents);
+    // console.log(saveEvents);
 
     // let cityData = [city: cityName]
     let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
@@ -205,13 +202,12 @@ function CityPage() {
       let idNumber = await storeEventsData(saveEvents, cityName, UID, tripName);
       console.log(idNumber);
       history.push(`/confirm?city=${cityName}&number=${idNumber}`);
-      // document.location.href = `../confirm?city=${cityName}&number=${idNumber}`;
     }
     idData();
   }
 
   useEffect(() => {
-    console.log(tripId);
+    // console.log(tripId);
     if (tripId) {
       const renderEventsData = async () => {
         let data = await getEventsData(tripId);
@@ -233,20 +229,13 @@ function CityPage() {
             <ScheduleMap />
           </Map>
           <div id="events">
-            {/* <li className="event">event 1</li> */}
             <TouristAttractions className="event"></TouristAttractions>
           </div>
           <div id="trans">
-            {/* <li className="trans">Driving</li>
-            <li className="trans">Walking</li>
-            <li className="trans">Cycling</li> */}
-            <Transportations className="trans">
-              {/* <TouristAttractions className="event"></TouristAttractions> */}
-            </Transportations>
+            <Transportations className="trans"></Transportations>
           </div>
         </MapAndAttractions>
         <CalendarSpace>
-          {/* <MainFullCalendar></MainFullCalendar> */}
           <FullCalendar
             id="FullCalendar"
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -259,7 +248,7 @@ function CityPage() {
             customButtons={{
               myCustomButton: {
                 text: "create event",
-                click: function () {
+                click: async function () {
                   // setEvents([
                   //   ...events,
                   //   {
@@ -284,22 +273,17 @@ function CityPage() {
                     });
 
                     if (evtDate) {
-                      Swal.fire(`Your event date is ${evtDate}`);
+                      await Swal.fire(`Your event date is ${evtDate}`);
                     }
-
-                    console.log(evtDate);
-                    let dateTest = new Date(evtDate)
-                      .toISOString()
-                      .substr(0, 19);
-                    return dateTest;
+                    return evtDate;
                   };
-                  console.log(answer1);
+                  const a = await answer1();
 
                   async function test2() {
                     const { value: evtTitle } = await Swal.fire({
                       title: "Enter your event title",
                       input: "text",
-                      inputLabel: "in YYYY-MM-DD format",
+                      inputLabel: "",
                       inputValue: "",
                       showCancelButton: true,
                       inputValidator: (value) => {
@@ -310,48 +294,52 @@ function CityPage() {
                     });
 
                     if (evtTitle) {
-                      Swal.fire(`Your event title is ${evtTitle}`);
+                      await Swal.fire(`Your event title is ${evtTitle}`);
                     }
-
-                    console.log(evtTitle);
                     return evtTitle;
                   }
-                  test2();
+                  const b = await test2();
 
-                  let dateStr = prompt(
-                    "Enter a start date in YYYY-MM-DD format"
-                  );
-                  let title = prompt("Enter a title for your event");
+                  // let dateStr = prompt(
+                  //   "Enter a start date in YYYY-MM-DD format"
+                  // );
+                  // console.log("dateStr = " + dateStr);
+                  // let title = prompt("Enter a title for your event");
+
                   // let date = new Date(dateStr + "T00:00:00"); //Sun May 30 2021 00:00:00 GMT+0800 (台北標準時間)
-                  // let dateT = new Date(dateStr).toISOString(); //2021-05-30T00:00:00.000Z
-                  let dateTest = new Date(dateStr).toISOString().substr(0, 19); //2021-05-30T00:00:00
-                  // console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
+                  // // let dateT = new Date(dateStr).toISOString(); //2021-05-30T00:00:00.000Z
+                  // let dateTest = new Date(dateStr).toISOString().substr(0, 19); //2021-05-30T00:00:00
+                  // console.log("dateTest = " + dateTest);
+                  // // console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
 
-                  if (!isNaN(dateTest.valueOf())) {
+                  // console.log(a.valueOf());
+                  // console.log(b.valueOf());
+                  // console.log(typeof a);
+                  // console.log(typeof b);
+                  let c = new Date(a + "T00:00:00");
+                  // console.log(c.valueOf());
+                  // console.log(typeof c);
+
+                  if (!isNaN(c.valueOf())) {
                     calendarRef.current.getApi().addEvent({
-                      title: title,
-                      // start: date,
-                      // date: new Date().toISOString().substr(0, 10),
-                      date: dateTest,
+                      title: b,
+                      date: a,
                       allDay: true,
                       color: "pink",
-                      // start: date + startTime,
-                      // end: date + endTime,
                     });
 
-                    // console.log(events);
-
-                    alert("Great. Now, update your database...");
+                    // alert("Great. Now, update your database...");
+                    Swal.fire("Great. Now, update your database...");
                   } else {
                     alert("Invalid date.");
                   }
                 },
               },
             }}
-            initialView="dayGridMonth"
+            initialView="timeGridWeek"
             initialEvents={INITIAL_EVENTS}
             editable={true}
-            selectable={true}
+            selectable={false}
             selectMirror={true}
             dayMaxEvents={true}
             draggable={true}
@@ -377,9 +365,7 @@ function CityPage() {
               // ]
             }
           />
-          {/* <a> */}
           <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
-          {/* </a> */}
         </CalendarSpace>
       </MainPart>
     </CalendarPage>
