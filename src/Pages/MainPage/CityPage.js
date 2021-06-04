@@ -5,15 +5,15 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import ScheduleMap from "./ScheduleMap.js";
-import { Calendar } from "@fullcalendar/core";
+// import { Calendar } from "@fullcalendar/core";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
-import { mockComponent } from "react-dom/test-utils";
+// import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
 import TouristAttractions from "./TouristAttractions.js";
 import Transportations from "./Transportations.js";
 // import { MainFullCalendar } from "./MainFullCalendar.js";
-import { useSelector, useDispatch } from "react-redux";
-import firebase from "firebase/app";
+// import { useSelector, useDispatch } from "react-redux";
+// import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
@@ -31,12 +31,12 @@ import Swal from "sweetalert2";
 // });
 
 const CalendarPage = styled.div`
-  margin: 20px 50px;
+  margin: 0px 50px 70px 50px;
   width: 100vw;
   /* display: flex; */
-  margin-top: 100px;
+  margin-top: 80px;
   @media (max-width: 768px) {
-    margin: 80px 0px;
+    margin: 70px 0px;
   }
 `;
 const MainPart = styled.div`
@@ -50,7 +50,7 @@ const MapAndAttractions = styled.div`
   margin-right: 20px;
   width: 45%;
   /* height: 100%; */
-  height: 87vh;
+  height: 80vh;
   overflow: scroll;
   @media (max-width: 768px) {
     width: 100%;
@@ -60,14 +60,14 @@ const MapAndAttractions = styled.div`
 const CityName = styled.div`
   width: 100%;
   font-size: 55px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   @media (max-width: 768px) {
     margin-bottom: 10px;
   }
 `;
 
 const Map = styled.div`
-  width: 100%;
+  width: 90%;
 `;
 
 const CalendarSpace = styled.div`
@@ -75,36 +75,6 @@ const CalendarSpace = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
-`;
-const OwnEvent = styled.div`
-  width: 100%;
-  font-size: 42px;
-  margin-top: 30px;
-`;
-const Input = styled.div`
-  width: 100%;
-`;
-const Events = styled.div`
-  width: 99%;
-  border: 1px solid lightgrey;
-  height: 300px;
-  margin-top: 10px;
-`;
-const AddSchedule = styled.input`
-  width: 50%;
-  height: 50px;
-  margin-right: 20px;
-  font-size: 20px;
-  padding-left: 5px;
-`;
-const CreateEvent = styled.button`
-  width: 100px;
-  height: 50px;
-`;
-const EachEvent = styled.button`
-  width: 50px;
-  height: 50px;
-  background-color: lightpink;
 `;
 
 const ConfirmButton = styled.button`
@@ -138,12 +108,12 @@ function CityPage() {
     // },
   ];
 
-  const [events, setEvents] = useState(INITIAL_EVENTS);
   const calendarRef = useRef();
-  const dispatch = useDispatch();
-  const eventTitle = useSelector((state) => state.eventTitle);
-  const startTime = useSelector((state) => state.startTime);
-  const endTime = useSelector((state) => state.endTime);
+  const [events, setEvents] = useState(INITIAL_EVENTS);
+  // const dispatch = useDispatch();
+  // const eventTitle = useSelector((state) => state.eventTitle);
+  // const startTime = useSelector((state) => state.startTime);
+  // const endTime = useSelector((state) => state.endTime);
 
   useEffect(() => {
     Swal.fire("Feel free to explore the city!");
@@ -349,7 +319,7 @@ function CityPage() {
             // allDaySlot={false}
             minTime="06:00:00"
             // maxTime="24:00:00"
-            height="80vh" //"1000px"
+            height="70vh" //"1000px"
             events={
               renderEvent
               // [

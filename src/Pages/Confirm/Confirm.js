@@ -8,7 +8,7 @@ import adaptivePlugin from "@fullcalendar/adaptive";
 import React, { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 // import { ComponentToPrint } from "../../ComponentToPrint";
-import firebase from "firebase/app";
+// import firebase from "firebase/app";
 import "firebase/firestore";
 import { getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
@@ -20,10 +20,7 @@ const Confirm = styled.div`
   width: 80%;
   margin: 160px auto 40px auto;
 `;
-const Previous = styled.button`
-  cursor: pointer;
-  margin-bottom: 20px;
-`;
+
 const ComponentToPrint = styled.div`
   /* width: 70%; */
 `;
@@ -65,24 +62,24 @@ const Copy = styled.button`
   width: 300px;
   cursor: pointer;
 `;
-const Hotel = styled.button`
-  margin-top: 60px;
-  height: 100px;
-  width: 300px;
-  cursor: pointer;
-`;
-const Restaurant = styled.button`
-  margin-top: 65px;
-  height: 100px;
-  width: 300px;
-  cursor: pointer;
-`;
-const Ticket = styled.button`
-  margin-top: 65px;
-  height: 100px;
-  width: 300px;
-  cursor: pointer;
-`;
+// const Hotel = styled.button`
+//   margin-top: 60px;
+//   height: 100px;
+//   width: 300px;
+//   cursor: pointer;
+// `;
+// const Restaurant = styled.button`
+//   margin-top: 65px;
+//   height: 100px;
+//   width: 300px;
+//   cursor: pointer;
+// `;
+// const Ticket = styled.button`
+//   margin-top: 65px;
+//   height: 100px;
+//   width: 300px;
+//   cursor: pointer;
+// `;
 const Weather = styled.button`
   margin-top: 60px;
   height: 80px;
@@ -115,11 +112,6 @@ function ConfirmSchedule() {
         <i>{eventInfo.event.title}</i>
       </>
     );
-  }
-
-  function exportPDF() {
-    Additional.style.visibility = "hidden";
-    window.print();
   }
 
   let url = window.location.search;

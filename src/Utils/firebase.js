@@ -13,7 +13,6 @@ const firebaseConfig = {
   measurementId: "G-CJP4GMTYTP",
 };
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
 
 function getAttractionData(cityName) {
   return (
@@ -47,10 +46,12 @@ function fireAuthLogIn(email, password) {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
+      console.log(email, password);
       console.log(user.uid);
       console.log(user.email);
-      var userNow = firebase.auth().currentUser;
+      var userNow = firebase.auth().currentUser.uid;
       console.log(userNow);
+      alert("log in successfully");
       // ...
     })
     .catch((error) => {
@@ -67,8 +68,10 @@ function fireAuthSignUp(email, password) {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
-      console.log(user.uid);
-      console.log(user.email);
+      console.log(email, password);
+      console.log(user.uid, user.email + "sign up successfully");
+      // console.log(user.email);
+      alert("sign up successfully");
       // ...
     })
     .catch((error) => {
@@ -85,9 +88,10 @@ function fireAuthLogOut() {
     .signOut()
     .then(() => {
       // Sign-out successful.
-      console.log("log out successfully");
-      var user = firebase.auth().currentUser;
-      console.log(user);
+      alert("log out successfully");
+      var user = firebase.auth().currentUser.uid;
+      console.log(user + "log out successfully");
+      alert(user + "log out successfully");
     })
     .catch((error) => {
       // An error happened.
@@ -105,11 +109,15 @@ function firebaseGoogle() {
     .then((result) => {
       /** @type {firebase.auth.OAuthCredential} */
       var credential = result.credential;
+      alert("google log in successfully");
+      console.log(result);
 
       // This gives you a Google Access Token. You can use it to access the Google API.
       var token = credential.accessToken;
+      console.log("token = " + token);
       // The signed-in user info.
-      var user = result.user;
+      var user = result.user.uid;
+      console.log("user = " + user);
       // ...
     })
     .catch((error) => {
@@ -284,6 +292,20 @@ function getProfileData(UID) {
     });
 }
 
+function storeAccountData(email, name) {
+  return firebase
+    .firestore()
+    .collection("account_data")
+    .add({ email: email, name: name })
+    .then((docRef) => {
+      console.log("Document written with ID: ", docRef.id);
+      return docRef.id;
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+    });
+}
+
 export {
   getAttractionData,
   fireAuthLogIn,
@@ -299,6 +321,7 @@ export {
   uploadImage,
   storeProfileData,
   getProfileData,
+  storeAccountData,
 };
 
 // user.displayName: 顯示名稱

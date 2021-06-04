@@ -24,12 +24,15 @@ function App() {
         </Route>
         <Route path="/city/:cityName">
           <CityPage></CityPage>
+          <Footer></Footer>
         </Route>
         <Route path="/confirm">
           <ConfirmSchedule>confirm</ConfirmSchedule>
+          <Footer></Footer>
         </Route>
         <Route path="/manage">
           <ManageSchedule>manage</ManageSchedule>
+          <Footer></Footer>
         </Route>
         <Route path="/verification">
           <VerificationStep>verification</VerificationStep>
@@ -38,7 +41,7 @@ function App() {
           <Map id="map"></Map>
         </Route>
       </Switch>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </Router>
 
     /* <div className="App">

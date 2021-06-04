@@ -8,6 +8,7 @@ import L from "leaflet";
 import ocean from "../../Components/ocean.wav";
 import anchor from "../../Components/anchor.png";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import Navigation from "./Navigation";
 
 const SideBar = styled.div`
   background-color: rgba(35, 55, 75, 0.9);
@@ -18,14 +19,16 @@ const SideBar = styled.div`
   position: absolute;
   top: 30;
   left: 0;
-  margin: 12px;
+  margin: 955px 0 0 120px;
+  margin-top: 86vh;
+  margin-left: 5vw;
   border-radius: 4px;
 `;
 
 const MainMap = styled.div`
-  height: 81vh;
+  height: calc(100vh - 120px);
   margin-bottom: 0px;
-  margin-top: 80px;
+  margin-top: 60px;
 `;
 
 const Audio = styled.div`
@@ -95,19 +98,19 @@ function Map() {
       .setLngLat([-82.383, 23.133])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Havana</h1><a href="../city/Havana"><button>Go!</button></a>'
+          '<h1 id="title"  margin="5px"><font face="Allura" size="70px">Havana</font></h1><a href="../city/Havana"><button><font face="Quicksand">Go!</font></button></a>'
         )
       )
       .addTo(map.current);
     // );
-
+    // document.getElementById("title").style.fontStyle = "italic";
     //taipei
     // setMarker(
     new mapboxgl.Marker()
       .setLngLat([121.597366, 25.105497])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Taipei</h1><a href="../city/Taipei"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Taipei</font></h1><a href="../city/Taipei"><button >Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -118,7 +121,7 @@ function Map() {
       .setLngLat([12.3327, 45.4371])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Venice</h1><a href="../city/Venice"><button>Go!</button></a>'
+          '<h1><font face="Didot" size="70px">Venice</font></h1><a href="../city/Venice"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -129,7 +132,7 @@ function Map() {
       .setLngLat([135.768326, 35.011665])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Kyoto</h1><a href="../city/Kyoto"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px"> Kyoto </font></h1><a href="../city/Kyoto"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -140,7 +143,7 @@ function Map() {
       .setLngLat([-71.057083, 42.361145])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Boston</h1><a href="../city/Boston"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Boston</font></h1><a href="../city/Boston"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -157,7 +160,7 @@ function Map() {
       .setLngLat([-123.116226, 49.246292])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Vancouver</h1><a href="../city/Vancouver"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Vancouver</font></h1><a href="../city/Vancouver"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -168,7 +171,7 @@ function Map() {
       .setLngLat([31.233334, 30.033333])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Cairo</h1><a href="../city/Cairo"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Cairo</font></h1><a href="../city/Cairo"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -179,7 +182,7 @@ function Map() {
       .setLngLat([18.4233, -33.918861])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Cape Town</h1><a href="../city/CapeTown"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Cape Town</font></h1><a href="../city/CapeTown"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -190,7 +193,7 @@ function Map() {
       .setLngLat([-58.381592, -34.603722])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Buenos Aires</h1><a href="../city/BuenosAires"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Buenos Aires</font></h1><a href="../city/BuenosAires"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -206,7 +209,7 @@ function Map() {
       .setLngLat([37.618423, 55.751244])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h3>Take me to </h3><h1>Moscow</h1><a href="../city/Moscow"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Moscow</font></h1><a href="../city/Moscow"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
@@ -249,16 +252,16 @@ function Map() {
 
   return (
     <div>
-      <SideBar className="sidebar">
+      {/* <SideBar className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-      </SideBar>
+      </SideBar> */}
       <MainMap ref={mapContainer} className="map-container"></MainMap>
-      <Audio>
+      {/* <Audio>
         <audio controls src={ocean} autoplay="true" loop>
           Your browser does not support the
           <code>audio</code> element.
         </audio>
-      </Audio>
+      </Audio> */}
       {/* <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -271,6 +274,7 @@ function Map() {
         </Marker>
       </MapContainer> */}
       {/* <LeafletMap id="mapid"></LeafletMap> */}
+      <Navigation></Navigation>
     </div>
   );
 }
