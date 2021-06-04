@@ -12,6 +12,7 @@ import {
   storeProfileData,
   getProfileData,
 } from "../../Utils/firebase.js";
+import Swal from "sweetalert2";
 
 const Manage = styled.div`
   margin-top: 100px;
@@ -154,6 +155,10 @@ function ManageSchedule() {
   console.log(UID);
 
   useEffect(() => {
+    Swal.fire("You can manage current and history trips here.");
+  }, []);
+
+  useEffect(() => {
     const renderProfileData = async () => {
       let resProfileData = await getProfileData(UID);
 
@@ -200,33 +205,57 @@ function ManageSchedule() {
   }
 
   // let file = "../../Components";
-  async function savePhoto() {
-    const url = await uploadImage(photoFile);
-    alert("successfully upload!");
-    console.log(url);
-    setPhotoUrl(url);
-    storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
-  }
+  // async function savePhoto() {
+  //   const url = await uploadImage(photoFile);
+  //   alert("successfully upload!");
+  //   console.log(url);
+  //   setPhotoUrl(url);
+  //   storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
+  // }
 
-  // useEffect(() => {
-  //   console.log(photoFile);
-  // }, [photoFile]);
+  function selectPhoto() {
+    (async () => {
+      const { value: file } = await Swal.fire({
+        title: "Select image",
+        input: "file",
+        inputAttributes: {
+          accept: "image/*",
+          "aria-label": "Upload your profile picture",
+        },
+      });
+      const url = await uploadImage(file);
+      console.log(url);
+      setPhotoUrl(url);
+      storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          Swal.fire({
+            title: "Successfully upload! Your uploaded picture",
+            imageUrl: e.target.result,
+            imageAlt: "The uploaded picture",
+          });
+        };
+        reader.readAsDataURL(file);
+      }
+    })();
+  }
 
   return (
     <div>
       <Manage>
-        <Message>You can manage your current and history trips here!</Message>
         <Profile>
-          <Photo src={photoUrl} />
-          <form action="/somewhere/to/upload" enctype="multipart/form-data">
+          <Photo src={photoUrl} onClick={selectPhoto} />
+          {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
             <input
               // name="progressbarTW_img"
               type="file"
               accept="image/gif, image/jpeg, image/png"
-              onChange={(e) => setPhotoFile(e.target.files[0])}
+              // onChange={(e) => setPhotoFile(e.target.files[0])}
             ></input>
-          </form>
-          <SavePhoto onClick={savePhoto}>Save photo</SavePhoto>
+          </form> */}
+          {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
           <Name>{profileData.name}</Name>
           <UserID>{profileData.uid}</UserID>
           <Email>{profileData.email}</Email>
@@ -246,7 +275,7 @@ function ManageSchedule() {
                 </More>
                 {/* <Owner>Owner</Owner> */}
                 <CanEdit>Can Edit</CanEdit>
-                <CanView>Can View</CanView>
+                {/* <CanView>Can View</CanView> */}
               </EachTrip>
               {trip.map((trip) => {
                 const city = trip[1].city;
@@ -267,7 +296,7 @@ function ManageSchedule() {
                       <h5>{owner}</h5>
                     </Owner> */}
                     <CanEdit>Sara</CanEdit>
-                    <CanView>George</CanView>
+                    {/* <CanView>George</CanView> */}
                   </EachTrip>
                 );
               })}
@@ -284,7 +313,7 @@ function ManageSchedule() {
             </Details>
           </Current>
           <Past>
-            <HistoryTrips>Share with me</HistoryTrips>
+            <HistoryTrips>Shared Trips</HistoryTrips>
             <Details>
               <EachTrip>
                 <TripName>Trip Name</TripName>
@@ -317,14 +346,11 @@ function ManageSchedule() {
                   </EachTrip>
                 );
               })}
-              {tripView.map((tripView) => {
+              {/* {tripView.map((tripView) => {
                 const city = tripView[1].city;
                 const owner = tripView[1].owner;
-                /* const tripName = tripView[1].tripTitle; */
                 const tripName = "Good day";
                 const UID = tripView[0];
-                /* setTripCity(city); */
-                /* setTripUID(UID); */
                 return (
                   <EachTrip>
                     <TripName>{tripName}</TripName>
@@ -338,7 +364,7 @@ function ManageSchedule() {
                     <Access>Can view</Access>
                   </EachTrip>
                 );
-              })}
+              })} */}
             </Details>
           </Past>
         </Trips>

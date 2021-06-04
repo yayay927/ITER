@@ -9,25 +9,32 @@ const AllAttractions = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 500px;
+  height: 350px;
   overflow: scroll;
 `;
 const Attraction = styled.div`
-  height: 160px;
-  width: 18%;
+  height: 200px;
+  width: 30%;
   font-size: 20px;
-  margin: 5px;
-  background-color: lightgrey;
-  cursor: grab;
+  margin: 12px;
+  /* background-color: lightgrey; */
+
   /* border-radius: 10px; */
+  border-radius: 20px;
 `;
 const AttractionName = styled.div`
   font-size: 16px;
+  text-align: center;
 `;
 const AttractionImage = styled.div`
-  height: 110px;
+  filter: brightness(1.25);
+  filter: saturate(1.5);
+  /* filter: contrast(1.1); */
+  cursor: grab;
+  height: 180px;
   width: 100%;
   background-size: 110px 100%;
+  border-radius: 20px;
   /* background-size: cover; */
   /* border-radius: 10px; */
 `;
