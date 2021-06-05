@@ -246,7 +246,7 @@ function ManageSchedule() {
     <div>
       <Manage>
         <Profile>
-          <Photo src={photoUrl} onClick={selectPhoto} />
+          {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
           {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
             <input
               // name="progressbarTW_img"
@@ -257,7 +257,7 @@ function ManageSchedule() {
           </form> */}
           {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
           <Name>{profileData.name}</Name>
-          <UserID>{profileData.uid}</UserID>
+          {/* <UserID>{profileData.uid}</UserID> */}
           <Email>{profileData.email}</Email>
         </Profile>
         {/* <Map>

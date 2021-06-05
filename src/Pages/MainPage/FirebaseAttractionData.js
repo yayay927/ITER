@@ -16,7 +16,7 @@ const Attraction = styled.div`
   height: 200px;
   width: 30%;
   font-size: 20px;
-  margin: 12px;
+  margin: 10px;
   /* background-color: lightgrey; */
 
   /* border-radius: 10px; */
