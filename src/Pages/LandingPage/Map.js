@@ -193,7 +193,7 @@ function Map() {
       .setLngLat([-58.381592, -34.603722])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Buenos Aires</font></h1><a href="../city/BuenosAires"><button>Go!</button></a>'
+          '<h1><font face="Allura" style="line-height:1.05">Buenos Aires</font></h1><a href="../city/BuenosAires"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);

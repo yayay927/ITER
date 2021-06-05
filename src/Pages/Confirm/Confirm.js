@@ -234,9 +234,9 @@ function ConfirmSchedule() {
               Export to PDF/ Print
             </Export>
           </div>
-          <div>
+          {/* <div>
             <GoBack onClick={backToEdit}>Go back to edit trip</GoBack>
-          </div>
+          </div> */}
           {/* <div>{JSON.stringify(eventsData)}</div> */}
           <div>
             <Share onClick={share}>Share</Share>
@@ -257,9 +257,9 @@ function ConfirmSchedule() {
             <Ticket>Buy Tickets</Ticket>
           </div> */}
 
-          <div>
+          {/* <div>
             <Weather>Local Weather</Weather>
-          </div>
+          </div> */}
         </Additional>
       </Confirm>
     </div>

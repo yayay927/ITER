@@ -19,16 +19,9 @@ import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
 // ES6 Modules or TypeScript
 import Swal from "sweetalert2";
-
-// CommonJS
-// const Swal = require("sweetalert2");
-
-// Swal.fire({
-//   title: "Error!",
-//   text: "Do you want to continue",
-//   icon: "error",
-//   confirmButtonText: "Cool",
-// });
+// import "bootstrap/dist/css/bootstrap.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+// import bootstrapPlugin from "@fullcalendar/bootstrap";
 
 const CalendarPage = styled.div`
   margin: 0px 50px 70px 50px;
@@ -48,7 +41,7 @@ const MainPart = styled.div`
 
 const MapAndAttractions = styled.div`
   margin-right: 20px;
-  width: 45%;
+  width: 50%;
   /* height: 100%; */
   height: 80vh;
   overflow: scroll;
@@ -71,7 +64,7 @@ const Map = styled.div`
 `;
 
 const CalendarSpace = styled.div`
-  width: 45%;
+  width: 32%;
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -208,11 +201,23 @@ function CityPage() {
         <CalendarSpace>
           <FullCalendar
             id="FullCalendar"
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            plugins={[
+              dayGridPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+              // bootstrapPlugin,
+            ]}
+            // themeSystem="bootstrap"
             headerToolbar={{
-              left: "prev, next, today, myCustomButton",
-              center: "title",
-              right: "dayGridMonth, timeGridWeek, timeGridDay",
+              // left: "prev, next, myCustomButton", //today,
+              // center: "title",
+              right: "dayGridMonth, timeGridWeek", //, timeGridDay
+              // right: "prev, today, next,",
+            }}
+            footerToolbar={{
+              left: "myCustomButton", //today,
+              // center: "prev, today, next,",
+              right: "prev, today, next,", //, timeGridDay
             }}
             ref={calendarRef}
             customButtons={{
