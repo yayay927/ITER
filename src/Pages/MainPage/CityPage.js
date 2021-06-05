@@ -339,6 +339,30 @@ function CityPage() {
               // { title: "Italian restaurant gala", date: "2021-05-22" },
               // ]
             }
+            eventClick={async function (info) {
+              info.el.style.borderColor = "red";
+
+              await Swal.fire({
+                title: "Are you sure?",
+                text: "Event: " + info.event.title,
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    "Deleted!",
+                    "Your file has been deleted.",
+                    "success"
+                  );
+                  info.el.remove();
+                } else {
+                  info.el.style.borderColor = "";
+                }
+              });
+            }}
           />
           <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
         </CalendarSpace>
