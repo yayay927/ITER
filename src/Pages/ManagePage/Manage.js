@@ -110,7 +110,9 @@ const EachTrip = styled.div`
 const TripName = styled.div`
   text-decoration: underline;
 `;
-const Location = styled.div``;
+const Location = styled.div`
+  cursor: pointer;
+`;
 const More = styled.div``;
 const Owner = styled.div`
   width: 100px;
@@ -120,6 +122,19 @@ const Access = styled.div`
 `;
 const CanEdit = styled.div`
   width: 100px;
+`;
+const Edit = styled.div`
+  width: 100px;
+`;
+const EditTrip = styled.button`
+  width: 80px;
+  font-family: "QuickSand";
+  margin: 5px;
+`;
+const EditList = styled.button`
+  width: 80px;
+  font-family: "QuickSand";
+  margin: 5px;
 `;
 // const CanView = styled.div`
 //   width: 100px;
@@ -236,8 +251,14 @@ function ManageSchedule() {
   }, []);
   // console.log(tripView);
 
-  function checkTrip(tripCity, tripUID) {
-    history.push(`/confirm?city=${tripCity}&number=${tripUID}`);
+  function checkTrip(tripCity, tripID) {
+    history.push(`/confirm?city=${tripCity}&number=${tripID}`);
+    // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
+  }
+
+  function editTrip(tripCity, tripID) {
+    history.push(`/city/${tripCity}?number=${tripID}`);
+    // history.push(`/confirm?city=${tripCity}&number=${tripID}`);
     // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
 
@@ -335,27 +356,35 @@ function ManageSchedule() {
                 {/* <Owner>Owner</Owner> */}
                 <CanEdit>Share with</CanEdit>
                 {/* <CanView>Can View</CanView> */}
+                <CanEdit>Edit</CanEdit>
               </EachTrip>
               {trip.map((trip) => {
                 console.log(trip);
                 const city = trip[1].city;
                 const time = trip[1].createTime;
-                console.log(time);
-                /* const owner = trip[1].owner; */
-                /* const tripName = trip[1].tripTitle; */
-                /* const tripName = "Wander"; */
+                const share = trip[1].share;
+                const tripID = trip[0];
 
-                const UID = trip[0];
+                /* const owner = trip[1].owner; */
+
                 return (
                   <EachTrip>
                     {/* <TripName onClick={() => checkTrip(city, UID)}>
                       {tripName}
                     </TripName> */}
-                    <Location>{city}</Location>
+                    <Location onClick={() => checkTrip(city, tripID)}>
+                      {city}
+                    </Location>
                     <More>
                       <Date>{time}</Date>
                     </More>
-                    <CanEdit>Sara</CanEdit>
+                    <CanEdit>{share}</CanEdit>
+                    <Edit>
+                      <EditTrip onClick={() => editTrip(city, tripID)}>
+                        Trip
+                      </EditTrip>
+                      <EditList>Share list </EditList>
+                    </Edit>
                   </EachTrip>
                 );
               })}
