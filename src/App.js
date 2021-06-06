@@ -6,10 +6,9 @@ import Footer from "./Components/footer";
 import Map from "./Pages/LandingPage/Map";
 import CityPage from "./Pages/MainPage/CityPage";
 import ScheduleMap from "./Pages/MainPage/ScheduleMap";
-import Test from "./Pages/MainPage/Test";
 import ConfirmSchedule from "./Pages/Confirm/Confirm.js";
 import ManageSchedule from "./Pages/ManagePage/Manage.js";
-import VerificationStep from "./Pages/Verification/verification.js";
+// import "./Utils/firebase";
 
 function App() {
   return (
@@ -34,9 +33,7 @@ function App() {
           <ManageSchedule>manage</ManageSchedule>
           <Footer></Footer>
         </Route>
-        <Route path="/verification">
-          <VerificationStep>verification</VerificationStep>
-        </Route>
+
         <Route path="/">
           <Map id="map"></Map>
         </Route>

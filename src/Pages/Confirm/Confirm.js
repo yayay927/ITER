@@ -139,10 +139,8 @@ function ConfirmSchedule() {
   }
 
   function save() {
-    alert("Please log in first in order to save your trip.");
-    alert(
-      "The trip has been saved to your database! You can check and edit the trip anytime in the manage page."
-    );
+    let time = new Date().toISOString().substr(0, 10);
+    console.log(time);
   }
 
   function share() {
@@ -226,9 +224,9 @@ function ConfirmSchedule() {
           </ComponentToPrint>
         </Calendar>
         <Additional media="print" type="text/css">
-          <div>
+          {/* <div>
             <Save onClick={save}>Save to my trip</Save>
-          </div>
+          </div> */}
           <div>
             <Export onClick={handlePrint} /* onClick={exportPDF}*/>
               Export to PDF/ Print
