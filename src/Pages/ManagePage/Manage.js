@@ -68,9 +68,15 @@ const LogOut = styled.button`
   /* width: fit-content; */
   cursor: pointer;
   font-family: "QuickSand";
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px lightgrey solid;
   padding: 8px;
+  border: none;
+  padding: 10px;
+  :hover {
+    color: white;
+    background-color: #91ccb9;
+  }
 `;
 // const Map = styled.div`
 //   margin-top: 100px;
@@ -96,17 +102,19 @@ const Current = styled.div`
 const CurrentTrips = styled.div`
   margin-top: 50px;
   height: 220px;
-  border-right: 1px solid lightpink;
+  border-right: 1px solid lightgrey;
   width: 150px;
   margin-right: 20px;
   display: block;
   position: inline-block;
   font-weight: bold;
   font-size: 30px;
+  color: #91ccb9;
 `;
 const Table = styled.table`
   /* margin-top: 50px; */
   width: calc(100% - 120px);
+  /* border-collapse: collapse; */
 `;
 
 const THead = styled.thead`
@@ -118,14 +126,28 @@ const THead = styled.thead`
 
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 22px;
 `;
 const Tr = styled.tr`
   height: 60px;
+  /* background-color: #91ccb9; */
+  border-radius: 10px;
+  border: none;
 `;
 const Td = styled.td`
   width: 25%;
 `;
+const TableCity = styled.td`
+  width: 25%;
+  cursor: pointer;
+
+  :hover {
+    color: #91ccb9;
+    font-weight: bold;
+    font-size: 30px;
+  }
+`;
+
 const TBody = styled.tbody`
   border: 1px solid lightgrey;
   align-items: center;
@@ -134,6 +156,11 @@ const TBody = styled.tbody`
   height: 200px;
   margin-bottom: 10px;
   font-size: 20px;
+  /* overflow: scroll; */
+  /* display: block; */
+  /* height: 50px; */
+  /* overflow: auto; */
+  /* width: 100%; */
 `;
 
 const TripName = styled.div`
@@ -158,12 +185,34 @@ const Edit = styled.div`
 const EditTrip = styled.button`
   width: 80px;
   font-family: "QuickSand";
+  /* font-weight: bold; */
+  font-size: 16px;
+  /* color: #91ccb9; */
   margin: 5px;
+  border: none;
+  border-radius: 40px;
+  height: 40px;
+  :hover {
+    color: white;
+    background-color: #91ccb9;
+    /* font-size: 25px; */
+  }
 `;
 const EditList = styled.button`
-  width: 80px;
+  width: 100px;
   font-family: "QuickSand";
+  /* font-weight: bold; */
+  font-size: 16px;
+  /* color: #91ccb9; */
   margin: 5px;
+  border: none;
+  border-radius: 40px;
+  height: 40px;
+  :hover {
+    color: white;
+    background-color: #91ccb9;
+    /* font-size: 22px; */
+  }
 `;
 // const CanView = styled.div`
 //   width: 100px;
@@ -184,13 +233,14 @@ const Past = styled.div`
 const HistoryTrips = styled.div`
   margin-top: 50px;
   height: 250px;
-  border-right: 1px solid lightpink;
+  border-right: 1px solid lightgrey;
   width: 150px;
   margin-right: 20px;
   display: block;
   position: inline-block;
   font-weight: bold;
   font-size: 30px;
+  color: #91ccb9;
 `;
 
 function ManageSchedule() {
@@ -400,7 +450,9 @@ function ManageSchedule() {
                       {/* <TripName onClick={() => checkTrip(city, UID)}>
                       {tripName}
                     </TripName> */}
-                      <Td onClick={() => checkTrip(city, tripID)}>{city}</Td>
+                      <TableCity onClick={() => checkTrip(city, tripID)}>
+                        {city}
+                      </TableCity>
 
                       <Td>{time}</Td>
 
@@ -443,7 +495,9 @@ function ManageSchedule() {
 
                   return (
                     <Tr>
-                      <Td onClick={() => checkTrip(city, tripID)}>{city}</Td>
+                      <TableCity onClick={() => checkTrip(city, tripID)}>
+                        {city}
+                      </TableCity>
                       <Td>{time}</Td>
                       <Td>{ownerEmail}</Td>
                       <Td>

@@ -142,7 +142,7 @@ function Navigation() {
           <Arrow src={downarrow} onClick={scrollDown}></Arrow>
           <Intro></Intro>
           <Feature>
-            <PlanPic src={plan}></PlanPic>
+            <PlanPic></PlanPic>
             <PicFrame src={frame}></PicFrame>
             <Description></Description>
           </Feature>
