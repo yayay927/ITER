@@ -3,6 +3,12 @@ import "firebase/firestore";
 import "firebase/auth";
 import "firebase/storage";
 
+// if (!firebase.apps.length) {
+//   firebase.initializeApp({});
+// } else {
+//   firebase.app(); // if already initialized, use that one
+// }
+
 const firebaseConfig = {
   apiKey: "AIzaSyD7gCInahUDjz1COa5HHkzRZUngyxHwXjY",
   authDomain: "iter-e3ef2.firebaseapp.com",
@@ -51,7 +57,7 @@ function fireAuthLogIn(email, password) {
       console.log(user.email);
       var userNow = firebase.auth().currentUser.uid;
       console.log(userNow);
-      alert("log in successfully");
+      // alert("log in successfully");
       // ...
     })
     .catch((error) => {
@@ -62,7 +68,7 @@ function fireAuthLogIn(email, password) {
 }
 
 function fireAuthSignUp(email, password) {
-  firebase
+  return firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
@@ -71,27 +77,31 @@ function fireAuthSignUp(email, password) {
       console.log(email, password);
       console.log(user.uid, user.email + "sign up successfully");
       // console.log(user.email);
-      alert("sign up successfully");
+      // alert("sign up successfully");
+      return user.uid;
       // ...
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
+      console.log(errorCode + errorMessage);
       // ..
     });
-  console.log("sign up");
+  // console.log("sign up");
 }
 
 function fireAuthLogOut() {
   firebase
     .auth()
     .signOut()
-    .then(() => {
+    .then((res) => {
       // Sign-out successful.
       alert("log out successfully");
-      var user = firebase.auth().currentUser.uid;
-      console.log(user + "log out successfully");
-      alert(user + "log out successfully");
+      // var user = firebase.auth().currentUser.uid;
+      // console.log(user + "log out successfully");
+      console.log(res);
+      // alert(user + "log out successfully");
+      // return;
     })
     .catch((error) => {
       // An error happened.
@@ -139,6 +149,8 @@ function checkUserStatus() {
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
       var email = user.email;
+      console.log(email);
+      // return email;
       // ...
     } else {
       // User is signed out
@@ -275,15 +287,15 @@ function storeProfileData(name, email, photoUrl /*, UID*/) {
   );
 }
 
-function getProfileData(UID) {
+function getProfileData(uid) {
   return firebase
     .firestore()
     .collection("account_data")
-    .doc(UID)
+    .doc(uid)
     .get()
     .then((doc) => {
-      console.log(doc);
-      console.log(doc.data());
+      // console.log(doc);
+      // console.log(doc.data());
 
       return doc.data();
     })
@@ -292,18 +304,22 @@ function getProfileData(UID) {
     });
 }
 
-function storeAccountData(email, name) {
-  return firebase
-    .firestore()
-    .collection("account_data")
-    .add({ email: email, name: name })
-    .then((docRef) => {
-      console.log("Document written with ID: ", docRef.id);
-      return docRef.id;
-    })
-    .catch((error) => {
-      console.error("Error adding document: ", error);
-    });
+function storeAccountData(email, name, uid) {
+  return (
+    firebase
+      .firestore()
+      .collection("account_data")
+      .doc(`${uid}`)
+      .set({ email: email, name: name, uid: uid })
+      // .add({ email: email, name: name })
+      .then((docRef) => {
+        // console.log("Document written with ID: ", docRef.id);
+        // return docRef.id;
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      })
+  );
 }
 
 export {

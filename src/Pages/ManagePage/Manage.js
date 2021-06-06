@@ -11,58 +11,69 @@ import {
   uploadImage,
   storeProfileData,
   getProfileData,
+  checkUserStatus,
+  fireAuthLogOut,
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
+import { getDefaultNormalizer } from "@testing-library/dom";
 
 const Manage = styled.div`
   margin-top: 100px;
 `;
-const Message = styled.div`
-  margin: 50px auto;
-  width: 50%;
-  font-size: 30px;
-  font-weight: bolder;
-`;
+// const Message = styled.div`
+//   margin: 50px auto;
+//   width: 50%;
+//   font-size: 30px;
+//   font-weight: bolder;
+// `;
 const Profile = styled.div`
   margin: 50px auto;
   width: 50%;
   border-bottom: 1px solid darkblue;
 `;
-const Photo = styled.img`
-  margin: 0 auto;
-  text-align: center;
-  position: inline-block;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  display: block;
-`;
-const SavePhoto = styled.button``;
+// const Photo = styled.img`
+//   margin: 0 auto;
+//   text-align: center;
+//   position: inline-block;
+//   text-align: center;
+//   width: 100px;
+//   height: 100px;
+//   display: block;
+// `;
+// const SavePhoto = styled.button``;
 const Name = styled.div`
   margin: 0px auto;
   font-size: 30px;
   width: fit-content;
 `;
-const UserID = styled.div`
-  margin: 0px auto;
-  font-size: 30px;
-  width: fit-content;
-`;
+// const UserID = styled.div`
+//   margin: 0px auto;
+//   font-size: 30px;
+//   width: fit-content;
+// `;
 const Email = styled.div`
   margin: 0px auto;
   font-size: 30px;
   width: fit-content;
 `;
-const Map = styled.div`
-  margin-top: 100px;
-  width: 80%;
-  margin: 0 auto;
-  height: 300px;
-  border: 1px solid darkgoldenrod;
+const LogOut = styled.button`
+  display: block;
+  margin: 20px auto;
+  font-size: 20px;
+  /* width: fit-content; */
+  cursor: pointer;
+  font-family: "QuickSand";
 `;
-const Marker = styled.div`
-  margin-top: 100px;
-`;
+// const Map = styled.div`
+//   margin-top: 100px;
+//   width: 80%;
+//   margin: 0 auto;
+//   height: 300px;
+//   border: 1px solid darkgoldenrod;
+// `;
+// const Marker = styled.div`
+//   margin-top: 100px;
+// `;
 const Trips = styled.div`
   margin-top: 100px;
   width: 80%;
@@ -110,9 +121,9 @@ const Access = styled.div`
 const CanEdit = styled.div`
   width: 100px;
 `;
-const CanView = styled.div`
-  width: 100px;
-`;
+// const CanView = styled.div`
+//   width: 100px;
+// `;
 const Date = styled.div``;
 const Share = styled.div`
   margin-top: 20px;
@@ -148,11 +159,34 @@ function ManageSchedule() {
   const [tripView, setTripView] = useState([]);
   const [tripCity, setTripCity] = useState([]);
   const [tripUID, setTripUID] = useState([]);
-  const [photoFile, setPhotoFile] = useState([]);
-  const [photoUrl, setPhotoUrl] = useState([]);
+  // const [photoFile, setPhotoFile] = useState([]);
+  // const [photoUrl, setPhotoUrl] = useState([]);
   const [profileData, setProfileData] = useState([]);
   // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+  const [loginEmail, setLoginEmail] = useState([]);
   console.log(UID);
+  // UID = "test9@gmail.com";
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      console.log("1");
+      if (user) {
+        console.log(user.email);
+        setLoginEmail(user.email);
+      } else {
+        console.log("no current user");
+        Swal.fire("Please log in first.");
+      }
+    });
+
+    var user = firebase.auth().currentUser;
+    console.log(user);
+    console.log("2");
+  }, []);
+
+  var user = firebase.auth().currentUser;
+  console.log(user);
+  console.log("3");
 
   useEffect(() => {
     Swal.fire("You can manage current and history trips here.");
@@ -161,13 +195,13 @@ function ManageSchedule() {
   useEffect(() => {
     const renderProfileData = async () => {
       let resProfileData = await getProfileData(UID);
-
-      console.log(resProfileData);
+      // console.log(loginEmail);
+      console.log("4");
       setProfileData(resProfileData);
     };
     renderProfileData();
   }, []);
-  console.log(profileData);
+  // console.log(profileData);
 
   useEffect(() => {
     const renderEventsData = async () => {
@@ -204,43 +238,68 @@ function ManageSchedule() {
     // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
 
-  // let file = "../../Components";
-  // async function savePhoto() {
-  //   const url = await uploadImage(photoFile);
-  //   alert("successfully upload!");
-  //   console.log(url);
-  //   setPhotoUrl(url);
-  //   storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
-  // }
+  async function userLogOut() {
+    await Swal.fire({
+      title: "Do you want to log out?",
+      // text: "Event: ",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, log out",
+    }).then((result) => {
+      // fireAuthLogOut();
 
-  function selectPhoto() {
-    (async () => {
-      const { value: file } = await Swal.fire({
-        title: "Select image",
-        input: "file",
-        inputAttributes: {
-          accept: "image/*",
-          "aria-label": "Upload your profile picture",
-        },
-      });
-      const url = await uploadImage(file);
-      console.log(url);
-      setPhotoUrl(url);
-      storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
-
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          Swal.fire({
-            title: "Successfully upload! Your uploaded picture",
-            imageUrl: e.target.result,
-            imageAlt: "The uploaded picture",
+      if (result.isConfirmed) {
+        firebase
+          .auth()
+          .signOut()
+          .then(() => {
+            // Sign-out successful.
+            console.log("log out successfully");
+            // var user = firebase.auth().currentUser.uid;
+            // console.log(user + "log out successfully");
+            // alert(user + "log out successfully");
+            // return;
+            Swal.fire("You're logged out", "", "success"); //"Your're logged out'.",
+            history.push("/");
+          })
+          .catch((error) => {
+            console.log("log out error");
+            // An error happened.
           });
-        };
-        reader.readAsDataURL(file);
       }
-    })();
+    });
   }
+
+  // function selectPhoto() {
+  //   (async () => {
+  //     const { value: file } = await Swal.fire({
+  //       title: "Select image",
+  //       input: "file",
+  //       inputAttributes: {
+  //         accept: "image/*",
+  //         "aria-label": "Upload your profile picture",
+  //       },
+  //     });
+  //     const url = await uploadImage(file);
+  //     console.log(url);
+  //     setPhotoUrl(url);
+  //     storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
+
+  //     if (file) {
+  //       const reader = new FileReader();
+  //       reader.onload = (e) => {
+  //         Swal.fire({
+  //           title: "Successfully upload! Your uploaded picture",
+  //           imageUrl: e.target.result,
+  //           imageAlt: "The uploaded picture",
+  //         });
+  //       };
+  //       reader.readAsDataURL(file);
+  //     }
+  //   })();
+  // }
 
   return (
     <div>
@@ -257,12 +316,9 @@ function ManageSchedule() {
           </form> */}
           {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
           <Name>{profileData.name}</Name>
-          {/* <UserID>{profileData.uid}</UserID> */}
           <Email>{profileData.email}</Email>
+          <LogOut onClick={userLogOut}>Log out</LogOut>
         </Profile>
-        {/* <Map>
-          <Marker></Marker>
-        </Map> */}
         <Trips>
           <Current>
             <CurrentTrips>My Trips</CurrentTrips>
@@ -292,24 +348,10 @@ function ManageSchedule() {
                     <More>
                       <Date>2021/05/17~2021/05/28</Date>
                     </More>
-                    {/* <Owner>
-                      <h5>{owner}</h5>
-                    </Owner> */}
                     <CanEdit>Sara</CanEdit>
-                    {/* <CanView>George</CanView> */}
                   </EachTrip>
                 );
               })}
-              {/* <EachTrip>
-                <TripName>Havana Heaven</TripName>
-                <Location>Havana, Cuba</Location>
-                <More>
-                  <Date>Date: 2021/05/17~2021/05/28</Date>
-                  <Share>Share with: _____________</Share>
-                  <Link>Get link</Link>
-                </More>
-                <Owner>myself</Owner>
-              </EachTrip> */}
             </Details>
           </Current>
           <Past>
@@ -346,25 +388,6 @@ function ManageSchedule() {
                   </EachTrip>
                 );
               })}
-              {/* {tripView.map((tripView) => {
-                const city = tripView[1].city;
-                const owner = tripView[1].owner;
-                const tripName = "Good day";
-                const UID = tripView[0];
-                return (
-                  <EachTrip>
-                    <TripName>{tripName}</TripName>
-                    <Location>{city}</Location>
-                    <More>
-                      <Date>2021/05/17~2021/05/28</Date>
-                    </More>
-                    <Owner>
-                      <h5>{owner}</h5>
-                    </Owner>
-                    <Access>Can view</Access>
-                  </EachTrip>
-                );
-              })} */}
             </Details>
           </Past>
         </Trips>

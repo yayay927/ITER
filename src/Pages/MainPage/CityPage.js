@@ -75,6 +75,7 @@ const ConfirmButton = styled.button`
   width: 100%;
   height: 50px;
   margin-top: 5px;
+  font-family: "QuickSand";
 `;
 
 function CityPage() {
@@ -364,7 +365,7 @@ function CityPage() {
               });
             }}
           />
-          <ConfirmButton onClick={getEvents}>Finish Edit</ConfirmButton>
+          <ConfirmButton onClick={getEvents}>Finish edit & Save</ConfirmButton>
         </CalendarSpace>
       </MainPart>
     </CalendarPage>

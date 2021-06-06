@@ -4,12 +4,15 @@ import user from "./user.png";
 import suitcaseNew from "./suitcaseNew.png";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import firebase from "firebase/app";
+import "firebase/firestore";
 import {
   fireAuthLogIn,
   fireAuthSignUp,
   fireAuthLogOut,
-  firebaseGoogle,
+  // firebaseGoogle,
   storeAccountData,
+  checkUserStatus,
 } from "../Utils/firebase";
 import Swal from "sweetalert2";
 
@@ -74,10 +77,31 @@ function Header() {
   };
 
   let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+
   function managePage() {
-    history.push(`/manage?number=${UID}`);
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        var uid = user.uid;
+        console.log(uid);
+        console.log(user.email);
+        history.push(`/manage?number=${uid}`);
+        // ...
+      } else {
+        // User is signed out
+        // ...
+        console.log("no current user");
+        Swal.fire("Please log in first.");
+        // alert("please log in first");
+      }
+    });
+    // let result = checkUserStatus();
+    // console.log(result);
+    // history.push(`/manage?number=${UID}`);
     // document.location.href = `../manage?number=${UID}`;
   }
+
   async function signUp() {
     await Swal.fire({
       title: "Sign Up",
@@ -93,8 +117,10 @@ function Header() {
         if (!login || !password || !name) {
           Swal.showValidationMessage(`Please enter name, email and password`);
         }
-        storeAccountData(login, name);
-        fireAuthSignUp(login, password);
+
+        fireAuthSignUp(login, password).then((r) => {
+          storeAccountData(login, name, r);
+        });
 
         return { name: name, login: login, password: password };
       },
@@ -102,10 +128,10 @@ function Header() {
       //   if (result.value.name && result.value.login && result.value.password) {
       //     Swal.fire(
       //       `
-      //       Name: ${result.value.name}
-      //       Login: ${result.value.login}
-      //       Password: ${result.value.password}
-      //     `.trim()
+      //         Name: ${result.value.name}
+      //         Login: ${result.value.login}
+      //         Password: ${result.value.password}
+      //       `.trim()
       //     );
       //   }
     });
@@ -155,9 +181,9 @@ function Header() {
         <Block>
           <SignUp onClick={signUp}>Signup</SignUp>
           <LogIn onClick={login}>Login</LogIn>
-          <a onClick={managePage}>
+          <div onClick={managePage}>
             <Logo src={suitcaseNew} />
-          </a>
+          </div>
           {/* <a href="../verification">
             <Logo src={user} />
           </a> */}
