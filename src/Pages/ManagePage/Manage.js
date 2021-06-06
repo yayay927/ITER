@@ -164,7 +164,7 @@ function ManageSchedule() {
   const [profileData, setProfileData] = useState([]);
   // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
   const [loginEmail, setLoginEmail] = useState([]);
-  console.log(UID);
+  // console.log(UID);
   // UID = "test9@gmail.com";
 
   useEffect(() => {
@@ -176,6 +176,7 @@ function ManageSchedule() {
       } else {
         console.log("no current user");
         Swal.fire("Please log in first.");
+        history.push("/");
       }
     });
 
@@ -184,9 +185,11 @@ function ManageSchedule() {
     console.log("2");
   }, []);
 
-  var user = firebase.auth().currentUser;
-  console.log(user);
-  console.log("3");
+  useEffect(() => {
+    var user = firebase.auth().currentUser;
+    console.log(user);
+    console.log("3");
+  }, []);
 
   useEffect(() => {
     Swal.fire("You can manage current and history trips here.");
@@ -324,29 +327,33 @@ function ManageSchedule() {
             <CurrentTrips>My Trips</CurrentTrips>
             <Details>
               <EachTrip>
-                <TripName>Trip Name</TripName>
+                {/* <TripName>Trip Name</TripName> */}
                 <Location>City</Location>
                 <More>
-                  <Date>Date/ Share/ Link</Date>
+                  <Date>Create date</Date>
                 </More>
                 {/* <Owner>Owner</Owner> */}
-                <CanEdit>Can Edit</CanEdit>
+                <CanEdit>Share with</CanEdit>
                 {/* <CanView>Can View</CanView> */}
               </EachTrip>
               {trip.map((trip) => {
+                console.log(trip);
                 const city = trip[1].city;
+                const time = trip[1].createTime;
+                console.log(time);
                 /* const owner = trip[1].owner; */
                 /* const tripName = trip[1].tripTitle; */
-                const tripName = "Wander";
+                /* const tripName = "Wander"; */
+
                 const UID = trip[0];
                 return (
                   <EachTrip>
-                    <TripName onClick={() => checkTrip(city, UID)}>
+                    {/* <TripName onClick={() => checkTrip(city, UID)}>
                       {tripName}
-                    </TripName>
+                    </TripName> */}
                     <Location>{city}</Location>
                     <More>
-                      <Date>2021/05/17~2021/05/28</Date>
+                      <Date>{time}</Date>
                     </More>
                     <CanEdit>Sara</CanEdit>
                   </EachTrip>
@@ -358,13 +365,12 @@ function ManageSchedule() {
             <HistoryTrips>Shared Trips</HistoryTrips>
             <Details>
               <EachTrip>
-                <TripName>Trip Name</TripName>
+                {/* <TripName>Trip Name</TripName> */}
                 <Location>City</Location>
                 <More>
-                  <Date>Date</Date>
+                  <Date>Create date</Date>
                 </More>
                 <Owner>Owner</Owner>
-                <Access>Access</Access>
               </EachTrip>
               {tripEdit.map((tripEdit) => {
                 const city = tripEdit[1].city;
@@ -376,7 +382,7 @@ function ManageSchedule() {
                 /* setTripUID(UID); */
                 return (
                   <EachTrip>
-                    <TripName>{tripName}</TripName>
+                    {/* <TripName>{tripName}</TripName> */}
                     <Location>{city}</Location>
                     <More>
                       <Date>2021/05/17~2021/05/28</Date>
@@ -384,7 +390,6 @@ function ManageSchedule() {
                     <Owner>
                       <h5>{owner}</h5>
                     </Owner>
-                    <Access>Can edit</Access>
                   </EachTrip>
                 );
               })}

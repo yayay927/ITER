@@ -159,14 +159,14 @@ function checkUserStatus() {
   });
 }
 
-function storeEventsData(saveEvents, cityName, UID, tripName) {
+function storeEventsData(saveEvents, cityName, UID, time) {
   return (
     firebase
       .firestore()
       .collection("user_trips_history")
       // .doc()
       // .set(
-      .add({ saveEvents, city: cityName, owner: UID, tripTitle: tripName })
+      .add({ saveEvents, city: cityName, owner: UID, createTime: time })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
         return docRef.id;

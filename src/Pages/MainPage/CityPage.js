@@ -13,7 +13,7 @@ import TouristAttractions from "./TouristAttractions.js";
 import Transportations from "./Transportations.js";
 // import { MainFullCalendar } from "./MainFullCalendar.js";
 // import { useSelector, useDispatch } from "react-redux";
-// import firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
@@ -160,10 +160,19 @@ function CityPage() {
     // console.log(saveEvents);
 
     // let cityData = [city: cityName]
-    let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-    let tripName = "";
+
+    var user = firebase.auth().currentUser;
+    console.log(user);
+    let UID = user.uid;
+    console.log(UID);
+
+    let time = new Date().toISOString().substr(0, 10);
+    console.log(time);
+
+    // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+    // let tripName = "";
     async function idData() {
-      let idNumber = await storeEventsData(saveEvents, cityName, UID, tripName);
+      let idNumber = await storeEventsData(saveEvents, cityName, UID, time);
       console.log(idNumber);
       history.push(`/confirm?city=${cityName}&number=${idNumber}`);
     }
