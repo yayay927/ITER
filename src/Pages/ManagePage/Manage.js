@@ -19,6 +19,7 @@ import { getDefaultNormalizer } from "@testing-library/dom";
 
 const Manage = styled.div`
   margin-top: 100px;
+  height: 60%;
 `;
 // const Message = styled.div`
 //   margin: 50px auto;
@@ -28,6 +29,7 @@ const Manage = styled.div`
 // `;
 const Profile = styled.div`
   margin: 50px auto;
+  margin-bottom: 0;
   width: 50%;
   border-bottom: 1px solid darkblue;
 `;
@@ -43,8 +45,10 @@ const Profile = styled.div`
 // const SavePhoto = styled.button``;
 const Name = styled.div`
   margin: 0px auto;
-  font-size: 30px;
+  font-size: 60px;
   width: fit-content;
+  font-family: "Allura";
+  font-weight: bold;
 `;
 // const UserID = styled.div`
 //   margin: 0px auto;
@@ -53,16 +57,20 @@ const Name = styled.div`
 // `;
 const Email = styled.div`
   margin: 0px auto;
-  font-size: 30px;
+  font-size: 40px;
   width: fit-content;
+  font-family: "Allura";
 `;
 const LogOut = styled.button`
   display: block;
   margin: 20px auto;
-  font-size: 20px;
+  font-size: 15px;
   /* width: fit-content; */
   cursor: pointer;
   font-family: "QuickSand";
+  border-radius: 10px;
+  border: 1px lightgrey solid;
+  padding: 8px;
 `;
 // const Map = styled.div`
 //   margin-top: 100px;
@@ -75,18 +83,19 @@ const LogOut = styled.button`
 //   margin-top: 100px;
 // `;
 const Trips = styled.div`
-  margin-top: 100px;
-  width: 80%;
+  /* margin-top: 100px; */
+  width: 70%;
   margin: 0 auto;
 `;
 const Current = styled.div`
-  margin-top: 50px;
+  margin-top: 5vh;
   display: flex;
   align-items: center;
+  height: 200px;
 `;
 const CurrentTrips = styled.div`
   margin-top: 50px;
-  height: 250px;
+  height: 220px;
   border-right: 1px solid lightpink;
   width: 150px;
   margin-right: 20px;
@@ -96,34 +105,33 @@ const CurrentTrips = styled.div`
   font-size: 30px;
 `;
 const Table = styled.table`
-  margin-top: 50px;
+  /* margin-top: 50px; */
   width: calc(100% - 120px);
 `;
-const EachTrip = styled.div`
-  border: 1px solid lightgrey;
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  height: 100px;
-  margin-bottom: 10px;
-`;
+
 const THead = styled.thead`
   border: 1px solid lightgrey;
   align-items: center;
   /* display: flex; */
   /* justify-content: space-around; */
-  height: 100px;
+  height: 200px;
+
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 30px;
 `;
-const Td = styled.td``;
+const Tr = styled.tr`
+  height: 60px;
+`;
+const Td = styled.td`
+  width: 25%;
+`;
 const TBody = styled.tbody`
   border: 1px solid lightgrey;
   align-items: center;
   /* display: flex; */
   /* justify-content: space-around; */
-  height: 100px;
+  height: 200px;
   margin-bottom: 10px;
   font-size: 20px;
 `;
@@ -168,7 +176,7 @@ const Link = styled.div`
   margin-top: 20px;
 `;
 const Past = styled.div`
-  margin-top: 50px;
+  margin-top: 2vh;
   display: flex;
   align-items: center;
   margin-bottom: 100px;
@@ -388,7 +396,7 @@ function ManageSchedule() {
                   /* const owner = trip[1].owner; */
 
                   return (
-                    <tr>
+                    <Tr>
                       {/* <TripName onClick={() => checkTrip(city, UID)}>
                       {tripName}
                     </TripName> */}
@@ -403,7 +411,7 @@ function ManageSchedule() {
                         </EditTrip>
                         <EditList>Share list </EditList>
                       </Td>
-                    </tr>
+                    </Tr>
                   );
                 })}
               </TBody>
@@ -434,7 +442,7 @@ function ManageSchedule() {
                   renderProfileData();
 
                   return (
-                    <tr>
+                    <Tr>
                       <Td onClick={() => checkTrip(city, tripID)}>{city}</Td>
                       <Td>{time}</Td>
                       <Td>{ownerEmail}</Td>
@@ -443,7 +451,7 @@ function ManageSchedule() {
                           Trip
                         </EditTrip>
                       </Td>
-                    </tr>
+                    </Tr>
                   );
                 })}
               </TBody>
