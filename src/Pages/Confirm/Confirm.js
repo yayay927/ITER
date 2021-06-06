@@ -224,9 +224,9 @@ function ConfirmSchedule() {
           </ComponentToPrint>
         </Calendar>
         <Additional media="print" type="text/css">
-          <div>
+          {/* <div>
             <Save onClick={save}>Save to my trip</Save>
-          </div>
+          </div> */}
           <div>
             <Export onClick={handlePrint} /* onClick={exportPDF}*/>
               Export to PDF/ Print

@@ -95,7 +95,7 @@ const CurrentTrips = styled.div`
   font-weight: bold;
   font-size: 30px;
 `;
-const Details = styled.div`
+const Table = styled.table`
   margin-top: 50px;
   width: calc(100% - 120px);
 `;
@@ -107,13 +107,34 @@ const EachTrip = styled.div`
   height: 100px;
   margin-bottom: 10px;
 `;
+const THead = styled.thead`
+  border: 1px solid lightgrey;
+  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  height: 100px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 30px;
+`;
+const Td = styled.td``;
+const TBody = styled.tbody`
+  border: 1px solid lightgrey;
+  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  height: 100px;
+  margin-bottom: 10px;
+  font-size: 20px;
+`;
+
 const TripName = styled.div`
   text-decoration: underline;
 `;
 const Location = styled.div`
   cursor: pointer;
 `;
-const More = styled.div``;
+
 const Owner = styled.div`
   width: 100px;
 `;
@@ -181,6 +202,7 @@ function ManageSchedule() {
   const [loginEmail, setLoginEmail] = useState([]);
   // console.log(UID);
   // UID = "test9@gmail.com";
+  const [ownerEmail, setOwnerEmail] = useState([]);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -346,83 +368,86 @@ function ManageSchedule() {
         <Trips>
           <Current>
             <CurrentTrips>My Trips</CurrentTrips>
-            <Details>
-              <EachTrip>
-                {/* <TripName>Trip Name</TripName> */}
-                <Location>City</Location>
-                <More>
-                  <Date>Create date</Date>
-                </More>
-                {/* <Owner>Owner</Owner> */}
-                <CanEdit>Share with</CanEdit>
-                {/* <CanView>Can View</CanView> */}
-                <CanEdit>Edit</CanEdit>
-              </EachTrip>
-              {trip.map((trip) => {
-                console.log(trip);
-                const city = trip[1].city;
-                const time = trip[1].createTime;
-                const share = trip[1].share;
-                const tripID = trip[0];
+            <Table>
+              <THead>
+                <tr>
+                  <Td>City</Td>
+                  <Td>Create date</Td>
+                  <Td>Share with</Td>
+                  <Td>Edit</Td>
+                </tr>
+              </THead>
+              <TBody>
+                {trip.map((trip) => {
+                  console.log(trip);
+                  const city = trip[1].city;
+                  const time = trip[1].createTime;
+                  const share = trip[1].share;
+                  const tripID = trip[0];
 
-                /* const owner = trip[1].owner; */
+                  /* const owner = trip[1].owner; */
 
-                return (
-                  <EachTrip>
-                    {/* <TripName onClick={() => checkTrip(city, UID)}>
+                  return (
+                    <tr>
+                      {/* <TripName onClick={() => checkTrip(city, UID)}>
                       {tripName}
                     </TripName> */}
-                    <Location onClick={() => checkTrip(city, tripID)}>
-                      {city}
-                    </Location>
-                    <More>
-                      <Date>{time}</Date>
-                    </More>
-                    <CanEdit>{share}</CanEdit>
-                    <Edit>
-                      <EditTrip onClick={() => editTrip(city, tripID)}>
-                        Trip
-                      </EditTrip>
-                      <EditList>Share list </EditList>
-                    </Edit>
-                  </EachTrip>
-                );
-              })}
-            </Details>
+                      <Td onClick={() => checkTrip(city, tripID)}>{city}</Td>
+
+                      <Td>{time}</Td>
+
+                      <Td>{share}</Td>
+                      <Td>
+                        <EditTrip onClick={() => editTrip(city, tripID)}>
+                          Trip
+                        </EditTrip>
+                        <EditList>Share list </EditList>
+                      </Td>
+                    </tr>
+                  );
+                })}
+              </TBody>
+            </Table>
           </Current>
           <Past>
             <HistoryTrips>Shared Trips</HistoryTrips>
-            <Details>
-              <EachTrip>
-                {/* <TripName>Trip Name</TripName> */}
-                <Location>City</Location>
-                <More>
-                  <Date>Create date</Date>
-                </More>
-                <Owner>Owner</Owner>
-              </EachTrip>
-              {tripEdit.map((tripEdit) => {
-                const city = tripEdit[1].city;
-                const owner = tripEdit[1].owner;
-                /* const tripName = tripEdit[1].tripTitle; */
-                const tripName = "Wander";
-                const UID = tripEdit[0];
-                /* setTripCity(city); */
-                /* setTripUID(UID); */
-                return (
-                  <EachTrip>
-                    {/* <TripName>{tripName}</TripName> */}
-                    <Location>{city}</Location>
-                    <More>
-                      <Date>2021/05/17~2021/05/28</Date>
-                    </More>
-                    <Owner>
-                      <h5>{owner}</h5>
-                    </Owner>
-                  </EachTrip>
-                );
-              })}
-            </Details>
+            <Table>
+              <THead>
+                <tr>
+                  <Td>City</Td>
+                  <Td>Create date</Td>
+                  <Td>Owner</Td>
+                  <Td>Edit</Td>
+                </tr>
+              </THead>
+              <TBody>
+                {tripEdit.map((tripEdit) => {
+                  const owner = tripEdit[1].owner;
+                  const city = tripEdit[1].city;
+                  const time = tripEdit[1].createTime;
+                  const tripID = tripEdit[0];
+                  let userData;
+                  const renderProfileData = async () => {
+                    userData = await getProfileData(owner);
+                    setOwnerEmail(userData.email);
+                  };
+                  renderProfileData();
+
+                  return (
+                    <tr>
+                      <Td onClick={() => checkTrip(city, tripID)}>{city}</Td>
+                      <Td>{time}</Td>
+                      <Td>{ownerEmail}</Td>
+                      <Td>
+                        <EditTrip onClick={() => editTrip(city, tripID)}>
+                          Trip
+                        </EditTrip>
+                      </Td>
+                    </tr>
+                  );
+                })}
+              </TBody>
+            </Table>
           </Past>
         </Trips>
       </Manage>

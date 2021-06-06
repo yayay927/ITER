@@ -222,7 +222,7 @@ function getTripDataByCanEdit(UID) {
     firebase
       .firestore()
       .collection("user_trips_history")
-      .where("can_edit", "==", UID)
+      .where("share", "==", UID)
       // .doc(id)
       .get()
       .then((data) => {
