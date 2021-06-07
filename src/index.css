@@ -16,7 +16,7 @@ code {
 
 @media print {
   @page {
-    size: 1450px 1800px;
+    size: 800px 1880px;
     margin: 20mm;
   }
 }

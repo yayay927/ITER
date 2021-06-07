@@ -15,10 +15,9 @@ import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Confirm = styled.div`
-  margin: 160px 20px 40px 20px;
   display: flex;
   width: 80%;
-  margin: 160px auto 40px auto;
+  margin: 60px auto 40px auto;
 `;
 
 const ComponentToPrint = styled.div`
@@ -27,6 +26,7 @@ const ComponentToPrint = styled.div`
 
 const Calendar = styled.div`
   width: 70%;
+  margin: 50px;
 `;
 const Additional = styled.div`
   margin-left: 100px;
@@ -86,7 +86,7 @@ const Weather = styled.button`
   width: 300px;
   cursor: pointer;
 `;
-const pageStyle = `{ size: 2.5in 4in}`;
+const pageStyle = ` @page{ size: 2.5in 3in}`;
 
 function ConfirmSchedule() {
   let history = useHistory();
@@ -170,11 +170,12 @@ function ConfirmSchedule() {
             change, please click go back to edit your schedule.
           </h1> */}
           <ComponentToPrint
-            width="800px"
+            height="1200px"
+            width="1000px"
             pageStyle={pageStyle}
             ref={componentRef}
           >
-            <div width="700px">
+            <div width="1000px">
               <FullCalendar
                 plugins={[
                   dayGridPlugin,
@@ -198,8 +199,8 @@ function ConfirmSchedule() {
                 draggable={true}
                 droppable={true}
                 weekends={true}
-                minTime="06:00:00"
-                // height="1300px"
+                // minTime="06:00:00"
+                height="75vh"
                 eventContent={renderEventContent}
                 events={
                   eventsData

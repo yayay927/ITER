@@ -9,34 +9,26 @@ import { useParams } from "react-router-dom";
 
 // import MapboxDirections from "@mapbox/mapbox-gl-directions";
 // import Directions from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
-
+import car from "../../Components/car.png";
+import bicycle from "../../Components/bicycle.png";
+import walk from "../../Components/walk.png";
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import "mapbox-gl/dist/mapbox-gl.css"; // Updating node module will keep css up to date.
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"; // Updating node module will keep css up to date.
 
 // const MapboxDirections = require("@mapbox/mapbox-gl-directions");
 
-const Map = styled.iframe`
-  margin-bottom: 10px;
-`;
-
-const SideBar = styled.div`
-  background-color: rgba(35, 55, 75, 0.9);
-  color: #ffffff;
-  padding: 6px 12px;
-  font-family: monospace;
-  z-index: 1;
-  position: absolute;
-  top: 200px;
-  left: 50px;
-  margin: 12px;
-  border-radius: 4px;
-`;
+// const Map = styled.iframe`
+//   margin-bottom: 10px;
+//   width: 100%;
+// `;
 
 const MainMap = styled.div`
   height: 250px;
   margin-bottom: 20px;
   border-radius: 20px;
+  width: 95.5%;
+  margin: 10px;
   /* margin-top: 20px; */
 `;
 
@@ -46,18 +38,39 @@ const Transportations = styled.div`
   margin: 10px 0;
   /* display: flex; */
 `;
+const Title = styled.div`
+  font-size: 40px;
+  /* display: flex; */
+`;
 const AllTransportations = styled.div`
   display: flex;
+  width: 100%;
 `;
 const TransportationWay = styled.div`
-  height: 120px;
+  /* height: 120px;
   width: 120px;
   font-size: 20px;
-  margin: 5px;
-  background-color: #b6e13d;
+  margin: 5px; */
+  background-color: #eedd42;
+  opacity: 0.8;
   cursor: grab;
+
+  height: 100px;
+  width: 30%;
+  font-size: 20px;
+  margin: 10px;
+  /* background-color: lightgrey; */
+
+  /* border-radius: 10px; */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
 `;
-const TransportationIcon = styled.div``;
+// const TransportationIcon = styled.div``;
+const TransportationIcon = styled.img`
+  height: 70px;
+  margin: 30px;
+`;
 const TransportationTime = styled.div``;
 
 function ScheduleMap() {
@@ -177,7 +190,7 @@ function ScheduleMap() {
         return myJson.routes[0].duration / 60;
       });
     console.log(dri);
-    setDrivingTime(dri);
+    setDrivingTime(Math.round(dri));
 
     const wal = await fetch(
       `https://api.mapbox.com/directions/v5/mapbox/walking/${lngA},${latA};${lngB},${latB}?geometries=geojson&access_token=pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg`
@@ -191,7 +204,7 @@ function ScheduleMap() {
         return myJson.routes[0].duration / 60;
       });
     console.log(wal);
-    setWalkingTime(wal);
+    setWalkingTime(Math.round(wal));
 
     const cyc = await fetch(
       `https://api.mapbox.com/directions/v5/mapbox/cycling/${lngA},${latA};${lngB},${latB}?geometries=geojson&access_token=pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg`
@@ -205,7 +218,7 @@ function ScheduleMap() {
         return myJson.routes[0].duration / 60;
       });
     console.log(cyc);
-    setCyclingTime(cyc);
+    setCyclingTime(Math.round(cyc));
   }
 
   useEffect(() => {
@@ -231,23 +244,24 @@ function ScheduleMap() {
         <MainMap ref={mapContainer} className="map-container"></MainMap>
         <div id="trans">
           <Transportations className="trans">
-            Transportations
+            {/* <Title>Transportations</Title> */}
             <AllTransportations>
               <TransportationWay className="trans">
-                <TransportationIcon>Driving</TransportationIcon>
-                <TransportationTime>{drivingTime} minutes</TransportationTime>
+                <TransportationIcon src={car}></TransportationIcon>
+                <TransportationTime>{drivingTime} mins</TransportationTime>
               </TransportationWay>
               <TransportationWay className="trans">
-                <TransportationIcon>Walking</TransportationIcon>
-                <TransportationTime>{walkingTime} minutes</TransportationTime>
+                <TransportationIcon src={walk}></TransportationIcon>
+                <TransportationTime>{walkingTime} mins</TransportationTime>
               </TransportationWay>
               <TransportationWay className="trans">
-                <TransportationIcon>Cycling</TransportationIcon>
-                <TransportationTime>{cyclingTime} minutes</TransportationTime>
+                <TransportationIcon src={bicycle}></TransportationIcon>
+                <TransportationTime>{cyclingTime} mins</TransportationTime>
               </TransportationWay>
             </AllTransportations>
           </Transportations>
         </div>
+        {/* <PicFrame src={frame}></PicFrame> */}
       </div>
     </>
   );

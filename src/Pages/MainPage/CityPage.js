@@ -10,7 +10,7 @@ import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 // import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
 import TouristAttractions from "./TouristAttractions.js";
-import Transportations from "./Transportations.js";
+// import Transportations from "./Transportations.js";
 // import { MainFullCalendar } from "./MainFullCalendar.js";
 // import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
@@ -52,15 +52,16 @@ const MapAndAttractions = styled.div`
 
 const CityName = styled.div`
   width: 100%;
-  font-size: 55px;
+  font-size: 80px;
   margin-bottom: 10px;
+  font-family: "Allura";
   @media (max-width: 768px) {
     margin-bottom: 10px;
   }
 `;
 
 const Map = styled.div`
-  width: 90%;
+  width: 100%;
 `;
 
 const CalendarSpace = styled.div`
@@ -139,7 +140,7 @@ function CityPage() {
       eventData: (eventEl) => {
         return {
           title: eventEl.innerText,
-          color: "#b6e13d",
+          color: "#eedd42",
         };
       },
     });
@@ -211,9 +212,9 @@ function CityPage() {
           <div id="events">
             <TouristAttractions className="event"></TouristAttractions>
           </div>
-          <div id="trans">
+          {/* <div id="trans">
             <Transportations className="trans"></Transportations>
-          </div>
+          </div> */}
         </MapAndAttractions>
         <CalendarSpace>
           <FullCalendar
