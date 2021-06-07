@@ -16,7 +16,7 @@ import Swal from "sweetalert2";
 
 const Confirm = styled.div`
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: 60px auto 40px auto;
 `;
 
@@ -25,7 +25,7 @@ const ComponentToPrint = styled.div`
 `;
 
 const Calendar = styled.div`
-  width: 70%;
+  width: 100%;
   margin: 50px;
 `;
 const Additional = styled.div`
@@ -172,7 +172,7 @@ function ConfirmSchedule() {
           <ComponentToPrint
             id="printComponent"
             height="1200px"
-            width="1300px"
+            width="1000px"
             pageStyle={pageStyle}
             ref={componentRef}
           >
