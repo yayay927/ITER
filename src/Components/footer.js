@@ -17,10 +17,16 @@ const TheFooter = styled.div`
   /* justify-content: space-evenly; */
 `;
 const Audio = styled.div`
-  /* width: 100px; */
+  background-color: #91ccb9;
   position: fixed;
-  bottom: -20;
-  /* left: 5; */
+  bottom: -2px;
+  left: 3px;
+  opacity: 0.3;
+  height: 60px;
+  width: 100px;
+  /* margin: 10px; */
+  /* margin-bottom: 10px; */
+  color: white;
 `;
 const CopyRight = styled.div`
   color: white;
