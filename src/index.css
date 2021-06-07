@@ -21,7 +21,7 @@ code {
     margin: 80px;
   }
   #printComponent {
-    height: 1300px;
+    /* height: 1300px; */
     width: 800px;
   }
   /* #fullCalendar {
