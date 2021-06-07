@@ -62,9 +62,9 @@ const Export = styled.div`
   width: 60px;
   cursor: pointer;
   border-radius: 50px;
-  border: 2px solid #e1e4e7;
+  border: 2px solid #91ccb9;
   /* position: relative; */
-  background-color: #e1e4e7;
+  background-color: #91ccb9;
   :hover {
     background-color: #eedd42;
     border: 2px solid #eedd42;
@@ -300,18 +300,17 @@ function ConfirmSchedule() {
           {/* <div>
             <GoBack onClick={backToEdit}>Go back to edit trip</GoBack>
           </div> */}
-          {/* <div>{JSON.stringify(eventsData)}</div> */}
-          <div>
+
+          {/* <div>
             <Share onClick={share} title="Share">
               <Img src={shareTo}></Img>
             </Share>
-          </div>
-          <div>
-            {/* <div id="copy">{window.location.href}</div> */}
+          </div> */}
+          {/* <div>
             <Copy onClick={copy} title="Copy link">
               <Img src={link}></Img>
             </Copy>
-          </div>
+          </div> */}
 
           {/* <div>
             <Hotel>Book Hotels</Hotel>

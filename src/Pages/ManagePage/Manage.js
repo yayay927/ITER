@@ -31,7 +31,7 @@ const Profile = styled.div`
   margin: 50px auto;
   margin-bottom: 0;
   width: 50%;
-  border-bottom: 1px solid darkblue;
+  /* border-bottom: 1px solid darkblue; */
 `;
 // const Photo = styled.img`
 //   margin: 0 auto;
@@ -94,17 +94,20 @@ const Trips = styled.div`
   margin: 0 auto;
 `;
 const Current = styled.div`
-  margin-top: 10vh;
+  margin-top: 3%;
   display: flex;
   align-items: center;
-  height: 200px;
+  border-radius: 20px;
+  border: 1px solid #91ccb9;
+  height: 250px;
 `;
 const CurrentTrips = styled.div`
-  margin-top: 50px;
+  /* margin-top: 50px; */
   height: 220px;
   border-right: 1px solid lightgrey;
   width: 150px;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
   display: block;
   position: inline-block;
   font-weight: bold;
@@ -112,19 +115,26 @@ const CurrentTrips = styled.div`
   color: #eedd42;
 `;
 const Table = styled.table`
-  /* margin-top: 50px; */
+  margin-top: 10px;
   width: calc(100% - 120px);
   /* border-collapse: collapse; */
+  background-color: #91ccb9;
+  opacity: 0.5;
+  display: block;
+  height: 230px;
+  /* overflow-y: scroll; */
 `;
 
 const THead = styled.thead`
   border: 1px solid lightgrey;
   align-items: center;
+  height: 30px;
+  /* margin-top: 20px; */
   /* display: flex; */
   /* justify-content: space-around; */
-  height: 200px;
-
-  margin-bottom: 10px;
+  /* height: 200px; */
+  width: 100%;
+  /* margin-bottom: 20px; */
   font-weight: bold;
   font-size: 22px;
 `;
@@ -159,32 +169,36 @@ const TBody = styled.tbody`
   align-items: center;
   /* display: flex; */
   /* justify-content: space-around; */
-  height: 200px;
-  margin-bottom: 10px;
+  /* height: 200px; */
+  /* margin-bottom: 10px; */
   font-size: 20px;
+  width: 100%;
   /* overflow: scroll; */
   /* display: block; */
   /* height: 50px; */
   /* overflow: auto; */
   /* width: 100%; */
+  display: block;
+  height: 190px;
+  overflow-y: scroll;
 `;
 
-const TripName = styled.div`
-  text-decoration: underline;
-`;
-const Location = styled.div`
-  cursor: pointer;
-`;
+// const TripName = styled.div`
+//   text-decoration: underline;
+// `;
+// const Location = styled.div`
+//   cursor: pointer;
+// `;
 
-const Owner = styled.div`
-  width: 100px;
-`;
-const Access = styled.div`
-  width: 100px;
-`;
-const CanEdit = styled.div`
-  width: 100px;
-`;
+// const Owner = styled.div`
+//   width: 100px;
+// `;
+// const Access = styled.div`
+//   width: 100px;
+// `;
+// const CanEdit = styled.div`
+//   width: 100px;
+// `;
 const EditTd = styled.td`
   /* width: 30%; */
   display: flex;
@@ -232,17 +246,21 @@ const Link = styled.div`
   margin-top: 20px;
 `;
 const Past = styled.div`
-  margin-top: 2vh;
+  margin-top: 30px;
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
+  border-radius: 20px;
+  border: 1px solid #91ccb9;
+  height: 250px;
 `;
 const HistoryTrips = styled.div`
-  margin-top: 50px;
-  height: 250px;
+  /* margin-top: 50px; */
+  height: 220px;
   border-right: 1px solid lightgrey;
   width: 150px;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
   display: block;
   position: inline-block;
   font-weight: bold;
@@ -436,9 +454,9 @@ function ManageSchedule() {
             <Table>
               <THead>
                 <tr>
-                  <Td width="20%">City</Td>
-                  <Td width="20%">Create date</Td>
-                  <Td width="25%">Share with</Td>
+                  <Td width="22%">City</Td>
+                  <Td width="22%">Create date</Td>
+                  <Td width="26%">Share with</Td>
                   <Td width="30%">Edit</Td>
                 </tr>
               </THead>
@@ -458,15 +476,15 @@ function ManageSchedule() {
                       {tripName}
                     </TripName> */}
                       <TableCity
-                        width="20%"
+                        width="22%"
                         onClick={() => checkTrip(city, tripID)}
                       >
                         {city}
                       </TableCity>
 
-                      <TimeTd width="20%">{time}</TimeTd>
+                      <TimeTd width="22%">{time}</TimeTd>
 
-                      <EmailTd width="25%">{share}</EmailTd>
+                      <EmailTd width="26%">{share}</EmailTd>
                       <EditTd width="30%">
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
@@ -485,9 +503,9 @@ function ManageSchedule() {
             <Table>
               <THead>
                 <tr>
-                  <Td width="20%">City</Td>
-                  <Td width="20%">Create date</Td>
-                  <Td width="25%">Owner</Td>
+                  <Td width="22%">City</Td>
+                  <Td width="22%">Create date</Td>
+                  <Td width="26%">Owner</Td>
                   <Td width="30%">Edit</Td>
                 </tr>
               </THead>
@@ -507,13 +525,13 @@ function ManageSchedule() {
                   return (
                     <Tr>
                       <TableCity
-                        width="20%"
+                        width="22%"
                         onClick={() => checkTrip(city, tripID)}
                       >
                         {city}
                       </TableCity>
-                      <TimeTd width="20%">{time}</TimeTd>
-                      <EmailTd width="25%">{ownerEmail}</EmailTd>
+                      <TimeTd width="22%">{time}</TimeTd>
+                      <EmailTd width="26%">{ownerEmail}</EmailTd>
                       <EditTd width="30%">
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip

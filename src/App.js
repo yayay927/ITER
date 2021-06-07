@@ -33,7 +33,6 @@ function App() {
           <ManageSchedule>manage</ManageSchedule>
           {/* <Footer></Footer> */}
         </Route>
-
         <Route path="/">
           <Map id="map"></Map>
         </Route>
