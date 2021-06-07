@@ -16,7 +16,16 @@ code {
 
 @media print {
   @page {
-    size: 1450px 1800px;
-    margin: 20mm;
+    size: 800px 1200px;
+    /* margin: 20mm; */
+    margin: 80px;
   }
+  #printComponent {
+    height: 1200px;
+    width: 800px;
+  }
+  /* #fullCalendar {
+    height: 1300px;
+    width: 1000px;
+  } */
 }

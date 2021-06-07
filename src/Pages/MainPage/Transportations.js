@@ -38,9 +38,6 @@ function Transportation() {
           <TransportationIcon>Cycling</TransportationIcon>
           <TransportationTime></TransportationTime>
         </TransportationWay>
-        {/* <li className="event">Driving</li>
-      <li className="event">Walking</li>
-      <li className="event">Cycling</li> */}
       </AllTransportations>
     </Transportations>
   );

@@ -13,12 +13,25 @@ import "firebase/firestore";
 import { getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
+import printer from "../../Components/printer.png";
+import link from "../../Components/link.png";
+import shareTo from "../../Components/share.png";
 
 const Confirm = styled.div`
-  margin: 160px 20px 40px 20px;
-  display: flex;
-  width: 80%;
-  margin: 160px auto 40px auto;
+  max-width: 1280px;
+  /* display: flex; */
+  width: 55.5%;
+  margin: 100px auto 140px auto;
+  /* background-image: url("../../Components/desert.jpg"); */
+  /* height: 100vh; */
+`;
+const Title = styled.div`
+  font-family: "Allura";
+  font-size: 80px;
+  /* display: block; */
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: fit-content;
 `;
 
 const ComponentToPrint = styled.div`
@@ -26,41 +39,87 @@ const ComponentToPrint = styled.div`
 `;
 
 const Calendar = styled.div`
-  width: 70%;
+  width: 100%;
+  /* margin: 50px; */
+  margin-bottom: 50px;
 `;
 const Additional = styled.div`
   margin-left: 100px;
+  position: fixed;
+  right: 30px;
+  top: 30%;
   /* visibility: hidden; */
 `;
-const Save = styled.button`
+// const Save = styled.button`
+//   /* margin-top: 60px; */
+//   height: 80px;
+//   width: 300px;
+//   cursor: pointer;
+// `;
+const Export = styled.div`
+  margin-top: 60px;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid #91ccb9;
+  /* position: relative; */
+  background-color: #91ccb9;
+  :hover {
+    background-color: #eedd42;
+    border: 2px solid #eedd42;
+  }
+`;
+const Img = styled.img`
   /* margin-top: 60px; */
-  height: 80px;
-  width: 300px;
-  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  /* position: fixed; */
+  margin: 10px;
+  /* cursor: pointer; */
+  /* border-radius: 50px; */
+  /* border: 1px solid #eedd42; */
 `;
-const Export = styled.button`
+// const GoBack = styled.button`
+//   margin-top: 60px;
+//   height: 80px;
+//   width: 300px;
+//   cursor: pointer;
+// `;
+const Share = styled.div`
+  margin-top: 30px;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid #e1e4e7;
+  background-color: #e1e4e7;
+  :hover {
+    background-color: #eedd42;
+    border: 2px solid #eedd42;
+  }
+`;
+const Copy = styled.div`
+  margin-top: 30px;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid #e1e4e7;
+  background-color: #e1e4e7;
+  :hover {
+    background-color: #eedd42;
+    border: 2px solid #eedd42;
+  }
+`;
+const Printer = styled.img`
   margin-top: 60px;
   height: 80px;
-  width: 300px;
+  width: 80px;
   cursor: pointer;
-`;
-const GoBack = styled.button`
-  margin-top: 60px;
-  height: 80px;
-  width: 300px;
-  cursor: pointer;
-`;
-const Share = styled.button`
-  margin-top: 60px;
-  height: 80px;
-  width: 300px;
-  cursor: pointer;
-`;
-const Copy = styled.button`
-  margin-top: 60px;
-  height: 80px;
-  width: 300px;
-  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #eedd42;
+  resize: both;
 `;
 // const Hotel = styled.button`
 //   margin-top: 60px;
@@ -86,7 +145,7 @@ const Weather = styled.button`
   width: 300px;
   cursor: pointer;
 `;
-const pageStyle = `{ size: 2.5in 4in}`;
+const pageStyle = ` @page{ size: 2.5in 3in}`;
 
 function ConfirmSchedule() {
   let history = useHistory();
@@ -161,6 +220,7 @@ function ConfirmSchedule() {
   return (
     <div>
       <Confirm>
+        <Title>Have a good time in {cityName}!</Title>
         <Calendar>
           {/* <a href="../calendar"> */}
           {/* <Previous>Go Back</Previous> */}
@@ -170,12 +230,16 @@ function ConfirmSchedule() {
             change, please click go back to edit your schedule.
           </h1> */}
           <ComponentToPrint
-            width="800px"
+            id="printComponent"
+            height="1200px"
+            width="1000px"
             pageStyle={pageStyle}
             ref={componentRef}
           >
-            <div width="700px">
+            <div>
               <FullCalendar
+                // id="fullCalendar"
+                display="none"
                 plugins={[
                   dayGridPlugin,
                   timeGridPlugin,
@@ -198,8 +262,8 @@ function ConfirmSchedule() {
                 draggable={true}
                 droppable={true}
                 weekends={true}
-                minTime="06:00:00"
-                // height="1300px"
+                // minTime="06:00:00"
+                height="1300px"
                 eventContent={renderEventContent}
                 events={
                   eventsData
@@ -228,21 +292,26 @@ function ConfirmSchedule() {
             <Save onClick={save}>Save to my trip</Save>
           </div> */}
           <div>
-            <Export onClick={handlePrint} /* onClick={exportPDF}*/>
-              Export to PDF/ Print
+            <Export onClick={handlePrint} title="Export to PDF/ Print">
+              {/* Export to PDF/ Print */}
+              <Img src={printer}></Img>
             </Export>
           </div>
           {/* <div>
             <GoBack onClick={backToEdit}>Go back to edit trip</GoBack>
           </div> */}
-          {/* <div>{JSON.stringify(eventsData)}</div> */}
-          <div>
-            <Share onClick={share}>Share</Share>
-          </div>
-          <div>
-            {/* <div id="copy">{window.location.href}</div> */}
-            <Copy onClick={copy}>Copy trip link</Copy>
-          </div>
+
+          {/* <div>
+            <Share onClick={share} title="Share">
+              <Img src={shareTo}></Img>
+            </Share>
+          </div> */}
+          {/* <div>
+            <Copy onClick={copy} title="Copy link">
+              <Img src={link}></Img>
+            </Copy>
+          </div> */}
+
           {/* <div>
             <Hotel>Book Hotels</Hotel>
           </div> */}
