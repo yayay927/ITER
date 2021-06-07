@@ -172,7 +172,7 @@ function ConfirmSchedule() {
           <ComponentToPrint
             id="printComponent"
             height="1200px"
-            width="1400px"
+            width="1300px"
             pageStyle={pageStyle}
             ref={componentRef}
           >
