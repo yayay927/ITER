@@ -274,7 +274,7 @@ function Map() {
         </Marker>
       </MapContainer> */}
       {/* <LeafletMap id="mapid"></LeafletMap> */}
-      <Navigation></Navigation>
+      {/* <Navigation></Navigation> */}
     </div>
   );
 }

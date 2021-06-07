@@ -4,7 +4,7 @@ import ocean from "../Components/ocean.wav";
 
 const TheFooter = styled.div`
   background-color: #91ccb9;
-  height: 50px;
+  height: 60px;
   /* margin-top: -10px; */
   /* position: relative; */
   display: flex;

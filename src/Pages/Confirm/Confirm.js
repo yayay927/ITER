@@ -170,13 +170,15 @@ function ConfirmSchedule() {
             change, please click go back to edit your schedule.
           </h1> */}
           <ComponentToPrint
+            id="printComponent"
             height="1200px"
             width="1000px"
             pageStyle={pageStyle}
             ref={componentRef}
           >
-            <div width="1000px">
+            <div>
               <FullCalendar
+                // id="fullCalendar"
                 plugins={[
                   dayGridPlugin,
                   timeGridPlugin,
@@ -200,7 +202,7 @@ function ConfirmSchedule() {
                 droppable={true}
                 weekends={true}
                 // minTime="06:00:00"
-                height="75vh"
+                height="1300px"
                 eventContent={renderEventContent}
                 events={
                   eventsData
