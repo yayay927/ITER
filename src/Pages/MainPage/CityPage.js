@@ -71,11 +71,18 @@ const CalendarSpace = styled.div`
 `;
 
 const ConfirmButton = styled.button`
+  background-color: #eedd42;
+  display: block;
   cursor: pointer;
-  width: 100%;
-  height: 50px;
-  margin-top: 5px;
+  width: 50%;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 30px;
   font-family: "QuickSand";
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  color: white;
 `;
 
 function CityPage() {

@@ -40,6 +40,26 @@ const MainMap = styled.div`
   /* margin-top: 20px; */
 `;
 
+const Transportations = styled.div`
+  width: 100%;
+  font-size: 45px;
+  margin: 10px 0;
+  /* display: flex; */
+`;
+const AllTransportations = styled.div`
+  display: flex;
+`;
+const TransportationWay = styled.div`
+  height: 120px;
+  width: 120px;
+  font-size: 20px;
+  margin: 5px;
+  background-color: #b6e13d;
+  cursor: grab;
+`;
+const TransportationIcon = styled.div``;
+const TransportationTime = styled.div``;
+
 function ScheduleMap() {
   mapboxgl.accessToken =
     "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg";
@@ -91,6 +111,10 @@ function ScheduleMap() {
   const [lng, setLng] = useState(longitude);
   const [lat, setLat] = useState(latitude);
 
+  const [drivingTime, setDrivingTime] = useState();
+  const [walkingTime, setWalkingTime] = useState();
+  const [cyclingTime, setCyclingTime] = useState();
+
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
@@ -101,22 +125,88 @@ function ScheduleMap() {
       zoom: zoom,
     });
 
-    // const directions = new MapboxDirections({
-    //   accessToken:
-    //     "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg",
-    //   unit: "metric",
-    //   profile: "mapbox/driving",
-    // });
-    // map.addControl(directions, "top-left");
+    // map.current.addControl(
+    //   new MapboxDirections({
+    //     accessToken:
+    //       "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg",
+    //   }),
+    //   "top-left"
+    // );
 
-    map.current.addControl(
-      new MapboxDirections({
-        accessToken:
-          "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg",
-      }),
-      "top-left"
-    );
+    var directions = new MapboxDirections({
+      accessToken:
+        "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg",
+    });
+
+    map.current.addControl(directions, "top-left");
+
+    //get lng and lat for 2 points selected on map
+    map.current.on("load", () => {
+      console.log(directions.on());
+      console.log(directions.getOrigin());
+      console.log(directions.getDestination());
+
+      directions.on("route", () => {
+        console.log(directions.getOrigin());
+        console.log(directions.getDestination());
+        let pointA = directions.getOrigin().geometry.coordinates;
+        let pointB = directions.getDestination().geometry.coordinates;
+        let lngA = pointA[0];
+        let latA = pointA[1];
+        let lngB = pointB[0];
+        let latB = pointB[1];
+
+        console.log(lngA, latA, lngB, latB);
+        getTransportationAPI(lngA, latA, lngB, latB);
+      });
+
+      //route //profile
+    });
   });
+
+  async function getTransportationAPI(lngA, latA, lngB, latB) {
+    const dri = await fetch(
+      `https://api.mapbox.com/directions/v5/mapbox/driving/${lngA},${latA};${lngB},${latB}?geometries=geojson&access_token=pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg`
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        console.log(myJson.routes[0].duration / 60);
+        return myJson.routes[0].duration / 60;
+      });
+    console.log(dri);
+    setDrivingTime(dri);
+
+    const wal = await fetch(
+      `https://api.mapbox.com/directions/v5/mapbox/walking/${lngA},${latA};${lngB},${latB}?geometries=geojson&access_token=pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg`
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        console.log(myJson.routes[0].duration / 60);
+        return myJson.routes[0].duration / 60;
+      });
+    console.log(wal);
+    setWalkingTime(wal);
+
+    const cyc = await fetch(
+      `https://api.mapbox.com/directions/v5/mapbox/cycling/${lngA},${latA};${lngB},${latB}?geometries=geojson&access_token=pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg`
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        console.log(myJson.routes[0].duration / 60);
+        return myJson.routes[0].duration / 60;
+      });
+    console.log(cyc);
+    setCyclingTime(cyc);
+  }
 
   useEffect(() => {
     if (!map.current) return; // wait for map to initialize
@@ -138,10 +228,26 @@ function ScheduleMap() {
         loading="lazy"
       ></Map> */}
       <div>
-        {/* <SideBar className="sidebar">
-          Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-        </SideBar> */}
         <MainMap ref={mapContainer} className="map-container"></MainMap>
+        <div id="trans">
+          <Transportations className="trans">
+            Transportations
+            <AllTransportations>
+              <TransportationWay className="trans">
+                <TransportationIcon>Driving</TransportationIcon>
+                <TransportationTime>{drivingTime} minutes</TransportationTime>
+              </TransportationWay>
+              <TransportationWay className="trans">
+                <TransportationIcon>Walking</TransportationIcon>
+                <TransportationTime>{walkingTime} minutes</TransportationTime>
+              </TransportationWay>
+              <TransportationWay className="trans">
+                <TransportationIcon>Cycling</TransportationIcon>
+                <TransportationTime>{cyclingTime} minutes</TransportationTime>
+              </TransportationWay>
+            </AllTransportations>
+          </Transportations>
+        </div>
       </div>
     </>
   );

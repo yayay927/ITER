@@ -94,7 +94,7 @@ const Trips = styled.div`
   margin: 0 auto;
 `;
 const Current = styled.div`
-  margin-top: 5vh;
+  margin-top: 10vh;
   display: flex;
   align-items: center;
   height: 200px;
@@ -109,7 +109,7 @@ const CurrentTrips = styled.div`
   position: inline-block;
   font-weight: bold;
   font-size: 30px;
-  color: #91ccb9;
+  color: #eedd42;
 `;
 const Table = styled.table`
   /* margin-top: 50px; */
@@ -135,10 +135,16 @@ const Tr = styled.tr`
   border: none;
 `;
 const Td = styled.td`
-  width: 25%;
+  /* width: 25%; */
+`;
+const TimeTd = styled.td`
+  font-size: 15px;
+`;
+const EmailTd = styled.td`
+  font-size: 15px;
 `;
 const TableCity = styled.td`
-  width: 25%;
+  /* width: 20%; */
   cursor: pointer;
 
   :hover {
@@ -179,11 +185,12 @@ const Access = styled.div`
 const CanEdit = styled.div`
   width: 100px;
 `;
-const Edit = styled.div`
-  width: 100px;
+const EditTd = styled.td`
+  /* width: 30%; */
+  display: flex;
 `;
 const EditTrip = styled.button`
-  width: 80px;
+  /* width: 28%; */
   font-family: "QuickSand";
   /* font-weight: bold; */
   font-size: 16px;
@@ -199,7 +206,7 @@ const EditTrip = styled.button`
   }
 `;
 const EditList = styled.button`
-  width: 100px;
+  /* width: 28%; */
   font-family: "QuickSand";
   /* font-weight: bold; */
   font-size: 16px;
@@ -240,7 +247,7 @@ const HistoryTrips = styled.div`
   position: inline-block;
   font-weight: bold;
   font-size: 30px;
-  color: #91ccb9;
+  color: #eedd42;
 `;
 
 function ManageSchedule() {
@@ -429,10 +436,10 @@ function ManageSchedule() {
             <Table>
               <THead>
                 <tr>
-                  <Td>City</Td>
-                  <Td>Create date</Td>
-                  <Td>Share with</Td>
-                  <Td>Edit</Td>
+                  <Td width="20%">City</Td>
+                  <Td width="20%">Create date</Td>
+                  <Td width="25%">Share with</Td>
+                  <Td width="30%">Edit</Td>
                 </tr>
               </THead>
               <TBody>
@@ -450,19 +457,23 @@ function ManageSchedule() {
                       {/* <TripName onClick={() => checkTrip(city, UID)}>
                       {tripName}
                     </TripName> */}
-                      <TableCity onClick={() => checkTrip(city, tripID)}>
+                      <TableCity
+                        width="20%"
+                        onClick={() => checkTrip(city, tripID)}
+                      >
                         {city}
                       </TableCity>
 
-                      <Td>{time}</Td>
+                      <TimeTd width="20%">{time}</TimeTd>
 
-                      <Td>{share}</Td>
-                      <Td>
+                      <EmailTd width="25%">{share}</EmailTd>
+                      <EditTd width="30%">
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>
-                        <EditList>Share list </EditList>
-                      </Td>
+                        <EditList>Access</EditList>
+                        <EditList>Delete</EditList>
+                      </EditTd>
                     </Tr>
                   );
                 })}
@@ -474,10 +485,10 @@ function ManageSchedule() {
             <Table>
               <THead>
                 <tr>
-                  <Td>City</Td>
-                  <Td>Create date</Td>
-                  <Td>Owner</Td>
-                  <Td>Edit</Td>
+                  <Td width="20%">City</Td>
+                  <Td width="20%">Create date</Td>
+                  <Td width="25%">Owner</Td>
+                  <Td width="30%">Edit</Td>
                 </tr>
               </THead>
               <TBody>
@@ -495,16 +506,19 @@ function ManageSchedule() {
 
                   return (
                     <Tr>
-                      <TableCity onClick={() => checkTrip(city, tripID)}>
+                      <TableCity
+                        width="20%"
+                        onClick={() => checkTrip(city, tripID)}
+                      >
                         {city}
                       </TableCity>
-                      <Td>{time}</Td>
-                      <Td>{ownerEmail}</Td>
-                      <Td>
+                      <TimeTd width="20%">{time}</TimeTd>
+                      <EmailTd width="25%">{ownerEmail}</EmailTd>
+                      <EditTd width="30%">
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>
-                      </Td>
+                      </EditTd>
                     </Tr>
                   );
                 })}

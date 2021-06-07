@@ -121,7 +121,7 @@ function Map() {
       .setLngLat([12.3327, 45.4371])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Didot" size="70px">Venice</font></h1><a href="../city/Venice"><button>Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Venice</font></h1><a href="../city/Venice"><button>Go!</button></a>'
         )
       )
       .addTo(map.current);
