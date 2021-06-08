@@ -201,6 +201,7 @@ const EditTd = styled.td`
   display: flex;
 `;
 const EditTrip = styled.button`
+  cursor: pointer;
   font-family: "QuickSand";
   font-size: 16px;
   margin: 5px;
@@ -213,6 +214,7 @@ const EditTrip = styled.button`
   }
 `;
 const EditList = styled.button`
+  cursor: pointer;
   font-family: "QuickSand";
   font-size: 16px;
   margin: 5px;
@@ -275,6 +277,7 @@ function ManageSchedule() {
   // console.log(UID);
   // UID = "test9@gmail.com";
   const [ownerEmail, setOwnerEmail] = useState([]);
+  const [profileEmail, setProfileEmail] = useState([]);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -310,18 +313,19 @@ function ManageSchedule() {
       // console.log(loginEmail);
       console.log("4");
       setProfileData(resProfileData);
+      setProfileEmail(resProfileData.email);
     };
     renderProfileData();
   }, []);
   // console.log(profileData);
 
-  let change = firebase
-    .firestore()
-    .collection("user_trips_history")
-    .where("owner", "==", UID)
-    .onSnapshot((doc) => {
-      console.log(doc);
-    });
+  // let change = firebase
+  //   .firestore()
+  //   .collection("user_trips_history")
+  //   .where("owner", "==", UID)
+  //   .onSnapshot((doc) => {
+  //     console.log(doc);
+  //   });
 
   useEffect(() => {
     const renderEventsData = async () => {
@@ -330,13 +334,23 @@ function ManageSchedule() {
       setTrip(tripData);
     };
     renderEventsData();
-  }, [change]);
+  }, []);
   // console.log(trip);
+
+  console.log(profileEmail);
+
+  // let shareChange = firebase
+  //   .firestore()
+  //   .collection("user_trips_history")
+  //   .where("share", "==", UID)
+  //   .onSnapshot((doc) => {
+  //     console.log(doc);
+  //   });
 
   useEffect(() => {
     const renderEventsData = async () => {
-      let tripDataEdit = await getTripDataByCanEdit(UID);
-      // console.log(tripDataEdit);
+      let tripDataEdit = await getTripDataByCanEdit(UID); //profileEmail //UID
+      console.log(tripDataEdit);
       setTripEdit(tripDataEdit);
     };
     renderEventsData();
@@ -374,10 +388,24 @@ function ManageSchedule() {
     // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
 
-  function deleteTrip(tripID) {
+  async function deleteTrip(tripID) {
     console.log(tripID);
-    deleteTripData(tripID);
-    Swal.fire("Trip successfully deleted!");
+
+    await Swal.fire({
+      title: "Are you sure?",
+      // text: "Event: " + info.event.title,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Trip successfully deleted!", "success");
+        deleteTripData(tripID);
+      } else {
+      }
+    });
   }
 
   async function userLogOut() {
@@ -502,10 +530,10 @@ function ManageSchedule() {
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>
-                        <EditList>Access</EditList>
+                        {/* <EditList>Access</EditList>
                         <EditList onClick={() => deleteTrip(tripID)}>
                           Delete
-                        </EditList>
+                        </EditList> */}
                       </EditTd>
                     </Tr>
                   );
@@ -530,6 +558,7 @@ function ManageSchedule() {
                   const city = tripEdit[1].city;
                   const time = tripEdit[1].createTime;
                   const tripID = tripEdit[0];
+
                   let userData;
                   const renderProfileData = async () => {
                     userData = await getProfileData(owner);
