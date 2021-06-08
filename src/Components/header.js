@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
+import anchorW from "./anchorW.png";
+import anchorwhite from "./anchorwhite.png";
 import user from "./user.png";
 import suitcaseNew from "./suitcaseNew.png";
 import { useState } from "react";
@@ -33,7 +35,7 @@ const Block = styled.div`
   align-items: center;
 `;
 const Logo = styled.img`
-  height: 35px;
+  height: 45px;
   margin: 10px;
   cursor: pointer;
   margin-right: 30px;

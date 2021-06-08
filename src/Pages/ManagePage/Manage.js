@@ -28,6 +28,7 @@ const Manage = styled.div`
 //   font-weight: bolder;
 // `;
 const Profile = styled.div`
+  max-width: 1280px;
   margin: 50px auto;
   margin-bottom: 0;
   width: 50%;
@@ -115,20 +116,21 @@ const CurrentTrips = styled.div`
   color: #eedd42;
 `;
 const Table = styled.table`
-  margin-top: 10px;
+  /* margin-top: 10px; */
   width: calc(100% - 120px);
   /* border-collapse: collapse; */
   background-color: #91ccb9;
   opacity: 0.5;
   display: block;
-  height: 230px;
+  height: 220px;
   /* overflow-y: scroll; */
 `;
 
 const THead = styled.thead`
-  border: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   align-items: center;
   height: 30px;
+  line-height: 30px;
   /* margin-top: 20px; */
   /* display: flex; */
   /* justify-content: space-around; */
@@ -137,6 +139,10 @@ const THead = styled.thead`
   /* margin-bottom: 20px; */
   font-weight: bold;
   font-size: 22px;
+  display: block;
+`;
+const TrHead = styled.tr`
+  /* height: 60px; */
 `;
 const Tr = styled.tr`
   height: 60px;
@@ -165,21 +171,12 @@ const TableCity = styled.td`
 `;
 
 const TBody = styled.tbody`
-  border: 1px solid lightgrey;
+  /* border: 1px solid lightgrey; */
   align-items: center;
-  /* display: flex; */
-  /* justify-content: space-around; */
-  /* height: 200px; */
-  /* margin-bottom: 10px; */
   font-size: 20px;
   width: 100%;
-  /* overflow: scroll; */
-  /* display: block; */
-  /* height: 50px; */
-  /* overflow: auto; */
-  /* width: 100%; */
   display: block;
-  height: 190px;
+  height: 180px;
   overflow-y: scroll;
 `;
 
@@ -200,15 +197,11 @@ const TBody = styled.tbody`
 //   width: 100px;
 // `;
 const EditTd = styled.td`
-  /* width: 30%; */
   display: flex;
 `;
 const EditTrip = styled.button`
-  /* width: 28%; */
   font-family: "QuickSand";
-  /* font-weight: bold; */
   font-size: 16px;
-  /* color: #91ccb9; */
   margin: 5px;
   border: none;
   border-radius: 40px;
@@ -216,15 +209,11 @@ const EditTrip = styled.button`
   :hover {
     color: white;
     background-color: #91ccb9;
-    /* font-size: 25px; */
   }
 `;
 const EditList = styled.button`
-  /* width: 28%; */
   font-family: "QuickSand";
-  /* font-weight: bold; */
   font-size: 16px;
-  /* color: #91ccb9; */
   margin: 5px;
   border: none;
   border-radius: 40px;
@@ -232,7 +221,6 @@ const EditList = styled.button`
   :hover {
     color: white;
     background-color: #91ccb9;
-    /* font-size: 22px; */
   }
 `;
 // const CanView = styled.div`
@@ -453,12 +441,12 @@ function ManageSchedule() {
             <CurrentTrips>My Trips</CurrentTrips>
             <Table>
               <THead>
-                <tr>
-                  <Td width="22%">City</Td>
-                  <Td width="22%">Create date</Td>
-                  <Td width="26%">Share with</Td>
-                  <Td width="30%">Edit</Td>
-                </tr>
+                <TrHead>
+                  <Td style={{ width: "200px" }}>City</Td>
+                  <Td style={{ width: "200px" }}>Create date</Td>
+                  <Td style={{ width: "220px" }}>Share with</Td>
+                  <Td style={{ width: "200px" }}>Edit</Td>
+                </TrHead>
               </THead>
               <TBody>
                 {trip.map((trip) => {
@@ -476,21 +464,21 @@ function ManageSchedule() {
                       {tripName}
                     </TripName> */}
                       <TableCity
-                        width="22%"
+                        style={{ width: "200px" }}
                         onClick={() => checkTrip(city, tripID)}
                       >
                         {city}
                       </TableCity>
 
-                      <TimeTd width="22%">{time}</TimeTd>
+                      <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
 
-                      <EmailTd width="26%">{share}</EmailTd>
-                      <EditTd width="30%">
+                      <EmailTd style={{ width: "220px" }}>{share}</EmailTd>
+                      <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>
-                        <EditList>Access</EditList>
-                        <EditList>Delete</EditList>
+                        {/* <EditList>Access</EditList>
+                        <EditList>Delete</EditList> */}
                       </EditTd>
                     </Tr>
                   );
@@ -502,12 +490,12 @@ function ManageSchedule() {
             <HistoryTrips>Shared Trips</HistoryTrips>
             <Table>
               <THead>
-                <tr>
-                  <Td width="22%">City</Td>
-                  <Td width="22%">Create date</Td>
-                  <Td width="26%">Owner</Td>
-                  <Td width="30%">Edit</Td>
-                </tr>
+                <TrHead>
+                  <Td style={{ width: "200px" }}>City</Td>
+                  <Td style={{ width: "200px" }}>Create date</Td>
+                  <Td style={{ width: "220px" }}>Owner</Td>
+                  <Td style={{ width: "200px" }}>Edit</Td>
+                </TrHead>
               </THead>
               <TBody>
                 {tripEdit.map((tripEdit) => {
@@ -525,14 +513,14 @@ function ManageSchedule() {
                   return (
                     <Tr>
                       <TableCity
-                        width="22%"
+                        style={{ width: "200px" }}
                         onClick={() => checkTrip(city, tripID)}
                       >
                         {city}
                       </TableCity>
-                      <TimeTd width="22%">{time}</TimeTd>
-                      <EmailTd width="26%">{ownerEmail}</EmailTd>
-                      <EditTd width="30%">
+                      <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
+                      <EmailTd style={{ width: "220px" }}>{ownerEmail}</EmailTd>
+                      <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>

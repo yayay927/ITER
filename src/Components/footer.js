@@ -39,8 +39,8 @@ const Icon = styled.img`
   height: 35px;
   /* margin-left: 90vw; */
   position: fixed;
-  right: 20px;
-  bottom: 10px;
+  right: 17px;
+  bottom: 13px;
 `;
 
 function Footer() {

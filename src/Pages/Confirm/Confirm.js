@@ -21,7 +21,7 @@ const Confirm = styled.div`
   max-width: 1280px;
   /* display: flex; */
   width: 55.5%;
-  margin: 100px auto 140px auto;
+  margin: 60px auto 140px auto;
   /* background-image: url("../../Components/desert.jpg"); */
   /* height: 100vh; */
 `;
@@ -30,6 +30,7 @@ const Title = styled.div`
   font-size: 80px;
   /* display: block; */
   margin: 0 auto;
+  margin-top: 120px;
   margin-bottom: 40px;
   width: fit-content;
 `;
@@ -219,8 +220,8 @@ function ConfirmSchedule() {
 
   return (
     <div>
+      <Title>Have a good time in {cityName}!</Title>
       <Confirm>
-        <Title>Have a good time in {cityName}!</Title>
         <Calendar>
           {/* <a href="../calendar"> */}
           {/* <Previous>Go Back</Previous> */}
