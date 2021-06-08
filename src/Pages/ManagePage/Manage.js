@@ -315,6 +315,14 @@ function ManageSchedule() {
   }, []);
   // console.log(profileData);
 
+  let change = firebase
+    .firestore()
+    .collection("user_trips_history")
+    .where("owner", "==", UID)
+    .onSnapshot((doc) => {
+      console.log(doc);
+    });
+
   useEffect(() => {
     const renderEventsData = async () => {
       let tripData = await getTripDataByUID(UID);
@@ -322,7 +330,7 @@ function ManageSchedule() {
       setTrip(tripData);
     };
     renderEventsData();
-  }, []);
+  }, [change]);
   // console.log(trip);
 
   useEffect(() => {
@@ -369,6 +377,7 @@ function ManageSchedule() {
   function deleteTrip(tripID) {
     console.log(tripID);
     deleteTripData(tripID);
+    Swal.fire("Trip successfully deleted!");
   }
 
   async function userLogOut() {

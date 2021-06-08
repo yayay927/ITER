@@ -16,6 +16,7 @@ import Swal from "sweetalert2";
 import printer from "../../Components/printer.png";
 import link from "../../Components/link.png";
 import shareTo from "../../Components/share.png";
+import map from "../../Components/map.png";
 
 const Confirm = styled.div`
   max-width: 1280px;
@@ -218,6 +219,10 @@ function ConfirmSchedule() {
     alert("Copied the text: " + window.location.href);
   }
 
+  function goToMap() {
+    history.push("/");
+  }
+
   return (
     <div>
       <Title>Have a good time in {cityName}!</Title>
@@ -296,6 +301,12 @@ function ConfirmSchedule() {
             <Export onClick={handlePrint} title="Export to PDF/ Print">
               {/* Export to PDF/ Print */}
               <Img src={printer}></Img>
+            </Export>
+          </div>
+          <div>
+            <Export onClick={goToMap} title="Explore other cities.">
+              {/* Export to PDF/ Print */}
+              <Img src={map}></Img>
             </Export>
           </div>
           {/* <div>
