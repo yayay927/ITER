@@ -76,7 +76,6 @@ const CalendarSpace = styled.div`
 
 const ConfirmButton = styled.button`
   background-color: #91ccb9;
-
   display: block;
   cursor: pointer;
   width: 80px;
@@ -181,20 +180,24 @@ function CityPage() {
 
     var user = firebase.auth().currentUser;
     console.log(user);
-    let UID = user.uid;
-    console.log(UID);
+    if (user === null) {
+      Swal.fire("Please log in first.");
+    } else {
+      let UID = user.uid;
+      console.log(UID);
 
-    let time = new Date().toISOString().substr(0, 10);
-    console.log(time);
+      let time = new Date().toISOString().substr(0, 10);
+      console.log(time);
 
-    // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-    // let tripName = "";
-    async function idData() {
-      let idNumber = await storeEventsData(saveEvents, cityName, UID, time);
-      console.log(idNumber);
-      history.push(`/confirm?city=${cityName}&number=${idNumber}`);
+      // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+      // let tripName = "";
+      async function idData() {
+        let idNumber = await storeEventsData(saveEvents, cityName, UID, time);
+        console.log(idNumber);
+        history.push(`/confirm?city=${cityName}&number=${idNumber}`);
+      }
+      idData();
     }
-    idData();
   }
 
   useEffect(() => {
