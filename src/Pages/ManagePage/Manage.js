@@ -13,6 +13,7 @@ import {
   getProfileData,
   checkUserStatus,
   fireAuthLogOut,
+  deleteTripData,
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
 import { getDefaultNormalizer } from "@testing-library/dom";
@@ -220,7 +221,7 @@ const EditList = styled.button`
   height: 40px;
   :hover {
     color: white;
-    background-color: #91ccb9;
+    background-color: #eedd42;
   }
 `;
 // const CanView = styled.div`
@@ -355,6 +356,11 @@ function ManageSchedule() {
     // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
 
+  function deleteTrip(tripID) {
+    console.log(tripID);
+    deleteTripData(tripID);
+  }
+
   async function userLogOut() {
     await Swal.fire({
       title: "Do you want to log out?",
@@ -477,8 +483,10 @@ function ManageSchedule() {
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>
-                        {/* <EditList>Access</EditList>
-                        <EditList>Delete</EditList> */}
+                        <EditList>Access</EditList>
+                        <EditList onClick={() => deleteTrip(tripID)}>
+                          Delete
+                        </EditList>
                       </EditTd>
                     </Tr>
                   );

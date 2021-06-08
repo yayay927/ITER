@@ -322,6 +322,20 @@ function storeAccountData(email, name, uid) {
   );
 }
 
+function deleteTripData(tripID) {
+  firebase
+    .firestore()
+    .collection("user_trips_history")
+    .doc(tripID)
+    .delete()
+    .then(() => {
+      console.log("Document successfully deleted!");
+    })
+    .catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+}
+
 export {
   getAttractionData,
   fireAuthLogIn,
@@ -338,6 +352,7 @@ export {
   storeProfileData,
   getProfileData,
   storeAccountData,
+  deleteTripData,
 };
 
 // user.displayName: 顯示名稱

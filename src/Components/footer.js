@@ -47,7 +47,7 @@ function Footer() {
   return (
     <TheFooter className="App">
       <Audio>
-        <audio controls src={ocean} autoplay="true" loop>
+        <audio controls src={ocean} autoPlay="" loop>
           Your browser does not support the
           <code>audio</code> element.
         </audio>
