@@ -346,11 +346,21 @@ function ManageSchedule() {
   // console.log(tripView);
 
   function checkTrip(tripCity, tripID) {
+    if (tripCity === "Buenos Aires") {
+      tripCity = "BuenosAires";
+    } else if (tripCity === "Cape Town") {
+      tripCity = "CapeTown";
+    }
     history.push(`/confirm?city=${tripCity}&number=${tripID}`);
     // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
 
   function editTrip(tripCity, tripID) {
+    if (tripCity === "Buenos Aires") {
+      tripCity = "BuenosAires";
+    } else if (tripCity === "Cape Town") {
+      tripCity = "CapeTown";
+    }
     history.push(`/city/${tripCity}?number=${tripID}`);
     // history.push(`/confirm?city=${tripCity}&number=${tripID}`);
     // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
