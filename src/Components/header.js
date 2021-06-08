@@ -142,7 +142,7 @@ function Header() {
     await Swal.fire({
       title: "Login",
       html: `<input type="text" id="login" class="swal2-input" placeholder="Email">
-      <input type="password" id="password" class="swal2-input" placeholder="Password"><h5>* Password should be at least 6 digits</h5>`,
+      <input type="password" id="password" class="swal2-input" placeholder="Password"><P>* Test account: test@gmail.com/000000</P>`,
       confirmButtonText: "Sign in",
       focusConfirm: false,
       showCancelButton: true,

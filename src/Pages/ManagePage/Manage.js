@@ -164,9 +164,9 @@ const TableCity = styled.td`
   cursor: pointer;
 
   :hover {
-    color: #91ccb9;
+    color: white;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 28px;
   }
 `;
 
@@ -208,7 +208,7 @@ const EditTrip = styled.button`
   height: 40px;
   :hover {
     color: white;
-    background-color: #91ccb9;
+    background-color: #eedd42;
   }
 `;
 const EditList = styled.button`
