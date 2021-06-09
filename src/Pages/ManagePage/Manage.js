@@ -530,12 +530,15 @@ function ManageSchedule() {
 
                       <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
 
-                      <EmailTd style={{ width: "220px" }}>{share}</EmailTd>
+                      <EmailTd style={{ width: "220px" }}>
+                        {share}
+                        <EditList>List</EditList>
+                      </EmailTd>
                       <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>
-                        <EditList>Access</EditList>
+
                         <EditList onClick={() => deleteTrip(tripID)}>
                           Delete
                         </EditList>
@@ -583,7 +586,7 @@ function ManageSchedule() {
                       <EmailTd style={{ width: "220px" }}>{ownerEmail}</EmailTd>
                       <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>
-                          Trip
+                          Clone
                         </EditTrip>
                       </EditTd>
                     </Tr>
