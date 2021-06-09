@@ -4,7 +4,7 @@ import anchorW from "./anchorW.png";
 import anchorwhite from "./anchorwhite.png";
 import user from "./user.png";
 import suitcaseNew from "./suitcaseNew.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/firestore";
@@ -12,7 +12,6 @@ import {
   fireAuthLogIn,
   fireAuthSignUp,
   fireAuthLogOut,
-  // firebaseGoogle,
   storeAccountData,
   checkUserStatus,
 } from "../Utils/firebase";
@@ -57,6 +56,14 @@ const LogIn = styled.div`
   font-weight: bold;
   line-height: 40px;
 `;
+const LogOut = styled.div`
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  line-height: 40px;
+`;
 
 const Input = styled.input`
   margin: 10px;
@@ -77,8 +84,33 @@ function Header() {
     history.push(`/city/${inputValue}`);
     console.log(inputValue);
   };
+  const [userAuth, setUserAuth] = useState();
 
-  let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+  function headerView() {
+    if (userAuth) {
+      return (
+        <>
+          <LogOut>Log Out</LogOut>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <SignUp onClick={signUp}>Signup</SignUp>
+          <LogIn onClick={login}>Login</LogIn>
+        </>
+      );
+    }
+  }
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      setUserAuth(user);
+    });
+  }, []);
+
+  // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
 
   function managePage() {
     firebase.auth().onAuthStateChanged((user) => {
@@ -152,19 +184,17 @@ function Header() {
         if (!login || !password) {
           Swal.showValidationMessage(`Please enter login and password`);
         } else {
-          Swal.fire("Welcome back!");
+          fireAuthLogIn(login, password)
+            .then(() => {
+              Swal.fire("Welcome back!");
+            })
+            .catch(() => {
+              Swal.fire("Wrong email or password. Please try again.");
+            });
         }
 
-        fireAuthLogIn(login, password);
         return { login: login, password: password };
       },
-      // }).then((result) => {
-      //   Swal.fire(
-      //     `
-      //     Login: ${result.value.login}
-      //     Password: ${result.value.password}
-      //   `.trim()
-      //   );
     });
   }
 
@@ -174,21 +204,32 @@ function Header() {
         <a href="../">
           <Logo src={anchor} />
         </a>
-        <form onSubmit={getParamValue}>
-          {/* <Input
-            placeholder="Search a city you want to go"
-            onChange={(e) => setInputValue(e.target.value)}
-          /> */}
-        </form>
+        <form onSubmit={getParamValue}></form>
+
+        {/* {(() => {
+          if (userAuth) {
+            return (
+              <>
+                <SignUp>Log Out</SignUp>
+              </>
+            );
+          } else {
+            return (
+              <>
+                <SignUp onClick={signUp}>Signup</SignUp>
+                <LogIn onClick={login}>Login</LogIn>
+              </>
+            );
+          }
+        })()} */}
+
         <Block>
-          <SignUp onClick={signUp}>Signup</SignUp>
-          <LogIn onClick={login}>Login</LogIn>
+          {headerView()}
+          {/* <SignUp onClick={signUp}>Signup</SignUp>
+          <LogIn onClick={login}>Login</LogIn> */}
           <div onClick={managePage}>
             <Logo src={suitcaseNew} />
           </div>
-          {/* <a href="../verification">
-            <Logo src={user} />
-          </a> */}
         </Block>
       </TheHeader>
     </div>

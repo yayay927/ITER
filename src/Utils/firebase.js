@@ -46,7 +46,7 @@ function getAttractionData(cityName) {
 }
 
 function fireAuthLogIn(email, password) {
-  firebase
+  return firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
@@ -59,12 +59,13 @@ function fireAuthLogIn(email, password) {
       console.log(userNow);
       // alert("log in successfully");
       // ...
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      // return user.uid;
     });
-  console.log("log in");
+  // .catch((error) => {
+  //   var errorCode = error.code;
+  //   var errorMessage = error.message;
+
+  // });
 }
 
 function fireAuthSignUp(email, password) {
