@@ -319,21 +319,24 @@ function ManageSchedule() {
   }, []);
   // console.log(profileData);
 
-  // let change = firebase
-  //   .firestore()
-  //   .collection("user_trips_history")
-  //   .where("owner", "==", UID)
-  //   .onSnapshot((doc) => {
-  //     console.log(doc);
-  //   });
+  useEffect(() => {
+    firebase
+      .firestore()
+      .collection("user_trips_history")
+      .where("owner", "==", UID)
+      .onSnapshot((doc) => {
+        console.log(doc);
+      });
+  }, []);
+
+  const renderOwnEventsData = async () => {
+    let tripData = await getTripDataByUID(UID);
+    console.log(tripData);
+    setTrip(tripData);
+  };
 
   useEffect(() => {
-    const renderEventsData = async () => {
-      let tripData = await getTripDataByUID(UID);
-      console.log(tripData);
-      setTrip(tripData);
-    };
-    renderEventsData();
+    renderOwnEventsData();
   }, []);
   // console.log(trip);
 
@@ -347,12 +350,13 @@ function ManageSchedule() {
   //     console.log(doc);
   //   });
 
+  const renderEventsData = async () => {
+    let tripDataEdit = await getTripDataByCanEdit(UID); //profileEmail //UID
+    console.log(tripDataEdit);
+    setTripEdit(tripDataEdit);
+  };
+
   useEffect(() => {
-    const renderEventsData = async () => {
-      let tripDataEdit = await getTripDataByCanEdit(UID); //profileEmail //UID
-      console.log(tripDataEdit);
-      setTripEdit(tripDataEdit);
-    };
     renderEventsData();
   }, []);
   // console.log(tripEdit);
@@ -403,6 +407,7 @@ function ManageSchedule() {
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "Trip successfully deleted!", "success");
         deleteTripData(tripID);
+        renderOwnEventsData();
       } else {
       }
     });
@@ -530,10 +535,10 @@ function ManageSchedule() {
                         <EditTrip onClick={() => editTrip(city, tripID)}>
                           Trip
                         </EditTrip>
-                        {/* <EditList>Access</EditList>
+                        <EditList>Access</EditList>
                         <EditList onClick={() => deleteTrip(tripID)}>
                           Delete
-                        </EditList> */}
+                        </EditList>
                       </EditTd>
                     </Tr>
                   );
