@@ -16,12 +16,13 @@ import Swal from "sweetalert2";
 import printer from "../../Components/printer.png";
 import link from "../../Components/link.png";
 import shareTo from "../../Components/share.png";
+import map from "../../Components/map.png";
 
 const Confirm = styled.div`
   max-width: 1280px;
   /* display: flex; */
   width: 55.5%;
-  margin: 100px auto 140px auto;
+  margin: 60px auto 140px auto;
   /* background-image: url("../../Components/desert.jpg"); */
   /* height: 100vh; */
 `;
@@ -30,6 +31,7 @@ const Title = styled.div`
   font-size: 80px;
   /* display: block; */
   margin: 0 auto;
+  margin-top: 120px;
   margin-bottom: 40px;
   width: fit-content;
 `;
@@ -217,10 +219,14 @@ function ConfirmSchedule() {
     alert("Copied the text: " + window.location.href);
   }
 
+  function goToMap() {
+    history.push("/");
+  }
+
   return (
     <div>
+      <Title>Have a good time in {cityName}!</Title>
       <Confirm>
-        <Title>Have a good time in {cityName}!</Title>
         <Calendar>
           {/* <a href="../calendar"> */}
           {/* <Previous>Go Back</Previous> */}
@@ -247,7 +253,7 @@ function ConfirmSchedule() {
                   adaptivePlugin,
                 ]}
                 headerToolbar={{
-                  left: "prev, next, today",
+                  left: "prev next today",
                   center: "title",
                   right: "timeGridWeek",
                 }}
@@ -295,6 +301,12 @@ function ConfirmSchedule() {
             <Export onClick={handlePrint} title="Export to PDF/ Print">
               {/* Export to PDF/ Print */}
               <Img src={printer}></Img>
+            </Export>
+          </div>
+          <div>
+            <Export onClick={goToMap} title="Explore other cities.">
+              {/* Export to PDF/ Print */}
+              <Img src={map}></Img>
             </Export>
           </div>
           {/* <div>

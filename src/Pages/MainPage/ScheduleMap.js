@@ -69,7 +69,7 @@ const TransportationWay = styled.div`
 // const TransportationIcon = styled.div``;
 const TransportationIcon = styled.img`
   height: 70px;
-  margin: 30px;
+  margin: 25px;
 `;
 const TransportationTime = styled.div``;
 
@@ -248,15 +248,24 @@ function ScheduleMap() {
             <AllTransportations>
               <TransportationWay className="trans">
                 <TransportationIcon src={car}></TransportationIcon>
-                <TransportationTime>{drivingTime} mins</TransportationTime>
+                <div>
+                  <TransportationTime>Driving</TransportationTime>
+                  <TransportationTime>{drivingTime} mins</TransportationTime>
+                </div>
               </TransportationWay>
               <TransportationWay className="trans">
                 <TransportationIcon src={walk}></TransportationIcon>
-                <TransportationTime>{walkingTime} mins</TransportationTime>
+                <div>
+                  <TransportationTime>Walking</TransportationTime>
+                  <TransportationTime>{walkingTime} mins</TransportationTime>
+                </div>
               </TransportationWay>
               <TransportationWay className="trans">
                 <TransportationIcon src={bicycle}></TransportationIcon>
-                <TransportationTime>{cyclingTime} mins</TransportationTime>
+                <div>
+                  <TransportationTime>Cycling</TransportationTime>
+                  <TransportationTime>{cyclingTime} mins</TransportationTime>
+                </div>
               </TransportationWay>
             </AllTransportations>
           </Transportations>

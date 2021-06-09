@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
+import anchorW from "./anchorW.png";
+import anchorwhite from "./anchorwhite.png";
 import user from "./user.png";
 import suitcaseNew from "./suitcaseNew.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/firestore";
@@ -10,7 +12,6 @@ import {
   fireAuthLogIn,
   fireAuthSignUp,
   fireAuthLogOut,
-  // firebaseGoogle,
   storeAccountData,
   checkUserStatus,
 } from "../Utils/firebase";
@@ -33,7 +34,7 @@ const Block = styled.div`
   align-items: center;
 `;
 const Logo = styled.img`
-  height: 35px;
+  height: 45px;
   margin: 10px;
   cursor: pointer;
   margin-right: 30px;
@@ -45,7 +46,7 @@ const SignUp = styled.div`
   cursor: pointer;
   color: white;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 45px;
 `;
 const LogIn = styled.div`
   height: 50px;
@@ -53,7 +54,15 @@ const LogIn = styled.div`
   cursor: pointer;
   color: white;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 45px;
+`;
+const LogOut = styled.div`
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  line-height: 45px;
 `;
 
 const Input = styled.input`
@@ -75,8 +84,33 @@ function Header() {
     history.push(`/city/${inputValue}`);
     console.log(inputValue);
   };
+  const [userAuth, setUserAuth] = useState();
 
-  let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+  function headerView() {
+    if (userAuth) {
+      return (
+        <>
+          <LogOut onClick={logOut}>Log Out</LogOut>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <SignUp onClick={signUp}>Signup</SignUp>
+          <LogIn onClick={login}>Login</LogIn>
+        </>
+      );
+    }
+  }
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      setUserAuth(user);
+    });
+  }, []);
+
+  // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
 
   function managePage() {
     firebase.auth().onAuthStateChanged((user) => {
@@ -140,7 +174,7 @@ function Header() {
     await Swal.fire({
       title: "Login",
       html: `<input type="text" id="login" class="swal2-input" placeholder="Email">
-      <input type="password" id="password" class="swal2-input" placeholder="Password"><h5>* Password should be at least 6 digits</h5>`,
+      <input type="password" id="password" class="swal2-input" placeholder="Password"><P>* Test account: test@gmail.com/000000</P>`,
       confirmButtonText: "Sign in",
       focusConfirm: false,
       showCancelButton: true,
@@ -150,19 +184,51 @@ function Header() {
         if (!login || !password) {
           Swal.showValidationMessage(`Please enter login and password`);
         } else {
-          Swal.fire("Welcome back!");
+          fireAuthLogIn(login, password)
+            .then(() => {
+              Swal.fire("Welcome back!");
+            })
+            .catch(() => {
+              Swal.fire("Wrong email or password. Please try again.");
+            });
         }
 
-        fireAuthLogIn(login, password);
         return { login: login, password: password };
       },
-      // }).then((result) => {
-      //   Swal.fire(
-      //     `
-      //     Login: ${result.value.login}
-      //     Password: ${result.value.password}
-      //   `.trim()
-      //   );
+    });
+  }
+
+  async function logOut() {
+    await Swal.fire({
+      title: "Do you want to log out?",
+      // text: "Event: ",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, log out",
+    }).then((result) => {
+      // fireAuthLogOut();
+
+      if (result.isConfirmed) {
+        firebase
+          .auth()
+          .signOut()
+          .then(() => {
+            // Sign-out successful.
+            console.log("log out successfully");
+            // var user = firebase.auth().currentUser.uid;
+            // console.log(user + "log out successfully");
+            // alert(user + "log out successfully");
+            // return;
+            Swal.fire("You're logged out", "", "success"); //"Your're logged out'.",
+            history.push("/");
+          })
+          .catch((error) => {
+            console.log("log out error");
+            // An error happened.
+          });
+      }
     });
   }
 
@@ -172,21 +238,32 @@ function Header() {
         <a href="../">
           <Logo src={anchor} />
         </a>
-        <form onSubmit={getParamValue}>
-          {/* <Input
-            placeholder="Search a city you want to go"
-            onChange={(e) => setInputValue(e.target.value)}
-          /> */}
-        </form>
+        <form onSubmit={getParamValue}></form>
+
+        {/* {(() => {
+          if (userAuth) {
+            return (
+              <>
+                <SignUp>Log Out</SignUp>
+              </>
+            );
+          } else {
+            return (
+              <>
+                <SignUp onClick={signUp}>Signup</SignUp>
+                <LogIn onClick={login}>Login</LogIn>
+              </>
+            );
+          }
+        })()} */}
+
         <Block>
-          <SignUp onClick={signUp}>Signup</SignUp>
-          <LogIn onClick={login}>Login</LogIn>
+          {headerView()}
+          {/* <SignUp onClick={signUp}>Signup</SignUp>
+          <LogIn onClick={login}>Login</LogIn> */}
           <div onClick={managePage}>
             <Logo src={suitcaseNew} />
           </div>
-          {/* <a href="../verification">
-            <Logo src={user} />
-          </a> */}
         </Block>
       </TheHeader>
     </div>

@@ -34,6 +34,8 @@ const CalendarPage = styled.div`
 `;
 const MainPart = styled.div`
   display: flex;
+  width: 98%;
+  margin: 0 auto;
   @media (max-width: 768px) {
     display: block;
   }
@@ -65,25 +67,32 @@ const Map = styled.div`
 `;
 
 const CalendarSpace = styled.div`
-  width: 32%;
+  margin-top: 50px;
+  width: 35%;
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
 
 const ConfirmButton = styled.button`
-  background-color: #eedd42;
+  background-color: #91ccb9;
   display: block;
   cursor: pointer;
-  width: 50%;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   margin-top: 30px;
   font-family: "QuickSand";
   border-radius: 50px;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
+  position: fixed;
+  right: 30px;
+  top: 50px;
+  :hover {
+    background-color: #eedd42;
+  }
 `;
 
 function CityPage() {
@@ -171,20 +180,24 @@ function CityPage() {
 
     var user = firebase.auth().currentUser;
     console.log(user);
-    let UID = user.uid;
-    console.log(UID);
+    if (user === null) {
+      Swal.fire("Please log in first.");
+    } else {
+      let UID = user.uid;
+      console.log(UID);
 
-    let time = new Date().toISOString().substr(0, 10);
-    console.log(time);
+      let time = new Date().toISOString().substr(0, 10);
+      console.log(time);
 
-    // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-    // let tripName = "";
-    async function idData() {
-      let idNumber = await storeEventsData(saveEvents, cityName, UID, time);
-      console.log(idNumber);
-      history.push(`/confirm?city=${cityName}&number=${idNumber}`);
+      // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
+      // let tripName = "";
+      async function idData() {
+        let idNumber = await storeEventsData(saveEvents, cityName, UID, time);
+        console.log(idNumber);
+        history.push(`/confirm?city=${cityName}&number=${idNumber}`);
+      }
+      idData();
     }
-    idData();
   }
 
   useEffect(() => {
@@ -203,9 +216,9 @@ function CityPage() {
 
   return (
     <CalendarPage>
-      <CityName>{cityName}</CityName>
       <MainPart>
         <MapAndAttractions>
+          <CityName>{cityName}</CityName>
           <Map>
             <ScheduleMap />
           </Map>
@@ -229,13 +242,13 @@ function CityPage() {
             headerToolbar={{
               // left: "prev, next, myCustomButton", //today,
               // center: "title",
-              right: "dayGridMonth, timeGridWeek", //, timeGridDay
+              right: "dayGridMonth timeGridWeek", //, timeGridDay
               // right: "prev, today, next,",
             }}
             footerToolbar={{
               left: "myCustomButton", //today,
               // center: "prev, today, next,",
-              right: "prev, today, next,", //, timeGridDay
+              right: "prev today next", //, timeGridDay
             }}
             ref={calendarRef}
             customButtons={{
@@ -342,7 +355,7 @@ function CityPage() {
             // allDaySlot={false}
             minTime="06:00:00"
             // maxTime="24:00:00"
-            height="70vh" //"1000px"
+            height="74vh" //"1000px"
             events={
               renderEvent
               // [
@@ -382,9 +395,9 @@ function CityPage() {
               });
             }}
           />
-          <ConfirmButton onClick={getEvents}>Finish edit & Save</ConfirmButton>
         </CalendarSpace>
       </MainPart>
+      <ConfirmButton onClick={getEvents}>Finish edit & Save</ConfirmButton>
     </CalendarPage>
   );
 }
