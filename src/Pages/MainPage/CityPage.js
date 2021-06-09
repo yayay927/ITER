@@ -24,7 +24,7 @@ import Swal from "sweetalert2";
 // import bootstrapPlugin from "@fullcalendar/bootstrap";
 
 const CalendarPage = styled.div`
-  margin: 30px 50px 70px 50px;
+  margin: 70px 50px 70px 50px;
   width: 100vw;
   /* display: flex; */
   /* margin-top: 80px; */

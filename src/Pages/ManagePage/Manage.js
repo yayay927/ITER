@@ -532,7 +532,7 @@ function ManageSchedule() {
 
                       <EmailTd style={{ width: "220px" }}>
                         {share}
-                        <EditList>List</EditList>
+                        {/* <EditList>List</EditList> */}
                       </EmailTd>
                       <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>

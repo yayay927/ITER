@@ -60,7 +60,7 @@ const Additional = styled.div`
 //   cursor: pointer;
 // `;
 const Export = styled.div`
-  margin-top: 30px;
+  margin-top: 60px;
   height: 60px;
   width: 60px;
   cursor: pointer;
@@ -331,11 +331,11 @@ function ConfirmSchedule() {
               <Img src={printer}></Img>
             </Export>
           </div>
-          <div>
+          {/* <div>
             <Export onClick={copy} title="Copy link">
               <Img src={link}></Img>
             </Export>
-          </div>
+          </div> */}
           <div>
             <Export onClick={goToMap} title="Explore other cities.">
               {/* Export to PDF/ Print */}
