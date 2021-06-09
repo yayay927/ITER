@@ -242,13 +242,13 @@ function CityPage() {
             headerToolbar={{
               // left: "prev, next, myCustomButton", //today,
               // center: "title",
-              right: "dayGridMonth, timeGridWeek", //, timeGridDay
+              right: "dayGridMonth timeGridWeek", //, timeGridDay
               // right: "prev, today, next,",
             }}
             footerToolbar={{
               left: "myCustomButton", //today,
               // center: "prev, today, next,",
-              right: "prev, today, next,", //, timeGridDay
+              right: "prev today next", //, timeGridDay
             }}
             ref={calendarRef}
             customButtons={{
