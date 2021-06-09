@@ -492,7 +492,7 @@ function ManageSchedule() {
           {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
           <Name>{profileData.name}</Name>
           <Email>{profileData.email}</Email>
-          <LogOut onClick={userLogOut}>Log out</LogOut>
+          {/* <LogOut onClick={userLogOut}>Log out</LogOut> */}
         </Profile>
         <Trips>
           <Current>

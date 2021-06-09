@@ -46,7 +46,7 @@ const SignUp = styled.div`
   cursor: pointer;
   color: white;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 45px;
 `;
 const LogIn = styled.div`
   height: 50px;
@@ -54,7 +54,7 @@ const LogIn = styled.div`
   cursor: pointer;
   color: white;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 45px;
 `;
 const LogOut = styled.div`
   height: 50px;
@@ -62,7 +62,7 @@ const LogOut = styled.div`
   cursor: pointer;
   color: white;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 45px;
 `;
 
 const Input = styled.input`
@@ -90,7 +90,7 @@ function Header() {
     if (userAuth) {
       return (
         <>
-          <LogOut>Log Out</LogOut>
+          <LogOut onClick={logOut}>Log Out</LogOut>
         </>
       );
     } else {
@@ -195,6 +195,40 @@ function Header() {
 
         return { login: login, password: password };
       },
+    });
+  }
+
+  async function logOut() {
+    await Swal.fire({
+      title: "Do you want to log out?",
+      // text: "Event: ",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, log out",
+    }).then((result) => {
+      // fireAuthLogOut();
+
+      if (result.isConfirmed) {
+        firebase
+          .auth()
+          .signOut()
+          .then(() => {
+            // Sign-out successful.
+            console.log("log out successfully");
+            // var user = firebase.auth().currentUser.uid;
+            // console.log(user + "log out successfully");
+            // alert(user + "log out successfully");
+            // return;
+            Swal.fire("You're logged out", "", "success"); //"Your're logged out'.",
+            history.push("/");
+          })
+          .catch((error) => {
+            console.log("log out error");
+            // An error happened.
+          });
+      }
     });
   }
 
