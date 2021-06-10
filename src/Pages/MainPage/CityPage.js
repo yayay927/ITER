@@ -24,15 +24,16 @@ import Swal from "sweetalert2";
 // import bootstrapPlugin from "@fullcalendar/bootstrap";
 
 const CalendarPage = styled.div`
-  margin: 0px 50px 70px 50px;
+  margin: 70px 50px 70px 50px;
   width: 100vw;
   /* display: flex; */
-  margin-top: 80px;
+  /* margin-top: 80px; */
   @media (max-width: 768px) {
     margin: 70px 0px;
   }
 `;
 const MainPart = styled.div`
+  height: 95%;
   display: flex;
   width: 98%;
   margin: 0 auto;

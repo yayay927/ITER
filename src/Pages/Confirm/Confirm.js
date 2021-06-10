@@ -17,6 +17,7 @@ import printer from "../../Components/printer.png";
 import link from "../../Components/link.png";
 import shareTo from "../../Components/share.png";
 import map from "../../Components/map.png";
+import SocialMediaShare from "./SocialMediaShare.js";
 
 const Confirm = styled.div`
   max-width: 1280px;
@@ -31,7 +32,7 @@ const Title = styled.div`
   font-size: 80px;
   /* display: block; */
   margin: 0 auto;
-  margin-top: 120px;
+  margin-top: 40px;
   margin-bottom: 40px;
   width: fit-content;
 `;
@@ -156,6 +157,8 @@ function ConfirmSchedule() {
     content: () => componentRef.current,
   });
   const [eventsData, setEventsData] = useState([]);
+  const [copySuccess, setCopySuccess] = useState("");
+  const textAreaRef = useRef(null);
 
   useEffect(() => {
     Swal.fire("Congratulations on completing your schedule!");
@@ -212,11 +215,35 @@ function ConfirmSchedule() {
   }
 
   function copy() {
+    console.log("hey");
     // var copyText = document.getElementById("copy");
     // copyText.select();
     // document.execCommand("copy");
 
-    alert("Copied the text: " + window.location.href);
+    function copyToClipboard(e) {
+      textAreaRef.current.select();
+      document.execCommand("copy");
+      // This is just personal preference.
+      // I prefer to not show the the whole text area selected.
+      e.target.focus();
+      setCopySuccess("Copied!");
+      console.log("here");
+    }
+
+    return (
+      <div>
+        {document.queryCommandSupported("copy") && (
+          <div>
+            <button onClick={copyToClipboard}>Copy</button>
+            {copySuccess}
+          </div>
+        )}
+        <form>
+          <textarea ref={textAreaRef} value="" />
+        </form>
+      </div>
+    );
+    // alert("Copied the text: " + window.location.href);
   }
 
   function goToMap() {
@@ -225,6 +252,7 @@ function ConfirmSchedule() {
 
   return (
     <div>
+      <SocialMediaShare></SocialMediaShare>
       <Title>Have a good time in {cityName}!</Title>
       <Confirm>
         <Calendar>
@@ -303,6 +331,11 @@ function ConfirmSchedule() {
               <Img src={printer}></Img>
             </Export>
           </div>
+          {/* <div>
+            <Export onClick={copy} title="Copy link">
+              <Img src={link}></Img>
+            </Export>
+          </div> */}
           <div>
             <Export onClick={goToMap} title="Explore other cities.">
               {/* Export to PDF/ Print */}
@@ -317,11 +350,6 @@ function ConfirmSchedule() {
             <Share onClick={share} title="Share">
               <Img src={shareTo}></Img>
             </Share>
-          </div> */}
-          {/* <div>
-            <Copy onClick={copy} title="Copy link">
-              <Img src={link}></Img>
-            </Copy>
           </div> */}
 
           {/* <div>

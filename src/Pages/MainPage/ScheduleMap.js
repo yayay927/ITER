@@ -23,8 +23,12 @@ import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"; // Updating
 //   width: 100%;
 // `;
 
+const CityMap = styled.div`
+  display: flex;
+`;
+
 const MainMap = styled.div`
-  height: 250px;
+  height: 400px;
   margin-bottom: 20px;
   border-radius: 20px;
   width: 95.5%;
@@ -43,7 +47,7 @@ const Title = styled.div`
   /* display: flex; */
 `;
 const AllTransportations = styled.div`
-  display: flex;
+  /* display: flex; */
   width: 100%;
 `;
 const TransportationWay = styled.div`
@@ -56,8 +60,8 @@ const TransportationWay = styled.div`
   cursor: grab;
 
   height: 100px;
-  width: 30%;
-  font-size: 20px;
+  /* width: 20%; */
+  font-size: 16px;
   margin: 10px;
   /* background-color: lightgrey; */
 
@@ -68,8 +72,8 @@ const TransportationWay = styled.div`
 `;
 // const TransportationIcon = styled.div``;
 const TransportationIcon = styled.img`
-  height: 70px;
-  margin: 25px;
+  height: 50px;
+  margin: 5px;
 `;
 const TransportationTime = styled.div``;
 
@@ -240,7 +244,7 @@ function ScheduleMap() {
         allowFullScreen=""
         loading="lazy"
       ></Map> */}
-      <div>
+      <CityMap>
         <MainMap ref={mapContainer} className="map-container"></MainMap>
         <div id="trans">
           <Transportations className="trans">
@@ -271,7 +275,7 @@ function ScheduleMap() {
           </Transportations>
         </div>
         {/* <PicFrame src={frame}></PicFrame> */}
-      </div>
+      </CityMap>
     </>
   );
 }
