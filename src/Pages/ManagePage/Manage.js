@@ -17,6 +17,7 @@ import {
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
 import { getDefaultNormalizer } from "@testing-library/dom";
+import ListModal from "./ListModal";
 
 const Manage = styled.div`
   margin-top: 100px;
@@ -120,8 +121,8 @@ const Table = styled.table`
   /* margin-top: 10px; */
   width: calc(100% - 120px);
   /* border-collapse: collapse; */
-  background-color: #91ccb9;
-  opacity: 0.5;
+  background-color: #c1dbd5;
+  /* opacity: 0.5; */
   display: block;
   height: 220px;
   /* overflow-y: scroll; */
@@ -413,38 +414,9 @@ function ManageSchedule() {
     });
   }
 
-  async function userLogOut() {
-    await Swal.fire({
-      title: "Do you want to log out?",
-      // text: "Event: ",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, log out",
-    }).then((result) => {
-      // fireAuthLogOut();
-
-      if (result.isConfirmed) {
-        firebase
-          .auth()
-          .signOut()
-          .then(() => {
-            // Sign-out successful.
-            console.log("log out successfully");
-            // var user = firebase.auth().currentUser.uid;
-            // console.log(user + "log out successfully");
-            // alert(user + "log out successfully");
-            // return;
-            Swal.fire("You're logged out", "", "success"); //"Your're logged out'.",
-            history.push("/");
-          })
-          .catch((error) => {
-            console.log("log out error");
-            // An error happened.
-          });
-      }
-    });
+  function editShareList() {
+    console.log("list button clicked");
+    return <ListModal></ListModal>;
   }
 
   // function selectPhoto() {
@@ -492,7 +464,6 @@ function ManageSchedule() {
           {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
           <Name>{profileData.name}</Name>
           <Email>{profileData.email}</Email>
-          {/* <LogOut onClick={userLogOut}>Log out</LogOut> */}
         </Profile>
         <Trips>
           <Current>
@@ -532,7 +503,7 @@ function ManageSchedule() {
 
                       <EmailTd style={{ width: "220px" }}>
                         {share}
-                        {/* <EditList>List</EditList> */}
+                        <EditList onClick={editShareList}>List</EditList>
                       </EmailTd>
                       <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>

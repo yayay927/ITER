@@ -140,6 +140,7 @@ function ScheduleMap() {
       // style: "mapbox://styles/yayay927/ckorc7d8m3p9d17p6x7w8lry3",
       center: [lng, lat],
       zoom: zoom,
+      logoPosition: "bottom-right",
     });
 
     // map.current.addControl(

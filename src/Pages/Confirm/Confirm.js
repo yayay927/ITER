@@ -18,6 +18,8 @@ import link from "../../Components/link.png";
 import shareTo from "../../Components/share.png";
 import map from "../../Components/map.png";
 import SocialMediaShare from "./SocialMediaShare.js";
+import ReactDOM from "react-dom";
+import Guide from "../MainPage/guide.js";
 
 const Confirm = styled.div`
   max-width: 1280px;
@@ -160,6 +162,13 @@ function ConfirmSchedule() {
   const [copySuccess, setCopySuccess] = useState("");
   const textAreaRef = useRef(null);
 
+  // useEffect(() => {
+  //   let isMounted = true;
+  //   if (isMounted === true) {
+  //     ReactDOM.render(<Guide />, document.getElementById("root"));
+  //   }
+  // }, []);
+
   useEffect(() => {
     Swal.fire("Congratulations on completing your schedule!");
   }, []);
@@ -252,6 +261,7 @@ function ConfirmSchedule() {
 
   return (
     <div>
+      {/* <Guide /> */}
       <SocialMediaShare></SocialMediaShare>
       <Title>Have a good time in {cityName}!</Title>
       <Confirm>
@@ -290,7 +300,7 @@ function ConfirmSchedule() {
                 duration={{ days: 7 }}
                 visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
                 // editable={true}
-                selectable={true}
+                selectable={false}
                 selectMirror={true}
                 dayMaxEvents={true}
                 draggable={true}
@@ -369,6 +379,7 @@ function ConfirmSchedule() {
           </div> */}
         </Additional>
       </Confirm>
+      {/* <Guide></Guide> */}
     </div>
   );
 }
