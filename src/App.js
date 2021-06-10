@@ -1,32 +1,44 @@
 // import logo from "./logo.svg";
-import "./App.css";
-import { HashRouter, Switch, Route } from "react-router-dom";
+// import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/header";
 import Footer from "./Components/footer";
-import Map from "./Pages/Landing Page/map";
-import Calendar from "./Pages/Main Page/calendar";
-import ScheduleMap from "./Pages/Main Page/schedule_map";
+import Map from "./Pages/LandingPage/Map";
+import CityPage from "./Pages/MainPage/CityPage";
+import ScheduleMap from "./Pages/MainPage/ScheduleMap";
+import ConfirmSchedule from "./Pages/Confirm/Confirm.js";
+import ManageSchedule from "./Pages/ManagePage/Manage.js";
+// import "./Utils/firebase";
 
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <Header></Header>
       <Switch>
         <Route path="/calendar">
-          <Calendar></Calendar>
+          <CityPage></CityPage>
         </Route>
         <Route path="/schedule_map">
           <ScheduleMap></ScheduleMap>
         </Route>
-        <Route path="/">
-          <Map></Map>
+        <Route path="/city/:cityName">
+          <CityPage></CityPage>
+          {/* <Footer></Footer> */}
         </Route>
-        {/* <Route path="/:tag">
-          <Main></Main>
-        </Route> */}
+        <Route path="/confirm">
+          <ConfirmSchedule>confirm</ConfirmSchedule>
+          {/* <Footer></Footer> */}
+        </Route>
+        <Route path="/manage">
+          <ManageSchedule>manage</ManageSchedule>
+          {/* <Footer></Footer> */}
+        </Route>
+        <Route path="/">
+          <Map id="map"></Map>
+        </Route>
       </Switch>
       <Footer></Footer>
-    </HashRouter>
+    </Router>
 
     /* <div className="App">
       <header className="App-header">
