@@ -140,6 +140,7 @@ function ScheduleMap() {
       // style: "mapbox://styles/yayay927/ckorc7d8m3p9d17p6x7w8lry3",
       center: [lng, lat],
       zoom: zoom,
+      logoPosition: "bottom-right",
     });
 
     // map.current.addControl(
@@ -153,6 +154,8 @@ function ScheduleMap() {
     var directions = new MapboxDirections({
       accessToken:
         "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg",
+      // className: "step-2",
+      // target: ".step-2",
     });
 
     map.current.addControl(directions, "top-left");
@@ -236,18 +239,13 @@ function ScheduleMap() {
 
   return (
     <>
-      {/* <Map
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801282.82842051!2d-81.80632523516259!3d21.50026629072002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd49070f7a4cb5%3A0x798cf7529110a41a!2z5Y-k5be0!5e0!3m2!1szh-TW!2stw!4v1620814454176!5m2!1szh-TW!2stw"
-        width="100%"
-        height="450"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-      ></Map> */}
       <CityMap>
-        <MainMap ref={mapContainer} className="map-container"></MainMap>
+        <MainMap
+          ref={mapContainer}
+          className="map-container step-2 step-3"
+        ></MainMap>
         <div id="trans">
-          <Transportations className="trans">
+          <Transportations className="trans step-4">
             {/* <Title>Transportations</Title> */}
             <AllTransportations>
               <TransportationWay className="trans">

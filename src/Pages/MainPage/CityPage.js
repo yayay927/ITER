@@ -22,10 +22,11 @@ import Swal from "sweetalert2";
 // import "bootstrap/dist/css/bootstrap.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
 // import bootstrapPlugin from "@fullcalendar/bootstrap";
+import Joyride from "react-joyride";
 
 const CalendarPage = styled.div`
   margin: 70px 50px 70px 50px;
-  width: 100vw;
+  /* width: 100%; */
   /* display: flex; */
   /* margin-top: 80px; */
   @media (max-width: 768px) {
@@ -35,7 +36,7 @@ const CalendarPage = styled.div`
 const MainPart = styled.div`
   height: 95%;
   display: flex;
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
   @media (max-width: 768px) {
     display: block;
@@ -43,8 +44,8 @@ const MainPart = styled.div`
 `;
 
 const MapAndAttractions = styled.div`
-  margin-right: 20px;
-  width: 50%;
+  /* margin-right: 20px; */
+  width: 60%;
   /* height: 100%; */
   height: 80vh;
   overflow: scroll;
@@ -69,7 +70,9 @@ const Map = styled.div`
 
 const CalendarSpace = styled.div`
   margin-top: 50px;
-  width: 35%;
+  width: 40%;
+  padding-left: 20px;
+  padding-right: 10px;
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -105,6 +108,48 @@ function CityPage() {
   // console.log(tripId);
   const [renderEvent, setRenderEvent] = useState();
 
+  const [run, setRun] = useState(false);
+  const [steps, setSteps] = useState([
+    {
+      target: ".step-1",
+      content: "You can arrange schedule in this page",
+      placement: "center",
+    },
+    {
+      target: ".step-2",
+      content: '"Type" to get transportation between 2 locations',
+    },
+    {
+      target: ".step-3",
+      content: 'Or "click" 2 locations to get transportation in between',
+    },
+    {
+      target: ".step-4",
+      content: 'Then "drag" the transportation way you like to calendar.',
+    },
+    {
+      target: ".step-5",
+      content: "Drag the tourist attraction you'd like to go to the calendar.",
+    },
+    {
+      target: ".fc-myCustomButton-button ",
+      content: "Create your customized event.",
+    },
+    {
+      target: ".step-7",
+      content: "Drag an event to adjust its time and date.",
+    },
+    {
+      target: ".step-8",
+      content: "Click an event to delete itself.",
+    },
+    {
+      target: ".step-9",
+      content: "Save trip after editing.",
+    },
+    //   ...
+  ]);
+
   // console.log(cityName);
 
   if (cityName === "BuenosAires") {
@@ -127,9 +172,9 @@ function CityPage() {
   // const startTime = useSelector((state) => state.startTime);
   // const endTime = useSelector((state) => state.endTime);
 
-  useEffect(() => {
-    Swal.fire("Feel free to explore the city!");
-  }, []);
+  // useEffect(() => {
+  //   Swal.fire("Feel free to explore the city!");
+  // }, []);
 
   useEffect(() => {
     const containerEl = document.querySelector("#events");
@@ -219,18 +264,20 @@ function CityPage() {
     <CalendarPage>
       <MainPart>
         <MapAndAttractions>
-          <CityName>{cityName}</CityName>
+          <div className="step-1">
+            <CityName>{cityName}</CityName>
+          </div>
           <Map>
             <ScheduleMap />
           </Map>
-          <div id="events">
+          <div id="events" className="step-5">
             <TouristAttractions className="event"></TouristAttractions>
           </div>
           {/* <div id="trans">
             <Transportations className="trans"></Transportations>
           </div> */}
         </MapAndAttractions>
-        <CalendarSpace>
+        <CalendarSpace className="step-7  step-8">
           <FullCalendar
             id="FullCalendar"
             plugins={[
@@ -254,6 +301,7 @@ function CityPage() {
             ref={calendarRef}
             customButtons={{
               myCustomButton: {
+                className: "step-6",
                 text: "create event",
                 click: async function () {
                   // setEvents([
@@ -398,7 +446,16 @@ function CityPage() {
           />
         </CalendarSpace>
       </MainPart>
-      <ConfirmButton onClick={getEvents}>Finish edit & Save</ConfirmButton>
+      <ConfirmButton onClick={getEvents} className="step-9">
+        Finish edit & Save
+      </ConfirmButton>
+      <Joyride
+        run={true}
+        steps={steps}
+        continuous={true}
+        // callback={(data) => handleJoyrideCallback(data, setRun)}
+        // styles={{ options: defaultOptions }}
+      ></Joyride>
     </CalendarPage>
   );
 }

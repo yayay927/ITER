@@ -262,7 +262,7 @@ function Header() {
           {/* <SignUp onClick={signUp}>Signup</SignUp>
           <LogIn onClick={login}>Login</LogIn> */}
           <div onClick={managePage}>
-            <Logo src={suitcaseNew} />
+            <Logo src={suitcaseNew} className="step-4" />
           </div>
         </Block>
       </TheHeader>

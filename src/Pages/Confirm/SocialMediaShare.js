@@ -34,27 +34,28 @@ class SocialMediaShare extends Component {
     // console.log(cityName);
 
     return (
-      <div className="Demo__container">
-        <div className="Demo__some-network">
-          <FacebookShareButton
-            url={shareUrl}
-            quote={title}
-            className="Demo__some-network__share-button"
-          >
-            <FacebookIcon size={32} round />
-          </FacebookShareButton>
-
-          <div>
-            <FacebookShareCount
+      <div className="Demo__container" style={{ width: 300 }}>
+        <div className="step-3">
+          <div className="Demo__some-network  ">
+            <FacebookShareButton
               url={shareUrl}
-              className="Demo__some-network__share-count"
+              quote={title}
+              className="Demo__some-network__share-button"
             >
-              {(count) => count}
-            </FacebookShareCount>
-          </div>
-        </div>
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
 
-        {/* <div className="Demo__some-network">
+            <div>
+              <FacebookShareCount
+                url={shareUrl}
+                className="Demo__some-network__share-count"
+              >
+                {(count) => count}
+              </FacebookShareCount>
+            </div>
+          </div>
+
+          {/* <div className="Demo__some-network">
           <FacebookMessengerShareButton
             url={shareUrl}
             appId="521270401588372"
@@ -64,28 +65,28 @@ class SocialMediaShare extends Component {
           </FacebookMessengerShareButton>
         </div> */}
 
-        <div className="Demo__some-network">
-          <TwitterShareButton
-            url={shareUrl}
-            title={title}
-            className="Demo__some-network__share-button"
-          >
-            <TwitterIcon size={32} round />
-          </TwitterShareButton>
+          <div className="Demo__some-network">
+            <TwitterShareButton
+              url={shareUrl}
+              title={title}
+              className="Demo__some-network__share-button"
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
 
-          <div className="Demo__some-network__share-count">&nbsp;</div>
-        </div>
+            <div className="Demo__some-network__share-count">&nbsp;</div>
+          </div>
 
-        <div className="Demo__some-network">
-          <LinkedinShareButton
-            url={shareUrl}
-            className="Demo__some-network__share-button"
-          >
-            <LinkedinIcon size={32} round />
-          </LinkedinShareButton>
-        </div>
+          <div className="Demo__some-network">
+            <LinkedinShareButton
+              url={shareUrl}
+              className="Demo__some-network__share-button"
+            >
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+          </div>
 
-        {/* <div className="Demo__some-network">
+          {/* <div className="Demo__some-network">
           <PinterestShareButton
             url={String(window.location)}
             media={`${String(window.location)}/${exampleImage}`}
@@ -102,25 +103,26 @@ class SocialMediaShare extends Component {
           </div>
         </div> */}
 
-        <div className="Demo__some-network">
-          <EmailShareButton
-            url={shareUrl}
-            subject={title}
-            body="body"
-            className="Demo__some-network__share-button"
-          >
-            <EmailIcon size={32} round />
-          </EmailShareButton>
-        </div>
+          <div className="Demo__some-network">
+            <EmailShareButton
+              url={shareUrl}
+              subject={title}
+              body="body"
+              className="Demo__some-network__share-button"
+            >
+              <EmailIcon size={32} round />
+            </EmailShareButton>
+          </div>
 
-        <div className="Demo__some-network">
-          <LineShareButton
-            url={shareUrl}
-            title={title}
-            className="Demo__some-network__share-button"
-          >
-            <LineIcon size={32} round />
-          </LineShareButton>
+          <div className="Demo__some-network">
+            <LineShareButton
+              url={shareUrl}
+              title={title}
+              className="Demo__some-network__share-button"
+            >
+              <LineIcon size={32} round />
+            </LineShareButton>
+          </div>
         </div>
       </div>
     );

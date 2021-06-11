@@ -18,21 +18,21 @@ import link from "../../Components/link.png";
 import shareTo from "../../Components/share.png";
 import map from "../../Components/map.png";
 import SocialMediaShare from "./SocialMediaShare.js";
+import ReactDOM from "react-dom";
+// import Guide from "../MainPage/guide.js";
+import Joyride from "react-joyride";
 
 const Confirm = styled.div`
   max-width: 1280px;
-  /* display: flex; */
   width: 55.5%;
   margin: 60px auto 140px auto;
-  /* background-image: url("../../Components/desert.jpg"); */
-  /* height: 100vh; */
 `;
 const Title = styled.div`
   font-family: "Allura";
   font-size: 80px;
   /* display: block; */
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 40px;
   width: fit-content;
 `;
@@ -51,14 +51,8 @@ const Additional = styled.div`
   position: fixed;
   right: 30px;
   top: 30%;
-  /* visibility: hidden; */
 `;
-// const Save = styled.button`
-//   /* margin-top: 60px; */
-//   height: 80px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
+
 const Export = styled.div`
   margin-top: 60px;
   height: 60px;
@@ -66,7 +60,6 @@ const Export = styled.div`
   cursor: pointer;
   border-radius: 50px;
   border: 2px solid #91ccb9;
-  /* position: relative; */
   background-color: #91ccb9;
   :hover {
     background-color: #eedd42;
@@ -83,12 +76,7 @@ const Img = styled.img`
   /* border-radius: 50px; */
   /* border: 1px solid #eedd42; */
 `;
-// const GoBack = styled.button`
-//   margin-top: 60px;
-//   height: 80px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
+
 const Share = styled.div`
   margin-top: 30px;
   height: 60px;
@@ -124,24 +112,7 @@ const Printer = styled.img`
   border: 1px solid #eedd42;
   resize: both;
 `;
-// const Hotel = styled.button`
-//   margin-top: 60px;
-//   height: 100px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
-// const Restaurant = styled.button`
-//   margin-top: 65px;
-//   height: 100px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
-// const Ticket = styled.button`
-//   margin-top: 65px;
-//   height: 100px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
+
 const Weather = styled.button`
   margin-top: 60px;
   height: 80px;
@@ -159,10 +130,38 @@ function ConfirmSchedule() {
   const [eventsData, setEventsData] = useState([]);
   const [copySuccess, setCopySuccess] = useState("");
   const textAreaRef = useRef(null);
+  const [run, setRun] = useState(false);
+  const [steps, setSteps] = useState([
+    {
+      target: ".step-1",
+      content:
+        "Congratulations on completing the schedule! You can check schedule here",
+      placement: "center",
+    },
+    {
+      target: ".step-2",
+      content: "You can export the itinerary to PDF file or print it out.",
+    },
+    {
+      target: ".step-3",
+      content: "You can share the itinerary on social media.",
+    },
 
-  useEffect(() => {
-    Swal.fire("Congratulations on completing your schedule!");
-  }, []);
+    {
+      target: ".step-4",
+      content: "You can check and manage trip here.",
+    },
+    {
+      target: ".step-5",
+      content: "Or explore more cities on map!",
+    },
+
+    //   ...
+  ]);
+
+  // useEffect(() => {
+  //   Swal.fire("Congratulations on completing your schedule!");
+  // }, []);
 
   console.log("1");
 
@@ -182,8 +181,6 @@ function ConfirmSchedule() {
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
   let cityName = params.get("city");
-  // let tripId = "Y0ynOuM8PMTKUtj77JdN";
-  // console.log(window.location.href);
 
   useEffect(() => {
     const renderEventsData = async () => {
@@ -199,7 +196,6 @@ function ConfirmSchedule() {
 
   function backToEdit() {
     history.push(`/city/${cityName}?number=${tripId}`);
-    // document.location.href = `../city/${cityName}?number=${tripId}`;
   }
 
   function save() {
@@ -252,8 +248,13 @@ function ConfirmSchedule() {
 
   return (
     <div>
+      {/* <Guide></Guide> */}
+      {/* <div className="step-2"> */}
       <SocialMediaShare></SocialMediaShare>
-      <Title>Have a good time in {cityName}!</Title>
+      {/* </div> */}
+      <div className="step-1">
+        <Title>Have a good time in {cityName}!</Title>
+      </div>
       <Confirm>
         <Calendar>
           {/* <a href="../calendar"> */}
@@ -290,7 +291,7 @@ function ConfirmSchedule() {
                 duration={{ days: 7 }}
                 visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
                 // editable={true}
-                selectable={true}
+                selectable={false}
                 selectMirror={true}
                 dayMaxEvents={true}
                 draggable={true}
@@ -326,7 +327,11 @@ function ConfirmSchedule() {
             <Save onClick={save}>Save to my trip</Save>
           </div> */}
           <div>
-            <Export onClick={handlePrint} title="Export to PDF/ Print">
+            <Export
+              onClick={handlePrint}
+              title="Export to PDF/ Print"
+              className="step-2"
+            >
               {/* Export to PDF/ Print */}
               <Img src={printer}></Img>
             </Export>
@@ -337,7 +342,11 @@ function ConfirmSchedule() {
             </Export>
           </div> */}
           <div>
-            <Export onClick={goToMap} title="Explore other cities.">
+            <Export
+              onClick={goToMap}
+              title="Explore other cities."
+              className="step-5"
+            >
               {/* Export to PDF/ Print */}
               <Img src={map}></Img>
             </Export>
@@ -369,6 +378,13 @@ function ConfirmSchedule() {
           </div> */}
         </Additional>
       </Confirm>
+      <Joyride
+        run={true}
+        steps={steps}
+        continuous={true}
+        // callback={(data) => handleJoyrideCallback(data, setRun)}
+        // styles={{ options: defaultOptions }}
+      ></Joyride>
     </div>
   );
 }
