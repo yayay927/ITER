@@ -35,7 +35,7 @@ class SocialMediaShare extends Component {
 
     return (
       <div className="Demo__container">
-        <div className="Demo__some-network">
+        <div className="Demo__some-network  step-2">
           <FacebookShareButton
             url={shareUrl}
             quote={title}

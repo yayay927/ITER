@@ -261,7 +261,7 @@ function Header() {
           {headerView()}
           {/* <SignUp onClick={signUp}>Signup</SignUp>
           <LogIn onClick={login}>Login</LogIn> */}
-          <div onClick={managePage}>
+          <div onClick={managePage} className="step-4">
             <Logo src={suitcaseNew} />
           </div>
         </Block>

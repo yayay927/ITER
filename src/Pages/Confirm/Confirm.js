@@ -134,43 +134,29 @@ function ConfirmSchedule() {
   const [steps, setSteps] = useState([
     {
       target: ".step-1",
-      content: "You  can arrange schedule in this page",
-      placement: "center",
+      content:
+        "Congratulations on completing the schedule! You can check schedule here",
+      // placement: "center",
     },
     {
       target: ".step-2",
-      content: "Type to get transportation between 2 locations.",
+      content: "You can share the itinerary on social media.",
     },
     {
       target: ".step-3",
-      content: "Or click 2 locations to get transportation in between",
+      content: "You can export the itinerary to PDF file or print it out.",
     },
     {
       target: ".step-4",
-      content: "Then drag the transportation way you like to calendar.",
+      content: "You can check and manage trip here.",
     },
-    {
-      target: ".step-5",
-      content: "Drag the tourist attraction you'd like to go to the calendar.",
-    },
-    {
-      target: ".step-6",
-      content: "Create your customized event.",
-    },
-    {
-      target: ".step-7",
-      content: "Drag to adjust the event time or date on calendar.",
-    },
-    {
-      target: ".step-8",
-      content: "Click to delete event.",
-    },
+
     //   ...
   ]);
 
-  useEffect(() => {
-    Swal.fire("Congratulations on completing your schedule!");
-  }, []);
+  // useEffect(() => {
+  //   Swal.fire("Congratulations on completing your schedule!");
+  // }, []);
 
   console.log("1");
 
@@ -258,8 +244,9 @@ function ConfirmSchedule() {
   return (
     <div>
       {/* <Guide></Guide> */}
-
+      {/* <div className="step-2"> */}
       <SocialMediaShare></SocialMediaShare>
+      {/* </div> */}
       <div className="step-1">
         <Title>Have a good time in {cityName}!</Title>
       </div>
@@ -335,7 +322,11 @@ function ConfirmSchedule() {
             <Save onClick={save}>Save to my trip</Save>
           </div> */}
           <div>
-            <Export onClick={handlePrint} title="Export to PDF/ Print">
+            <Export
+              onClick={handlePrint}
+              title="Export to PDF/ Print"
+              className="step-3"
+            >
               {/* Export to PDF/ Print */}
               <Img src={printer}></Img>
             </Export>
