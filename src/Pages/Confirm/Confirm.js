@@ -19,15 +19,13 @@ import shareTo from "../../Components/share.png";
 import map from "../../Components/map.png";
 import SocialMediaShare from "./SocialMediaShare.js";
 import ReactDOM from "react-dom";
-import Guide from "../MainPage/guide.js";
+// import Guide from "../MainPage/guide.js";
+import Joyride from "react-joyride";
 
 const Confirm = styled.div`
   max-width: 1280px;
-  /* display: flex; */
   width: 55.5%;
   margin: 60px auto 140px auto;
-  /* background-image: url("../../Components/desert.jpg"); */
-  /* height: 100vh; */
 `;
 const Title = styled.div`
   font-family: "Allura";
@@ -53,14 +51,8 @@ const Additional = styled.div`
   position: fixed;
   right: 30px;
   top: 30%;
-  /* visibility: hidden; */
 `;
-// const Save = styled.button`
-//   /* margin-top: 60px; */
-//   height: 80px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
+
 const Export = styled.div`
   margin-top: 60px;
   height: 60px;
@@ -68,7 +60,6 @@ const Export = styled.div`
   cursor: pointer;
   border-radius: 50px;
   border: 2px solid #91ccb9;
-  /* position: relative; */
   background-color: #91ccb9;
   :hover {
     background-color: #eedd42;
@@ -85,12 +76,7 @@ const Img = styled.img`
   /* border-radius: 50px; */
   /* border: 1px solid #eedd42; */
 `;
-// const GoBack = styled.button`
-//   margin-top: 60px;
-//   height: 80px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
+
 const Share = styled.div`
   margin-top: 30px;
   height: 60px;
@@ -126,24 +112,7 @@ const Printer = styled.img`
   border: 1px solid #eedd42;
   resize: both;
 `;
-// const Hotel = styled.button`
-//   margin-top: 60px;
-//   height: 100px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
-// const Restaurant = styled.button`
-//   margin-top: 65px;
-//   height: 100px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
-// const Ticket = styled.button`
-//   margin-top: 65px;
-//   height: 100px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
+
 const Weather = styled.button`
   margin-top: 60px;
   height: 80px;
@@ -161,13 +130,43 @@ function ConfirmSchedule() {
   const [eventsData, setEventsData] = useState([]);
   const [copySuccess, setCopySuccess] = useState("");
   const textAreaRef = useRef(null);
-
-  // useEffect(() => {
-  //   let isMounted = true;
-  //   if (isMounted === true) {
-  //     ReactDOM.render(<Guide />, document.getElementById("root"));
-  //   }
-  // }, []);
+  const [run, setRun] = useState(false);
+  const [steps, setSteps] = useState([
+    {
+      target: ".step-1",
+      content: "You  can arrange schedule in this page",
+      placement: "center",
+    },
+    {
+      target: ".step-2",
+      content: "Type to get transportation between 2 locations.",
+    },
+    {
+      target: ".step-3",
+      content: "Or click 2 locations to get transportation in between",
+    },
+    {
+      target: ".step-4",
+      content: "Then drag the transportation way you like to calendar.",
+    },
+    {
+      target: ".step-5",
+      content: "Drag the tourist attraction you'd like to go to the calendar.",
+    },
+    {
+      target: ".step-6",
+      content: "Create your customized event.",
+    },
+    {
+      target: ".step-7",
+      content: "Drag to adjust the event time or date on calendar.",
+    },
+    {
+      target: ".step-8",
+      content: "Click to delete event.",
+    },
+    //   ...
+  ]);
 
   useEffect(() => {
     Swal.fire("Congratulations on completing your schedule!");
@@ -191,8 +190,6 @@ function ConfirmSchedule() {
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
   let cityName = params.get("city");
-  // let tripId = "Y0ynOuM8PMTKUtj77JdN";
-  // console.log(window.location.href);
 
   useEffect(() => {
     const renderEventsData = async () => {
@@ -208,7 +205,6 @@ function ConfirmSchedule() {
 
   function backToEdit() {
     history.push(`/city/${cityName}?number=${tripId}`);
-    // document.location.href = `../city/${cityName}?number=${tripId}`;
   }
 
   function save() {
@@ -261,9 +257,12 @@ function ConfirmSchedule() {
 
   return (
     <div>
-      {/* <Guide /> */}
+      {/* <Guide></Guide> */}
+
       <SocialMediaShare></SocialMediaShare>
-      <Title>Have a good time in {cityName}!</Title>
+      <div className="step-1">
+        <Title>Have a good time in {cityName}!</Title>
+      </div>
       <Confirm>
         <Calendar>
           {/* <a href="../calendar"> */}
@@ -379,7 +378,13 @@ function ConfirmSchedule() {
           </div> */}
         </Additional>
       </Confirm>
-      {/* <Guide></Guide> */}
+      <Joyride
+        run={true}
+        steps={steps}
+        continuous={true}
+        // callback={(data) => handleJoyrideCallback(data, setRun)}
+        // styles={{ options: defaultOptions }}
+      ></Joyride>
     </div>
   );
 }
