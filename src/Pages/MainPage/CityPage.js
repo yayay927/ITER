@@ -26,7 +26,7 @@ import Joyride from "react-joyride";
 
 const CalendarPage = styled.div`
   margin: 70px 50px 70px 50px;
-  width: 100vw;
+  /* width: 100%; */
   /* display: flex; */
   /* margin-top: 80px; */
   @media (max-width: 768px) {
@@ -36,7 +36,7 @@ const CalendarPage = styled.div`
 const MainPart = styled.div`
   height: 95%;
   display: flex;
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
   @media (max-width: 768px) {
     display: block;
@@ -44,11 +44,11 @@ const MainPart = styled.div`
 `;
 
 const MapAndAttractions = styled.div`
-  margin-right: 20px;
-  width: 50%;
+  /* margin-right: 20px; */
+  width: 60%;
   /* height: 100%; */
   height: 80vh;
-  /* overflow: scroll; */
+  overflow: scroll;
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -70,7 +70,9 @@ const Map = styled.div`
 
 const CalendarSpace = styled.div`
   margin-top: 50px;
-  width: 35%;
+  width: 40%;
+  padding-left: 20px;
+  padding-right: 10px;
   @media (max-width: 768px) {
     width: 100%;
   }
