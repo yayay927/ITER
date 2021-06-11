@@ -18,6 +18,7 @@ import {
 import Swal from "sweetalert2";
 import { getDefaultNormalizer } from "@testing-library/dom";
 import ListModal from "./ListModal";
+import Joyride from "react-joyride";
 
 const Manage = styled.div`
   margin-top: 100px;
@@ -279,6 +280,14 @@ function ManageSchedule() {
   // UID = "test9@gmail.com";
   const [ownerEmail, setOwnerEmail] = useState([]);
   const [profileEmail, setProfileEmail] = useState([]);
+  const [run, setRun] = useState(false);
+  const [steps, setSteps] = useState([
+    {
+      target: ".step-1",
+      content: "You can manage current and history trips here.",
+      placement: "center",
+    },
+  ]);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -304,9 +313,9 @@ function ManageSchedule() {
     console.log("3");
   }, []);
 
-  useEffect(() => {
-    Swal.fire("You can manage current and history trips here.");
-  }, []);
+  // useEffect(() => {
+  //   Swal.fire("You can manage current and history trips here.");
+  // }, []);
 
   useEffect(() => {
     const renderProfileData = async () => {
@@ -450,7 +459,7 @@ function ManageSchedule() {
 
   return (
     <div>
-      <Manage>
+      <Manage className="step-1">
         <Profile>
           {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
           {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
@@ -568,6 +577,7 @@ function ManageSchedule() {
           </Past>
         </Trips>
       </Manage>
+      <Joyride run={true} steps={steps} continuous={true}></Joyride>
     </div>
   );
 }

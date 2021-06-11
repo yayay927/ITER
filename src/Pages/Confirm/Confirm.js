@@ -32,7 +32,7 @@ const Title = styled.div`
   font-size: 80px;
   /* display: block; */
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 40px;
   width: fit-content;
 `;
@@ -136,19 +136,24 @@ function ConfirmSchedule() {
       target: ".step-1",
       content:
         "Congratulations on completing the schedule! You can check schedule here",
-      // placement: "center",
+      placement: "center",
     },
     {
       target: ".step-2",
-      content: "You can share the itinerary on social media.",
-    },
-    {
-      target: ".step-3",
       content: "You can export the itinerary to PDF file or print it out.",
     },
     {
+      target: ".step-3",
+      content: "You can share the itinerary on social media.",
+    },
+
+    {
       target: ".step-4",
       content: "You can check and manage trip here.",
+    },
+    {
+      target: ".step-5",
+      content: "Or explore more cities on map!",
     },
 
     //   ...
@@ -325,7 +330,7 @@ function ConfirmSchedule() {
             <Export
               onClick={handlePrint}
               title="Export to PDF/ Print"
-              className="step-3"
+              className="step-2"
             >
               {/* Export to PDF/ Print */}
               <Img src={printer}></Img>
@@ -337,7 +342,11 @@ function ConfirmSchedule() {
             </Export>
           </div> */}
           <div>
-            <Export onClick={goToMap} title="Explore other cities.">
+            <Export
+              onClick={goToMap}
+              title="Explore other cities."
+              className="step-5"
+            >
               {/* Export to PDF/ Print */}
               <Img src={map}></Img>
             </Export>
