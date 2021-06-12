@@ -47,6 +47,10 @@ const SignUp = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    font-size: 20px;
+  }
 `;
 const LogIn = styled.div`
   height: 50px;
@@ -55,6 +59,10 @@ const LogIn = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    font-size: 20px;
+  }
 `;
 const LogOut = styled.div`
   height: 50px;
@@ -63,6 +71,10 @@ const LogOut = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    font-size: 20px;
+  }
 `;
 
 const Input = styled.input`

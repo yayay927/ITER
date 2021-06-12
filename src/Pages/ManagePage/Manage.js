@@ -280,6 +280,7 @@ function ManageSchedule() {
   // UID = "test9@gmail.com";
   const [ownerEmail, setOwnerEmail] = useState([]);
   const [profileEmail, setProfileEmail] = useState([]);
+  const [listToggle, setListToggle] = useState(false);
   const [run, setRun] = useState(false);
   const [steps, setSteps] = useState([
     {
@@ -425,7 +426,14 @@ function ManageSchedule() {
 
   function editShareList() {
     console.log("list button clicked");
-    return <ListModal></ListModal>;
+    setListToggle(true);
+    // return <ListModal></ListModal>;
+  }
+
+  function closeShareList() {
+    console.log("close list button");
+    setListToggle(false);
+    // return <ListModal></ListModal>;
   }
 
   // function selectPhoto() {
@@ -513,6 +521,8 @@ function ManageSchedule() {
                       <EmailTd style={{ width: "220px" }}>
                         {share}
                         <EditList onClick={editShareList}>List</EditList>
+                        {listToggle === true && <ListModal></ListModal>}
+                        {/* {listToggle === true ? <ListModal></ListModal>: null} */}
                       </EmailTd>
                       <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>

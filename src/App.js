@@ -13,31 +13,36 @@ import ManageSchedule from "./Pages/ManagePage/Manage.js";
 function App() {
   return (
     <Router>
-      <Header></Header>
+      {/* <Header></Header> */}
       <Switch>
-        <Route path="/calendar">
+        {/* <Route path="/calendar">
           <CityPage></CityPage>
-        </Route>
-        <Route path="/schedule_map">
+        </Route> */}
+        {/* <Route path="/schedule_map">
           <ScheduleMap></ScheduleMap>
-        </Route>
+        </Route> */}
         <Route path="/city/:cityName">
+          <Header></Header>
           <CityPage></CityPage>
           {/* <Footer></Footer> */}
         </Route>
         <Route path="/confirm">
+          <Header></Header>
           <ConfirmSchedule>confirm</ConfirmSchedule>
-          {/* <Footer></Footer> */}
+          <Footer></Footer>
         </Route>
         <Route path="/manage">
+          <Header></Header>
           <ManageSchedule>manage</ManageSchedule>
-          {/* <Footer></Footer> */}
+          <Footer></Footer>
         </Route>
         <Route path="/">
+          <Header></Header>
           <Map id="map"></Map>
+          <Footer></Footer>
         </Route>
       </Switch>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </Router>
 
     /* <div className="App">

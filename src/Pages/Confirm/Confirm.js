@@ -282,9 +282,9 @@ function ConfirmSchedule() {
                   adaptivePlugin,
                 ]}
                 headerToolbar={{
-                  left: "prev next today",
+                  left: "",
                   center: "title",
-                  right: "timeGridWeek",
+                  right: "prev next today",
                 }}
                 initialView="timeGrid"
                 // initialView="timeline"

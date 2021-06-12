@@ -10,6 +10,7 @@ const AllAttractions = styled.div`
   display: flex;
   flex-wrap: wrap;
   height: 350px;
+  /* height: calc(100% - 520px); */
   overflow: scroll;
 `;
 const Attraction = styled.div`

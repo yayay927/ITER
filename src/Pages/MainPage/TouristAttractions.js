@@ -4,8 +4,9 @@ import FirebaseAttractionData from "./FirebaseAttractionData.js";
 
 const TouristAttractions = styled.div`
   width: 100%;
-  font-size: 45px;
-  margin: 20px 0;
+  font-size: 35px;
+  /* margin: 20px 0; */
+  margin-top: 10px;
 `;
 const AllAttractions = styled.div`
   width: 100%;

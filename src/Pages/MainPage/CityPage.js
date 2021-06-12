@@ -23,21 +23,30 @@ import Swal from "sweetalert2";
 // import "@fortawesome/fontawesome-free/css/all.css";
 // import bootstrapPlugin from "@fullcalendar/bootstrap";
 import Joyride from "react-joyride";
+import BuildGeolocationDB from "./BuildGeolocationDB.js";
 
 const CalendarPage = styled.div`
-  margin: 70px 50px 70px 50px;
+  margin: 50px 50px 0px 50px;
   /* width: 100%; */
   /* display: flex; */
   /* margin-top: 80px; */
+  /* height: calc(100%-60px); */
+  height: 85vh;
   @media (max-width: 768px) {
     margin: 70px 0px;
   }
+  @media (min-width: 1440px) {
+    margin: 100px 50px 0px 50px;
+  }
 `;
 const MainPart = styled.div`
-  height: 95%;
+  /* height: 95%; */
+  /* height: 90%; */
+
   display: flex;
   width: 100%;
   margin: 0 auto;
+  height: 100%;
   @media (max-width: 768px) {
     display: block;
   }
@@ -47,7 +56,7 @@ const MapAndAttractions = styled.div`
   /* margin-right: 20px; */
   width: 60%;
   /* height: 100%; */
-  height: 80vh;
+  /* height: 80vh; */
   overflow: scroll;
   @media (max-width: 768px) {
     width: 100%;
@@ -260,6 +269,8 @@ function CityPage() {
     }
   }, []);
 
+  BuildGeolocationDB("stanley park");
+
   return (
     <CalendarPage>
       <MainPart>
@@ -290,6 +301,7 @@ function CityPage() {
             headerToolbar={{
               // left: "prev, next, myCustomButton", //today,
               // center: "title",
+              // left: "prev title next",
               right: "dayGridMonth timeGridWeek", //, timeGridDay
               // right: "prev, today, next,",
             }}
@@ -404,7 +416,8 @@ function CityPage() {
             // allDaySlot={false}
             minTime="06:00:00"
             // maxTime="24:00:00"
-            height="74vh" //"1000px"
+            // height="74vh" //"1000px"
+            height="100%"
             events={
               renderEvent
               // [
@@ -456,6 +469,7 @@ function CityPage() {
         // callback={(data) => handleJoyrideCallback(data, setRun)}
         // styles={{ options: defaultOptions }}
       ></Joyride>
+      {/* {BuildGeolocationDB()} */}
     </CalendarPage>
   );
 }
