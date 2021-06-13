@@ -164,13 +164,14 @@ const EmailTd = styled.td`
 `;
 const TableCity = styled.td`
   /* width: 20%; */
-  cursor: pointer;
+  /* cursor: pointer; */
+  font-weight: bold;
 
-  :hover {
+  /* :hover {
     color: white;
     font-weight: bold;
     font-size: 28px;
-  }
+  } */
 `;
 
 const TBody = styled.tbody`
@@ -511,7 +512,7 @@ function ManageSchedule() {
                     </TripName> */}
                       <TableCity
                         style={{ width: "200px" }}
-                        onClick={() => checkTrip(city, tripID)}
+                        // onClick={() => checkTrip(city, tripID)}
                       >
                         {city}
                       </TableCity>
@@ -526,7 +527,10 @@ function ManageSchedule() {
                       </EmailTd>
                       <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>
-                          Trip
+                          Edit
+                        </EditTrip>
+                        <EditTrip onClick={() => checkTrip(city, tripID)}>
+                          Print
                         </EditTrip>
 
                         <EditList onClick={() => deleteTrip(tripID)}>
