@@ -20,6 +20,11 @@ import { getDefaultNormalizer } from "@testing-library/dom";
 import ListModal from "./ListModal";
 import Joyride from "react-joyride";
 import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
+import items from "../../Components/items.jpg";
+import Luggage from "../../Components/luggage.jpg";
+import Road from "../../Components/road.jpg";
+import Window from "../../Components/window.jpg";
+import Boat from "../../Components/boat.jpg";
 
 const StyledModal = Modal.styled`
   width: 20rem;
@@ -32,8 +37,10 @@ const StyledModal = Modal.styled`
   transition : all 0.3s ease-in-out;`;
 
 const Manage = styled.div`
-  margin-top: 100px;
-  height: 60%;
+  margin-top: 60px;
+  /* height: 60%; */
+  height: 90vh;
+  /* height: calc(100vh-120px); */
 `;
 // const Message = styled.div`
 //   margin: 50px auto;
@@ -43,9 +50,11 @@ const Manage = styled.div`
 // `;
 const Profile = styled.div`
   max-width: 1280px;
-  margin: 50px auto;
+  margin: 60px auto;
   margin-bottom: 0;
-  width: 50%;
+  width: 30%;
+  background-color: rgb(57, 80, 73, 0.3);
+  border-radius: 40px;
   /* border-bottom: 1px solid darkblue; */
 `;
 // const Photo = styled.img`
@@ -64,6 +73,7 @@ const Name = styled.div`
   width: fit-content;
   font-family: "Allura";
   font-weight: bold;
+  color: white
 `;
 // const UserID = styled.div`
 //   margin: 0px auto;
@@ -75,6 +85,7 @@ const Email = styled.div`
   font-size: 40px;
   width: fit-content;
   font-family: "Allura";
+  color: white;
 `;
 const LogOut = styled.button`
   display: block;
@@ -115,6 +126,7 @@ const Current = styled.div`
   border-radius: 20px;
   border: 1px solid #91ccb9;
   height: 250px;
+  /* border: none; */
 `;
 const CurrentTrips = styled.div`
   /* margin-top: 50px; */
@@ -128,12 +140,15 @@ const CurrentTrips = styled.div`
   font-weight: bold;
   font-size: 30px;
   color: #eedd42;
+  /* background-color: rgb(255, 255, 255, 0.7); */
+  background-color: rgb(57, 80, 73, 0.3);
 `;
 const Table = styled.table`
   /* margin-top: 10px; */
   width: calc(100% - 120px);
   /* border-collapse: collapse; */
-  background-color: #c1dbd5;
+  /* background-color: #c1dbd5; */
+  background-color: rgb(57, 80, 73, 0.3);
   /* opacity: 0.5; */
   display: block;
   height: 220px;
@@ -271,6 +286,7 @@ const HistoryTrips = styled.div`
   font-weight: bold;
   font-size: 30px;
   color: #eedd42;
+  background-color: rgb(57, 80, 73, 0.3);
 `;
 
 function ManageSchedule() {
@@ -532,7 +548,12 @@ function ManageSchedule() {
   // }
 
   return (
-    <div>
+    <div
+      style={{
+        background: `url(${items})`,
+        backgroundSize: `cover`,
+      }}
+    >
       <ModalProvider backgroundComponent={FadingBackground}>
         <Manage className="step-1">
           <Profile>
