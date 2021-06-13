@@ -113,6 +113,9 @@ function CityPage() {
   let url = window.location.search;
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
+  if (tripId === undefined) {
+    history.push(`/error`);
+  }
   // console.log(tripId);
   const [renderEvent, setRenderEvent] = useState();
 

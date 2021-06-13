@@ -9,6 +9,7 @@ import ocean from "../../Components/ocean.wav";
 import anchor from "../../Components/anchor.png";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Navigation from "./Navigation";
+import rightarrow from "../../Components/rightarrow.png";
 
 const SideBar = styled.div`
   background-color: rgba(35, 55, 75, 0.9);
@@ -38,6 +39,12 @@ const Audio = styled.div`
 const LeafletMap = styled.div`
   height: 180px;
   id: "mapid";
+`;
+
+const GoBtn = styled.div`
+  background-color: pink;
+  height: 100px;
+  width: 200px;
 `;
 
 function Map() {
@@ -98,7 +105,7 @@ function Map() {
       .setLngLat([-82.383, 23.133])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1 id="title"  margin="5px"><font face="Allura" size="70px">Havana</font></h1><a href="../city/Havana"><button><font face="Quicksand">Go!</font></button></a>'
+          '<h1 id="title"  margin="5px"><font face="Allura" size="70px">Havana</font></h1><a href="../city/Havana"><GoBtn><button style="width:200px"><font face="Quicksand">Go!</font></button></GoBtn></a>'
         )
       )
       .addTo(map.current);
@@ -110,7 +117,7 @@ function Map() {
       .setLngLat([121.597366, 25.105497])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Taipei</font></h1><a href="../city/Taipei"><button >Go!</button></a>'
+          '<h1><font face="Allura" size="70px">Taipei</font></h1><a href="../city/Taipei"><div  style="background-image: url("{rightarrow}"); height:100px;" height="100px"></div></a>'
         )
       )
       .addTo(map.current);
