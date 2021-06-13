@@ -29,10 +29,11 @@ import Boat from "../../Components/boat.jpg";
 const StyledModal = Modal.styled`
   width: 20rem;
   height: 20rem;
-  // display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
+  // border: none;
+  // border-radius: 25px;
   opacity: ${(props) => props.opacity};
   position: relative;
   transition : all 0.3s ease-in-out;`;
@@ -293,6 +294,19 @@ const HistoryTrips = styled.div`
   color: #eedd42;
   /* background-color: rgb(57, 80, 73, 0.3); */
 `;
+const OpenButton = styled.button`
+  cursor: pointer;
+  font-family: "QuickSand";
+  font-size: 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 40px;
+  height: 40px;
+  :hover {
+    color: white;
+    background-color: #eedd42;
+  }
+`;
 const AddByEmail = styled.div`
   display: flex;
   margin-top: 20px;
@@ -422,10 +436,6 @@ function ManageSchedule() {
   }
 
   function EditShareList() {
-    // console.log("list button clicked");
-    // setListToggle(true);
-    // return <ListModal></ListModal>;
-
     function toggleModal(e) {
       setOpacity(0);
       setIsOpen(!isOpen);
@@ -446,7 +456,7 @@ function ManageSchedule() {
 
     return (
       <div>
-        <button onClick={toggleModal}>Open modal</button>
+        <OpenButton onClick={toggleModal}>Edit</OpenButton>
         <StyledModal
           isOpen={isOpen}
           afterOpen={afterOpen}
@@ -460,7 +470,7 @@ function ManageSchedule() {
             <Form>
               <Input placeholder="email"></Input>
             </Form>
-            <Add>add</Add>
+            <Add onClick={addUser}>add</Add>
           </AddByEmail>
 
           <AlreadySharedList>
@@ -469,7 +479,7 @@ function ManageSchedule() {
             <AllUsers>
               <EachUser>
                 <TypeEmail>ellie@gmail.com</TypeEmail>
-                <Delete>delete</Delete>
+                <Delete onClick={deleteUser}>delete</Delete>
               </EachUser>
               {/* <div>
             <div>bb@gmail.com</div>
@@ -482,6 +492,9 @@ function ManageSchedule() {
       </div>
     );
   }
+
+  function addUser() {}
+  function deleteUser() {}
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -684,7 +697,7 @@ function ManageSchedule() {
                     <Td style={{ width: "200px" }}>City</Td>
                     <Td style={{ width: "200px" }}>Create date</Td>
                     <Td style={{ width: "220px" }}>Share with</Td>
-                    <Td style={{ width: "200px" }}>Edit</Td>
+                    <Td style={{ width: "200px" }}>Trip</Td>
                   </TrHead>
                 </THead>
                 <TBody>
