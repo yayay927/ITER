@@ -1,12 +1,7 @@
 import styled from "styled-components";
-import map from "../../Components/map.jpg";
-import map1 from "../../Components/map1.jpg";
-import map2 from "../../Components/map2.jpg";
 import manymaps from "../../Components/manymaps.jpg";
 
 const Page = styled.div`
-  /* background-image: url(${map}); */
-  /* height: calc(100vh-120px); */
   height: 100vh;
 `;
 const Msg = styled.div`
@@ -18,7 +13,11 @@ const Msg = styled.div`
   padding-top: 200px;
   color: white;
 `;
+const Link = styled.a`
+  text-decoration: none;
+`;
 const Redirect = styled.div`
+  text-decoration: none;
   height: 70px;
   width: 200px;
   border-radius: 40px;
@@ -32,7 +31,6 @@ const Redirect = styled.div`
   font-size: 50px;
   font-family: "Allura";
   align-items: center;
-  /* position: fixed; */
   margin-top: 20vh;
   :hover {
     background-color: #91ccb9;
@@ -47,12 +45,13 @@ function Error() {
     <Page
       style={{
         background: `url(${manymaps})`,
-        // backgroundSize: `110px 100%`,
         backgroundSize: `cover`,
       }}
     >
-      <Msg>Sorry the place you're looking for is not on our map yet.</Msg>
-      <Redirect>back to world</Redirect>
+      <Msg>Sorry, the place you're looking for is not on our map yet.</Msg>
+      <Link href="../../">
+        <Redirect>back to world</Redirect>
+      </Link>
     </Page>
   );
 }

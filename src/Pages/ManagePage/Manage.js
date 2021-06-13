@@ -312,6 +312,10 @@ function ManageSchedule() {
     background-color: rgba(0, 0, 0, 0.06);
   `;
 
+  if (UID === undefined) {
+    history.push(`/error`);
+  }
+
   function EditShareList() {
     // console.log("list button clicked");
     // setListToggle(true);

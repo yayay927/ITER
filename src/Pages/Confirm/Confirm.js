@@ -181,6 +181,9 @@ function ConfirmSchedule() {
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
   let cityName = params.get("city");
+  if (tripId === undefined) {
+    history.push(`/error`);
+  }
 
   useEffect(() => {
     const renderEventsData = async () => {
