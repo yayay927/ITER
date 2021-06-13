@@ -34,6 +34,7 @@ const StyledModal = Modal.styled`
   justify-content: center;
   background-color: white;
   opacity: ${(props) => props.opacity};
+  position: relative;
   transition : all 0.3s ease-in-out;`;
 
 const Manage = styled.div`
@@ -54,6 +55,8 @@ const Profile = styled.div`
   margin-bottom: 0;
   width: 30%;
   background-color: rgb(57, 80, 73, 0.3);
+  /* background-color: rgb(145, 204, 185, 0.5); */
+
   border-radius: 40px;
   /* border-bottom: 1px solid darkblue; */
 `;
@@ -73,7 +76,7 @@ const Name = styled.div`
   width: fit-content;
   font-family: "Allura";
   font-weight: bold;
-  color: white
+  color: white;
 `;
 // const UserID = styled.div`
 //   margin: 0px auto;
@@ -118,6 +121,8 @@ const Trips = styled.div`
   /* margin-top: 100px; */
   width: 70%;
   margin: 0 auto;
+  background-color: rgb(57, 80, 73, 0.3);
+  border-radius: 25px;
 `;
 const Current = styled.div`
   margin-top: 3%;
@@ -141,14 +146,14 @@ const CurrentTrips = styled.div`
   font-size: 30px;
   color: #eedd42;
   /* background-color: rgb(255, 255, 255, 0.7); */
-  background-color: rgb(57, 80, 73, 0.3);
+  /* background-color: rgb(57, 80, 73, 0.3); */
 `;
 const Table = styled.table`
   /* margin-top: 10px; */
   width: calc(100% - 120px);
   /* border-collapse: collapse; */
   /* background-color: #c1dbd5; */
-  background-color: rgb(57, 80, 73, 0.3);
+  /* background-color: rgb(57, 80, 73, 0.3); */
   /* opacity: 0.5; */
   display: block;
   height: 220px;
@@ -286,7 +291,91 @@ const HistoryTrips = styled.div`
   font-weight: bold;
   font-size: 30px;
   color: #eedd42;
-  background-color: rgb(57, 80, 73, 0.3);
+  /* background-color: rgb(57, 80, 73, 0.3); */
+`;
+const AddByEmail = styled.div`
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+`;
+const Form = styled.form``;
+const Input = styled.input`
+  font-family: "QuickSand";
+  width: 220px;
+  margin-right: 10px;
+  height: 25px;
+  font-size: 14px;
+  color: grey;
+  padding-left: 12px;
+  outline: none;
+  border-radius: 15px;
+  border: 1px solid #91ccb9;
+`;
+const Add = styled.button`
+  /* margin-right: 20px; */
+  font-family: "QuickSand";
+  border-radius: 30px;
+  border: 1px solid #91ccb9;
+  background-color: white;
+  color: #91ccb9;
+  :hover {
+    background-color: #91ccb9;
+    border: 1px solid #91ccb9;
+    color: white;
+    cursor: pointer;
+  }
+`;
+const AlreadySharedList = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`;
+const EachUser = styled.div`
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+`;
+const Title = styled.div`
+  /* display: block; */
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  /* width: 90%; */
+  border-bottom: 1px solid grey;
+`;
+const CloseModalBtn = styled.div``;
+const AllUsers = styled.div``;
+const TypeEmail = styled.div``;
+const Delete = styled.button`
+  font-family: "QuickSand";
+  border-radius: 20px;
+  border: 1px solid #91ccb9;
+  background-color: white;
+  color: #91ccb9;
+  height: 25px;
+  :hover {
+    cursor: pointer;
+    background-color: #91ccb9;
+    color: white;
+  }
+`;
+const CloseBtn = styled.button`
+  font-family: "QuickSand";
+  font-size: 16px;
+  border-radius: 20px;
+  height: 30px;
+  border: 1px solid #eedd42;
+  background-color: white;
+  color: grey;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  :hover {
+    background-color: #eedd42;
+    border: 1px solid #eedd42;
+    color: white;
+    cursor: pointer;
+  }
 `;
 
 function ManageSchedule() {
@@ -325,7 +414,7 @@ function ManageSchedule() {
     /* opacity: 0.2; */
     transition: all 0.3s ease-in-out;
     /* background-color: yellow; */
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: rgba(0, 0, 0, 0.1);
   `;
 
   if (UID === undefined) {
@@ -367,12 +456,28 @@ function ManageSchedule() {
           opacity={opacity}
           backgroundProps={{ opacity }}
         >
-          <span>I am a modal!</span>
-          <div>
-            <input></input>
-            <button></button>
-          </div>
-          <button onClick={toggleModal}>Close me</button>
+          <AddByEmail>
+            <Form>
+              <Input placeholder="email"></Input>
+            </Form>
+            <Add>add</Add>
+          </AddByEmail>
+
+          <AlreadySharedList>
+            <Title>Share list</Title>
+            <CloseModalBtn></CloseModalBtn>
+            <AllUsers>
+              <EachUser>
+                <TypeEmail>ellie@gmail.com</TypeEmail>
+                <Delete>delete</Delete>
+              </EachUser>
+              {/* <div>
+            <div>bb@gmail.com</div>
+            <button>delete</button>
+          </div> */}
+            </AllUsers>
+          </AlreadySharedList>
+          <CloseBtn onClick={toggleModal}>Finish</CloseBtn>
         </StyledModal>
       </div>
     );
