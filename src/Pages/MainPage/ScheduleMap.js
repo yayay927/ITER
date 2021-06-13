@@ -16,6 +16,7 @@ import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-direct
 import "mapbox-gl/dist/mapbox-gl.css"; // Updating node module will keep css up to date.
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"; // Updating node module will keep css up to date.
 import BuildGeolocationDB from "./BuildGeolocationDB.js";
+import { getAttractionData } from "../../Utils/firebase.js";
 
 // const MapboxDirections = require("@mapbox/mapbox-gl-directions");
 
@@ -133,6 +134,8 @@ function ScheduleMap() {
   const [walkingTime, setWalkingTime] = useState();
   const [cyclingTime, setCyclingTime] = useState();
 
+  const [attractionData, setAttractionData] = useState([]);
+
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
@@ -142,6 +145,26 @@ function ScheduleMap() {
       center: [lng, lat],
       zoom: zoom,
       logoPosition: "bottom-right",
+    });
+
+    const renderAttractionData = async () => {
+      let rawData = await getAttractionData(`${cityName}`);
+      console.log(rawData);
+      let filterData = rawData.filter(
+        (attraction) => attraction.url !== undefined && attraction.name !== ""
+      );
+      setAttractionData(filterData);
+    };
+    renderAttractionData();
+
+    attractionData.map((attraction) => {
+      const lng = attraction.geolocation[1];
+      const lat = attraction.geolocation[0];
+
+      new mapboxgl.Marker()
+        // .setLngLat([135.7726717, 34.9671402])
+        .setLngLat([lng, lat])
+        .addTo(map.current);
     });
 
     // map.current.addControl(
@@ -160,6 +183,7 @@ function ScheduleMap() {
     });
 
     map.current.addControl(directions, "top-left");
+    map.current.addControl(new mapboxgl.FullscreenControl());
 
     //get lng and lat for 2 points selected on map
     map.current.on("load", () => {
@@ -180,8 +204,6 @@ function ScheduleMap() {
         console.log(lngA, latA, lngB, latB);
         getTransportationAPI(lngA, latA, lngB, latB);
       });
-
-      //route //profile
     });
   });
 
@@ -237,9 +259,6 @@ function ScheduleMap() {
       setZoom(map.current.getZoom().toFixed(2));
     });
   });
-
-  console.log(BuildGeolocationDB("stanley park"));
-  console.log("answer");
 
   return (
     <>

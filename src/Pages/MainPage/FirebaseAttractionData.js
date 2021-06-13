@@ -23,9 +23,16 @@ const Attraction = styled.div`
   /* border-radius: 10px; */
   border-radius: 20px;
 `;
-const AttractionName = styled.div`
+const AttractionName = styled.a`
   font-size: 16px;
+
+  text-decoration: none;
+  color: black;
+  display: block;
   text-align: center;
+  :hover {
+    color: blue;
+  }
 `;
 const AttractionImage = styled.div`
   filter: brightness(1.25);
@@ -65,6 +72,7 @@ function FirebaseAttractionData() {
       {attractionData.map((attraction) => {
         const spotName = attraction.name;
         const spotUrl = attraction.url;
+        const spotLink = attraction.link;
         return (
           <Attraction key={spotName} className="event">
             <AttractionImage
@@ -74,7 +82,9 @@ function FirebaseAttractionData() {
                 backgroundSize: `cover`,
               }}
             ></AttractionImage>
-            <AttractionName>{spotName}</AttractionName>
+            <AttractionName href={spotLink} target="_blank">
+              {spotName}
+            </AttractionName>
             {/* <Title>{product.title}</Title> */}
             {/* <Img src={product.main_image}></Img> */}
           </Attraction>
