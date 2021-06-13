@@ -154,18 +154,35 @@ function ScheduleMap() {
         (attraction) => attraction.url !== undefined && attraction.name !== ""
       );
       setAttractionData(filterData);
+      filterData.map((attraction) => {
+        const lng = attraction.geolocation[1];
+        const lat = attraction.geolocation[0];
+        const spotName = attraction.name;
+
+        // map.current.on("mouseenter", "places", function () {
+        //   map.current.getCanvas().style.cursor = "pointer";
+
+        //   new mapboxgl.Popup()
+        //     .setLngLat([lng, lat])
+        //     .setHTML(`<p>${spotName}</p>`)
+        //     .addTo(map.current);
+        // });
+
+        // map.current.on("mouseleave", "places", function () {
+        //   map.current.getCanvas().style.cursor = "";
+        //   new mapboxgl.Popup().remove();
+        // });
+
+        new mapboxgl.Marker()
+          // .setLngLat([135.7726717, 34.9671402])
+          .setLngLat([lng, lat])
+          .setPopup(new mapboxgl.Popup().setHTML(`<p>${spotName}</p>`))
+          .addTo(map.current);
+
+        return attraction.getlocation;
+      });
     };
     renderAttractionData();
-
-    attractionData.map((attraction) => {
-      const lng = attraction.geolocation[1];
-      const lat = attraction.geolocation[0];
-
-      new mapboxgl.Marker()
-        // .setLngLat([135.7726717, 34.9671402])
-        .setLngLat([lng, lat])
-        .addTo(map.current);
-    });
 
     // map.current.addControl(
     //   new MapboxDirections({

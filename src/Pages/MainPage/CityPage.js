@@ -23,7 +23,6 @@ import Swal from "sweetalert2";
 // import "@fortawesome/fontawesome-free/css/all.css";
 // import bootstrapPlugin from "@fullcalendar/bootstrap";
 import Joyride from "react-joyride";
-import BuildGeolocationDB from "./BuildGeolocationDB.js";
 
 const CalendarPage = styled.div`
   margin: 50px 50px 0px 50px;
@@ -269,8 +268,6 @@ function CityPage() {
     }
   }, []);
 
-  BuildGeolocationDB("stanley park");
-
   return (
     <CalendarPage>
       <MainPart>
@@ -469,7 +466,6 @@ function CityPage() {
         // callback={(data) => handleJoyrideCallback(data, setRun)}
         // styles={{ options: defaultOptions }}
       ></Joyride>
-      {/* {BuildGeolocationDB()} */}
     </CalendarPage>
   );
 }
