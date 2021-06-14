@@ -14,6 +14,10 @@ code {
     /* source-code-pro, Menlo, Monaco, Consolas,  */ "Courier New", monospace;
 }
 
+.mapBtn {
+  background-image: url("./Components/rightarrow.png");
+}
+
 @media print {
   @page {
     size: 800px 1200px;

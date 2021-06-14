@@ -21,26 +21,54 @@ import Swal from "sweetalert2";
 import { getDefaultNormalizer } from "@testing-library/dom";
 import ListModal from "./ListModal";
 import Joyride from "react-joyride";
-import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
+// import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
 import items from "../../Components/items.jpg";
 import Luggage from "../../Components/luggage.jpg";
 import Road from "../../Components/road.jpg";
 import Window from "../../Components/window.jpg";
 import Boat from "../../Components/boat.jpg";
+import ReactDOM from "react-dom";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
-// const StyledModal = styled(Modal)`
-const StyledModal = Modal.styled`
-  width: 20rem;
-  height: 20rem;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  /* border: none; */
-  border-radius: 10px;
-  /*opacity: ${(props) => props.opacity};*/
-  position: relative;
-  /*transition: all 0.3s ease-in-out;*/
+// const StyledModal = Modal.styled`
+//   height: 20rem;
+//   width: 20rem;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: white;
+//   /* border: none; */
+//   border-radius: 10px;
+//   /*opacity: ${(props) => props.opacity};*/
+//   position: relative;
+//   /*transition: all 0.3s ease-in-out;*/
+// `;
+
+const StyledPopup = styled(Popup)`
+  &-content {
+    height: 20rem;
+    width: 20rem;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    /* border: none; */
+    border-radius: 10px;
+    /*opacity: ${(props) => props.opacity};*/
+    position: relative;
+    /*transition: all 0.3s ease-in-out;*/
+  }
 `;
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
 
 const Manage = styled.div`
   margin-top: 55px;
@@ -386,13 +414,13 @@ const CloseBtn = styled.button`
   }
 `;
 
-const FadingBackground = styled(BaseModalBackground)`
-  opacity: ${(props) => props.opacity};
-  /* opacity: 0.2; */
-  transition: all 0.3s ease-in-out;
-  /* background-color: yellow; */
-  background-color: rgba(0, 0, 0, 0.1);
-`;
+// const FadingBackground = styled(BaseModalBackground)`
+//   opacity: ${(props) => props.opacity};
+//   /* opacity: 0.2; */
+//   transition: all 0.3s ease-in-out;
+//   /* background-color: yellow; */
+//   background-color: rgba(0, 0, 0, 0.1);
+// `;
 
 function ManageSchedule() {
   let url = window.location.search;
@@ -426,43 +454,66 @@ function ManageSchedule() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [opacity, setOpacity] = useState(0);
+  const [currentShareEmail, setCurrentShareEmail] = useState();
 
   if (UID === undefined) {
     history.push(`/error`);
   }
 
-  function EditShareList(tripID, share) {
-    function toggleModal(e) {
-      setOpacity(0);
-      setIsOpen(!isOpen);
-    }
+  function EditShareList({ tripID, share }) {
+    //(props)
+    // let {tripID, share} = props;
 
-    function afterOpen() {
-      setTimeout(() => {
-        setOpacity(1);
-      }, 100);
-    }
+    // function toggleModal(e) {
+    //   setOpacity(0);
+    //   setIsOpen(!isOpen);
+    // }
 
-    function beforeClose() {
-      return new Promise((resolve) => {
-        setOpacity(0);
-        setTimeout(resolve, 300);
-      });
-    }
+    // function afterOpen() {
+    //   setTimeout(() => {
+    //     setOpacity(1);
+    //   }, 100);
+    //   setCurrentShareEmail(share);
+    // }
+
+    // function beforeClose() {
+    //   return new Promise((resolve) => {
+    //     setOpacity(0);
+    //     setTimeout(resolve, 300);
+    //   });
+    // }
 
     console.log(tripID, share);
 
     return (
       <div>
-        <OpenButton onClick={toggleModal}>Edit</OpenButton>
-        <StyledModal
-          isOpen={isOpen}
-          afterOpen={afterOpen}
-          beforeClose={beforeClose}
-          onBackgroundClick={toggleModal}
-          onEscapeKeydown={toggleModal}
+        {/* {share
+          ? share.map((each, i) => {
+              console.log(each);
+              return <div>{each}</div>;
+            })
+          : null} */}
+
+        <StyledPopup
+          key={tripID}
+          open={isOpen}
+          // afterOpen={afterOpen}
+          // beforeClose={beforeClose}
+          // onBackgroundClick={toggleModal}
+          // onEscapeKeydown={toggleModal}
           // opacity={opacity}
           // backgroundProps={{ opacity }}
+          trigger={
+            <OpenButton
+              onClick={() => {
+                setIsOpen(true);
+              }}
+            >
+              Edit
+            </OpenButton>
+          }
+          modal
+          position="right center"
         >
           <AddByEmail>
             <Form>
@@ -481,12 +532,11 @@ function ManageSchedule() {
             <CloseModalBtn></CloseModalBtn>
             <AllUsers>
               {share
-                ? share.map((each) => {
+                ? share.map((each, i) => {
                     console.log(each);
                     return (
-                      <EachUser>
+                      <EachUser key={i}>
                         <TypeEmail>{each}</TypeEmail>
-                        {/* <TypeEmail>{each}</TypeEmail> */}
                         <Delete onClick={() => deleteUser(tripID, shareEmail)}>
                           delete
                         </Delete>
@@ -496,8 +546,14 @@ function ManageSchedule() {
                 : null}
             </AllUsers>
           </AlreadySharedList>
-          <CloseBtn onClick={toggleModal}>Finish</CloseBtn>
-        </StyledModal>
+          <CloseBtn
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          >
+            Finish
+          </CloseBtn>
+        </StyledPopup>
       </div>
     );
   }
@@ -690,12 +746,12 @@ function ManageSchedule() {
       }}
     >
       {/* <ThemeProvider theme={theme}></ThemeProvider> */}
-      <ModalProvider backgroundComponent={FadingBackground}>
-        <Manage className="step-1">
-          <div style={{ height: "10px" }}></div>
-          <Profile>
-            {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
-            {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
+      {/* <ModalProvider backgroundComponent={FadingBackground}> */}
+      <Manage className="step-1">
+        <div style={{ height: "10px" }}></div>
+        <Profile>
+          {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
+          {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
             <input
               // name="progressbarTW_img"
               type="file"
@@ -703,125 +759,126 @@ function ManageSchedule() {
               // onChange={(e) => setPhotoFile(e.target.files[0])}
             ></input>
           </form> */}
-            {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
-            <Name>{profileData.name}</Name>
-            <Email>{profileData.email}</Email>
-          </Profile>
-          <Trips>
-            <Current>
-              <CurrentTrips>My Trips</CurrentTrips>
-              <Table>
-                <THead>
-                  <TrHead>
-                    <Td style={{ width: "200px" }}>City</Td>
-                    <Td style={{ width: "200px" }}>Create date</Td>
-                    <Td style={{ width: "220px" }}>Share with</Td>
-                    <Td style={{ width: "200px" }}>Trip</Td>
-                  </TrHead>
-                </THead>
-                <TBody>
-                  {trip.map((trip) => {
-                    console.log(trip);
-                    const city = trip[1].city;
-                    const time = trip[1].createTime;
-                    const share = trip[1].share;
-                    const tripID = trip[0];
+          {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
+          <Name>{profileData.name}</Name>
+          <Email>{profileData.email}</Email>
+        </Profile>
+        <Trips>
+          <Current>
+            <CurrentTrips>My Trips</CurrentTrips>
+            <Table>
+              <THead>
+                <TrHead>
+                  <Td style={{ width: "200px" }}>City</Td>
+                  <Td style={{ width: "200px" }}>Create date</Td>
+                  <Td style={{ width: "220px" }}>Share with</Td>
+                  <Td style={{ width: "200px" }}>Trip</Td>
+                </TrHead>
+              </THead>
+              <TBody>
+                {trip.map((trip, i) => {
+                  console.log(trip);
+                  const city = trip[1].city;
+                  const time = trip[1].createTime;
+                  const share = trip[1].share;
+                  const tripID = trip[0];
 
-                    /* const owner = trip[1].owner; */
+                  /* const owner = trip[1].owner; */
 
-                    return (
-                      <Tr>
-                        {/* <TripName onClick={() => checkTrip(city, UID)}>
+                  return (
+                    <Tr key={i}>
+                      {/* <TripName onClick={() => checkTrip(city, UID)}>
                       {tripName}
                     </TripName> */}
-                        <TableCity
-                          style={{ width: "200px" }}
-                          // onClick={() => checkTrip(city, tripID)}
-                        >
-                          {city}
-                        </TableCity>
+                      <TableCity
+                        style={{ width: "200px" }}
+                        // onClick={() => checkTrip(city, tripID)}
+                      >
+                        {city}
+                      </TableCity>
 
-                        <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
+                      <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
 
-                        <EmailTd style={{ width: "220px" }}>
-                          {/* {share} */}
-                          {/* <EditList>List</EditList> */}
-                          {/* <EditShareList></EditShareList> */}
-                          {EditShareList(tripID, share)}
-                          {/* {listToggle === true && <ListModal></ListModal>} */}
-                          {/* {listToggle === true ? <ListModal></ListModal>: null} */}
-                        </EmailTd>
-                        <EditTd style={{ width: "200px" }}>
-                          <EditTrip onClick={() => editTrip(city, tripID)}>
-                            Edit
-                          </EditTrip>
-                          <EditTrip onClick={() => checkTrip(city, tripID)}>
-                            Print
-                          </EditTrip>
+                      <EmailTd style={{ width: "220px" }}>
+                        {/* {share} */}
+                        {/* <EditList>List</EditList> */}
+                        <EditShareList
+                          tripID={tripID}
+                          share={share}
+                        ></EditShareList>
+                        {/* {EditShareList(tripID, share)} */}
+                        {/* {listToggle === true && <ListModal></ListModal>} */}
+                        {/* {listToggle === true ? <ListModal></ListModal>: null} */}
+                      </EmailTd>
+                      <EditTd style={{ width: "200px" }}>
+                        <EditTrip onClick={() => editTrip(city, tripID)}>
+                          Edit
+                        </EditTrip>
+                        <EditTrip onClick={() => checkTrip(city, tripID)}>
+                          Print
+                        </EditTrip>
 
-                          <EditList onClick={() => deleteTrip(tripID)}>
-                            Delete
-                          </EditList>
-                        </EditTd>
-                      </Tr>
-                    );
-                  })}
-                </TBody>
-              </Table>
-            </Current>
+                        <EditList onClick={() => deleteTrip(tripID)}>
+                          Delete
+                        </EditList>
+                      </EditTd>
+                    </Tr>
+                  );
+                })}
+              </TBody>
+            </Table>
+          </Current>
 
-            <Past>
-              <HistoryTrips>Shared Trips</HistoryTrips>
-              <Table>
-                <THead>
-                  <TrHead>
-                    <Td style={{ width: "200px" }}>City</Td>
-                    <Td style={{ width: "200px" }}>Create date</Td>
-                    <Td style={{ width: "220px" }}>Owner</Td>
-                    <Td style={{ width: "200px" }}>Edit</Td>
-                  </TrHead>
-                </THead>
-                <TBody>
-                  {tripEdit.map((tripEdit) => {
-                    const owner = tripEdit[1].owner;
-                    const city = tripEdit[1].city;
-                    const time = tripEdit[1].createTime;
-                    const tripID = tripEdit[0];
+          <Past>
+            <HistoryTrips>Shared Trips</HistoryTrips>
+            <Table>
+              <THead>
+                <TrHead>
+                  <Td style={{ width: "200px" }}>City</Td>
+                  <Td style={{ width: "200px" }}>Create date</Td>
+                  <Td style={{ width: "220px" }}>Owner</Td>
+                  <Td style={{ width: "200px" }}>Edit</Td>
+                </TrHead>
+              </THead>
+              <TBody>
+                {tripEdit.map((tripEdit) => {
+                  const owner = tripEdit[1].owner;
+                  const city = tripEdit[1].city;
+                  const time = tripEdit[1].createTime;
+                  const tripID = tripEdit[0];
 
-                    let userData;
-                    const renderProfileData = async () => {
-                      userData = await getProfileData(owner);
-                      setOwnerEmail(userData.email);
-                    };
-                    renderProfileData();
+                  let userData;
+                  const renderProfileData = async () => {
+                    userData = await getProfileData(owner);
+                    setOwnerEmail(userData.email);
+                  };
+                  renderProfileData();
 
-                    return (
-                      <Tr>
-                        <TableCity
-                          style={{ width: "200px" }}
-                          onClick={() => checkTrip(city, tripID)}
-                        >
-                          {city}
-                        </TableCity>
-                        <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
-                        <EmailTd style={{ width: "220px" }}>
-                          {ownerEmail}
-                        </EmailTd>
-                        <EditTd style={{ width: "200px" }}>
-                          <EditTrip onClick={() => editTrip(city, tripID)}>
-                            Clone
-                          </EditTrip>
-                        </EditTd>
-                      </Tr>
-                    );
-                  })}
-                </TBody>
-              </Table>
-            </Past>
-          </Trips>
-        </Manage>
-        <Joyride run={true} steps={steps} continuous={true}></Joyride>
-      </ModalProvider>
+                  return (
+                    <Tr>
+                      <TableCity
+                        style={{ width: "200px" }}
+                        onClick={() => checkTrip(city, tripID)}
+                      >
+                        {city}
+                      </TableCity>
+                      <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
+                      <EmailTd style={{ width: "220px" }}>{ownerEmail}</EmailTd>
+                      <EditTd style={{ width: "200px" }}>
+                        <EditTrip onClick={() => editTrip(city, tripID)}>
+                          Clone
+                        </EditTrip>
+                      </EditTd>
+                    </Tr>
+                  );
+                })}
+              </TBody>
+            </Table>
+          </Past>
+        </Trips>
+      </Manage>
+      <Joyride run={true} steps={steps} continuous={true}></Joyride>
+      {/* </ModalProvider> */}
     </div>
   );
 }
