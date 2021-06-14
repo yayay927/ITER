@@ -28,20 +28,22 @@ import Road from "../../Components/road.jpg";
 import Window from "../../Components/window.jpg";
 import Boat from "../../Components/boat.jpg";
 
+// const StyledModal = styled(Modal)`
 const StyledModal = Modal.styled`
   width: 20rem;
   height: 20rem;
   align-items: center;
   justify-content: center;
   background-color: white;
-  // border: none;
-  // border-radius: 25px;
-  opacity: ${(props) => props.opacity};
+  /* border: none; */
+  border-radius: 10px;
+  /*opacity: ${(props) => props.opacity};*/
   position: relative;
-  transition : all 0.3s ease-in-out;`;
+  /*transition: all 0.3s ease-in-out;*/
+`;
 
 const Manage = styled.div`
-  margin-top: 60px;
+  margin-top: 55px;
   /* height: 60%; */
   height: 90vh;
   overflow: auto;
@@ -57,6 +59,7 @@ const Profile = styled.div`
   max-width: 1280px;
   margin: 3vh auto;
   margin-bottom: 0;
+  /* margin-top: 50px; */
   width: 30%;
   background-color: rgb(57, 80, 73, 0.3);
   /* background-color: rgb(145, 204, 185, 0.5); */
@@ -378,9 +381,17 @@ const CloseBtn = styled.button`
   :hover {
     background-color: #eedd42;
     border: 1px solid #eedd42;
-    color: white;
+    color: black;
     cursor: pointer;
   }
+`;
+
+const FadingBackground = styled(BaseModalBackground)`
+  opacity: ${(props) => props.opacity};
+  /* opacity: 0.2; */
+  transition: all 0.3s ease-in-out;
+  /* background-color: yellow; */
+  background-color: rgba(0, 0, 0, 0.1);
 `;
 
 function ManageSchedule() {
@@ -409,19 +420,12 @@ function ManageSchedule() {
     {
       target: ".step-1",
       content: "You can manage current and history trips here.",
-      placement: "center",
+      // placement: "center",
     },
   ]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [opacity, setOpacity] = useState(0);
-  const FadingBackground = styled(BaseModalBackground)`
-    opacity: ${(props) => props.opacity};
-    /* opacity: 0.2; */
-    transition: all 0.3s ease-in-out;
-    /* background-color: yellow; */
-    background-color: rgba(0, 0, 0, 0.1);
-  `;
 
   if (UID === undefined) {
     history.push(`/error`);
@@ -446,8 +450,6 @@ function ManageSchedule() {
       });
     }
 
-    setShareEmail(document.getElementById("shareEmail"));
-
     return (
       <div>
         <OpenButton onClick={toggleModal}>Edit</OpenButton>
@@ -457,8 +459,8 @@ function ManageSchedule() {
           beforeClose={beforeClose}
           onBackgroundClick={toggleModal}
           onEscapeKeydown={toggleModal}
-          opacity={opacity}
-          backgroundProps={{ opacity }}
+          // opacity={opacity}
+          // backgroundProps={{ opacity }}
         >
           <AddByEmail>
             <Form>
@@ -495,6 +497,7 @@ function ManageSchedule() {
   }
 
   function addUser(tripID, email) {
+    setShareEmail(document.getElementById("shareEmail"));
     addShareEmail(tripID, email);
   }
   function deleteUser(tripID, email) {
@@ -677,6 +680,7 @@ function ManageSchedule() {
         // opacity: 0.6,
       }}
     >
+      {/* <ThemeProvider theme={theme}></ThemeProvider> */}
       <ModalProvider backgroundComponent={FadingBackground}>
         <Manage className="step-1">
           <div style={{ height: "10px" }}></div>
@@ -733,8 +737,8 @@ function ManageSchedule() {
                         <EmailTd style={{ width: "220px" }}>
                           {share}
                           {/* <EditList>List</EditList> */}
-                          <EditShareList></EditShareList>
-                          {/* {EditShareList(tripID)} */}
+                          {/* <EditShareList></EditShareList> */}
+                          {EditShareList(tripID)}
                           {listToggle === true && <ListModal></ListModal>}
                           {/* {listToggle === true ? <ListModal></ListModal>: null} */}
                         </EmailTd>

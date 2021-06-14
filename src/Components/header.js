@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
+import logo2 from "./logo2.png";
 import anchorW from "./anchorW.png";
 import anchorwhite from "./anchorwhite.png";
 import user from "./user.png";
@@ -248,7 +249,7 @@ function Header() {
     <div className="App">
       <TheHeader className="App-header">
         <a href="../">
-          <Logo src={anchor} />
+          <Logo src={logo2} />
         </a>
         <form onSubmit={getParamValue}></form>
 
