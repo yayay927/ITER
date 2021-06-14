@@ -117,7 +117,7 @@ function Map() {
       .setLngLat([121.597366, 25.105497])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Taipei</font></h1><a href="../city/Taipei"><div  class="mapBtn" style="background-image: url('../../Components/rightarrow.png'); width: 100px;height: 50px;  outline: none;border-radius: 20px;background-color:  #f5f570;border: none"></div><button>Go!</button></a>`
+          `<h1><font face="Allura" size="70px">Taipei</font></h1><a href="../city/Taipei"><div  class="mapBtn" ></div></a>`
         )
       )
       .addTo(map.current);

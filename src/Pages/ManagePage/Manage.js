@@ -452,7 +452,7 @@ function ManageSchedule() {
     },
   ]);
 
-  const [isOpen, setIsOpen] = useState(false);
+ 
   const [opacity, setOpacity] = useState(0);
   const [currentShareEmail, setCurrentShareEmail] = useState();
 
@@ -461,6 +461,9 @@ function ManageSchedule() {
   }
 
   function EditShareList({ tripID, share }) {
+    // const [isOpen, setIsOpen] = useState(false);
+    const [open, setOpen] = useState(false);
+    const closeModal = () => setOpen(false);
     //(props)
     // let {tripID, share} = props;
 
@@ -496,7 +499,9 @@ function ManageSchedule() {
 
         <StyledPopup
           key={tripID}
-          open={isOpen}
+          open={open}
+          closeOnDocumentClick
+          onClose={closeModal}
           // afterOpen={afterOpen}
           // beforeClose={beforeClose}
           // onBackgroundClick={toggleModal}
@@ -506,7 +511,8 @@ function ManageSchedule() {
           trigger={
             <OpenButton
               onClick={() => {
-                setIsOpen(true);
+                // setIsOpen(true);
+                setOpen(true);
               }}
             >
               Edit
@@ -515,6 +521,8 @@ function ManageSchedule() {
           modal
           position="right center"
         >
+         {close => (
+           <>
           <AddByEmail>
             <Form>
               <Input
@@ -547,13 +555,15 @@ function ManageSchedule() {
             </AllUsers>
           </AlreadySharedList>
           <CloseBtn
-            onClick={() => {
-              setIsOpen(false);
-            }}
+            // onClick={closeModal}
+            onClick= {close}
           >
             Finish
           </CloseBtn>
+          </>
+          )}
         </StyledPopup>
+        
       </div>
     );
   }
