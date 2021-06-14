@@ -431,7 +431,7 @@ function ManageSchedule() {
     history.push(`/error`);
   }
 
-  function EditShareList(tripID) {
+  function EditShareList(tripID, share) {
     function toggleModal(e) {
       setOpacity(0);
       setIsOpen(!isOpen);
@@ -450,6 +450,8 @@ function ManageSchedule() {
       });
     }
 
+    console.log(tripID, share);
+
     return (
       <div>
         <OpenButton onClick={toggleModal}>Edit</OpenButton>
@@ -467,7 +469,7 @@ function ManageSchedule() {
               <Input
                 type="text"
                 name="email"
-                id="shareEmail"
+                id="inputEmail"
                 placeholder="email"
               ></Input>
             </Form>
@@ -478,16 +480,20 @@ function ManageSchedule() {
             <Title>Share list</Title>
             <CloseModalBtn></CloseModalBtn>
             <AllUsers>
-              <EachUser>
-                <TypeEmail>ellie@gmail.com</TypeEmail>
-                <Delete onClick={() => deleteUser(tripID, shareEmail)}>
-                  delete
-                </Delete>
-              </EachUser>
-              {/* <div>
-            <div>bb@gmail.com</div>
-            <button>delete</button>
-          </div> */}
+              {share
+                ? share.map((each) => {
+                    console.log(each);
+                    return (
+                      <EachUser>
+                        <TypeEmail>{each}</TypeEmail>
+                        {/* <TypeEmail>{each}</TypeEmail> */}
+                        <Delete onClick={() => deleteUser(tripID, shareEmail)}>
+                          delete
+                        </Delete>
+                      </EachUser>
+                    );
+                  })
+                : null}
             </AllUsers>
           </AlreadySharedList>
           <CloseBtn onClick={toggleModal}>Finish</CloseBtn>
@@ -497,8 +503,11 @@ function ManageSchedule() {
   }
 
   function addUser(tripID, email) {
-    setShareEmail(document.getElementById("shareEmail"));
-    addShareEmail(tripID, email);
+    let input = document.getElementById("inputEmail");
+    console.log(input.text);
+    setShareEmail(document.getElementById("inputEmail"));
+    // addShareEmail(tripID, email);
+    document.getElementById("inputEmail").innerHTML = "";
   }
   function deleteUser(tripID, email) {
     removeShareEmail(tripID, email);
@@ -735,11 +744,11 @@ function ManageSchedule() {
                         <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
 
                         <EmailTd style={{ width: "220px" }}>
-                          {share}
+                          {/* {share} */}
                           {/* <EditList>List</EditList> */}
                           {/* <EditShareList></EditShareList> */}
-                          {EditShareList(tripID)}
-                          {listToggle === true && <ListModal></ListModal>}
+                          {EditShareList(tripID, share)}
+                          {/* {listToggle === true && <ListModal></ListModal>} */}
                           {/* {listToggle === true ? <ListModal></ListModal>: null} */}
                         </EmailTd>
                         <EditTd style={{ width: "200px" }}>

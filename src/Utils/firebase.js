@@ -338,21 +338,21 @@ function deleteTripData(tripID) {
 }
 
 function addShareEmail(tripID, email) {
-  return (
-    firebase
-      .firestore()
-      .collection("user_trips_history")
-      .doc(tripID)
-      .update({ share: email })
-      // .add({ email: email, name: name })
-      .then((docRef) => {
-        // console.log("Document written with ID: ", docRef.id);
-        // return docRef.id;
-      })
-      .catch((error) => {
-        console.error("Error adding document: ", error);
-      })
-  );
+  // return (
+  firebase
+    .firestore()
+    .collection("user_trips_history")
+    .doc(tripID)
+    .update({ share: email })
+    // .add({ email: email, name: name })
+    .then((docRef) => {
+      // console.log("Document written with ID: ", docRef.id);
+      // return docRef.id;
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+    });
+  // );
 }
 
 function removeShareEmail(tripID, email) {

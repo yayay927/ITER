@@ -31,7 +31,7 @@ const AttractionName = styled.a`
   display: block;
   text-align: center;
   :hover {
-    color: blue;
+    color: #91ccb9;
   }
 `;
 const AttractionImage = styled.div`

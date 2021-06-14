@@ -398,7 +398,7 @@ function CityPage() {
                     // alert("Great. Now, update your database...");
                     Swal.fire("Great. Now, update your database...");
                   } else {
-                    alert("Invalid date.");
+                    // Swal.fire("Cancel");
                   }
                 },
               },
