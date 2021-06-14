@@ -124,7 +124,7 @@ function CityPage() {
     {
       target: ".step-1",
       content: "You can arrange schedule in this page",
-      placement: "center",
+      // placement: "center",
     },
     {
       target: ".step-2",

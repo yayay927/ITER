@@ -14,6 +14,8 @@ import {
   checkUserStatus,
   fireAuthLogOut,
   deleteTripData,
+  addShareEmail,
+  removeShareEmail,
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
 import { getDefaultNormalizer } from "@testing-library/dom";
@@ -42,6 +44,7 @@ const Manage = styled.div`
   margin-top: 60px;
   /* height: 60%; */
   height: 90vh;
+  overflow: auto;
   /* height: calc(100vh-120px); */
 `;
 // const Message = styled.div`
@@ -52,13 +55,15 @@ const Manage = styled.div`
 // `;
 const Profile = styled.div`
   max-width: 1280px;
-  margin: 60px auto;
+  margin: 3vh auto;
   margin-bottom: 0;
   width: 30%;
   background-color: rgb(57, 80, 73, 0.3);
   /* background-color: rgb(145, 204, 185, 0.5); */
-
   border-radius: 40px;
+  @media (min-width: 1280px) {
+    margin-top: 10vh;
+  }
   /* border-bottom: 1px solid darkblue; */
 `;
 // const Photo = styled.img`
@@ -126,12 +131,13 @@ const Trips = styled.div`
   border-radius: 25px;
 `;
 const Current = styled.div`
-  margin-top: 3%;
+  margin-top: 30px;
+  /* margin-top: 3%; */
   display: flex;
   align-items: center;
   border-radius: 20px;
   border: 1px solid #91ccb9;
-  height: 250px;
+  /* height: 250px; */
   /* border: none; */
 `;
 const CurrentTrips = styled.div`
@@ -146,8 +152,10 @@ const CurrentTrips = styled.div`
   font-weight: bold;
   font-size: 30px;
   color: #eedd42;
+
   /* background-color: rgb(255, 255, 255, 0.7); */
   /* background-color: rgb(57, 80, 73, 0.3); */
+  /* text-align: center; */
 `;
 const Table = styled.table`
   /* margin-top: 10px; */
@@ -157,8 +165,9 @@ const Table = styled.table`
   /* background-color: rgb(57, 80, 73, 0.3); */
   /* opacity: 0.5; */
   display: block;
-  height: 220px;
+  /* height: 220px; */
   /* overflow-y: scroll; */
+  margin: 10px;
 `;
 
 const THead = styled.thead`
@@ -178,6 +187,7 @@ const THead = styled.thead`
 `;
 const TrHead = styled.tr`
   /* height: 60px; */
+  line-height: 20px;
 `;
 const Tr = styled.tr`
   height: 60px;
@@ -185,9 +195,7 @@ const Tr = styled.tr`
   border-radius: 10px;
   border: none;
 `;
-const Td = styled.td`
-  /* width: 25%; */
-`;
+const Td = styled.td``;
 const TimeTd = styled.td`
   font-size: 15px;
 `;
@@ -195,15 +203,7 @@ const EmailTd = styled.td`
   font-size: 15px;
 `;
 const TableCity = styled.td`
-  /* width: 20%; */
-  /* cursor: pointer; */
   font-weight: bold;
-
-  /* :hover {
-    color: white;
-    font-weight: bold;
-    font-size: 28px;
-  } */
 `;
 
 const TBody = styled.tbody`
@@ -212,26 +212,10 @@ const TBody = styled.tbody`
   font-size: 20px;
   width: 100%;
   display: block;
-  height: 180px;
-  overflow-y: scroll;
+  /* height: 180px; */
+  /* overflow-y: scroll; */
 `;
 
-// const TripName = styled.div`
-//   text-decoration: underline;
-// `;
-// const Location = styled.div`
-//   cursor: pointer;
-// `;
-
-// const Owner = styled.div`
-//   width: 100px;
-// `;
-// const Access = styled.div`
-//   width: 100px;
-// `;
-// const CanEdit = styled.div`
-//   width: 100px;
-// `;
 const EditTd = styled.td`
   display: flex;
 `;
@@ -243,9 +227,13 @@ const EditTrip = styled.button`
   border: none;
   border-radius: 40px;
   height: 40px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 1px solid lightgrey;
+  /* color: darkgrey; */
   :hover {
     color: white;
     background-color: #eedd42;
+    border: 1px solid #eedd42;
   }
 `;
 const EditList = styled.button`
@@ -256,9 +244,12 @@ const EditList = styled.button`
   border: none;
   border-radius: 40px;
   height: 40px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 1px solid lightgrey;
   :hover {
     color: white;
     background-color: #eedd42;
+    border: 1px solid #eedd42;
   }
 `;
 // const CanView = styled.div`
@@ -302,9 +293,12 @@ const OpenButton = styled.button`
   border: none;
   border-radius: 40px;
   height: 40px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 1px solid lightgrey;
   :hover {
     color: white;
     background-color: #eedd42;
+    border: 1px solid #eedd42;
   }
 `;
 const AddByEmail = styled.div`
@@ -326,7 +320,6 @@ const Input = styled.input`
   border: 1px solid #91ccb9;
 `;
 const Add = styled.button`
-  /* margin-right: 20px; */
   font-family: "QuickSand";
   border-radius: 30px;
   border: 1px solid #91ccb9;
@@ -349,11 +342,9 @@ const EachUser = styled.div`
   justify-content: space-between;
 `;
 const Title = styled.div`
-  /* display: block; */
   margin: 0 auto;
   text-align: center;
   margin-top: 20px;
-  /* width: 90%; */
   border-bottom: 1px solid grey;
 `;
 const CloseModalBtn = styled.div``;
@@ -411,6 +402,7 @@ function ManageSchedule() {
   // UID = "test9@gmail.com";
   const [ownerEmail, setOwnerEmail] = useState([]);
   const [profileEmail, setProfileEmail] = useState([]);
+  const [shareEmail, setShareEmail] = useState([]);
   const [listToggle, setListToggle] = useState(false);
   const [run, setRun] = useState(false);
   const [steps, setSteps] = useState([
@@ -435,7 +427,7 @@ function ManageSchedule() {
     history.push(`/error`);
   }
 
-  function EditShareList() {
+  function EditShareList(tripID) {
     function toggleModal(e) {
       setOpacity(0);
       setIsOpen(!isOpen);
@@ -454,6 +446,8 @@ function ManageSchedule() {
       });
     }
 
+    setShareEmail(document.getElementById("shareEmail"));
+
     return (
       <div>
         <OpenButton onClick={toggleModal}>Edit</OpenButton>
@@ -468,9 +462,14 @@ function ManageSchedule() {
         >
           <AddByEmail>
             <Form>
-              <Input placeholder="email"></Input>
+              <Input
+                type="text"
+                name="email"
+                id="shareEmail"
+                placeholder="email"
+              ></Input>
             </Form>
-            <Add onClick={addUser}>add</Add>
+            <Add onClick={() => addUser(tripID, shareEmail)}>add</Add>
           </AddByEmail>
 
           <AlreadySharedList>
@@ -479,7 +478,9 @@ function ManageSchedule() {
             <AllUsers>
               <EachUser>
                 <TypeEmail>ellie@gmail.com</TypeEmail>
-                <Delete onClick={deleteUser}>delete</Delete>
+                <Delete onClick={() => deleteUser(tripID, shareEmail)}>
+                  delete
+                </Delete>
               </EachUser>
               {/* <div>
             <div>bb@gmail.com</div>
@@ -493,8 +494,12 @@ function ManageSchedule() {
     );
   }
 
-  function addUser() {}
-  function deleteUser() {}
+  function addUser(tripID, email) {
+    addShareEmail(tripID, email);
+  }
+  function deleteUser(tripID, email) {
+    removeShareEmail(tripID, email);
+  }
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -633,7 +638,6 @@ function ManageSchedule() {
   function closeShareList() {
     console.log("close list button");
     setListToggle(false);
-    // return <ListModal></ListModal>;
   }
 
   // function selectPhoto() {
@@ -670,10 +674,12 @@ function ManageSchedule() {
       style={{
         background: `url(${items})`,
         backgroundSize: `cover`,
+        // opacity: 0.6,
       }}
     >
       <ModalProvider backgroundComponent={FadingBackground}>
         <Manage className="step-1">
+          <div style={{ height: "10px" }}></div>
           <Profile>
             {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
             {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
@@ -727,7 +733,8 @@ function ManageSchedule() {
                         <EmailTd style={{ width: "220px" }}>
                           {share}
                           {/* <EditList>List</EditList> */}
-                          <EditShareList />
+                          <EditShareList></EditShareList>
+                          {/* {EditShareList(tripID)} */}
                           {listToggle === true && <ListModal></ListModal>}
                           {/* {listToggle === true ? <ListModal></ListModal>: null} */}
                         </EmailTd>
