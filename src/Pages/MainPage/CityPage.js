@@ -90,8 +90,8 @@ const ConfirmButton = styled.button`
   background-color: #91ccb9;
   display: block;
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin: 0 auto;
   margin-top: 30px;
   font-family: "QuickSand";
@@ -100,8 +100,8 @@ const ConfirmButton = styled.button`
   font-size: 16px;
   color: white;
   position: fixed;
-  right: 30px;
-  top: 50px;
+  right: 20px;
+  top: 40px;
   :hover {
     background-color: #eedd42;
   }

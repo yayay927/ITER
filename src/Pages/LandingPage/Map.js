@@ -105,7 +105,7 @@ function Map() {
       .setLngLat([-82.383, 23.133])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Havana</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="70px">Havana</font></h1><a style="outline:none;" href="../city/Havana"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -128,7 +128,7 @@ function Map() {
       .setLngLat([12.3327, 45.4371])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Venice</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="70px">Venice</font></h1><a style="outline:none;" href="../city/Venice"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -139,7 +139,7 @@ function Map() {
       .setLngLat([135.768326, 35.011665])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Kyoto</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="70px">Kyoto</font></h1><a style="outline:none;" href="../city/Kyoto"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -150,7 +150,7 @@ function Map() {
       .setLngLat([-71.057083, 42.361145])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Boston</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="70px">Boston</font></h1><a style="outline:none;" href="../city/Boston"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -167,7 +167,7 @@ function Map() {
       .setLngLat([-123.116226, 49.246292])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Vancouver</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="70px">Vancouver</font></h1><a style="outline:none;" href="../city/Vancouver"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -178,7 +178,7 @@ function Map() {
       .setLngLat([31.233334, 30.033333])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Cairo</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="70px">Cairo</font></h1><a style="outline:none;" href="../city/Cairo"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -189,7 +189,7 @@ function Map() {
       .setLngLat([18.4233, -33.918861])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="30px">Cape Town</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="30px">Cape Town</font></h1><a style="outline:none;" href="../city/CapeTown"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -200,7 +200,7 @@ function Map() {
       .setLngLat([-58.381592, -34.603722])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="30px">Buenos Aires</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="30px">Buenos Aires</font></h1><a style="outline:none;" href="../city/BuenosAires"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -216,7 +216,7 @@ function Map() {
       .setLngLat([37.618423, 55.751244])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          `<h1><font face="Allura" size="70px">Moscow</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
+          `<h1><font face="Allura" size="70px">Moscow</font></h1><a style="outline:none;" href="../city/Moscow"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);

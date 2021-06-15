@@ -41,6 +41,13 @@ const Logo = styled.img`
   margin-right: 30px;
   margin-left: 20px;
 `;
+const Profile = styled.img`
+  height: 35px;
+  margin: 10px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: 20px;
+`;
 const SignUp = styled.div`
   height: 50px;
   margin: 10px;
@@ -275,7 +282,7 @@ function Header() {
           {/* <SignUp onClick={signUp}>Signup</SignUp>
           <LogIn onClick={login}>Login</LogIn> */}
           <div onClick={managePage}>
-            <Logo src={suitcaseNew} className="step-4" />
+            <Profile src={suitcaseNew} className="step-4" />
           </div>
         </Block>
       </TheHeader>
