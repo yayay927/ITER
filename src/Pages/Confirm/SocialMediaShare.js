@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import {
   FacebookShareCount,
-  PinterestShareCount,
+  // PinterestShareCount,
   FacebookShareButton,
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
+  // FacebookMessengerShareButton,
+  // FacebookMessengerIcon,
   LinkedinShareButton,
-  PinterestShareButton,
+  // PinterestShareButton,
   TwitterShareButton,
   EmailShareButton,
   LineShareButton,
-  InstapaperShareButton,
+  // InstapaperShareButton,
   FacebookIcon,
   TwitterIcon,
   LinkedinIcon,
-  PinterestIcon,
+  // PinterestIcon,
   EmailIcon,
   LineIcon,
-  InstapaperIcon,
+  // InstapaperIcon,
 } from "react-share";
 // import { useParams } from "react-router-dom";
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import anchor from "./anchor.png";
+import logo2 from "./logo2.png";
 import anchorW from "./anchorW.png";
 import anchorwhite from "./anchorwhite.png";
 import user from "./user.png";
@@ -40,6 +41,13 @@ const Logo = styled.img`
   margin-right: 30px;
   margin-left: 20px;
 `;
+const Profile = styled.img`
+  height: 35px;
+  margin: 10px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: 20px;
+`;
 const SignUp = styled.div`
   height: 50px;
   margin: 10px;
@@ -47,6 +55,10 @@ const SignUp = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    font-size: 20px;
+  }
 `;
 const LogIn = styled.div`
   height: 50px;
@@ -55,6 +67,10 @@ const LogIn = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    font-size: 20px;
+  }
 `;
 const LogOut = styled.div`
   height: 50px;
@@ -63,6 +79,10 @@ const LogOut = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    font-size: 20px;
+  }
 `;
 
 const Input = styled.input`
@@ -236,7 +256,7 @@ function Header() {
     <div className="App">
       <TheHeader className="App-header">
         <a href="../">
-          <Logo src={anchor} />
+          <Logo src={logo2} />
         </a>
         <form onSubmit={getParamValue}></form>
 
@@ -262,7 +282,7 @@ function Header() {
           {/* <SignUp onClick={signUp}>Signup</SignUp>
           <LogIn onClick={login}>Login</LogIn> */}
           <div onClick={managePage}>
-            <Logo src={suitcaseNew} className="step-4" />
+            <Profile src={suitcaseNew} className="step-4" />
           </div>
         </Block>
       </TheHeader>

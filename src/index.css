@@ -14,6 +14,41 @@ code {
     /* source-code-pro, Menlo, Monaco, Consolas,  */ "Courier New", monospace;
 }
 
+.mapboxgl-popup-content {
+  display: flex;
+  align-items: center;
+}
+
+.mapBtn {
+  background-image: url("./Components/rightarrow.png");
+  margin-right: 10px;
+  outline: none;
+  width: 53px;
+  height: 30px;
+  border-radius: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  /* background-color:  #f5f570;border: none" */
+}
+
+.mapBtn:focus {
+  outline: none;
+}
+
+.mapBtn:hover {
+  animation: moveRight 0.7s ease infinite;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
 @media print {
   @page {
     size: 800px 1200px;

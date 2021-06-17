@@ -25,19 +25,27 @@ import Swal from "sweetalert2";
 import Joyride from "react-joyride";
 
 const CalendarPage = styled.div`
-  margin: 70px 50px 70px 50px;
+  margin: 50px 50px 0px 50px;
   /* width: 100%; */
   /* display: flex; */
   /* margin-top: 80px; */
+  /* height: calc(100%-60px); */
+  height: 85vh;
   @media (max-width: 768px) {
     margin: 70px 0px;
   }
+  @media (min-width: 1440px) {
+    margin: 100px 50px 0px 50px;
+  }
 `;
 const MainPart = styled.div`
-  height: 95%;
+  /* height: 95%; */
+  /* height: 90%; */
+
   display: flex;
   width: 100%;
   margin: 0 auto;
+  height: 100%;
   @media (max-width: 768px) {
     display: block;
   }
@@ -47,7 +55,7 @@ const MapAndAttractions = styled.div`
   /* margin-right: 20px; */
   width: 60%;
   /* height: 100%; */
-  height: 80vh;
+  /* height: 80vh; */
   overflow: scroll;
   @media (max-width: 768px) {
     width: 100%;
@@ -82,8 +90,8 @@ const ConfirmButton = styled.button`
   background-color: #91ccb9;
   display: block;
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin: 0 auto;
   margin-top: 30px;
   font-family: "QuickSand";
@@ -92,8 +100,8 @@ const ConfirmButton = styled.button`
   font-size: 16px;
   color: white;
   position: fixed;
-  right: 30px;
-  top: 50px;
+  right: 20px;
+  top: 40px;
   :hover {
     background-color: #eedd42;
   }
@@ -105,6 +113,9 @@ function CityPage() {
   let url = window.location.search;
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
+  if (tripId === undefined) {
+    history.push(`/error`);
+  }
   // console.log(tripId);
   const [renderEvent, setRenderEvent] = useState();
 
@@ -113,7 +124,7 @@ function CityPage() {
     {
       target: ".step-1",
       content: "You can arrange schedule in this page",
-      placement: "center",
+      // placement: "center",
     },
     {
       target: ".step-2",
@@ -290,6 +301,7 @@ function CityPage() {
             headerToolbar={{
               // left: "prev, next, myCustomButton", //today,
               // center: "title",
+              // left: "prev title next",
               right: "dayGridMonth timeGridWeek", //, timeGridDay
               // right: "prev, today, next,",
             }}
@@ -386,7 +398,7 @@ function CityPage() {
                     // alert("Great. Now, update your database...");
                     Swal.fire("Great. Now, update your database...");
                   } else {
-                    alert("Invalid date.");
+                    // Swal.fire("Cancel");
                   }
                 },
               },
@@ -404,7 +416,8 @@ function CityPage() {
             // allDaySlot={false}
             minTime="06:00:00"
             // maxTime="24:00:00"
-            height="74vh" //"1000px"
+            // height="74vh" //"1000px"
+            height="100%"
             events={
               renderEvent
               // [

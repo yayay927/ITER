@@ -21,11 +21,13 @@ import SocialMediaShare from "./SocialMediaShare.js";
 import ReactDOM from "react-dom";
 // import Guide from "../MainPage/guide.js";
 import Joyride from "react-joyride";
+// import window2 from "../../Components/window2.jpg";
 
 const Confirm = styled.div`
   max-width: 1280px;
   width: 55.5%;
   margin: 60px auto 140px auto;
+  /* height: 100vh; */
 `;
 const Title = styled.div`
   font-family: "Allura";
@@ -133,10 +135,10 @@ function ConfirmSchedule() {
   const [run, setRun] = useState(false);
   const [steps, setSteps] = useState([
     {
-      target: ".step-1",
+      target: ".fc-toolbar-title",
       content:
         "Congratulations on completing the schedule! You can check schedule here",
-      placement: "center",
+      // placement: "center",
     },
     {
       target: ".step-2",
@@ -181,6 +183,9 @@ function ConfirmSchedule() {
   let params = new URLSearchParams(url);
   let tripId = params.get("number");
   let cityName = params.get("city");
+  if (tripId === undefined) {
+    history.push(`/error`);
+  }
 
   useEffect(() => {
     const renderEventsData = async () => {
@@ -252,7 +257,7 @@ function ConfirmSchedule() {
       {/* <div className="step-2"> */}
       <SocialMediaShare></SocialMediaShare>
       {/* </div> */}
-      <div className="step-1">
+      <div>
         <Title>Have a good time in {cityName}!</Title>
       </div>
       <Confirm>
@@ -282,9 +287,9 @@ function ConfirmSchedule() {
                   adaptivePlugin,
                 ]}
                 headerToolbar={{
-                  left: "prev next today",
+                  left: "",
                   center: "title",
-                  right: "timeGridWeek",
+                  right: "prev next today",
                 }}
                 initialView="timeGrid"
                 // initialView="timeline"

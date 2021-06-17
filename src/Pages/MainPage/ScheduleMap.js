@@ -15,6 +15,8 @@ import walk from "../../Components/walk.png";
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import "mapbox-gl/dist/mapbox-gl.css"; // Updating node module will keep css up to date.
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"; // Updating node module will keep css up to date.
+import BuildGeolocationDB from "./BuildGeolocationDB.js";
+import { getAttractionData } from "../../Utils/firebase.js";
 
 // const MapboxDirections = require("@mapbox/mapbox-gl-directions");
 
@@ -132,6 +134,8 @@ function ScheduleMap() {
   const [walkingTime, setWalkingTime] = useState();
   const [cyclingTime, setCyclingTime] = useState();
 
+  const [attractionData, setAttractionData] = useState([]);
+
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
@@ -142,6 +146,43 @@ function ScheduleMap() {
       zoom: zoom,
       logoPosition: "bottom-right",
     });
+
+    const renderAttractionData = async () => {
+      let rawData = await getAttractionData(`${cityName}`);
+      console.log(rawData);
+      let filterData = rawData.filter(
+        (attraction) => attraction.url !== undefined && attraction.name !== ""
+      );
+      setAttractionData(filterData);
+      filterData.map((attraction) => {
+        const lng = attraction.geolocation[1];
+        const lat = attraction.geolocation[0];
+        const spotName = attraction.name;
+
+        // map.current.on("mouseenter", "places", function () {
+        //   map.current.getCanvas().style.cursor = "pointer";
+
+        //   new mapboxgl.Popup()
+        //     .setLngLat([lng, lat])
+        //     .setHTML(`<p>${spotName}</p>`)
+        //     .addTo(map.current);
+        // });
+
+        // map.current.on("mouseleave", "places", function () {
+        //   map.current.getCanvas().style.cursor = "";
+        //   new mapboxgl.Popup().remove();
+        // });
+
+        new mapboxgl.Marker()
+          // .setLngLat([135.7726717, 34.9671402])
+          .setLngLat([lng, lat])
+          .setPopup(new mapboxgl.Popup().setHTML(`<p>${spotName}</p>`))
+          .addTo(map.current);
+
+        return attraction.getlocation;
+      });
+    };
+    renderAttractionData();
 
     // map.current.addControl(
     //   new MapboxDirections({
@@ -159,6 +200,7 @@ function ScheduleMap() {
     });
 
     map.current.addControl(directions, "top-left");
+    map.current.addControl(new mapboxgl.FullscreenControl());
 
     //get lng and lat for 2 points selected on map
     map.current.on("load", () => {
@@ -179,8 +221,6 @@ function ScheduleMap() {
         console.log(lngA, latA, lngB, latB);
         getTransportationAPI(lngA, latA, lngB, latB);
       });
-
-      //route //profile
     });
   });
 

@@ -167,7 +167,13 @@ function storeEventsData(saveEvents, cityName, UID, time) {
       .collection("user_trips_history")
       // .doc()
       // .set(
-      .add({ saveEvents, city: cityName, owner: UID, createTime: time })
+      .add({
+        saveEvents,
+        city: cityName,
+        owner: UID,
+        createTime: time,
+        // share: [],
+      })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
         return docRef.id;
@@ -337,6 +343,38 @@ function deleteTripData(tripID) {
     });
 }
 
+function addShareEmail(tripID, email) {
+  // return (
+  firebase
+    .firestore()
+    .collection("user_trips_history")
+    .doc(tripID)
+    .update({ share: email })
+    // .add({ email: email, name: name })
+    .then((docRef) => {
+      // console.log("Document written with ID: ", docRef.id);
+      // return docRef.id;
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+    });
+  // );
+}
+
+function removeShareEmail(tripID, email) {
+  firebase
+    .firestore()
+    .collection("user_trips_history")
+    .doc(tripID)
+    .delete({ share: email })
+    .then(() => {
+      console.log("Document successfully deleted!");
+    })
+    .catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+}
+
 export {
   getAttractionData,
   fireAuthLogIn,
@@ -354,6 +392,8 @@ export {
   getProfileData,
   storeAccountData,
   deleteTripData,
+  addShareEmail,
+  removeShareEmail,
 };
 
 // user.displayName: 顯示名稱

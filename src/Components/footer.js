@@ -13,7 +13,7 @@ const TheFooter = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 99999;
   /* justify-content: space-evenly; */
 `;
 const Audio = styled.div`
@@ -34,6 +34,7 @@ const CopyRight = styled.div`
   text-align: center;
   font-weight: bold;
   line-height: 40px;
+  font-size: 14px;
 `;
 const Icon = styled.img`
   height: 35px;
