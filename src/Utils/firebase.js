@@ -167,7 +167,13 @@ function storeEventsData(saveEvents, cityName, UID, time) {
       .collection("user_trips_history")
       // .doc()
       // .set(
-      .add({ saveEvents, city: cityName, owner: UID, createTime: time })
+      .add({
+        saveEvents,
+        city: cityName,
+        owner: UID,
+        createTime: time,
+        // share: [],
+      })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
         return docRef.id;

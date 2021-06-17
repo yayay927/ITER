@@ -452,7 +452,6 @@ function ManageSchedule() {
     },
   ]);
 
- 
   const [opacity, setOpacity] = useState(0);
   const [currentShareEmail, setCurrentShareEmail] = useState();
 
@@ -521,49 +520,50 @@ function ManageSchedule() {
           modal
           position="right center"
         >
-         {close => (
-           <>
-          <AddByEmail>
-            <Form>
-              <Input
-                type="text"
-                name="email"
-                id="inputEmail"
-                placeholder="email"
-              ></Input>
-            </Form>
-            <Add onClick={() => addUser(tripID, shareEmail)}>add</Add>
-          </AddByEmail>
+          {(close) => (
+            <>
+              <AddByEmail>
+                <Form>
+                  <Input
+                    type="text"
+                    name="email"
+                    id="inputEmail"
+                    placeholder="email"
+                  ></Input>
+                </Form>
+                <Add onClick={() => addUser(tripID, shareEmail)}>add</Add>
+              </AddByEmail>
 
-          <AlreadySharedList>
-            <Title>Share list</Title>
-            <CloseModalBtn></CloseModalBtn>
-            <AllUsers>
-              {share
-                ? share.map((each, i) => {
-                    console.log(each);
-                    return (
-                      <EachUser key={i}>
-                        <TypeEmail>{each}</TypeEmail>
-                        <Delete onClick={() => deleteUser(tripID, shareEmail)}>
-                          delete
-                        </Delete>
-                      </EachUser>
-                    );
-                  })
-                : null}
-            </AllUsers>
-          </AlreadySharedList>
-          <CloseBtn
-            // onClick={closeModal}
-            onClick= {close}
-          >
-            Finish
-          </CloseBtn>
-          </>
+              <AlreadySharedList>
+                <Title>Share list</Title>
+                <CloseModalBtn></CloseModalBtn>
+                <AllUsers>
+                  {share
+                    ? share.map((each, i) => {
+                        console.log(each);
+                        return (
+                          <EachUser key={i}>
+                            <TypeEmail>{each}</TypeEmail>
+                            <Delete
+                              onClick={() => deleteUser(tripID, shareEmail)}
+                            >
+                              delete
+                            </Delete>
+                          </EachUser>
+                        );
+                      })
+                    : null}
+                </AllUsers>
+              </AlreadySharedList>
+              <CloseBtn
+                // onClick={closeModal}
+                onClick={close}
+              >
+                Finish
+              </CloseBtn>
+            </>
           )}
         </StyledPopup>
-        
       </div>
     );
   }
@@ -792,6 +792,8 @@ function ManageSchedule() {
                   const time = trip[1].createTime;
                   const share = trip[1].share;
                   const tripID = trip[0];
+
+                  console.log(share);
 
                   /* const owner = trip[1].owner; */
 
