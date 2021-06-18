@@ -1,4 +1,4 @@
-import firebase from "firebase/app";
+// import firebase from "firebase/app";
 import "firebase/firestore";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -63,6 +63,7 @@ function FirebaseAttractionData() {
       setAttractionData(filterData);
     };
     renderAttractionData();
+    //eslint-disable-next-line
   }, []);
 
   // console.log(attractionData);

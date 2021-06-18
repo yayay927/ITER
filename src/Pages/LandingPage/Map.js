@@ -2,29 +2,29 @@ import styled from "styled-components";
 // import * as React from "react";
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import ReactMapGL, { Marker } from "react-map-gl";
-import { ZoomControl } from "mapbox-gl-controls";
-import L from "leaflet";
-import ocean from "../../Components/ocean.wav";
-import anchor from "../../Components/anchor.png";
+// import ReactMapGL, { Marker } from "react-map-gl";
+// import { ZoomControl } from "mapbox-gl-controls";
+// import L from "leaflet";
+// import ocean from "../../Components/ocean.wav";
+// import anchor from "../../Components/anchor.png";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import Navigation from "./Navigation";
-import rightarrow from "../../Components/rightarrow.png";
+// import Navigation from "./Navigation";
+// import rightarrow from "../../Components/rightarrow.png";
 
-const SideBar = styled.div`
-  background-color: rgba(35, 55, 75, 0.9);
-  color: #ffffff;
-  padding: 6px 12px;
-  font-family: monospace;
-  z-index: 1;
-  position: absolute;
-  top: 30;
-  left: 0;
-  margin: 955px 0 0 120px;
-  margin-top: 86vh;
-  margin-left: 5vw;
-  border-radius: 4px;
-`;
+// const SideBar = styled.div`
+//   background-color: rgba(35, 55, 75, 0.9);
+//   color: #ffffff;
+//   padding: 6px 12px;
+//   font-family: monospace;
+//   z-index: 1;
+//   position: absolute;
+//   top: 30;
+//   left: 0;
+//   margin: 955px 0 0 120px;
+//   margin-top: 86vh;
+//   margin-left: 5vw;
+//   border-radius: 4px;
+// `;
 
 const MainMap = styled.div`
   height: calc(100vh - 120px);
@@ -32,20 +32,20 @@ const MainMap = styled.div`
   margin-top: 60px;
 `;
 
-const Audio = styled.div`
-  background-color: #91ccb9;
-`;
+// const Audio = styled.div`
+//   background-color: #91ccb9;
+// `;
 
-const LeafletMap = styled.div`
-  height: 180px;
-  id: "mapid";
-`;
+// const LeafletMap = styled.div`
+//   height: 180px;
+//   id: "mapid";
+// `;
 
-const GoBtn = styled.div`
-  background-color: pink;
-  height: 100px;
-  width: 200px;
-`;
+// const GoBtn = styled.div`
+//   background-color: pink;
+//   height: 100px;
+//   width: 200px;
+// `;
 
 function Map() {
   mapboxgl.accessToken =

@@ -8,11 +8,10 @@ import {
   getTripDataByUID,
   getTripDataByCanEdit,
   getTripDataByCanView,
-  uploadImage,
-  storeProfileData,
+  // uploadImage,
+  // storeProfileData,
   getProfileData,
   checkUserStatus,
-  fireAuthLogOut,
   deleteTripData,
   addShareEmail,
   removeShareEmail,
@@ -581,9 +580,8 @@ function ManageSchedule() {
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
-      console.log("1");
       if (user) {
-        console.log(user.email);
+        console.log("current user " + user.email);
         setLoginEmail(user.email);
       } else {
         console.log("no current user");
@@ -593,14 +591,14 @@ function ManageSchedule() {
     });
 
     var user = firebase.auth().currentUser;
-    console.log(user);
-    console.log("2");
+    console.log("current user " + user);
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     var user = firebase.auth().currentUser;
-    console.log(user);
-    console.log("3");
+    console.log("current user " + user);
+    //eslint-disable-next-line
   }, []);
 
   // useEffect(() => {
@@ -611,23 +609,24 @@ function ManageSchedule() {
     const renderProfileData = async () => {
       let resProfileData = await getProfileData(UID);
       // console.log(loginEmail);
-      console.log("4");
       setProfileData(resProfileData);
       setProfileEmail(resProfileData.email);
     };
     renderProfileData();
+    //eslint-disable-next-line
   }, []);
   // console.log(profileData);
 
-  useEffect(() => {
-    firebase
-      .firestore()
-      .collection("user_trips_history")
-      .where("owner", "==", UID)
-      .onSnapshot((doc) => {
-        console.log(doc);
-      });
-  }, []);
+  // useEffect(() => {
+  //   firebase
+  //     .firestore()
+  //     .collection("user_trips_history")
+  //     .where("owner", "==", UID)
+  //     .onSnapshot((doc) => {
+  //       console.log(doc);
+  //     });
+  //   //eslint-disable-next-line
+  // }, []);
 
   const renderOwnEventsData = async () => {
     let tripData = await getTripDataByUID(UID);
@@ -637,10 +636,11 @@ function ManageSchedule() {
 
   useEffect(() => {
     renderOwnEventsData();
+    //eslint-disable-next-line
   }, []);
   // console.log(trip);
 
-  console.log(profileEmail);
+  // console.log(profileEmail);
 
   // let shareChange = firebase
   //   .firestore()
@@ -656,9 +656,9 @@ function ManageSchedule() {
     setTripEdit(tripDataEdit);
   };
 
-  useEffect(() => {
-    renderEventsData();
-  }, []);
+  // useEffect(() => {
+  //   renderEventsData();
+  // }, []);
   // console.log(tripEdit);
 
   useEffect(() => {
@@ -668,6 +668,7 @@ function ManageSchedule() {
       setTripView(tripDataView);
     };
     renderEventsData();
+    //eslint-disable-next-line
   }, []);
   // console.log(tripView);
 
@@ -711,11 +712,6 @@ function ManageSchedule() {
       } else {
       }
     });
-  }
-
-  function closeShareList() {
-    console.log("close list button");
-    setListToggle(false);
   }
 
   // function selectPhoto() {
@@ -787,13 +783,13 @@ function ManageSchedule() {
               </THead>
               <TBody>
                 {trip.map((trip, i) => {
-                  console.log(trip);
+                  /* console.log(trip); */
                   const city = trip[1].city;
                   const time = trip[1].createTime;
                   const share = trip[1].share;
                   const tripID = trip[0];
 
-                  console.log(share);
+                  /* console.log(share); */
 
                   /* const owner = trip[1].owner; */
 

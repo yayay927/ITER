@@ -274,6 +274,7 @@ function CityPage() {
       };
       renderEventsData();
     }
+    //eslint-disable-next-line
   }, []);
 
   return (
