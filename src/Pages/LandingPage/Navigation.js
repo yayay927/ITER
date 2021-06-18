@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import downarrow from "../../Components/downarrow.png";
-import Footer from "../../Components/footer";
+// import Footer from "../../Components/footer";
 import github from "../../Components/github.png";
 import ocean from "../../Components/ocean.wav";
 import ship from "../../Components/ship.jpg";
-import plan from "../../Components/plan.jpg";
+// import plan from "../../Components/plan.jpg";
 import desert from "../../Components/desert.jpg";
 import next from "../../Components/next.png";
 import frame from "../../Components/frame.png";

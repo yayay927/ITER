@@ -1,4 +1,3 @@
-//Confirm schedule page
 import styled from "styled-components";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -19,9 +18,7 @@ import shareTo from "../../Components/share.png";
 import map from "../../Components/map.png";
 import SocialMediaShare from "./SocialMediaShare.js";
 import ReactDOM from "react-dom";
-// import Guide from "../MainPage/guide.js";
 import Joyride from "react-joyride";
-// import window2 from "../../Components/window2.jpg";
 
 const Confirm = styled.div`
   max-width: 1280px;
@@ -291,10 +288,11 @@ function ConfirmSchedule() {
                   center: "title",
                   right: "prev next today",
                 }}
-                initialView="timeGrid"
+                initialView="timeGridWeek"
+                // initialView="timeGrid"
                 // initialView="timeline"
-                duration={{ days: 7 }}
-                visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
+                // duration={{ days: 7 }}
+                // visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
                 // editable={true}
                 selectable={false}
                 selectMirror={true}
