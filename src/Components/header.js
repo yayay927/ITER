@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import anchor from "./anchor.png";
+// import anchor from "./anchor.png";
 import logo2 from "./logo2.png";
-import anchorW from "./anchorW.png";
-import anchorwhite from "./anchorwhite.png";
-import user from "./user.png";
+// import anchorW from "./anchorW.png";
+// import anchorwhite from "./anchorwhite.png";
+// import user from "./user.png";
 import suitcaseNew from "./suitcaseNew.png";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -12,9 +12,9 @@ import "firebase/firestore";
 import {
   fireAuthLogIn,
   fireAuthSignUp,
-  fireAuthLogOut,
+  // fireAuthLogOut,
   storeAccountData,
-  checkUserStatus,
+  // checkUserStatus,
 } from "../Utils/firebase";
 import Swal from "sweetalert2";
 
@@ -85,25 +85,25 @@ const LogOut = styled.div`
   }
 `;
 
-const Input = styled.input`
-  margin: 10px;
-  width: 400px;
-  height: 40px;
-  border-radius: 20px;
-  border: 1px lightgray solid;
-  font-size: 18px;
-  padding-left: 20px;
-  outline: none;
-`;
+// const Input = styled.input`
+//   margin: 10px;
+//   width: 400px;
+//   height: 40px;
+//   border-radius: 20px;
+//   border: 1px lightgray solid;
+//   font-size: 18px;
+//   padding-left: 20px;
+//   outline: none;
+// `;
 
 function Header() {
   let history = useHistory();
-  const [inputValue, setInputValue] = useState("");
-  const getParamValue = (event) => {
-    event.preventDefault();
-    history.push(`/city/${inputValue}`);
-    console.log(inputValue);
-  };
+  // const [inputValue, setInputValue] = useState("");
+  // const getParamValue = (event) => {
+  //   event.preventDefault();
+  //   history.push(`/city/${inputValue}`);
+  //   console.log(inputValue);
+  // };
   const [userAuth, setUserAuth] = useState();
 
   function headerView() {
@@ -258,7 +258,7 @@ function Header() {
         <a href="../">
           <Logo src={logo2} />
         </a>
-        <form onSubmit={getParamValue}></form>
+        {/* <form onSubmit={getParamValue}></form> */}
 
         {/* {(() => {
           if (userAuth) {

@@ -10,7 +10,7 @@ import Header from "./Components/header";
 import Footer from "./Components/footer";
 import Map from "./Pages/LandingPage/Map";
 import CityPage from "./Pages/MainPage/CityPage";
-import ScheduleMap from "./Pages/MainPage/ScheduleMap";
+// import ScheduleMap from "./Pages/MainPage/ScheduleMap";
 import ConfirmSchedule from "./Pages/Confirm/Confirm.js";
 import ManageSchedule from "./Pages/ManagePage/Manage.js";
 import Error from "./Pages/Error/Error.js";

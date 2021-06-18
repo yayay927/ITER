@@ -123,22 +123,19 @@ function firebaseGoogle() {
       alert("google log in successfully");
       console.log(result);
 
-      // This gives you a Google Access Token. You can use it to access the Google API.
       var token = credential.accessToken;
       console.log("token = " + token);
-      // The signed-in user info.
       var user = result.user.uid;
       console.log("user = " + user);
-      // ...
     })
     .catch((error) => {
       // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      // var errorCode = error.code;
+      // var errorMessage = error.message;
       // The email of the user's account used.
-      var email = error.email;
+      // var email = error.email;
       // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
+      // var credential = error.credential;
       // ...
     });
 }
@@ -150,7 +147,7 @@ function checkUserStatus() {
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
       var email = user.email;
-      console.log(email);
+      console.log(uid, email);
       // return email;
       // ...
     } else {
@@ -172,7 +169,6 @@ function storeEventsData(saveEvents, cityName, UID, time) {
         city: cityName,
         owner: UID,
         createTime: time,
-        // share: [],
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);

@@ -9,15 +9,13 @@ import ScheduleMap from "./ScheduleMap.js";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 // import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
-import TouristAttractions from "./TouristAttractions.js";
+import FirebaseAttractionData from "./FirebaseAttractionData.js";
 // import Transportations from "./Transportations.js";
-// import { MainFullCalendar } from "./MainFullCalendar.js";
 // import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
-// ES6 Modules or TypeScript
 import Swal from "sweetalert2";
 // import "bootstrap/dist/css/bootstrap.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -74,6 +72,13 @@ const CityName = styled.div`
 
 const Map = styled.div`
   width: 100%;
+`;
+
+const TouristAttractions = styled.div`
+  width: 100%;
+  font-size: 35px;
+  /* margin: 20px 0; */
+  margin-top: 10px;
 `;
 
 const CalendarSpace = styled.div`
@@ -269,6 +274,7 @@ function CityPage() {
       };
       renderEventsData();
     }
+    //eslint-disable-next-line
   }, []);
 
   return (
@@ -282,7 +288,10 @@ function CityPage() {
             <ScheduleMap />
           </Map>
           <div id="events" className="step-5">
-            <TouristAttractions className="event"></TouristAttractions>
+            <TouristAttractions className="event">
+              Top 30 Tourist Attractions
+              <FirebaseAttractionData></FirebaseAttractionData>
+            </TouristAttractions>
           </div>
           {/* <div id="trans">
             <Transportations className="trans"></Transportations>

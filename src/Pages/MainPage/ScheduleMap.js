@@ -2,8 +2,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import ReactMapGL, { Marker } from "react-map-gl";
-import { ZoomControl } from "mapbox-gl-controls";
+// import ReactMapGL, { Marker } from "react-map-gl";
+// import { ZoomControl } from "mapbox-gl-controls";
 import { useParams } from "react-router-dom";
 // import mapboxgl from 'mapbox-gl';
 
@@ -15,7 +15,6 @@ import walk from "../../Components/walk.png";
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import "mapbox-gl/dist/mapbox-gl.css"; // Updating node module will keep css up to date.
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"; // Updating node module will keep css up to date.
-import BuildGeolocationDB from "./BuildGeolocationDB.js";
 import { getAttractionData } from "../../Utils/firebase.js";
 
 // const MapboxDirections = require("@mapbox/mapbox-gl-directions");
@@ -44,10 +43,9 @@ const Transportations = styled.div`
   margin: 10px 0;
   /* display: flex; */
 `;
-const Title = styled.div`
-  font-size: 40px;
-  /* display: flex; */
-`;
+// const Title = styled.div`
+//   font-size: 40px;
+// `;
 const AllTransportations = styled.div`
   /* display: flex; */
   width: 100%;
@@ -134,7 +132,7 @@ function ScheduleMap() {
   const [walkingTime, setWalkingTime] = useState();
   const [cyclingTime, setCyclingTime] = useState();
 
-  const [attractionData, setAttractionData] = useState([]);
+  // const [attractionData, setAttractionData] = useState([]);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -153,7 +151,7 @@ function ScheduleMap() {
       let filterData = rawData.filter(
         (attraction) => attraction.url !== undefined && attraction.name !== ""
       );
-      setAttractionData(filterData);
+      // setAttractionData(filterData);
       filterData.map((attraction) => {
         const lng = attraction.geolocation[1];
         const lat = attraction.geolocation[0];

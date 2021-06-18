@@ -1,4 +1,3 @@
-//Confirm schedule page
 import styled from "styled-components";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -12,27 +11,23 @@ import { useReactToPrint } from "react-to-print";
 import "firebase/firestore";
 import { getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import printer from "../../Components/printer.png";
-import link from "../../Components/link.png";
-import shareTo from "../../Components/share.png";
+// import link from "../../Components/link.png";
+// import shareTo from "../../Components/share.png";
 import map from "../../Components/map.png";
 import SocialMediaShare from "./SocialMediaShare.js";
-import ReactDOM from "react-dom";
-// import Guide from "../MainPage/guide.js";
+// import ReactDOM from "react-dom";
 import Joyride from "react-joyride";
-// import window2 from "../../Components/window2.jpg";
 
 const Confirm = styled.div`
   max-width: 1280px;
   width: 55.5%;
   margin: 60px auto 140px auto;
-  /* height: 100vh; */
 `;
 const Title = styled.div`
   font-family: "Allura";
   font-size: 80px;
-  /* display: block; */
   margin: 0 auto;
   margin-top: 80px;
   margin-bottom: 40px;
@@ -45,7 +40,6 @@ const ComponentToPrint = styled.div`
 
 const Calendar = styled.div`
   width: 100%;
-  /* margin: 50px; */
   margin-bottom: 50px;
 `;
 const Additional = styled.div`
@@ -69,58 +63,53 @@ const Export = styled.div`
   }
 `;
 const Img = styled.img`
-  /* margin-top: 60px; */
   height: 40px;
   width: 40px;
-  /* position: fixed; */
   margin: 10px;
-  /* cursor: pointer; */
-  /* border-radius: 50px; */
-  /* border: 1px solid #eedd42; */
 `;
 
-const Share = styled.div`
-  margin-top: 30px;
-  height: 60px;
-  width: 60px;
-  cursor: pointer;
-  border-radius: 50px;
-  border: 2px solid #e1e4e7;
-  background-color: #e1e4e7;
-  :hover {
-    background-color: #eedd42;
-    border: 2px solid #eedd42;
-  }
-`;
-const Copy = styled.div`
-  margin-top: 30px;
-  height: 60px;
-  width: 60px;
-  cursor: pointer;
-  border-radius: 50px;
-  border: 2px solid #e1e4e7;
-  background-color: #e1e4e7;
-  :hover {
-    background-color: #eedd42;
-    border: 2px solid #eedd42;
-  }
-`;
-const Printer = styled.img`
-  margin-top: 60px;
-  height: 80px;
-  width: 80px;
-  cursor: pointer;
-  border-radius: 50px;
-  border: 1px solid #eedd42;
-  resize: both;
-`;
+// const Share = styled.div`
+//   margin-top: 30px;
+//   height: 60px;
+//   width: 60px;
+//   cursor: pointer;
+//   border-radius: 50px;
+//   border: 2px solid #e1e4e7;
+//   background-color: #e1e4e7;
+//   :hover {
+//     background-color: #eedd42;
+//     border: 2px solid #eedd42;
+//   }
+// `;
+// const Copy = styled.div`
+//   margin-top: 30px;
+//   height: 60px;
+//   width: 60px;
+//   cursor: pointer;
+//   border-radius: 50px;
+//   border: 2px solid #e1e4e7;
+//   background-color: #e1e4e7;
+//   :hover {
+//     background-color: #eedd42;
+//     border: 2px solid #eedd42;
+//   }
+// `;
+// const Printer = styled.img`
+//   margin-top: 60px;
+//   height: 80px;
+//   width: 80px;
+//   cursor: pointer;
+//   border-radius: 50px;
+//   border: 1px solid #eedd42;
+//   resize: both;
+// `;
 
-const Weather = styled.button`
-  margin-top: 60px;
-  height: 80px;
-  width: 300px;
-  cursor: pointer;
-`;
+// const Weather = styled.button`
+//   margin-top: 60px;
+//   height: 80px;
+//   width: 300px;
+//   cursor: pointer;
+// `;
 const pageStyle = ` @page{ size: 2.5in 3in}`;
 
 function ConfirmSchedule() {
@@ -130,9 +119,9 @@ function ConfirmSchedule() {
     content: () => componentRef.current,
   });
   const [eventsData, setEventsData] = useState([]);
-  const [copySuccess, setCopySuccess] = useState("");
-  const textAreaRef = useRef(null);
-  const [run, setRun] = useState(false);
+  // const [copySuccess, setCopySuccess] = useState("");
+  // const textAreaRef = useRef(null);
+  // const [run, setRun] = useState(false);
   const [steps, setSteps] = useState([
     {
       target: ".fc-toolbar-title",
@@ -195,57 +184,49 @@ function ConfirmSchedule() {
       setEventsData(data);
     };
     renderEventsData();
+    //eslint-disable-next-line
   }, []);
 
   // console.log(cityName);
 
-  function backToEdit() {
-    history.push(`/city/${cityName}?number=${tripId}`);
-  }
+  // function share() {
+  //   let edit_UID = prompt("Enter the email you want to share with.");
+  //   alert(
+  //     "or share the link with friends to view:       " + window.location.href
+  //   );
+  // }
 
-  function save() {
-    let time = new Date().toISOString().substr(0, 10);
-    console.log(time);
-  }
+  // function copy() {
+  //   console.log("hey");
+  //   // var copyText = document.getElementById("copy");
+  //   // copyText.select();
+  //   // document.execCommand("copy");
 
-  function share() {
-    let edit_UID = prompt("Enter the email you want to share with.");
-    alert(
-      "or share the link with friends to view:       " + window.location.href
-    );
-  }
+  //   function copyToClipboard(e) {
+  //     textAreaRef.current.select();
+  //     document.execCommand("copy");
+  //     // This is just personal preference.
+  //     // I prefer to not show the the whole text area selected.
+  //     e.target.focus();
+  //     setCopySuccess("Copied!");
+  //     console.log("here");
+  //   }
 
-  function copy() {
-    console.log("hey");
-    // var copyText = document.getElementById("copy");
-    // copyText.select();
-    // document.execCommand("copy");
-
-    function copyToClipboard(e) {
-      textAreaRef.current.select();
-      document.execCommand("copy");
-      // This is just personal preference.
-      // I prefer to not show the the whole text area selected.
-      e.target.focus();
-      setCopySuccess("Copied!");
-      console.log("here");
-    }
-
-    return (
-      <div>
-        {document.queryCommandSupported("copy") && (
-          <div>
-            <button onClick={copyToClipboard}>Copy</button>
-            {copySuccess}
-          </div>
-        )}
-        <form>
-          <textarea ref={textAreaRef} value="" />
-        </form>
-      </div>
-    );
-    // alert("Copied the text: " + window.location.href);
-  }
+  //   return (
+  //     <div>
+  //       {document.queryCommandSupported("copy") && (
+  //         <div>
+  //           <button onClick={copyToClipboard}>Copy</button>
+  //           {copySuccess}
+  //         </div>
+  //       )}
+  //       <form>
+  //         <textarea ref={textAreaRef} value="" />
+  //       </form>
+  //     </div>
+  //   );
+  //   // alert("Copied the text: " + window.location.href);
+  // }
 
   function goToMap() {
     history.push("/");
@@ -253,22 +234,12 @@ function ConfirmSchedule() {
 
   return (
     <div>
-      {/* <Guide></Guide> */}
-      {/* <div className="step-2"> */}
       <SocialMediaShare></SocialMediaShare>
-      {/* </div> */}
       <div>
         <Title>Have a good time in {cityName}!</Title>
       </div>
       <Confirm>
         <Calendar>
-          {/* <a href="../calendar"> */}
-          {/* <Previous>Go Back</Previous> */}
-          {/* </a> */}
-          {/* <h1>
-            Congrantulations on finishing your schedule! If you want to do any
-            change, please click go back to edit your schedule.
-          </h1> */}
           <ComponentToPrint
             id="printComponent"
             height="1200px"
@@ -291,10 +262,11 @@ function ConfirmSchedule() {
                   center: "title",
                   right: "prev next today",
                 }}
-                initialView="timeGrid"
+                initialView="timeGridWeek"
+                // initialView="timeGrid"
                 // initialView="timeline"
-                duration={{ days: 7 }}
-                visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
+                // duration={{ days: 7 }}
+                // visibleRange={{ start: "2021-05-20", end: "2021-05-31" }}
                 // editable={true}
                 selectable={false}
                 selectMirror={true}
@@ -337,22 +309,15 @@ function ConfirmSchedule() {
               title="Export to PDF/ Print"
               className="step-2"
             >
-              {/* Export to PDF/ Print */}
               <Img src={printer}></Img>
             </Export>
           </div>
-          {/* <div>
-            <Export onClick={copy} title="Copy link">
-              <Img src={link}></Img>
-            </Export>
-          </div> */}
           <div>
             <Export
               onClick={goToMap}
               title="Explore other cities."
               className="step-5"
             >
-              {/* Export to PDF/ Print */}
               <Img src={map}></Img>
             </Export>
           </div>
