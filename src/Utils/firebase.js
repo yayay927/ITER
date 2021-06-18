@@ -123,13 +123,10 @@ function firebaseGoogle() {
       alert("google log in successfully");
       console.log(result);
 
-      // This gives you a Google Access Token. You can use it to access the Google API.
       var token = credential.accessToken;
       console.log("token = " + token);
-      // The signed-in user info.
       var user = result.user.uid;
       console.log("user = " + user);
-      // ...
     })
     .catch((error) => {
       // Handle Errors here.
