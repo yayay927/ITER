@@ -17,11 +17,11 @@ import {
   removeShareEmail,
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
-import Joyride from "react-joyride";
+// import Joyride from "react-joyride";
 // import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
 import items from "../../Components/items.jpg";
 
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
@@ -53,16 +53,16 @@ const StyledPopup = styled(Popup)`
   }
 `;
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
+// const customStyles = {
+//   content: {
+//     top: "50%",
+//     left: "50%",
+//     right: "auto",
+//     bottom: "auto",
+//     marginRight: "-50%",
+//     transform: "translate(-50%, -50%)",
+//   },
+// };
 
 const Manage = styled.div`
   margin-top: 55px;
@@ -112,23 +112,6 @@ const Email = styled.div`
   font-family: "Allura";
   color: white;
 `;
-// const LogOut = styled.button`
-//   display: block;
-//   margin: 20px auto;
-//   font-size: 15px;
-//   /* width: fit-content; */
-//   cursor: pointer;
-//   font-family: "QuickSand";
-//   border-radius: 20px;
-//   border: 1px lightgrey solid;
-//   padding: 8px;
-//   border: none;
-//   padding: 10px;
-//   :hover {
-//     color: white;
-//     background-color: #91ccb9;
-//   }
-// `;
 
 const Trips = styled.div`
   /* margin-top: 100px; */
@@ -416,15 +399,6 @@ function ManageSchedule() {
   const [ownerEmail, setOwnerEmail] = useState([]);
 
   const [shareEmail, setShareEmail] = useState([]);
-
-  const [run, setRun] = useState(false);
-  // const [steps, setSteps] = useState([
-  //   {
-  //     target: ".step-1",
-  //     content: "You can manage current and history trips here.",
-  //     // placement: "center",
-  //   },
-  // ]);
 
   // const [opacity, setOpacity] = useState(0);
   // const [currentShareEmail, setCurrentShareEmail] = useState();
@@ -725,7 +699,7 @@ function ManageSchedule() {
         // overflow: "scroll",
       }}
     >
-      <Manage className="step-1">
+      <Manage>
         <div style={{ height: "10px" }}></div>
         <Profile>
           {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
@@ -855,7 +829,6 @@ function ManageSchedule() {
           </Past>
         </Trips>
       </Manage>
-      {/* <Joyride run={true} steps={steps} continuous={true}></Joyride> */}
     </div>
   );
 }
