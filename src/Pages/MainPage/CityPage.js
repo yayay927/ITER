@@ -11,13 +11,11 @@ import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import { useParams } from "react-router-dom";
 import FirebaseAttractionData from "./FirebaseAttractionData.js";
 // import Transportations from "./Transportations.js";
-// import { MainFullCalendar } from "./MainFullCalendar.js";
 // import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
-// ES6 Modules or TypeScript
 import Swal from "sweetalert2";
 // import "bootstrap/dist/css/bootstrap.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
