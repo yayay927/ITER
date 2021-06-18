@@ -12,9 +12,9 @@ import "firebase/firestore";
 import {
   fireAuthLogIn,
   fireAuthSignUp,
-  fireAuthLogOut,
+  // fireAuthLogOut,
   storeAccountData,
-  checkUserStatus,
+  // checkUserStatus,
 } from "../Utils/firebase";
 import Swal from "sweetalert2";
 

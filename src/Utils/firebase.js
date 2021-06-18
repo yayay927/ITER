@@ -133,12 +133,12 @@ function firebaseGoogle() {
     })
     .catch((error) => {
       // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      // var errorCode = error.code;
+      // var errorMessage = error.message;
       // The email of the user's account used.
-      var email = error.email;
+      // var email = error.email;
       // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
+      // var credential = error.credential;
       // ...
     });
 }
@@ -150,7 +150,7 @@ function checkUserStatus() {
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
       var email = user.email;
-      console.log(email);
+      console.log(uid, email);
       // return email;
       // ...
     } else {
