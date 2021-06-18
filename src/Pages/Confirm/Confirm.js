@@ -119,9 +119,9 @@ function ConfirmSchedule() {
     content: () => componentRef.current,
   });
   const [eventsData, setEventsData] = useState([]);
-  const [copySuccess, setCopySuccess] = useState("");
-  const textAreaRef = useRef(null);
-  const [run, setRun] = useState(false);
+  // const [copySuccess, setCopySuccess] = useState("");
+  // const textAreaRef = useRef(null);
+  // const [run, setRun] = useState(false);
   const [steps, setSteps] = useState([
     {
       target: ".fc-toolbar-title",
@@ -184,6 +184,7 @@ function ConfirmSchedule() {
       setEventsData(data);
     };
     renderEventsData();
+    //eslint-disable-next-line
   }, []);
 
   // console.log(cityName);
