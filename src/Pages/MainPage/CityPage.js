@@ -9,7 +9,8 @@ import ScheduleMap from "./ScheduleMap.js";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 // import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
-import TouristAttractions from "./TouristAttractions.js";
+// import TouristAttractions from "./TouristAttractions.js";
+import FirebaseAttractionData from "./FirebaseAttractionData.js";
 // import Transportations from "./Transportations.js";
 // import { MainFullCalendar } from "./MainFullCalendar.js";
 // import { useSelector, useDispatch } from "react-redux";
@@ -74,6 +75,13 @@ const CityName = styled.div`
 
 const Map = styled.div`
   width: 100%;
+`;
+
+const TouristAttractions = styled.div`
+  width: 100%;
+  font-size: 35px;
+  /* margin: 20px 0; */
+  margin-top: 10px;
 `;
 
 const CalendarSpace = styled.div`
@@ -282,7 +290,10 @@ function CityPage() {
             <ScheduleMap />
           </Map>
           <div id="events" className="step-5">
-            <TouristAttractions className="event"></TouristAttractions>
+            <TouristAttractions className="event">
+              Top 30 Tourist Attractions
+              <FirebaseAttractionData></FirebaseAttractionData>
+            </TouristAttractions>
           </div>
           {/* <div id="trans">
             <Transportations className="trans"></Transportations>

@@ -529,6 +529,7 @@ function ManageSchedule() {
                     name="email"
                     id="inputEmail"
                     placeholder="email"
+                    // onSummit={(e) => setShareEmail(e.target.value)}
                   ></Input>
                 </Form>
                 <Add onClick={() => addUser(tripID, shareEmail)}>add</Add>
@@ -540,7 +541,8 @@ function ManageSchedule() {
                 <AllUsers>
                   {share
                     ? share.map((each, i) => {
-                        console.log(each);
+                        /* console.log(each); */
+
                         return (
                           <EachUser key={i}>
                             <TypeEmail>{each}</TypeEmail>
@@ -568,12 +570,10 @@ function ManageSchedule() {
     );
   }
 
-  function addUser(tripID, email) {
-    let input = document.getElementById("inputEmail");
-    console.log(input.text);
-    setShareEmail(document.getElementById("inputEmail"));
+  function addUser(tripID, shareEmail) {
+    console.log(tripID, shareEmail);
+
     // addShareEmail(tripID, email);
-    document.getElementById("inputEmail").innerHTML = "";
   }
   function deleteUser(tripID, email) {
     removeShareEmail(tripID, email);

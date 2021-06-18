@@ -172,7 +172,6 @@ function storeEventsData(saveEvents, cityName, UID, time) {
         city: cityName,
         owner: UID,
         createTime: time,
-        // share: [],
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);

@@ -4,7 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 // import { Calendar } from "@fullcalendar/core";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
-import TouristAttractions from "./TouristAttractions.js";
+// import TouristAttractions from "./TouristAttractions.js";
 // import { mockComponent } from "react-dom/test-utils";
 
 function MainFullCalendar() {
