@@ -9,7 +9,6 @@ import ScheduleMap from "./ScheduleMap.js";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 // import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
-// import TouristAttractions from "./TouristAttractions.js";
 import FirebaseAttractionData from "./FirebaseAttractionData.js";
 // import Transportations from "./Transportations.js";
 // import { MainFullCalendar } from "./MainFullCalendar.js";
