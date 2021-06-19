@@ -72,3 +72,9 @@ code {
   margin: 0 40px 13px 10px;
   float: right;
 } */
+
+.fc-toolbar-title {
+  @media (max-width: 768px) {
+    font-size: 20px !important;
+  }
+}

@@ -19,6 +19,7 @@ const CalendarPage = styled.div`
   height: 85vh;
   @media (max-width: 768px) {
     margin: 70px 0px;
+    height: 100%;
   }
   @media (min-width: 1440px) {
     margin: 100px 50px 0px 50px;
@@ -31,6 +32,7 @@ const MainPart = styled.div`
   height: 100%;
   @media (max-width: 768px) {
     display: block;
+    width: 90%;
   }
 `;
 
@@ -65,6 +67,8 @@ const CalendarSpace = styled.div`
   padding-right: 10px;
   @media (max-width: 768px) {
     width: 100%;
+    padding: 0;
+    height: 800px;
   }
 `;
 

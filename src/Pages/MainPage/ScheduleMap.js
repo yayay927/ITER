@@ -42,7 +42,8 @@ const AllTransportations = styled.div`
   }
 `;
 const TransportationWay = styled.div`
-  background-color: #eedd42;
+  /* background-color: #eedd42; */
+  background-color: rgb(0, 0, 0, 0.4);
   opacity: 0.8;
   cursor: grab;
   height: 100px;
@@ -64,7 +65,7 @@ const TransportationWay = styled.div`
 const TransportationIcon = styled.img`
   height: 50px;
   margin: 5px;
-  @media (max-width: 360px) {
+  @media (max-width: 380px) {
     height: 30px;
     margin: 3px;
   }
