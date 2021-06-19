@@ -5,6 +5,12 @@ import styled from "styled-components";
 import { getAttractionData } from "../../Utils/firebase.js";
 import { useParams } from "react-router-dom";
 
+const TouristAttractions = styled.div`
+  width: 100%;
+  font-size: 35px;
+  /* margin: 20px 0; */
+  margin-top: 10px;
+`;
 const AllAttractions = styled.div`
   width: 100%;
   display: flex;
@@ -69,29 +75,32 @@ function FirebaseAttractionData() {
   // console.log(attractionData);
 
   return (
-    <AllAttractions>
-      {attractionData.map((attraction) => {
-        const spotName = attraction.name;
-        const spotUrl = attraction.url;
-        const spotLink = attraction.link;
-        return (
-          <Attraction key={spotName} className="event">
-            <AttractionImage
-              style={{
-                background: `url(${spotUrl})`,
-                // backgroundSize: `110px 100%`,
-                backgroundSize: `cover`,
-              }}
-            ></AttractionImage>
-            <AttractionName href={spotLink} target="_blank">
-              {spotName}
-            </AttractionName>
-            {/* <Title>{product.title}</Title> */}
-            {/* <Img src={product.main_image}></Img> */}
-          </Attraction>
-        );
-      })}
-    </AllAttractions>
+    <TouristAttractions className="event">
+      Top Tourist Attractions
+      <AllAttractions>
+        {attractionData.map((attraction) => {
+          const spotName = attraction.name;
+          const spotUrl = attraction.url;
+          const spotLink = attraction.link;
+          return (
+            <Attraction key={spotName} className="event">
+              <AttractionImage
+                style={{
+                  background: `url(${spotUrl})`,
+                  // backgroundSize: `110px 100%`,
+                  backgroundSize: `cover`,
+                }}
+              ></AttractionImage>
+              <AttractionName href={spotLink} target="_blank">
+                {spotName}
+              </AttractionName>
+              {/* <Title>{product.title}</Title> */}
+              {/* <Img src={product.main_image}></Img> */}
+            </Attraction>
+          );
+        })}
+      </AllAttractions>
+    </TouristAttractions>
   );
 }
 

@@ -76,13 +76,6 @@ const Map = styled.div`
   width: 100%;
 `;
 
-const TouristAttractions = styled.div`
-  width: 100%;
-  font-size: 35px;
-  /* margin: 20px 0; */
-  margin-top: 10px;
-`;
-
 const CalendarSpace = styled.div`
   margin-top: 50px;
   width: 40%;
@@ -111,6 +104,10 @@ const ConfirmButton = styled.button`
   top: 40px;
   :hover {
     background-color: #eedd42;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    position: static;
   }
 `;
 
@@ -290,14 +287,8 @@ function CityPage() {
             <ScheduleMap />
           </Map>
           <div id="events" className="step-5">
-            <TouristAttractions className="event">
-              Top 30 Tourist Attractions
-              <FirebaseAttractionData></FirebaseAttractionData>
-            </TouristAttractions>
+            <FirebaseAttractionData></FirebaseAttractionData>
           </div>
-          {/* <div id="trans">
-            <Transportations className="trans"></Transportations>
-          </div> */}
         </MapAndAttractions>
         <CalendarSpace className="step-7  step-8">
           <FullCalendar
@@ -469,10 +460,11 @@ function CityPage() {
             }}
           />
         </CalendarSpace>
+        <ConfirmButton onClick={getEvents} className="step-9">
+          Finish edit & Save
+        </ConfirmButton>
       </MainPart>
-      <ConfirmButton onClick={getEvents} className="step-9">
-        Finish edit & Save
-      </ConfirmButton>
+
       <Joyride
         run={true}
         steps={steps}
