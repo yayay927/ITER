@@ -1,14 +1,7 @@
-// Map part in city page
 import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-// import ReactMapGL, { Marker } from "react-map-gl";
-// import { ZoomControl } from "mapbox-gl-controls";
 import { useParams } from "react-router-dom";
-// import mapboxgl from 'mapbox-gl';
-
-// import MapboxDirections from "@mapbox/mapbox-gl-directions";
-// import Directions from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import car from "../../images/car.png";
 import bicycle from "../../images/bicycle.png";
 import walk from "../../images/walk.png";
@@ -17,24 +10,12 @@ import "mapbox-gl/dist/mapbox-gl.css"; // Updating node module will keep css up 
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"; // Updating node module will keep css up to date.
 import { getAttractionData } from "../../Utils/firebase.js";
 
-// const MapboxDirections = require("@mapbox/mapbox-gl-directions");
-
-// const Map = styled.iframe`
-//   margin-bottom: 10px;
-//   width: 100%;
-// `;
-
 const CityMap = styled.div`
   display: flex;
-  /* @media (max-width: 960px) {
-    font-size: 7vh;
-  } */
+
   @media (max-width: 768px) {
     display: block;
   }
-  /* @media (max-width: 530px) {
-    padding-top: 100px;
-  } */
 `;
 
 const MainMap = styled.div`
@@ -43,45 +24,30 @@ const MainMap = styled.div`
   border-radius: 20px;
   width: 95.5%;
   margin: 10px;
-  /* margin-top: 20px; */
 `;
 
 const Transportations = styled.div`
   width: 100%;
   font-size: 45px;
   margin: 10px 0;
-  /* display: flex; */
 `;
 // const Title = styled.div`
 //   font-size: 40px;
 // `;
 const AllTransportations = styled.div`
-  /* display: flex; */
   width: 100%;
-  /* margin: 10px; */
+
   @media (max-width: 768px) {
     display: flex;
   }
-  /* @media (max-width: 360px) {
-    display: block;
-  } */
 `;
 const TransportationWay = styled.div`
-  /* height: 120px;
-  width: 120px;
-  font-size: 20px;
-  margin: 5px; */
   background-color: #eedd42;
   opacity: 0.8;
   cursor: grab;
-
   height: 100px;
-  /* width: 20%; */
   font-size: 16px;
   margin: 10px;
-  /* background-color: lightgrey; */
-
-  /* border-radius: 10px; */
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -94,7 +60,7 @@ const TransportationWay = styled.div`
     margin: 5px;
   }
 `;
-// const TransportationIcon = styled.div``;
+
 const TransportationIcon = styled.img`
   height: 50px;
   margin: 5px;
@@ -114,9 +80,6 @@ function ScheduleMap() {
     "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg";
   const mapContainer = useRef(null);
   const map = useRef(null);
-  // const [lng, setLng] = useState(3);
-  // const [lat, setLat] = useState(38);
-  // const [zoom, setZoom] = useState(1.3);
 
   const [zoom, setZoom] = useState(12);
 
@@ -153,8 +116,8 @@ function ScheduleMap() {
     latitude = 30.045051609169334;
     longitude = 31.235549047124817;
   } else if (cityName === "CapeTown") {
-    latitude = -33.92942; //18.460899515329125
-    longitude = 18.41747; //-33.877741185805036
+    latitude = -33.92942;
+    longitude = 18.41747;
   }
 
   const [lng, setLng] = useState(longitude);
@@ -170,8 +133,7 @@ function ScheduleMap() {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v11", //streets-v11 //light-v10
-      // style: "mapbox://styles/yayay927/ckorc7d8m3p9d17p6x7w8lry3",
+      style: "mapbox://styles/mapbox/streets-v11",
       center: [lng, lat],
       zoom: zoom,
       logoPosition: "bottom-right",
@@ -183,28 +145,13 @@ function ScheduleMap() {
       let filterData = rawData.filter(
         (attraction) => attraction.url !== undefined && attraction.name !== ""
       );
-      // setAttractionData(filterData);
+
       filterData.map((attraction) => {
         const lng = attraction.geolocation[1];
         const lat = attraction.geolocation[0];
         const spotName = attraction.name;
 
-        // map.current.on("mouseenter", "places", function () {
-        //   map.current.getCanvas().style.cursor = "pointer";
-
-        //   new mapboxgl.Popup()
-        //     .setLngLat([lng, lat])
-        //     .setHTML(`<p>${spotName}</p>`)
-        //     .addTo(map.current);
-        // });
-
-        // map.current.on("mouseleave", "places", function () {
-        //   map.current.getCanvas().style.cursor = "";
-        //   new mapboxgl.Popup().remove();
-        // });
-
         new mapboxgl.Marker()
-          // .setLngLat([135.7726717, 34.9671402])
           .setLngLat([lng, lat])
           .setPopup(new mapboxgl.Popup().setHTML(`<p>${spotName}</p>`))
           .addTo(map.current);
@@ -214,19 +161,9 @@ function ScheduleMap() {
     };
     renderAttractionData();
 
-    // map.current.addControl(
-    //   new MapboxDirections({
-    //     accessToken:
-    //       "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg",
-    //   }),
-    //   "top-left"
-    // );
-
     var directions = new MapboxDirections({
       accessToken:
         "pk.eyJ1IjoieWF5YXk5MjciLCJhIjoiY2tvb2JnNDBsMDhhdDJvbjFidDBldHZmcyJ9.xSDcsQK9i5rRvQ7xV2KOBg",
-      // className: "step-2",
-      // target: ".step-2",
     });
 
     map.current.addControl(directions, "top-left");
@@ -342,7 +279,6 @@ function ScheduleMap() {
             </AllTransportations>
           </Transportations>
         </div>
-        {/* <PicFrame src={frame}></PicFrame> */}
       </CityMap>
     </>
   );
