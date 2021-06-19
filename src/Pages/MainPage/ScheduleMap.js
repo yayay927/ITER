@@ -9,9 +9,9 @@ import { useParams } from "react-router-dom";
 
 // import MapboxDirections from "@mapbox/mapbox-gl-directions";
 // import Directions from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
-import car from "../../Components/car.png";
-import bicycle from "../../Components/bicycle.png";
-import walk from "../../Components/walk.png";
+import car from "../../images/car.png";
+import bicycle from "../../images/bicycle.png";
+import walk from "../../images/walk.png";
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import "mapbox-gl/dist/mapbox-gl.css"; // Updating node module will keep css up to date.
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"; // Updating node module will keep css up to date.

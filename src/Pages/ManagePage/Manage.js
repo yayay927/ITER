@@ -19,7 +19,7 @@ import {
 import Swal from "sweetalert2";
 // import Joyride from "react-joyride";
 // import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
-import items from "../../Components/items.jpg";
+import items from "../../images/items.jpg";
 
 // import ReactDOM from "react-dom";
 import Popup from "reactjs-popup";

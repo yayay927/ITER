@@ -20,7 +20,7 @@ code {
 }
 
 .mapBtn {
-  background-image: url("./Components/rightarrow.png");
+  background-image: url("./images/rightarrow.png");
   margin-right: 10px;
   outline: none;
   width: 53px;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import manymaps from "../../Components/manymaps.jpg";
+import manymaps from "../../images/manymaps.jpg";
 
 const Page = styled.div`
   height: 100vh;
@@ -50,11 +50,17 @@ const Redirect = styled.div`
 
   @media (max-width: 768px) {
     font-size: 5vh;
-    width: 30vw;
-    height: 8vh;
+    width: 20vw;
+    /* height: 8vh; */
     padding: 3px;
     width: "fit-content";
     /* margin-top: 20vh; */
+  }
+  @media (max-width: 635px) {
+    width: 30vw;
+  }
+  @media (max-width: 550px) {
+    font-size: 4vh;
   }
 `;
 

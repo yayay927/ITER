@@ -1,10 +1,10 @@
 import styled from "styled-components";
 // import anchor from "./anchor.png";
-import logo2 from "./logo2.png";
+import logo2 from "../images/logo2.png";
 // import anchorW from "./anchorW.png";
 // import anchorwhite from "./anchorwhite.png";
 // import user from "./user.png";
-import suitcaseNew from "./suitcaseNew.png";
+import suitcaseNew from "../images/suitcaseNew.png";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";

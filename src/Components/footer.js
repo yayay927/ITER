@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import github from "../Components/github.png";
-import ocean from "../Components/ocean.wav";
+import github from "../images/github.png";
+import ocean from "./ocean.wav";
 
 const TheFooter = styled.div`
   background-color: #91ccb9;
