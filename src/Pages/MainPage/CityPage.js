@@ -66,7 +66,9 @@ const CityName = styled.div`
   margin-bottom: 10px;
   font-family: "Allura";
   @media (max-width: 768px) {
+    margin: 0 auto;
     margin-bottom: 10px;
+    text-align: center;
   }
 `;
 

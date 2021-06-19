@@ -26,6 +26,15 @@ import { getAttractionData } from "../../Utils/firebase.js";
 
 const CityMap = styled.div`
   display: flex;
+  /* @media (max-width: 960px) {
+    font-size: 7vh;
+  } */
+  @media (max-width: 768px) {
+    display: block;
+  }
+  /* @media (max-width: 530px) {
+    padding-top: 100px;
+  } */
 `;
 
 const MainMap = styled.div`
@@ -49,6 +58,9 @@ const Transportations = styled.div`
 const AllTransportations = styled.div`
   /* display: flex; */
   width: 100%;
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `;
 const TransportationWay = styled.div`
   /* height: 120px;
@@ -69,6 +81,10 @@ const TransportationWay = styled.div`
   border-radius: 20px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 30%;
+  }
 `;
 // const TransportationIcon = styled.div``;
 const TransportationIcon = styled.img`
