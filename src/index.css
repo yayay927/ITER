@@ -30,6 +30,7 @@ code {
   background-repeat: no-repeat;
   background-position-x: right;
   /* background-color:  #f5f570;border: none" */
+  animation: moveRight 0.8s ease infinite;
 }
 
 .mapBtn:focus {
@@ -37,7 +38,9 @@ code {
 }
 
 .mapBtn:hover {
-  animation: moveRight 0.7s ease infinite;
+  /* animation: none; */
+  animation: moveRight 0.5s ease infinite;
+  height: 40px;
 }
 
 @keyframes moveRight {
