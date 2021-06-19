@@ -34,7 +34,7 @@ const Attraction = styled.div`
   font-size: 20px;
   margin: 10px;
   border-radius: 20px;
-  @media (max-width: 600px) {
+  @media (max-width: 960px) {
     width: 45%;
     margin: 0 auto;
   }

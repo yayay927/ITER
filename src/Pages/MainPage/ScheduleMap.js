@@ -13,7 +13,7 @@ import { getAttractionData } from "../../Utils/firebase.js";
 const CityMap = styled.div`
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     display: block;
   }
 `;
@@ -22,14 +22,22 @@ const MainMap = styled.div`
   height: 400px;
   margin-bottom: 20px;
   border-radius: 20px;
-  width: 95.5%;
+  /* width: 95.5%; */
+  width: calc(100% - 165px);
   margin: 10px;
+  @media (max-width: 960px) {
+    width: calc(100% - 20px);
+    margin-bottom: 0px;
+  }
 `;
 
 const Transportations = styled.div`
   width: 100%;
   font-size: 45px;
   margin: 10px 0;
+  @media (max-width: 960px) {
+    margin-top: 0px;
+  }
 `;
 // const Title = styled.div`
 //   font-size: 40px;
@@ -37,24 +45,27 @@ const Transportations = styled.div`
 const AllTransportations = styled.div`
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     display: flex;
   }
 `;
 const TransportationWay = styled.div`
-  /* background-color: #eedd42; */
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: #eedd42;
+  /* background-color: rgb(0, 0, 0, 0.4); */
   opacity: 0.8;
   cursor: grab;
-  height: 100px;
+  height: 120px;
   font-size: 16px;
-  margin: 10px;
+  margin: 15px;
   border-radius: 20px;
   display: flex;
   align-items: center;
+  margin-left: 0;
+  width: 120px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     width: 30%;
+    margin-left: 10px;
   }
   @media (max-width: 420px) {
     width: 32%;
