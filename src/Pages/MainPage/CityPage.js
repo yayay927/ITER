@@ -1,33 +1,21 @@
-// Calendar part in main page
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import ScheduleMap from "./ScheduleMap.js";
-// import { Calendar } from "@fullcalendar/core";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
-// import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
 import FirebaseAttractionData from "./FirebaseAttractionData.js";
-// import Transportations from "./Transportations.js";
-// import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "@fortawesome/fontawesome-free/css/all.css";
-// import bootstrapPlugin from "@fullcalendar/bootstrap";
 import Joyride from "react-joyride";
 
 const CalendarPage = styled.div`
   margin: 50px 50px 0px 50px;
-  /* width: 100%; */
-  /* display: flex; */
-  /* margin-top: 80px; */
-  /* height: calc(100%-60px); */
   height: 85vh;
   @media (max-width: 768px) {
     margin: 70px 0px;
@@ -37,9 +25,6 @@ const CalendarPage = styled.div`
   }
 `;
 const MainPart = styled.div`
-  /* height: 95%; */
-  /* height: 90%; */
-
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -50,10 +35,7 @@ const MainPart = styled.div`
 `;
 
 const MapAndAttractions = styled.div`
-  /* margin-right: 20px; */
   width: 60%;
-  /* height: 100%; */
-  /* height: 80vh; */
   overflow: scroll;
   @media (max-width: 768px) {
     width: 100%;
@@ -120,7 +102,6 @@ function CityPage() {
   if (tripId === undefined) {
     history.push(`/error`);
   }
-  // console.log(tripId);
   const [renderEvent, setRenderEvent] = useState();
 
   const [run, setRun] = useState(false);
@@ -187,10 +168,6 @@ function CityPage() {
   // const startTime = useSelector((state) => state.startTime);
   // const endTime = useSelector((state) => state.endTime);
 
-  // useEffect(() => {
-  //   Swal.fire("Feel free to explore the city!");
-  // }, []);
-
   useEffect(() => {
     const containerEl = document.querySelector("#events");
     new Draggable(containerEl, {
@@ -235,9 +212,6 @@ function CityPage() {
       });
       setEvents({ title: eTitle, start: eStart, end: eEnd, color: eColor });
     });
-    // console.log(saveEvents);
-
-    // let cityData = [city: cityName]
 
     var user = firebase.auth().currentUser;
     console.log(user);
@@ -250,8 +224,6 @@ function CityPage() {
       let time = new Date().toISOString().substr(0, 10);
       console.log(time);
 
-      // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-      // let tripName = "";
       async function idData() {
         let idNumber = await storeEventsData(saveEvents, cityName, UID, time);
         console.log(idNumber);
@@ -262,7 +234,6 @@ function CityPage() {
   }
 
   useEffect(() => {
-    // console.log(tripId);
     if (tripId) {
       const renderEventsData = async () => {
         let data = await getEventsData(tripId);
@@ -293,13 +264,7 @@ function CityPage() {
         <CalendarSpace className="step-7  step-8">
           <FullCalendar
             id="FullCalendar"
-            plugins={[
-              dayGridPlugin,
-              timeGridPlugin,
-              interactionPlugin,
-              // bootstrapPlugin,
-            ]}
-            // themeSystem="bootstrap"
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
               // left: "prev, next, myCustomButton", //today,
               // center: "title",
@@ -318,15 +283,6 @@ function CityPage() {
                 className: "step-6",
                 text: "create event",
                 click: async function () {
-                  // setEvents([
-                  //   ...events,
-                  //   {
-                  //     title: "event 1",
-                  //     date: new Date().toISOString().substr(0, 10),
-                  //   },
-                  // ]);
-                  // alert("clicked the custom button!");
-
                   const answer1 = async function test() {
                     const { value: evtDate } = await Swal.fire({
                       title: "Enter your event date",
@@ -372,7 +328,7 @@ function CityPage() {
                   // let dateStr = prompt(
                   //   "Enter a start date in YYYY-MM-DD format"
                   // );
-                  // console.log("dateStr = " + dateStr);
+
                   // let title = prompt("Enter a title for your event");
 
                   // let date = new Date(dateStr + "T00:00:00"); //Sun May 30 2021 00:00:00 GMT+0800 (台北標準時間)
@@ -381,13 +337,7 @@ function CityPage() {
                   // console.log("dateTest = " + dateTest);
                   // // console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
 
-                  // console.log(a.valueOf());
-                  // console.log(b.valueOf());
-                  // console.log(typeof a);
-                  // console.log(typeof b);
                   let c = new Date(a + "T00:00:00");
-                  // console.log(c.valueOf());
-                  // console.log(typeof c);
 
                   if (!isNaN(c.valueOf())) {
                     calendarRef.current.getApi().addEvent({
@@ -397,7 +347,6 @@ function CityPage() {
                       color: "pink",
                     });
 
-                    // alert("Great. Now, update your database...");
                     Swal.fire("Great. Now, update your database...");
                   } else {
                     // Swal.fire("Cancel");

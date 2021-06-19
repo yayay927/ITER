@@ -58,9 +58,13 @@ const Transportations = styled.div`
 const AllTransportations = styled.div`
   /* display: flex; */
   width: 100%;
+  /* margin: 10px; */
   @media (max-width: 768px) {
     display: flex;
   }
+  /* @media (max-width: 360px) {
+    display: block;
+  } */
 `;
 const TransportationWay = styled.div`
   /* height: 120px;
@@ -85,13 +89,25 @@ const TransportationWay = styled.div`
   @media (max-width: 768px) {
     width: 30%;
   }
+  @media (max-width: 360px) {
+    width: 32%;
+    margin: 5px;
+  }
 `;
 // const TransportationIcon = styled.div``;
 const TransportationIcon = styled.img`
   height: 50px;
   margin: 5px;
+  @media (max-width: 360px) {
+    height: 30px;
+    margin: 3px;
+  }
 `;
-const TransportationTime = styled.div``;
+const TransportationTime = styled.div`
+  @media (max-width: 360px) {
+    font-size: 15px;
+  }
+`;
 
 function ScheduleMap() {
   mapboxgl.accessToken =
