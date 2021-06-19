@@ -12,6 +12,15 @@ const Msg = styled.div`
   margin: 0 auto;
   padding-top: 200px;
   color: white;
+  @media (max-width: 930px) {
+    font-size: 7vh;
+  }
+  @media (max-width: 768px) {
+    font-size: 5vh;
+  }
+  @media (max-width: 530px) {
+    padding-top: 100px;
+  }
 `;
 const Link = styled.a`
   text-decoration: none;
@@ -37,6 +46,15 @@ const Redirect = styled.div`
     opacity: 0.6;
     color: black;
     border: 1px solid #91ccb9;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 5vh;
+    width: 30vw;
+    height: 8vh;
+    padding: 3px;
+    width: "fit-content";
+    /* margin-top: 20vh; */
   }
 `;
 
