@@ -9,12 +9,24 @@ const TouristAttractions = styled.div`
   font-size: 35px;
   margin-top: 10px;
 `;
+const Title = styled.div`
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+  @media (max-width: 420px) {
+    font-size: 8vw;
+  }
+`;
 const AllAttractions = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   height: 350px;
   overflow: scroll;
+  @media (max-width: 420px) {
+    display: block;
+    height: 270px;
+  }
 `;
 const Attraction = styled.div`
   height: 200px;
@@ -22,6 +34,13 @@ const Attraction = styled.div`
   font-size: 20px;
   margin: 10px;
   border-radius: 20px;
+  @media (max-width: 600px) {
+    width: 45%;
+    margin: 0 auto;
+  }
+  @media (max-width: 420px) {
+    width: calc(100% - 10px);
+  }
 `;
 const AttractionName = styled.a`
   font-size: 16px;
@@ -64,7 +83,7 @@ function FirebaseAttractionData() {
 
   return (
     <TouristAttractions className="event">
-      Top Tourist Attractions
+      <Title>Top Tourist Attractions</Title>
       <AllAttractions>
         {attractionData.map((attraction) => {
           const spotName = attraction.name;

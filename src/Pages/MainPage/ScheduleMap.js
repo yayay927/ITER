@@ -55,7 +55,7 @@ const TransportationWay = styled.div`
   @media (max-width: 768px) {
     width: 30%;
   }
-  @media (max-width: 360px) {
+  @media (max-width: 420px) {
     width: 32%;
     margin: 5px;
   }
@@ -70,7 +70,7 @@ const TransportationIcon = styled.img`
   }
 `;
 const TransportationTime = styled.div`
-  @media (max-width: 360px) {
+  @media (max-width: 420px) {
     font-size: 15px;
   }
 `;
