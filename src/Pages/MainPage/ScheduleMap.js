@@ -256,24 +256,24 @@ function ScheduleMap() {
           <Transportations className="trans step-4">
             {/* <Title>Transportations</Title> */}
             <AllTransportations>
-              <TransportationWay className="trans">
+              <TransportationWay className="trans" id="Driving">
                 <TransportationIcon src={car}></TransportationIcon>
                 <div>
-                  <TransportationTime>Driving</TransportationTime>
+                  {/* <TransportationTime>Driving</TransportationTime> */}
                   <TransportationTime>{drivingTime} mins</TransportationTime>
                 </div>
               </TransportationWay>
-              <TransportationWay className="trans">
+              <TransportationWay className="trans" id="Walking">
                 <TransportationIcon src={walk}></TransportationIcon>
                 <div>
-                  <TransportationTime>Walking</TransportationTime>
+                  {/* <TransportationTime>Walking</TransportationTime> */}
                   <TransportationTime>{walkingTime} mins</TransportationTime>
                 </div>
               </TransportationWay>
-              <TransportationWay className="trans">
+              <TransportationWay className="trans" id="Cycling">
                 <TransportationIcon src={bicycle}></TransportationIcon>
                 <div>
-                  <TransportationTime>Cycling</TransportationTime>
+                  {/* <TransportationTime>Cycling</TransportationTime> */}
                   <TransportationTime>{cyclingTime} mins</TransportationTime>
                 </div>
               </TransportationWay>

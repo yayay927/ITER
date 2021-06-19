@@ -190,7 +190,7 @@ function CityPage() {
       itemSelector: ".trans",
       eventData: (eventEl) => {
         return {
-          title: eventEl.innerText,
+          title: eventEl.id + " " + eventEl.innerText,
           color: "#eedd42",
         };
       },
