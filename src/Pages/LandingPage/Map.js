@@ -6,7 +6,7 @@ import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-load
 // import Navigation from "./Navigation";
 
 const MainMap = styled.div`
-  height: calc(100vh - 120px);
+  height: calc(100vh - 80px);
   margin-bottom: 0px;
   margin-top: 60px;
 `;
@@ -18,7 +18,7 @@ function Map() {
   const map = useRef(null);
   const [lng, setLng] = useState(3);
   const [lat, setLat] = useState(38);
-  const [zoom, setZoom] = useState(1.3);
+  const [zoom, setZoom] = useState(1.4);
   // const [marker, setMarker] = useState(null);
 
   // const [viewport, setViewport] = React.useState({
