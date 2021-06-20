@@ -103,6 +103,9 @@ const Name = styled.div`
   font-family: "Allura";
   font-weight: bold;
   color: white;
+  @media (max-width: 960px) {
+    font-size: 7vw;
+  }
 `;
 
 const Email = styled.div`
@@ -111,6 +114,9 @@ const Email = styled.div`
   width: fit-content;
   font-family: "Allura";
   color: white;
+  @media (max-width: 960px) {
+    font-size: 5vw;
+  }
 `;
 
 const Trips = styled.div`
