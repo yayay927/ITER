@@ -10,6 +10,21 @@
   top: 80px;
 }
 
+@media (max-width: 1380px) {
+  .Demo__container {
+    top: 160px;
+  }
+}
+@media (max-width: 960px) {
+}
+@media (max-width: 768px) {
+  .Demo__container {
+    position: static;
+    margin: 0 auto;
+    top: 20px;
+  }
+}
+
 .Demo__some-network {
   vertical-align: top;
   display: inline-block;
