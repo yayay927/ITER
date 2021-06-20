@@ -6,25 +6,14 @@ import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
 import adaptivePlugin from "@fullcalendar/adaptive";
 import React, { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
-// import { ComponentToPrint } from "../../ComponentToPrint";
-// import firebase from "firebase/app";
 import "firebase/firestore";
 import { getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
-// import Swal from "sweetalert2";
 import printer from "../../images/printer.png";
-// import link from "../../Components/link.png";
-// import shareTo from "../../Components/share.png";
 import map from "../../images/map.png";
 import SocialMediaShare from "./SocialMediaShare.js";
-// import ReactDOM from "react-dom";
 import Joyride from "react-joyride";
 
-const Confirm = styled.div`
-  max-width: 1280px;
-  width: 55.5%;
-  margin: 60px auto 140px auto;
-`;
 const Title = styled.div`
   font-family: "Allura";
   font-size: 80px;
@@ -34,6 +23,17 @@ const Title = styled.div`
   width: fit-content;
   @media (max-width: 1024px) {
     font-size: 7vw;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+`;
+const Confirm = styled.div`
+  max-width: 1280px;
+  width: 55.5%;
+  margin: 60px auto 140px auto;
+  @media (max-width: 768px) {
+    margin-top: 10px;
   }
 `;
 
@@ -64,6 +64,9 @@ const Export = styled.div`
     background-color: #eedd42;
     border: 2px solid #eedd42;
   }
+  @media (max-width: 730px) {
+    display: none;
+  }
 `;
 const Img = styled.img`
   height: 40px;
@@ -71,48 +74,6 @@ const Img = styled.img`
   margin: 10px;
 `;
 
-// const Share = styled.div`
-//   margin-top: 30px;
-//   height: 60px;
-//   width: 60px;
-//   cursor: pointer;
-//   border-radius: 50px;
-//   border: 2px solid #e1e4e7;
-//   background-color: #e1e4e7;
-//   :hover {
-//     background-color: #eedd42;
-//     border: 2px solid #eedd42;
-//   }
-// `;
-// const Copy = styled.div`
-//   margin-top: 30px;
-//   height: 60px;
-//   width: 60px;
-//   cursor: pointer;
-//   border-radius: 50px;
-//   border: 2px solid #e1e4e7;
-//   background-color: #e1e4e7;
-//   :hover {
-//     background-color: #eedd42;
-//     border: 2px solid #eedd42;
-//   }
-// `;
-// const Printer = styled.img`
-//   margin-top: 60px;
-//   height: 80px;
-//   width: 80px;
-//   cursor: pointer;
-//   border-radius: 50px;
-//   border: 1px solid #eedd42;
-//   resize: both;
-// `;
-
-// const Weather = styled.button`
-//   margin-top: 60px;
-//   height: 80px;
-//   width: 300px;
-//   cursor: pointer;
-// `;
 const pageStyle = ` @page{ size: 2.5in 3in}`;
 
 function ConfirmSchedule() {
@@ -241,6 +202,7 @@ function ConfirmSchedule() {
         <Title>Have a good time in {cityName}!</Title>
       </div>
       <SocialMediaShare></SocialMediaShare>
+
       <Confirm>
         <Calendar>
           <ComponentToPrint

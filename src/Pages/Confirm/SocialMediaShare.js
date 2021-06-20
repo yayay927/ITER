@@ -21,7 +21,7 @@ class SocialMediaShare extends Component {
     const title = "my trip";
 
     return (
-      <div className="Demo__container" style={{ width: 300 }}>
+      <div className="Demo__container">
         <div className="step-3">
           <div className="Demo__some-network  ">
             <FacebookShareButton

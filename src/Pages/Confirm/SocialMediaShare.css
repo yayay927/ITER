@@ -6,6 +6,7 @@
 
 .Demo__container {
   /* margin-top: 80px; */
+  width: 300px;
   position: fixed;
   top: 80px;
 }
@@ -22,6 +23,7 @@
     position: static;
     margin: 0 auto;
     top: 20px;
+    width: 250px;
   }
 }
 
@@ -35,7 +37,7 @@
 }
 
 .step-2 {
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 
 .Demo__some-network__share-count {
