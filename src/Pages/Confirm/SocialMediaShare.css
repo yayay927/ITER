@@ -16,8 +16,7 @@
     top: 160px;
   }
 }
-@media (max-width: 960px) {
-}
+
 @media (max-width: 768px) {
   .Demo__container {
     position: static;
@@ -36,9 +35,9 @@
   margin-left: 15px;
 }
 
-.step-2 {
-  /* margin-top: 80px; */
-}
+/* .step-2 {
+  margin-top: 80px;
+} */
 
 .Demo__some-network__share-count {
   display: inline-flex;

@@ -73,8 +73,8 @@ code {
   float: right;
 } */
 
-.fc-toolbar-title {
-  @media (max-width: 768px) {
-    font-size: 20px !important;
+@media (max-width: 768px) {
+  .fc-toolbar-title {
+    font-size: 22px !important;
   }
 }
