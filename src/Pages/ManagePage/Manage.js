@@ -7,9 +7,6 @@ import "firebase/firestore";
 import {
   getTripDataByUID,
   getTripDataByCanEdit,
-  // getTripDataByCanView,
-  // uploadImage,
-  // storeProfileData,
   getProfileData,
   checkUserStatus,
   deleteTripData,
@@ -17,11 +14,7 @@ import {
   removeShareEmail,
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
-// import Joyride from "react-joyride";
-// import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
 import items from "../../images/items.jpg";
-
-// import ReactDOM from "react-dom";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
@@ -86,16 +79,7 @@ const Profile = styled.div`
   }
   /* border-bottom: 1px solid darkblue; */
 `;
-// const Photo = styled.img`
-//   margin: 0 auto;
-//   text-align: center;
-//   position: inline-block;
-//   text-align: center;
-//   width: 100px;
-//   height: 100px;
-//   display: block;
-// `;
-// const SavePhoto = styled.button``;
+
 const Name = styled.div`
   margin: 0px auto;
   font-size: 60px;
@@ -248,16 +232,7 @@ const EditList = styled.button`
     border: 1px solid #eedd42;
   }
 `;
-// const CanView = styled.div`
-//   width: 100px;
-// `;
-// const Date = styled.div``;
-// const Share = styled.div`
-//   margin-top: 20px;
-// `;
-// const Link = styled.div`
-//   margin-top: 20px;
-// `;
+
 const Past = styled.div`
   margin-top: 30px;
   display: flex;
@@ -394,20 +369,9 @@ function ManageSchedule() {
   let history = useHistory();
   const [trip, setTrip] = useState([]);
   const [tripEdit, setTripEdit] = useState([]);
-  // const [tripView, setTripView] = useState([]);
-  // const [tripCity, setTripCity] = useState([]);
-  // const [tripUID, setTripUID] = useState([]);
-  // const [photoFile, setPhotoFile] = useState([]);
-  // const [photoUrl, setPhotoUrl] = useState([]);
   const [profileData, setProfileData] = useState([]);
-  // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-  // const [loginEmail, setLoginEmail] = useState([]);
   const [ownerEmail, setOwnerEmail] = useState([]);
-
   const [shareEmail, setShareEmail] = useState([]);
-
-  // const [opacity, setOpacity] = useState(0);
-  // const [currentShareEmail, setCurrentShareEmail] = useState();
 
   if (UID === undefined) {
     history.push(`/error`);
@@ -666,35 +630,6 @@ function ManageSchedule() {
     });
   }
 
-  // function selectPhoto() {
-  //   (async () => {
-  //     const { value: file } = await Swal.fire({
-  //       title: "Select image",
-  //       input: "file",
-  //       inputAttributes: {
-  //         accept: "image/*",
-  //         "aria-label": "Upload your profile picture",
-  //       },
-  //     });
-  //     const url = await uploadImage(file);
-  //     console.log(url);
-  //     setPhotoUrl(url);
-  //     storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
-
-  //     if (file) {
-  //       const reader = new FileReader();
-  //       reader.onload = (e) => {
-  //         Swal.fire({
-  //           title: "Successfully upload! Your uploaded picture",
-  //           imageUrl: e.target.result,
-  //           imageAlt: "The uploaded picture",
-  //         });
-  //       };
-  //       reader.readAsDataURL(file);
-  //     }
-  //   })();
-  // }
-
   return (
     <div
       style={{
@@ -708,16 +643,6 @@ function ManageSchedule() {
       <Manage>
         <div style={{ height: "10px" }}></div>
         <Profile>
-          {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
-          {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
-            <input
-              // name="progressbarTW_img"
-              type="file"
-              accept="image/gif, image/jpeg, image/png"
-              // onChange={(e) => setPhotoFile(e.target.files[0])}
-            ></input>
-          </form> */}
-          {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
           <Name>{profileData.name}</Name>
           <Email>{profileData.email}</Email>
         </Profile>
