@@ -20,7 +20,7 @@ code {
 }
 
 .mapBtn {
-  background-image: url("./Components/rightarrow.png");
+  background-image: url("./images/rightarrow.png");
   margin-right: 10px;
   outline: none;
   width: 53px;
@@ -30,6 +30,7 @@ code {
   background-repeat: no-repeat;
   background-position-x: right;
   /* background-color:  #f5f570;border: none" */
+  animation: moveRight 0.8s ease infinite;
 }
 
 .mapBtn:focus {
@@ -37,7 +38,9 @@ code {
 }
 
 .mapBtn:hover {
-  animation: moveRight 0.7s ease infinite;
+  /* animation: none; */
+  animation: moveRight 0.5s ease infinite;
+  height: 40px;
 }
 
 @keyframes moveRight {
@@ -69,3 +72,9 @@ code {
   margin: 0 40px 13px 10px;
   float: right;
 } */
+
+@media (max-width: 768px) {
+  .fc-toolbar-title {
+    font-size: 22px !important;
+  }
+}

@@ -1,59 +1,43 @@
-// Calendar part in main page
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import ScheduleMap from "./ScheduleMap.js";
-// import { Calendar } from "@fullcalendar/core";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
-// import { mockComponent } from "react-dom/test-utils";
 import { useParams } from "react-router-dom";
 import FirebaseAttractionData from "./FirebaseAttractionData.js";
-// import Transportations from "./Transportations.js";
-// import { useSelector, useDispatch } from "react-redux";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { storeEventsData, getEventsData } from "../../Utils/firebase.js";
 import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "@fortawesome/fontawesome-free/css/all.css";
-// import bootstrapPlugin from "@fullcalendar/bootstrap";
 import Joyride from "react-joyride";
 
 const CalendarPage = styled.div`
   margin: 50px 50px 0px 50px;
-  /* width: 100%; */
-  /* display: flex; */
-  /* margin-top: 80px; */
-  /* height: calc(100%-60px); */
   height: 85vh;
   @media (max-width: 768px) {
     margin: 70px 0px;
+    height: 100%;
   }
   @media (min-width: 1440px) {
     margin: 100px 50px 0px 50px;
   }
 `;
 const MainPart = styled.div`
-  /* height: 95%; */
-  /* height: 90%; */
-
   display: flex;
   width: 100%;
   margin: 0 auto;
   height: 100%;
   @media (max-width: 768px) {
     display: block;
+    width: 90%;
   }
 `;
 
 const MapAndAttractions = styled.div`
-  /* margin-right: 20px; */
   width: 60%;
-  /* height: 100%; */
-  /* height: 80vh; */
   overflow: scroll;
   @media (max-width: 768px) {
     width: 100%;
@@ -66,19 +50,14 @@ const CityName = styled.div`
   margin-bottom: 10px;
   font-family: "Allura";
   @media (max-width: 768px) {
+    margin: 0 auto;
     margin-bottom: 10px;
+    text-align: center;
   }
 `;
 
 const Map = styled.div`
   width: 100%;
-`;
-
-const TouristAttractions = styled.div`
-  width: 100%;
-  font-size: 35px;
-  /* margin: 20px 0; */
-  margin-top: 10px;
 `;
 
 const CalendarSpace = styled.div`
@@ -88,6 +67,8 @@ const CalendarSpace = styled.div`
   padding-right: 10px;
   @media (max-width: 768px) {
     width: 100%;
+    padding: 0;
+    height: 800px;
   }
 `;
 
@@ -110,6 +91,10 @@ const ConfirmButton = styled.button`
   :hover {
     background-color: #eedd42;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    position: static;
+  }
 `;
 
 function CityPage() {
@@ -121,7 +106,6 @@ function CityPage() {
   if (tripId === undefined) {
     history.push(`/error`);
   }
-  // console.log(tripId);
   const [renderEvent, setRenderEvent] = useState();
 
   const [run, setRun] = useState(false);
@@ -188,10 +172,6 @@ function CityPage() {
   // const startTime = useSelector((state) => state.startTime);
   // const endTime = useSelector((state) => state.endTime);
 
-  // useEffect(() => {
-  //   Swal.fire("Feel free to explore the city!");
-  // }, []);
-
   useEffect(() => {
     const containerEl = document.querySelector("#events");
     new Draggable(containerEl, {
@@ -210,7 +190,7 @@ function CityPage() {
       itemSelector: ".trans",
       eventData: (eventEl) => {
         return {
-          title: eventEl.innerText,
+          title: eventEl.id + " " + eventEl.innerText,
           color: "#eedd42",
         };
       },
@@ -236,9 +216,6 @@ function CityPage() {
       });
       setEvents({ title: eTitle, start: eStart, end: eEnd, color: eColor });
     });
-    // console.log(saveEvents);
-
-    // let cityData = [city: cityName]
 
     var user = firebase.auth().currentUser;
     console.log(user);
@@ -251,8 +228,6 @@ function CityPage() {
       let time = new Date().toISOString().substr(0, 10);
       console.log(time);
 
-      // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-      // let tripName = "";
       async function idData() {
         let idNumber = await storeEventsData(saveEvents, cityName, UID, time);
         console.log(idNumber);
@@ -263,7 +238,6 @@ function CityPage() {
   }
 
   useEffect(() => {
-    // console.log(tripId);
     if (tripId) {
       const renderEventsData = async () => {
         let data = await getEventsData(tripId);
@@ -288,25 +262,13 @@ function CityPage() {
             <ScheduleMap />
           </Map>
           <div id="events" className="step-5">
-            <TouristAttractions className="event">
-              Top 30 Tourist Attractions
-              <FirebaseAttractionData></FirebaseAttractionData>
-            </TouristAttractions>
+            <FirebaseAttractionData></FirebaseAttractionData>
           </div>
-          {/* <div id="trans">
-            <Transportations className="trans"></Transportations>
-          </div> */}
         </MapAndAttractions>
         <CalendarSpace className="step-7  step-8">
           <FullCalendar
             id="FullCalendar"
-            plugins={[
-              dayGridPlugin,
-              timeGridPlugin,
-              interactionPlugin,
-              // bootstrapPlugin,
-            ]}
-            // themeSystem="bootstrap"
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
               // left: "prev, next, myCustomButton", //today,
               // center: "title",
@@ -325,15 +287,6 @@ function CityPage() {
                 className: "step-6",
                 text: "create event",
                 click: async function () {
-                  // setEvents([
-                  //   ...events,
-                  //   {
-                  //     title: "event 1",
-                  //     date: new Date().toISOString().substr(0, 10),
-                  //   },
-                  // ]);
-                  // alert("clicked the custom button!");
-
                   const answer1 = async function test() {
                     const { value: evtDate } = await Swal.fire({
                       title: "Enter your event date",
@@ -379,7 +332,7 @@ function CityPage() {
                   // let dateStr = prompt(
                   //   "Enter a start date in YYYY-MM-DD format"
                   // );
-                  // console.log("dateStr = " + dateStr);
+
                   // let title = prompt("Enter a title for your event");
 
                   // let date = new Date(dateStr + "T00:00:00"); //Sun May 30 2021 00:00:00 GMT+0800 (台北標準時間)
@@ -388,13 +341,7 @@ function CityPage() {
                   // console.log("dateTest = " + dateTest);
                   // // console.log(new Date(dateStr)); //Sun May 30 2021 08:00:00 GMT+0800 (台北標準時間)
 
-                  // console.log(a.valueOf());
-                  // console.log(b.valueOf());
-                  // console.log(typeof a);
-                  // console.log(typeof b);
                   let c = new Date(a + "T00:00:00");
-                  // console.log(c.valueOf());
-                  // console.log(typeof c);
 
                   if (!isNaN(c.valueOf())) {
                     calendarRef.current.getApi().addEvent({
@@ -404,7 +351,6 @@ function CityPage() {
                       color: "pink",
                     });
 
-                    // alert("Great. Now, update your database...");
                     Swal.fire("Great. Now, update your database...");
                   } else {
                     // Swal.fire("Cancel");
@@ -467,10 +413,11 @@ function CityPage() {
             }}
           />
         </CalendarSpace>
+        <ConfirmButton onClick={getEvents} className="step-9">
+          Finish edit & Save
+        </ConfirmButton>
       </MainPart>
-      <ConfirmButton onClick={getEvents} className="step-9">
-        Finish edit & Save
-      </ConfirmButton>
+
       <Joyride
         run={true}
         steps={steps}

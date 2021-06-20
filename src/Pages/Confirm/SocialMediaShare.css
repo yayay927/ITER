@@ -6,8 +6,24 @@
 
 .Demo__container {
   /* margin-top: 80px; */
+  width: 300px;
   position: fixed;
   top: 80px;
+}
+
+@media (max-width: 1380px) {
+  .Demo__container {
+    top: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Demo__container {
+    position: static;
+    margin: 0 auto;
+    top: 20px;
+    width: 250px;
+  }
 }
 
 .Demo__some-network {
@@ -19,9 +35,9 @@
   margin-left: 15px;
 }
 
-.step-2 {
+/* .step-2 {
   margin-top: 80px;
-}
+} */
 
 .Demo__some-network__share-count {
   display: inline-flex;

@@ -19,7 +19,7 @@ import {
 import Swal from "sweetalert2";
 // import Joyride from "react-joyride";
 // import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
-import items from "../../Components/items.jpg";
+import items from "../../images/items.jpg";
 
 // import ReactDOM from "react-dom";
 import Popup from "reactjs-popup";
@@ -103,6 +103,9 @@ const Name = styled.div`
   font-family: "Allura";
   font-weight: bold;
   color: white;
+  @media (max-width: 960px) {
+    font-size: 7vw;
+  }
 `;
 
 const Email = styled.div`
@@ -111,6 +114,9 @@ const Email = styled.div`
   width: fit-content;
   font-family: "Allura";
   color: white;
+  @media (max-width: 960px) {
+    font-size: 5vw;
+  }
 `;
 
 const Trips = styled.div`
