@@ -21,7 +21,7 @@ import {
 } from "react-share";
 // import { useParams } from "react-router-dom";
 
-import "./Demo.css";
+import "./SocialMediaShare.css";
 // import exampleImage from "./react-share-pin-example.png";
 
 class SocialMediaShare extends Component {

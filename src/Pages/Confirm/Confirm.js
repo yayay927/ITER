@@ -32,6 +32,9 @@ const Title = styled.div`
   margin-top: 80px;
   margin-bottom: 40px;
   width: fit-content;
+  @media (max-width: 1024px) {
+    font-size: 7vw;
+  }
 `;
 
 const ComponentToPrint = styled.div`
@@ -234,10 +237,10 @@ function ConfirmSchedule() {
 
   return (
     <div>
-      <SocialMediaShare></SocialMediaShare>
       <div>
         <Title>Have a good time in {cityName}!</Title>
       </div>
+      <SocialMediaShare></SocialMediaShare>
       <Confirm>
         <Calendar>
           <ComponentToPrint
