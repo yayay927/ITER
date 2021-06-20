@@ -13,6 +13,7 @@ import printer from "../../images/printer.png";
 import map from "../../images/map.png";
 import SocialMediaShare from "./SocialMediaShare.js";
 import Joyride from "react-joyride";
+import "./calendar.css";
 
 const Title = styled.div`
   font-family: "Allura";
@@ -30,10 +31,13 @@ const Title = styled.div`
 `;
 const Confirm = styled.div`
   max-width: 1280px;
-  width: 65%;
+  width: 55.5%;
   margin: 60px auto 140px auto;
   @media (max-width: 768px) {
     margin-top: 10px;
+  }
+  @media (max-width: 730px) {
+    width: 80%;
   }
 `;
 
