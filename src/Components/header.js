@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import anchor from "./anchor.png";
-import anchorW from "./anchorW.png";
-import anchorwhite from "./anchorwhite.png";
-import user from "./user.png";
-import suitcaseNew from "./suitcaseNew.png";
+import logo2 from "../images/logo2.png";
+import suitcaseNew from "../images/suitcaseNew.png";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
@@ -11,11 +8,10 @@ import "firebase/firestore";
 import {
   fireAuthLogIn,
   fireAuthSignUp,
-  fireAuthLogOut,
   storeAccountData,
-  checkUserStatus,
 } from "../Utils/firebase";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const TheHeader = styled.div`
   background-color: #91ccb9;
@@ -40,6 +36,13 @@ const Logo = styled.img`
   margin-right: 30px;
   margin-left: 20px;
 `;
+const Profile = styled.img`
+  height: 35px;
+  margin: 10px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: 20px;
+`;
 const SignUp = styled.div`
   height: 50px;
   margin: 10px;
@@ -47,6 +50,10 @@ const SignUp = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    color: grey;
+  }
 `;
 const LogIn = styled.div`
   height: 50px;
@@ -55,6 +62,10 @@ const LogIn = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
+  font-size: 18px;
+  :hover {
+    color: grey;
+  }
 `;
 const LogOut = styled.div`
   height: 50px;
@@ -63,27 +74,14 @@ const LogOut = styled.div`
   color: white;
   font-weight: bold;
   line-height: 45px;
-`;
-
-const Input = styled.input`
-  margin: 10px;
-  width: 400px;
-  height: 40px;
-  border-radius: 20px;
-  border: 1px lightgray solid;
   font-size: 18px;
-  padding-left: 20px;
-  outline: none;
+  :hover {
+    color: grey;
+  }
 `;
 
 function Header() {
   let history = useHistory();
-  const [inputValue, setInputValue] = useState("");
-  const getParamValue = (event) => {
-    event.preventDefault();
-    history.push(`/city/${inputValue}`);
-    console.log(inputValue);
-  };
   const [userAuth, setUserAuth] = useState();
 
   function headerView() {
@@ -110,30 +108,17 @@ function Header() {
     });
   }, []);
 
-  // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-
   function managePage() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
         var uid = user.uid;
-        console.log(uid);
-        console.log(user.email);
+        console.log(uid, user.email);
         history.push(`/manage?number=${uid}`);
-        // ...
       } else {
-        // User is signed out
-        // ...
         console.log("no current user");
         Swal.fire("Please log in first.");
-        // alert("please log in first");
       }
     });
-    // let result = checkUserStatus();
-    // console.log(result);
-    // history.push(`/manage?number=${UID}`);
-    // document.location.href = `../manage?number=${UID}`;
   }
 
   async function signUp() {
@@ -158,18 +143,9 @@ function Header() {
 
         return { name: name, login: login, password: password };
       },
-      // }).then((result) => {
-      //   if (result.value.name && result.value.login && result.value.password) {
-      //     Swal.fire(
-      //       `
-      //         Name: ${result.value.name}
-      //         Login: ${result.value.login}
-      //         Password: ${result.value.password}
-      //       `.trim()
-      //     );
-      //   }
     });
   }
+
   async function login() {
     await Swal.fire({
       title: "Login",
@@ -201,32 +177,23 @@ function Header() {
   async function logOut() {
     await Swal.fire({
       title: "Do you want to log out?",
-      // text: "Event: ",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, log out",
     }).then((result) => {
-      // fireAuthLogOut();
-
       if (result.isConfirmed) {
         firebase
           .auth()
           .signOut()
           .then(() => {
-            // Sign-out successful.
             console.log("log out successfully");
-            // var user = firebase.auth().currentUser.uid;
-            // console.log(user + "log out successfully");
-            // alert(user + "log out successfully");
-            // return;
-            Swal.fire("You're logged out", "", "success"); //"Your're logged out'.",
+            Swal.fire("You're logged out", "", "success");
             history.push("/");
           })
           .catch((error) => {
             console.log("log out error");
-            // An error happened.
           });
       }
     });
@@ -235,34 +202,13 @@ function Header() {
   return (
     <div className="App">
       <TheHeader className="App-header">
-        <a href="../">
-          <Logo src={anchor} />
-        </a>
-        <form onSubmit={getParamValue}></form>
-
-        {/* {(() => {
-          if (userAuth) {
-            return (
-              <>
-                <SignUp>Log Out</SignUp>
-              </>
-            );
-          } else {
-            return (
-              <>
-                <SignUp onClick={signUp}>Signup</SignUp>
-                <LogIn onClick={login}>Login</LogIn>
-              </>
-            );
-          }
-        })()} */}
-
+        <Link to="/">
+          <Logo src={logo2} />
+        </Link>
         <Block>
           {headerView()}
-          {/* <SignUp onClick={signUp}>Signup</SignUp>
-          <LogIn onClick={login}>Login</LogIn> */}
           <div onClick={managePage}>
-            <Logo src={suitcaseNew} />
+            <Profile src={suitcaseNew} className="step-4" />
           </div>
         </Block>
       </TheHeader>

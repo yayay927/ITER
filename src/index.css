@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: "Quicksand", sans-serif, "Caveat", cursive, "Allura", cursive;
   font-family: "Quicksand", sans-serif, "Caveat", cursive, "Allura", cursive,
     /* -apple-system, BlinkMacSystemFont,  */ "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -12,6 +11,44 @@ body {
 code {
   font-family: "Quicksand", sans-serif, "Caveat", cursive, "Allura", cursive,
     /* source-code-pro, Menlo, Monaco, Consolas,  */ "Courier New", monospace;
+}
+
+.mapboxgl-popup-content {
+  display: flex;
+  align-items: center;
+}
+
+.mapBtn {
+  background-image: url("./images/rightarrow.png");
+  margin-right: 10px;
+  outline: none;
+  width: 53px;
+  height: 30px;
+  border-radius: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  /* background-color:  #f5f570;border: none" */
+  animation: moveRight 0.8s ease infinite;
+}
+
+.mapBtn:focus {
+  outline: none;
+}
+
+.mapBtn:hover {
+  /* animation: none; */
+  animation: moveRight 0.5s ease infinite;
+  height: 40px;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
 }
 
 @media print {
@@ -28,4 +65,15 @@ code {
     height: 1300px;
     width: 1000px;
   } */
+}
+
+/* .mapboxgl-ctrl-bottom-left .mapbox-ctrl {
+  margin: 0 40px 13px 10px;
+  float: right;
+} */
+
+@media (max-width: 768px) {
+  .fc-toolbar-title {
+    font-size: 22px !important;
+  }
 }

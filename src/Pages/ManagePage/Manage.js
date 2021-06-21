@@ -1,110 +1,74 @@
-//Manage trips page
 import styled from "styled-components";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import {
   getTripDataByUID,
   getTripDataByCanEdit,
-  getTripDataByCanView,
-  uploadImage,
-  storeProfileData,
   getProfileData,
   checkUserStatus,
-  fireAuthLogOut,
   deleteTripData,
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
-import { getDefaultNormalizer } from "@testing-library/dom";
+import items from "../../images/items.jpg";
+import EditShareList from "./EditShareList.js";
 
 const Manage = styled.div`
-  margin-top: 100px;
-  height: 60%;
+  margin-top: 55px;
+  height: 90vh;
+  overflow: auto;
 `;
-// const Message = styled.div`
-//   margin: 50px auto;
-//   width: 50%;
-//   font-size: 30px;
-//   font-weight: bolder;
-// `;
+
 const Profile = styled.div`
   max-width: 1280px;
-  margin: 50px auto;
+  margin: 3vh auto;
   margin-bottom: 0;
-  width: 50%;
-  /* border-bottom: 1px solid darkblue; */
+  width: 30%;
+  background-color: rgb(57, 80, 73, 0.3);
+  border-radius: 40px;
+  @media (min-width: 1280px) {
+    margin-top: 10vh;
+  }
 `;
-// const Photo = styled.img`
-//   margin: 0 auto;
-//   text-align: center;
-//   position: inline-block;
-//   text-align: center;
-//   width: 100px;
-//   height: 100px;
-//   display: block;
-// `;
-// const SavePhoto = styled.button``;
+
 const Name = styled.div`
   margin: 0px auto;
   font-size: 60px;
   width: fit-content;
   font-family: "Allura";
   font-weight: bold;
+  color: white;
+  @media (max-width: 960px) {
+    font-size: 7vw;
+  }
 `;
-// const UserID = styled.div`
-//   margin: 0px auto;
-//   font-size: 30px;
-//   width: fit-content;
-// `;
+
 const Email = styled.div`
   margin: 0px auto;
   font-size: 40px;
   width: fit-content;
   font-family: "Allura";
-`;
-const LogOut = styled.button`
-  display: block;
-  margin: 20px auto;
-  font-size: 15px;
-  /* width: fit-content; */
-  cursor: pointer;
-  font-family: "QuickSand";
-  border-radius: 20px;
-  border: 1px lightgrey solid;
-  padding: 8px;
-  border: none;
-  padding: 10px;
-  :hover {
-    color: white;
-    background-color: #91ccb9;
+  color: white;
+  @media (max-width: 960px) {
+    font-size: 5vw;
   }
 `;
-// const Map = styled.div`
-//   margin-top: 100px;
-//   width: 80%;
-//   margin: 0 auto;
-//   height: 300px;
-//   border: 1px solid darkgoldenrod;
-// `;
-// const Marker = styled.div`
-//   margin-top: 100px;
-// `;
+
 const Trips = styled.div`
-  /* margin-top: 100px; */
   width: 70%;
   margin: 0 auto;
+  background-color: rgb(57, 80, 73, 0.3);
+  border-radius: 25px;
 `;
 const Current = styled.div`
-  margin-top: 3%;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   border-radius: 20px;
   border: 1px solid #91ccb9;
-  height: 250px;
 `;
 const CurrentTrips = styled.div`
-  /* margin-top: 50px; */
   height: 220px;
   border-right: 1px solid lightgrey;
   width: 150px;
@@ -117,14 +81,9 @@ const CurrentTrips = styled.div`
   color: #eedd42;
 `;
 const Table = styled.table`
-  /* margin-top: 10px; */
   width: calc(100% - 120px);
-  /* border-collapse: collapse; */
-  background-color: #91ccb9;
-  opacity: 0.5;
   display: block;
-  height: 220px;
-  /* overflow-y: scroll; */
+  margin: 10px;
 `;
 
 const THead = styled.thead`
@@ -132,28 +91,20 @@ const THead = styled.thead`
   align-items: center;
   height: 30px;
   line-height: 30px;
-  /* margin-top: 20px; */
-  /* display: flex; */
-  /* justify-content: space-around; */
-  /* height: 200px; */
   width: 100%;
-  /* margin-bottom: 20px; */
   font-weight: bold;
   font-size: 22px;
   display: block;
 `;
 const TrHead = styled.tr`
-  /* height: 60px; */
+  line-height: 20px;
 `;
 const Tr = styled.tr`
   height: 60px;
-  /* background-color: #91ccb9; */
   border-radius: 10px;
   border: none;
 `;
-const Td = styled.td`
-  /* width: 25%; */
-`;
+const Td = styled.td``;
 const TimeTd = styled.td`
   font-size: 15px;
 `;
@@ -161,42 +112,16 @@ const EmailTd = styled.td`
   font-size: 15px;
 `;
 const TableCity = styled.td`
-  /* width: 20%; */
-  cursor: pointer;
-
-  :hover {
-    color: white;
-    font-weight: bold;
-    font-size: 28px;
-  }
+  font-weight: bold;
 `;
 
 const TBody = styled.tbody`
-  /* border: 1px solid lightgrey; */
   align-items: center;
   font-size: 20px;
   width: 100%;
   display: block;
-  height: 180px;
-  overflow-y: scroll;
 `;
 
-// const TripName = styled.div`
-//   text-decoration: underline;
-// `;
-// const Location = styled.div`
-//   cursor: pointer;
-// `;
-
-// const Owner = styled.div`
-//   width: 100px;
-// `;
-// const Access = styled.div`
-//   width: 100px;
-// `;
-// const CanEdit = styled.div`
-//   width: 100px;
-// `;
 const EditTd = styled.td`
   display: flex;
 `;
@@ -208,9 +133,12 @@ const EditTrip = styled.button`
   border: none;
   border-radius: 40px;
   height: 40px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 1px solid lightgrey;
   :hover {
     color: white;
     background-color: #eedd42;
+    border: 1px solid #eedd42;
   }
 `;
 const EditList = styled.button`
@@ -221,21 +149,15 @@ const EditList = styled.button`
   border: none;
   border-radius: 40px;
   height: 40px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 1px solid lightgrey;
   :hover {
     color: white;
     background-color: #eedd42;
+    border: 1px solid #eedd42;
   }
 `;
-// const CanView = styled.div`
-//   width: 100px;
-// `;
-const Date = styled.div``;
-const Share = styled.div`
-  margin-top: 20px;
-`;
-const Link = styled.div`
-  margin-top: 20px;
-`;
+
 const Past = styled.div`
   margin-top: 30px;
   display: flex;
@@ -246,7 +168,6 @@ const Past = styled.div`
   height: 250px;
 `;
 const HistoryTrips = styled.div`
-  /* margin-top: 50px; */
   height: 220px;
   border-right: 1px solid lightgrey;
   width: 150px;
@@ -266,25 +187,17 @@ function ManageSchedule() {
   let history = useHistory();
   const [trip, setTrip] = useState([]);
   const [tripEdit, setTripEdit] = useState([]);
-  const [tripView, setTripView] = useState([]);
-  const [tripCity, setTripCity] = useState([]);
-  const [tripUID, setTripUID] = useState([]);
-  // const [photoFile, setPhotoFile] = useState([]);
-  // const [photoUrl, setPhotoUrl] = useState([]);
   const [profileData, setProfileData] = useState([]);
-  // let UID = "GMRfBP2uJVcIeG3pGGfJHXLTG4e2";
-  const [loginEmail, setLoginEmail] = useState([]);
-  // console.log(UID);
-  // UID = "test9@gmail.com";
   const [ownerEmail, setOwnerEmail] = useState([]);
-  const [profileEmail, setProfileEmail] = useState([]);
+
+  if (UID === undefined) {
+    history.push(`/error`);
+  }
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
-      console.log("1");
       if (user) {
-        console.log(user.email);
-        setLoginEmail(user.email);
+        console.log("current user " + user.email);
       } else {
         console.log("no current user");
         Swal.fire("Please log in first.");
@@ -293,40 +206,23 @@ function ManageSchedule() {
     });
 
     var user = firebase.auth().currentUser;
-    console.log(user);
-    console.log("2");
+    console.log("current user " + user);
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     var user = firebase.auth().currentUser;
-    console.log(user);
-    console.log("3");
-  }, []);
-
-  useEffect(() => {
-    Swal.fire("You can manage current and history trips here.");
+    console.log("current user " + user);
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     const renderProfileData = async () => {
       let resProfileData = await getProfileData(UID);
-      // console.log(loginEmail);
-      console.log("4");
       setProfileData(resProfileData);
-      setProfileEmail(resProfileData.email);
     };
     renderProfileData();
-  }, []);
-  // console.log(profileData);
-
-  useEffect(() => {
-    firebase
-      .firestore()
-      .collection("user_trips_history")
-      .where("owner", "==", UID)
-      .onSnapshot((doc) => {
-        console.log(doc);
-      });
+    //eslint-disable-next-line
   }, []);
 
   const renderOwnEventsData = async () => {
@@ -337,39 +233,21 @@ function ManageSchedule() {
 
   useEffect(() => {
     renderOwnEventsData();
+    //eslint-disable-next-line
   }, []);
-  // console.log(trip);
 
-  console.log(profileEmail);
-
-  // let shareChange = firebase
-  //   .firestore()
-  //   .collection("user_trips_history")
-  //   .where("share", "==", UID)
-  //   .onSnapshot((doc) => {
-  //     console.log(doc);
-  //   });
-
-  const renderEventsData = async () => {
-    let tripDataEdit = await getTripDataByCanEdit(UID); //profileEmail //UID
+  const getEventsData = async () => {
+    let tripDataEdit = await getTripDataByCanEdit(UID);
     console.log(tripDataEdit);
     setTripEdit(tripDataEdit);
   };
 
   useEffect(() => {
-    renderEventsData();
-  }, []);
-  // console.log(tripEdit);
+    getEventsData();
 
-  useEffect(() => {
-    const renderEventsData = async () => {
-      let tripDataView = await getTripDataByCanView(UID);
-      // console.log(tripDataView);
-      setTripView(tripDataView);
-    };
-    renderEventsData();
+    //eslint-disable-next-line
   }, []);
-  // console.log(tripView);
+  console.log(tripEdit);
 
   function checkTrip(tripCity, tripID) {
     if (tripCity === "Buenos Aires") {
@@ -378,7 +256,6 @@ function ManageSchedule() {
       tripCity = "CapeTown";
     }
     history.push(`/confirm?city=${tripCity}&number=${tripID}`);
-    // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
 
   function editTrip(tripCity, tripID) {
@@ -388,8 +265,6 @@ function ManageSchedule() {
       tripCity = "CapeTown";
     }
     history.push(`/city/${tripCity}?number=${tripID}`);
-    // history.push(`/confirm?city=${tripCity}&number=${tripID}`);
-    // document.location.href = `../confirm?city=${tripCity}&number=${tripUID}`;
   }
 
   async function deleteTrip(tripID) {
@@ -397,7 +272,6 @@ function ManageSchedule() {
 
     await Swal.fire({
       title: "Are you sure?",
-      // text: "Event: " + info.event.title,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -413,86 +287,18 @@ function ManageSchedule() {
     });
   }
 
-  async function userLogOut() {
-    await Swal.fire({
-      title: "Do you want to log out?",
-      // text: "Event: ",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, log out",
-    }).then((result) => {
-      // fireAuthLogOut();
-
-      if (result.isConfirmed) {
-        firebase
-          .auth()
-          .signOut()
-          .then(() => {
-            // Sign-out successful.
-            console.log("log out successfully");
-            // var user = firebase.auth().currentUser.uid;
-            // console.log(user + "log out successfully");
-            // alert(user + "log out successfully");
-            // return;
-            Swal.fire("You're logged out", "", "success"); //"Your're logged out'.",
-            history.push("/");
-          })
-          .catch((error) => {
-            console.log("log out error");
-            // An error happened.
-          });
-      }
-    });
-  }
-
-  // function selectPhoto() {
-  //   (async () => {
-  //     const { value: file } = await Swal.fire({
-  //       title: "Select image",
-  //       input: "file",
-  //       inputAttributes: {
-  //         accept: "image/*",
-  //         "aria-label": "Upload your profile picture",
-  //       },
-  //     });
-  //     const url = await uploadImage(file);
-  //     console.log(url);
-  //     setPhotoUrl(url);
-  //     storeProfileData("Lara", "lara@gmail.com", url /*, UID*/);
-
-  //     if (file) {
-  //       const reader = new FileReader();
-  //       reader.onload = (e) => {
-  //         Swal.fire({
-  //           title: "Successfully upload! Your uploaded picture",
-  //           imageUrl: e.target.result,
-  //           imageAlt: "The uploaded picture",
-  //         });
-  //       };
-  //       reader.readAsDataURL(file);
-  //     }
-  //   })();
-  // }
-
   return (
-    <div>
+    <div
+      style={{
+        background: `url(${items})`,
+        backgroundSize: `cover`,
+      }}
+    >
       <Manage>
+        <div style={{ height: "10px" }}></div>
         <Profile>
-          {/* <Photo src={photoUrl} onClick={selectPhoto} /> */}
-          {/* <form action="/somewhere/to/upload" enctype="multipart/form-data">
-            <input
-              // name="progressbarTW_img"
-              type="file"
-              accept="image/gif, image/jpeg, image/png"
-              // onChange={(e) => setPhotoFile(e.target.files[0])}
-            ></input>
-          </form> */}
-          {/* <SavePhoto onClick={savePhoto}>Save photo</SavePhoto> */}
           <Name>{profileData.name}</Name>
           <Email>{profileData.email}</Email>
-          {/* <LogOut onClick={userLogOut}>Log out</LogOut> */}
         </Profile>
         <Trips>
           <Current>
@@ -503,42 +309,33 @@ function ManageSchedule() {
                   <Td style={{ width: "200px" }}>City</Td>
                   <Td style={{ width: "200px" }}>Create date</Td>
                   <Td style={{ width: "220px" }}>Share with</Td>
-                  <Td style={{ width: "200px" }}>Edit</Td>
+                  <Td style={{ width: "200px" }}>Trip</Td>
                 </TrHead>
               </THead>
               <TBody>
-                {trip.map((trip) => {
-                  console.log(trip);
+                {trip.map((trip, i) => {
                   const city = trip[1].city;
                   const time = trip[1].createTime;
                   const share = trip[1].share;
                   const tripID = trip[0];
 
-                  /* const owner = trip[1].owner; */
-
                   return (
-                    <Tr>
-                      {/* <TripName onClick={() => checkTrip(city, UID)}>
-                      {tripName}
-                    </TripName> */}
-                      <TableCity
-                        style={{ width: "200px" }}
-                        onClick={() => checkTrip(city, tripID)}
-                      >
-                        {city}
-                      </TableCity>
-
+                    <Tr key={i}>
+                      <TableCity style={{ width: "200px" }}>{city}</TableCity>
                       <TimeTd style={{ width: "200px" }}>{time}</TimeTd>
-
                       <EmailTd style={{ width: "220px" }}>
-                        {share}
-                        {/* <EditList>List</EditList> */}
+                        <EditShareList
+                          tripID={tripID}
+                          share={share}
+                        ></EditShareList>
                       </EmailTd>
                       <EditTd style={{ width: "200px" }}>
                         <EditTrip onClick={() => editTrip(city, tripID)}>
-                          Trip
+                          Edit
                         </EditTrip>
-
+                        <EditTrip onClick={() => checkTrip(city, tripID)}>
+                          Print
+                        </EditTrip>
                         <EditList onClick={() => deleteTrip(tripID)}>
                           Delete
                         </EditList>
@@ -549,6 +346,7 @@ function ManageSchedule() {
               </TBody>
             </Table>
           </Current>
+
           <Past>
             <HistoryTrips>Shared Trips</HistoryTrips>
             <Table>

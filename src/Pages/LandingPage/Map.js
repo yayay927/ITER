@@ -1,43 +1,15 @@
 import styled from "styled-components";
-// import * as React from "react";
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import ReactMapGL, { Marker } from "react-map-gl";
-import { ZoomControl } from "mapbox-gl-controls";
-import L from "leaflet";
-import ocean from "../../Components/ocean.wav";
-import anchor from "../../Components/anchor.png";
-// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import Navigation from "./Navigation";
-
-const SideBar = styled.div`
-  background-color: rgba(35, 55, 75, 0.9);
-  color: #ffffff;
-  padding: 6px 12px;
-  font-family: monospace;
-  z-index: 1;
-  position: absolute;
-  top: 30;
-  left: 0;
-  margin: 955px 0 0 120px;
-  margin-top: 86vh;
-  margin-left: 5vw;
-  border-radius: 4px;
-`;
+// import ReactMapGL, { Marker } from "react-map-gl";
+// import { ZoomControl } from "mapbox-gl-controls";
+// import Navigation from "./Navigation";
 
 const MainMap = styled.div`
-  height: calc(100vh - 120px);
+  height: calc(100vh - 80px);
   margin-bottom: 0px;
   margin-top: 60px;
-`;
-
-const Audio = styled.div`
-  background-color: #91ccb9;
-`;
-
-const LeafletMap = styled.div`
-  height: 180px;
-  id: "mapid";
+  font-family: "Allura";
 `;
 
 function Map() {
@@ -47,7 +19,7 @@ function Map() {
   const map = useRef(null);
   const [lng, setLng] = useState(3);
   const [lat, setLat] = useState(38);
-  const [zoom, setZoom] = useState(1.3);
+  const [zoom, setZoom] = useState(1.4);
   // const [marker, setMarker] = useState(null);
 
   // const [viewport, setViewport] = React.useState({
@@ -98,7 +70,7 @@ function Map() {
       .setLngLat([-82.383, 23.133])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1 id="title"  margin="5px"><font face="Allura" size="70px">Havana</font></h1><a href="../city/Havana"><button><font face="Quicksand">Go!</font></button></a>'
+          `<h1><font face="Allura" size="70px">Havana</font></h1><a style="outline:none;" href="../city/Havana"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -110,7 +82,7 @@ function Map() {
       .setLngLat([121.597366, 25.105497])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Taipei</font></h1><a href="../city/Taipei"><button >Go!</button></a>'
+          `<h1><font face="Allura" size="70px">Taipei</font></h1><a style="outline:none;" href="../city/Taipei"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -121,7 +93,7 @@ function Map() {
       .setLngLat([12.3327, 45.4371])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Venice</font></h1><a href="../city/Venice"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="70px">Venice</font></h1><a style="outline:none;" href="../city/Venice"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -132,7 +104,7 @@ function Map() {
       .setLngLat([135.768326, 35.011665])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px"> Kyoto </font></h1><a href="../city/Kyoto"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="70px">Kyoto</font></h1><a style="outline:none;" href="../city/Kyoto"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -143,7 +115,7 @@ function Map() {
       .setLngLat([-71.057083, 42.361145])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Boston</font></h1><a href="../city/Boston"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="70px">Boston</font></h1><a style="outline:none;" href="../city/Boston"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -160,7 +132,7 @@ function Map() {
       .setLngLat([-123.116226, 49.246292])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Vancouver</font></h1><a href="../city/Vancouver"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="70px">Vancouver</font></h1><a style="outline:none;" href="../city/Vancouver"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -171,7 +143,7 @@ function Map() {
       .setLngLat([31.233334, 30.033333])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Cairo</font></h1><a href="../city/Cairo"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="70px">Cairo</font></h1><a style="outline:none;" href="../city/Cairo"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -182,7 +154,7 @@ function Map() {
       .setLngLat([18.4233, -33.918861])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Cape Town</font></h1><a href="../city/CapeTown"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="30px">Cape Town</font></h1><a style="outline:none;" href="../city/CapeTown"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -193,7 +165,7 @@ function Map() {
       .setLngLat([-58.381592, -34.603722])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" style="line-height:1.05">Buenos Aires</font></h1><a href="../city/BuenosAires"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="30px">Buenos Aires</font></h1><a style="outline:none;" href="../city/BuenosAires"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -209,7 +181,7 @@ function Map() {
       .setLngLat([37.618423, 55.751244])
       .setPopup(
         new mapboxgl.Popup().setHTML(
-          '<h1><font face="Allura" size="70px">Moscow</font></h1><a href="../city/Moscow"><button>Go!</button></a>'
+          `<h1><font face="Allura" size="70px">Moscow</font></h1><a style="outline:none;" href="../city/Moscow"><div class="mapBtn"></div></a>`
         )
       )
       .addTo(map.current);
@@ -230,50 +202,10 @@ function Map() {
     });
   });
 
-  // useEffect(() => {
-  //   var marker = new mapboxgl.Marker().setLngLat([30.5, 50.5]).addTo(map);
-  // });
-
-  // useEffect(() => {
-  //   var mymap = L.map("mapid").setView([51.505, -0.09], 13);
-  //   L.tileLayer(
-  //     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
-  //     {
-  //       attribution:
-  //         'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  //       maxZoom: 18,
-  //       id: "mapbox/streets-v11",
-  //       tileSize: 512,
-  //       zoomOffset: -1,
-  //       accessToken: "your.mapbox.access.token",
-  //     }
-  //   ).addTo(mymap);
-  // });
-
   return (
     <div>
-      {/* <SideBar className="sidebar">
-        Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-      </SideBar> */}
       <MainMap ref={mapContainer} className="map-container"></MainMap>
-      {/* <Audio>
-        <audio controls src={ocean} autoplay="true" loop>
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
-      </Audio> */}
-      {/* <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[51.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer> */}
-      {/* <LeafletMap id="mapid"></LeafletMap> */}
+
       {/* <Navigation></Navigation> */}
     </div>
   );
