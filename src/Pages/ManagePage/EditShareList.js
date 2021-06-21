@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { addShareEmail, removeShareEmail } from "../../Utils/firebase.js";
-
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 

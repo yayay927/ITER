@@ -12,8 +12,6 @@ import {
 } from "../../Utils/firebase.js";
 import Swal from "sweetalert2";
 import items from "../../images/items.jpg";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
 import EditShareList from "./EditShareList.js";
 
 const Manage = styled.div`
