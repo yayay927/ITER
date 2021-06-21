@@ -1,19 +1,9 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/firestore";
-import {
-  getTripDataByUID,
-  getTripDataByCanEdit,
-  getProfileData,
-  checkUserStatus,
-  deleteTripData,
-  addShareEmail,
-  removeShareEmail,
-} from "../../Utils/firebase.js";
-import Swal from "sweetalert2";
-import items from "../../images/items.jpg";
+import { addShareEmail, removeShareEmail } from "../../Utils/firebase.js";
+
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
@@ -135,33 +125,11 @@ function EditShareList({ tripID, share }) {
   const closeModal = () => setOpen(false);
   const [shareEmail, setShareEmail] = useState([]);
 
-  //(props)
-  // let {tripID, share} = props;
-
-  // function toggleModal(e) {
-  //   setOpacity(0);
-  //   setIsOpen(!isOpen);
-  // }
-
-  // function afterOpen() {
-  //   setTimeout(() => {
-  //     setOpacity(1);
-  //   }, 100);
-  //   setCurrentShareEmail(share);
-  // }
-
-  // function beforeClose() {
-  //   return new Promise((resolve) => {
-  //     setOpacity(0);
-  //     setTimeout(resolve, 300);
-  //   });
-  // }
-
   console.log(tripID, share);
 
   function addUser(tripID, shareEmail) {
     console.log(tripID, shareEmail);
-    // addShareEmail(tripID, email);
+    addShareEmail(tripID, shareEmail);
     setShareEmail("");
   }
   function deleteUser(tripID, email) {
@@ -170,13 +138,6 @@ function EditShareList({ tripID, share }) {
 
   return (
     <div>
-      {/* {share
-          ? share.map((each, i) => {
-              console.log(each);
-              return <div>{each}</div>;
-            })
-          : null} */}
-
       <StyledPopup
         key={tripID}
         open={open}
@@ -191,7 +152,6 @@ function EditShareList({ tripID, share }) {
         trigger={
           <OpenButton
             onClick={() => {
-              // setIsOpen(true);
               setOpen(true);
             }}
           >
@@ -242,12 +202,7 @@ function EditShareList({ tripID, share }) {
                   : null}
               </AllUsers>
             </AlreadySharedList>
-            <CloseBtn
-              // onClick={closeModal}
-              onClick={close}
-            >
-              Finish
-            </CloseBtn>
+            <CloseBtn onClick={close}>Finish</CloseBtn>
           </>
         )}
       </StyledPopup>
