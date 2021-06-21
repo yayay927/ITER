@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { getAttractionData } from "../../Utils/firebase.js";
 import { useParams } from "react-router-dom";
+import { getDateMeta } from "@fullcalendar/core";
 
 const TouristAttractions = styled.div`
   width: 100%;
