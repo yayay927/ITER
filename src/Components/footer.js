@@ -66,7 +66,7 @@ function Footer() {
         </audio>
       </Audio> */}
 
-      <CopyRight>Copyright © 2021 TY Yang All rights reserved.</CopyRight>
+      <CopyRight>Copyright © 2021 TY Yang All good rights reserved.</CopyRight>
       <a href="https://github.com/yayay927/ITER">
         <Icon src={github} />
       </a>
