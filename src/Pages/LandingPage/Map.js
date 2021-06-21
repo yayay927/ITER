@@ -9,6 +9,7 @@ const MainMap = styled.div`
   height: calc(100vh - 80px);
   margin-bottom: 0px;
   margin-top: 60px;
+  font-family: "Allura";
 `;
 
 function Map() {

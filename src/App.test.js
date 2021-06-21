@@ -1,8 +1,8 @@
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import App from "./App";
+// import App from "./App";
 
-test("renders learn react link", () => {
-  render(<App />);
+xtest("renders learn react link", () => {
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
@@ -10,7 +10,7 @@ test("renders learn react link", () => {
 //it
 
 //測component tt
-// tt("rders learn react link", async() => {
+// it("rders learn react link", async() => {
 //   render(<App />);
 //   const linkElement = await screen.findByText(/get email/i);
 //   expect(linkElement).toBeInTheDocument();

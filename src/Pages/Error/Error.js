@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import manymaps from "../../images/manymaps.jpg";
+import { Link } from "react-router-dom";
 
 const Page = styled.div`
   height: 100vh;
+  a {
+    text-decoration: none;
+  }
 `;
 const Msg = styled.div`
   z-index: 1;
@@ -22,10 +26,8 @@ const Msg = styled.div`
     padding-top: 100px;
   }
 `;
-const Link = styled.a`
-  text-decoration: none;
-`;
-const Redirect = styled.div`
+
+const Btn = styled.div`
   text-decoration: none;
   height: 70px;
   width: 200px;
@@ -73,8 +75,9 @@ function Error() {
       }}
     >
       <Msg>Sorry, the place you're looking for is not on our map yet.</Msg>
-      <Link href="../../">
-        <Redirect>back to world</Redirect>
+
+      <Link to="/">
+        <Btn>back to world</Btn>
       </Link>
     </Page>
   );
