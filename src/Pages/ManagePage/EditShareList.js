@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useState } from "react";
-import firebase from "firebase/app";
+import React, { useState } from "react";
 import "firebase/firestore";
 import { addShareEmail, removeShareEmail } from "../../Utils/firebase.js";
 import Popup from "reactjs-popup";
@@ -119,37 +118,27 @@ const CloseBtn = styled.button`
 `;
 
 function EditShareList({ tripID, share }) {
-  // const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
   const [shareEmail, setShareEmail] = useState([]);
+  const [editedShare, setEditedShare] = useState(share);
 
-  console.log(tripID, share);
+  // console.log(tripID, share);
 
   function addUser(tripID, shareEmail) {
-    // console.log(tripID, shareEmail);
-    let tripShareList = [];
-    // if (share) {
-    share.push(shareEmail);
-    tripShareList = share;
-    // console.log(tripShareList);
-    // } else if (share === undefined) {
-    //   tripShareList.push(shareEmail);
-    //   console.log(tripShareList);
-    // }
-    // console.log(tripShareList);
+    let tripShareList = [...editedShare];
+    tripShareList.push(shareEmail);
+    setEditedShare(tripShareList);
     addShareEmail(tripID, tripShareList);
     setShareEmail("");
   }
+
   function deleteUser(tripID, email) {
-    // console.log(tripID, email);
     removeShareEmail(tripID, email);
-    let deletedShareList = share.filter((item) => {
+    let deletedShareList = editedShare.filter((item) => {
       return item !== email;
     });
-    // console.log(deletedShareList);
-    share = deletedShareList;
-    // console.log(share);
+    setEditedShare(deletedShareList);
   }
 
   return (
@@ -200,10 +189,8 @@ function EditShareList({ tripID, share }) {
               <Title>Share list</Title>
               <CloseModalBtn></CloseModalBtn>
               <AllUsers>
-                {share
-                  ? share.map((each, i) => {
-                      /* console.log(each); */
-
+                {editedShare
+                  ? editedShare.map((each, i) => {
                       return (
                         <EachUser key={i}>
                           <TypeEmail>{each}</TypeEmail>
