@@ -14,6 +14,12 @@ import Swal from "sweetalert2";
 import items from "../../images/items.jpg";
 import EditShareList from "./EditShareList.js";
 
+const ManageContainer = styled.div`
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)),
+    url(${items});
+  background-size: cover;
+`;
+
 const Manage = styled.div`
   margin-top: 55px;
   height: 90vh;
@@ -288,12 +294,7 @@ function ManageSchedule() {
   }
 
   return (
-    <div
-      style={{
-        background: `url(${items})`,
-        backgroundSize: `cover`,
-      }}
-    >
+    <ManageContainer>
       <Manage>
         <div style={{ height: "10px" }}></div>
         <Profile>
@@ -395,7 +396,7 @@ function ManageSchedule() {
           </Past>
         </Trips>
       </Manage>
-    </div>
+    </ManageContainer>
   );
 }
 

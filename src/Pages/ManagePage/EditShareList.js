@@ -127,12 +127,29 @@ function EditShareList({ tripID, share }) {
   console.log(tripID, share);
 
   function addUser(tripID, shareEmail) {
-    console.log(tripID, shareEmail);
-    addShareEmail(tripID, shareEmail);
+    // console.log(tripID, shareEmail);
+    let tripShareList = [];
+    // if (share) {
+    share.push(shareEmail);
+    tripShareList = share;
+    // console.log(tripShareList);
+    // } else if (share === undefined) {
+    //   tripShareList.push(shareEmail);
+    //   console.log(tripShareList);
+    // }
+    // console.log(tripShareList);
+    addShareEmail(tripID, tripShareList);
     setShareEmail("");
   }
   function deleteUser(tripID, email) {
+    // console.log(tripID, email);
     removeShareEmail(tripID, email);
+    let deletedShareList = share.filter((item) => {
+      return item !== email;
+    });
+    // console.log(deletedShareList);
+    share = deletedShareList;
+    // console.log(share);
   }
 
   return (
@@ -190,9 +207,7 @@ function EditShareList({ tripID, share }) {
                       return (
                         <EachUser key={i}>
                           <TypeEmail>{each}</TypeEmail>
-                          <Delete
-                            onClick={() => deleteUser(tripID, shareEmail)}
-                          >
+                          <Delete onClick={() => deleteUser(tripID, each)}>
                             delete
                           </Delete>
                         </EachUser>
