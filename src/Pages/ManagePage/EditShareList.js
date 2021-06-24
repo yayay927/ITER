@@ -34,6 +34,9 @@ const OpenButton = styled.button`
     background-color: rgb(238, 221, 66, 0.5);
     border: 1px solid #eedd42;
   }
+  @media (max-width: 400px) {
+    font-size: 3vw;
+  }
 `;
 const AddByEmail = styled.div`
   display: flex;
