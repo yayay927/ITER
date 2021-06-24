@@ -15,8 +15,8 @@ import items from "../../images/items.jpg";
 import EditShareList from "./EditShareList.js";
 
 const ManageContainer = styled.div`
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)),
-    url(${items});
+  background: 
+  /* linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)), */ url(${items});
   background-size: cover;
 `;
 
@@ -31,7 +31,7 @@ const Profile = styled.div`
   margin: 3vh auto;
   margin-bottom: 0;
   width: 30%;
-  background-color: rgb(57, 80, 73, 0.3);
+  background-color: rgb(57, 80, 73, 0.5);
   border-radius: 40px;
   @media (min-width: 1280px) {
     margin-top: 10vh;
@@ -64,15 +64,19 @@ const Email = styled.div`
 const Trips = styled.div`
   width: 70%;
   margin: 0 auto;
-  background-color: rgb(57, 80, 73, 0.3);
+  background-color: rgb(57, 80, 73, 0.8);
   border-radius: 25px;
+  color: white;
 `;
 const Current = styled.div`
   margin-top: 30px;
   display: flex;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid #91ccb9;
+  border: 1px solid rgb(57, 80, 73, 0.3);
+  @media (max-width: 960px) {
+    display: block;
+  }
 `;
 const CurrentTrips = styled.div`
   height: 220px;
@@ -85,11 +89,21 @@ const CurrentTrips = styled.div`
   font-weight: bold;
   font-size: 30px;
   color: #eedd42;
+  @media (max-width: 960px) {
+    width: fit-content;
+    border: none;
+    margin: 10px auto;
+    height: auto;
+    font-size: 6vw;
+  }
 `;
 const Table = styled.table`
   width: calc(100% - 120px);
   display: block;
   margin: 10px;
+  @media (max-width: 960px) {
+    width: 95%;
+  }
 `;
 
 const THead = styled.thead`
@@ -101,6 +115,9 @@ const THead = styled.thead`
   font-weight: bold;
   font-size: 22px;
   display: block;
+  @media (max-width: 400px) {
+    padding-bottom: 15px;
+  }
 `;
 const TrHead = styled.tr`
   line-height: 20px;
@@ -110,15 +127,25 @@ const Tr = styled.tr`
   border-radius: 10px;
   border: none;
 `;
-const Td = styled.td``;
+const Td = styled.td`
+  @media (max-width: 960px) {
+    font-size: 2vw;
+  }
+`;
 const TimeTd = styled.td`
   font-size: 15px;
+  @media (max-width: 960px) {
+    font-size: 3vw;
+  }
 `;
 const EmailTd = styled.td`
   font-size: 15px;
 `;
 const TableCity = styled.td`
   font-weight: bold;
+  @media (max-width: 960px) {
+    font-size: 4vw;
+  }
 `;
 
 const TBody = styled.tbody`
@@ -129,7 +156,10 @@ const TBody = styled.tbody`
 `;
 
 const EditTd = styled.td`
-  display: flex;
+  /* display: flex; */
+  @media (max-width: 960px) {
+    /* display: block; */
+  }
 `;
 const EditTrip = styled.button`
   cursor: pointer;
@@ -143,8 +173,11 @@ const EditTrip = styled.button`
   border: 1px solid lightgrey;
   :hover {
     color: white;
-    background-color: #eedd42;
+    background-color: rgb(238, 221, 66, 0.5);
     border: 1px solid #eedd42;
+  }
+  @media (max-width: 400px) {
+    font-size: 3vw;
   }
 `;
 const EditList = styled.button`
@@ -159,8 +192,11 @@ const EditList = styled.button`
   border: 1px solid lightgrey;
   :hover {
     color: white;
-    background-color: #eedd42;
+    background-color: rgb(238, 221, 66, 0.5);
     border: 1px solid #eedd42;
+  }
+  @media (max-width: 400px) {
+    font-size: 3vw;
   }
 `;
 
@@ -170,8 +206,11 @@ const Past = styled.div`
   align-items: center;
   margin-bottom: 120px;
   border-radius: 20px;
-  border: 1px solid #91ccb9;
+  border: 1px solid rgb(57, 80, 73, 0.3);
   height: 250px;
+  @media (max-width: 960px) {
+    display: block;
+  }
 `;
 const HistoryTrips = styled.div`
   height: 220px;
@@ -184,6 +223,13 @@ const HistoryTrips = styled.div`
   font-weight: bold;
   font-size: 30px;
   color: #eedd42;
+  @media (max-width: 960px) {
+    width: fit-content;
+    border: none;
+    margin: 10px auto;
+    height: auto;
+    font-size: 6vw;
+  }
 `;
 
 function ManageSchedule() {
