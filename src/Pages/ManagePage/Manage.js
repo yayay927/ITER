@@ -15,8 +15,8 @@ import items from "../../images/items.jpg";
 import EditShareList from "./EditShareList.js";
 
 const ManageContainer = styled.div`
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)),
-    url(${items});
+  background: 
+  /* linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)), */ url(${items});
   background-size: cover;
 `;
 
@@ -64,15 +64,16 @@ const Email = styled.div`
 const Trips = styled.div`
   width: 70%;
   margin: 0 auto;
-  background-color: rgb(57, 80, 73, 0.3);
+  background-color: rgb(57, 80, 73, 0.8);
   border-radius: 25px;
+  color: white;
 `;
 const Current = styled.div`
   margin-top: 30px;
   display: flex;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid #91ccb9;
+  border: 1px solid rgb(57, 80, 73, 0.3);
 `;
 const CurrentTrips = styled.div`
   height: 220px;
@@ -143,7 +144,7 @@ const EditTrip = styled.button`
   border: 1px solid lightgrey;
   :hover {
     color: white;
-    background-color: #eedd42;
+    background-color: rgb(238, 221, 66, 0.5);
     border: 1px solid #eedd42;
   }
 `;
@@ -159,7 +160,7 @@ const EditList = styled.button`
   border: 1px solid lightgrey;
   :hover {
     color: white;
-    background-color: #eedd42;
+    background-color: rgb(238, 221, 66, 0.5);
     border: 1px solid #eedd42;
   }
 `;
@@ -170,7 +171,7 @@ const Past = styled.div`
   align-items: center;
   margin-bottom: 120px;
   border-radius: 20px;
-  border: 1px solid #91ccb9;
+  border: 1px solid rgb(57, 80, 73, 0.3);
   height: 250px;
 `;
 const HistoryTrips = styled.div`

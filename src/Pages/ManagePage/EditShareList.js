@@ -31,7 +31,7 @@ const OpenButton = styled.button`
   border: 1px solid lightgrey;
   :hover {
     color: white;
-    background-color: #eedd42;
+    background-color: rgb(238, 221, 66, 0.5);
     border: 1px solid #eedd42;
   }
 `;
