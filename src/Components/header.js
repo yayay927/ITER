@@ -208,7 +208,7 @@ function Header() {
         <Block>
           {headerView()}
           <div onClick={managePage}>
-            <Profile src={suitcaseNew} className="step-4" />
+            <Profile src={suitcaseNew} />
           </div>
         </Block>
       </TheHeader>
