@@ -16,6 +16,16 @@ code {
 .mapboxgl-popup-content {
   display: flex;
   align-items: center;
+  height: auto;
+  width: auto;
+}
+
+.mapTitle {
+  font-family: "Allura";
+  font-size: 47px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-top: 7px;
 }
 
 .mapBtn {
