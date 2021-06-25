@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+<p align="center">
+    <img src="./src/images/logo2.png" alt="Logo" width="50" >
+  <p align="center">
+   An itinerary arrangement website, which aims to help travellers plan trips within minimum effort and time.
+    <br />
+    <a href="https://iter-e3ef2.web.app/"><strong>View Website »</strong></a>
+    <br />
+  </p> 
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<kbd>
+    <img src="./src/img/src/readme/overview.gif" >
+</kbd>
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+- Front-End Basic
+  - HTML / CSS / JavaScript
+  - SCSS
+  - RWD
+- Front-End Frameworks
+  - React
+  - React Router
+- Firebase
+  - Database
+  - Storage
+  - Hosting
+  - Authentication
+- Library
+  - Fabric.js
+  - Redux.js + Thunk
 
-### `npm start`
+## Recently Updates
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Complete manage page RWD
+- Refactor to increase code-readability
+- Fix bugs
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Structure
 
-### `npm test`
+![](./src/img/src/readme/sitemap.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+### Design Editing Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- #### Various Design Elements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  Provided with various elements to use, including text, shapes, lines, images, stickers, background, upload and templates to choose from.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  <kbd>
+  <img src="./src/img/src/readme/elements.gif" >
+  </kbd>
 
-### `npm run eject`
+- #### Add Elements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  Click or Drag to add a new element in the design.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  <kbd>
+  <img src="./src/img/src/readme/addElements.gif" >
+  </kbd>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- #### Adjust Elements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - Basic Adjusting Functions:<br>
+    Copy, paste, redo, undo, align, layer move, etc.
+  - Particular Adjusting Functions:<br>
+    For example, image elements can do crop and filter while text elements can choose color, font weight and text alignment.
 
-## Learn More
+  <p>
+  <kbd>
+  <img src="./src/img/src/readme/adjustElements.gif" >
+  </kbd>
+  </p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- #### Export Design
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Users can export the design to jpg, png or pdf file, or share the file details page link.
 
-### Code Splitting
+  <kbd>
+  <img src="./src/img/src/readme/exportDesign.gif" >
+  </kbd>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- #### Responsive Web Design
 
-### Analyzing the Bundle Size
+  Realigning all selection bars and adjusting mouse over events on mobile view.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  <kbd>
+  <img src="./src/img/src/readme/mobileView.gif" >
+  </kbd>
 
-### Making a Progressive Web App
+### Explore, Self & Design Details Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- #### Explore Page & Like
 
-### Advanced Configuration
+  Explore all designs, including templates and others' designs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  <kbd>
+  <img src="./src/img/src/readme/explore.gif" >
+  </kbd>
 
-### Deployment
+- #### Design Details Page & Comment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  Check information of design like author information and comments, and can also send or edit my comment.
 
-### `npm run build` fails to minify
+  <kbd>
+  <img src="./src/img/src/readme/shot.gif" >
+  </kbd>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- #### Self Page
+
+  Check all my designs which link to the edit page, and all designs in the like list.
+
+  <kbd>
+  <img src="./src/img/src/readme/myProfile.gif" >
+  </kbd>
+
+- #### Add New Design
+
+  User-friendly adding steps with clear guidances.
+
+  <kbd>
+  <img src="./src/img/src/readme/addNew.gif" >
+  </kbd>
+
+## Future Features
+
+- Add more cities
+- Let users edit the titles of existing calendar events
+- Show tourist attraction marker when hoverning on the attraction event (now is by clicking the marker itself)
+- Add navigation part with animation to landing page
+- Improve city page UI layout
+- Let users customize event colors in confirm page
+
+## Contact
+
+Feel free to contact me if have further questions.<br>
+E-mail: isabelleya927@gmail.com
