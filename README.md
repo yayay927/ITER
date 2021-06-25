@@ -14,23 +14,36 @@
 
 ## Technologies
 
-- Front-End Basic
-  - HTML / CSS / JavaScript
-  - SCSS
-  - RWD
+- Front-End Fundamentals
+  - HTML
+  - CSS
+  - JavaScript (ES6)
+  - Responsive Web Design
+  - styled-components
 - Front-End Frameworks
-  - React
+  - React (Hooks)
   - React Router
 - Firebase
-  - Database
-  - Storage
-  - Hosting
+  - Firestore Database
   - Authentication
-- Library
-  - Fabric.js
-  - Redux.js + Thunk
+  - Hosting
+- Third-Party Libraries
+  - Mapbox (map)
+  - Mapbox GL JS (marker & popup)
+  - mapbox-gl-directions (transportation)
+  - FullCalendar
+  - Google Map Places API (Place Search)
+  - SweetAlert 2
+  - Reactjs-popup
+  - React Joyride
+  - react-to-print
+  - react-share
+- Web Crawler
+  - Node.js
+  - Request
+  - Cheerio
 
-## Recently Updates
+## Recent Updates
 
 - Complete manage page RWD
 - Refactor to increase code-readability
