@@ -8,7 +8,7 @@
   </p> 
 </p>
 
-<kbd>
+<kbd  align="center">
     <img src="./src/img/src/readme/overview.gif" >
 </kbd>
 
@@ -49,15 +49,15 @@
 - Refactor to increase code-readability
 - Fix bugs
 
-## Structure
+## Flow Chart
 
-![](./src/img/src/readme/sitemap.jpg)
+![](./src/images/flowChart.jpg)
 
 ## Demo
 
-### Design Editing Page
+### Landing Page
 
-- #### Various Design Elements
+- #### Play with Interactive Map
 
   Provided with various elements to use, including text, shapes, lines, images, stickers, background, upload and templates to choose from.
 
@@ -65,7 +65,7 @@
   <img src="./src/img/src/readme/elements.gif" >
   </kbd>
 
-- #### Add Elements
+- #### Click to view city titles
 
   Click or Drag to add a new element in the design.
 
@@ -73,7 +73,7 @@
   <img src="./src/img/src/readme/addElements.gif" >
   </kbd>
 
-- #### Adjust Elements
+- #### Click to go to city page
 
   - Basic Adjusting Functions:<br>
     Copy, paste, redo, undo, align, layer move, etc.
@@ -86,14 +86,6 @@
   </kbd>
   </p>
 
-- #### Export Design
-
-  Users can export the design to jpg, png or pdf file, or share the file details page link.
-
-  <kbd>
-  <img src="./src/img/src/readme/exportDesign.gif" >
-  </kbd>
-
 - #### Responsive Web Design
 
   Realigning all selection bars and adjusting mouse over events on mobile view.
@@ -102,7 +94,75 @@
   <img src="./src/img/src/readme/mobileView.gif" >
   </kbd>
 
-### Explore, Self & Design Details Page
+### City Page
+
+- #### Scroll to Explore Popular Tourist Attractions Recommended by ITER
+
+  Explore all designs, including templates and others' designs.
+
+  <kbd>
+  <img src="./src/img/src/readme/explore.gif" >
+  </kbd>
+
+- #### Click attraction title to view more detail information
+
+  Check information of design like author information and comments, and can also send or edit my comment.
+
+  <kbd>
+  <img src="./src/img/src/readme/shot.gif" >
+  </kbd>
+
+- #### Drag Attraction to Calendar to add the event in your traveling schedule
+
+  Check all my designs which link to the edit page, and all designs in the like list.
+
+  <kbd>
+  <img src="./src/img/src/readme/myProfile.gif" >
+  </kbd>
+
+- #### Click on the Marker in Map to check attraction location
+
+  User-friendly adding steps with clear guidances.
+
+  <kbd>
+  <img src="./src/img/src/readme/addNew.gif" >
+  </kbd>
+
+### Confirm Page
+
+- #### Export Trip Schedule to PDF file or Print It Out
+
+  Explore all designs, including templates and others' designs.
+
+  <kbd>
+  <img src="./src/img/src/readme/explore.gif" >
+  </kbd>
+
+- #### Share Trip Schedule on Various Social Media Platforms
+
+  Check information of design like author information and comments, and can also send or edit my comment.
+
+  <kbd>
+  <img src="./src/img/src/readme/shot.gif" >
+  </kbd>
+
+- #### Self Page
+
+  Check all my designs which link to the edit page, and all designs in the like list.
+
+  <kbd>
+  <img src="./src/img/src/readme/myProfile.gif" >
+  </kbd>
+
+- #### Add New Design
+
+  User-friendly adding steps with clear guidances.
+
+  <kbd>
+  <img src="./src/img/src/readme/addNew.gif" >
+  </kbd>
+
+### Manage Page
 
 - #### Explore Page & Like
 
