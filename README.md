@@ -7,13 +7,12 @@
     <br />
   </p> 
 </p>
-
 <kbd  align="center">
-    <img src="./src/img/src/readme/overview.gif" >
+    <a href="https://iter-e3ef2.web.app/">
+        <img src="./src/images/mainPage.png" >
+    </a>
 </kbd>
-
 ## Technologies
-
 - Front-End Fundamentals
   - HTML
   - CSS
@@ -42,170 +41,70 @@
   - Node.js
   - Request
   - Cheerio
-
 ## Recent Updates
-
 - Complete manage page RWD
 - Refactor to increase code-readability
 - Fix bugs
-
 ## Flow Chart
-
 ![](./src/images/flowChart.jpg)
-
 ## Demo
-
 ### Landing Page
-
 - #### Play with Interactive Map
-
-  Provided with various elements to use, including text, shapes, lines, images, stickers, background, upload and templates to choose from.
-
+  Scroll to zoom in or out and drag to freely explore different areas of the world.
   <kbd>
-  <img src="./src/img/src/readme/elements.gif" >
+  <img src="./src/images/interactiveMapRename.gif" >
   </kbd>
-
-- #### Click to view city titles
-
-  Click or Drag to add a new element in the design.
-
+- #### View City Titles & Enter City Page
+  Click to view city titles on markers, and then click arrow to enter city page
   <kbd>
-  <img src="./src/img/src/readme/addElements.gif" >
+  <img src="./src/images/mapClick.gif" >
   </kbd>
-
-- #### Click to go to city page
-
-  - Basic Adjusting Functions:<br>
-    Copy, paste, redo, undo, align, layer move, etc.
-  - Particular Adjusting Functions:<br>
-    For example, image elements can do crop and filter while text elements can choose color, font weight and text alignment.
-
-  <p>
-  <kbd>
-  <img src="./src/img/src/readme/adjustElements.gif" >
-  </kbd>
-  </p>
-
-- #### Responsive Web Design
-
-  Realigning all selection bars and adjusting mouse over events on mobile view.
-
-  <kbd>
-  <img src="./src/img/src/readme/mobileView.gif" >
-  </kbd>
-
 ### City Page
-
-- #### Scroll to Explore Popular Tourist Attractions Recommended by ITER
-
-  Explore all designs, including templates and others' designs.
-
+- #### Tourist Attractions
+  Scroll to explore popular tourist attractions recommended by ITER. Click attraction title to view more detail information.
   <kbd>
-  <img src="./src/img/src/readme/explore.gif" >
+  <img src="./src/images/attractionTitle.gif" >
   </kbd>
-
-- #### Click attraction title to view more detail information
-
-  Check information of design like author information and comments, and can also send or edit my comment.
-
+  Drag the tourist attractions you'd like to visit to calendar. Arrange trip by simple actions.
   <kbd>
-  <img src="./src/img/src/readme/shot.gif" >
+  <img src="./src/images/attractionEvent.gif" >
   </kbd>
-
-- #### Drag Attraction to Calendar to add the event in your traveling schedule
-
-  Check all my designs which link to the edit page, and all designs in the like list.
-
+- #### Transportation
+  You can click any 2 points on the map to get auto-calculate transportation time, distance, and route in 3 different tranportation methods.
   <kbd>
-  <img src="./src/img/src/readme/myProfile.gif" >
+  <img src="./src/images/transportationClick.gif" >
   </kbd>
-
-- #### Click on the Marker in Map to check attraction location
-
-  User-friendly adding steps with clear guidances.
-
+  You can also type in the input fileds to get transportation information between 2 points.
   <kbd>
-  <img src="./src/img/src/readme/addNew.gif" >
+  <img src="./src/images/transportationType.gif" >
   </kbd>
-
+  Finally, you can drag the auto-calculate transportation method you'd like to take to the calendar to arrange your schedule.
+  <kbd>
+  <img src="./src/images/transportationEvent.gif" >
+  </kbd>
+- #### Calendar
+  Besides the provided tourist attractions, you can create customized events as well with the "create event" button. Just type the date and title of the event.
+  <kbd>
+  <img src="./src/images/createEvent.gif" >
+  </kbd>
+  Remember to save your trip schedule after finish.
+  <kbd>
+  <img src="./src/images/saveTrip.gif" >
+  </kbd>
 ### Confirm Page
-
 - #### Export Trip Schedule to PDF file or Print It Out
-
-  Explore all designs, including templates and others' designs.
-
+  - You can export trip schedule to PDF or print it out for more flexible and convinient usage, like carrying while traveling.
+  - You can share trip shcedule to friends and families via various social media platforms.
   <kbd>
-  <img src="./src/img/src/readme/explore.gif" >
+  <img src="./src/images/confirmPage.gif" >
   </kbd>
-
-- #### Share Trip Schedule on Various Social Media Platforms
-
-  Check information of design like author information and comments, and can also send or edit my comment.
-
-  <kbd>
-  <img src="./src/img/src/readme/shot.gif" >
-  </kbd>
-
-- #### Self Page
-
-  Check all my designs which link to the edit page, and all designs in the like list.
-
-  <kbd>
-  <img src="./src/img/src/readme/myProfile.gif" >
-  </kbd>
-
-- #### Add New Design
-
-  User-friendly adding steps with clear guidances.
-
-  <kbd>
-  <img src="./src/img/src/readme/addNew.gif" >
-  </kbd>
-
-### Manage Page
-
-- #### Explore Page & Like
-
-  Explore all designs, including templates and others' designs.
-
-  <kbd>
-  <img src="./src/img/src/readme/explore.gif" >
-  </kbd>
-
-- #### Design Details Page & Comment
-
-  Check information of design like author information and comments, and can also send or edit my comment.
-
-  <kbd>
-  <img src="./src/img/src/readme/shot.gif" >
-  </kbd>
-
-- #### Self Page
-
-  Check all my designs which link to the edit page, and all designs in the like list.
-
-  <kbd>
-  <img src="./src/img/src/readme/myProfile.gif" >
-  </kbd>
-
-- #### Add New Design
-
-  User-friendly adding steps with clear guidances.
-
-  <kbd>
-  <img src="./src/img/src/readme/addNew.gif" >
-  </kbd>
-
 ## Future Features
-
 - Add more cities
 - Let users edit the titles of existing calendar events
 - Show tourist attraction marker when hoverning on the attraction event (now is by clicking the marker itself)
 - Add navigation part with animation to landing page
 - Improve city page UI layout
 - Let users customize event colors in confirm page
-
 ## Contact
-
 Feel free to contact me if have further questions.<br>
 E-mail: isabelleya927@gmail.com
