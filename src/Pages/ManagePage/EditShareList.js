@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useState } from "react";
-import firebase from "firebase/app";
+import React, { useState } from "react";
 import "firebase/firestore";
 import { addShareEmail, removeShareEmail } from "../../Utils/firebase.js";
 import Popup from "reactjs-popup";
@@ -32,8 +31,11 @@ const OpenButton = styled.button`
   border: 1px solid lightgrey;
   :hover {
     color: white;
-    background-color: #eedd42;
+    background-color: rgb(238, 221, 66, 0.5);
     border: 1px solid #eedd42;
+  }
+  @media (max-width: 400px) {
+    font-size: 3vw;
   }
 `;
 const AddByEmail = styled.div`
@@ -119,20 +121,27 @@ const CloseBtn = styled.button`
 `;
 
 function EditShareList({ tripID, share }) {
-  // const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
   const [shareEmail, setShareEmail] = useState([]);
+  const [editedShare, setEditedShare] = useState(share);
 
-  console.log(tripID, share);
+  // console.log(tripID, share);
 
   function addUser(tripID, shareEmail) {
-    console.log(tripID, shareEmail);
-    addShareEmail(tripID, shareEmail);
+    let tripShareList = [...editedShare];
+    tripShareList.push(shareEmail);
+    setEditedShare(tripShareList);
+    addShareEmail(tripID, tripShareList);
     setShareEmail("");
   }
+
   function deleteUser(tripID, email) {
     removeShareEmail(tripID, email);
+    let deletedShareList = editedShare.filter((item) => {
+      return item !== email;
+    });
+    setEditedShare(deletedShareList);
   }
 
   return (
@@ -183,16 +192,12 @@ function EditShareList({ tripID, share }) {
               <Title>Share list</Title>
               <CloseModalBtn></CloseModalBtn>
               <AllUsers>
-                {share
-                  ? share.map((each, i) => {
-                      /* console.log(each); */
-
+                {editedShare
+                  ? editedShare.map((each, i) => {
                       return (
                         <EachUser key={i}>
                           <TypeEmail>{each}</TypeEmail>
-                          <Delete
-                            onClick={() => deleteUser(tripID, shareEmail)}
-                          >
+                          <Delete onClick={() => deleteUser(tripID, each)}>
                             delete
                           </Delete>
                         </EachUser>

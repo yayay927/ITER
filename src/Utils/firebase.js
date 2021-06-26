@@ -169,6 +169,7 @@ function storeEventsData(saveEvents, cityName, UID, time) {
         city: cityName,
         owner: UID,
         createTime: time,
+        share: [],
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
@@ -362,7 +363,7 @@ function removeShareEmail(tripID, email) {
     .firestore()
     .collection("user_trips_history")
     .doc(tripID)
-    .delete({ share: email })
+    .update({ share: firebase.firestore.FieldValue.arrayRemove(email) })
     .then(() => {
       console.log("Document successfully deleted!");
     })

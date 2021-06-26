@@ -61,7 +61,7 @@ const Map = styled.div`
 `;
 
 const CalendarSpace = styled.div`
-  margin-top: 50px;
+  margin-top: 65px;
   width: 40%;
   padding-left: 20px;
   padding-right: 10px;
@@ -79,7 +79,7 @@ const ConfirmButton = styled.button`
   width: 70px;
   height: 70px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 35px;
   font-family: "QuickSand";
   border-radius: 50px;
   border: none;

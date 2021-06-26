@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+<p align="center">
+    <img src="./src/images/logo2.png" alt="Logo" width="50" >
+  <p align="center">
+   An itinerary arrangement website aims to help travellers plan trips within minimum effort and time.
+    <br />
+    <a href="https://iter-e3ef2.web.app/"><strong>View Website »</strong></a>
+    <br />
+  </p> 
+</p>
+<kbd  align="center">
+    <a href="https://iter-e3ef2.web.app/">
+        <img src="./src/images/mainPage.png" >
+    </a>
+</kbd>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies
 
-## Available Scripts
+- Front-End Fundamentals
+  - HTML
+  - CSS
+  - JavaScript (ES6)
+  - Responsive Web Design
+  - styled-components
+- Front-End Frameworks
+  - React (Hooks)
+  - React Router
+- Firebase
+  - Firestore Database
+  - Authentication
+  - Hosting
+- Third-Party Libraries
+  - Mapbox (map)
+  - Mapbox GL JS (marker & popup)
+  - mapbox-gl-directions (transportation)
+  - FullCalendar
+  - Google Map Places API (Place Search)
+  - SweetAlert 2
+  - Reactjs-popup
+  - React Joyride
+  - react-to-print
+  - react-share
+- Web Crawler
+  - Node.js
+  - Request
+  - Cheerio
 
-In the project directory, you can run:
+## Recent Updates
 
-### `npm start`
+- Complete manage page RWD
+- Refactor to increase code-readability
+- Fix bugs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Flow Chart
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![](./src/images/flowChart.jpg)
 
-### `npm test`
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Landing Page
 
-### `npm run build`
+- #### Play with Interactive Map
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Scroll to zoom in or out and drag to freely explore different areas of the world.
+  <kbd>
+  <img src="./src/images/interactiveMapRename.gif" >
+  </kbd>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- #### View City Titles & Enter City Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Click to view city titles on markers, and then click arrow to enter city page
+  <kbd>
+  <img src="./src/images/mapClick.gif" >
+  </kbd>
 
-### `npm run eject`
+### City Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- #### Tourist Attractions
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  Scroll to explore popular tourist attractions recommended by ITER. Click attraction title to view more detail information.
+  <kbd>
+  <img src="./src/images/attractionTitle.gif" >
+  </kbd>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  Drag the tourist attractions you'd like to visit to calendar. Arrange trip by simple actions.
+  <kbd>
+  <img src="./src/images/attractionEvent.gif" >
+  </kbd>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- #### Transportation
 
-## Learn More
+  You can click any 2 points on the map to get auto-calculate transportation time, distance, and route in 3 different tranportation methods.
+  <kbd>
+  <img src="./src/images/transportationClick.gif" >
+  </kbd>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  You can also type in the input fileds to get transportation information between 2 points.
+  <kbd>
+  <img src="./src/images/transportationType.gif" >
+  </kbd>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Finally, you can drag the auto-calculate transportation method you'd like to take to the calendar to arrange your schedule.
+  <kbd>
+  <img src="./src/images/transportationEvent.gif" >
+  </kbd>
 
-### Code Splitting
+- #### Calendar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  Besides the provided tourist attractions, you can create customized events as well with the "create event" button. Just type the date and title of the event.
+  <kbd>
+  <img src="./src/images/createEvent.gif" >
+  </kbd>
 
-### Analyzing the Bundle Size
+  Remember to save your trip schedule after finish.
+  <kbd>
+  <img src="./src/images/saveTrip.gif" >
+  </kbd>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Confirm Page
 
-### Making a Progressive Web App
+- #### Export Trip Schedule to PDF file or Print It Out
+  - You can export trip schedule to PDF or print it out for more flexible and convinient usage, like carrying while traveling.
+  - You can share trip shcedule to friends and families via various social media platforms.
+    <kbd>
+    <img src="./src/images/confirmPage.gif" >
+    </kbd>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Features
 
-### Advanced Configuration
+- Add more cities
+- Let users edit the titles of existing calendar events
+- Show tourist attraction marker when hoverning on the attraction event (now is by clicking the marker itself)
+- Add navigation part with animation to landing page
+- Improve city page UI layout
+- Let users customize event colors in confirm page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contact me if have further questions.<br>
+E-mail: isabelleya927@gmail.com
