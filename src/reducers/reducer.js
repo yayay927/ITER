@@ -5,7 +5,7 @@ const initialState = {
   userUID: "",
 };
 
-export default function verificationReducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case "UPDATE_USEREMAIL":
       return { ...state, userEmail: action.data }; // 避免覆蓋 state
