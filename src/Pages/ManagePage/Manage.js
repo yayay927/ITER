@@ -13,6 +13,7 @@ import {
 import Swal from "sweetalert2";
 import items from "../../images/items.jpg";
 import EditShareList from "./EditShareList.js";
+import { useSelector, useDispatch } from "react-redux";
 
 const ManageContainer = styled.div`
   background: 
@@ -241,6 +242,11 @@ function ManageSchedule() {
   const [tripEdit, setTripEdit] = useState([]);
   const [profileData, setProfileData] = useState([]);
   const [ownerEmail, setOwnerEmail] = useState([]);
+  const userEmail = useSelector((state) => state.userEmail);
+  const userUID = useSelector((state) => state.userUID);
+
+  console.log(userEmail);
+  console.log(userUID);
 
   if (UID === undefined) {
     history.push(`/error`);
