@@ -61,9 +61,9 @@
 - #### Play with Interactive Map
 
   Scroll to zoom in or out and drag to freely explore different areas of the world.
- 
+  <kbd>
   <img src="./src/images/interactiveMapRename.gif" >
-  
+  </kbd>
 
 - #### View City Titles & Enter City Page
 
