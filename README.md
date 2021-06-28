@@ -1,10 +1,11 @@
 <p align="center">
-    <img src="./src/images/logo2.png" alt="Logo" width="50" >
+    <img src="./src/images/logo3.png" alt="Logo" width="50" >
   <p align="center">
    An itinerary arrangement website aims to help travellers plan trips within minimum effort and time.
     <br />
     <a href="https://iter-e3ef2.web.app/"><strong>View Website »</strong></a>
     <br />
+    
   </p> 
 </p>
 <kbd  align="center">
@@ -69,7 +70,7 @@
 
   Click to view city titles on markers, and then click arrow to enter city page
   <kbd>
-  <img src="./src/images/mapClick.gif" >
+  <img src="./src/images/viewTitleAndEnter.gif" >
   </kbd>
 
 ### City Page
