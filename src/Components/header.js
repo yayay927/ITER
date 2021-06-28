@@ -12,6 +12,7 @@ import {
 } from "../Utils/firebase";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const TheHeader = styled.div`
   background-color: #91ccb9;
@@ -83,6 +84,7 @@ const LogOut = styled.div`
 function Header() {
   let history = useHistory();
   const [userAuth, setUserAuth] = useState();
+  const dispatch = useDispatch();
 
   function headerView() {
     if (userAuth) {
@@ -113,6 +115,8 @@ function Header() {
       if (user) {
         var uid = user.uid;
         console.log(uid, user.email);
+        dispatch({ type: "UPDATE_USEREMAIL", data: user.email });
+        dispatch({ type: "UPDATE_USERUID", data: user.uid });
         history.push(`/manage?number=${uid}`);
       } else {
         console.log("no current user");
