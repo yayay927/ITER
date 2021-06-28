@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./src/images/logo3.png" alt="Logo" width="50" >
+    <img src="./readmeImages/logo3.png" alt="Logo" width="50" >
   <p align="center">
    An itinerary arrangement website aims to help travellers plan trips within minimum effort and time.
     <br />
@@ -10,7 +10,7 @@
 </p>
 <kbd  align="center">
     <a href="https://iter-e3ef2.web.app/">
-        <img src="./src/images/mainPage.png" >
+        <img src="./readmeImages/mainPage.png" >
     </a>
 </kbd>
 
@@ -58,7 +58,7 @@
 
 ## Flow Chart
 
-![](./src/images/flowChart.jpg)
+![](./readmeImages/flowChart.jpg)
 
 ## Demo
 
@@ -68,14 +68,14 @@
 
   Scroll to zoom in or out and drag to freely explore different areas of the world.
   <kbd>
-  <img src="./src/images/interactiveMap.gif" >
+  <img src="./readmeImages/interactiveMap.gif" >
   </kbd>
 
 - #### View City Titles & Enter City Page
 
   Click to view city titles on markers, and then click arrow to enter city page
   <kbd>
-  <img src="./src/images/mapClick.gif" >
+  <img src="./readmeImages/mapClick.gif" >
   </kbd>
 
 ### City Page
@@ -84,41 +84,41 @@
 
   Scroll to explore popular tourist attractions recommended by ITER. Click attraction title to view more detail information.
   <kbd>
-  <img src="./src/images/allTouristAttractions.gif" >
+  <img src="./readmeImages/allTouristAttractions.gif" >
   </kbd>
 
   Drag the tourist attractions you'd like to visit to calendar. Arrange trip by simple actions.
   <kbd>
-  <img src="./src/images/attractionEvent.gif" >
+  <img src="./readmeImages/attractionEvent.gif" >
   </kbd>
 
 - #### Transportation
 
   You can click any 2 points on the map to get auto-calculate transportation time, distance, and route in 3 different tranportation methods.
   <kbd>
-  <img src="./src/images/transportationClick.gif" >
+  <img src="./readmeImages/transportationClick.gif" >
   </kbd>
 
   You can also type in the input fileds to get transportation information between 2 points.
   <kbd>
-  <img src="./src/images/transportationType.gif" >
+  <img src="./readmeImages/transportationType.gif" >
   </kbd>
 
   Finally, you can drag the auto-calculate transportation method you'd like to take to the calendar to arrange your schedule.
   <kbd>
-  <img src="./src/images/transportationEvent.gif" >
+  <img src="./readmeImages/transportationEvent.gif" >
   </kbd>
 
 - #### Calendar
 
   Besides the provided tourist attractions, you can create customized events as well with the "create event" button. Just type the date and title of the event.
   <kbd>
-  <img src="./src/images/createEvent.gif" >
+  <img src="./readmeImages/createEvent.gif" >
   </kbd>
 
   Remember to save your trip schedule after finish.
   <kbd>
-  <img src="./src/images/saveTrip.gif" >
+  <img src="./readmeImages/saveTrip.gif" >
   </kbd>
 
 ### Confirm Page
@@ -127,7 +127,7 @@
   - You can export trip schedule to PDF or print it out for more flexible and convinient usage, like carrying while traveling.
   - You can share trip shcedule to friends and families via various social media platforms.
     <kbd>
-    <img src="./src/images/confirmPage.gif" >
+    <img src="./readmeImages/confirmPage.gif" >
     </kbd>
 
 ## Future Features
