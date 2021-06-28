@@ -14,6 +14,11 @@
     </a>
 </kbd>
 
+## Test Account
+
+- Email: test@gmail.com
+- Password: 000000
+
 ## Technologies
 
 - Front-End Fundamentals
@@ -63,14 +68,14 @@
 
   Scroll to zoom in or out and drag to freely explore different areas of the world.
   <kbd>
-  <img src="./src/images/interactiveMapRename.gif" >
+  <img src="./src/images/interactiveMap.gif" >
   </kbd>
 
 - #### View City Titles & Enter City Page
 
   Click to view city titles on markers, and then click arrow to enter city page
   <kbd>
-  <img src="./src/images/viewTitleAndEnter.gif" >
+  <img src="./src/images/mapClick.gif" >
   </kbd>
 
 ### City Page
@@ -79,7 +84,7 @@
 
   Scroll to explore popular tourist attractions recommended by ITER. Click attraction title to view more detail information.
   <kbd>
-  <img src="./src/images/attractionTitle.gif" >
+  <img src="./src/images/allTouristAttractions.gif" >
   </kbd>
 
   Drag the tourist attractions you'd like to visit to calendar. Arrange trip by simple actions.
