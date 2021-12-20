@@ -1,0 +1,25 @@
+2020/11/05-01:26:38.828 238567 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_sk2toefl.teachable.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/09-13:55:32.581 4412f Level-0 table #5: started
+2020/11/09-13:55:32.613 4412f Level-0 table #5: 656072 bytes OK
+2020/11/09-13:55:32.640 4412f Delete type=0 #3
+2020/11/10-13:28:54.010 4412f Level-0 table #7: started
+2020/11/10-13:28:54.061 4412f Level-0 table #7: 621730 bytes OK
+2020/11/10-13:28:54.092 4412f Delete type=0 #4
+2020/11/10-13:29:06.036 4412f Compacting 1@1 + 1@2 files
+2020/11/10-13:29:06.063 4412f Generated table #8@1: 32 keys, 1262 bytes
+2020/11/10-13:29:06.063 4412f Compacted 1@1 + 1@2 files => 1262 bytes
+2020/11/10-13:29:06.081 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/11/10-13:29:06.082 4412f Delete type=2 #7
+2020/11/10-13:29:06.082 4412f Delete type=2 #5
+2020/11/13-23:54:14.066 4412f Level-0 table #10: started
+2020/11/13-23:54:14.152 4412f Level-0 table #10: 159898 bytes OK
+2020/11/13-23:54:14.184 4412f Delete type=0 #6
+2020/11/13-23:54:14.189 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/13-23:54:14.189 4412f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x12\x00_\x00_\x00P\x00R\x00O\x00G\x00R\x00E\x00S\x00S\x00_\x00V\x00I\x00D\x00E\x00O\x00_\x00_' @ 56996 : 1
+2020/11/13-23:54:14.189 4412f Compacting 1@1 + 1@2 files
+2020/11/13-23:54:14.202 4412f Generated table #11@1: 28 keys, 1120 bytes
+2020/11/13-23:54:14.202 4412f Compacted 1@1 + 1@2 files => 1120 bytes
+2020/11/13-23:54:14.217 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/11/13-23:54:14.218 4412f Delete type=2 #10
+2020/11/13-23:54:14.219 4412f Delete type=2 #8
+2020/11/13-23:54:14.220 4412f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x12\x00_\x00_\x00P\x00R\x00O\x00G\x00R\x00E\x00S\x00S\x00_\x00V\x00I\x00D\x00E\x00O\x00_\x00_' @ 56996 : 1 .. (end); will stop at (end)

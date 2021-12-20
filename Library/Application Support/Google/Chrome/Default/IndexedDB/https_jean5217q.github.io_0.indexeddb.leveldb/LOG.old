@@ -1,0 +1,15 @@
+2021/05/03-13:26:10.156 16e12b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_jean5217q.github.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/03-13:26:10.157 16e12b Recovering log #4
+2021/05/03-13:26:10.157 16e12b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_jean5217q.github.io_0.indexeddb.leveldb/000004.log 
+2021/05/03-13:27:45.473 16d863 Level-0 table #8: started
+2021/05/03-13:27:45.501 16d863 Level-0 table #8: 3597 bytes OK
+2021/05/03-13:27:45.548 16d863 Delete type=0 #4
+2021/05/03-13:27:45.555 16d863 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/03-13:27:45.555 16d863 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00D\x00C\x00T\x00a\x003\x00a\x00r\x007\x00r\x00N\x001\x00d\x00F\x00O\x00G\x00T\x00o\x00t\x00e\x00r\x00w\x00U\x00M\x006\x00j\x00A\x00f\x004\x00E\x00Y\x00e\x00G\x00A\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 90 : 1
+2021/05/03-13:27:45.555 16d863 Compacting 1@1 + 1@2 files
+2021/05/03-13:27:45.584 16d863 Generated table #9@1: 19 keys, 2448 bytes
+2021/05/03-13:27:45.584 16d863 Compacted 1@1 + 1@2 files => 2448 bytes
+2021/05/03-13:27:45.629 16d863 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/03-13:27:45.630 16d863 Delete type=2 #5
+2021/05/03-13:27:45.630 16d863 Delete type=2 #8
+2021/05/03-13:27:45.632 16d863 Manual compaction at level-1 from '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00D\x00C\x00T\x00a\x003\x00a\x00r\x007\x00r\x00N\x001\x00d\x00F\x00O\x00G\x00T\x00o\x00t\x00e\x00r\x00w\x00U\x00M\x006\x00j\x00A\x00f\x004\x00E\x00Y\x00e\x00G\x00A\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 90 : 1 .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/05/08-21:15:06.602 1eb673 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_react-xyz-stocks.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/08-21:15:06.603 1eb673 Recovering log #4
+2021/05/08-21:15:06.603 1eb673 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_react-xyz-stocks.web.app_0.indexeddb.leveldb/000004.log 
+2021/05/08-21:15:27.939 213773 Level-0 table #8: started
+2021/05/08-21:15:27.967 213773 Level-0 table #8: 491 bytes OK
+2021/05/08-21:15:28.015 213773 Delete type=0 #4
+2021/05/08-21:15:28.016 213773 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/08-21:15:28.016 213773 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x002\x007\x001\x003\x001\x003\x004\x001\x000' @ 63 : 1
+2021/05/08-21:15:28.016 213773 Compacting 1@1 + 1@2 files
+2021/05/08-21:15:28.042 213773 Generated table #9@1: 17 keys, 551 bytes
+2021/05/08-21:15:28.043 213773 Compacted 1@1 + 1@2 files => 551 bytes
+2021/05/08-21:15:28.088 213773 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/08-21:15:28.089 213773 Delete type=2 #5
+2021/05/08-21:15:28.089 213773 Delete type=2 #8
+2021/05/08-21:15:28.090 213773 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x002\x007\x001\x003\x001\x003\x004\x001\x000' @ 63 : 1 .. (end); will stop at (end)

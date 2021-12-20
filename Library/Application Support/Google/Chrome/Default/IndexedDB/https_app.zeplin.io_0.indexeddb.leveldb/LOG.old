@@ -1,0 +1,26 @@
+2021/04/06-15:24:03.822 1e7597 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.zeplin.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/06-15:24:03.823 1e7597 Recovering log #38
+2021/04/06-15:24:03.823 1e7597 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.zeplin.io_0.indexeddb.leveldb/000038.log 
+2021/04/06-15:24:03.932 1e314b Level-0 table #44: started
+2021/04/06-15:24:03.959 1e314b Level-0 table #44: 580 bytes OK
+2021/04/06-15:24:04.011 1e314b Delete type=0 #38
+2021/04/06-15:24:04.011 1e314b Manual compaction at level-0 from '\x00\x0d\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0e\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/04/06-18:11:35.975 1de02f Level-0 table #46: started
+2021/04/06-18:11:36.002 1de02f Level-0 table #46: 4510 bytes OK
+2021/04/06-18:11:36.053 1de02f Delete type=0 #43
+2021/04/06-18:11:36.055 1de02f Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x07\x01\x02\x01\x18\x005\x00b\x005\x000\x000\x007\x006\x008\x008\x004\x007\x004\x00a\x001\x00a\x007\x007\x00c\x000\x000\x003\x009\x003\x001' @ 1973 : 1
+2021/04/06-18:11:36.055 1de02f Compacting 1@0 + 1@1 files
+2021/04/06-18:11:36.081 1de02f Generated table #47@0: 53 keys, 1755 bytes
+2021/04/06-18:11:36.081 1de02f Compacted 1@0 + 1@1 files => 1755 bytes
+2021/04/06-18:11:36.126 1de02f compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/04/06-18:11:36.127 1de02f Delete type=2 #44
+2021/04/06-18:11:36.128 1de02f Delete type=2 #46
+2021/04/06-18:11:36.128 1de02f Manual compaction at level-0 from '\x00\x07\x01\x02\x01\x18\x005\x00b\x005\x000\x000\x007\x006\x008\x008\x004\x007\x004\x00a\x001\x00a\x007\x007\x00c\x000\x000\x003\x009\x003\x001' @ 1973 : 1 .. (end); will stop at (end)
+2021/04/06-18:11:36.129 1de02f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x07\x01\x02\x01\x18\x005\x00b\x005\x000\x000\x007\x006\x008\x008\x004\x007\x004\x00a\x001\x00a\x007\x007\x00c\x000\x000\x003\x009\x003\x001' @ 2033 : 1
+2021/04/06-18:11:36.129 1de02f Compacting 1@1 + 1@2 files
+2021/04/06-18:11:36.154 1de02f Generated table #48@1: 90 keys, 2267 bytes
+2021/04/06-18:11:36.155 1de02f Compacted 1@1 + 1@2 files => 2267 bytes
+2021/04/06-18:11:36.201 1de02f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/06-18:11:36.202 1de02f Delete type=2 #41
+2021/04/06-18:11:36.202 1de02f Delete type=2 #47
+2021/04/06-18:11:36.205 1de02f Manual compaction at level-1 from '\x00\x07\x01\x02\x01\x18\x005\x00b\x005\x000\x000\x007\x006\x008\x008\x004\x007\x004\x00a\x001\x00a\x007\x007\x00c\x000\x000\x003\x009\x003\x001' @ 2033 : 1 .. (end); will stop at (end)

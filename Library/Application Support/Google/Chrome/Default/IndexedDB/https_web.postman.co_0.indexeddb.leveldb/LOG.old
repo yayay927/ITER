@@ -1,0 +1,15 @@
+2021/05/07-11:31:07.507 19d75f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_web.postman.co_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/07-11:31:07.508 19d75f Recovering log #4
+2021/05/07-11:31:07.508 19d75f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_web.postman.co_0.indexeddb.leveldb/000004.log 
+2021/05/07-11:43:45.306 19d75f Level-0 table #8: started
+2021/05/07-11:43:45.334 19d75f Level-0 table #8: 649 bytes OK
+2021/05/07-11:43:45.384 19d75f Delete type=0 #4
+2021/05/07-11:43:45.385 19d75f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/07-11:43:45.385 19d75f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01,\x002\x003\x006\x00d\x006\x003\x00e\x00b\x00-\x003\x009\x009\x000\x00-\x004\x00b\x003\x009\x00-\x008\x008\x006\x00b\x00-\x00c\x00d\x00a\x006\x005\x00f\x007\x007\x00a\x002\x002\x008\x00-\x00R\x00u\x00n\x00t\x00i\x00m\x00e' @ 489 : 1
+2021/05/07-11:43:45.385 19d75f Compacting 1@1 + 1@2 files
+2021/05/07-11:43:45.410 19d75f Generated table #9@1: 123 keys, 2709 bytes
+2021/05/07-11:43:45.410 19d75f Compacted 1@1 + 1@2 files => 2709 bytes
+2021/05/07-11:43:45.457 19d75f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/07-11:43:45.457 19d75f Delete type=2 #5
+2021/05/07-11:43:45.457 19d75f Delete type=2 #8
+2021/05/07-11:43:45.462 19d75f Manual compaction at level-1 from '\x00\x02\x01\x02\x01,\x002\x003\x006\x00d\x006\x003\x00e\x00b\x00-\x003\x009\x009\x000\x00-\x004\x00b\x003\x009\x00-\x008\x008\x006\x00b\x00-\x00c\x00d\x00a\x006\x005\x00f\x007\x007\x00a\x002\x002\x008\x00-\x00R\x00u\x00n\x00t\x00i\x00m\x00e' @ 489 : 1 .. (end); will stop at (end)

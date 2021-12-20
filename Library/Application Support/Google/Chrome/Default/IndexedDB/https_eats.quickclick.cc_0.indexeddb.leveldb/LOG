@@ -1,0 +1,6 @@
+2021/08/21-16:07:30.533 1cf2bb Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_eats.quickclick.cc_0.indexeddb.leveldb since it was missing.
+2021/08/21-16:07:30.613 1cf2bb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_eats.quickclick.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/21-16:11:06.862 1cf2bb Level-0 table #5: started
+2021/08/21-16:11:06.892 1cf2bb Level-0 table #5: 5314 bytes OK
+2021/08/21-16:11:06.939 1cf2bb Delete type=0 #3
+2021/08/21-16:11:06.940 1cf2bb Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,6 @@
+2021/07/26-12:00:58.450 436a7b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_alert-cellar-e2b.notion.site_0.indexeddb.leveldb since it was missing.
+2021/07/26-12:00:58.527 436a7b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_alert-cellar-e2b.notion.site_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/26-12:02:02.560 436a7b Level-0 table #5: started
+2021/07/26-12:02:02.585 436a7b Level-0 table #5: 2444 bytes OK
+2021/07/26-12:02:02.631 436a7b Delete type=0 #3
+2021/07/26-12:02:02.632 436a7b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

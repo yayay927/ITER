@@ -1,0 +1,5 @@
+2021/05/03-08:53:32.742 16415f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_meet-trail-right.firebaseapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/03-13:56:39.020 17d733 Level-0 table #5: started
+2021/05/03-13:56:39.047 17d733 Level-0 table #5: 1140 bytes OK
+2021/05/03-13:56:39.093 17d733 Delete type=0 #3
+2021/05/03-13:56:39.094 17d733 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

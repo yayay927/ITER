@@ -1,0 +1,15 @@
+2021/11/24-14:05:05.676 388247 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_udn.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/24-14:05:05.676 388247 Recovering log #71
+2021/11/24-14:05:05.678 388247 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_udn.com_0.indexeddb.leveldb/000071.log 
+2021/11/24-14:08:37.930 328803 Level-0 table #76: started
+2021/11/24-14:08:37.956 328803 Level-0 table #76: 17204 bytes OK
+2021/11/24-14:08:38.000 328803 Delete type=0 #71
+2021/11/24-14:08:38.014 328803 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/24-14:08:38.014 328803 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x009\x003\x008\x003\x000\x009\x007\x005\x006\x005\x006\x002\x00:\x00w\x00e\x00b\x00:\x00a\x000\x003\x002\x006\x001\x000\x004\x005\x003\x000\x001\x00f\x00e\x003\x00e\x000\x000\x002\x008\x004\x00b' @ 2806 : 1
+2021/11/24-14:08:38.014 328803 Compacting 1@1 + 1@2 files
+2021/11/24-14:08:38.038 328803 Generated table #77@1: 21 keys, 1282 bytes
+2021/11/24-14:08:38.038 328803 Compacted 1@1 + 1@2 files => 1282 bytes
+2021/11/24-14:08:38.081 328803 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/24-14:08:38.082 328803 Delete type=2 #76
+2021/11/24-14:08:38.086 328803 Delete type=2 #73
+2021/11/24-14:08:38.091 328803 Manual compaction at level-1 from '\x00\x01\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x009\x003\x008\x003\x000\x009\x007\x005\x006\x005\x006\x002\x00:\x00w\x00e\x00b\x00:\x00a\x000\x003\x002\x006\x001\x000\x004\x005\x003\x000\x001\x00f\x00e\x003\x00e\x000\x000\x002\x008\x004\x00b' @ 2806 : 1 .. (end); will stop at (end)

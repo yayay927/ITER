@@ -1,0 +1,5 @@
+2021/02/04-14:55:29.539 21f4db Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_freebiesui.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/04-14:56:11.677 1df247 Level-0 table #5: started
+2021/02/04-14:56:11.691 1df247 Level-0 table #5: 6164 bytes OK
+2021/02/04-14:56:11.708 1df247 Delete type=0 #3
+2021/02/04-14:56:11.708 1df247 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,6 @@
+2021/06/16-22:24:20.778 123017 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_firebase.googleblog.com_0.indexeddb.leveldb since it was missing.
+2021/06/16-22:24:20.890 123017 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_firebase.googleblog.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/17-16:50:31.684 11ea87 Level-0 table #5: started
+2021/06/17-16:50:31.731 11ea87 Level-0 table #5: 1886 bytes OK
+2021/06/17-16:50:31.822 11ea87 Delete type=0 #3
+2021/06/17-16:50:31.822 1383a3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

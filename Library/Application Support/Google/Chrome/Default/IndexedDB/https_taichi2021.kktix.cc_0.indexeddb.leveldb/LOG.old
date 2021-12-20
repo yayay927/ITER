@@ -1,0 +1,7 @@
+2021/07/15-22:33:25.497 337167 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_taichi2021.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/15-22:33:25.497 337167 Recovering log #4
+2021/07/15-22:33:25.498 337167 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_taichi2021.kktix.cc_0.indexeddb.leveldb/000004.log 
+2021/07/15-22:33:33.572 33c55f Level-0 table #8: started
+2021/07/15-22:33:33.599 33c55f Level-0 table #8: 560 bytes OK
+2021/07/15-22:33:33.646 33c55f Delete type=0 #4
+2021/07/15-22:33:33.648 33c55f Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

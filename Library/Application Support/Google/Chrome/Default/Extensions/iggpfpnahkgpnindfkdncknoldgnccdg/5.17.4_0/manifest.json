@@ -1,0 +1,28 @@
+{
+   "content_scripts": [ {
+      "css": [ "inject_style.css" ],
+      "js": [ "contentscript.js" ],
+      "matches": [ "*://*.youtube.com/*", "*://youtube.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "default-src 'self'; script-src 'self' https://www.paypalobjects.com https://*.google.com https://*.facebook.net https://*.facebook.com https://*.fbcdn.net https://*.twitter.com; img-src data: chrome-extension: http://*.gstatic.com https://*.gstatic.com https://*.facebook.com https://*.twitter.com; style-src 'self' 'unsafe-inline'; frame-src https://*.google.com https://*.facebook.com https://facebook.com http://*.facebook.com http://*.twitter.com https://*.twitter.com; object-src 'self'; connect-src https://*.twitter.com",
+   "default_locale": "en",
+   "description": "__MSG_extension_description__",
+   "differential_fingerprint": "1.4e5d2db5b7643c33f430e04db3ba99bc2a332b72b7c3608f0798729f0ce27c5b",
+   "homepage_url": "https://www.alvinhkh.com/looperforyoutube",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDrHhK1eVGknIjsJ0o0wc1MdLSt1OsWKMUfi0i9Nndq5r+E7uLFE5OtLn2LF1HMEv+N+IYozhpe+YFat4TIF7Nzt74enWrsqZX+SgX5h9vXyHTcvodxzuaikGgJzwrn1oCltDr1lv1dpY7B0+q+YaoHzolXoSGIFDSx9sUhdiC00QIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extension_name__",
+   "options_page": "options.html",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "5.17.4",
+   "web_accessible_resources": [ "_locales/*", "options.html" ]
+}

@@ -1,0 +1,6 @@
+2021/08/02-16:07:54.039 537743 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.omnichat.ai_0.indexeddb.leveldb since it was missing.
+2021/08/02-16:07:54.119 537743 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.omnichat.ai_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/02-16:07:58.137 555ddb Level-0 table #5: started
+2021/08/02-16:07:58.203 555ddb Level-0 table #5: 1155 bytes OK
+2021/08/02-16:07:58.266 555ddb Delete type=0 #3
+2021/08/02-16:07:58.266 555ddb Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/06/04-09:04:20.413 1fb0b3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.sli.do_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/04-09:04:20.414 1fb0b3 Recovering log #25
+2021/06/04-09:04:20.415 1fb0b3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.sli.do_0.indexeddb.leveldb/000025.log 
+2021/06/05-01:41:47.913 259ee7 Level-0 table #29: started
+2021/06/05-01:41:47.954 259ee7 Level-0 table #29: 190 bytes OK
+2021/06/05-01:41:48.006 259ee7 Delete type=0 #25
+2021/06/05-01:41:48.007 259ee7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/05-01:41:48.007 259ee7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 45 : 1
+2021/06/05-01:41:48.007 259ee7 Compacting 1@1 + 1@2 files
+2021/06/05-01:41:48.034 259ee7 Generated table #30@1: 18 keys, 491 bytes
+2021/06/05-01:41:48.034 259ee7 Compacted 1@1 + 1@2 files => 491 bytes
+2021/06/05-01:41:48.079 259ee7 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/05-01:41:48.081 259ee7 Delete type=2 #29
+2021/06/05-01:41:48.081 259ee7 Delete type=2 #5
+2021/06/05-01:41:48.084 259ee7 Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 45 : 1 .. (end); will stop at (end)

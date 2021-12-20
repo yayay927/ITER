@@ -1,0 +1,18 @@
+2021/05/13-21:00:34.536 68a5b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_tw.creema.net_0.indexeddb.leveldb since it was missing.
+2021/05/13-21:00:34.616 68a5b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_tw.creema.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/13-21:00:34.822 6110f Level-0 table #5: started
+2021/05/13-21:00:34.873 6110f Level-0 table #5: 621 bytes OK
+2021/05/13-21:00:34.955 6110f Delete type=0 #3
+2021/05/13-21:00:34.956 6110f Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/05/13-21:00:49.825 6110f Level-0 table #7: started
+2021/05/13-21:00:49.851 6110f Level-0 table #7: 3509 bytes OK
+2021/05/13-21:00:49.898 6110f Delete type=0 #4
+2021/05/13-21:00:49.899 6110f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/13-21:00:49.899 6110f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x008\x006\x001\x000\x007\x009\x003\x004\x006\x000\x005\x004\x00:\x00w\x00e\x00b\x00:\x00d\x00d\x008\x00b\x007\x00b\x00d\x001\x003\x008\x002\x00f\x00e\x00c\x00f\x007\x009\x00e\x00a\x00a\x000\x007' @ 68 : 1
+2021/05/13-21:00:49.899 6110f Compacting 1@1 + 1@2 files
+2021/05/13-21:00:49.925 6110f Generated table #8@1: 20 keys, 1290 bytes
+2021/05/13-21:00:49.925 6110f Compacted 1@1 + 1@2 files => 1290 bytes
+2021/05/13-21:00:49.983 6110f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/13-21:00:49.984 6110f Delete type=2 #7
+2021/05/13-21:00:49.984 6110f Delete type=2 #5
+2021/05/13-21:00:49.985 6110f Manual compaction at level-1 from '\x00\x02\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x008\x006\x001\x000\x007\x009\x003\x004\x006\x000\x005\x004\x00:\x00w\x00e\x00b\x00:\x00d\x00d\x008\x00b\x007\x00b\x00d\x001\x003\x008\x002\x00f\x00e\x00c\x00f\x007\x009\x00e\x00a\x00a\x000\x007' @ 68 : 1 .. (end); will stop at (end)

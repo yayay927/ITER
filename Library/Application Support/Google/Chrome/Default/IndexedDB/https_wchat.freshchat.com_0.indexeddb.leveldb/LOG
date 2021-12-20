@@ -1,0 +1,15 @@
+2021/12/15-10:57:52.032 91b7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wchat.freshchat.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/15-10:57:52.032 91b7 Recovering log #215
+2021/12/15-10:57:52.032 91b7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wchat.freshchat.com_0.indexeddb.leveldb/000215.log 
+2021/12/15-11:01:15.582 97f3 Level-0 table #220: started
+2021/12/15-11:01:15.603 97f3 Level-0 table #220: 3552 bytes OK
+2021/12/15-11:01:15.645 97f3 Delete type=0 #215
+2021/12/15-11:01:15.646 97f3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/12/15-11:01:15.646 97f3 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01\x0f\x003\x000\x001\x009\x001\x005\x003\x003\x004\x003\x008\x002\x003\x002\x003' @ 94244 : 0
+2021/12/15-11:01:15.646 97f3 Compacting 1@1 + 1@2 files
+2021/12/15-11:01:15.669 97f3 Generated table #221@1: 49 keys, 44594 bytes
+2021/12/15-11:01:15.669 97f3 Compacted 1@1 + 1@2 files => 44594 bytes
+2021/12/15-11:01:15.721 97f3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/15-11:01:15.721 97f3 Delete type=2 #217
+2021/12/15-11:01:15.721 97f3 Delete type=2 #220
+2021/12/15-11:01:15.722 97f3 Manual compaction at level-1 from '\x00\x01\x01\x03\x01\x0f\x003\x000\x001\x009\x001\x005\x003\x003\x004\x003\x008\x002\x003\x002\x003' @ 94244 : 0 .. (end); will stop at (end)

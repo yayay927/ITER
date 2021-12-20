@@ -1,0 +1,5 @@
+2020/10/01-22:56:44.905 f2a5b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_robinhood.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/01-23:00:46.442 d027 Level-0 table #5: started
+2020/10/01-23:00:46.454 d027 Level-0 table #5: 1773 bytes OK
+2020/10/01-23:00:46.469 d027 Delete type=0 #3
+2020/10/01-23:00:46.470 d027 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

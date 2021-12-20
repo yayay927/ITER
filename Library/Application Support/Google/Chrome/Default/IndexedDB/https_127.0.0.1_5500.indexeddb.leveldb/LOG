@@ -1,0 +1,15 @@
+2021/04/20-17:34:01.947 91837 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_127.0.0.1_5500.indexeddb.leveldb/MANIFEST-000001
+2021/04/20-17:34:01.948 91837 Recovering log #37
+2021/04/20-17:34:01.948 91837 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_127.0.0.1_5500.indexeddb.leveldb/000037.log 
+2021/04/20-17:34:04.003 5ff73 Level-0 table #41: started
+2021/04/20-17:34:04.030 5ff73 Level-0 table #41: 190 bytes OK
+2021/04/20-17:34:04.079 5ff73 Delete type=0 #37
+2021/04/20-17:34:04.080 5ff73 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/20-17:34:04.080 5ff73 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 5 : 1
+2021/04/20-17:34:04.080 5ff73 Compacting 1@1 + 1@2 files
+2021/04/20-17:34:04.106 5ff73 Generated table #42@1: 4 keys, 236 bytes
+2021/04/20-17:34:04.106 5ff73 Compacted 1@1 + 1@2 files => 236 bytes
+2021/04/20-17:34:04.152 5ff73 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/20-17:34:04.153 5ff73 Delete type=2 #5
+2021/04/20-17:34:04.153 5ff73 Delete type=2 #41
+2021/04/20-17:34:04.153 5ff73 Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 5 : 1 .. (end); will stop at (end)

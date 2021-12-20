@@ -1,0 +1,26 @@
+2020/12/19-12:22:07.742 1f92e7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_userxper.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/19-12:22:07.742 1f92e7 Recovering log #19
+2020/12/19-12:22:07.742 1f92e7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_userxper.kktix.cc_0.indexeddb.leveldb/000019.log 
+2020/12/19-12:22:15.869 1bb56b Level-0 table #25: started
+2020/12/19-12:22:15.908 1bb56b Level-0 table #25: 514 bytes OK
+2020/12/19-12:22:15.937 1bb56b Delete type=0 #19
+2020/12/19-12:22:15.938 1bb56b Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2020/12/19-12:22:17.896 1bb56b Level-0 table #27: started
+2020/12/19-12:22:17.907 1bb56b Level-0 table #27: 249 bytes OK
+2020/12/19-12:22:17.925 1bb56b Delete type=0 #24
+2020/12/19-12:22:17.926 1bb56b Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 80 : 0
+2020/12/19-12:22:17.926 1bb56b Compacting 1@0 + 1@1 files
+2020/12/19-12:22:17.936 1bb56b Generated table #28@0: 3 keys, 215 bytes
+2020/12/19-12:22:17.936 1bb56b Compacted 1@0 + 1@1 files => 215 bytes
+2020/12/19-12:22:17.951 1bb56b compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/19-12:22:17.951 1bb56b Delete type=2 #27
+2020/12/19-12:22:17.951 1bb56b Delete type=2 #25
+2020/12/19-12:22:17.952 1bb56b Manual compaction at level-0 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 80 : 0 .. (end); will stop at (end)
+2020/12/19-12:22:17.952 1bb56b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 82 : 1
+2020/12/19-12:22:17.952 1bb56b Compacting 1@1 + 1@2 files
+2020/12/19-12:22:17.962 1bb56b Generated table #29@1: 5 keys, 234 bytes
+2020/12/19-12:22:17.962 1bb56b Compacted 1@1 + 1@2 files => 234 bytes
+2020/12/19-12:22:17.977 1bb56b compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/19-12:22:17.978 1bb56b Delete type=2 #28
+2020/12/19-12:22:17.978 1bb56b Delete type=2 #22
+2020/12/19-12:22:17.980 1bb56b Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 82 : 1 .. (end); will stop at (end)

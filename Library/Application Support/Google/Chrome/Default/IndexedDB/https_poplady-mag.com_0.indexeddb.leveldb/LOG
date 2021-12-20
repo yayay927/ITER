@@ -1,0 +1,15 @@
+2020/10/01-23:06:19.427 e8da3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_poplady-mag.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/01-23:06:19.428 e8da3 Recovering log #4
+2020/10/01-23:06:19.428 e8da3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_poplady-mag.com_0.indexeddb.leveldb/000004.log 
+2020/10/01-23:48:36.759 d027 Level-0 table #8: started
+2020/10/01-23:48:36.771 d027 Level-0 table #8: 26959 bytes OK
+2020/10/01-23:48:36.792 d027 Delete type=0 #4
+2020/10/01-23:48:36.796 d027 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/10/01-23:48:36.796 d027 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01Z\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00e\x00b\x00a\x00p\x00i\x00.\x00p\x00r\x00e\x00s\x00s\x00l\x00o\x00g\x00i\x00c\x00.\x00c\x00o\x00m\x00/\x00a\x00p\x00i\x00/\x00v\x002\x00/\x00p\x00r\x00e\x00s\x00s\x00l\x00o\x00g\x00i\x00c\x00/\x003\x009\x006\x005\x000\x001\x008\x001\x007\x002\x002\x005\x006\x005\x003\x00/\x00s\x00i\x00t\x00e\x00S\x00e\x00t\x00t\x00i\x00n\x00g\x00s\x00?\x00n\x00a\x00m\x00e\x00=\x00t\x00e\x00x\x00t\x00_\x00a\x00d\x00s' @ 319 : 0
+2020/10/01-23:48:36.796 d027 Compacting 1@1 + 1@2 files
+2020/10/01-23:48:36.807 d027 Generated table #9@1: 37 keys, 12808 bytes
+2020/10/01-23:48:36.807 d027 Compacted 1@1 + 1@2 files => 12808 bytes
+2020/10/01-23:48:36.822 d027 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/10/01-23:48:36.823 d027 Delete type=2 #5
+2020/10/01-23:48:36.823 d027 Delete type=2 #8
+2020/10/01-23:48:36.826 d027 Manual compaction at level-1 from '\x00\x01\x01\x02\x01Z\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00e\x00b\x00a\x00p\x00i\x00.\x00p\x00r\x00e\x00s\x00s\x00l\x00o\x00g\x00i\x00c\x00.\x00c\x00o\x00m\x00/\x00a\x00p\x00i\x00/\x00v\x002\x00/\x00p\x00r\x00e\x00s\x00s\x00l\x00o\x00g\x00i\x00c\x00/\x003\x009\x006\x005\x000\x001\x008\x001\x007\x002\x002\x005\x006\x005\x003\x00/\x00s\x00i\x00t\x00e\x00S\x00e\x00t\x00t\x00i\x00n\x00g\x00s\x00?\x00n\x00a\x00m\x00e\x00=\x00t\x00e\x00x\x00t\x00_\x00a\x00d\x00s' @ 319 : 0 .. (end); will stop at (end)

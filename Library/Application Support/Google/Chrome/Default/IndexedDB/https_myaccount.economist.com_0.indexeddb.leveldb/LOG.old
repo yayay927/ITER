@@ -1,0 +1,5 @@
+2020/12/30-00:46:27.994 33b43b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_myaccount.economist.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/30-00:46:55.699 2d6507 Level-0 table #5: started
+2020/12/30-00:46:55.717 2d6507 Level-0 table #5: 1304390 bytes OK
+2020/12/30-00:46:55.749 2d6507 Delete type=0 #3
+2020/12/30-00:46:55.749 2d6507 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

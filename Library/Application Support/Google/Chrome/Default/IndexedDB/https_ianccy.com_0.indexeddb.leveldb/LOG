@@ -1,0 +1,7 @@
+2021/10/22-17:19:36.771 68393 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ianccy.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/22-17:19:36.771 68393 Recovering log #3
+2021/10/22-17:19:36.772 68393 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ianccy.com_0.indexeddb.leveldb/000003.log 
+2021/10/22-17:20:08.960 4c2a3 Level-0 table #5: started
+2021/10/22-17:20:08.985 4c2a3 Level-0 table #5: 7346 bytes OK
+2021/10/22-17:20:09.030 4c2a3 Delete type=0 #3
+2021/10/22-17:20:09.034 4c2a3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

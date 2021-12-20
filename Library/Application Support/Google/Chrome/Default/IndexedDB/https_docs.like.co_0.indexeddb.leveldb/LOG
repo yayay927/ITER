@@ -1,0 +1,7 @@
+2021/08/23-20:01:37.219 1d8b2f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.like.co_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/23-20:01:37.219 1d8b2f Recovering log #3
+2021/08/23-20:01:37.220 1d8b2f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.like.co_0.indexeddb.leveldb/000003.log 
+2021/08/23-20:02:00.474 1f9c8f Level-0 table #5: started
+2021/08/23-20:02:00.500 1f9c8f Level-0 table #5: 1347 bytes OK
+2021/08/23-20:02:00.546 1f9c8f Delete type=0 #3
+2021/08/23-20:02:00.548 1f9c8f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

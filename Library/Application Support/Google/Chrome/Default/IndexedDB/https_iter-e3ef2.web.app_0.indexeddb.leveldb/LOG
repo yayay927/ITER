@@ -1,0 +1,15 @@
+2021/10/27-17:58:27.474 c5ab7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_iter-e3ef2.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/27-17:58:27.475 c5ab7 Recovering log #159
+2021/10/27-17:58:27.475 c5ab7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_iter-e3ef2.web.app_0.indexeddb.leveldb/000159.log 
+2021/10/27-18:14:04.889 d6523 Level-0 table #164: started
+2021/10/27-18:14:04.912 d6523 Level-0 table #164: 8892 bytes OK
+2021/10/27-18:14:04.957 d6523 Delete type=0 #159
+2021/10/27-18:14:04.960 d6523 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/27-18:14:04.960 d6523 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00D\x007\x00g\x00C\x00I\x00n\x00a\x00h\x00U\x00D\x00j\x00z\x001\x00C\x00O\x00a\x005\x00H\x00H\x00k\x00z\x00R\x00Z\x00U\x00n\x00g\x00y\x00x\x00H\x00w\x00X\x00j\x00Y\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 6154 : 1
+2021/10/27-18:14:04.960 d6523 Compacting 1@1 + 1@2 files
+2021/10/27-18:14:04.982 d6523 Generated table #165@1: 21 keys, 2480 bytes
+2021/10/27-18:14:04.982 d6523 Compacted 1@1 + 1@2 files => 2480 bytes
+2021/10/27-18:14:05.025 d6523 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/27-18:14:05.026 d6523 Delete type=2 #161
+2021/10/27-18:14:05.026 d6523 Delete type=2 #164
+2021/10/27-18:14:05.030 d6523 Manual compaction at level-1 from '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00D\x007\x00g\x00C\x00I\x00n\x00a\x00h\x00U\x00D\x00j\x00z\x001\x00C\x00O\x00a\x005\x00H\x00H\x00k\x00z\x00R\x00Z\x00U\x00n\x00g\x00y\x00x\x00H\x00w\x00X\x00j\x00Y\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 6154 : 1 .. (end); will stop at (end)

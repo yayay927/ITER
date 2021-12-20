@@ -1,0 +1,15 @@
+2021/11/12-18:52:23.821 26fb1b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.osmosis.zone_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/12-18:52:23.821 26fb1b Recovering log #4
+2021/11/12-18:52:23.823 26fb1b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.osmosis.zone_0.indexeddb.leveldb/000004.log 
+2021/11/12-22:24:17.246 270203 Level-0 table #8: started
+2021/11/12-22:24:17.272 270203 Level-0 table #8: 197490 bytes OK
+2021/11/12-22:24:17.314 270203 Delete type=0 #4
+2021/11/12-22:24:17.319 270203 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/12-22:24:17.319 270203 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x03\x01N\x00-\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00l\x00c\x00d\x00-\x00o\x00s\x00m\x00o\x00s\x00i\x00s\x00.\x00k\x00e\x00p\x00l\x00r\x00.\x00a\x00p\x00p\x00/\x00o\x00s\x00m\x00o\x00s\x00i\x00s\x00/\x00g\x00a\x00m\x00m\x00/\x00v\x001\x00b\x00e\x00t\x00a\x001\x00/\x00p\x00o\x00o\x00l\x00s\x00?\x00p\x00a\x00g\x00i\x00n\x00a\x00t\x00i\x00o\x00n\x00.\x00l\x00i\x00m\x00i\x00t\x00=\x007\x005\x000' @ 1395 : 1
+2021/11/12-22:24:17.320 270203 Compacting 1@1 + 1@2 files
+2021/11/12-22:24:17.345 270203 Generated table #9@1: 228 keys, 55513 bytes
+2021/11/12-22:24:17.346 270203 Compacted 1@1 + 1@2 files => 55513 bytes
+2021/11/12-22:24:17.389 270203 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/12-22:24:17.390 270203 Delete type=2 #5
+2021/11/12-22:24:17.390 270203 Delete type=2 #8
+2021/11/12-22:24:17.393 270203 Manual compaction at level-1 from '\x00\x03\x01\x03\x01N\x00-\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00l\x00c\x00d\x00-\x00o\x00s\x00m\x00o\x00s\x00i\x00s\x00.\x00k\x00e\x00p\x00l\x00r\x00.\x00a\x00p\x00p\x00/\x00o\x00s\x00m\x00o\x00s\x00i\x00s\x00/\x00g\x00a\x00m\x00m\x00/\x00v\x001\x00b\x00e\x00t\x00a\x001\x00/\x00p\x00o\x00o\x00l\x00s\x00?\x00p\x00a\x00g\x00i\x00n\x00a\x00t\x00i\x00o\x00n\x00.\x00l\x00i\x00m\x00i\x00t\x00=\x007\x005\x000' @ 1395 : 1 .. (end); will stop at (end)

@@ -1,0 +1,8 @@
+2021/04/19-13:19:49.543 92947 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gum.criteo.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/19-13:19:49.543 92947 Recovering log #13
+2021/04/19-13:19:49.543 92947 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gum.criteo.com_0.indexeddb.leveldb/000013.log 
+2021/04/19-13:19:51.570 92947 Level-0 table #18: started
+2021/04/19-13:19:51.570 92947 Level-0 table #18: 0 bytes OK
+2021/04/19-13:19:51.618 92947 Delete type=0 #13
+2021/04/19-13:19:51.619 92947 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/19-13:19:51.619 92947 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

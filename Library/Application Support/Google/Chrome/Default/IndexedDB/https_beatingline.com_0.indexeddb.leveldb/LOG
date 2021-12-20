@@ -1,0 +1,15 @@
+2021/05/03-13:27:58.969 16011b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_beatingline.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/03-13:27:58.970 16011b Recovering log #4
+2021/05/03-13:27:58.970 16011b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_beatingline.com_0.indexeddb.leveldb/000004.log 
+2021/05/03-13:28:03.687 16011b Level-0 table #8: started
+2021/05/03-13:28:03.714 16011b Level-0 table #8: 500 bytes OK
+2021/05/03-13:28:03.772 16011b Delete type=0 #4
+2021/05/03-13:28:03.773 16011b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/03-13:28:03.773 16011b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0d\x00_\x00_\x00s\x00a\x00k\x009\x005\x008\x005\x006\x009\x009\x006' @ 64 : 1
+2021/05/03-13:28:03.773 16011b Compacting 1@1 + 1@2 files
+2021/05/03-13:28:03.801 16011b Generated table #9@1: 17 keys, 533 bytes
+2021/05/03-13:28:03.801 16011b Compacted 1@1 + 1@2 files => 533 bytes
+2021/05/03-13:28:03.847 16011b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/03-13:28:03.847 16011b Delete type=2 #5
+2021/05/03-13:28:03.847 16011b Delete type=2 #8
+2021/05/03-13:28:03.848 16011b Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0d\x00_\x00_\x00s\x00a\x00k\x009\x005\x008\x005\x006\x009\x009\x006' @ 64 : 1 .. (end); will stop at (end)

@@ -1,0 +1,8 @@
+2021/04/18-16:31:36.333 74903 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_insight.adsrvr.org_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-16:31:36.333 74903 Recovering log #22
+2021/04/18-16:31:36.333 74903 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_insight.adsrvr.org_0.indexeddb.leveldb/000022.log 
+2021/04/18-16:31:38.361 7db0b Level-0 table #26: started
+2021/04/18-16:31:38.361 7db0b Level-0 table #26: 0 bytes OK
+2021/04/18-16:31:38.410 7db0b Delete type=0 #22
+2021/04/18-16:31:38.410 7db0b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/18-16:31:38.410 7db0b Manual compaction at level-1 from (begin) .. (end); will stop at (end)

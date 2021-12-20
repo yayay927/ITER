@@ -1,0 +1,15 @@
+2021/04/27-21:40:13.254 12f48f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wchat.eu.freshchat.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/27-21:40:13.255 12f48f Recovering log #11
+2021/04/27-21:40:13.255 12f48f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wchat.eu.freshchat.com_0.indexeddb.leveldb/000011.log 
+2021/04/27-21:44:04.034 12dc33 Level-0 table #16: started
+2021/04/27-21:44:04.060 12dc33 Level-0 table #16: 2040 bytes OK
+2021/04/27-21:44:04.108 12dc33 Delete type=0 #11
+2021/04/27-21:44:04.110 12dc33 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/27-21:44:04.110 12dc33 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01\x0f\x003\x001\x000\x004\x005\x008\x009\x001\x000\x001\x003\x001\x007\x004\x007' @ 588 : 0
+2021/04/27-21:44:04.110 12dc33 Compacting 1@1 + 1@2 files
+2021/04/27-21:44:04.136 12dc33 Generated table #17@1: 32 keys, 831 bytes
+2021/04/27-21:44:04.136 12dc33 Compacted 1@1 + 1@2 files => 831 bytes
+2021/04/27-21:44:04.195 12dc33 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/27-21:44:04.196 12dc33 Delete type=2 #16
+2021/04/27-21:44:04.196 12dc33 Delete type=2 #13
+2021/04/27-21:44:04.196 12dc33 Manual compaction at level-1 from '\x00\x01\x01\x03\x01\x0f\x003\x001\x000\x004\x005\x008\x009\x001\x000\x001\x003\x001\x007\x004\x007' @ 588 : 0 .. (end); will stop at (end)

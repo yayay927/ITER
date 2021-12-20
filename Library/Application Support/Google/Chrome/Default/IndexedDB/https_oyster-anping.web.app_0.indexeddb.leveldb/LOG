@@ -1,0 +1,46 @@
+2021/05/16-16:50:44.477 89263 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_oyster-anping.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/16-16:50:44.477 89263 Recovering log #9
+2021/05/16-16:50:44.477 89263 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_oyster-anping.web.app_0.indexeddb.leveldb/000009.log 
+2021/05/16-16:50:44.589 894ef Level-0 table #14: started
+2021/05/16-16:50:44.614 894ef Level-0 table #14: 589 bytes OK
+2021/05/16-16:50:44.691 894ef Delete type=0 #9
+2021/05/16-16:50:44.691 894ef Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/05/16-16:51:19.048 894ef Compacting 1@1 + 1@2 files
+2021/05/16-16:51:19.076 894ef Generated table #15@1: 36 keys, 3939 bytes
+2021/05/16-16:51:19.077 894ef Compacted 1@1 + 1@2 files => 3939 bytes
+2021/05/16-16:51:19.123 894ef compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/16-16:51:19.124 894ef Delete type=2 #14
+2021/05/16-16:51:19.124 894ef Delete type=2 #11
+2021/05/16-16:52:11.634 8e983 Level-0 table #17: started
+2021/05/16-16:52:11.661 8e983 Level-0 table #17: 7515 bytes OK
+2021/05/16-16:52:11.728 8e983 Delete type=0 #13
+2021/05/16-16:52:11.729 8e983 Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/05/16-16:52:16.320 8e983 Level-0 table #19: started
+2021/05/16-16:52:16.347 8e983 Level-0 table #19: 7511 bytes OK
+2021/05/16-16:52:16.412 8e983 Delete type=0 #16
+2021/05/16-16:52:16.413 8e983 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at '\x00\x07\x00\x00\x05' @ 363 : 1
+2021/05/16-16:52:16.413 8e983 Compacting 1@0 + 1@1 files
+2021/05/16-16:52:16.441 8e983 Generated table #20@0: 55 keys, 4136 bytes
+2021/05/16-16:52:16.442 8e983 Compacted 1@0 + 1@1 files => 4136 bytes
+2021/05/16-16:52:16.507 8e983 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/05/16-16:52:16.508 8e983 Delete type=2 #19
+2021/05/16-16:52:16.508 8e983 Manual compaction at level-0 from '\x00\x07\x00\x00\x05' @ 363 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/05/16-16:52:55.020 799b3 Compacting 1@1 + 1@2 files
+2021/05/16-16:52:55.047 799b3 Generated table #21@1: 36 keys, 3944 bytes
+2021/05/16-16:52:55.048 799b3 Compacted 1@1 + 1@2 files => 3944 bytes
+2021/05/16-16:52:55.093 799b3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/16-16:52:55.094 799b3 Delete type=2 #15
+2021/05/16-16:52:55.094 799b3 Delete type=2 #17
+2021/05/16-16:52:55.094 799b3 Delete type=2 #20
+2021/05/16-16:53:03.984 8e983 Level-0 table #23: started
+2021/05/16-16:53:04.010 8e983 Level-0 table #23: 7090 bytes OK
+2021/05/16-16:53:04.056 8e983 Delete type=0 #18
+2021/05/16-16:53:04.057 8e983 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/16-16:53:04.057 8e983 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x004\x007\x003\x009\x003\x000\x009\x008\x009\x007\x003\x008\x00:\x00w\x00e\x00b\x00:\x00c\x00d\x006\x002\x00a\x00c\x009\x009\x003\x00e\x007\x00f\x001\x00b\x008\x007\x005\x009\x005\x000\x00d\x003' @ 390 : 1
+2021/05/16-16:53:04.057 8e983 Compacting 1@1 + 1@2 files
+2021/05/16-16:53:04.083 8e983 Generated table #24@1: 35 keys, 3869 bytes
+2021/05/16-16:53:04.083 8e983 Compacted 1@1 + 1@2 files => 3869 bytes
+2021/05/16-16:53:04.129 8e983 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/16-16:53:04.130 8e983 Delete type=2 #21
+2021/05/16-16:53:04.130 8e983 Delete type=2 #23
+2021/05/16-16:53:04.131 8e983 Manual compaction at level-1 from '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x004\x007\x003\x009\x003\x000\x009\x008\x009\x007\x003\x008\x00:\x00w\x00e\x00b\x00:\x00c\x00d\x006\x002\x00a\x00c\x009\x009\x003\x00e\x007\x00f\x001\x00b\x008\x007\x005\x009\x005\x000\x00d\x003' @ 390 : 1 .. (end); will stop at (end)

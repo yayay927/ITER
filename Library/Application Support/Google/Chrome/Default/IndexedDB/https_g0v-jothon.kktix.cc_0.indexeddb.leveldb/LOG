@@ -1,0 +1,6 @@
+2021/01/11-13:25:48.039 4356b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_g0v-jothon.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/11-13:25:56.161 3cc5b Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/01/11-13:25:58.172 3fca7 Level-0 table #5: started
+2021/01/11-13:25:58.182 3fca7 Level-0 table #5: 607 bytes OK
+2021/01/11-13:25:58.216 3fca7 Delete type=0 #3
+2021/01/11-13:25:58.216 3fca7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

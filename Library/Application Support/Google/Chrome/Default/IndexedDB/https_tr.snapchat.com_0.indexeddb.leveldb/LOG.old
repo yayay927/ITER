@@ -1,0 +1,5 @@
+2021/04/18-16:31:18.200 74903 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_tr.snapchat.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-16:31:20.229 74903 Level-0 table #5: started
+2021/04/18-16:31:20.256 74903 Level-0 table #5: 217 bytes OK
+2021/04/18-16:31:20.302 74903 Delete type=0 #3
+2021/04/18-16:31:20.303 74903 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,6 @@
+2021/05/31-13:36:03.673 1dfb5b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ocard-15db3.web.app_0.indexeddb.leveldb since it was missing.
+2021/05/31-13:36:03.765 1dfb5b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ocard-15db3.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/31-13:49:21.669 1dfb5b Level-0 table #5: started
+2021/05/31-13:49:21.695 1dfb5b Level-0 table #5: 1117 bytes OK
+2021/05/31-13:49:21.741 1dfb5b Delete type=0 #3
+2021/05/31-13:49:21.742 1dfb5b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

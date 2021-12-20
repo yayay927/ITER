@@ -1,0 +1,15 @@
+2020/09/25-10:54:47.300 8e677 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_en.pinkoi.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/25-10:54:47.300 8e677 Recovering log #4
+2020/09/25-10:54:47.300 8e677 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_en.pinkoi.com_0.indexeddb.leveldb/000004.log 
+2020/09/25-10:54:59.559 d027 Level-0 table #8: started
+2020/09/25-10:54:59.571 d027 Level-0 table #8: 1359 bytes OK
+2020/09/25-10:54:59.586 d027 Delete type=0 #4
+2020/09/25-10:54:59.588 d027 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/09/25-10:54:59.588 d027 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x006\x006\x008\x007\x002\x007\x005\x006\x006\x009\x009\x006\x00:\x00w\x00e\x00b\x00:\x00d\x006\x00c\x000\x00c\x001\x00b\x00b\x004\x007\x007\x00f\x001\x00b\x002\x00b\x00e\x005\x00c\x00a\x008\x001' @ 245 : 1
+2020/09/25-10:54:59.588 d027 Compacting 1@1 + 1@2 files
+2020/09/25-10:54:59.598 d027 Generated table #9@1: 49 keys, 1604 bytes
+2020/09/25-10:54:59.598 d027 Compacted 1@1 + 1@2 files => 1604 bytes
+2020/09/25-10:54:59.613 d027 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/09/25-10:54:59.614 d027 Delete type=2 #5
+2020/09/25-10:54:59.614 d027 Delete type=2 #8
+2020/09/25-10:54:59.614 d027 Manual compaction at level-1 from '\x00\x01\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x006\x006\x008\x007\x002\x007\x005\x006\x006\x009\x009\x006\x00:\x00w\x00e\x00b\x00:\x00d\x006\x00c\x000\x00c\x001\x00b\x00b\x004\x007\x007\x00f\x001\x00b\x002\x00b\x00e\x005\x00c\x00a\x008\x001' @ 245 : 1 .. (end); will stop at (end)

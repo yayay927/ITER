@@ -1,0 +1,33 @@
+2021/11/11-15:48:32.040 22725b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mrmad.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/11-15:48:32.041 22725b Recovering log #18
+2021/11/11-15:48:32.041 22725b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mrmad.com.tw_0.indexeddb.leveldb/000018.log 
+2021/11/11-15:48:32.761 229e6b Level-0 table #22: started
+2021/11/11-15:48:32.784 229e6b Level-0 table #22: 555 bytes OK
+2021/11/11-15:48:32.827 229e6b Delete type=0 #18
+2021/11/11-15:48:32.829 229e6b Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x00\x00\x05' @ 780 : 1
+2021/11/11-15:48:32.829 229e6b Compacting 1@0 + 1@1 files
+2021/11/11-15:48:32.851 229e6b Generated table #23@0: 9 keys, 591 bytes
+2021/11/11-15:48:32.851 229e6b Compacted 1@0 + 1@1 files => 591 bytes
+2021/11/11-15:48:32.892 229e6b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/11-15:48:32.892 229e6b Delete type=2 #22
+2021/11/11-15:48:32.893 229e6b Manual compaction at level-0 from '\x00\x05\x00\x00\x05' @ 780 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/11-15:48:34.813 229e6b Level-0 table #25: started
+2021/11/11-15:48:34.835 229e6b Level-0 table #25: 256 bytes OK
+2021/11/11-15:48:34.879 229e6b Delete type=2 #19
+2021/11/11-15:48:34.880 229e6b Delete type=0 #21
+2021/11/11-15:48:34.881 229e6b Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 794 : 0
+2021/11/11-15:48:34.881 229e6b Compacting 1@0 + 1@1 files
+2021/11/11-15:48:34.933 229e6b Generated table #26@0: 10 keys, 538 bytes
+2021/11/11-15:48:34.933 229e6b Compacted 1@0 + 1@1 files => 538 bytes
+2021/11/11-15:48:34.978 229e6b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/11-15:48:34.979 229e6b Delete type=2 #23
+2021/11/11-15:48:34.979 229e6b Delete type=2 #25
+2021/11/11-15:48:34.980 229e6b Manual compaction at level-0 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 794 : 0 .. (end); will stop at (end)
+2021/11/11-15:48:34.980 229e6b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\xc9\x16\x00h\x00t\x00t\x00p\x00s\x00_\x00m\x00r\x00m\x00a\x00d\x00.\x00c\x00o\x00m\x00.\x00t\x00w\x00_\x000\x00@\x001\x1c\x00m\x00o\x00d\x00e\x00r\x00n\x00i\x00z\x00r\x00-\x000\x00.\x008\x007\x009\x003\x003\x001\x008\x003\x007\x006\x003\x007\x000\x003\x008\x003' @ 784 : 0
+2021/11/11-15:48:34.980 229e6b Compacting 1@1 + 1@2 files
+2021/11/11-15:48:35.002 229e6b Generated table #27@1: 99 keys, 2285 bytes
+2021/11/11-15:48:35.002 229e6b Compacted 1@1 + 1@2 files => 2285 bytes
+2021/11/11-15:48:35.046 229e6b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/11-15:48:35.046 229e6b Delete type=2 #16
+2021/11/11-15:48:35.046 229e6b Delete type=2 #26
+2021/11/11-15:48:35.047 229e6b Manual compaction at level-1 from '\x00\x00\x00\x00\xc9\x16\x00h\x00t\x00t\x00p\x00s\x00_\x00m\x00r\x00m\x00a\x00d\x00.\x00c\x00o\x00m\x00.\x00t\x00w\x00_\x000\x00@\x001\x1c\x00m\x00o\x00d\x00e\x00r\x00n\x00i\x00z\x00r\x00-\x000\x00.\x008\x007\x009\x003\x003\x001\x008\x003\x007\x006\x003\x007\x000\x003\x008\x003' @ 784 : 0 .. (end); will stop at (end)

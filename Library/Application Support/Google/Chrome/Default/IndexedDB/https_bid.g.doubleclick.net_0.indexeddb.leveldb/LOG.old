@@ -1,0 +1,8 @@
+2021/04/18-16:22:16.999 65cdf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bid.g.doubleclick.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-16:22:16.999 65cdf Recovering log #7
+2021/04/18-16:22:16.999 65cdf Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bid.g.doubleclick.net_0.indexeddb.leveldb/000007.log 
+2021/04/18-16:22:19.144 7fcfb Level-0 table #11: started
+2021/04/18-16:22:19.144 7fcfb Level-0 table #11: 0 bytes OK
+2021/04/18-16:22:19.191 7fcfb Delete type=0 #7
+2021/04/18-16:22:19.212 7fcfb Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/18-16:22:19.212 7fcfb Manual compaction at level-1 from (begin) .. (end); will stop at (end)

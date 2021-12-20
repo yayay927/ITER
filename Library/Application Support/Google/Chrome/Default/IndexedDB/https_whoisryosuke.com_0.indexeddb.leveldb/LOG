@@ -1,0 +1,6 @@
+2021/06/04-18:28:00.578 28d927 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_whoisryosuke.com_0.indexeddb.leveldb since it was missing.
+2021/06/04-18:28:00.695 28d927 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_whoisryosuke.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/04-18:28:34.451 28be13 Level-0 table #5: started
+2021/06/04-18:28:34.479 28be13 Level-0 table #5: 2493 bytes OK
+2021/06/04-18:28:34.527 28be13 Delete type=0 #3
+2021/06/04-18:28:34.528 28be13 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

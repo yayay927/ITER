@@ -1,0 +1,8 @@
+2021/04/19-15:31:42.578 5fa0b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bookingportal.china-airlines.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/19-15:31:42.579 5fa0b Recovering log #4
+2021/04/19-15:31:42.579 5fa0b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bookingportal.china-airlines.com_0.indexeddb.leveldb/000004.log 
+2021/04/19-15:31:44.606 8cb67 Level-0 table #8: started
+2021/04/19-15:31:44.606 8cb67 Level-0 table #8: 0 bytes OK
+2021/04/19-15:31:44.655 8cb67 Delete type=0 #4
+2021/04/19-15:31:44.656 8cb67 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/19-15:31:44.656 8cb67 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

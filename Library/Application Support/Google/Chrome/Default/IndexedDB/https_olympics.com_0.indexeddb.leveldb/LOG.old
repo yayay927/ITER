@@ -1,0 +1,5 @@
+2021/05/08-16:08:20.812 1ea433 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_olympics.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/08-16:08:32.370 1c2c1f Level-0 table #5: started
+2021/05/08-16:08:32.402 1c2c1f Level-0 table #5: 2522 bytes OK
+2021/05/08-16:08:32.475 1c2c1f Delete type=0 #3
+2021/05/08-16:08:32.478 1c2c1f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

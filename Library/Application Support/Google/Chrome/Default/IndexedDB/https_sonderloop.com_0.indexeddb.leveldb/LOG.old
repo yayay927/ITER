@@ -1,0 +1,15 @@
+2021/03/22-02:19:11.356 cf547 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_sonderloop.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/22-02:19:11.357 cf547 Recovering log #7
+2021/03/22-02:19:11.357 cf547 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_sonderloop.com_0.indexeddb.leveldb/000007.log 
+2021/03/22-02:19:48.808 cfd13 Level-0 table #12: started
+2021/03/22-02:19:48.834 cfd13 Level-0 table #12: 580 bytes OK
+2021/03/22-02:19:48.880 cfd13 Delete type=0 #7
+2021/03/22-02:19:48.882 cfd13 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/22-02:19:48.882 cfd13 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x1b\x00c\x00u\x00s\x00t\x00o\x00m\x00-\x00n\x00a\x00v\x00i\x00g\x00a\x00t\x00i\x00o\x00n\x00-\x00w\x00h\x00i\x00t\x00e\x00l\x00i\x00s\x00t' @ 258 : 1
+2021/03/22-02:19:48.882 cfd13 Compacting 1@1 + 1@2 files
+2021/03/22-02:19:48.909 cfd13 Generated table #13@1: 53 keys, 2329 bytes
+2021/03/22-02:19:48.909 cfd13 Compacted 1@1 + 1@2 files => 2329 bytes
+2021/03/22-02:19:48.957 cfd13 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/22-02:19:48.957 cfd13 Delete type=2 #12
+2021/03/22-02:19:48.958 cfd13 Delete type=2 #9
+2021/03/22-02:19:48.959 cfd13 Manual compaction at level-1 from '\x00\x02\x01\x02\x01\x1b\x00c\x00u\x00s\x00t\x00o\x00m\x00-\x00n\x00a\x00v\x00i\x00g\x00a\x00t\x00i\x00o\x00n\x00-\x00w\x00h\x00i\x00t\x00e\x00l\x00i\x00s\x00t' @ 258 : 1 .. (end); will stop at (end)

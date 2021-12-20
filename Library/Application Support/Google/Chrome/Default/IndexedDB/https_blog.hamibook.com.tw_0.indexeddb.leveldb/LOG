@@ -1,0 +1,17 @@
+2020/12/09-10:14:11.220 4fe3af Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_blog.hamibook.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/09-10:14:11.909 4412f Level-0 table #5: started
+2020/12/09-10:14:11.929 4412f Level-0 table #5: 5466 bytes OK
+2020/12/09-10:14:11.965 4412f Delete type=0 #3
+2020/12/09-10:14:11.965 4412f Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2020/12/10-15:26:00.619 4412f Level-0 table #7: started
+2020/12/10-15:26:00.643 4412f Level-0 table #7: 5217 bytes OK
+2020/12/10-15:26:00.664 4412f Delete type=0 #4
+2020/12/10-15:26:00.665 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/10-15:26:00.666 4412f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x001\x006\x004\x000\x007\x004\x000\x002\x002\x001\x009\x005\x00:\x00w\x00e\x00b\x00:\x004\x00c\x008\x00c\x002\x005\x002\x009\x002\x00d\x003\x003\x00a\x007\x001\x00e\x007\x009\x00c\x00a\x004\x006' @ 382 : 1
+2020/12/10-15:26:00.666 4412f Compacting 1@1 + 1@2 files
+2020/12/10-15:26:00.676 4412f Generated table #8@1: 110 keys, 3204 bytes
+2020/12/10-15:26:00.676 4412f Compacted 1@1 + 1@2 files => 3204 bytes
+2020/12/10-15:26:00.708 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/10-15:26:00.708 4412f Delete type=2 #7
+2020/12/10-15:26:00.709 4412f Delete type=2 #5
+2020/12/10-15:26:00.709 4412f Manual compaction at level-1 from '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x001\x006\x004\x000\x007\x004\x000\x002\x002\x001\x009\x005\x00:\x00w\x00e\x00b\x00:\x004\x00c\x008\x00c\x002\x005\x002\x009\x002\x00d\x003\x003\x00a\x007\x001\x00e\x007\x009\x00c\x00a\x004\x006' @ 382 : 1 .. (end); will stop at (end)

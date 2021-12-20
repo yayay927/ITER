@@ -1,0 +1,6 @@
+2021/06/30-07:31:42.393 13af1f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_subscription.packtpub.com_0.indexeddb.leveldb since it was missing.
+2021/06/30-07:31:42.496 13af1f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_subscription.packtpub.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/30-10:27:52.330 11d703 Level-0 table #5: started
+2021/06/30-10:27:52.357 11d703 Level-0 table #5: 1299 bytes OK
+2021/06/30-10:27:52.404 11d703 Delete type=0 #3
+2021/06/30-10:27:52.405 11d703 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

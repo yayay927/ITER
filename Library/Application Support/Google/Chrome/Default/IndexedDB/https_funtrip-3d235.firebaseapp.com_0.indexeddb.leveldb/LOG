@@ -1,0 +1,15 @@
+2021/05/08-21:11:04.422 1f175f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_funtrip-3d235.firebaseapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/08-21:11:04.422 1f175f Recovering log #4
+2021/05/08-21:11:04.422 1f175f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_funtrip-3d235.firebaseapp.com_0.indexeddb.leveldb/000004.log 
+2021/05/08-21:11:20.955 1f175f Level-0 table #8: started
+2021/05/08-21:11:20.981 1f175f Level-0 table #8: 489 bytes OK
+2021/05/08-21:11:21.028 1f175f Delete type=0 #4
+2021/05/08-21:11:21.029 1f175f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/08-21:11:21.029 1f175f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x000\x008\x004\x006\x009\x000\x008\x009' @ 63 : 1
+2021/05/08-21:11:21.029 1f175f Compacting 1@1 + 1@2 files
+2021/05/08-21:11:21.055 1f175f Generated table #9@1: 17 keys, 557 bytes
+2021/05/08-21:11:21.055 1f175f Compacted 1@1 + 1@2 files => 557 bytes
+2021/05/08-21:11:21.101 1f175f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/08-21:11:21.101 1f175f Delete type=2 #5
+2021/05/08-21:11:21.101 1f175f Delete type=2 #8
+2021/05/08-21:11:21.102 1f175f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x000\x008\x004\x006\x009\x000\x008\x009' @ 63 : 1 .. (end); will stop at (end)

@@ -1,0 +1,5 @@
+2021/05/10-20:32:24.731 23e93f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cloud-dot-devsite-v2-prod.appspot.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/10-20:33:09.757 1fbe0f Level-0 table #5: started
+2021/05/10-20:33:09.784 1fbe0f Level-0 table #5: 1245 bytes OK
+2021/05/10-20:33:09.833 1fbe0f Delete type=0 #3
+2021/05/10-20:33:09.834 1fbe0f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

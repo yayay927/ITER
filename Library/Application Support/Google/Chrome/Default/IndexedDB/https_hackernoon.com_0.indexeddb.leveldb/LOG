@@ -1,0 +1,6 @@
+2021/10/28-17:11:44.156 113b7b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_hackernoon.com_0.indexeddb.leveldb since it was missing.
+2021/10/28-17:11:44.230 113b7b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_hackernoon.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/28-17:11:53.483 c2d8f Level-0 table #5: started
+2021/10/28-17:11:53.505 c2d8f Level-0 table #5: 1146 bytes OK
+2021/10/28-17:11:53.548 c2d8f Delete type=0 #3
+2021/10/28-17:11:53.549 c2d8f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

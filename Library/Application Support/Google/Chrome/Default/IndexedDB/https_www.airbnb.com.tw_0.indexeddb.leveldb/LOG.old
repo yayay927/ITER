@@ -1,0 +1,15 @@
+2021/09/15-23:40:52.622 15585b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.airbnb.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/15-23:40:52.623 15585b Recovering log #10
+2021/09/15-23:40:52.623 15585b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.airbnb.com.tw_0.indexeddb.leveldb/000010.log 
+2021/09/15-23:42:47.844 14c31f Level-0 table #15: started
+2021/09/15-23:42:47.866 14c31f Level-0 table #15: 209 bytes OK
+2021/09/15-23:42:47.910 14c31f Delete type=0 #10
+2021/09/15-23:42:47.910 14c31f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/09/15-23:42:47.910 14c31f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 78 : 1
+2021/09/15-23:42:47.910 14c31f Compacting 1@1 + 1@2 files
+2021/09/15-23:42:47.931 14c31f Generated table #16@1: 27 keys, 663 bytes
+2021/09/15-23:42:47.932 14c31f Compacted 1@1 + 1@2 files => 663 bytes
+2021/09/15-23:42:47.974 14c31f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/09/15-23:42:47.975 14c31f Delete type=2 #15
+2021/09/15-23:42:47.975 14c31f Delete type=2 #12
+2021/09/15-23:42:47.976 14c31f Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 78 : 1 .. (end); will stop at (end)

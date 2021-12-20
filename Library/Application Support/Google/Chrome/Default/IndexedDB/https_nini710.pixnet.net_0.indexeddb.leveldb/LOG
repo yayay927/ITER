@@ -1,0 +1,6 @@
+2021/09/03-23:01:21.806 2c976f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_nini710.pixnet.net_0.indexeddb.leveldb since it was missing.
+2021/09/03-23:01:21.910 2c976f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_nini710.pixnet.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/03-23:05:48.355 2c7fa7 Level-0 table #5: started
+2021/09/03-23:05:48.383 2c7fa7 Level-0 table #5: 909 bytes OK
+2021/09/03-23:05:48.429 2c7fa7 Delete type=0 #3
+2021/09/03-23:05:48.430 2c7fa7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

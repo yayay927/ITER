@@ -1,0 +1,15 @@
+2021/12/13-18:15:00.634 494aeb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ad.doubleclick.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/13-18:15:00.634 494aeb Recovering log #4
+2021/12/13-18:15:00.635 494aeb Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ad.doubleclick.net_0.indexeddb.leveldb/000004.log 
+2021/12/13-18:15:25.520 44b03b Level-0 table #8: started
+2021/12/13-18:15:25.542 44b03b Level-0 table #8: 209 bytes OK
+2021/12/13-18:15:25.586 44b03b Delete type=0 #4
+2021/12/13-18:15:25.596 44b03b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/12/13-18:15:25.596 44b03b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 12 : 1
+2021/12/13-18:15:25.596 44b03b Compacting 1@1 + 1@2 files
+2021/12/13-18:15:25.618 44b03b Generated table #9@1: 9 keys, 375 bytes
+2021/12/13-18:15:25.618 44b03b Compacted 1@1 + 1@2 files => 375 bytes
+2021/12/13-18:15:25.670 44b03b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/13-18:15:25.671 44b03b Delete type=2 #5
+2021/12/13-18:15:25.671 44b03b Delete type=2 #8
+2021/12/13-18:15:25.672 44b03b Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 12 : 1 .. (end); will stop at (end)

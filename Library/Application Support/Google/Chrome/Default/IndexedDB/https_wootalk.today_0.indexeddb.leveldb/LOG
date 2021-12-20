@@ -1,0 +1,5 @@
+2021/04/24-11:29:01.012 f1453 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wootalk.today_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/24-11:29:03.044 f1453 Level-0 table #5: started
+2021/04/24-11:29:03.072 f1453 Level-0 table #5: 217 bytes OK
+2021/04/24-11:29:03.119 f1453 Delete type=0 #3
+2021/04/24-11:29:03.121 f1453 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

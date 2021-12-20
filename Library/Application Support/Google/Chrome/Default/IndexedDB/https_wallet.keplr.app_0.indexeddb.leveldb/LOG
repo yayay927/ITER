@@ -1,0 +1,25 @@
+2021/12/13-16:28:06.515 514c0f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wallet.keplr.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/13-16:28:06.516 514c0f Recovering log #52
+2021/12/13-16:28:06.522 514c0f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wallet.keplr.app_0.indexeddb.leveldb/000052.log 
+2021/12/13-16:28:07.314 495a07 Level-0 table #57: started
+2021/12/13-16:28:07.387 495a07 Level-0 table #57: 315801 bytes OK
+2021/12/13-16:28:07.450 495a07 Delete type=0 #52
+2021/12/13-16:28:07.456 495a07 Manual compaction at level-0 from '\x00\x10\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/12/13-16:28:14.136 4c1007 Compacting 1@1 + 1@2 files
+2021/12/13-16:28:14.193 4c1007 Generated table #58@1: 436 keys, 145878 bytes
+2021/12/13-16:28:14.193 4c1007 Compacted 1@1 + 1@2 files => 145878 bytes
+2021/12/13-16:28:14.235 4c1007 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/13-16:28:14.235 4c1007 Delete type=2 #57
+2021/12/13-16:28:14.238 4c1007 Delete type=2 #54
+2021/12/13-16:29:23.491 514c0f Level-0 table #60: started
+2021/12/13-16:29:23.518 514c0f Level-0 table #60: 102809 bytes OK
+2021/12/13-16:29:23.564 514c0f Delete type=0 #56
+2021/12/13-16:29:23.565 514c0f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/12/13-16:29:23.566 514c0f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x005\x007\x001\x001\x008\x002\x004\x002\x005\x003\x007\x008\x00:\x00w\x00e\x00b\x00:\x005\x003\x00e\x00b\x000\x008\x005\x008\x005\x003\x00e\x005\x00d\x00f\x009\x004\x007\x008\x007\x001\x007\x00b' @ 16469 : 1
+2021/12/13-16:29:23.566 514c0f Compacting 1@1 + 1@2 files
+2021/12/13-16:29:23.598 514c0f Generated table #61@1: 451 keys, 162061 bytes
+2021/12/13-16:29:23.598 514c0f Compacted 1@1 + 1@2 files => 162061 bytes
+2021/12/13-16:29:23.663 514c0f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/13-16:29:23.664 514c0f Delete type=2 #60
+2021/12/13-16:29:23.664 514c0f Delete type=2 #58
+2021/12/13-16:29:23.665 514c0f Manual compaction at level-1 from '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x005\x007\x001\x001\x008\x002\x004\x002\x005\x003\x007\x008\x00:\x00w\x00e\x00b\x00:\x005\x003\x00e\x00b\x000\x008\x005\x008\x005\x003\x00e\x005\x00d\x00f\x009\x004\x007\x008\x007\x001\x007\x00b' @ 16469 : 1 .. (end); will stop at (end)

@@ -1,0 +1,18 @@
+2021/10/27-14:27:50.307 c807b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_neillin.timelog.to_0.indexeddb.leveldb since it was missing.
+2021/10/27-14:27:50.374 c807b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_neillin.timelog.to_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/27-14:27:50.484 c807b Level-0 table #5: started
+2021/10/27-14:27:50.527 c807b Level-0 table #5: 624 bytes OK
+2021/10/27-14:27:50.569 c807b Delete type=0 #3
+2021/10/27-14:27:50.569 c807b Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/27-15:55:03.118 b229b Level-0 table #7: started
+2021/10/27-15:55:03.141 b229b Level-0 table #7: 1924 bytes OK
+2021/10/27-15:55:03.182 b229b Delete type=0 #4
+2021/10/27-15:55:03.183 b229b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/27-15:55:03.183 b229b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x007\x005\x001\x005\x008\x009\x006\x004\x003\x001\x001\x005\x00:\x00w\x00e\x00b\x00:\x001\x001\x00c\x009\x002\x00e\x00c\x007\x002\x001\x004\x00f\x009\x003\x001\x00f\x005\x001\x007\x002\x002\x00e' @ 68 : 1
+2021/10/27-15:55:03.183 b229b Compacting 1@1 + 1@2 files
+2021/10/27-15:55:03.204 b229b Generated table #8@1: 20 keys, 1256 bytes
+2021/10/27-15:55:03.204 b229b Compacted 1@1 + 1@2 files => 1256 bytes
+2021/10/27-15:55:03.245 b229b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/27-15:55:03.245 b229b Delete type=2 #7
+2021/10/27-15:55:03.245 b229b Delete type=2 #5
+2021/10/27-15:55:03.246 b229b Manual compaction at level-1 from '\x00\x02\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x007\x005\x001\x005\x008\x009\x006\x004\x003\x001\x001\x005\x00:\x00w\x00e\x00b\x00:\x001\x001\x00c\x009\x002\x00e\x00c\x007\x002\x001\x004\x00f\x009\x003\x001\x00f\x005\x001\x007\x002\x002\x00e' @ 68 : 1 .. (end); will stop at (end)

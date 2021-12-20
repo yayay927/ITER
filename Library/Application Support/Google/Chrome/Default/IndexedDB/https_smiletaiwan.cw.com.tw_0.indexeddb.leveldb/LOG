@@ -1,0 +1,6 @@
+2021/11/02-10:31:17.653 14c4e7 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_smiletaiwan.cw.com.tw_0.indexeddb.leveldb since it was missing.
+2021/11/02-10:31:17.729 14c4e7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_smiletaiwan.cw.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/02-10:31:51.823 14c4e7 Level-0 table #5: started
+2021/11/02-10:31:51.847 14c4e7 Level-0 table #5: 10363 bytes OK
+2021/11/02-10:31:51.890 14c4e7 Delete type=0 #3
+2021/11/02-10:31:51.892 14c4e7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

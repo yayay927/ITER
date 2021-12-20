@@ -1,0 +1,15 @@
+2021/07/21-13:57:17.374 3e792b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_passport.weibo.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/21-13:57:17.374 3e792b Recovering log #4
+2021/07/21-13:57:17.374 3e792b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_passport.weibo.com_0.indexeddb.leveldb/000004.log 
+2021/07/21-13:57:26.526 3e792b Level-0 table #8: started
+2021/07/21-13:57:26.554 3e792b Level-0 table #8: 485 bytes OK
+2021/07/21-13:57:26.601 3e792b Delete type=0 #4
+2021/07/21-13:57:26.602 3e792b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/07/21-13:57:26.602 3e792b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x03\x00t\x00i\x00d' @ 51 : 1
+2021/07/21-13:57:26.602 3e792b Compacting 1@1 + 1@2 files
+2021/07/21-13:57:26.632 3e792b Generated table #9@1: 21 keys, 595 bytes
+2021/07/21-13:57:26.632 3e792b Compacted 1@1 + 1@2 files => 595 bytes
+2021/07/21-13:57:26.678 3e792b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/21-13:57:26.679 3e792b Delete type=2 #5
+2021/07/21-13:57:26.679 3e792b Delete type=2 #8
+2021/07/21-13:57:26.684 3e792b Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x03\x00t\x00i\x00d' @ 51 : 1 .. (end); will stop at (end)

@@ -1,0 +1,8 @@
+2021/04/25-17:52:07.589 c262b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.hubspot.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/25-17:52:07.590 c262b Recovering log #7
+2021/04/25-17:52:07.590 c262b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.hubspot.com_0.indexeddb.leveldb/000007.log 
+2021/04/25-17:52:09.625 c262b Level-0 table #11: started
+2021/04/25-17:52:09.625 c262b Level-0 table #11: 0 bytes OK
+2021/04/25-17:52:09.672 c262b Delete type=0 #7
+2021/04/25-17:52:09.672 c262b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/25-17:52:09.673 c262b Manual compaction at level-1 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,5 @@
+2020/10/26-14:00:40.740 f1657 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_share.readmoo.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/26-14:01:32.139 4412f Level-0 table #5: started
+2020/10/26-14:01:32.153 4412f Level-0 table #5: 9437 bytes OK
+2020/10/26-14:01:32.170 4412f Delete type=0 #3
+2020/10/26-14:01:32.172 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

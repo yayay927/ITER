@@ -1,0 +1,6 @@
+2021/09/13-00:15:06.993 105997 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_comedyclub.kktix.cc_0.indexeddb.leveldb since it was missing.
+2021/09/13-00:15:07.061 105997 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_comedyclub.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/13-00:15:07.754 f0a83 Level-0 table #5: started
+2021/09/13-00:15:07.776 f0a83 Level-0 table #5: 581 bytes OK
+2021/09/13-00:15:07.819 f0a83 Delete type=0 #3
+2021/09/13-00:15:07.820 f0a83 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

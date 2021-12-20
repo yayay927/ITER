@@ -1,0 +1,6 @@
+2021/05/16-17:21:58.160 79993 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_film-db-9936d.web.app_0.indexeddb.leveldb since it was missing.
+2021/05/16-17:21:58.238 79993 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_film-db-9936d.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/16-17:38:04.728 77c27 Level-0 table #5: started
+2021/05/16-17:38:04.754 77c27 Level-0 table #5: 1125 bytes OK
+2021/05/16-17:38:04.800 77c27 Delete type=0 #3
+2021/05/16-17:38:04.800 77c27 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

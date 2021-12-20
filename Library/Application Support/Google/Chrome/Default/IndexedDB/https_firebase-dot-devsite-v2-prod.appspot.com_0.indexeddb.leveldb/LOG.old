@@ -1,0 +1,15 @@
+2021/06/28-15:03:48.870 f524b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_firebase-dot-devsite-v2-prod.appspot.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/28-15:03:48.871 f524b Recovering log #37
+2021/06/28-15:03:48.871 f524b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_firebase-dot-devsite-v2-prod.appspot.com_0.indexeddb.leveldb/000037.log 
+2021/06/28-19:41:14.878 114b17 Level-0 table #41: started
+2021/06/28-19:41:14.907 114b17 Level-0 table #41: 226 bytes OK
+2021/06/28-19:41:14.958 114b17 Delete type=0 #37
+2021/06/28-19:41:14.961 114b17 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/28-19:41:14.962 114b17 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 80 : 1
+2021/06/28-19:41:14.962 114b17 Compacting 1@1 + 1@2 files
+2021/06/28-19:41:14.987 114b17 Generated table #42@1: 27 keys, 689 bytes
+2021/06/28-19:41:14.988 114b17 Compacted 1@1 + 1@2 files => 689 bytes
+2021/06/28-19:41:15.034 114b17 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/28-19:41:15.035 114b17 Delete type=2 #35
+2021/06/28-19:41:15.036 114b17 Delete type=2 #41
+2021/06/28-19:41:15.037 114b17 Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 80 : 1 .. (end); will stop at (end)

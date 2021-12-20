@@ -1,0 +1,6 @@
+2021/06/15-23:08:52.658 10cc57 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_forums.expo.io_0.indexeddb.leveldb since it was missing.
+2021/06/15-23:08:52.737 10cc57 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_forums.expo.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/15-23:09:26.856 114e1b Level-0 table #5: started
+2021/06/15-23:09:26.882 114e1b Level-0 table #5: 2774 bytes OK
+2021/06/15-23:09:26.928 114e1b Delete type=0 #3
+2021/06/15-23:09:26.930 114e1b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

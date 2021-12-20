@@ -1,0 +1,5 @@
+2021/02/01-16:09:18.605 181b57 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_weandthecolor.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/01-17:37:20.452 1bebb3 Level-0 table #5: started
+2021/02/01-17:37:20.486 1bebb3 Level-0 table #5: 6344 bytes OK
+2021/02/01-17:37:20.506 1bebb3 Delete type=0 #3
+2021/02/01-17:37:20.506 1bebb3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

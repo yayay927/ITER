@@ -1,0 +1,15 @@
+2021/07/30-15:26:42.821 4f63a3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_earth.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/30-15:26:42.822 4f63a3 Recovering log #7
+2021/07/30-15:26:42.822 4f63a3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_earth.google.com_0.indexeddb.leveldb/000007.log 
+2021/07/31-15:47:43.899 567e63 Level-0 table #11: started
+2021/07/31-15:47:43.927 567e63 Level-0 table #11: 222 bytes OK
+2021/07/31-15:47:43.977 567e63 Delete type=0 #7
+2021/07/31-15:47:43.979 567e63 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/07/31-15:47:43.979 567e63 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 46 : 1
+2021/07/31-15:47:43.979 567e63 Compacting 1@1 + 1@2 files
+2021/07/31-15:47:44.004 567e63 Generated table #12@1: 19 keys, 529 bytes
+2021/07/31-15:47:44.004 567e63 Compacted 1@1 + 1@2 files => 529 bytes
+2021/07/31-15:47:44.051 567e63 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/31-15:47:44.051 567e63 Delete type=2 #5
+2021/07/31-15:47:44.052 567e63 Delete type=2 #11
+2021/07/31-15:47:44.054 567e63 Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 46 : 1 .. (end); will stop at (end)

@@ -1,0 +1,17 @@
+2021/05/03-09:15:09.650 1693d7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_timetreeapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/03-09:15:09.756 17fb67 Level-0 table #5: started
+2021/05/03-09:15:09.781 17fb67 Level-0 table #5: 552 bytes OK
+2021/05/03-09:15:09.826 17fb67 Delete type=0 #3
+2021/05/03-09:15:09.827 17fb67 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/05/03-12:03:49.166 17039b Level-0 table #7: started
+2021/05/03-12:03:49.196 17039b Level-0 table #7: 41175 bytes OK
+2021/05/03-12:03:49.243 17039b Delete type=0 #4
+2021/05/03-12:03:49.246 17039b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/03-12:03:49.246 17039b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x06\x02\x03\x00\x00\x00\x00\x00\xa0i@' @ 1418 : 1
+2021/05/03-12:03:49.246 17039b Compacting 1@1 + 1@2 files
+2021/05/03-12:03:49.272 17039b Generated table #8@1: 527 keys, 20757 bytes
+2021/05/03-12:03:49.272 17039b Compacted 1@1 + 1@2 files => 20757 bytes
+2021/05/03-12:03:49.320 17039b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/03-12:03:49.321 17039b Delete type=2 #7
+2021/05/03-12:03:49.321 17039b Delete type=2 #5
+2021/05/03-12:03:49.321 17039b Manual compaction at level-1 from '\x00\x02\x06\x02\x03\x00\x00\x00\x00\x00\xa0i@' @ 1418 : 1 .. (end); will stop at (end)

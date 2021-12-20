@@ -1,0 +1,26 @@
+2020/12/20-10:08:49.250 1fadc3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_userxper.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/20-10:08:49.250 1fadc3 Recovering log #26
+2020/12/20-10:08:49.250 1fadc3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_userxper.kktix.cc_0.indexeddb.leveldb/000026.log 
+2020/12/20-10:08:57.606 1fadc3 Level-0 table #32: started
+2020/12/20-10:08:57.618 1fadc3 Level-0 table #32: 528 bytes OK
+2020/12/20-10:08:57.634 1fadc3 Delete type=0 #26
+2020/12/20-10:08:57.635 1fadc3 Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2020/12/20-10:08:59.608 1badef Level-0 table #34: started
+2020/12/20-10:08:59.620 1badef Level-0 table #34: 218 bytes OK
+2020/12/20-10:08:59.635 1badef Delete type=0 #31
+2020/12/20-10:08:59.637 1badef Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 100 : 0
+2020/12/20-10:08:59.637 1badef Compacting 1@0 + 1@1 files
+2020/12/20-10:08:59.648 1badef Generated table #35@0: 2 keys, 196 bytes
+2020/12/20-10:08:59.649 1badef Compacted 1@0 + 1@1 files => 196 bytes
+2020/12/20-10:08:59.660 1badef compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/20-10:08:59.661 1badef Delete type=2 #34
+2020/12/20-10:08:59.661 1badef Delete type=2 #32
+2020/12/20-10:08:59.662 1badef Manual compaction at level-0 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 100 : 0 .. (end); will stop at (end)
+2020/12/20-10:08:59.662 1badef Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x03' @ 95 : 0
+2020/12/20-10:08:59.662 1badef Compacting 1@1 + 1@2 files
+2020/12/20-10:08:59.672 1badef Generated table #36@1: 5 keys, 237 bytes
+2020/12/20-10:08:59.672 1badef Compacted 1@1 + 1@2 files => 237 bytes
+2020/12/20-10:08:59.687 1badef compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/20-10:08:59.688 1badef Delete type=2 #29
+2020/12/20-10:08:59.688 1badef Delete type=2 #35
+2020/12/20-10:08:59.689 1badef Manual compaction at level-1 from '\x00\x00\x00\x00\x03' @ 95 : 0 .. (end); will stop at (end)

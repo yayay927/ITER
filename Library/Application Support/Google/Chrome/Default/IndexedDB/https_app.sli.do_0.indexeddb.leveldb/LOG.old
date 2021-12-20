@@ -1,0 +1,8 @@
+2021/06/03-09:03:04.158 240c67 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.sli.do_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/03-09:03:04.158 240c67 Recovering log #22
+2021/06/03-09:03:04.158 240c67 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.sli.do_0.indexeddb.leveldb/000022.log 
+2021/06/03-10:03:31.411 24186b Level-0 table #26: started
+2021/06/03-10:03:31.412 24186b Level-0 table #26: 0 bytes OK
+2021/06/03-10:03:31.464 24186b Delete type=0 #22
+2021/06/03-10:03:31.467 24186b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/03-10:03:31.467 24186b Manual compaction at level-1 from (begin) .. (end); will stop at (end)

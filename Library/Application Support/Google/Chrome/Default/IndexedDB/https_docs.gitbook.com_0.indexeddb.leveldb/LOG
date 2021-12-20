@@ -1,0 +1,7 @@
+2021/10/29-11:24:06.402 10f00b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.gitbook.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/29-11:24:06.402 10f00b Recovering log #6
+2021/10/29-11:24:06.402 10f00b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.gitbook.com_0.indexeddb.leveldb/000006.log 
+2021/10/29-11:24:06.831 10860f Level-0 table #11: started
+2021/10/29-11:24:06.854 10860f Level-0 table #11: 591 bytes OK
+2021/10/29-11:24:06.896 10860f Delete type=0 #6
+2021/10/29-11:24:06.897 10860f Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)

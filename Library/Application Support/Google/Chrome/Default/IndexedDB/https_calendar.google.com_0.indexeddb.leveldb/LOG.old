@@ -1,0 +1,15 @@
+2021/10/28-16:20:38.465 dd3ab Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_calendar.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/28-16:20:38.466 dd3ab Recovering log #466
+2021/10/28-16:20:38.466 dd3ab Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_calendar.google.com_0.indexeddb.leveldb/000466.log 
+2021/10/28-16:21:04.358 fe337 Level-0 table #471: started
+2021/10/28-16:21:04.380 fe337 Level-0 table #471: 209 bytes OK
+2021/10/28-16:21:04.425 fe337 Delete type=0 #466
+2021/10/28-16:21:04.426 fe337 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/28-16:21:04.426 fe337 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 339 : 1
+2021/10/28-16:21:04.426 fe337 Compacting 1@1 + 1@2 files
+2021/10/28-16:21:04.448 fe337 Generated table #472@1: 89 keys, 1371 bytes
+2021/10/28-16:21:04.448 fe337 Compacted 1@1 + 1@2 files => 1371 bytes
+2021/10/28-16:21:04.490 fe337 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/28-16:21:04.491 fe337 Delete type=2 #471
+2021/10/28-16:21:04.491 fe337 Delete type=2 #468
+2021/10/28-16:21:04.492 fe337 Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 339 : 1 .. (end); will stop at (end)

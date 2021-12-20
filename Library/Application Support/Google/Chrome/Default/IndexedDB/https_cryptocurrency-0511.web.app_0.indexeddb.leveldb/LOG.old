@@ -1,0 +1,6 @@
+2021/06/09-09:32:11.987 2f4c07 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cryptocurrency-0511.web.app_0.indexeddb.leveldb since it was missing.
+2021/06/09-09:32:12.096 2f4c07 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cryptocurrency-0511.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/09-12:34:05.362 2fb56b Level-0 table #5: started
+2021/06/09-12:34:05.389 2fb56b Level-0 table #5: 11290 bytes OK
+2021/06/09-12:34:05.435 2fb56b Delete type=0 #3
+2021/06/09-12:34:05.437 2fb56b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

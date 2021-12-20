@@ -1,0 +1,13 @@
+2021/07/21-01:07:16.369 3bc497 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_console.firebase.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/21-01:07:16.370 3bc497 Recovering log #422
+2021/07/21-01:07:16.370 3bc497 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_console.firebase.google.com_0.indexeddb.leveldb/000422.log 
+2021/07/21-01:07:16.525 3a717b Level-0 table #426: started
+2021/07/21-01:07:16.552 3a717b Level-0 table #426: 3396 bytes OK
+2021/07/21-01:07:16.633 3a717b Delete type=0 #422
+2021/07/21-01:07:16.653 3a717b Manual compaction at level-0 from '\x00~\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x7f\x00\x00\x00' @ 0 : 0; will stop at '\x00~\x00\x00\x05' @ 6311 : 1
+2021/07/21-01:07:16.653 3a717b Compacting 1@0 + 1@1 files
+2021/07/21-01:07:16.680 3a717b Generated table #427@0: 30 keys, 1413 bytes
+2021/07/21-01:07:16.680 3a717b Compacted 1@0 + 1@1 files => 1413 bytes
+2021/07/21-01:07:16.746 3a717b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/07/21-01:07:16.766 3a717b Delete type=2 #426
+2021/07/21-01:07:16.767 3a717b Manual compaction at level-0 from '\x00~\x00\x00\x05' @ 6311 : 1 .. '\x00\x7f\x00\x00\x00' @ 0 : 0; will stop at (end)

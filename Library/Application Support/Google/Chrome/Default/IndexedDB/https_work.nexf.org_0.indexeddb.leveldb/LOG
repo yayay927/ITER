@@ -1,0 +1,6 @@
+2021/08/12-02:12:27.488 127557 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_work.nexf.org_0.indexeddb.leveldb since it was missing.
+2021/08/12-02:12:27.570 127557 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_work.nexf.org_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/12-14:30:33.794 f2527 Level-0 table #5: started
+2021/08/12-14:30:33.823 f2527 Level-0 table #5: 1146 bytes OK
+2021/08/12-14:30:33.871 f2527 Delete type=0 #3
+2021/08/12-14:30:33.872 f2527 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

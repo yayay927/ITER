@@ -1,0 +1,5 @@
+2021/05/08-21:15:40.023 1ee01f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_react-personal-project.firebaseapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/08-21:16:04.725 1ec13f Level-0 table #5: started
+2021/05/08-21:16:04.753 1ec13f Level-0 table #5: 1149 bytes OK
+2021/05/08-21:16:04.800 1ec13f Delete type=0 #3
+2021/05/08-21:16:04.801 1ec13f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

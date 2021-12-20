@@ -1,0 +1,8 @@
+2021/04/25-17:50:34.735 117e03 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.hubspot.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/25-17:50:34.736 117e03 Recovering log #4
+2021/04/25-17:50:34.736 117e03 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.hubspot.com_0.indexeddb.leveldb/000004.log 
+2021/04/25-17:50:36.762 117e03 Level-0 table #8: started
+2021/04/25-17:50:36.762 117e03 Level-0 table #8: 0 bytes OK
+2021/04/25-17:50:36.817 117e03 Delete type=0 #4
+2021/04/25-17:50:36.818 117e03 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/25-17:50:36.818 117e03 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

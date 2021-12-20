@@ -1,0 +1,7 @@
+2021/09/24-15:44:17.838 1cf893 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_trifles.timelog.to_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/24-15:44:17.838 1cf893 Recovering log #4
+2021/09/24-15:44:17.838 1cf893 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_trifles.timelog.to_0.indexeddb.leveldb/000004.log 
+2021/09/24-15:44:18.359 1cdc8b Level-0 table #8: started
+2021/09/24-15:44:18.380 1cdc8b Level-0 table #8: 2102 bytes OK
+2021/09/24-15:44:18.424 1cdc8b Delete type=0 #4
+2021/09/24-15:44:18.424 1cdc8b Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)

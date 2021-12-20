@@ -1,0 +1,15 @@
+2021/07/27-18:32:19.804 4b49e7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_rm3bf.csb.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/27-18:32:19.805 4b49e7 Recovering log #4
+2021/07/27-18:32:19.806 4b49e7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_rm3bf.csb.app_0.indexeddb.leveldb/000004.log 
+2021/07/27-18:32:38.431 439147 Level-0 table #8: started
+2021/07/27-18:32:38.457 439147 Level-0 table #8: 49179 bytes OK
+2021/07/27-18:32:38.508 439147 Delete type=0 #4
+2021/07/27-18:32:38.511 439147 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/07/27-18:32:38.511 439147 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x05\x01\x1f\x03\x00\x10#]x\xaewB\x00\x01N\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00c\x00d\x00n\x00.\x00j\x00s\x00d\x00e\x00l\x00i\x00v\x00r\x00.\x00n\x00e\x00t\x00/\x00n\x00p\x00m\x00/\x00@\x00b\x00a\x00b\x00e\x00l\x00/\x00r\x00u\x00n\x00t\x00i\x00m\x00e\x00@\x007\x00.\x001\x004\x00.\x008\x00/\x00h\x00e\x00l\x00p\x00e\x00r\x00s\x00/\x00a\x00r\x00r\x00a\x00y\x00L\x00i\x00k\x00e\x00T\x00o\x00A\x00r\x00r\x00a\x00y\x00.\x00j\x00s' @ 19762 : 1
+2021/07/27-18:32:38.511 439147 Compacting 1@1 + 1@2 files
+2021/07/27-18:32:38.541 439147 Generated table #9@1: 215 keys, 10828 bytes
+2021/07/27-18:32:38.541 439147 Compacted 1@1 + 1@2 files => 10828 bytes
+2021/07/27-18:32:38.587 439147 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/27-18:32:38.588 439147 Delete type=2 #5
+2021/07/27-18:32:38.589 439147 Delete type=2 #8
+2021/07/27-18:32:38.592 439147 Manual compaction at level-1 from '\x00\x05\x01\x1f\x03\x00\x10#]x\xaewB\x00\x01N\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00c\x00d\x00n\x00.\x00j\x00s\x00d\x00e\x00l\x00i\x00v\x00r\x00.\x00n\x00e\x00t\x00/\x00n\x00p\x00m\x00/\x00@\x00b\x00a\x00b\x00e\x00l\x00/\x00r\x00u\x00n\x00t\x00i\x00m\x00e\x00@\x007\x00.\x001\x004\x00.\x008\x00/\x00h\x00e\x00l\x00p\x00e\x00r\x00s\x00/\x00a\x00r\x00r\x00a\x00y\x00L\x00i\x00k\x00e\x00T\x00o\x00A\x00r\x00r\x00a\x00y\x00.\x00j\x00s' @ 19762 : 1 .. (end); will stop at (end)

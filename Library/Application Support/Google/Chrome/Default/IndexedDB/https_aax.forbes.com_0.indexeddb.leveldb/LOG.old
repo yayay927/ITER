@@ -1,0 +1,5 @@
+2021/02/23-13:27:35.645 92723 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_aax.forbes.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/23-13:27:40.103 36e07 Level-0 table #5: started
+2021/02/23-13:27:40.146 36e07 Level-0 table #5: 1192 bytes OK
+2021/02/23-13:27:40.192 36e07 Delete type=0 #3
+2021/02/23-13:27:40.193 36e07 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

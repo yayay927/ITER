@@ -1,0 +1,6 @@
+2021/10/22-10:05:13.643 57403 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/http_otischou.tw_0.indexeddb.leveldb since it was missing.
+2021/10/22-10:05:13.716 57403 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/http_otischou.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/22-13:38:25.951 699ab Level-0 table #5: started
+2021/10/22-13:38:25.974 699ab Level-0 table #5: 4039 bytes OK
+2021/10/22-13:38:26.017 699ab Delete type=0 #3
+2021/10/22-13:38:26.018 699ab Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/09/01-14:18:31.467 24fb3f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_agirls.aotter.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/01-14:18:31.469 24fb3f Recovering log #4
+2021/09/01-14:18:31.469 24fb3f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_agirls.aotter.net_0.indexeddb.leveldb/000004.log 
+2021/09/01-14:20:37.606 240e17 Level-0 table #8: started
+2021/09/01-14:20:37.634 240e17 Level-0 table #8: 3049 bytes OK
+2021/09/01-14:20:37.684 240e17 Delete type=0 #4
+2021/09/01-14:20:37.686 240e17 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/09/01-14:20:37.686 240e17 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 411 : 1
+2021/09/01-14:20:37.686 240e17 Compacting 1@1 + 1@2 files
+2021/09/01-14:20:37.712 240e17 Generated table #9@1: 97 keys, 2146 bytes
+2021/09/01-14:20:37.712 240e17 Compacted 1@1 + 1@2 files => 2146 bytes
+2021/09/01-14:20:37.757 240e17 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/09/01-14:20:37.758 240e17 Delete type=2 #5
+2021/09/01-14:20:37.758 240e17 Delete type=2 #8
+2021/09/01-14:20:37.760 240e17 Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 411 : 1 .. (end); will stop at (end)

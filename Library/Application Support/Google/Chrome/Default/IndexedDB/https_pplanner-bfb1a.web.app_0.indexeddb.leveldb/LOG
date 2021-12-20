@@ -1,0 +1,15 @@
+2021/06/09-23:01:59.974 300b67 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_pplanner-bfb1a.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/09-23:01:59.975 300b67 Recovering log #15
+2021/06/09-23:01:59.975 300b67 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_pplanner-bfb1a.web.app_0.indexeddb.leveldb/000015.log 
+2021/06/10-16:18:17.576 32f423 Level-0 table #20: started
+2021/06/10-16:18:17.605 32f423 Level-0 table #20: 30804 bytes OK
+2021/06/10-16:18:17.656 32f423 Delete type=0 #15
+2021/06/10-16:18:17.660 32f423 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/10-16:18:17.661 32f423 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00A\x00x\x00b\x00n\x00s\x00U\x00N\x00T\x00G\x002\x00S\x00Y\x00q\x00U\x00s\x00C\x002\x00Q\x00q\x00I\x00b\x00B\x00o\x001\x00O\x00L\x00u\x00K\x00X\x00e\x00Z\x00-\x00g\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 763 : 1
+2021/06/10-16:18:17.661 32f423 Compacting 1@1 + 1@2 files
+2021/06/10-16:18:17.686 32f423 Generated table #21@1: 20 keys, 2505 bytes
+2021/06/10-16:18:17.686 32f423 Compacted 1@1 + 1@2 files => 2505 bytes
+2021/06/10-16:18:17.733 32f423 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/10-16:18:17.733 32f423 Delete type=2 #17
+2021/06/10-16:18:17.734 32f423 Delete type=2 #20
+2021/06/10-16:18:17.737 32f423 Manual compaction at level-1 from '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00A\x00x\x00b\x00n\x00s\x00U\x00N\x00T\x00G\x002\x00S\x00Y\x00q\x00U\x00s\x00C\x002\x00Q\x00q\x00I\x00b\x00B\x00o\x001\x00O\x00L\x00u\x00K\x00X\x00e\x00Z\x00-\x00g\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 763 : 1 .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/12/08-17:20:06.763 4b2603 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_hsiangfeng.github.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/08-17:20:06.764 4b2603 Recovering log #11
+2021/12/08-17:20:06.764 4b2603 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_hsiangfeng.github.io_0.indexeddb.leveldb/000011.log 
+2021/12/08-17:20:43.023 4ac803 Level-0 table #16: started
+2021/12/08-17:20:43.045 4ac803 Level-0 table #16: 3604 bytes OK
+2021/12/08-17:20:43.088 4ac803 Delete type=0 #11
+2021/12/08-17:20:43.089 4ac803 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/12/08-17:20:43.089 4ac803 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01 \x03\x00\x10\x8c}\x95\xd9wB\x00\x01>\x00i\x00m\x00a\x00g\x00e\x00s\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00h\x00s\x00i\x00a\x00n\x00g\x00f\x00e\x00n\x00g\x00.\x00g\x00i\x00t\x00h\x00u\x00b\x00.\x00i\x00o\x00/\x00i\x00m\x00a\x00g\x00e\x00s\x00/\x00a\x00n\x00d\x00r\x00o\x00i\x00d\x00/\x001\x008\x000\x00x\x001\x008\x000\x00.\x00p\x00n\x00g' @ 439 : 1
+2021/12/08-17:20:43.089 4ac803 Compacting 1@1 + 1@2 files
+2021/12/08-17:20:43.111 4ac803 Generated table #17@1: 39 keys, 1336 bytes
+2021/12/08-17:20:43.111 4ac803 Compacted 1@1 + 1@2 files => 1336 bytes
+2021/12/08-17:20:43.152 4ac803 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/08-17:20:43.153 4ac803 Delete type=2 #16
+2021/12/08-17:20:43.153 4ac803 Delete type=2 #13
+2021/12/08-17:20:43.155 4ac803 Manual compaction at level-1 from '\x00\x01\x01 \x03\x00\x10\x8c}\x95\xd9wB\x00\x01>\x00i\x00m\x00a\x00g\x00e\x00s\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00h\x00s\x00i\x00a\x00n\x00g\x00f\x00e\x00n\x00g\x00.\x00g\x00i\x00t\x00h\x00u\x00b\x00.\x00i\x00o\x00/\x00i\x00m\x00a\x00g\x00e\x00s\x00/\x00a\x00n\x00d\x00r\x00o\x00i\x00d\x00/\x001\x008\x000\x00x\x001\x008\x000\x00.\x00p\x00n\x00g' @ 439 : 1 .. (end); will stop at (end)

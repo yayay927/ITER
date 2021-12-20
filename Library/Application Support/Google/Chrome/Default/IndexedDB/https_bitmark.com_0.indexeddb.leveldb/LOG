@@ -1,0 +1,15 @@
+2020/12/04-11:59:13.608 44a22b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bitmark.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/04-11:59:13.609 44a22b Recovering log #7
+2020/12/04-11:59:13.609 44a22b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bitmark.com_0.indexeddb.leveldb/000007.log 
+2020/12/04-11:59:47.481 4412f Level-0 table #12: started
+2020/12/04-11:59:47.492 4412f Level-0 table #12: 4323 bytes OK
+2020/12/04-11:59:47.511 4412f Delete type=0 #7
+2020/12/04-11:59:47.512 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/04-11:59:47.512 4412f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x1e\x00/\x00_\x00n\x00u\x00x\x00t\x00/\x00f\x00f\x009\x001\x00e\x007\x00b\x00a\x002\x007\x006\x00c\x00a\x006\x00b\x00f\x007\x00f\x008\x009\x00.\x00j\x00s' @ 1079 : 1
+2020/12/04-11:59:47.512 4412f Compacting 1@1 + 1@2 files
+2020/12/04-11:59:47.522 4412f Generated table #13@1: 90 keys, 5813 bytes
+2020/12/04-11:59:47.522 4412f Compacted 1@1 + 1@2 files => 5813 bytes
+2020/12/04-11:59:47.536 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/04-11:59:47.537 4412f Delete type=2 #12
+2020/12/04-11:59:47.537 4412f Delete type=2 #9
+2020/12/04-11:59:47.537 4412f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x1e\x00/\x00_\x00n\x00u\x00x\x00t\x00/\x00f\x00f\x009\x001\x00e\x007\x00b\x00a\x002\x007\x006\x00c\x00a\x006\x00b\x00f\x007\x00f\x008\x009\x00.\x00j\x00s' @ 1079 : 1 .. (end); will stop at (end)

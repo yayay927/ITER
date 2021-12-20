@@ -1,0 +1,6 @@
+2021/06/09-10:08:55.426 2f6a0f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gua-gua-nougat.web.app_0.indexeddb.leveldb since it was missing.
+2021/06/09-10:08:55.514 2f6a0f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gua-gua-nougat.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/09-10:37:10.629 2f89ef Level-0 table #5: started
+2021/06/09-10:37:10.656 2f89ef Level-0 table #5: 3825 bytes OK
+2021/06/09-10:37:10.703 2f89ef Delete type=0 #3
+2021/06/09-10:37:10.704 2f89ef Manual compaction at level-0 from (begin) .. (end); will stop at (end)

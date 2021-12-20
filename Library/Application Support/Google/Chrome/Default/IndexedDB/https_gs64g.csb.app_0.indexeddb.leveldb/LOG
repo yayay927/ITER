@@ -1,0 +1,6 @@
+2021/05/17-00:59:39.965 a9097 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gs64g.csb.app_0.indexeddb.leveldb since it was missing.
+2021/05/17-00:59:40.073 a9097 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gs64g.csb.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/17-01:00:16.768 7a583 Level-0 table #5: started
+2021/05/17-01:00:16.797 7a583 Level-0 table #5: 6838 bytes OK
+2021/05/17-01:00:16.843 7a583 Delete type=0 #3
+2021/05/17-01:00:16.844 7a583 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

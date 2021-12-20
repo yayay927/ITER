@@ -1,0 +1,5 @@
+2021/04/18-21:21:51.477 85207 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_api.appworks-school.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-21:21:53.508 621bf Level-0 table #5: started
+2021/04/18-21:21:53.535 621bf Level-0 table #5: 217 bytes OK
+2021/04/18-21:21:53.584 621bf Delete type=0 #3
+2021/04/18-21:21:53.585 621bf Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/07/06-14:05:34.681 22eb6f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_elementor.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/06-14:05:34.681 22eb6f Recovering log #4
+2021/07/06-14:05:34.682 22eb6f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_elementor.com_0.indexeddb.leveldb/000004.log 
+2021/07/10-02:12:37.902 27517b Level-0 table #8: started
+2021/07/10-02:12:37.929 27517b Level-0 table #8: 3263 bytes OK
+2021/07/10-02:12:37.979 27517b Delete type=0 #4
+2021/07/10-02:12:37.982 27517b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/07/10-02:12:37.982 27517b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 398 : 1
+2021/07/10-02:12:37.982 27517b Compacting 1@1 + 1@2 files
+2021/07/10-02:12:38.009 27517b Generated table #9@1: 97 keys, 2153 bytes
+2021/07/10-02:12:38.009 27517b Compacted 1@1 + 1@2 files => 2153 bytes
+2021/07/10-02:12:38.072 27517b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/10-02:12:38.073 27517b Delete type=2 #5
+2021/07/10-02:12:38.073 27517b Delete type=2 #8
+2021/07/10-02:12:38.076 27517b Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 398 : 1 .. (end); will stop at (end)

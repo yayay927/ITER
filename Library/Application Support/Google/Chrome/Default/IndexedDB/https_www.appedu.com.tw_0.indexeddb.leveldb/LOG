@@ -1,0 +1,5 @@
+2020/11/25-12:21:39.647 c31cb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.appedu.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/25-12:40:35.482 4412f Level-0 table #5: started
+2020/11/25-12:40:35.497 4412f Level-0 table #5: 25286 bytes OK
+2020/11/25-12:40:35.513 4412f Delete type=0 #3
+2020/11/25-12:40:35.520 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

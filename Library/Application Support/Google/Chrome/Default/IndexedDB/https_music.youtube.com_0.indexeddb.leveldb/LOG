@@ -1,0 +1,6 @@
+2021/11/05-14:12:42.648 1d6b4b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_music.youtube.com_0.indexeddb.leveldb since it was missing.
+2021/11/05-14:12:42.715 1d6b4b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_music.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/05-17:33:05.874 1b7d17 Level-0 table #5: started
+2021/11/05-17:33:05.918 1b7d17 Level-0 table #5: 109147 bytes OK
+2021/11/05-17:33:05.964 1b7d17 Delete type=0 #3
+2021/11/05-17:33:05.966 1b7d17 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

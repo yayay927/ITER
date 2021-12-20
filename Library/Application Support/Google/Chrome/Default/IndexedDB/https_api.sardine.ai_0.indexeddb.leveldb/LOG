@@ -1,0 +1,6 @@
+2021/08/05-17:01:27.636 acf33 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_api.sardine.ai_0.indexeddb.leveldb since it was missing.
+2021/08/05-17:01:27.716 acf33 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_api.sardine.ai_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/05-23:42:50.561 bc653 Level-0 table #5: started
+2021/08/05-23:42:50.587 bc653 Level-0 table #5: 6433 bytes OK
+2021/08/05-23:42:50.636 bc653 Delete type=0 #3
+2021/08/05-23:42:50.638 bc653 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

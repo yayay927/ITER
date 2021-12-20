@@ -1,0 +1,5 @@
+2020/12/31-00:48:39.831 2d5717 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_knowledgeenthusiast.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/31-00:49:11.835 276e9b Level-0 table #5: started
+2020/12/31-00:49:11.848 276e9b Level-0 table #5: 842 bytes OK
+2020/12/31-00:49:11.865 276e9b Delete type=0 #3
+2020/12/31-00:49:11.866 276e9b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

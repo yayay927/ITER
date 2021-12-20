@@ -1,0 +1,8 @@
+2021/05/08-16:08:55.244 1e9c0f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_olympics.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/08-16:08:55.244 1e9c0f Recovering log #4
+2021/05/08-16:08:55.244 1e9c0f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_olympics.com_0.indexeddb.leveldb/000004.log 
+2021/05/09-17:21:34.232 1e3e73 Level-0 table #8: started
+2021/05/09-17:21:34.232 1e3e73 Level-0 table #8: 0 bytes OK
+2021/05/09-17:21:34.272 1e3e73 Delete type=0 #4
+2021/05/09-17:21:34.272 1e3e73 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/09-17:21:34.272 1e3e73 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

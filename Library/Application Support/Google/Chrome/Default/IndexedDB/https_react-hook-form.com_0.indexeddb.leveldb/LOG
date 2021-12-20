@@ -1,0 +1,6 @@
+2021/06/03-23:56:45.593 25a70f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_react-hook-form.com_0.indexeddb.leveldb since it was missing.
+2021/06/03-23:56:45.700 25a70f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_react-hook-form.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/03-23:57:25.302 1d2bef Level-0 table #5: started
+2021/06/03-23:57:25.329 1d2bef Level-0 table #5: 2494 bytes OK
+2021/06/03-23:57:25.375 1d2bef Delete type=0 #3
+2021/06/03-23:57:25.376 1d2bef Manual compaction at level-0 from (begin) .. (end); will stop at (end)

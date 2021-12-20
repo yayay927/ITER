@@ -1,0 +1,6 @@
+2021/11/22-18:46:21.855 361b8b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_coincodex.com_0.indexeddb.leveldb since it was missing.
+2021/11/22-18:46:21.924 361b8b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_coincodex.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/22-18:46:57.520 3622f7 Level-0 table #5: started
+2021/11/22-18:46:57.542 3622f7 Level-0 table #5: 5747 bytes OK
+2021/11/22-18:46:57.585 3622f7 Delete type=0 #3
+2021/11/22-18:46:57.586 3622f7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

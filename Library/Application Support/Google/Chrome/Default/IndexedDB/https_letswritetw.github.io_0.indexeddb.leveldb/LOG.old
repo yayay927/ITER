@@ -1,0 +1,6 @@
+2021/05/22-12:59:31.483 115a03 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_letswritetw.github.io_0.indexeddb.leveldb since it was missing.
+2021/05/22-12:59:31.558 115a03 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_letswritetw.github.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/22-13:00:10.322 115a03 Level-0 table #5: started
+2021/05/22-13:00:10.351 115a03 Level-0 table #5: 1126 bytes OK
+2021/05/22-13:00:10.399 115a03 Delete type=0 #3
+2021/05/22-13:00:10.401 115a03 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

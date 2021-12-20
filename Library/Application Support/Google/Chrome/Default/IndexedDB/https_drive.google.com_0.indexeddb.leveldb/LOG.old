@@ -1,0 +1,15 @@
+2021/12/02-19:12:36.080 3fcb4f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/02-19:12:36.085 3fcb4f Recovering log #12826
+2021/12/02-19:12:36.085 3fcb4f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/012826.log 
+2021/12/02-19:13:13.229 3fcb4f Level-0 table #12831: started
+2021/12/02-19:13:13.251 3fcb4f Level-0 table #12831: 209 bytes OK
+2021/12/02-19:13:13.297 3fcb4f Delete type=0 #12826
+2021/12/02-19:13:13.297 3fcb4f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/12/02-19:13:13.297 3fcb4f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 1305682 : 1
+2021/12/02-19:13:13.298 3fcb4f Compacting 1@1 + 1@2 files
+2021/12/02-19:13:13.320 3fcb4f Generated table #12832@1: 197 keys, 35460 bytes
+2021/12/02-19:13:13.320 3fcb4f Compacted 1@1 + 1@2 files => 35460 bytes
+2021/12/02-19:13:13.363 3fcb4f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/02-19:13:13.364 3fcb4f Delete type=2 #12831
+2021/12/02-19:13:13.364 3fcb4f Delete type=2 #12828
+2021/12/02-19:13:13.366 3fcb4f Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 1305682 : 1 .. (end); will stop at (end)

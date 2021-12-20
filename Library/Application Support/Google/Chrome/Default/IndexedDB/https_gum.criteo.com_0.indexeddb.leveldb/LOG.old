@@ -1,0 +1,15 @@
+2021/04/19-13:19:28.008 2fb2f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gum.criteo.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/19-13:19:28.009 2fb2f Recovering log #10
+2021/04/19-13:19:28.009 2fb2f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_gum.criteo.com_0.indexeddb.leveldb/000010.log 
+2021/04/19-13:19:30.302 2fb2f Level-0 table #14: started
+2021/04/19-13:19:30.328 2fb2f Level-0 table #14: 190 bytes OK
+2021/04/19-13:19:30.376 2fb2f Delete type=0 #10
+2021/04/19-13:19:30.377 2fb2f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/19-13:19:30.377 2fb2f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 4 : 1
+2021/04/19-13:19:30.377 2fb2f Compacting 1@1 + 1@2 files
+2021/04/19-13:19:30.403 2fb2f Generated table #15@1: 4 keys, 236 bytes
+2021/04/19-13:19:30.403 2fb2f Compacted 1@1 + 1@2 files => 236 bytes
+2021/04/19-13:19:30.450 2fb2f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/19-13:19:30.451 2fb2f Delete type=2 #14
+2021/04/19-13:19:30.451 2fb2f Delete type=2 #5
+2021/04/19-13:19:30.452 2fb2f Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 4 : 1 .. (end); will stop at (end)

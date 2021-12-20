@@ -1,0 +1,28 @@
+2021/07/21-01:09:51.198 3bc497 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/http_localhost_3000.indexeddb.leveldb/MANIFEST-000001
+2021/07/21-01:09:51.200 3bc497 Recovering log #1245
+2021/07/21-01:09:51.201 3bc497 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/http_localhost_3000.indexeddb.leveldb/001245.log 
+2021/07/21-01:09:51.379 3bc497 Level-0 table #1250: started
+2021/07/21-01:09:51.407 3bc497 Level-0 table #1250: 3909 bytes OK
+2021/07/21-01:09:51.478 3bc497 Delete type=0 #1245
+2021/07/21-01:09:51.480 3bc497 Manual compaction at level-0 from '\x00\x15\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/07/21-01:17:02.226 39ef2b Level-0 table #1252: started
+2021/07/21-01:17:02.261 39ef2b Level-0 table #1252: 1584 bytes OK
+2021/07/21-01:17:02.369 39ef2b Delete type=0 #1249
+2021/07/21-01:17:02.370 39ef2b Manual compaction at level-0 from '\x00\x16\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x17\x00\x00\x00' @ 0 : 0; will stop at '\x00\x16\x00\x00\x05' @ 64293 : 1
+2021/07/21-01:17:02.370 39ef2b Compacting 1@0 + 1@1 files
+2021/07/21-01:17:02.395 39ef2b Generated table #1253@0: 32 keys, 3274 bytes
+2021/07/21-01:17:02.395 39ef2b Compacted 1@0 + 1@1 files => 3274 bytes
+2021/07/21-01:17:02.445 39ef2b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/07/21-01:17:02.446 39ef2b Delete type=2 #1252
+2021/07/21-01:17:02.446 39ef2b Manual compaction at level-0 from '\x00\x16\x00\x00\x05' @ 64293 : 1 .. '\x00\x17\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/07/21-08:31:19.481 3e50d3 Level-0 table #1255: started
+2021/07/21-08:31:19.524 3e50d3 Level-0 table #1255: 1707 bytes OK
+2021/07/21-08:31:19.591 3e50d3 Delete type=0 #1251
+2021/07/21-08:31:19.633 3e50d3 Delete type=2 #1250
+2021/07/21-08:31:19.635 3e50d3 Manual compaction at level-0 from '\x00\x17\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x18\x00\x00\x00' @ 0 : 0; will stop at '\x00\x17\x00\x00\x05' @ 64336 : 1
+2021/07/21-08:31:19.635 3e50d3 Compacting 1@0 + 1@1 files
+2021/07/21-08:31:19.684 3e50d3 Generated table #1256@0: 41 keys, 3348 bytes
+2021/07/21-08:31:19.684 3e50d3 Compacted 1@0 + 1@1 files => 3348 bytes
+2021/07/21-08:31:19.737 3e50d3 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/07/21-08:31:19.738 3e50d3 Delete type=2 #1255
+2021/07/21-08:31:19.738 3e50d3 Manual compaction at level-0 from '\x00\x17\x00\x00\x05' @ 64336 : 1 .. '\x00\x18\x00\x00\x00' @ 0 : 0; will stop at (end)

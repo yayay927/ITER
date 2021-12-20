@@ -1,0 +1,15 @@
+2021/05/29-00:26:46.099 1b9ebb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_therichpost.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/29-00:26:46.099 1b9ebb Recovering log #7
+2021/05/29-00:26:46.099 1b9ebb Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_therichpost.com_0.indexeddb.leveldb/000007.log 
+2021/05/29-00:26:57.047 186c33 Level-0 table #12: started
+2021/05/29-00:26:57.074 186c33 Level-0 table #12: 3415 bytes OK
+2021/05/29-00:26:57.120 186c33 Delete type=0 #7
+2021/05/29-00:26:57.120 186c33 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/29-00:26:57.120 186c33 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 578 : 1
+2021/05/29-00:26:57.120 186c33 Compacting 1@1 + 1@2 files
+2021/05/29-00:26:57.146 186c33 Generated table #13@1: 96 keys, 2117 bytes
+2021/05/29-00:26:57.146 186c33 Compacted 1@1 + 1@2 files => 2117 bytes
+2021/05/29-00:26:57.191 186c33 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/29-00:26:57.192 186c33 Delete type=2 #12
+2021/05/29-00:26:57.192 186c33 Delete type=2 #9
+2021/05/29-00:26:57.193 186c33 Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 578 : 1 .. (end); will stop at (end)

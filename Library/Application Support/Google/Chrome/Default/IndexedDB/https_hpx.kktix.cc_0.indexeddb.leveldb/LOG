@@ -1,0 +1,18 @@
+2021/07/25-00:13:26.860 441e1b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_hpx.kktix.cc_0.indexeddb.leveldb since it was missing.
+2021/07/25-00:13:26.984 441e1b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_hpx.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/25-00:13:33.669 45ef5b Level-0 table #5: started
+2021/07/25-00:13:33.695 45ef5b Level-0 table #5: 556 bytes OK
+2021/07/25-00:13:33.742 45ef5b Delete type=0 #3
+2021/07/25-00:13:33.743 45ef5b Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/07/25-00:13:35.696 45ef5b Level-0 table #7: started
+2021/07/25-00:13:35.722 45ef5b Level-0 table #7: 237 bytes OK
+2021/07/25-00:13:35.768 45ef5b Delete type=0 #4
+2021/07/25-00:13:35.768 45ef5b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/07/25-00:13:35.768 45ef5b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 21 : 0
+2021/07/25-00:13:35.768 45ef5b Compacting 1@1 + 1@2 files
+2021/07/25-00:13:35.794 45ef5b Generated table #8@1: 5 keys, 237 bytes
+2021/07/25-00:13:35.794 45ef5b Compacted 1@1 + 1@2 files => 237 bytes
+2021/07/25-00:13:35.839 45ef5b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/25-00:13:35.840 45ef5b Delete type=2 #7
+2021/07/25-00:13:35.840 45ef5b Delete type=2 #5
+2021/07/25-00:13:35.840 45ef5b Manual compaction at level-1 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 21 : 0 .. (end); will stop at (end)

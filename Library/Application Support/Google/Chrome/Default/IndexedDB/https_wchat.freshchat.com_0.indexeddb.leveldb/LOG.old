@@ -1,0 +1,15 @@
+2021/11/23-21:01:16.651 3744bb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wchat.freshchat.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/23-21:01:16.651 3744bb Recovering log #211
+2021/11/23-21:01:16.659 3744bb Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wchat.freshchat.com_0.indexeddb.leveldb/000211.log 
+2021/11/23-21:01:26.438 37482f Level-0 table #216: started
+2021/11/23-21:01:26.470 37482f Level-0 table #216: 685638 bytes OK
+2021/11/23-21:01:26.515 37482f Delete type=0 #211
+2021/11/23-21:01:26.516 37482f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/23-21:01:26.517 37482f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01\x0f\x003\x000\x001\x009\x001\x005\x003\x003\x004\x003\x008\x002\x003\x002\x003' @ 94081 : 0
+2021/11/23-21:01:26.517 37482f Compacting 1@1 + 1@2 files
+2021/11/23-21:01:26.541 37482f Generated table #217@1: 49 keys, 44593 bytes
+2021/11/23-21:01:26.542 37482f Compacted 1@1 + 1@2 files => 44593 bytes
+2021/11/23-21:01:26.584 37482f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/23-21:01:26.585 37482f Delete type=2 #216
+2021/11/23-21:01:26.586 37482f Delete type=2 #213
+2021/11/23-21:01:26.587 37482f Manual compaction at level-1 from '\x00\x01\x01\x03\x01\x0f\x003\x000\x001\x009\x001\x005\x003\x003\x004\x003\x008\x002\x003\x002\x003' @ 94081 : 0 .. (end); will stop at (end)

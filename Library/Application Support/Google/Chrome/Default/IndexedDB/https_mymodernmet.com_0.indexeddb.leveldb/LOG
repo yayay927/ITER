@@ -1,0 +1,6 @@
+2021/05/16-14:51:55.565 8e1eb Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mymodernmet.com_0.indexeddb.leveldb since it was missing.
+2021/05/16-14:51:55.642 8e1eb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mymodernmet.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/16-14:53:48.207 32e1f Level-0 table #5: started
+2021/05/16-14:53:48.233 32e1f Level-0 table #5: 6169 bytes OK
+2021/05/16-14:53:48.280 32e1f Delete type=0 #3
+2021/05/16-14:53:48.280 32e1f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

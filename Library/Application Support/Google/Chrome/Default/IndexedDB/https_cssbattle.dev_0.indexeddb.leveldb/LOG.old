@@ -1,0 +1,5 @@
+2021/05/08-22:38:40.804 20b0e7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cssbattle.dev_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/08-23:00:54.050 1e3403 Level-0 table #5: started
+2021/05/08-23:00:54.077 1e3403 Level-0 table #5: 1148 bytes OK
+2021/05/08-23:00:54.123 1e3403 Delete type=0 #3
+2021/05/08-23:00:54.125 1e3403 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

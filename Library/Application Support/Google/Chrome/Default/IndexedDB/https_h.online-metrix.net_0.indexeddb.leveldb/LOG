@@ -1,0 +1,8 @@
+2021/06/09-09:53:40.358 2eedbf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_h.online-metrix.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/09-09:53:40.359 2eedbf Recovering log #18
+2021/06/09-09:53:40.359 2eedbf Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_h.online-metrix.net_0.indexeddb.leveldb/000018.log 
+2021/06/09-09:53:51.286 2f443b Level-0 table #22: started
+2021/06/09-09:53:51.286 2f443b Level-0 table #22: 0 bytes OK
+2021/06/09-09:53:51.336 2f443b Delete type=0 #18
+2021/06/09-09:53:51.337 2f443b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/09-09:53:51.337 2f443b Manual compaction at level-1 from (begin) .. (end); will stop at (end)

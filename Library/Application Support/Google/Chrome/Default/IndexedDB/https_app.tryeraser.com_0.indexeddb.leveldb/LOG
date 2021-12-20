@@ -1,0 +1,24 @@
+2021/06/28-02:09:36.693 d5b73 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.tryeraser.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/28-02:09:36.696 d5b73 Recovering log #3927
+2021/06/28-02:09:36.696 d5b73 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.tryeraser.com_0.indexeddb.leveldb/003927.log 
+2021/06/28-02:09:36.816 b177b Level-0 table #3932: started
+2021/06/28-02:09:36.869 b177b Level-0 table #3932: 595 bytes OK
+2021/06/28-02:09:36.949 b177b Delete type=0 #3927
+2021/06/28-02:09:36.950 b177b Manual compaction at level-0 from ' \x0f\x05\x00\x00\x00' @ 72057594037927935 : 1 .. ' \x10\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/06/28-02:09:36.975 b177b Level-0 table #3934: started
+2021/06/28-02:09:37.001 b177b Level-0 table #3934: 1570 bytes OK
+2021/06/28-02:09:37.098 b177b Delete type=0 #3931
+2021/06/28-02:09:37.098 b177b Manual compaction at level-0 from ' \x10\x05\x00\x00\x00' @ 72057594037927935 : 1 .. ' \x11\x05\x00\x00\x00' @ 0 : 0; will stop at ' \x10\x05\x00\x00\x05' @ 1029869 : 1
+2021/06/28-02:09:37.098 b177b Compacting 1@0 + 1@1 files
+2021/06/28-02:09:37.124 b177b Generated table #3935@0: 21 keys, 1558 bytes
+2021/06/28-02:09:37.125 b177b Compacted 1@0 + 1@1 files => 1558 bytes
+2021/06/28-02:09:37.170 b177b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/06/28-02:09:37.171 b177b Delete type=2 #3934
+2021/06/28-02:09:37.171 b177b Manual compaction at level-0 from ' \x10\x05\x00\x00\x05' @ 1029869 : 1 .. ' \x11\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/06/28-02:10:11.741 b4cb3 Compacting 1@1 + 1@2 files
+2021/06/28-02:10:11.770 b4cb3 Generated table #3936@1: 492 keys, 32371 bytes
+2021/06/28-02:10:11.770 b4cb3 Compacted 1@1 + 1@2 files => 32371 bytes
+2021/06/28-02:10:11.817 b4cb3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/28-02:10:11.818 b4cb3 Delete type=2 #3929
+2021/06/28-02:10:11.818 b4cb3 Delete type=2 #3932
+2021/06/28-02:10:11.818 b4cb3 Delete type=2 #3935

@@ -1,0 +1,34 @@
+{
+   "action": {
+      "default_icon": "logo512.png",
+      "default_popup": "index.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "contentScript.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "description": "A comprehensive multi-crypto management tool in your browser",
+   "differential_fingerprint": "1.1f5ef9e2246915d987e3cd62c7636559cc13d150f8f998003bab745d3a9d284c",
+   "externally_connectable": {
+      "matches": [ "*://localhost/*", "*://*.forbole.com/*" ]
+   },
+   "icons": {
+      "512": "logo512.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAleAThIdij/P8heRZJqIcRLJforb//nUMWKUJjJsEFU12OEtZ1l/2iog5Rb5HIISocx7OQMFJf6zA+Bs2awLjrt0zyJlSliv3dZ36Eaw+nj+uaBkkIVTeWmLKrP4/TCBfpXB+eNm31p2FB2CV/kiKV1nD0GTmbLokiPllX6NvHGxvWrWxUs7TipEAggbcBKd/3lCI/K4ysRyliJrhCdpHvKOaiF1hTmh6p00lMWp6zElc/W0lW0X7pwsfMXXhcPa2LLQu8QDbxVpkfqYloLEXYG2AY6ZZpu2yxw/pkgvVcBebmDT+UEzdr5w1b8z1uQeXw/FBKnnm0MuDWLyxNjR4kwIDAQAB",
+   "manifest_version": 3,
+   "name": "Forbole X",
+   "permissions": [ "storage", "hid" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "scriptToInject.js" ]
+   } ]
+}

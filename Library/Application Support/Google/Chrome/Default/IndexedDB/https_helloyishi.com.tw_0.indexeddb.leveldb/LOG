@@ -1,0 +1,5 @@
+2020/12/14-12:25:25.402 40483 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_helloyishi.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-10:55:05.973 7de23 Level-0 table #5: started
+2020/12/15-10:55:05.985 7de23 Level-0 table #5: 2193 bytes OK
+2020/12/15-10:55:06.001 7de23 Delete type=0 #3
+2020/12/15-10:55:06.002 7de23 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

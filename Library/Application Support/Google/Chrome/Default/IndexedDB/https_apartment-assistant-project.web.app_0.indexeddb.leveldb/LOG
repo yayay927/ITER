@@ -1,0 +1,6 @@
+2021/05/16-16:48:57.485 8672f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_apartment-assistant-project.web.app_0.indexeddb.leveldb since it was missing.
+2021/05/16-16:48:57.566 8672f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_apartment-assistant-project.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/16-17:04:44.392 8dd8b Level-0 table #5: started
+2021/05/16-17:04:44.419 8dd8b Level-0 table #5: 6024 bytes OK
+2021/05/16-17:04:44.465 8dd8b Delete type=0 #3
+2021/05/16-17:04:44.466 8dd8b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

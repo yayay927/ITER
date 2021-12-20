@@ -1,0 +1,13 @@
+2021/07/14-15:58:44.068 2eac17 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_snapcamera.snapchat.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/14-15:58:44.068 2eac17 Recovering log #20
+2021/07/14-15:58:44.068 2eac17 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_snapcamera.snapchat.com_0.indexeddb.leveldb/000020.log 
+2021/07/14-15:58:45.591 311487 Level-0 table #24: started
+2021/07/14-15:58:45.624 311487 Level-0 table #24: 572 bytes OK
+2021/07/14-15:58:45.709 311487 Delete type=0 #20
+2021/07/14-15:58:45.710 311487 Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at '\x00\x06\x00\x00\x05' @ 104 : 1
+2021/07/14-15:58:45.710 311487 Compacting 1@0 + 1@1 files
+2021/07/14-15:58:45.807 311487 Generated table #25@0: 4 keys, 259 bytes
+2021/07/14-15:58:45.807 311487 Compacted 1@0 + 1@1 files => 259 bytes
+2021/07/14-15:58:45.890 311487 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/07/14-15:58:45.891 311487 Delete type=2 #24
+2021/07/14-15:58:45.891 311487 Manual compaction at level-0 from '\x00\x06\x00\x00\x05' @ 104 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)

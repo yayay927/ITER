@@ -1,0 +1,5 @@
+2020/11/01-23:47:52.043 1e245b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_freehunter.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/13-23:53:31.782 4412f Level-0 table #5: started
+2020/11/13-23:53:31.794 4412f Level-0 table #5: 1515 bytes OK
+2020/11/13-23:53:31.813 4412f Delete type=0 #3
+2020/11/13-23:53:31.814 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

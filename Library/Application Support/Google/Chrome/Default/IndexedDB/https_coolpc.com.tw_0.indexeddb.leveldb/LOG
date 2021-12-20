@@ -1,0 +1,6 @@
+2021/06/28-23:22:44.861 11a903 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_coolpc.com.tw_0.indexeddb.leveldb since it was missing.
+2021/06/28-23:22:44.959 11a903 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_coolpc.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/28-23:23:19.975 12696f Level-0 table #5: started
+2021/06/28-23:23:20.001 12696f Level-0 table #5: 11943 bytes OK
+2021/06/28-23:23:20.047 12696f Delete type=0 #3
+2021/06/28-23:23:20.048 12696f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

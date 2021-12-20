@@ -1,0 +1,15 @@
+2021/11/26-11:29:25.449 38022f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/http_otischou.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/26-11:29:25.455 38022f Recovering log #4
+2021/11/26-11:29:25.455 38022f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/http_otischou.tw_0.indexeddb.leveldb/000004.log 
+2021/11/26-11:31:09.914 37ed7b Level-0 table #8: started
+2021/11/26-11:31:09.939 37ed7b Level-0 table #8: 3972 bytes OK
+2021/11/26-11:31:09.983 37ed7b Delete type=0 #4
+2021/11/26-11:31:09.983 37ed7b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/26-11:31:09.984 37ed7b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x007\x009\x005\x008\x004\x000\x004\x003\x009\x009\x007\x009\x00:\x00w\x00e\x00b\x00:\x003\x007\x00c\x002\x00d\x00e\x00e\x007\x006\x001\x006\x002\x001\x00f\x00e\x006\x00c\x00e\x00b\x009\x00e\x00e' @ 159 : 1
+2021/11/26-11:31:09.984 37ed7b Compacting 1@1 + 1@2 files
+2021/11/26-11:31:10.004 37ed7b Generated table #9@1: 21 keys, 1298 bytes
+2021/11/26-11:31:10.004 37ed7b Compacted 1@1 + 1@2 files => 1298 bytes
+2021/11/26-11:31:10.046 37ed7b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/26-11:31:10.047 37ed7b Delete type=2 #5
+2021/11/26-11:31:10.047 37ed7b Delete type=2 #8
+2021/11/26-11:31:10.049 37ed7b Manual compaction at level-1 from '\x00\x01\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x007\x009\x005\x008\x004\x000\x004\x003\x009\x009\x007\x009\x00:\x00w\x00e\x00b\x00:\x003\x007\x00c\x002\x00d\x00e\x00e\x007\x006\x001\x006\x002\x001\x00f\x00e\x006\x00c\x00e\x00b\x009\x00e\x00e' @ 159 : 1 .. (end); will stop at (end)

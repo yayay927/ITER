@@ -1,0 +1,6 @@
+2021/06/30-12:43:20.556 14df67 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_musicfe.dev_0.indexeddb.leveldb since it was missing.
+2021/06/30-12:43:20.639 14df67 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_musicfe.dev_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/30-12:43:54.339 1042bb Level-0 table #5: started
+2021/06/30-12:43:54.366 1042bb Level-0 table #5: 4280 bytes OK
+2021/06/30-12:43:54.412 1042bb Delete type=0 #3
+2021/06/30-12:43:54.413 1042bb Manual compaction at level-0 from (begin) .. (end); will stop at (end)

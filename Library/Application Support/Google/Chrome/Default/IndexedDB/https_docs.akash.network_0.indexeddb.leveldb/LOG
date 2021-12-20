@@ -1,0 +1,6 @@
+2021/10/14-11:52:46.954 2dfaf Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.akash.network_0.indexeddb.leveldb since it was missing.
+2021/10/14-11:52:47.033 2dfaf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.akash.network_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/14-11:52:47.306 10153 Level-0 table #5: started
+2021/10/14-11:52:47.327 10153 Level-0 table #5: 1894 bytes OK
+2021/10/14-11:52:47.385 10153 Delete type=0 #3
+2021/10/14-11:52:47.385 10153 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

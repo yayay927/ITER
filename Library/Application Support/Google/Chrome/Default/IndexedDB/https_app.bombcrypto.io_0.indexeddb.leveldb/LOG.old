@@ -1,0 +1,18 @@
+2021/11/11-15:57:06.059 22beb3 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.bombcrypto.io_0.indexeddb.leveldb since it was missing.
+2021/11/11-15:57:06.128 22beb3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.bombcrypto.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/11-15:57:09.853 22b74f Level-0 table #5: started
+2021/11/11-15:57:09.873 22b74f Level-0 table #5: 4289 bytes OK
+2021/11/11-15:57:09.935 22b74f Delete type=0 #3
+2021/11/11-15:57:09.935 22b74f Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/11-16:37:07.804 21c7bf Level-0 table #7: started
+2021/11/11-16:37:07.828 21c7bf Level-0 table #7: 2876 bytes OK
+2021/11/11-16:37:07.871 21c7bf Delete type=0 #4
+2021/11/11-16:37:07.873 21c7bf Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/11-16:37:07.874 21c7bf Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x04\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x004\x006\x007\x009\x007\x008\x006\x005\x002\x006\x006\x007\x00:\x00w\x00e\x00b\x00:\x00c\x009\x00b\x007\x00f\x004\x007\x009\x00c\x007\x00d\x00d\x002\x00e\x003\x007\x009\x007\x00d\x009\x005\x00e' @ 325 : 1
+2021/11/11-16:37:07.874 21c7bf Compacting 1@1 + 1@2 files
+2021/11/11-16:37:07.896 21c7bf Generated table #8@1: 98 keys, 2727 bytes
+2021/11/11-16:37:07.896 21c7bf Compacted 1@1 + 1@2 files => 2727 bytes
+2021/11/11-16:37:07.938 21c7bf compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/11-16:37:07.938 21c7bf Delete type=2 #7
+2021/11/11-16:37:07.938 21c7bf Delete type=2 #5
+2021/11/11-16:37:07.940 21c7bf Manual compaction at level-1 from '\x00\x04\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x004\x006\x007\x009\x007\x008\x006\x005\x002\x006\x006\x007\x00:\x00w\x00e\x00b\x00:\x00c\x009\x00b\x007\x00f\x004\x007\x009\x00c\x007\x00d\x00d\x002\x00e\x003\x007\x009\x007\x00d\x009\x005\x00e' @ 325 : 1 .. (end); will stop at (end)

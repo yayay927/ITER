@@ -1,0 +1,46 @@
+2021/11/10-14:37:29.349 20071f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_matters.news_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/10-14:37:29.350 20071f Recovering log #84
+2021/11/10-14:37:29.350 20071f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_matters.news_0.indexeddb.leveldb/000084.log 
+2021/11/10-14:37:29.545 2344ab Level-0 table #88: started
+2021/11/10-14:37:29.582 2344ab Level-0 table #88: 1718 bytes OK
+2021/11/10-14:37:29.636 2344ab Delete type=0 #84
+2021/11/10-14:37:29.637 2344ab Manual compaction at level-0 from '\x00\x13\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x14\x00\x00\x00' @ 0 : 0; will stop at '\x00\x13\x00\x00\x05' @ 900 : 1
+2021/11/10-14:37:29.637 2344ab Compacting 1@0 + 1@1 files
+2021/11/10-14:37:29.696 2344ab Generated table #89@0: 19 keys, 1308 bytes
+2021/11/10-14:37:29.696 2344ab Compacted 1@0 + 1@1 files => 1308 bytes
+2021/11/10-14:37:29.768 2344ab compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/10-14:37:29.768 2344ab Delete type=2 #88
+2021/11/10-14:37:29.768 2344ab Manual compaction at level-0 from '\x00\x13\x00\x00\x05' @ 900 : 1 .. '\x00\x14\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/10-15:14:54.288 203d4b Level-0 table #91: started
+2021/11/10-15:14:54.310 203d4b Level-0 table #91: 2288 bytes OK
+2021/11/10-15:14:54.352 203d4b Delete type=0 #87
+2021/11/10-15:14:54.352 203d4b Delete type=2 #85
+2021/11/10-15:14:54.355 203d4b Manual compaction at level-0 from '\x00\x14\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x15\x00\x00\x00' @ 0 : 0; will stop at '\x00\x14\x00\x00\x05' @ 955 : 1
+2021/11/10-15:14:54.355 203d4b Compacting 1@0 + 1@1 files
+2021/11/10-15:14:54.378 203d4b Generated table #92@0: 27 keys, 1376 bytes
+2021/11/10-15:14:54.378 203d4b Compacted 1@0 + 1@1 files => 1376 bytes
+2021/11/10-15:14:54.424 203d4b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/10-15:14:54.426 203d4b Delete type=2 #91
+2021/11/10-15:14:54.427 203d4b Manual compaction at level-0 from '\x00\x14\x00\x00\x05' @ 955 : 1 .. '\x00\x15\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/10-15:16:36.742 20087b Level-0 table #94: started
+2021/11/10-15:16:36.764 20087b Level-0 table #94: 1699 bytes OK
+2021/11/10-15:16:36.807 20087b Delete type=2 #89
+2021/11/10-15:16:36.807 20087b Delete type=0 #90
+2021/11/10-15:16:36.807 20087b Manual compaction at level-0 from '\x00\x15\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at '\x00\x15\x00\x00\x05' @ 998 : 1
+2021/11/10-15:16:36.807 20087b Compacting 1@0 + 1@1 files
+2021/11/10-15:16:36.829 20087b Generated table #95@0: 39 keys, 1486 bytes
+2021/11/10-15:16:36.829 20087b Compacted 1@0 + 1@1 files => 1486 bytes
+2021/11/10-15:16:36.894 20087b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/10-15:16:36.895 20087b Delete type=2 #94
+2021/11/10-15:16:36.896 20087b Manual compaction at level-0 from '\x00\x15\x00\x00\x05' @ 998 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/10-15:16:42.967 203d4b Level-0 table #97: started
+2021/11/10-15:16:42.989 203d4b Level-0 table #97: 1689 bytes OK
+2021/11/10-15:16:43.033 203d4b Delete type=0 #93
+2021/11/10-15:16:43.033 203d4b Delete type=2 #92
+2021/11/10-15:16:43.040 203d4b Manual compaction at level-0 from '\x00\x16\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x17\x00\x00\x00' @ 0 : 0; will stop at '\x00\x16\x00\x00\x05' @ 1041 : 1
+2021/11/10-15:16:43.041 203d4b Compacting 1@0 + 1@1 files
+2021/11/10-15:16:43.062 203d4b Generated table #98@0: 51 keys, 1600 bytes
+2021/11/10-15:16:43.062 203d4b Compacted 1@0 + 1@1 files => 1600 bytes
+2021/11/10-15:16:43.104 203d4b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/10-15:16:43.124 203d4b Delete type=2 #97
+2021/11/10-15:16:43.124 203d4b Manual compaction at level-0 from '\x00\x16\x00\x00\x05' @ 1041 : 1 .. '\x00\x17\x00\x00\x00' @ 0 : 0; will stop at (end)

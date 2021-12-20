@@ -1,0 +1,5 @@
+2020/10/25-17:23:56.607 139cab Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mail.yahoo.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/25-17:31:02.994 4412f Level-0 table #5: started
+2020/10/25-17:31:03.006 4412f Level-0 table #5: 1433 bytes OK
+2020/10/25-17:31:03.022 4412f Delete type=0 #3
+2020/10/25-17:31:03.023 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

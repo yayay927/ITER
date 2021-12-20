@@ -1,0 +1,13 @@
+2021/10/14-12:04:25.835 10103 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ifoodie.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/14-12:04:25.835 10103 Recovering log #21
+2021/10/14-12:04:25.837 10103 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ifoodie.tw_0.indexeddb.leveldb/000021.log 
+2021/10/14-12:04:26.353 10103 Level-0 table #25: started
+2021/10/14-12:04:26.376 10103 Level-0 table #25: 18036 bytes OK
+2021/10/14-12:04:26.418 10103 Delete type=0 #21
+2021/10/14-12:04:26.439 10103 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at '\x00\x07\x00\x00\x05' @ 1473 : 1
+2021/10/14-12:04:26.439 10103 Compacting 1@0 + 1@1 files
+2021/10/14-12:04:26.461 10103 Generated table #26@0: 189 keys, 3855 bytes
+2021/10/14-12:04:26.461 10103 Compacted 1@0 + 1@1 files => 3855 bytes
+2021/10/14-12:04:26.545 10103 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/10/14-12:04:26.546 10103 Delete type=2 #25
+2021/10/14-12:04:26.550 1527 Manual compaction at level-0 from '\x00\x07\x00\x00\x05' @ 1473 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)

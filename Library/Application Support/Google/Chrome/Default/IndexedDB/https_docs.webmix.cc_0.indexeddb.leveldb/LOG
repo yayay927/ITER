@@ -1,0 +1,6 @@
+2021/06/30-09:22:36.078 155b03 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.webmix.cc_0.indexeddb.leveldb since it was missing.
+2021/06/30-09:22:36.157 155b03 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_docs.webmix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/30-09:35:06.275 155843 Level-0 table #5: started
+2021/06/30-09:35:06.301 155843 Level-0 table #5: 1137 bytes OK
+2021/06/30-09:35:06.355 155843 Delete type=0 #3
+2021/06/30-09:35:06.356 14dc2b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

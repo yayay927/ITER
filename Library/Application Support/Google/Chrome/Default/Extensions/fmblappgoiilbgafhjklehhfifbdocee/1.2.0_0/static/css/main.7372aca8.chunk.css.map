@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,eACF,CACA,OACE,WACF,CACA,MACE,YAAa,CACb,WAAY,CACZ,eACF","file":"main.7372aca8.chunk.css","sourcesContent":["body {\n  margin: 0;\n  overflow: hidden;\n}\niframe {\n  border: none;\n}\n#root {\n  height: 600px;\n  width: 520px;\n  overflow: hidden;\n}\n"]}

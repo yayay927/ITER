@@ -1,0 +1,23 @@
+2021/11/02-10:36:16.775 14c4e7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wallet.keplr.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/02-10:36:16.775 14c4e7 Recovering log #45
+2021/11/02-10:36:16.775 14c4e7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_wallet.keplr.app_0.indexeddb.leveldb/000045.log 
+2021/11/02-10:36:17.278 142163 Level-0 table #50: started
+2021/11/02-10:36:17.300 142163 Level-0 table #50: 584 bytes OK
+2021/11/02-10:36:17.344 142163 Delete type=0 #45
+2021/11/02-10:36:17.344 142163 Manual compaction at level-0 from '\x00\x0e\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0f\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/02-10:36:19.328 148577 Compacting 1@1 + 1@2 files
+2021/11/02-10:36:19.373 148577 Generated table #51@1: 366 keys, 92446 bytes
+2021/11/02-10:36:19.374 148577 Compacted 1@1 + 1@2 files => 92446 bytes
+2021/11/02-10:36:19.415 148577 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/02-10:36:19.416 148577 Delete type=2 #50
+2021/11/02-10:36:19.417 148577 Delete type=2 #47
+2021/11/02-10:37:28.006 14b913 Level-0 table #53: started
+2021/11/02-10:37:28.031 14b913 Level-0 table #53: 112210 bytes OK
+2021/11/02-10:37:28.094 14b913 Delete type=0 #49
+2021/11/02-10:37:28.095 14b913 Manual compaction at level-0 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/02-10:37:33.551 148e7b Compacting 1@1 + 1@2 files
+2021/11/02-10:37:33.620 148e7b Generated table #54@1: 366 keys, 92040 bytes
+2021/11/02-10:37:33.620 148e7b Compacted 1@1 + 1@2 files => 92040 bytes
+2021/11/02-10:37:33.662 148e7b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/02-10:37:33.663 148e7b Delete type=2 #51
+2021/11/02-10:37:33.663 148e7b Delete type=2 #53

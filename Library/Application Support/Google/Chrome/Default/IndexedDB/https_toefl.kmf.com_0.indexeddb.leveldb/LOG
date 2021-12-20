@@ -1,0 +1,15 @@
+2020/11/06-16:34:06.067 268a0b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_toefl.kmf.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/06-16:34:06.067 268a0b Recovering log #17
+2020/11/06-16:34:06.067 268a0b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_toefl.kmf.com_0.indexeddb.leveldb/000017.log 
+2020/11/06-16:34:08.098 4412f Level-0 table #22: started
+2020/11/06-16:34:08.110 4412f Level-0 table #22: 465 bytes OK
+2020/11/06-16:34:08.125 4412f Delete type=0 #17
+2020/11/06-16:34:08.125 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/06-16:34:08.126 4412f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x04\x00u\x00u\x00i\x00d' @ 62 : 1
+2020/11/06-16:34:08.126 4412f Compacting 1@1 + 1@2 files
+2020/11/06-16:34:08.135 4412f Generated table #23@1: 20 keys, 599 bytes
+2020/11/06-16:34:08.135 4412f Compacted 1@1 + 1@2 files => 599 bytes
+2020/11/06-16:34:08.150 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/11/06-16:34:08.150 4412f Delete type=2 #22
+2020/11/06-16:34:08.150 4412f Delete type=2 #19
+2020/11/06-16:34:08.151 4412f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x04\x00u\x00u\x00i\x00d' @ 62 : 1 .. (end); will stop at (end)

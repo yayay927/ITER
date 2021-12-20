@@ -1,0 +1,5 @@
+2020/09/15-13:36:00.369 14e513 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_poplady-mag.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/15-14:55:22.046 18bb7 Level-0 table #5: started
+2020/09/15-14:55:22.056 18bb7 Level-0 table #5: 50583 bytes OK
+2020/09/15-14:55:22.071 18bb7 Delete type=0 #3
+2020/09/15-14:55:22.073 18bb7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

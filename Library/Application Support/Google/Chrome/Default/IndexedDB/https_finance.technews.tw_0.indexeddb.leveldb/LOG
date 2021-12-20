@@ -1,0 +1,5 @@
+2020/12/09-10:00:42.265 43549b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_finance.technews.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/10-15:25:53.155 4412f Level-0 table #5: started
+2020/12/10-15:25:53.191 4412f Level-0 table #5: 3047 bytes OK
+2020/12/10-15:25:53.216 4412f Delete type=0 #3
+2020/12/10-15:25:53.218 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

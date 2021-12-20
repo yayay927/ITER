@@ -1,0 +1,25 @@
+2021/11/14-10:35:40.010 28532f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_shopee.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/14-10:35:40.011 28532f Recovering log #173
+2021/11/14-10:35:40.011 28532f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_shopee.tw_0.indexeddb.leveldb/000173.log 
+2021/11/14-10:35:40.154 28532f Level-0 table #178: started
+2021/11/14-10:35:40.176 28532f Level-0 table #178: 579 bytes OK
+2021/11/14-10:35:40.221 28532f Delete type=0 #173
+2021/11/14-10:35:40.221 28532f Manual compaction at level-0 from '\x00 \x00\x00\x00' @ 72057594037927935 : 1 .. '\x00!\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/14-10:36:11.943 28532f Compacting 1@1 + 1@2 files
+2021/11/14-10:36:11.994 28532f Generated table #179@1: 559 keys, 16422 bytes
+2021/11/14-10:36:11.995 28532f Compacted 1@1 + 1@2 files => 16422 bytes
+2021/11/14-10:36:12.083 28532f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/14-10:36:12.084 28532f Delete type=2 #175
+2021/11/14-10:36:12.084 28532f Delete type=2 #178
+2021/11/15-10:13:49.353 27c877 Level-0 table #181: started
+2021/11/15-10:13:49.393 27c877 Level-0 table #181: 127197 bytes OK
+2021/11/15-10:13:49.466 27c877 Delete type=0 #177
+2021/11/15-10:13:49.526 27c877 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/15-10:13:49.561 27c877 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x02\x02\x01\x0f\x00c\x00u\x00r\x00r\x00e\x00n\x00t\x00_\x00s\x00e\x00s\x00s\x00i\x00o\x00n' @ 30924 : 1
+2021/11/15-10:13:49.570 27c877 Compacting 1@1 + 1@2 files
+2021/11/15-10:13:49.608 27c877 Generated table #182@1: 592 keys, 17290 bytes
+2021/11/15-10:13:49.610 27c877 Compacted 1@1 + 1@2 files => 17290 bytes
+2021/11/15-10:13:49.670 27c877 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/15-10:13:49.671 27c877 Delete type=2 #181
+2021/11/15-10:13:49.671 27c877 Delete type=2 #179
+2021/11/15-10:13:49.707 27c877 Manual compaction at level-1 from '\x00\x02\x02\x02\x01\x0f\x00c\x00u\x00r\x00r\x00e\x00n\x00t\x00_\x00s\x00e\x00s\x00s\x00i\x00o\x00n' @ 30924 : 1 .. (end); will stop at (end)

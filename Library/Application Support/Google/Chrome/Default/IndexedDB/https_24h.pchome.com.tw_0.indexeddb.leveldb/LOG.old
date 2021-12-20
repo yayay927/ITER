@@ -1,0 +1,7 @@
+2021/11/02-22:10:08.375 15e71b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_24h.pchome.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/02-22:10:08.375 15e71b Recovering log #3
+2021/11/02-22:10:08.376 15e71b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_24h.pchome.com.tw_0.indexeddb.leveldb/000003.log 
+2021/11/02-22:10:11.303 15e71b Level-0 table #5: started
+2021/11/02-22:10:11.325 15e71b Level-0 table #5: 3267 bytes OK
+2021/11/02-22:10:11.367 15e71b Delete type=0 #3
+2021/11/02-22:10:11.370 15e71b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

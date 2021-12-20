@@ -1,0 +1,6 @@
+2021/09/06-13:56:38.157 2c033 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mystudyway.kktix.cc_0.indexeddb.leveldb since it was missing.
+2021/09/06-13:56:38.225 2c033 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mystudyway.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/06-13:56:39.538 e917 Level-0 table #5: started
+2021/09/06-13:56:39.558 e917 Level-0 table #5: 581 bytes OK
+2021/09/06-13:56:39.602 e917 Delete type=0 #3
+2021/09/06-13:56:39.603 e917 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

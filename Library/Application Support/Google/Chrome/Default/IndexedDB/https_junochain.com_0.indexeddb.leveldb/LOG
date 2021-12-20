@@ -1,0 +1,6 @@
+2021/11/29-11:41:17.188 326833 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_junochain.com_0.indexeddb.leveldb since it was missing.
+2021/11/29-11:41:17.260 326833 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_junochain.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/29-11:41:49.583 38474f Level-0 table #5: started
+2021/11/29-11:41:49.606 38474f Level-0 table #5: 1395 bytes OK
+2021/11/29-11:41:49.651 38474f Delete type=0 #3
+2021/11/29-11:41:49.652 38474f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

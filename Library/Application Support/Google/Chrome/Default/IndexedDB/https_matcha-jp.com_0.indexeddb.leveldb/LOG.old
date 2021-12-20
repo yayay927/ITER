@@ -1,0 +1,15 @@
+2021/11/02-13:57:05.574 14bfaf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_matcha-jp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/02-13:57:05.575 14bfaf Recovering log #4
+2021/11/02-13:57:05.575 14bfaf Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_matcha-jp.com_0.indexeddb.leveldb/000004.log 
+2021/11/02-13:59:45.630 142143 Level-0 table #8: started
+2021/11/02-13:59:45.652 142143 Level-0 table #8: 522 bytes OK
+2021/11/02-13:59:45.721 142143 Delete type=0 #4
+2021/11/02-13:59:45.721 142143 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/02-13:59:45.721 142143 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x006\x006\x001\x001\x007\x008\x002\x001' @ 64 : 1
+2021/11/02-13:59:45.721 142143 Compacting 1@1 + 1@2 files
+2021/11/02-13:59:45.743 142143 Generated table #9@1: 18 keys, 556 bytes
+2021/11/02-13:59:45.743 142143 Compacted 1@1 + 1@2 files => 556 bytes
+2021/11/02-13:59:45.786 142143 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/02-13:59:45.787 142143 Delete type=2 #5
+2021/11/02-13:59:45.787 142143 Delete type=2 #8
+2021/11/02-13:59:45.790 142143 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x006\x006\x001\x001\x007\x008\x002\x001' @ 64 : 1 .. (end); will stop at (end)

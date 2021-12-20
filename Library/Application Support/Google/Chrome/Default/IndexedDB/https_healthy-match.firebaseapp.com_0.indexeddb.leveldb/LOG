@@ -1,0 +1,5 @@
+2021/05/03-13:24:43.659 16011b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_healthy-match.firebaseapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/03-13:25:32.994 16e12b Level-0 table #5: started
+2021/05/03-13:25:33.023 16e12b Level-0 table #5: 1138 bytes OK
+2021/05/03-13:25:33.075 16e12b Delete type=0 #3
+2021/05/03-13:25:33.087 16e12b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

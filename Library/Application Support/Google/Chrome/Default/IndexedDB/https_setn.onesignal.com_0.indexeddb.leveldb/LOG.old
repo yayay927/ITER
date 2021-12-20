@@ -1,0 +1,15 @@
+2021/01/25-23:14:33.801 17b937 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_setn.onesignal.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/25-23:14:33.801 17b937 Recovering log #55
+2021/01/25-23:14:33.801 17b937 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_setn.onesignal.com_0.indexeddb.leveldb/000055.log 
+2021/01/25-23:14:36.045 18176f Level-0 table #60: started
+2021/01/25-23:14:36.097 18176f Level-0 table #60: 3371 bytes OK
+2021/01/25-23:14:36.123 18176f Delete type=0 #55
+2021/01/25-23:14:36.125 18176f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/25-23:14:36.125 18176f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 2416 : 1
+2021/01/25-23:14:36.125 18176f Compacting 1@1 + 1@2 files
+2021/01/25-23:14:36.137 18176f Generated table #61@1: 100 keys, 2333 bytes
+2021/01/25-23:14:36.137 18176f Compacted 1@1 + 1@2 files => 2333 bytes
+2021/01/25-23:14:36.151 18176f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/01/25-23:14:36.152 18176f Delete type=2 #60
+2021/01/25-23:14:36.152 18176f Delete type=2 #57
+2021/01/25-23:14:36.152 18176f Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 2416 : 1 .. (end); will stop at (end)

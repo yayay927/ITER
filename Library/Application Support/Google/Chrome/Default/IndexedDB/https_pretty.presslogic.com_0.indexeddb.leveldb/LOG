@@ -1,0 +1,5 @@
+2020/09/21-14:43:21.161 4f247 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_pretty.presslogic.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/21-14:47:36.284 d027 Level-0 table #5: started
+2020/09/21-14:47:36.298 d027 Level-0 table #5: 10521 bytes OK
+2020/09/21-14:47:36.316 d027 Delete type=0 #3
+2020/09/21-14:47:36.318 d027 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

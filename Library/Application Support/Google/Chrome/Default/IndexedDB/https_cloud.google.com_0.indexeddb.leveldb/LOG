@@ -1,0 +1,15 @@
+2021/06/11-17:08:34.165 62d83 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cloud.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/11-17:08:34.166 62d83 Recovering log #18
+2021/06/11-17:08:34.166 62d83 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cloud.google.com_0.indexeddb.leveldb/000018.log 
+2021/06/11-17:08:39.998 64507 Level-0 table #23: started
+2021/06/11-17:08:40.025 64507 Level-0 table #23: 881 bytes OK
+2021/06/11-17:08:40.071 64507 Delete type=0 #18
+2021/06/11-17:08:40.071 64507 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/11-17:08:40.071 64507 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01 \x01\x05\x00z\x00h\x00_\x00t\x00w\x00\x01\x13\x00l\x00a\x00n\x00g\x00u\x00a\x00g\x00e\x00_\x00p\x00r\x00e\x00f\x00e\x00r\x00e\x00n\x00c\x00e' @ 230 : 1
+2021/06/11-17:08:40.071 64507 Compacting 1@1 + 1@2 files
+2021/06/11-17:08:40.097 64507 Generated table #24@1: 31 keys, 844 bytes
+2021/06/11-17:08:40.097 64507 Compacted 1@1 + 1@2 files => 844 bytes
+2021/06/11-17:08:40.143 64507 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/11-17:08:40.144 64507 Delete type=2 #20
+2021/06/11-17:08:40.144 64507 Delete type=2 #23
+2021/06/11-17:08:40.145 64507 Manual compaction at level-1 from '\x00\x01\x01 \x01\x05\x00z\x00h\x00_\x00t\x00w\x00\x01\x13\x00l\x00a\x00n\x00g\x00u\x00a\x00g\x00e\x00_\x00p\x00r\x00e\x00f\x00e\x00r\x00e\x00n\x00c\x00e' @ 230 : 1 .. (end); will stop at (end)

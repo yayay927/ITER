@@ -1,0 +1,8 @@
+2021/04/25-19:47:21.175 e8a4f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_lucid.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/25-19:47:21.175 e8a4f Recovering log #4
+2021/04/25-19:47:21.175 e8a4f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_lucid.app_0.indexeddb.leveldb/000004.log 
+2021/04/25-19:47:23.354 e8a4f Level-0 table #8: started
+2021/04/25-19:47:23.355 e8a4f Level-0 table #8: 0 bytes OK
+2021/04/25-19:47:23.402 e8a4f Delete type=0 #4
+2021/04/25-19:47:23.403 e8a4f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/25-19:47:23.403 e8a4f Manual compaction at level-1 from (begin) .. (end); will stop at (end)

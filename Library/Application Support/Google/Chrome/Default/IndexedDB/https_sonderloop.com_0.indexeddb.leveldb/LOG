@@ -1,0 +1,15 @@
+2021/03/22-02:29:21.597 c8873 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_sonderloop.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/22-02:29:21.597 c8873 Recovering log #11
+2021/03/22-02:29:21.597 c8873 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_sonderloop.com_0.indexeddb.leveldb/000011.log 
+2021/03/22-02:29:54.451 e670f Level-0 table #16: started
+2021/03/22-02:29:54.478 e670f Level-0 table #16: 561 bytes OK
+2021/03/22-02:29:54.525 e670f Delete type=0 #11
+2021/03/22-02:29:54.527 e670f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/22-02:29:54.527 e670f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x1b\x00c\x00u\x00s\x00t\x00o\x00m\x00-\x00n\x00a\x00v\x00i\x00g\x00a\x00t\x00i\x00o\x00n\x00-\x00w\x00h\x00i\x00t\x00e\x00l\x00i\x00s\x00t' @ 271 : 1
+2021/03/22-02:29:54.527 e670f Compacting 1@1 + 1@2 files
+2021/03/22-02:29:54.554 e670f Generated table #17@1: 53 keys, 2326 bytes
+2021/03/22-02:29:54.554 e670f Compacted 1@1 + 1@2 files => 2326 bytes
+2021/03/22-02:29:54.600 e670f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/22-02:29:54.601 e670f Delete type=2 #16
+2021/03/22-02:29:54.601 e670f Delete type=2 #13
+2021/03/22-02:29:54.602 e670f Manual compaction at level-1 from '\x00\x02\x01\x02\x01\x1b\x00c\x00u\x00s\x00t\x00o\x00m\x00-\x00n\x00a\x00v\x00i\x00g\x00a\x00t\x00i\x00o\x00n\x00-\x00w\x00h\x00i\x00t\x00e\x00l\x00i\x00s\x00t' @ 271 : 1 .. (end); will stop at (end)

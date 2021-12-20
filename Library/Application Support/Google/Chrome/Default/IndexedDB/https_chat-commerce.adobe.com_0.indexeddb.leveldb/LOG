@@ -1,0 +1,15 @@
+2021/02/05-15:30:04.757 10503 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_chat-commerce.adobe.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/05-15:30:04.757 10503 Recovering log #4
+2021/02/05-15:30:04.757 10503 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_chat-commerce.adobe.com_0.indexeddb.leveldb/000004.log 
+2021/02/05-15:30:10.256 10503 Level-0 table #8: started
+2021/02/05-15:30:10.309 10503 Level-0 table #8: 184 bytes OK
+2021/02/05-15:30:10.330 10503 Delete type=0 #4
+2021/02/05-15:30:10.331 10503 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/05-15:30:10.332 10503 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x00' @ 68 : 1
+2021/02/05-15:30:10.332 10503 Compacting 1@1 + 1@2 files
+2021/02/05-15:30:10.341 10503 Generated table #9@1: 19 keys, 773 bytes
+2021/02/05-15:30:10.341 10503 Compacted 1@1 + 1@2 files => 773 bytes
+2021/02/05-15:30:10.382 10503 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/02/05-15:30:10.382 10503 Delete type=2 #5
+2021/02/05-15:30:10.382 10503 Delete type=2 #8
+2021/02/05-15:30:10.383 10503 Manual compaction at level-1 from '\x00\x00\x00\x00\x00' @ 68 : 1 .. (end); will stop at (end)

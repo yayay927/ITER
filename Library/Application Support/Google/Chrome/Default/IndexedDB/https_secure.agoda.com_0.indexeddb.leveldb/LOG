@@ -1,0 +1,5 @@
+2021/02/21-14:41:02.441 42323 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_secure.agoda.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/21-16:27:47.274 4f623 Level-0 table #5: started
+2021/02/21-16:27:47.287 4f623 Level-0 table #5: 2319 bytes OK
+2021/02/21-16:27:47.324 4f623 Delete type=0 #3
+2021/02/21-16:27:47.328 4f623 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

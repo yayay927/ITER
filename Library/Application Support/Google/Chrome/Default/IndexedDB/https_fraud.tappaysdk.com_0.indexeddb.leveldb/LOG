@@ -1,0 +1,8 @@
+2021/04/19-01:56:03.047 8a44f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_fraud.tappaysdk.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/19-01:56:03.048 8a44f Recovering log #44
+2021/04/19-01:56:03.048 8a44f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_fraud.tappaysdk.com_0.indexeddb.leveldb/000044.log 
+2021/04/19-01:56:05.075 8a44f Level-0 table #48: started
+2021/04/19-01:56:05.075 8a44f Level-0 table #48: 0 bytes OK
+2021/04/19-01:56:05.122 8a44f Delete type=0 #44
+2021/04/19-01:56:05.125 8a44f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/19-01:56:05.125 8a44f Manual compaction at level-1 from (begin) .. (end); will stop at (end)

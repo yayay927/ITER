@@ -1,0 +1,16 @@
+2020/08/26-13:32:29.653 12c62b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ixda.kktix.cc_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/26-13:32:29.654 12c62b Recovering log #6
+2020/08/26-13:32:29.654 12c62b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ixda.kktix.cc_0.indexeddb.leveldb/000006.log 
+2020/08/26-13:32:38.051 5c15f Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2020/08/26-13:32:40.052 5c15f Level-0 table #11: started
+2020/08/26-13:32:40.064 5c15f Level-0 table #11: 543 bytes OK
+2020/08/26-13:32:40.080 5c15f Delete type=0 #6
+2020/08/26-13:32:40.081 5c15f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/08/26-13:32:40.081 5c15f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x00\x00\x05' @ 27 : 1
+2020/08/26-13:32:40.081 5c15f Compacting 1@1 + 1@2 files
+2020/08/26-13:32:40.092 5c15f Generated table #12@1: 5 keys, 237 bytes
+2020/08/26-13:32:40.092 5c15f Compacted 1@1 + 1@2 files => 237 bytes
+2020/08/26-13:32:40.108 5c15f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/08/26-13:32:40.109 5c15f Delete type=2 #11
+2020/08/26-13:32:40.109 5c15f Delete type=2 #8
+2020/08/26-13:32:40.110 5c15f Manual compaction at level-1 from '\x00\x02\x00\x00\x05' @ 27 : 1 .. (end); will stop at (end)

@@ -1,0 +1,28 @@
+2021/03/19-17:38:34.839 b462b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_charge.icook.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/19-17:38:34.961 aed73 Level-0 table #5: started
+2021/03/19-17:38:35.014 aed73 Level-0 table #5: 625 bytes OK
+2021/03/19-17:38:35.091 aed73 Delete type=0 #3
+2021/03/19-17:38:35.092 aed73 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/03/19-17:38:35.117 b462b Level-0 table #7: started
+2021/03/19-17:38:35.165 b462b Level-0 table #7: 615 bytes OK
+2021/03/19-17:38:35.220 b462b Delete type=0 #4
+2021/03/19-17:38:35.221 b462b Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/03/19-17:39:04.966 c4053 Level-0 table #9: started
+2021/03/19-17:39:04.992 c4053 Level-0 table #9: 1922 bytes OK
+2021/03/19-17:39:05.039 c4053 Delete type=0 #6
+2021/03/19-17:39:05.040 c4053 Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x003\x008\x000\x001\x000\x007\x006\x005\x004\x006\x008\x007\x00:\x00w\x00e\x00b\x00:\x00c\x00e\x003\x001\x00f\x002\x006\x008\x00f\x004\x00e\x009\x00a\x00b\x00a\x000\x002\x00d\x00b\x007\x002\x00a' @ 87 : 1
+2021/03/19-17:39:05.040 c4053 Compacting 1@0 + 1@1 files
+2021/03/19-17:39:05.066 c4053 Generated table #10@0: 45 keys, 1593 bytes
+2021/03/19-17:39:05.066 c4053 Compacted 1@0 + 1@1 files => 1593 bytes
+2021/03/19-17:39:05.113 c4053 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/03/19-17:39:05.114 c4053 Delete type=2 #7
+2021/03/19-17:39:05.114 c4053 Delete type=2 #9
+2021/03/19-17:39:05.114 c4053 Manual compaction at level-0 from '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x003\x008\x000\x001\x000\x007\x006\x005\x004\x006\x008\x007\x00:\x00w\x00e\x00b\x00:\x00c\x00e\x003\x001\x00f\x002\x006\x008\x00f\x004\x00e\x009\x00a\x00b\x00a\x000\x002\x00d\x00b\x007\x002\x00a' @ 87 : 1 .. (end); will stop at (end)
+2021/03/19-17:39:05.115 c4053 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x003\x008\x000\x001\x000\x007\x006\x005\x004\x006\x008\x007\x00:\x00w\x00e\x00b\x00:\x00c\x00e\x003\x001\x00f\x002\x006\x008\x00f\x004\x00e\x009\x00a\x00b\x00a\x000\x002\x00d\x00b\x007\x002\x00a' @ 99 : 1
+2021/03/19-17:39:05.115 c4053 Compacting 1@1 + 1@2 files
+2021/03/19-17:39:05.140 c4053 Generated table #11@1: 20 keys, 1304 bytes
+2021/03/19-17:39:05.140 c4053 Compacted 1@1 + 1@2 files => 1304 bytes
+2021/03/19-17:39:05.191 c4053 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/19-17:39:05.192 c4053 Delete type=2 #10
+2021/03/19-17:39:05.193 c4053 Delete type=2 #5
+2021/03/19-17:39:05.193 c4053 Manual compaction at level-1 from '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x003\x008\x000\x001\x000\x007\x006\x005\x004\x006\x008\x007\x00:\x00w\x00e\x00b\x00:\x00c\x00e\x003\x001\x00f\x002\x006\x008\x00f\x004\x00e\x009\x00a\x00b\x00a\x000\x002\x00d\x00b\x007\x002\x00a' @ 99 : 1 .. (end); will stop at (end)

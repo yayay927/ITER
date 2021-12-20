@@ -1,0 +1,15 @@
+2021/06/03-23:39:50.879 24b39b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_pxlclnmdecom-a.akamaihd.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/03-23:39:50.880 24b39b Recovering log #15
+2021/06/03-23:39:50.880 24b39b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_pxlclnmdecom-a.akamaihd.net_0.indexeddb.leveldb/000015.log 
+2021/06/03-23:39:53.375 251353 Level-0 table #20: started
+2021/06/03-23:39:53.421 251353 Level-0 table #20: 624 bytes OK
+2021/06/03-23:39:53.484 251353 Delete type=0 #15
+2021/06/03-23:39:53.484 251353 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/03-23:39:53.485 251353 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x06\x00b\x00a\x00f\x00p\x00_\x00t' @ 147 : 1
+2021/06/03-23:39:53.485 251353 Compacting 1@1 + 1@2 files
+2021/06/03-23:39:53.511 251353 Generated table #21@1: 20 keys, 626 bytes
+2021/06/03-23:39:53.511 251353 Compacted 1@1 + 1@2 files => 626 bytes
+2021/06/03-23:39:53.579 251353 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/03-23:39:53.580 251353 Delete type=2 #17
+2021/06/03-23:39:53.580 251353 Delete type=2 #20
+2021/06/03-23:39:53.582 251353 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x06\x00b\x00a\x00f\x00p\x00_\x00t' @ 147 : 1 .. (end); will stop at (end)

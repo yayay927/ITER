@@ -1,0 +1,28 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/background.js", "js/hot-reload.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon/main64.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "css/style.css" ],
+      "js": [ "js/jquery.min.js", "js/bootstrap.min.js", "js/slackvoice-content-script.js" ],
+      "matches": [ "https://app.slack.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Voice messaging for Slack",
+   "differential_fingerprint": "1.ac71a9bf1ebd66ed9dd10f97f96d089fcf3304952a76f09a4ac8923cc20b9c00",
+   "icons": {
+      "128": "icon/main128.png",
+      "64": "icon/main64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm46BqBoKnHfQEIclQmLLdtZ5UV+gRhbZLNbyuZICUckdNwdCYBpKGu+uJ3jHYa7HNIjfTkrtu6en14enFHA4U2njmLKM1V5LD47SsR20/cUhrHOqKKopj90U8uzRrud1CuRLN2g6R2+94ACZnh/de3yf/kzmguCSdGtdVbNyoFDyjFqOGQrObduNdPUWf2fNTjWujK6fheAhdAcYRk9mjeBKN/3Btr6PEZturbEz52MFTWwUQduvl4sFZr9S05FYqwRbYZq8x5CSgZNzYHRTWxTknRZJ4cLTPiIgGYcK6Wa5SobxGHcxaN37ETa8A0X/hrzLBrE1M9R+6GQBv1uVPwIDAQAB",
+   "manifest_version": 2,
+   "name": "Voice messaging for Slack",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.17"
+}

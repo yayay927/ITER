@@ -1,0 +1,7 @@
+2021/11/11-16:50:07.219 22e977 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.bombcrypto.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/11-16:50:07.220 22e977 Recovering log #6
+2021/11/11-16:50:07.220 22e977 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.bombcrypto.io_0.indexeddb.leveldb/000006.log 
+2021/11/11-16:50:09.777 22a657 Level-0 table #11: started
+2021/11/11-16:50:09.799 22a657 Level-0 table #11: 1778 bytes OK
+2021/11/11-16:50:09.865 22a657 Delete type=0 #6
+2021/11/11-16:50:09.906 22a657 Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)

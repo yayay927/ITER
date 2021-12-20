@@ -1,0 +1,8 @@
+2021/04/18-21:38:39.406 433b3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_fraud.tappaysdk.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-21:38:39.407 433b3 Recovering log #41
+2021/04/18-21:38:39.407 433b3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_fraud.tappaysdk.com_0.indexeddb.leveldb/000041.log 
+2021/04/18-21:38:41.435 7fe53 Level-0 table #45: started
+2021/04/18-21:38:41.435 7fe53 Level-0 table #45: 0 bytes OK
+2021/04/18-21:38:41.483 7fe53 Delete type=0 #41
+2021/04/18-21:38:41.484 7fe53 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/18-21:38:41.484 7fe53 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

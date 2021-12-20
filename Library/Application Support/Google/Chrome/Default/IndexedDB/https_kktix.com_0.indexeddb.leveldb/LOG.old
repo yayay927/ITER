@@ -1,0 +1,14 @@
+2021/07/22-03:56:57.725 3d57a3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_kktix.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/22-03:56:57.727 3d57a3 Recovering log #67
+2021/07/22-03:56:57.727 3d57a3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_kktix.com_0.indexeddb.leveldb/000067.log 
+2021/07/22-03:56:57.728 3d57a3 Delete type=2 #66
+2021/07/22-03:57:03.734 3f321b Level-0 table #72: started
+2021/07/22-03:57:03.761 3f321b Level-0 table #72: 547 bytes OK
+2021/07/22-03:57:03.811 3f321b Delete type=0 #67
+2021/07/22-03:57:03.812 3f321b Manual compaction at level-0 from '\x00\x10\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at '\x00\x10\x00\x00\x05' @ 293 : 1
+2021/07/22-03:57:03.812 3f321b Compacting 1@0 + 1@1 files
+2021/07/22-03:57:03.838 3f321b Generated table #73@0: 5 keys, 252 bytes
+2021/07/22-03:57:03.838 3f321b Compacted 1@0 + 1@1 files => 252 bytes
+2021/07/22-03:57:03.885 3f321b compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/07/22-03:57:03.886 3f321b Delete type=2 #72
+2021/07/22-03:57:03.887 3f321b Manual compaction at level-0 from '\x00\x10\x00\x00\x05' @ 293 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,0 +1,5 @@
+2020/10/07-13:06:51.818 1982f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_beauty.ulifestyle.com.hk_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/07-13:11:48.290 624b Level-0 table #5: started
+2020/10/07-13:11:48.301 624b Level-0 table #5: 6220 bytes OK
+2020/10/07-13:11:48.316 624b Delete type=0 #3
+2020/10/07-13:11:48.316 624b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

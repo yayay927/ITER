@@ -1,0 +1,15 @@
+2021/03/02-02:48:14.845 6a137 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_m.juksy.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/02-02:48:14.846 6a137 Recovering log #4
+2021/03/02-02:48:14.847 6a137 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_m.juksy.com_0.indexeddb.leveldb/000004.log 
+2021/03/02-02:52:06.521 3a44b Level-0 table #8: started
+2021/03/02-02:52:06.549 3a44b Level-0 table #8: 203 bytes OK
+2021/03/02-02:52:06.597 3a44b Delete type=0 #4
+2021/03/02-02:52:06.598 3a44b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/02-02:52:06.598 3a44b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 130 : 1
+2021/03/02-02:52:06.599 3a44b Compacting 1@1 + 1@2 files
+2021/03/02-02:52:06.632 3a44b Generated table #9@1: 38 keys, 1101 bytes
+2021/03/02-02:52:06.632 3a44b Compacted 1@1 + 1@2 files => 1101 bytes
+2021/03/02-02:52:06.679 3a44b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/02-02:52:06.680 3a44b Delete type=2 #5
+2021/03/02-02:52:06.680 3a44b Delete type=2 #8
+2021/03/02-02:52:06.683 3a44b Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 130 : 1 .. (end); will stop at (end)

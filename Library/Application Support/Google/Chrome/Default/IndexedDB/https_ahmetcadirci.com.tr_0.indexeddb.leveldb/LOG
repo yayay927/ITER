@@ -1,0 +1,5 @@
+2021/02/04-14:55:37.086 1df247 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ahmetcadirci.com.tr_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/04-14:55:43.559 125857 Level-0 table #5: started
+2021/02/04-14:55:43.570 125857 Level-0 table #5: 5480 bytes OK
+2021/02/04-14:55:43.586 125857 Delete type=0 #3
+2021/02/04-14:55:43.586 125857 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

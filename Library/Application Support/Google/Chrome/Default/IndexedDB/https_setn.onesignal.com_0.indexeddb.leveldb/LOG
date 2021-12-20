@@ -1,0 +1,15 @@
+2021/08/09-01:41:31.276 b5e33 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_setn.onesignal.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/09-01:41:31.277 b5e33 Recovering log #59
+2021/08/09-01:41:31.277 b5e33 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_setn.onesignal.com_0.indexeddb.leveldb/000059.log 
+2021/08/09-01:41:33.767 aa217 Level-0 table #64: started
+2021/08/09-01:41:33.795 aa217 Level-0 table #64: 3419 bytes OK
+2021/08/09-01:41:33.841 aa217 Delete type=0 #59
+2021/08/09-01:41:33.842 aa217 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/08/09-01:41:33.842 aa217 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 2561 : 1
+2021/08/09-01:41:33.842 aa217 Compacting 1@1 + 1@2 files
+2021/08/09-01:41:33.869 aa217 Generated table #65@1: 101 keys, 2344 bytes
+2021/08/09-01:41:33.869 aa217 Compacted 1@1 + 1@2 files => 2344 bytes
+2021/08/09-01:41:33.915 aa217 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/08/09-01:41:33.916 aa217 Delete type=2 #61
+2021/08/09-01:41:33.916 aa217 Delete type=2 #64
+2021/08/09-01:41:33.916 aa217 Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 2561 : 1 .. (end); will stop at (end)

@@ -1,0 +1,5 @@
+2021/02/20-10:41:00.131 158aaf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bobowin.blog_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/20-10:41:24.939 158aaf Level-0 table #5: started
+2021/02/20-10:41:24.952 158aaf Level-0 table #5: 6213 bytes OK
+2021/02/20-10:41:24.969 158aaf Delete type=0 #3
+2021/02/20-10:41:24.970 158aaf Manual compaction at level-0 from (begin) .. (end); will stop at (end)

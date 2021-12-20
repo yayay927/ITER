@@ -1,0 +1,5 @@
+2021/02/05-14:02:36.220 29500f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_chat-commerce.adobe.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/05-14:02:48.706 23900f Level-0 table #5: started
+2021/02/05-14:02:48.718 23900f Level-0 table #5: 1539 bytes OK
+2021/02/05-14:02:48.734 23900f Delete type=0 #3
+2021/02/05-14:02:48.736 23900f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

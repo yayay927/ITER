@@ -1,0 +1,6 @@
+2021/05/12-16:22:37.260 3d3c7 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_webpack.js.org_0.indexeddb.leveldb since it was missing.
+2021/05/12-16:22:37.375 3d3c7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_webpack.js.org_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/12-16:23:30.739 35a6b Level-0 table #5: started
+2021/05/12-16:23:30.766 35a6b Level-0 table #5: 4666 bytes OK
+2021/05/12-16:23:30.812 35a6b Delete type=0 #3
+2021/05/12-16:23:30.814 35a6b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

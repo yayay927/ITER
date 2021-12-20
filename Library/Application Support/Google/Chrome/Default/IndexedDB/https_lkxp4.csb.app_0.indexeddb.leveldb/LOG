@@ -1,0 +1,6 @@
+2021/09/27-12:09:19.082 1d9c03 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_lkxp4.csb.app_0.indexeddb.leveldb since it was missing.
+2021/09/27-12:09:19.147 1d9c03 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_lkxp4.csb.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/27-14:28:12.034 1b9d03 Level-0 table #5: started
+2021/09/27-14:28:12.064 1b9d03 Level-0 table #5: 956137 bytes OK
+2021/09/27-14:28:12.109 1b9d03 Delete type=0 #3
+2021/09/27-14:28:12.113 1b9d03 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

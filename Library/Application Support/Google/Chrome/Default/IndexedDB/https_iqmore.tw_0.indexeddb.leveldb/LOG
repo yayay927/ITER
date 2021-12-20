@@ -1,0 +1,6 @@
+2021/07/14-17:06:11.672 2d6293 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_iqmore.tw_0.indexeddb.leveldb since it was missing.
+2021/07/14-17:06:11.756 2d6293 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_iqmore.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/14-17:51:24.727 2eb15b Level-0 table #5: started
+2021/07/14-17:51:24.754 2eb15b Level-0 table #5: 6191 bytes OK
+2021/07/14-17:51:24.800 2eb15b Delete type=0 #3
+2021/07/14-17:51:24.802 2eb15b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

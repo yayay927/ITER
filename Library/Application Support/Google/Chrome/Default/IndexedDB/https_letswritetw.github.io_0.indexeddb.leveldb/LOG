@@ -1,0 +1,15 @@
+2021/05/22-15:19:26.512 46b8b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_letswritetw.github.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/22-15:19:26.513 46b8b Recovering log #4
+2021/05/22-15:19:26.513 46b8b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_letswritetw.github.io_0.indexeddb.leveldb/000004.log 
+2021/05/23-21:55:12.313 127f07 Level-0 table #8: started
+2021/05/23-21:55:12.340 127f07 Level-0 table #8: 696 bytes OK
+2021/05/23-21:55:12.391 127f07 Delete type=0 #4
+2021/05/23-21:55:12.392 127f07 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/23-21:55:12.392 127f07 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x003\x001\x004\x000\x003\x004\x002\x005\x005' @ 63 : 1
+2021/05/23-21:55:12.392 127f07 Compacting 1@1 + 1@2 files
+2021/05/23-21:55:12.418 127f07 Generated table #9@1: 17 keys, 543 bytes
+2021/05/23-21:55:12.418 127f07 Compacted 1@1 + 1@2 files => 543 bytes
+2021/05/23-21:55:12.463 127f07 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/23-21:55:12.464 127f07 Delete type=2 #5
+2021/05/23-21:55:12.464 127f07 Delete type=2 #8
+2021/05/23-21:55:12.465 127f07 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x003\x001\x004\x000\x003\x004\x002\x005\x005' @ 63 : 1 .. (end); will stop at (end)

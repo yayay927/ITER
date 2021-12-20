@@ -1,0 +1,15 @@
+2021/10/29-14:18:52.149 10a75f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_engage.wixapps.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/29-14:18:52.151 10a75f Recovering log #51
+2021/10/29-14:18:52.152 10a75f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_engage.wixapps.net_0.indexeddb.leveldb/000051.log 
+2021/10/29-14:58:34.208 12a677 Level-0 table #56: started
+2021/10/29-14:58:34.232 12a677 Level-0 table #56: 26561 bytes OK
+2021/10/29-14:58:34.275 12a677 Delete type=0 #51
+2021/10/29-14:58:34.280 12a677 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/29-14:58:34.280 12a677 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01^\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00C\x00l\x00c\x00O\x00X\x005\x00T\x00u\x00t\x001\x00u\x00J\x00y\x00l\x00i\x00k\x00p\x00N\x00b\x00F\x00z\x00k\x00W\x00_\x00q\x00p\x00i\x00B\x00F\x00j\x00N\x00P\x00M\x00:\x006\x009\x005\x001\x00b\x003\x00a\x008\x00-\x00d\x002\x000\x008\x00-\x004\x004\x00f\x00f\x00-\x00b\x00b\x000\x008\x00-\x006\x00b\x00e\x00c\x00c\x00b\x006\x006\x009\x00e\x00d\x003' @ 2471 : 1
+2021/10/29-14:58:34.280 12a677 Compacting 1@1 + 1@2 files
+2021/10/29-14:58:34.303 12a677 Generated table #57@1: 55 keys, 37050 bytes
+2021/10/29-14:58:34.303 12a677 Compacted 1@1 + 1@2 files => 37050 bytes
+2021/10/29-14:58:34.350 12a677 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/29-14:58:34.351 12a677 Delete type=2 #56
+2021/10/29-14:58:34.352 12a677 Delete type=2 #53
+2021/10/29-14:58:34.354 12a677 Manual compaction at level-1 from '\x00\x01\x01\x02\x01^\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00C\x00l\x00c\x00O\x00X\x005\x00T\x00u\x00t\x001\x00u\x00J\x00y\x00l\x00i\x00k\x00p\x00N\x00b\x00F\x00z\x00k\x00W\x00_\x00q\x00p\x00i\x00B\x00F\x00j\x00N\x00P\x00M\x00:\x006\x009\x005\x001\x00b\x003\x00a\x008\x00-\x00d\x002\x000\x008\x00-\x004\x004\x00f\x00f\x00-\x00b\x00b\x000\x008\x00-\x006\x00b\x00e\x00c\x00c\x00b\x006\x006\x009\x00e\x00d\x003' @ 2471 : 1 .. (end); will stop at (end)

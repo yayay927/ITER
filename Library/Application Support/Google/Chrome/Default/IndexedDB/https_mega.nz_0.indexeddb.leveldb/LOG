@@ -1,0 +1,5 @@
+2020/11/28-18:41:33.978 4041cb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_mega.nz_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/28-18:41:35.996 4412f Level-0 table #5: started
+2020/11/28-18:41:36.012 4412f Level-0 table #5: 217 bytes OK
+2020/11/28-18:41:36.035 4412f Delete type=0 #3
+2020/11/28-18:41:36.036 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

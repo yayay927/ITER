@@ -1,0 +1,8 @@
+2021/04/18-16:31:18.663 65cdf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.affirm.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-16:31:18.664 65cdf Recovering log #7
+2021/04/18-16:31:18.664 65cdf Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.affirm.com_0.indexeddb.leveldb/000007.log 
+2021/04/18-16:31:20.692 74903 Level-0 table #11: started
+2021/04/18-16:31:20.693 74903 Level-0 table #11: 0 bytes OK
+2021/04/18-16:31:20.740 74903 Delete type=0 #7
+2021/04/18-16:31:20.741 74903 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/18-16:31:20.742 74903 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

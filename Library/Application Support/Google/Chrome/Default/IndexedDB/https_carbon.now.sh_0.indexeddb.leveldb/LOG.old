@@ -1,0 +1,5 @@
+2021/04/15-16:21:02.561 42f87 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_carbon.now.sh_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-21:11:40.375 8826b Level-0 table #5: started
+2021/04/18-21:11:40.404 8826b Level-0 table #5: 1112 bytes OK
+2021/04/18-21:11:40.457 8826b Delete type=0 #3
+2021/04/18-21:11:40.461 8826b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

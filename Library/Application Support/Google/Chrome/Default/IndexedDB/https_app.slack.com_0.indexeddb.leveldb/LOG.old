@@ -1,0 +1,15 @@
+2021/02/01-14:26:56.315 8931f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.slack.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/01-14:26:56.315 8931f Recovering log #7
+2021/02/01-14:26:56.315 8931f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_app.slack.com_0.indexeddb.leveldb/000007.log 
+2021/02/01-14:37:20.138 1b1be7 Level-0 table #12: started
+2021/02/01-14:37:20.150 1b1be7 Level-0 table #12: 1504 bytes OK
+2021/02/01-14:37:20.167 1b1be7 Delete type=0 #7
+2021/02/01-14:37:20.169 1b1be7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/01-14:37:20.169 1b1be7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01*\x00p\x00e\x00r\x00s\x00i\x00s\x00t\x00:\x00s\x00l\x00a\x00c\x00k\x00-\x00c\x00l\x00i\x00e\x00n\x00t\x00-\x00T\x004\x00A\x00F\x00J\x006\x00E\x003\x00S\x00-\x00U\x000\x001\x00L\x004\x00D\x002\x005\x00R\x00H\x00P' @ 181 : 0
+2021/02/01-14:37:20.169 1b1be7 Compacting 1@1 + 1@2 files
+2021/02/01-14:37:20.179 1b1be7 Generated table #13@1: 26 keys, 894 bytes
+2021/02/01-14:37:20.179 1b1be7 Compacted 1@1 + 1@2 files => 894 bytes
+2021/02/01-14:37:20.194 1b1be7 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/02/01-14:37:20.195 1b1be7 Delete type=2 #12
+2021/02/01-14:37:20.195 1b1be7 Delete type=2 #9
+2021/02/01-14:37:20.196 1b1be7 Manual compaction at level-1 from '\x00\x01\x01\x03\x01*\x00p\x00e\x00r\x00s\x00i\x00s\x00t\x00:\x00s\x00l\x00a\x00c\x00k\x00-\x00c\x00l\x00i\x00e\x00n\x00t\x00-\x00T\x004\x00A\x00F\x00J\x006\x00E\x003\x00S\x00-\x00U\x000\x001\x00L\x004\x00D\x002\x005\x00R\x00H\x00P' @ 181 : 0 .. (end); will stop at (end)

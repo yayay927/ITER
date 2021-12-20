@@ -1,0 +1,5 @@
+2021/01/19-00:20:26.234 cd58f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_m.juksy.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/26-00:14:16.903 d1c9f Level-0 table #5: started
+2021/01/26-00:14:16.914 d1c9f Level-0 table #5: 2156 bytes OK
+2021/01/26-00:14:16.964 d1c9f Delete type=0 #3
+2021/01/26-00:14:16.964 d1c9f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

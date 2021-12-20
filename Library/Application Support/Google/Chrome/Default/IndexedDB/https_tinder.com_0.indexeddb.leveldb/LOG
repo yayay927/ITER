@@ -1,0 +1,25 @@
+2021/08/22-01:05:33.474 1e701b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/22-01:05:33.475 1e701b Recovering log #4
+2021/08/22-01:05:33.482 1e701b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/000004.log 
+2021/08/22-01:21:23.366 1dcf73 Level-0 table #8: started
+2021/08/22-01:21:23.457 1dcf73 Level-0 table #8: 968972 bytes OK
+2021/08/22-01:21:23.511 1dcf73 Delete type=0 #4
+2021/08/22-15:07:21.253 214e47 Level-0 table #10: started
+2021/08/22-15:07:21.282 214e47 Level-0 table #10: 156242 bytes OK
+2021/08/22-15:07:21.336 214e47 Delete type=0 #7
+2021/08/22-15:07:21.338 214e47 Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x03\x01\x1f\x01\x18\x00w\x00o\x00r\x00k\x00b\x00o\x00x\x00-\x00g\x00o\x00o\x00g\x00l\x00e\x00-\x00a\x00n\x00a\x00l\x00y\x00t\x00i\x00c\x00s\x00\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 10591 : 1
+2021/08/22-15:07:21.338 214e47 Compacting 1@0 + 1@1 files
+2021/08/22-15:07:21.372 214e47 Generated table #11@0: 3417 keys, 81615 bytes
+2021/08/22-15:07:21.373 214e47 Compacted 1@0 + 1@1 files => 81615 bytes
+2021/08/22-15:07:21.418 214e47 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/08/22-15:07:21.419 214e47 Delete type=2 #10
+2021/08/22-15:07:21.420 214e47 Delete type=2 #8
+2021/08/22-15:07:21.422 214e47 Manual compaction at level-0 from '\x00\x03\x01\x1f\x01\x18\x00w\x00o\x00r\x00k\x00b\x00o\x00x\x00-\x00g\x00o\x00o\x00g\x00l\x00e\x00-\x00a\x00n\x00a\x00l\x00y\x00t\x00i\x00c\x00s\x00\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 10591 : 1 .. (end); will stop at (end)
+2021/08/22-15:07:21.422 214e47 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x1f\x01\x18\x00w\x00o\x00r\x00k\x00b\x00o\x00x\x00-\x00g\x00o\x00o\x00g\x00l\x00e\x00-\x00a\x00n\x00a\x00l\x00y\x00t\x00i\x00c\x00s\x00\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 10591 : 1
+2021/08/22-15:07:21.422 214e47 Compacting 1@1 + 1@2 files
+2021/08/22-15:07:21.451 214e47 Generated table #12@1: 336 keys, 55093 bytes
+2021/08/22-15:07:21.451 214e47 Compacted 1@1 + 1@2 files => 55093 bytes
+2021/08/22-15:07:21.496 214e47 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/08/22-15:07:21.497 214e47 Delete type=2 #5
+2021/08/22-15:07:21.497 214e47 Delete type=2 #11
+2021/08/22-15:07:21.505 214e47 Manual compaction at level-1 from '\x00\x03\x01\x1f\x01\x18\x00w\x00o\x00r\x00k\x00b\x00o\x00x\x00-\x00g\x00o\x00o\x00g\x00l\x00e\x00-\x00a\x00n\x00a\x00l\x00y\x00t\x00i\x00c\x00s\x00\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 10591 : 1 .. (end); will stop at (end)

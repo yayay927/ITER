@@ -1,0 +1,5 @@
+2020/12/29-16:42:35.133 30a7af Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_preppykitchen.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/29-16:49:59.938 2c9613 Level-0 table #5: started
+2020/12/29-16:49:59.949 2c9613 Level-0 table #5: 6108 bytes OK
+2020/12/29-16:49:59.964 2c9613 Delete type=0 #3
+2020/12/29-16:49:59.965 2c9613 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

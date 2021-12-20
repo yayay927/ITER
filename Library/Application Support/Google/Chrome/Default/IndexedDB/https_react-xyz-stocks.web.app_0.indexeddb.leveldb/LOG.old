@@ -1,0 +1,5 @@
+2021/05/03-08:55:40.585 16415f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_react-xyz-stocks.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/03-08:59:20.670 14426b Level-0 table #5: started
+2021/05/03-08:59:20.695 14426b Level-0 table #5: 1130 bytes OK
+2021/05/03-08:59:20.743 14426b Delete type=0 #3
+2021/05/03-08:59:20.746 14426b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

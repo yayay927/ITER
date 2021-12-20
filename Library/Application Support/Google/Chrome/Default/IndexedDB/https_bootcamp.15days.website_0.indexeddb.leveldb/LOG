@@ -1,0 +1,5 @@
+2021/03/14-23:13:08.137 75eeb Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_bootcamp.15days.website_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/14-23:14:51.855 7d783 Level-0 table #5: started
+2021/03/14-23:14:51.884 7d783 Level-0 table #5: 17409 bytes OK
+2021/03/14-23:14:51.932 7d783 Delete type=0 #3
+2021/03/14-23:14:51.934 7d783 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

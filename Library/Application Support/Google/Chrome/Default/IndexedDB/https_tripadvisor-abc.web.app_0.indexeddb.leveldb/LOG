@@ -1,0 +1,15 @@
+2021/06/07-11:05:40.016 2c4a4b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_tripadvisor-abc.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/07-11:05:40.016 2c4a4b Recovering log #11
+2021/06/07-11:05:40.016 2c4a4b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_tripadvisor-abc.web.app_0.indexeddb.leveldb/000011.log 
+2021/06/09-09:25:37.789 30957f Level-0 table #16: started
+2021/06/09-09:25:37.820 30957f Level-0 table #16: 98023 bytes OK
+2021/06/09-09:25:37.872 30957f Delete type=0 #11
+2021/06/09-09:25:37.878 30957f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/09-09:25:37.878 30957f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00B\x00L\x00N\x00f\x00K\x00T\x00V\x00-\x004\x00U\x00o\x001\x00q\x00Y\x00c\x00p\x001\x00A\x00B\x00c\x00d\x003\x00R\x00j\x005\x001\x00q\x00k\x00N\x007\x00F\x00b\x00Q\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 924 : 1
+2021/06/09-09:25:37.878 30957f Compacting 1@1 + 1@2 files
+2021/06/09-09:25:37.904 30957f Generated table #17@1: 20 keys, 2587 bytes
+2021/06/09-09:25:37.904 30957f Compacted 1@1 + 1@2 files => 2587 bytes
+2021/06/09-09:25:37.950 30957f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/09-09:25:37.950 30957f Delete type=2 #16
+2021/06/09-09:25:37.951 30957f Delete type=2 #13
+2021/06/09-09:25:37.951 30957f Manual compaction at level-1 from '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00B\x00L\x00N\x00f\x00K\x00T\x00V\x00-\x004\x00U\x00o\x001\x00q\x00Y\x00c\x00p\x001\x00A\x00B\x00c\x00d\x003\x00R\x00j\x005\x001\x00q\x00k\x00N\x007\x00F\x00b\x00Q\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 924 : 1 .. (end); will stop at (end)

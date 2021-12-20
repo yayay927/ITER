@@ -1,0 +1,15 @@
+2021/04/19-01:56:02.963 8a44f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_js.tappaysdk.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/19-01:56:02.963 8a44f Recovering log #43
+2021/04/19-01:56:02.963 8a44f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_js.tappaysdk.com_0.indexeddb.leveldb/000043.log 
+2021/04/19-01:56:05.152 8a44f Level-0 table #47: started
+2021/04/19-01:56:05.178 8a44f Level-0 table #47: 190 bytes OK
+2021/04/19-01:56:05.224 8a44f Delete type=0 #43
+2021/04/19-01:56:05.225 8a44f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/19-01:56:05.226 8a44f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 4 : 1
+2021/04/19-01:56:05.226 8a44f Compacting 1@1 + 1@2 files
+2021/04/19-01:56:05.252 8a44f Generated table #48@1: 4 keys, 236 bytes
+2021/04/19-01:56:05.252 8a44f Compacted 1@1 + 1@2 files => 236 bytes
+2021/04/19-01:56:05.299 8a44f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/19-01:56:05.300 8a44f Delete type=2 #5
+2021/04/19-01:56:05.300 8a44f Delete type=2 #47
+2021/04/19-01:56:05.301 8a44f Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 4 : 1 .. (end); will stop at (end)

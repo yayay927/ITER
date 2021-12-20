@@ -1,0 +1,8 @@
+2021/04/18-16:31:37.538 65cdf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cdn.krxd.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-16:31:37.541 65cdf Recovering log #22
+2021/04/18-16:31:37.541 65cdf Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_cdn.krxd.net_0.indexeddb.leveldb/000022.log 
+2021/04/18-16:31:39.577 70113 Level-0 table #26: started
+2021/04/18-16:31:39.577 70113 Level-0 table #26: 0 bytes OK
+2021/04/18-16:31:39.625 70113 Delete type=0 #22
+2021/04/18-16:31:39.626 70113 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/18-16:31:39.627 70113 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

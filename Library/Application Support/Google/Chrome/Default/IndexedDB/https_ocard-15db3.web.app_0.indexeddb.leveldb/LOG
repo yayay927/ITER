@@ -1,0 +1,15 @@
+2021/06/09-10:37:56.196 2e1b73 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ocard-15db3.web.app_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/09-10:37:56.197 2e1b73 Recovering log #4
+2021/06/09-10:37:56.198 2e1b73 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_ocard-15db3.web.app_0.indexeddb.leveldb/000004.log 
+2021/06/09-13:36:21.987 307cb3 Level-0 table #8: started
+2021/06/09-13:36:22.013 307cb3 Level-0 table #8: 8312 bytes OK
+2021/06/09-13:36:22.063 307cb3 Delete type=0 #4
+2021/06/09-13:36:22.065 307cb3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/09-13:36:22.065 307cb3 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00C\x00k\x005\x00x\x00Q\x00s\x00i\x00V\x00V\x00N\x00I\x00I\x004\x001\x00C\x00I\x00U\x00R\x00i\x00U\x00v\x00t\x00n\x00c\x005\x00Q\x00Y\x008\x00q\x00C\x00F\x00V\x00c\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 105 : 1
+2021/06/09-13:36:22.065 307cb3 Compacting 1@1 + 1@2 files
+2021/06/09-13:36:22.091 307cb3 Generated table #9@1: 20 keys, 2507 bytes
+2021/06/09-13:36:22.091 307cb3 Compacted 1@1 + 1@2 files => 2507 bytes
+2021/06/09-13:36:22.137 307cb3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/09-13:36:22.138 307cb3 Delete type=2 #5
+2021/06/09-13:36:22.138 307cb3 Delete type=2 #8
+2021/06/09-13:36:22.140 307cb3 Manual compaction at level-1 from '\x00\x01\x01\x02\x01C\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00:\x00a\x00u\x00t\x00h\x00U\x00s\x00e\x00r\x00:\x00A\x00I\x00z\x00a\x00S\x00y\x00C\x00k\x005\x00x\x00Q\x00s\x00i\x00V\x00V\x00N\x00I\x00I\x004\x001\x00C\x00I\x00U\x00R\x00i\x00U\x00v\x00t\x00n\x00c\x005\x00Q\x00Y\x008\x00q\x00C\x00F\x00V\x00c\x00:\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]' @ 105 : 1 .. (end); will stop at (end)

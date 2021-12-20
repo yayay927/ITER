@@ -1,0 +1,6 @@
+2021/07/20-20:11:57.533 3a497b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_makecode.microbit.org_0.indexeddb.leveldb since it was missing.
+2021/07/20-20:11:57.680 3a497b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_makecode.microbit.org_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/20-20:12:08.041 39f117 Level-0 table #5: started
+2021/07/20-20:12:08.068 39f117 Level-0 table #5: 41347 bytes OK
+2021/07/20-20:12:08.115 39f117 Delete type=0 #3
+2021/07/20-20:12:08.116 39f117 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
