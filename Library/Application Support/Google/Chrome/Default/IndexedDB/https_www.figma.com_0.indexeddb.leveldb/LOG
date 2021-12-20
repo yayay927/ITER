@@ -1,0 +1,15 @@
+2021/11/24-11:23:09.367 32229b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.figma.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/24-11:23:09.369 32229b Recovering log #197
+2021/11/24-11:23:09.369 32229b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.figma.com_0.indexeddb.leveldb/000197.log 
+2021/11/24-11:50:24.617 38e273 Level-0 table #202: started
+2021/11/24-11:50:24.641 38e273 Level-0 table #202: 226 bytes OK
+2021/11/24-11:50:24.686 38e273 Delete type=0 #197
+2021/11/24-11:50:24.690 38e273 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/24-11:50:24.691 38e273 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 195530 : 1
+2021/11/24-11:50:24.691 38e273 Compacting 1@1 + 1@2 files
+2021/11/24-11:50:24.713 38e273 Generated table #203@1: 78 keys, 1536 bytes
+2021/11/24-11:50:24.713 38e273 Compacted 1@1 + 1@2 files => 1536 bytes
+2021/11/24-11:50:24.758 38e273 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/24-11:50:24.759 38e273 Delete type=2 #202
+2021/11/24-11:50:24.759 38e273 Delete type=2 #199
+2021/11/24-11:50:24.765 38e273 Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 195530 : 1 .. (end); will stop at (end)

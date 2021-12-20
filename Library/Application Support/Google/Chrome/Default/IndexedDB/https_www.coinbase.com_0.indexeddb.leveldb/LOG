@@ -1,0 +1,14 @@
+2021/12/03-11:27:15.349 404047 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.coinbase.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/03-11:27:15.350 404047 Recovering log #7
+2021/12/03-11:27:15.350 404047 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.coinbase.com_0.indexeddb.leveldb/000007.log 
+2021/12/03-11:27:17.919 438433 Level-0 table #12: started
+2021/12/03-11:27:17.943 438433 Level-0 table #12: 30076 bytes OK
+2021/12/03-11:27:17.988 438433 Delete type=0 #7
+2021/12/03-11:27:17.989 438433 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/12/03-11:27:17.989 438433 Manual compaction at level-1 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at '\x00\x04\x00\x00\xc8\x09\x00c\x00b\x00-\x00k\x00e\x00y\x00v\x00a\x00l' @ 2430 : 1
+2021/12/03-11:27:17.989 438433 Compacting 1@1 + 1@2 files
+2021/12/03-11:27:18.012 438433 Generated table #13@1: 50 keys, 1362 bytes
+2021/12/03-11:27:18.012 438433 Compacted 1@1 + 1@2 files => 1362 bytes
+2021/12/03-11:27:18.055 438433 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/03-11:27:18.056 438433 Delete type=2 #12
+2021/12/03-11:27:18.056 438433 Manual compaction at level-1 from '\x00\x04\x00\x00\xc8\x09\x00c\x00b\x00-\x00k\x00e\x00y\x00v\x00a\x00l' @ 2430 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

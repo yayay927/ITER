@@ -1,0 +1,6 @@
+2021/06/03-23:39:50.638 24b39b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.codingcage.com_0.indexeddb.leveldb since it was missing.
+2021/06/03-23:39:50.801 24b39b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.codingcage.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/03-23:39:54.561 24b39b Level-0 table #5: started
+2021/06/03-23:39:54.591 24b39b Level-0 table #5: 1215 bytes OK
+2021/06/03-23:39:54.637 24b39b Delete type=0 #3
+2021/06/03-23:39:54.639 24b39b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,6 @@
+2021/08/08-03:43:52.563 a5f37 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.lagagain.com_0.indexeddb.leveldb since it was missing.
+2021/08/08-03:43:52.642 a5f37 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.lagagain.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/08-05:03:07.920 e8203 Level-0 table #5: started
+2021/08/08-05:03:07.947 e8203 Level-0 table #5: 5702 bytes OK
+2021/08/08-05:03:07.994 e8203 Delete type=0 #3
+2021/08/08-05:03:07.996 e8203 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

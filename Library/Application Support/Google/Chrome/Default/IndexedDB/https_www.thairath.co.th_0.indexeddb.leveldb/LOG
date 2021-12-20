@@ -1,0 +1,5 @@
+2020/11/21-22:57:14.967 2ef52b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.thairath.co.th_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/21-22:57:49.066 4412f Level-0 table #5: started
+2020/11/21-22:57:49.077 4412f Level-0 table #5: 2173 bytes OK
+2020/11/21-22:57:49.092 4412f Delete type=0 #3
+2020/11/21-22:57:49.092 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

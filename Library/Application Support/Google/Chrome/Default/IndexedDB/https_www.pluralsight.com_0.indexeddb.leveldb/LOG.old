@@ -1,0 +1,6 @@
+2021/05/18-14:33:58.495 b35f7 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pluralsight.com_0.indexeddb.leveldb since it was missing.
+2021/05/18-14:33:58.570 b35f7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pluralsight.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/18-14:34:30.554 c493b Level-0 table #5: started
+2021/05/18-14:34:30.582 c493b Level-0 table #5: 1113 bytes OK
+2021/05/18-14:34:30.634 c493b Delete type=0 #3
+2021/05/18-14:34:30.635 c493b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

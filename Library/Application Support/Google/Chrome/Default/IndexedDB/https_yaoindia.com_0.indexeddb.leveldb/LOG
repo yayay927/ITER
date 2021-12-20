@@ -1,0 +1,6 @@
+2021/07/17-21:34:53.504 361e2f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_yaoindia.com_0.indexeddb.leveldb since it was missing.
+2021/07/17-21:34:53.590 361e2f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_yaoindia.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/17-22:37:23.406 320b8f Level-0 table #5: started
+2021/07/17-22:37:23.434 320b8f Level-0 table #5: 6038 bytes OK
+2021/07/17-22:37:23.481 320b8f Delete type=0 #3
+2021/07/17-22:37:23.484 320b8f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

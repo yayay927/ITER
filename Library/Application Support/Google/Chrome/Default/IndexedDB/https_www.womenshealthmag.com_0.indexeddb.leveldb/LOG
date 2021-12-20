@@ -1,0 +1,18 @@
+2021/10/29-15:48:30.850 11697b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.womenshealthmag.com_0.indexeddb.leveldb since it was missing.
+2021/10/29-15:48:30.947 11697b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.womenshealthmag.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/29-15:48:31.532 11697b Level-0 table #5: started
+2021/10/29-15:48:31.556 11697b Level-0 table #5: 2897 bytes OK
+2021/10/29-15:48:31.626 11697b Delete type=0 #3
+2021/10/29-15:48:31.647 11697b Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/29-15:50:32.227 100793 Level-0 table #7: started
+2021/10/29-15:50:32.255 100793 Level-0 table #7: 1198035 bytes OK
+2021/10/29-15:50:32.299 100793 Delete type=0 #4
+2021/10/29-15:50:32.300 100793 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/29-15:50:32.300 100793 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x02\x02\x01\x06\x00e\x00v\x00e\x00n\x00t\x00s' @ 283 : 1
+2021/10/29-15:50:32.300 100793 Compacting 1@1 + 1@2 files
+2021/10/29-15:50:32.323 100793 Generated table #8@1: 56 keys, 22416 bytes
+2021/10/29-15:50:32.323 100793 Compacted 1@1 + 1@2 files => 22416 bytes
+2021/10/29-15:50:32.363 100793 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/29-15:50:32.364 100793 Delete type=2 #7
+2021/10/29-15:50:32.364 100793 Delete type=2 #5
+2021/10/29-15:50:32.365 100793 Manual compaction at level-1 from '\x00\x03\x02\x02\x01\x06\x00e\x00v\x00e\x00n\x00t\x00s' @ 283 : 1 .. (end); will stop at (end)

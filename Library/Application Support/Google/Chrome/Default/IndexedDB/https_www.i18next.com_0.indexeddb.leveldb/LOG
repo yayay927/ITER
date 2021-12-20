@@ -1,0 +1,18 @@
+2021/11/12-15:51:12.430 265bcf Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.i18next.com_0.indexeddb.leveldb since it was missing.
+2021/11/12-15:51:12.499 265bcf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.i18next.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/12-15:51:12.735 26d453 Level-0 table #5: started
+2021/11/12-15:51:12.756 26d453 Level-0 table #5: 1436 bytes OK
+2021/11/12-15:51:12.818 26d453 Delete type=0 #3
+2021/11/12-15:51:12.818 26d453 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/12-16:24:28.854 25060f Level-0 table #7: started
+2021/11/12-16:24:28.877 25060f Level-0 table #7: 1815 bytes OK
+2021/11/12-16:24:28.921 25060f Delete type=0 #4
+2021/11/12-16:24:28.923 25060f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/12-16:24:28.923 25060f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x009\x005\x008\x002\x008\x005\x005\x008\x003\x000\x004\x003\x00:\x00w\x00e\x00b\x00:\x009\x00c\x008\x000\x004\x007\x005\x00f\x00a\x00a\x008\x00b\x00c\x009\x00f\x009\x00c\x00b\x000\x008\x007\x006' @ 123 : 1
+2021/11/12-16:24:28.923 25060f Compacting 1@1 + 1@2 files
+2021/11/12-16:24:28.945 25060f Generated table #8@1: 38 keys, 1545 bytes
+2021/11/12-16:24:28.945 25060f Compacted 1@1 + 1@2 files => 1545 bytes
+2021/11/12-16:24:28.988 25060f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/12-16:24:28.989 25060f Delete type=2 #7
+2021/11/12-16:24:28.989 25060f Delete type=2 #5
+2021/11/12-16:24:28.990 25060f Manual compaction at level-1 from '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x009\x005\x008\x002\x008\x005\x005\x008\x003\x000\x004\x003\x00:\x00w\x00e\x00b\x00:\x009\x00c\x008\x000\x004\x007\x005\x00f\x00a\x00a\x008\x00b\x00c\x009\x00f\x009\x00c\x00b\x000\x008\x007\x006' @ 123 : 1 .. (end); will stop at (end)

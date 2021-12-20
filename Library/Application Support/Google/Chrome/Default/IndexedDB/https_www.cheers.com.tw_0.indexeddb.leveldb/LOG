@@ -1,0 +1,15 @@
+2021/10/11-11:20:16.586 8c303 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.cheers.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/11-11:20:16.586 8c303 Recovering log #39
+2021/10/11-11:20:16.589 8c303 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.cheers.com.tw_0.indexeddb.leveldb/000039.log 
+2021/10/11-11:53:18.476 8a6cf Level-0 table #44: started
+2021/10/11-11:53:18.499 8a6cf Level-0 table #44: 53311 bytes OK
+2021/10/11-11:53:18.541 8a6cf Delete type=0 #39
+2021/10/11-11:53:18.551 8a6cf Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/11-11:53:18.552 8a6cf Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01!\x04\x02\x01\x07\x00v\x00i\x00s\x00i\x00t\x00e\x00d\x03\x00\x00\x00\\xebX\xd8A\x00\x01$\x005\x00f\x002\x006\x00f\x000\x00e\x00d\x00-\x000\x003\x00d\x004\x00-\x004\x001\x000\x00e\x00-\x008\x003\x00c\x00c\x00-\x006\x002\x00d\x00f\x005\x004\x00a\x007\x005\x008\x001\x004' @ 10331 : 1
+2021/10/11-11:53:18.552 8a6cf Compacting 1@1 + 1@2 files
+2021/10/11-11:53:18.574 8a6cf Generated table #45@1: 408 keys, 27605 bytes
+2021/10/11-11:53:18.574 8a6cf Compacted 1@1 + 1@2 files => 27605 bytes
+2021/10/11-11:53:18.620 8a6cf compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/11-11:53:18.620 8a6cf Delete type=2 #41
+2021/10/11-11:53:18.623 8a6cf Delete type=2 #44
+2021/10/11-11:53:18.624 8a6cf Manual compaction at level-1 from '\x00\x03\x01!\x04\x02\x01\x07\x00v\x00i\x00s\x00i\x00t\x00e\x00d\x03\x00\x00\x00\\xebX\xd8A\x00\x01$\x005\x00f\x002\x006\x00f\x000\x00e\x00d\x00-\x000\x003\x00d\x004\x00-\x004\x001\x000\x00e\x00-\x008\x003\x00c\x00c\x00-\x006\x002\x00d\x00f\x005\x004\x00a\x007\x005\x008\x001\x004' @ 10331 : 1 .. (end); will stop at (end)

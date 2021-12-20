@@ -1,0 +1,15 @@
+2021/05/09-19:27:46.138 1f3c9f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pro360.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/09-19:27:46.139 1f3c9f Recovering log #4
+2021/05/09-19:27:46.139 1f3c9f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pro360.com.tw_0.indexeddb.leveldb/000004.log 
+2021/05/09-19:32:05.495 1407c7 Level-0 table #8: started
+2021/05/09-19:32:05.522 1407c7 Level-0 table #8: 6239 bytes OK
+2021/05/09-19:32:05.577 1407c7 Delete type=0 #4
+2021/05/09-19:32:05.578 1407c7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/09-19:32:05.578 1407c7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x01\x09\x00u\x00n\x00i\x00q\x00u\x00e\x00_\x00i\x00d' @ 380 : 1
+2021/05/09-19:32:05.578 1407c7 Compacting 1@1 + 1@2 files
+2021/05/09-19:32:05.604 1407c7 Generated table #9@1: 116 keys, 3052 bytes
+2021/05/09-19:32:05.604 1407c7 Compacted 1@1 + 1@2 files => 3052 bytes
+2021/05/09-19:32:05.665 1407c7 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/09-19:32:05.666 1407c7 Delete type=2 #5
+2021/05/09-19:32:05.666 1407c7 Delete type=2 #8
+2021/05/09-19:32:05.670 1407c7 Manual compaction at level-1 from '\x00\x03\x01\x02\x01\x09\x00u\x00n\x00i\x00q\x00u\x00e\x00_\x00i\x00d' @ 380 : 1 .. (end); will stop at (end)

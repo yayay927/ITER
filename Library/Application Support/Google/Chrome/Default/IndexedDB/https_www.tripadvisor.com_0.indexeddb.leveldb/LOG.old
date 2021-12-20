@@ -1,0 +1,15 @@
+2021/08/17-12:27:17.445 18635b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.tripadvisor.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/17-12:27:17.446 18635b Recovering log #43
+2021/08/17-12:27:17.447 18635b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.tripadvisor.com_0.indexeddb.leveldb/000043.log 
+2021/08/17-12:27:19.539 16f963 Level-0 table #48: started
+2021/08/17-12:27:19.604 16f963 Level-0 table #48: 529 bytes OK
+2021/08/17-12:27:19.700 16f963 Delete type=0 #43
+2021/08/17-12:27:19.701 16f963 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/08/17-12:27:19.701 16f963 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x12\x00S\x00W\x00I\x00n\x00s\x00t\x00a\x00l\x00l\x00a\x00t\x00i\x00o\x00n\x00D\x00a\x00t\x00e' @ 1225 : 1
+2021/08/17-12:27:19.701 16f963 Compacting 1@1 + 1@2 files
+2021/08/17-12:27:19.730 16f963 Generated table #49@1: 38 keys, 1117 bytes
+2021/08/17-12:27:19.738 16f963 Compacted 1@1 + 1@2 files => 1117 bytes
+2021/08/17-12:27:19.788 16f963 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/08/17-12:27:19.796 16f963 Delete type=2 #48
+2021/08/17-12:27:19.796 16f963 Delete type=2 #45
+2021/08/17-12:27:19.799 16f963 Manual compaction at level-1 from '\x00\x02\x01\x02\x01\x12\x00S\x00W\x00I\x00n\x00s\x00t\x00a\x00l\x00l\x00a\x00t\x00i\x00o\x00n\x00D\x00a\x00t\x00e' @ 1225 : 1 .. (end); will stop at (end)

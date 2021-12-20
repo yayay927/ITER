@@ -1,0 +1,15 @@
+2021/05/24-22:10:22.586 145c5f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pluralsight.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/24-22:10:22.586 145c5f Recovering log #4
+2021/05/24-22:10:22.586 145c5f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pluralsight.com_0.indexeddb.leveldb/000004.log 
+2021/05/24-22:10:24.674 145c5f Level-0 table #8: started
+2021/05/24-22:10:24.700 145c5f Level-0 table #8: 613 bytes OK
+2021/05/24-22:10:24.747 145c5f Delete type=0 #4
+2021/05/24-22:10:24.747 145c5f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/24-22:10:24.747 145c5f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x07\x00c\x00o\x00n\x00t\x00e\x00x\x00t' @ 61 : 1
+2021/05/24-22:10:24.747 145c5f Compacting 1@1 + 1@2 files
+2021/05/24-22:10:24.773 145c5f Generated table #9@1: 20 keys, 661 bytes
+2021/05/24-22:10:24.774 145c5f Compacted 1@1 + 1@2 files => 661 bytes
+2021/05/24-22:10:24.824 145c5f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/24-22:10:24.824 145c5f Delete type=2 #5
+2021/05/24-22:10:24.825 145c5f Delete type=2 #8
+2021/05/24-22:10:24.825 145c5f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x07\x00c\x00o\x00n\x00t\x00e\x00x\x00t' @ 61 : 1 .. (end); will stop at (end)

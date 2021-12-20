@@ -1,0 +1,6 @@
+2021/11/04-11:35:57.317 1ac907 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.forever21.com_0.indexeddb.leveldb since it was missing.
+2021/11/04-11:35:57.392 1ac907 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.forever21.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/04-11:38:38.751 1bd32f Level-0 table #5: started
+2021/11/04-11:38:38.773 1bd32f Level-0 table #5: 1043 bytes OK
+2021/11/04-11:38:38.815 1bd32f Delete type=0 #3
+2021/11/04-11:38:38.816 1bd32f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

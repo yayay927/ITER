@@ -1,0 +1,5 @@
+2020/11/05-10:23:46.474 2301af Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.kingautos.net_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/05-12:57:10.384 4412f Level-0 table #5: started
+2020/11/05-12:57:10.395 4412f Level-0 table #5: 1910 bytes OK
+2020/11/05-12:57:10.412 4412f Delete type=0 #3
+2020/11/05-12:57:10.413 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

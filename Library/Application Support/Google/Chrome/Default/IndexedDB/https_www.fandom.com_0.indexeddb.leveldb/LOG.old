@@ -1,0 +1,6 @@
+2021/07/09-11:57:49.974 291da7 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.fandom.com_0.indexeddb.leveldb since it was missing.
+2021/07/09-11:57:50.054 291da7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.fandom.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/09-12:01:40.781 2df98b Level-0 table #5: started
+2021/07/09-12:01:40.811 2df98b Level-0 table #5: 2440 bytes OK
+2021/07/09-12:01:40.863 2df98b Delete type=0 #3
+2021/07/09-12:01:40.864 2df98b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

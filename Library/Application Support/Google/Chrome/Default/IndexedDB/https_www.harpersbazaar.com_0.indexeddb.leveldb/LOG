@@ -1,0 +1,14 @@
+2021/10/15-00:05:54.284 24d1f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.harpersbazaar.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/15-00:05:54.285 24d1f Recovering log #28
+2021/10/15-00:05:54.286 24d1f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.harpersbazaar.com_0.indexeddb.leveldb/000028.log 
+2021/10/15-00:05:54.994 364bb Level-0 table #33: started
+2021/10/15-00:05:55.018 364bb Level-0 table #33: 36645 bytes OK
+2021/10/15-00:05:55.086 364bb Delete type=0 #28
+2021/10/15-00:05:55.123 32b8f Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/15-00:05:55.123 32b8f Manual compaction at level-1 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at '\x00\x06\x02\x02\x01\x03\x00p\x00v\x00c' @ 6019 : 1
+2021/10/15-00:05:55.123 32b8f Compacting 1@1 + 1@2 files
+2021/10/15-00:05:55.233 32b8f Generated table #34@1: 121 keys, 4822 bytes
+2021/10/15-00:05:55.234 32b8f Compacted 1@1 + 1@2 files => 4822 bytes
+2021/10/15-00:05:55.276 32b8f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/15-00:05:55.297 32b8f Delete type=2 #33
+2021/10/15-00:05:55.298 32b8f Manual compaction at level-1 from '\x00\x06\x02\x02\x01\x03\x00p\x00v\x00c' @ 6019 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)

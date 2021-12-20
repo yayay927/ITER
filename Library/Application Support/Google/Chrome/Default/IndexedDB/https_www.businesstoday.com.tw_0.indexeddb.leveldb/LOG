@@ -1,0 +1,7 @@
+2021/12/08-14:33:44.610 475b43 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.businesstoday.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/08-14:33:44.613 475b43 Recovering log #4
+2021/12/08-14:33:44.613 475b43 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.businesstoday.com.tw_0.indexeddb.leveldb/000004.log 
+2021/12/08-14:33:45.414 476c17 Level-0 table #8: started
+2021/12/08-14:33:45.443 476c17 Level-0 table #8: 2622 bytes OK
+2021/12/08-14:33:45.492 476c17 Delete type=0 #4
+2021/12/08-14:33:45.495 476c17 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

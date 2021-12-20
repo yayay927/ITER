@@ -1,0 +1,15 @@
+2021/11/14-11:49:45.454 279ce3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.netflix.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/14-11:49:45.456 279ce3 Recovering log #45
+2021/11/14-11:49:45.456 279ce3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.netflix.com_0.indexeddb.leveldb/000045.log 
+2021/11/14-12:22:13.478 27da6f Level-0 table #50: started
+2021/11/14-12:22:13.510 27da6f Level-0 table #50: 776828 bytes OK
+2021/11/14-12:22:13.555 27da6f Delete type=0 #45
+2021/11/14-12:22:13.556 27da6f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/14-12:22:13.556 27da6f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x02\x00v\x00b' @ 75890 : 1
+2021/11/14-12:22:13.556 27da6f Compacting 1@1 + 1@2 files
+2021/11/14-12:22:13.584 27da6f Generated table #51@1: 50 keys, 27826 bytes
+2021/11/14-12:22:13.584 27da6f Compacted 1@1 + 1@2 files => 27826 bytes
+2021/11/14-12:22:13.630 27da6f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/14-12:22:13.630 27da6f Delete type=2 #50
+2021/11/14-12:22:13.631 27da6f Delete type=2 #47
+2021/11/14-12:22:13.633 27da6f Manual compaction at level-1 from '\x00\x02\x01\x02\x01\x02\x00v\x00b' @ 75890 : 1 .. (end); will stop at (end)

@@ -1,0 +1,5 @@
+2020/12/17-02:15:42.172 13b33b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pro360.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/17-02:15:45.541 10a1ef Level-0 table #5: started
+2020/12/17-02:15:45.552 10a1ef Level-0 table #5: 1269 bytes OK
+2020/12/17-02:15:45.568 10a1ef Delete type=0 #3
+2020/12/17-02:15:45.569 10a1ef Manual compaction at level-0 from (begin) .. (end); will stop at (end)

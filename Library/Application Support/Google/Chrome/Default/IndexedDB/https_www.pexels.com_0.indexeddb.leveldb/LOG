@@ -1,0 +1,6 @@
+2021/07/04-21:02:01.701 215303 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pexels.com_0.indexeddb.leveldb since it was missing.
+2021/07/04-21:02:01.866 215303 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pexels.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/04-21:02:15.238 1e309f Level-0 table #5: started
+2021/07/04-21:02:15.265 1e309f Level-0 table #5: 3039 bytes OK
+2021/07/04-21:02:15.312 1e309f Delete type=0 #3
+2021/07/04-21:02:15.312 1e309f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

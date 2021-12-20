@@ -1,0 +1,8 @@
+2021/04/19-13:19:49.515 92947 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.shopbop.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/19-13:19:49.515 92947 Recovering log #43
+2021/04/19-13:19:49.515 92947 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.shopbop.com_0.indexeddb.leveldb/000043.log 
+2021/04/19-13:19:51.661 92947 Level-0 table #48: started
+2021/04/19-13:19:51.661 92947 Level-0 table #48: 0 bytes OK
+2021/04/19-13:19:51.711 92947 Delete type=0 #43
+2021/04/19-13:19:51.712 92947 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/19-13:19:51.712 92947 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

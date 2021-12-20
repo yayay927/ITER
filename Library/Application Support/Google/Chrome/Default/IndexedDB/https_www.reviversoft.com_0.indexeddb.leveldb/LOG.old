@@ -1,0 +1,5 @@
+2021/03/20-11:28:46.758 90d17 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.reviversoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/20-11:29:18.731 3fb93 Level-0 table #5: started
+2021/03/20-11:29:18.758 3fb93 Level-0 table #5: 835 bytes OK
+2021/03/20-11:29:18.806 3fb93 Delete type=0 #3
+2021/03/20-11:29:18.807 3fb93 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,6 @@
+2021/07/08-12:28:44.750 28b453 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.oursong.com_0.indexeddb.leveldb since it was missing.
+2021/07/08-12:28:44.865 28b453 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.oursong.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/08-12:29:13.673 275d17 Level-0 table #5: started
+2021/07/08-12:29:13.699 275d17 Level-0 table #5: 1984 bytes OK
+2021/07/08-12:29:13.749 275d17 Delete type=0 #3
+2021/07/08-12:29:13.750 275d17 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

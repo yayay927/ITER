@@ -1,0 +1,5 @@
+2020/10/26-14:00:27.071 160983 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.kingstone.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/26-14:00:31.183 4412f Level-0 table #5: started
+2020/10/26-14:00:31.196 4412f Level-0 table #5: 2186 bytes OK
+2020/10/26-14:00:31.215 4412f Delete type=0 #3
+2020/10/26-14:00:31.217 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

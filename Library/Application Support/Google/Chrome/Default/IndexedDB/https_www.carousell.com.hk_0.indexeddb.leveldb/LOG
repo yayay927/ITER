@@ -1,0 +1,6 @@
+2021/09/11-12:39:31.531 c03e7 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.carousell.com.hk_0.indexeddb.leveldb since it was missing.
+2021/09/11-12:39:31.605 c03e7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.carousell.com.hk_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/11-12:39:47.726 c03e7 Level-0 table #5: started
+2021/09/11-12:39:47.748 c03e7 Level-0 table #5: 825 bytes OK
+2021/09/11-12:39:47.792 c03e7 Delete type=0 #3
+2021/09/11-12:39:47.794 c03e7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

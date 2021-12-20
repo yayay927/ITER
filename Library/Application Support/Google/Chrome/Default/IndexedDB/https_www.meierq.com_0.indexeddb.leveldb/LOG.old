@@ -1,0 +1,15 @@
+2021/04/22-17:18:11.170 ce7bf Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.meierq.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/22-17:18:11.170 ce7bf Recovering log #35
+2021/04/22-17:18:11.170 ce7bf Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.meierq.com_0.indexeddb.leveldb/000035.log 
+2021/04/22-18:29:21.733 c10db Level-0 table #40: started
+2021/04/22-18:29:21.761 c10db Level-0 table #40: 23199 bytes OK
+2021/04/22-18:29:21.813 c10db Delete type=0 #35
+2021/04/22-18:29:21.817 c10db Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/22-18:29:21.818 c10db Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x04\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 11151 : 1
+2021/04/22-18:29:21.818 c10db Compacting 1@1 + 1@2 files
+2021/04/22-18:29:21.847 c10db Generated table #41@1: 545 keys, 34331 bytes
+2021/04/22-18:29:21.847 c10db Compacted 1@1 + 1@2 files => 34331 bytes
+2021/04/22-18:29:21.893 c10db compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/22-18:29:21.894 c10db Delete type=2 #37
+2021/04/22-18:29:21.894 c10db Delete type=2 #40
+2021/04/22-18:29:21.897 c10db Manual compaction at level-1 from '\x00\x04\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 11151 : 1 .. (end); will stop at (end)

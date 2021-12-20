@@ -1,0 +1,5 @@
+2020/12/10-18:27:35.316 51554b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.obis.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/10-18:36:00.729 4412f Level-0 table #5: started
+2020/12/10-18:36:00.750 4412f Level-0 table #5: 11039 bytes OK
+2020/12/10-18:36:00.766 4412f Delete type=0 #3
+2020/12/10-18:36:00.767 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

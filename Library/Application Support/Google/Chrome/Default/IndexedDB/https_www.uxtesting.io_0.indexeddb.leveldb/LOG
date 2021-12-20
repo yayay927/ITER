@@ -1,0 +1,5 @@
+2021/04/25-17:48:27.373 117e03 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.uxtesting.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/25-17:48:29.432 b3743 Level-0 table #5: started
+2021/04/25-17:48:29.458 b3743 Level-0 table #5: 217 bytes OK
+2021/04/25-17:48:29.506 b3743 Delete type=0 #3
+2021/04/25-17:48:29.507 b3743 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

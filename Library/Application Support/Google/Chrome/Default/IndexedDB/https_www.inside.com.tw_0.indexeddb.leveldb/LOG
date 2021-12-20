@@ -1,0 +1,15 @@
+2021/11/23-13:21:39.051 392357 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.inside.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/23-13:21:39.052 392357 Recovering log #23
+2021/11/23-13:21:39.052 392357 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.inside.com.tw_0.indexeddb.leveldb/000023.log 
+2021/11/23-13:21:43.767 39003b Level-0 table #28: started
+2021/11/23-13:21:43.789 39003b Level-0 table #28: 649 bytes OK
+2021/11/23-13:21:43.848 39003b Delete type=0 #23
+2021/11/23-13:21:43.848 39003b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/23-13:21:43.848 39003b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x03\x00f\x00p\x00c' @ 229 : 1
+2021/11/23-13:21:43.848 39003b Compacting 1@1 + 1@2 files
+2021/11/23-13:21:43.869 39003b Generated table #29@1: 21 keys, 612 bytes
+2021/11/23-13:21:43.869 39003b Compacted 1@1 + 1@2 files => 612 bytes
+2021/11/23-13:21:43.913 39003b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/23-13:21:43.913 39003b Delete type=2 #28
+2021/11/23-13:21:43.913 39003b Delete type=2 #25
+2021/11/23-13:21:43.914 39003b Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x03\x00f\x00p\x00c' @ 229 : 1 .. (end); will stop at (end)

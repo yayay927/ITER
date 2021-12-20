@@ -1,0 +1,15 @@
+2021/11/17-17:30:49.726 2ef23f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.commonhealth.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/17-17:30:49.726 2ef23f Recovering log #23
+2021/11/17-17:30:49.728 2ef23f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.commonhealth.com.tw_0.indexeddb.leveldb/000023.log 
+2021/11/17-17:31:40.106 2f0df7 Level-0 table #28: started
+2021/11/17-17:31:40.131 2f0df7 Level-0 table #28: 30097 bytes OK
+2021/11/17-17:31:40.175 2f0df7 Delete type=0 #23
+2021/11/17-17:31:40.178 2f0df7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/17-17:31:40.178 2f0df7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01!\x04\x02\x01\x07\x00v\x00i\x00s\x00i\x00t\x00e\x00d\x03\x00\x00\x80\xf22e\xd8A\x00\x01$\x00b\x005\x006\x009\x006\x00c\x003\x009\x00-\x00d\x000\x005\x006\x00-\x004\x009\x00a\x00d\x00-\x009\x006\x008\x005\x00-\x005\x00b\x007\x00f\x00c\x001\x007\x007\x00c\x007\x002\x008' @ 2602 : 1
+2021/11/17-17:31:40.178 2f0df7 Compacting 1@1 + 1@2 files
+2021/11/17-17:31:40.200 2f0df7 Generated table #29@1: 150 keys, 8813 bytes
+2021/11/17-17:31:40.200 2f0df7 Compacted 1@1 + 1@2 files => 8813 bytes
+2021/11/17-17:31:40.242 2f0df7 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/17-17:31:40.242 2f0df7 Delete type=2 #28
+2021/11/17-17:31:40.243 2f0df7 Delete type=2 #25
+2021/11/17-17:31:40.245 2f0df7 Manual compaction at level-1 from '\x00\x03\x01!\x04\x02\x01\x07\x00v\x00i\x00s\x00i\x00t\x00e\x00d\x03\x00\x00\x80\xf22e\xd8A\x00\x01$\x00b\x005\x006\x009\x006\x00c\x003\x009\x00-\x00d\x000\x005\x006\x00-\x004\x009\x00a\x00d\x00-\x009\x006\x008\x005\x00-\x005\x00b\x007\x00f\x00c\x001\x007\x007\x00c\x007\x002\x008' @ 2602 : 1 .. (end); will stop at (end)

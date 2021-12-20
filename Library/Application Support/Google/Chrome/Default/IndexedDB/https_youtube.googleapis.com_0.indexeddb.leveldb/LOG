@@ -1,0 +1,8 @@
+2020/11/16-18:55:47.207 20d687 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_youtube.googleapis.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/16-18:55:47.208 20d687 Recovering log #29
+2020/11/16-18:55:47.208 20d687 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_youtube.googleapis.com_0.indexeddb.leveldb/000029.log 
+2020/11/16-18:55:49.222 4412f Level-0 table #33: started
+2020/11/16-18:55:49.222 4412f Level-0 table #33: 0 bytes OK
+2020/11/16-18:55:49.240 4412f Delete type=0 #29
+2020/11/16-18:55:49.241 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/16-18:55:49.241 4412f Manual compaction at level-1 from (begin) .. (end); will stop at (end)

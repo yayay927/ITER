@@ -1,0 +1,5 @@
+2020/08/21-13:27:36.169 b0b3b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.damanwoo.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/21-13:30:29.186 5c15f Level-0 table #5: started
+2020/08/21-13:30:29.198 5c15f Level-0 table #5: 8728 bytes OK
+2020/08/21-13:30:29.213 5c15f Delete type=0 #3
+2020/08/21-13:30:29.214 5c15f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

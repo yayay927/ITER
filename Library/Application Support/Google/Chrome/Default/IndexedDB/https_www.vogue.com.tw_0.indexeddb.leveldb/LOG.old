@@ -1,0 +1,15 @@
+2021/11/05-14:08:09.006 1c86b7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.vogue.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/05-14:08:09.006 1c86b7 Recovering log #34
+2021/11/05-14:08:09.006 1c86b7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.vogue.com.tw_0.indexeddb.leveldb/000034.log 
+2021/11/05-14:08:18.645 1cb86b Level-0 table #39: started
+2021/11/05-14:08:18.668 1cb86b Level-0 table #39: 5944 bytes OK
+2021/11/05-14:08:18.714 1cb86b Delete type=0 #34
+2021/11/05-14:08:18.715 1cb86b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/05-14:08:18.715 1cb86b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x04\x01\x02\x01\x0d\x00p\x00e\x00r\x00m\x00u\x00t\x00i\x00v\x00e\x00-\x00p\x00v\x00c' @ 6439 : 1
+2021/11/05-14:08:18.715 1cb86b Compacting 1@1 + 1@2 files
+2021/11/05-14:08:18.745 1cb86b Generated table #40@1: 62 keys, 1295 bytes
+2021/11/05-14:08:18.745 1cb86b Compacted 1@1 + 1@2 files => 1295 bytes
+2021/11/05-14:08:18.788 1cb86b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/05-14:08:18.789 1cb86b Delete type=2 #39
+2021/11/05-14:08:18.789 1cb86b Delete type=2 #36
+2021/11/05-14:08:18.790 1ce78b Manual compaction at level-1 from '\x00\x04\x01\x02\x01\x0d\x00p\x00e\x00r\x00m\x00u\x00t\x00i\x00v\x00e\x00-\x00p\x00v\x00c' @ 6439 : 1 .. (end); will stop at (end)

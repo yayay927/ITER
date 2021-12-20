@@ -1,0 +1,8 @@
+2021/05/06-19:55:54.259 1b1497 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.netapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/06-19:55:54.259 1b1497 Recovering log #7
+2021/05/06-19:55:54.259 1b1497 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.netapp.com_0.indexeddb.leveldb/000007.log 
+2021/05/06-19:56:26.262 1aa76b Level-0 table #11: started
+2021/05/06-19:56:26.262 1aa76b Level-0 table #11: 0 bytes OK
+2021/05/06-19:56:26.310 1aa76b Delete type=0 #7
+2021/05/06-19:56:26.310 1aa76b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/06-19:56:26.311 1aa76b Manual compaction at level-1 from (begin) .. (end); will stop at (end)

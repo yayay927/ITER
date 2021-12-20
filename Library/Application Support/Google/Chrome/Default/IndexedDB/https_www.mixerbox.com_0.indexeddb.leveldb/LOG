@@ -1,0 +1,15 @@
+2020/11/23-10:05:32.098 34214f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mixerbox.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/23-10:05:32.099 34214f Recovering log #4
+2020/11/23-10:05:32.100 34214f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mixerbox.com_0.indexeddb.leveldb/000004.log 
+2020/11/23-10:07:36.219 4412f Level-0 table #8: started
+2020/11/23-10:07:36.231 4412f Level-0 table #8: 3525 bytes OK
+2020/11/23-10:07:36.251 4412f Delete type=0 #4
+2020/11/23-10:07:36.253 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/23-10:07:36.253 4412f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 577 : 1
+2020/11/23-10:07:36.253 4412f Compacting 1@1 + 1@2 files
+2020/11/23-10:07:36.265 4412f Generated table #9@1: 97 keys, 2203 bytes
+2020/11/23-10:07:36.265 4412f Compacted 1@1 + 1@2 files => 2203 bytes
+2020/11/23-10:07:36.283 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/11/23-10:07:36.285 4412f Delete type=2 #5
+2020/11/23-10:07:36.285 4412f Delete type=2 #8
+2020/11/23-10:07:36.286 4412f Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 577 : 1 .. (end); will stop at (end)

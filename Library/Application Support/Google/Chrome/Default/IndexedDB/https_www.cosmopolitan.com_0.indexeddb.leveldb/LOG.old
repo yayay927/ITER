@@ -1,0 +1,27 @@
+2021/09/07-13:43:12.333 5b233 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.cosmopolitan.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/07-13:43:12.333 5b233 Recovering log #17
+2021/09/07-13:43:12.333 5b233 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.cosmopolitan.com_0.indexeddb.leveldb/000017.log 
+2021/09/07-13:43:12.976 5b233 Level-0 table #22: started
+2021/09/07-13:43:13.002 5b233 Level-0 table #22: 854 bytes OK
+2021/09/07-13:43:13.066 5b233 Delete type=0 #17
+2021/09/07-13:43:13.067 5b233 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/09/07-13:43:13.067 5b233 Manual compaction at level-1 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at '\x00\x04\x02\x02\x01\x06\x00e\x00v\x00e\x00n\x00t\x00s' @ 3872 : 0
+2021/09/07-13:43:13.067 5b233 Compacting 1@1 + 1@2 files
+2021/09/07-13:43:13.125 5b233 Generated table #23@1: 70 keys, 3111 bytes
+2021/09/07-13:43:13.126 5b233 Compacted 1@1 + 1@2 files => 3111 bytes
+2021/09/07-13:43:13.193 5b233 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/09/07-13:43:13.214 5b233 Delete type=2 #22
+2021/09/07-13:43:13.215 5b233 Manual compaction at level-1 from '\x00\x04\x02\x02\x01\x06\x00e\x00v\x00e\x00n\x00t\x00s' @ 3872 : 0 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/09/07-13:54:26.086 302db Level-0 table #25: started
+2021/09/07-13:54:26.107 302db Level-0 table #25: 6600 bytes OK
+2021/09/07-13:54:26.150 302db Delete type=2 #19
+2021/09/07-13:54:26.150 302db Delete type=0 #21
+2021/09/07-13:54:26.151 302db Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/09/07-13:54:26.151 302db Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x05\x02\x02\x01\x06\x00e\x00v\x00e\x00n\x00t\x00s' @ 3932 : 1
+2021/09/07-13:54:26.151 302db Compacting 1@1 + 1@2 files
+2021/09/07-13:54:26.173 302db Generated table #26@1: 109 keys, 6742 bytes
+2021/09/07-13:54:26.173 302db Compacted 1@1 + 1@2 files => 6742 bytes
+2021/09/07-13:54:26.216 302db compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/09/07-13:54:26.217 302db Delete type=2 #23
+2021/09/07-13:54:26.217 302db Delete type=2 #25
+2021/09/07-13:54:26.217 302db Manual compaction at level-1 from '\x00\x05\x02\x02\x01\x06\x00e\x00v\x00e\x00n\x00t\x00s' @ 3932 : 1 .. (end); will stop at (end)

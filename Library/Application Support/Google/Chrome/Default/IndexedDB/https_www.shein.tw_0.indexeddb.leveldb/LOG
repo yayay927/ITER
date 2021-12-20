@@ -1,0 +1,15 @@
+2021/10/27-16:38:45.004 e8d17 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.shein.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/27-16:38:45.005 e8d17 Recovering log #7
+2021/10/27-16:38:45.013 e8d17 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.shein.tw_0.indexeddb.leveldb/000007.log 
+2021/10/27-16:41:55.379 d6baf Level-0 table #12: started
+2021/10/27-16:41:55.408 d6baf Level-0 table #12: 177323 bytes OK
+2021/10/27-16:41:55.452 d6baf Delete type=0 #7
+2021/10/27-16:41:55.461 d6baf Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/27-16:41:55.461 d6baf Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01 \x03\x00P;\x91\x0e\xccwB\x00\x01i\x00d\x00y\x00n\x00a\x00m\x00i\x00c\x00D\x00a\x00t\x00a\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00w\x00w\x00.\x00s\x00h\x00e\x00i\x00n\x00.\x00t\x00w\x00/\x00g\x00o\x00o\x00d\x00s\x00_\x00d\x00e\x00t\x00a\x00i\x00l\x00/\x00m\x00e\x00m\x00b\x00e\x00r\x00S\x00i\x00z\x00e\x00C\x00o\x00n\x00f\x00i\x00g\x00?\x00_\x00l\x00a\x00n\x00g\x00=\x00z\x00h\x00-\x00t\x00w\x00&\x00_\x00v\x00e\x00r\x00=\x001\x00.\x001\x00.\x008\x00&\x00c\x00a\x00t\x00_\x00i\x00d\x00=\x002\x000\x002\x003\x00&\x00l\x00a\x00n\x00g\x00=\x00t\x00w' @ 4732 : 1
+2021/10/27-16:41:55.461 d6baf Compacting 1@1 + 1@2 files
+2021/10/27-16:41:55.488 d6baf Generated table #13@1: 308 keys, 41566 bytes
+2021/10/27-16:41:55.488 d6baf Compacted 1@1 + 1@2 files => 41566 bytes
+2021/10/27-16:41:55.530 d6baf compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/27-16:41:55.531 d6baf Delete type=2 #12
+2021/10/27-16:41:55.533 d6baf Delete type=2 #9
+2021/10/27-16:41:55.536 d6baf Manual compaction at level-1 from '\x00\x02\x01 \x03\x00P;\x91\x0e\xccwB\x00\x01i\x00d\x00y\x00n\x00a\x00m\x00i\x00c\x00D\x00a\x00t\x00a\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00w\x00w\x00.\x00s\x00h\x00e\x00i\x00n\x00.\x00t\x00w\x00/\x00g\x00o\x00o\x00d\x00s\x00_\x00d\x00e\x00t\x00a\x00i\x00l\x00/\x00m\x00e\x00m\x00b\x00e\x00r\x00S\x00i\x00z\x00e\x00C\x00o\x00n\x00f\x00i\x00g\x00?\x00_\x00l\x00a\x00n\x00g\x00=\x00z\x00h\x00-\x00t\x00w\x00&\x00_\x00v\x00e\x00r\x00=\x001\x00.\x001\x00.\x008\x00&\x00c\x00a\x00t\x00_\x00i\x00d\x00=\x002\x000\x002\x003\x00&\x00l\x00a\x00n\x00g\x00=\x00t\x00w' @ 4732 : 1 .. (end); will stop at (end)

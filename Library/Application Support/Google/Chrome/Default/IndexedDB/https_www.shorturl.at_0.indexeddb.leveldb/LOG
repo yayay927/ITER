@@ -1,0 +1,6 @@
+2021/07/26-22:49:26.134 4b566f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.shorturl.at_0.indexeddb.leveldb since it was missing.
+2021/07/26-22:49:26.212 4b566f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.shorturl.at_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/26-22:49:28.324 4b043f Level-0 table #5: started
+2021/07/26-22:49:28.355 4b043f Level-0 table #5: 391 bytes OK
+2021/07/26-22:49:28.406 4b043f Delete type=0 #3
+2021/07/26-22:49:28.407 4b043f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

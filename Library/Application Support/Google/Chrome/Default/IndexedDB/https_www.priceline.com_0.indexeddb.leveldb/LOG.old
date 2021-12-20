@@ -1,0 +1,15 @@
+2021/04/18-16:24:42.403 71233 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.priceline.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-16:24:42.403 71233 Recovering log #7
+2021/04/18-16:24:42.403 71233 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.priceline.com_0.indexeddb.leveldb/000007.log 
+2021/04/18-18:22:37.508 70f9f Level-0 table #11: started
+2021/04/18-18:22:37.536 70f9f Level-0 table #11: 3322 bytes OK
+2021/04/18-18:22:37.583 70f9f Delete type=0 #7
+2021/04/18-18:22:37.585 70f9f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/18-18:22:37.585 70f9f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0f\x00A\x00I\x00R\x00_\x00S\x00E\x00A\x00R\x00C\x00H\x00_\x00D\x00A\x00T\x00A' @ 92 : 1
+2021/04/18-18:22:37.585 70f9f Compacting 1@1 + 1@2 files
+2021/04/18-18:22:37.611 70f9f Generated table #12@1: 28 keys, 2056 bytes
+2021/04/18-18:22:37.611 70f9f Compacted 1@1 + 1@2 files => 2056 bytes
+2021/04/18-18:22:37.657 70f9f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/18-18:22:37.658 70f9f Delete type=2 #5
+2021/04/18-18:22:37.658 70f9f Delete type=2 #11
+2021/04/18-18:22:37.660 70f9f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0f\x00A\x00I\x00R\x00_\x00S\x00E\x00A\x00R\x00C\x00H\x00_\x00D\x00A\x00T\x00A' @ 92 : 1 .. (end); will stop at (end)

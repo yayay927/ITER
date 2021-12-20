@@ -1,0 +1,6 @@
+2021/05/12-09:51:02.676 31a47 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_zhang699-2.gitbook.io_0.indexeddb.leveldb since it was missing.
+2021/05/12-09:51:02.756 31a47 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_zhang699-2.gitbook.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/12-13:37:23.534 3ab4f Level-0 table #5: started
+2021/05/12-13:37:23.561 3ab4f Level-0 table #5: 1166 bytes OK
+2021/05/12-13:37:23.614 3ab4f Delete type=0 #3
+2021/05/12-13:37:23.614 3ab4f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

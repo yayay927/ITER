@@ -1,0 +1,63 @@
+2021/12/18-22:54:58.012 15803 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-000001
+2021/12/18-22:54:58.015 15803 Recovering log #9503
+2021/12/18-22:54:58.017 15803 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/009503.log 
+2021/12/18-23:06:19.384 15993 Level-0 table #9507: started
+2021/12/18-23:06:19.418 15993 Level-0 table #9507: 1274050 bytes OK
+2021/12/18-23:06:19.465 15993 Delete type=0 #9503
+2021/12/18-23:06:19.475 15993 Compacting 4@0 + 1@1 files
+2021/12/18-23:06:19.506 15993 Generated table #9508@0: 2 keys, 45315 bytes
+2021/12/18-23:06:19.506 15993 Compacted 4@0 + 1@1 files => 45315 bytes
+2021/12/18-23:06:19.550 15993 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/12/18-23:06:19.551 15993 Delete type=2 #9502
+2021/12/18-23:06:19.554 15993 Delete type=2 #9500
+2021/12/18-23:06:19.554 15993 Delete type=2 #9504
+2021/12/18-23:06:19.554 15993 Delete type=2 #9507
+2021/12/18-23:06:19.554 15993 Delete type=2 #9498
+2021/12/18-23:41:43.513 22a5f Level-0 table #9510: started
+2021/12/18-23:41:43.543 22a5f Level-0 table #9510: 1278922 bytes OK
+2021/12/18-23:41:43.586 22a5f Delete type=0 #9506
+2021/12/20-01:15:08.987 39b0b Level-0 table #9512: started
+2021/12/20-01:15:09.018 39b0b Level-0 table #9512: 1252367 bytes OK
+2021/12/20-01:15:09.071 39b0b Delete type=0 #9509
+2021/12/20-01:23:53.043 6f3f Level-0 table #9514: started
+2021/12/20-01:23:53.077 6f3f Level-0 table #9514: 1287993 bytes OK
+2021/12/20-01:23:53.123 6f3f Delete type=0 #9511
+2021/12/20-01:47:52.029 41c1f Level-0 table #9516: started
+2021/12/20-01:47:52.062 41c1f Level-0 table #9516: 1246632 bytes OK
+2021/12/20-01:47:52.108 41c1f Delete type=0 #9513
+2021/12/20-01:47:52.113 41c1f Compacting 4@0 + 1@1 files
+2021/12/20-01:47:52.160 41c1f Generated table #9517@0: 2 keys, 48206 bytes
+2021/12/20-01:47:52.160 41c1f Compacted 4@0 + 1@1 files => 48206 bytes
+2021/12/20-01:47:52.203 41c1f compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/12/20-01:47:52.205 41c1f Delete type=2 #9508
+2021/12/20-01:47:52.205 41c1f Delete type=2 #9516
+2021/12/20-01:47:52.205 41c1f Delete type=2 #9514
+2021/12/20-01:47:52.205 41c1f Delete type=2 #9510
+2021/12/20-01:47:52.205 41c1f Delete type=2 #9512
+2021/12/20-01:55:25.971 25193 Level-0 table #9519: started
+2021/12/20-01:55:26.032 25193 Level-0 table #9519: 1251207 bytes OK
+2021/12/20-01:55:26.084 25193 Delete type=0 #9515
+2021/12/20-02:03:16.624 15ad7 Level-0 table #9521: started
+2021/12/20-02:03:16.659 15ad7 Level-0 table #9521: 1258630 bytes OK
+2021/12/20-02:03:16.704 15ad7 Delete type=0 #9518
+2021/12/20-02:06:14.195 29d9b Level-0 table #9523: started
+2021/12/20-02:06:14.226 29d9b Level-0 table #9523: 1259425 bytes OK
+2021/12/20-02:06:14.271 29d9b Delete type=0 #9520
+2021/12/20-10:54:11.428 4517f Level-0 table #9525: started
+2021/12/20-10:54:11.462 4517f Level-0 table #9525: 1259754 bytes OK
+2021/12/20-10:54:11.512 4517f Delete type=0 #9522
+2021/12/20-10:54:11.514 4517f Compacting 4@0 + 1@1 files
+2021/12/20-10:54:11.549 4517f Generated table #9526@0: 2 keys, 48695 bytes
+2021/12/20-10:54:11.549 4517f Compacted 4@0 + 1@1 files => 48695 bytes
+2021/12/20-10:54:11.591 4517f compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/12/20-10:54:11.592 4517f Delete type=2 #9523
+2021/12/20-10:54:11.593 4517f Delete type=2 #9521
+2021/12/20-10:54:11.593 4517f Delete type=2 #9519
+2021/12/20-10:54:11.593 4517f Delete type=2 #9525
+2021/12/20-10:54:11.593 4517f Delete type=2 #9517
+2021/12/20-11:34:15.445 51603 Level-0 table #9528: started
+2021/12/20-11:34:15.483 51603 Level-0 table #9528: 1274565 bytes OK
+2021/12/20-11:34:15.532 51603 Delete type=0 #9524
+2021/12/20-12:29:13.004 58c03 Level-0 table #9530: started
+2021/12/20-12:29:13.041 58c03 Level-0 table #9530: 1287210 bytes OK
+2021/12/20-12:29:13.093 58c03 Delete type=0 #9527

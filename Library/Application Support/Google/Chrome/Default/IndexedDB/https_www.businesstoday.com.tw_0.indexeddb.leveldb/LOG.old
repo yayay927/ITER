@@ -1,0 +1,6 @@
+2021/11/24-12:16:08.649 379f07 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.businesstoday.com.tw_0.indexeddb.leveldb since it was missing.
+2021/11/24-12:16:08.749 379f07 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.businesstoday.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/24-12:16:09.241 378483 Level-0 table #5: started
+2021/11/24-12:16:09.262 378483 Level-0 table #5: 734 bytes OK
+2021/11/24-12:16:09.322 378483 Delete type=0 #3
+2021/11/24-12:16:09.323 33cc33 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

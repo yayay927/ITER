@@ -1,0 +1,15 @@
+2021/06/25-13:16:33.830 4c733 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.merriam-webster.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/25-13:16:33.830 4c733 Recovering log #11
+2021/06/25-13:16:33.830 4c733 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.merriam-webster.com_0.indexeddb.leveldb/000011.log 
+2021/06/25-13:16:55.050 4893f Level-0 table #16: started
+2021/06/25-13:16:55.092 4893f Level-0 table #16: 441 bytes OK
+2021/06/25-13:16:55.140 4893f Delete type=0 #11
+2021/06/25-13:16:55.141 4893f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/25-13:16:55.142 4893f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x03\x00\x00\x00\xadY5\xd8A' @ 86 : 1
+2021/06/25-13:16:55.142 4893f Compacting 1@1 + 1@2 files
+2021/06/25-13:16:55.168 4893f Generated table #17@1: 27 keys, 693 bytes
+2021/06/25-13:16:55.168 4893f Compacted 1@1 + 1@2 files => 693 bytes
+2021/06/25-13:16:55.213 4893f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/25-13:16:55.214 4893f Delete type=2 #16
+2021/06/25-13:16:55.215 4893f Delete type=2 #13
+2021/06/25-13:16:55.218 4893f Manual compaction at level-1 from '\x00\x01\x01\x02\x03\x00\x00\x00\xadY5\xd8A' @ 86 : 1 .. (end); will stop at (end)

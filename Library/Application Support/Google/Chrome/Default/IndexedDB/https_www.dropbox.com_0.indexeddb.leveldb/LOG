@@ -1,0 +1,12 @@
+2021/07/21-22:34:54.278 3da3d7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.dropbox.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/21-22:34:54.279 3da3d7 Recovering log #34
+2021/07/21-22:34:54.282 3da3d7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.dropbox.com_0.indexeddb.leveldb/000034.log 
+2021/07/22-05:39:01.212 3eed7f Level-0 table #39: started
+2021/07/22-05:39:01.391 3eed7f Level-0 table #39: 1147444 bytes OK
+2021/07/22-05:39:01.452 3eed7f Delete type=0 #34
+2021/07/22-15:21:50.966 3fc7b3 Compacting 1@1 + 1@2 files
+2021/07/22-15:21:51.003 3fc7b3 Generated table #40@1: 34 keys, 856 bytes
+2021/07/22-15:21:51.003 3fc7b3 Compacted 1@1 + 1@2 files => 856 bytes
+2021/07/22-15:21:51.054 3fc7b3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/22-15:21:51.055 3fc7b3 Delete type=2 #39
+2021/07/22-15:21:51.055 3fc7b3 Delete type=2 #36

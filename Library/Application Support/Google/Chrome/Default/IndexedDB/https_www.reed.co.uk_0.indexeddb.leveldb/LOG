@@ -1,0 +1,6 @@
+2021/06/28-15:39:31.387 eab0b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.reed.co.uk_0.indexeddb.leveldb since it was missing.
+2021/06/28-15:39:31.471 eab0b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.reed.co.uk_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/28-15:47:04.545 fe837 Level-0 table #5: started
+2021/06/28-15:47:04.573 fe837 Level-0 table #5: 3436 bytes OK
+2021/06/28-15:47:04.622 fe837 Delete type=0 #3
+2021/06/28-15:47:04.623 fe837 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

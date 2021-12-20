@@ -1,0 +1,6 @@
+2021/06/25-19:54:47.085 72943 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.sodapdf.com_0.indexeddb.leveldb since it was missing.
+2021/06/25-19:54:47.179 72943 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.sodapdf.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/25-19:55:26.211 6903f Level-0 table #5: started
+2021/06/25-19:55:26.237 6903f Level-0 table #5: 1959 bytes OK
+2021/06/25-19:55:26.285 6903f Delete type=0 #3
+2021/06/25-19:55:26.286 6903f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

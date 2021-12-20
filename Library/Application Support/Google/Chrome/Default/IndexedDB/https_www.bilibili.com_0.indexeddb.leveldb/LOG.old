@@ -1,0 +1,15 @@
+2021/11/16-21:53:21.575 2cf143 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.bilibili.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/16-21:53:21.576 2cf143 Recovering log #4
+2021/11/16-21:53:21.576 2cf143 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.bilibili.com_0.indexeddb.leveldb/000004.log 
+2021/11/16-21:53:29.460 2ca227 Level-0 table #8: started
+2021/11/16-21:53:29.497 2ca227 Level-0 table #8: 771 bytes OK
+2021/11/16-21:53:29.540 2ca227 Delete type=0 #4
+2021/11/16-21:53:29.543 2ca227 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/16-21:53:29.543 2ca227 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01\x0e\x00l\x00i\x00b\x00w\x00p\x00e\x00n\x00g\x00n\x00.\x00w\x00a\x00s\x00m' @ 78 : 0
+2021/11/16-21:53:29.543 2ca227 Compacting 1@1 + 1@2 files
+2021/11/16-21:53:29.564 2ca227 Generated table #9@1: 24 keys, 676 bytes
+2021/11/16-21:53:29.564 2ca227 Compacted 1@1 + 1@2 files => 676 bytes
+2021/11/16-21:53:29.606 2ca227 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/16-21:53:29.607 2ca227 Delete type=2 #5
+2021/11/16-21:53:29.607 2ca227 Delete type=2 #8
+2021/11/16-21:53:29.609 2ca227 Manual compaction at level-1 from '\x00\x01\x01\x03\x01\x0e\x00l\x00i\x00b\x00w\x00p\x00e\x00n\x00g\x00n\x00.\x00w\x00a\x00s\x00m' @ 78 : 0 .. (end); will stop at (end)

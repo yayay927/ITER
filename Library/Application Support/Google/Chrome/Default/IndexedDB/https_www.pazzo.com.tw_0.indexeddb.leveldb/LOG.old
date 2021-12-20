@@ -1,0 +1,15 @@
+2021/04/22-10:06:38.191 bd43b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pazzo.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/22-10:06:38.192 bd43b Recovering log #19
+2021/04/22-10:06:38.192 bd43b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pazzo.com.tw_0.indexeddb.leveldb/000019.log 
+2021/04/22-10:06:44.379 cc637 Level-0 table #24: started
+2021/04/22-10:06:44.405 cc637 Level-0 table #24: 7094 bytes OK
+2021/04/22-10:06:44.453 cc637 Delete type=0 #19
+2021/04/22-10:06:44.454 cc637 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/22-10:06:44.454 cc637 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x04\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 5480 : 1
+2021/04/22-10:06:44.454 cc637 Compacting 1@1 + 1@2 files
+2021/04/22-10:06:44.481 cc637 Generated table #25@1: 364 keys, 20370 bytes
+2021/04/22-10:06:44.481 cc637 Compacted 1@1 + 1@2 files => 20370 bytes
+2021/04/22-10:06:44.536 cc637 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/22-10:06:44.536 cc637 Delete type=2 #21
+2021/04/22-10:06:44.536 cc637 Delete type=2 #24
+2021/04/22-10:06:44.537 cc637 Manual compaction at level-1 from '\x00\x04\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 5480 : 1 .. (end); will stop at (end)

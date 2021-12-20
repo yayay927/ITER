@@ -1,0 +1,15 @@
+2021/01/18-23:40:05.975 bec13 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.beauty321.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/18-23:40:05.975 bec13 Recovering log #11
+2021/01/18-23:40:05.975 bec13 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.beauty321.com_0.indexeddb.leveldb/000011.log 
+2021/01/19-00:05:07.952 edd2f Level-0 table #16: started
+2021/01/19-00:05:07.964 edd2f Level-0 table #16: 494 bytes OK
+2021/01/19-00:05:07.985 edd2f Delete type=0 #11
+2021/01/19-00:05:07.987 edd2f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/19-00:05:07.988 edd2f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x05\x00I\x00Z\x00C\x00I\x00D' @ 129 : 1
+2021/01/19-00:05:07.988 edd2f Compacting 1@1 + 1@2 files
+2021/01/19-00:05:07.999 edd2f Generated table #17@1: 29 keys, 715 bytes
+2021/01/19-00:05:07.999 edd2f Compacted 1@1 + 1@2 files => 715 bytes
+2021/01/19-00:05:08.014 edd2f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/01/19-00:05:08.015 edd2f Delete type=2 #16
+2021/01/19-00:05:08.015 edd2f Delete type=2 #13
+2021/01/19-00:05:08.016 edd2f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x05\x00I\x00Z\x00C\x00I\x00D' @ 129 : 1 .. (end); will stop at (end)

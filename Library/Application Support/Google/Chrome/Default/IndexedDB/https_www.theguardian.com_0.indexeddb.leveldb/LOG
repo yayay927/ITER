@@ -1,0 +1,15 @@
+2021/11/18-10:19:38.120 310af3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.theguardian.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/18-10:19:38.122 310af3 Recovering log #4
+2021/11/18-10:19:38.122 310af3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.theguardian.com_0.indexeddb.leveldb/000004.log 
+2021/11/18-10:25:13.604 2f0d2f Level-0 table #8: started
+2021/11/18-10:25:13.628 2f0d2f Level-0 table #8: 38735 bytes OK
+2021/11/18-10:25:13.673 2f0d2f Delete type=0 #4
+2021/11/18-10:25:13.674 2f0d2f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/18-10:25:13.674 2f0d2f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x02\x02\x01\x03\x00p\x00v\x00c' @ 222 : 1
+2021/11/18-10:25:13.674 2f0d2f Compacting 1@1 + 1@2 files
+2021/11/18-10:25:13.697 2f0d2f Generated table #9@1: 56 keys, 11197 bytes
+2021/11/18-10:25:13.698 2f0d2f Compacted 1@1 + 1@2 files => 11197 bytes
+2021/11/18-10:25:13.741 2f0d2f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/18-10:25:13.742 2f0d2f Delete type=2 #5
+2021/11/18-10:25:13.742 2f0d2f Delete type=2 #8
+2021/11/18-10:25:13.743 2f0d2f Manual compaction at level-1 from '\x00\x02\x02\x02\x01\x03\x00p\x00v\x00c' @ 222 : 1 .. (end); will stop at (end)

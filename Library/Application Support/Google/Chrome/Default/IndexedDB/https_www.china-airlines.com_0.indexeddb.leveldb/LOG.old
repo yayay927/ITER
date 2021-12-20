@@ -1,0 +1,5 @@
+2021/04/19-15:11:49.315 85623 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.china-airlines.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/19-15:11:51.446 85623 Level-0 table #5: started
+2021/04/19-15:11:51.473 85623 Level-0 table #5: 236 bytes OK
+2021/04/19-15:11:51.519 85623 Delete type=0 #3
+2021/04/19-15:11:51.519 85623 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

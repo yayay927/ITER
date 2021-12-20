@@ -1,0 +1,15 @@
+2021/08/23-20:30:08.942 1ff20f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.meetup.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/23-20:30:08.943 1ff20f Recovering log #11
+2021/08/23-20:30:08.943 1ff20f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.meetup.com_0.indexeddb.leveldb/000011.log 
+2021/08/23-20:30:25.496 1feb1b Level-0 table #16: started
+2021/08/23-20:30:25.523 1feb1b Level-0 table #16: 20455 bytes OK
+2021/08/23-20:30:25.575 1feb1b Delete type=0 #11
+2021/08/23-20:30:25.576 1feb1b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/08/23-20:30:25.576 1feb1b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01`\x000\x00{\x00"\x00e\x00n\x00d\x00p\x00o\x00i\x00n\x00t\x00"\x00:\x00"\x00m\x00i\x00c\x00r\x00o\x00t\x00a\x00r\x00g\x00e\x00t\x00/\x00s\x00i\x00t\x00e\x00_\x00f\x00o\x00o\x00t\x00e\x00r\x00"\x00,\x00"\x00r\x00e\x00f\x00"\x00:\x00"\x00s\x00h\x00o\x00u\x00l\x00d\x00R\x00e\x00n\x00d\x00e\x00r\x00C\x00o\x00o\x00k\x00i\x00e\x00B\x00a\x00n\x00n\x00e\x00r\x00"\x00,\x00"\x00m\x00e\x00t\x00a\x00"\x00:\x00{\x00"\x00m\x00e\x00t\x00h\x00o\x00d\x00"\x00:\x00"\x00g\x00e\x00t\x00"\x00}\x00}' @ 196 : 1
+2021/08/23-20:30:25.576 1feb1b Compacting 1@1 + 1@2 files
+2021/08/23-20:30:25.604 1feb1b Generated table #17@1: 39 keys, 38123 bytes
+2021/08/23-20:30:25.604 1feb1b Compacted 1@1 + 1@2 files => 38123 bytes
+2021/08/23-20:30:25.650 1feb1b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/08/23-20:30:25.651 1feb1b Delete type=2 #16
+2021/08/23-20:30:25.651 1feb1b Delete type=2 #13
+2021/08/23-20:30:25.656 1feb1b Manual compaction at level-1 from '\x00\x01\x01\x02\x01`\x000\x00{\x00"\x00e\x00n\x00d\x00p\x00o\x00i\x00n\x00t\x00"\x00:\x00"\x00m\x00i\x00c\x00r\x00o\x00t\x00a\x00r\x00g\x00e\x00t\x00/\x00s\x00i\x00t\x00e\x00_\x00f\x00o\x00o\x00t\x00e\x00r\x00"\x00,\x00"\x00r\x00e\x00f\x00"\x00:\x00"\x00s\x00h\x00o\x00u\x00l\x00d\x00R\x00e\x00n\x00d\x00e\x00r\x00C\x00o\x00o\x00k\x00i\x00e\x00B\x00a\x00n\x00n\x00e\x00r\x00"\x00,\x00"\x00m\x00e\x00t\x00a\x00"\x00:\x00{\x00"\x00m\x00e\x00t\x00h\x00o\x00d\x00"\x00:\x00"\x00g\x00e\x00t\x00"\x00}\x00}' @ 196 : 1 .. (end); will stop at (end)

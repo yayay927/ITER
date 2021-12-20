@@ -1,0 +1,5 @@
+2021/05/03-09:01:51.450 14426b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_zikar.surge.sh_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/03-09:10:15.300 16a74b Level-0 table #5: started
+2021/05/03-09:10:15.328 16a74b Level-0 table #5: 1114 bytes OK
+2021/05/03-09:10:15.375 16a74b Delete type=0 #3
+2021/05/03-09:10:15.379 16a74b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

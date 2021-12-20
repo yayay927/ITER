@@ -1,0 +1,15 @@
+2021/01/27-01:12:37.525 14b22f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.peekme.cc_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/27-01:12:37.526 14b22f Recovering log #35
+2021/01/27-01:12:37.526 14b22f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.peekme.cc_0.indexeddb.leveldb/000035.log 
+2021/01/27-01:15:09.294 16d403 Level-0 table #40: started
+2021/01/27-01:15:09.312 16d403 Level-0 table #40: 3003 bytes OK
+2021/01/27-01:15:09.332 16d403 Delete type=0 #35
+2021/01/27-01:15:09.334 16d403 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/27-01:15:09.334 16d403 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 1624 : 1
+2021/01/27-01:15:09.334 16d403 Compacting 1@1 + 1@2 files
+2021/01/27-01:15:09.346 16d403 Generated table #41@1: 98 keys, 2183 bytes
+2021/01/27-01:15:09.346 16d403 Compacted 1@1 + 1@2 files => 2183 bytes
+2021/01/27-01:15:09.361 16d403 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/01/27-01:15:09.361 16d403 Delete type=2 #37
+2021/01/27-01:15:09.361 16d403 Delete type=2 #40
+2021/01/27-01:15:09.361 16d403 Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 1624 : 1 .. (end); will stop at (end)

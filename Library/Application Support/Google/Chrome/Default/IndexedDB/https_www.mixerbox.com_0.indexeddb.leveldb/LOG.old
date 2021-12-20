@@ -1,0 +1,5 @@
+2020/09/25-19:06:44.002 e065b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mixerbox.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/28-11:24:58.700 d027 Level-0 table #5: started
+2020/09/28-11:24:58.711 d027 Level-0 table #5: 8318 bytes OK
+2020/09/28-11:24:58.733 d027 Delete type=0 #3
+2020/09/28-11:24:58.734 d027 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

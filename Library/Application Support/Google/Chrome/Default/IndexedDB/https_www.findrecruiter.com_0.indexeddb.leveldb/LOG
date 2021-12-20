@@ -1,0 +1,6 @@
+2021/07/27-15:01:45.781 49fd6b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.findrecruiter.com_0.indexeddb.leveldb since it was missing.
+2021/07/27-15:01:45.863 49fd6b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.findrecruiter.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/27-15:15:40.114 48300f Level-0 table #5: started
+2021/07/27-15:15:40.139 48300f Level-0 table #5: 1162 bytes OK
+2021/07/27-15:15:40.187 48300f Delete type=0 #3
+2021/07/27-15:15:40.187 48300f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

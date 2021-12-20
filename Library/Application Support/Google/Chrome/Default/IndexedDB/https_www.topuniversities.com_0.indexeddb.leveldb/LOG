@@ -1,0 +1,15 @@
+2021/08/09-19:16:52.960 de25f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.topuniversities.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/09-19:16:52.961 de25f Recovering log #4
+2021/08/09-19:16:52.961 de25f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.topuniversities.com_0.indexeddb.leveldb/000004.log 
+2021/08/09-19:40:56.866 fa813 Level-0 table #8: started
+2021/08/09-19:40:56.894 fa813 Level-0 table #8: 759 bytes OK
+2021/08/09-19:40:56.945 fa813 Delete type=0 #4
+2021/08/09-19:40:56.946 fa813 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/08/09-19:40:56.947 fa813 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x006\x001\x008\x008\x007\x001\x009\x003\x005' @ 64 : 1
+2021/08/09-19:40:56.947 fa813 Compacting 1@1 + 1@2 files
+2021/08/09-19:40:56.974 fa813 Generated table #9@1: 19 keys, 584 bytes
+2021/08/09-19:40:56.975 fa813 Compacted 1@1 + 1@2 files => 584 bytes
+2021/08/09-19:40:57.041 fa813 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/08/09-19:40:57.042 fa813 Delete type=2 #5
+2021/08/09-19:40:57.042 fa813 Delete type=2 #8
+2021/08/09-19:40:57.044 fa813 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x006\x001\x008\x008\x007\x001\x009\x003\x005' @ 64 : 1 .. (end); will stop at (end)

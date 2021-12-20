@@ -1,0 +1,15 @@
+2020/12/15-10:39:04.155 75b43 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-10:39:04.156 75b43 Recovering log #15
+2020/12/15-10:39:04.156 75b43 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/000015.log 
+2020/12/15-16:35:58.095 35a13 Level-0 table #19: started
+2020/12/15-16:35:58.107 35a13 Level-0 table #19: 1280 bytes OK
+2020/12/15-16:35:58.126 35a13 Delete type=0 #15
+2020/12/15-16:35:58.127 35a13 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/15-16:35:58.127 35a13 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x16\x00y\x00t\x00-\x00i\x00d\x00b\x00-\x00t\x00e\x00s\x00t\x00-\x00d\x00o\x00-\x00n\x00o\x00t\x00-\x00u\x00s\x00e' @ 56 : 1
+2020/12/15-16:35:58.127 35a13 Compacting 1@1 + 1@2 files
+2020/12/15-16:35:58.138 35a13 Generated table #20@1: 21 keys, 603 bytes
+2020/12/15-16:35:58.138 35a13 Compacted 1@1 + 1@2 files => 603 bytes
+2020/12/15-16:35:58.170 35a13 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/15-16:35:58.171 35a13 Delete type=2 #13
+2020/12/15-16:35:58.171 35a13 Delete type=2 #19
+2020/12/15-16:35:58.173 35a13 Manual compaction at level-1 from '\x00\x02\x01\x02\x01\x16\x00y\x00t\x00-\x00i\x00d\x00b\x00-\x00t\x00e\x00s\x00t\x00-\x00d\x00o\x00-\x00n\x00o\x00t\x00-\x00u\x00s\x00e' @ 56 : 1 .. (end); will stop at (end)

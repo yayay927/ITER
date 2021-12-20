@@ -1,0 +1,60 @@
+2021/12/18-22:54:47.411 3403 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/Local Storage/leveldb/MANIFEST-288466
+2021/12/18-22:54:47.436 3403 Recovering log #295812
+2021/12/18-22:54:47.437 3403 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/Local Storage/leveldb/295812.log 
+2021/12/18-23:06:14.049 4917 Level-0 table #295816: started
+2021/12/18-23:06:14.075 4917 Level-0 table #295816: 20338 bytes OK
+2021/12/18-23:06:14.122 4917 Delete type=0 #295812
+2021/12/18-23:36:22.779 3b1f Level-0 table #295818: started
+2021/12/18-23:36:22.809 3b1f Level-0 table #295818: 368589 bytes OK
+2021/12/18-23:36:22.854 3b1f Delete type=0 #295815
+2021/12/18-23:36:22.855 3b1f Compacting 4@0 + 4@1 files
+2021/12/18-23:36:22.918 3b1f Generated table #295819@0: 8422 keys, 2552870 bytes
+2021/12/18-23:36:22.986 3b1f Generated table #295820@0: 8685 keys, 2102724 bytes
+2021/12/18-23:36:23.032 3b1f Generated table #295821@0: 8065 keys, 1688864 bytes
+2021/12/18-23:36:23.082 3b1f Generated table #295822@0: 7136 keys, 2105924 bytes
+2021/12/18-23:36:23.082 3b1f Compacted 4@0 + 4@1 files => 8450382 bytes
+2021/12/18-23:36:23.143 3b1f compacted to: files[ 0 7 12 0 0 0 0 ]
+2021/12/18-23:36:23.145 3b1f Delete type=2 #295808
+2021/12/18-23:36:23.145 3b1f Delete type=2 #295818
+2021/12/18-23:36:23.145 3b1f Delete type=2 #295816
+2021/12/18-23:36:23.146 3b1f Delete type=2 #295805
+2021/12/18-23:36:23.146 3b1f Delete type=2 #295811
+2021/12/18-23:36:23.146 3b1f Delete type=2 #295807
+2021/12/18-23:36:23.146 3b1f Delete type=2 #295813
+2021/12/18-23:36:23.146 3b1f Delete type=2 #295806
+2021/12/18-23:37:22.758 3b1f Level-0 table #295824: started
+2021/12/18-23:37:22.799 3b1f Level-0 table #295824: 576369 bytes OK
+2021/12/18-23:37:22.847 3b1f Delete type=0 #295817
+2021/12/20-01:10:35.989 a417 Level-0 table #295826: started
+2021/12/20-01:10:36.025 a417 Level-0 table #295826: 241191 bytes OK
+2021/12/20-01:10:36.081 a417 Delete type=0 #295823
+2021/12/20-01:15:26.118 a63b Level-0 table #295828: started
+2021/12/20-01:15:26.149 a63b Level-0 table #295828: 37389 bytes OK
+2021/12/20-01:15:26.212 a63b Delete type=0 #295825
+2021/12/20-02:01:01.987 3b43 Level-0 table #295830: started
+2021/12/20-02:01:02.010 3b43 Level-0 table #295830: 17375 bytes OK
+2021/12/20-02:01:02.070 3b43 Delete type=0 #295827
+2021/12/20-02:01:02.079 3b43 Compacting 4@0 + 6@1 files
+2021/12/20-02:01:02.143 3b43 Generated table #295831@0: 8429 keys, 2552882 bytes
+2021/12/20-02:01:02.199 3b43 Generated table #295832@0: 8693 keys, 2103045 bytes
+2021/12/20-02:01:02.260 3b43 Generated table #295833@0: 8120 keys, 1687087 bytes
+2021/12/20-02:01:02.394 3b43 Generated table #295834@0: 7115 keys, 2103792 bytes
+2021/12/20-02:01:02.453 3b43 Generated table #295835@0: 2248 keys, 1927173 bytes
+2021/12/20-02:01:02.454 3b43 Compacted 4@0 + 6@1 files => 10373979 bytes
+2021/12/20-02:01:02.499 3b43 compacted to: files[ 0 6 12 0 0 0 0 ]
+2021/12/20-02:01:02.503 3b43 Delete type=2 #295822
+2021/12/20-02:01:02.503 3b43 Delete type=2 #295820
+2021/12/20-02:01:02.504 3b43 Delete type=2 #295809
+2021/12/20-02:01:02.504 3b43 Delete type=2 #295821
+2021/12/20-02:01:02.504 3b43 Delete type=2 #295819
+2021/12/20-02:01:02.504 3b43 Delete type=2 #295824
+2021/12/20-02:01:02.505 3b43 Delete type=2 #295830
+2021/12/20-02:01:02.505 3b43 Delete type=2 #295826
+2021/12/20-02:01:02.505 3b43 Delete type=2 #295828
+2021/12/20-02:01:02.505 3b43 Delete type=2 #295796
+2021/12/20-11:06:03.392 3f07 Level-0 table #295837: started
+2021/12/20-11:06:03.419 3f07 Level-0 table #295837: 19093 bytes OK
+2021/12/20-11:06:03.471 3f07 Delete type=0 #295829
+2021/12/20-12:26:08.101 3f17 Level-0 table #295839: started
+2021/12/20-12:26:08.134 3f17 Level-0 table #295839: 17666 bytes OK
+2021/12/20-12:26:08.187 3f17 Delete type=0 #295836

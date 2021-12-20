@@ -1,0 +1,26 @@
+2020/12/09-00:58:59.578 47781f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.kantar.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/09-00:58:59.578 47781f Recovering log #12
+2020/12/09-00:58:59.579 47781f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.kantar.com_0.indexeddb.leveldb/000012.log 
+2020/12/09-00:59:07.038 4412f Level-0 table #18: started
+2020/12/09-00:59:07.049 4412f Level-0 table #18: 533 bytes OK
+2020/12/09-00:59:07.064 4412f Delete type=0 #12
+2020/12/09-00:59:07.065 4412f Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
+2020/12/09-00:59:09.039 4412f Level-0 table #20: started
+2020/12/09-00:59:09.059 4412f Level-0 table #20: 218 bytes OK
+2020/12/09-00:59:09.075 4412f Delete type=0 #17
+2020/12/09-00:59:09.076 4412f Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 60 : 0
+2020/12/09-00:59:09.076 4412f Compacting 1@0 + 1@1 files
+2020/12/09-00:59:09.086 4412f Generated table #21@0: 2 keys, 196 bytes
+2020/12/09-00:59:09.086 4412f Compacted 1@0 + 1@1 files => 196 bytes
+2020/12/09-00:59:09.116 4412f compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/09-00:59:09.117 4412f Delete type=2 #20
+2020/12/09-00:59:09.117 4412f Delete type=2 #18
+2020/12/09-00:59:09.117 4412f Manual compaction at level-0 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 60 : 0 .. (end); will stop at (end)
+2020/12/09-00:59:09.117 4412f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x03' @ 59 : 0
+2020/12/09-00:59:09.117 4412f Compacting 1@1 + 1@2 files
+2020/12/09-00:59:09.128 4412f Generated table #22@1: 5 keys, 237 bytes
+2020/12/09-00:59:09.128 4412f Compacted 1@1 + 1@2 files => 237 bytes
+2020/12/09-00:59:09.158 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/09-00:59:09.159 4412f Delete type=2 #15
+2020/12/09-00:59:09.159 4412f Delete type=2 #21
+2020/12/09-00:59:09.159 4412f Manual compaction at level-1 from '\x00\x00\x00\x00\x03' @ 59 : 0 .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/03/11-17:26:30.911 3225b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.decathlon.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/11-17:26:30.911 3225b Recovering log #4
+2021/03/11-17:26:30.912 3225b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.decathlon.tw_0.indexeddb.leveldb/000004.log 
+2021/03/11-17:26:40.116 3c78b Level-0 table #8: started
+2021/03/11-17:26:40.141 3c78b Level-0 table #8: 184 bytes OK
+2021/03/11-17:26:40.187 3c78b Delete type=0 #4
+2021/03/11-17:26:40.188 3c78b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/11-17:26:40.188 3c78b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x00' @ 129 : 1
+2021/03/11-17:26:40.188 3c78b Compacting 1@1 + 1@2 files
+2021/03/11-17:26:40.213 3c78b Generated table #9@1: 38 keys, 1113 bytes
+2021/03/11-17:26:40.213 3c78b Compacted 1@1 + 1@2 files => 1113 bytes
+2021/03/11-17:26:40.258 3c78b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/11-17:26:40.259 3c78b Delete type=2 #5
+2021/03/11-17:26:40.259 3c78b Delete type=2 #8
+2021/03/11-17:26:40.260 3c78b Manual compaction at level-1 from '\x00\x00\x00\x00\x00' @ 129 : 1 .. (end); will stop at (end)

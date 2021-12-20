@@ -1,0 +1,15 @@
+2021/06/05-17:42:33.136 2bdb3b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.lonelyplanet.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/05-17:42:33.136 2bdb3b Recovering log #15
+2021/06/05-17:42:33.136 2bdb3b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.lonelyplanet.com_0.indexeddb.leveldb/000015.log 
+2021/06/10-16:18:17.973 32f423 Level-0 table #20: started
+2021/06/10-16:18:18.009 32f423 Level-0 table #20: 787800 bytes OK
+2021/06/10-16:18:18.057 32f423 Delete type=0 #15
+2021/06/10-16:18:18.079 32f423 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/10-16:18:18.079 32f423 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x16\x00p\x00e\x00r\x00m\x00u\x00t\x00i\x00v\x00e\x00-\x00e\x00v\x00e\x00n\x00t\x00s\x00-\x00c\x00a\x00c\x00h\x00e' @ 502 : 1
+2021/06/10-16:18:18.079 32f423 Compacting 1@1 + 1@2 files
+2021/06/10-16:18:18.105 32f423 Generated table #21@1: 31 keys, 62513 bytes
+2021/06/10-16:18:18.105 32f423 Compacted 1@1 + 1@2 files => 62513 bytes
+2021/06/10-16:18:18.151 32f423 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/10-16:18:18.151 32f423 Delete type=2 #17
+2021/06/10-16:18:18.153 32f423 Delete type=2 #20
+2021/06/10-16:18:18.153 32f423 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x16\x00p\x00e\x00r\x00m\x00u\x00t\x00i\x00v\x00e\x00-\x00e\x00v\x00e\x00n\x00t\x00s\x00-\x00c\x00a\x00c\x00h\x00e' @ 502 : 1 .. (end); will stop at (end)

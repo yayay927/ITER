@@ -1,0 +1,15 @@
+2020/10/22-23:16:59.149 133457 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.costco.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/22-23:16:59.149 133457 Recovering log #4
+2020/10/22-23:16:59.149 133457 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.costco.com.tw_0.indexeddb.leveldb/000004.log 
+2020/10/22-23:17:03.722 4412f Level-0 table #8: started
+2020/10/22-23:17:03.737 4412f Level-0 table #8: 784 bytes OK
+2020/10/22-23:17:03.756 4412f Delete type=0 #4
+2020/10/22-23:17:03.757 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/10/22-23:17:03.758 4412f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x1f\x01\x10\x003\x000\x000\x003\x003\x004\x001\x005\x002\x005\x004\x008\x004\x004\x000\x000\x00\x01(\x00c\x00t\x00.\x00p\x00.\x00m\x00.\x00V\x001\x00.\x003\x000\x000\x003\x003\x004\x001\x005\x002\x005\x004\x008\x004\x004\x000\x000\x00.\x001\x006\x000\x003\x003\x007\x009\x008\x002\x000\x004\x006\x007' @ 303 : 1
+2020/10/22-23:17:03.758 4412f Compacting 1@1 + 1@2 files
+2020/10/22-23:17:03.769 4412f Generated table #9@1: 36 keys, 1268 bytes
+2020/10/22-23:17:03.769 4412f Compacted 1@1 + 1@2 files => 1268 bytes
+2020/10/22-23:17:03.788 4412f compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/10/22-23:17:03.789 4412f Delete type=2 #5
+2020/10/22-23:17:03.789 4412f Delete type=2 #8
+2020/10/22-23:17:03.795 4412f Manual compaction at level-1 from '\x00\x01\x01\x1f\x01\x10\x003\x000\x000\x003\x003\x004\x001\x005\x002\x005\x004\x008\x004\x004\x000\x000\x00\x01(\x00c\x00t\x00.\x00p\x00.\x00m\x00.\x00V\x001\x00.\x003\x000\x000\x003\x003\x004\x001\x005\x002\x005\x004\x008\x004\x004\x000\x000\x00.\x001\x006\x000\x003\x003\x007\x009\x008\x002\x000\x004\x006\x007' @ 303 : 1 .. (end); will stop at (end)

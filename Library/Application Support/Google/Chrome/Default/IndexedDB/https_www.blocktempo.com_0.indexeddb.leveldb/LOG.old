@@ -1,0 +1,14 @@
+2021/11/03-10:57:52.648 15bbf3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.blocktempo.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/03-10:57:52.649 15bbf3 Recovering log #144
+2021/11/03-10:57:52.650 15bbf3 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.blocktempo.com_0.indexeddb.leveldb/000144.log 
+2021/11/03-10:57:52.650 15bbf3 Delete type=2 #142
+2021/11/03-10:57:57.886 16e533 Level-0 table #149: started
+2021/11/03-10:57:57.909 16e533 Level-0 table #149: 566 bytes OK
+2021/11/03-10:57:57.951 16e533 Delete type=0 #144
+2021/11/03-10:57:57.952 16e533 Manual compaction at level-0 from '\x00"\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00#\x00\x00\x00' @ 0 : 0; will stop at '\x00"\x00\x00\x05' @ 646 : 1
+2021/11/03-10:57:57.952 16e533 Compacting 1@0 + 1@1 files
+2021/11/03-10:57:57.975 16e533 Generated table #150@0: 5 keys, 263 bytes
+2021/11/03-10:57:57.975 16e533 Compacted 1@0 + 1@1 files => 263 bytes
+2021/11/03-10:57:58.016 16e533 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/03-10:57:58.017 16e533 Delete type=2 #149
+2021/11/03-10:57:58.017 16e533 Manual compaction at level-0 from '\x00"\x00\x00\x05' @ 646 : 1 .. '\x00#\x00\x00\x00' @ 0 : 0; will stop at (end)

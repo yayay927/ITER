@@ -1,0 +1,6 @@
+2021/12/17-17:20:49.378 76a23 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.sliderrevolution.com_0.indexeddb.leveldb since it was missing.
+2021/12/17-17:20:49.454 76a23 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.sliderrevolution.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/17-17:21:53.943 52a93 Level-0 table #5: started
+2021/12/17-17:21:53.964 52a93 Level-0 table #5: 5855 bytes OK
+2021/12/17-17:21:54.013 52a93 Delete type=0 #3
+2021/12/17-17:21:54.014 52a93 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

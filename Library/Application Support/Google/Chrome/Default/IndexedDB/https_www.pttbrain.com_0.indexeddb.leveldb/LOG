@@ -1,0 +1,6 @@
+2021/08/08-04:34:41.491 cc29f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pttbrain.com_0.indexeddb.leveldb since it was missing.
+2021/08/08-04:34:41.574 cc29f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pttbrain.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/08-04:40:17.397 cde17 Level-0 table #5: started
+2021/08/08-04:40:17.425 cde17 Level-0 table #5: 1149 bytes OK
+2021/08/08-04:40:17.471 cde17 Delete type=0 #3
+2021/08/08-04:40:17.496 cde17 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

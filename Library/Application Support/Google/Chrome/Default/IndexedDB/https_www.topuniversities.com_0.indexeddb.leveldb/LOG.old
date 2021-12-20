@@ -1,0 +1,5 @@
+2021/01/10-23:08:48.949 e703 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.topuniversities.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/10-23:08:56.160 e703 Level-0 table #5: started
+2021/01/10-23:08:56.174 e703 Level-0 table #5: 1129 bytes OK
+2021/01/10-23:08:56.190 e703 Delete type=0 #3
+2021/01/10-23:08:56.191 e703 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

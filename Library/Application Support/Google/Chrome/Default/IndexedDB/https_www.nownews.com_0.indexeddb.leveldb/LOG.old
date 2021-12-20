@@ -1,0 +1,5 @@
+2020/08/25-11:03:52.555 122077 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.nownews.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/25-11:05:16.169 5c15f Level-0 table #5: started
+2020/08/25-11:05:16.180 5c15f Level-0 table #5: 3642 bytes OK
+2020/08/25-11:05:16.196 5c15f Delete type=0 #3
+2020/08/25-11:05:16.197 5c15f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

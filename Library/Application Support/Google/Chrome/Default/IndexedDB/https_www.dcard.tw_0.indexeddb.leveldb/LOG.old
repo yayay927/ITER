@@ -1,0 +1,15 @@
+2021/04/05-01:42:42.390 1b476f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.dcard.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/05-01:42:42.391 1b476f Recovering log #959
+2021/04/05-01:42:42.391 1b476f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.dcard.tw_0.indexeddb.leveldb/000959.log 
+2021/04/05-01:43:48.245 18f49b Level-0 table #964: started
+2021/04/05-01:43:48.275 18f49b Level-0 table #964: 1278 bytes OK
+2021/04/05-01:43:48.323 18f49b Delete type=0 #959
+2021/04/05-01:43:48.324 18f49b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/05-01:43:48.325 18f49b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01 \x03\x00P\xc3\xac\xdf\x89wB\x00\x01*\x00i\x00m\x00a\x00g\x00e\x00s\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00i\x00m\x00g\x00u\x00r\x00.\x00d\x00c\x00a\x00r\x00d\x00.\x00t\x00w\x00/\x00e\x004\x00p\x00H\x006\x00w\x006\x00b\x00.\x00j\x00p\x00g' @ 344806 : 1
+2021/04/05-01:43:48.325 18f49b Compacting 1@1 + 1@2 files
+2021/04/05-01:43:48.370 18f49b Generated table #965@1: 4802 keys, 590533 bytes
+2021/04/05-01:43:48.370 18f49b Compacted 1@1 + 1@2 files => 590533 bytes
+2021/04/05-01:43:48.417 18f49b compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/05-01:43:48.418 18f49b Delete type=2 #961
+2021/04/05-01:43:48.418 18f49b Delete type=2 #964
+2021/04/05-01:43:48.419 18f49b Manual compaction at level-1 from '\x00\x01\x01 \x03\x00P\xc3\xac\xdf\x89wB\x00\x01*\x00i\x00m\x00a\x00g\x00e\x00s\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00i\x00m\x00g\x00u\x00r\x00.\x00d\x00c\x00a\x00r\x00d\x00.\x00t\x00w\x00/\x00e\x004\x00p\x00H\x006\x00w\x006\x00b\x00.\x00j\x00p\x00g' @ 344806 : 1 .. (end); will stop at (end)

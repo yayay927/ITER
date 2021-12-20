@@ -1,0 +1,17 @@
+2021/11/04-11:47:55.045 1ab3d7 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.opentix.life_0.indexeddb.leveldb since it was missing.
+2021/11/04-11:47:55.114 1ab3d7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.opentix.life_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/04-11:47:55.381 1ab3d7 Level-0 table #5: started
+2021/11/04-11:47:55.402 1ab3d7 Level-0 table #5: 1373 bytes OK
+2021/11/04-11:47:55.465 1ab3d7 Delete type=0 #3
+2021/11/04-11:47:55.467 1ab3d7 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/04-11:47:55.678 1abc57 Level-0 table #7: started
+2021/11/04-11:47:55.699 1abc57 Level-0 table #7: 1311 bytes OK
+2021/11/04-11:47:55.784 1abc57 Delete type=0 #4
+2021/11/04-11:47:55.784 1abc57 Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/04-11:47:55.784 1abc57 Manual compaction at level-1 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x00\x00\x05' @ 123 : 1
+2021/11/04-11:47:55.784 1abc57 Compacting 1@1 + 1@2 files
+2021/11/04-11:47:55.811 1abc57 Generated table #8@1: 37 keys, 926 bytes
+2021/11/04-11:47:55.811 1abc57 Compacted 1@1 + 1@2 files => 926 bytes
+2021/11/04-11:47:55.875 1abc57 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/04-11:47:55.876 1abc57 Delete type=2 #7
+2021/11/04-11:47:55.876 1abc57 Manual compaction at level-1 from '\x00\x05\x00\x00\x05' @ 123 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)

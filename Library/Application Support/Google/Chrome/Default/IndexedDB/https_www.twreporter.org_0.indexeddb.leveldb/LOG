@@ -1,0 +1,6 @@
+2021/10/08-11:58:28.948 50b37 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.twreporter.org_0.indexeddb.leveldb since it was missing.
+2021/10/08-11:58:29.015 50b37 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.twreporter.org_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/08-12:20:09.421 59983 Level-0 table #5: started
+2021/10/08-12:20:09.445 59983 Level-0 table #5: 1292 bytes OK
+2021/10/08-12:20:09.490 59983 Delete type=0 #3
+2021/10/08-12:20:09.491 59983 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

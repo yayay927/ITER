@@ -1,0 +1,18 @@
+2021/07/15-01:56:33.458 2f3db3 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.cio.com.tw_0.indexeddb.leveldb since it was missing.
+2021/07/15-01:56:33.554 2f3db3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.cio.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/15-01:56:40.881 30b30f Level-0 table #5: started
+2021/07/15-01:56:40.907 30b30f Level-0 table #5: 556 bytes OK
+2021/07/15-01:56:40.953 30b30f Delete type=0 #3
+2021/07/15-01:56:40.954 30b30f Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/07/15-01:56:42.935 30b30f Level-0 table #7: started
+2021/07/15-01:56:42.960 30b30f Level-0 table #7: 249 bytes OK
+2021/07/15-01:56:43.007 30b30f Delete type=0 #4
+2021/07/15-01:56:43.008 30b30f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/07/15-01:56:43.008 30b30f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 21 : 0
+2021/07/15-01:56:43.008 30b30f Compacting 1@1 + 1@2 files
+2021/07/15-01:56:43.033 30b30f Generated table #8@1: 5 keys, 237 bytes
+2021/07/15-01:56:43.034 30b30f Compacted 1@1 + 1@2 files => 237 bytes
+2021/07/15-01:56:43.079 30b30f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/15-01:56:43.080 30b30f Delete type=2 #7
+2021/07/15-01:56:43.080 30b30f Delete type=2 #5
+2021/07/15-01:56:43.081 30b30f Manual compaction at level-1 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 21 : 0 .. (end); will stop at (end)

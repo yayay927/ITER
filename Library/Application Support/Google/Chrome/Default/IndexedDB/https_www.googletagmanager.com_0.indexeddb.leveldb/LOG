@@ -1,0 +1,8 @@
+2021/04/18-16:31:36.003 7db0b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.googletagmanager.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/18-16:31:36.003 7db0b Recovering log #25
+2021/04/18-16:31:36.003 7db0b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.googletagmanager.com_0.indexeddb.leveldb/000025.log 
+2021/04/18-16:31:38.034 7db0b Level-0 table #29: started
+2021/04/18-16:31:38.034 7db0b Level-0 table #29: 0 bytes OK
+2021/04/18-16:31:38.082 7db0b Delete type=0 #25
+2021/04/18-16:31:38.083 7db0b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/18-16:31:38.083 7db0b Manual compaction at level-1 from (begin) .. (end); will stop at (end)

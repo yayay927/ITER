@@ -1,0 +1,6 @@
+2021/05/28-15:45:08.728 1be8ab Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.sky.com_0.indexeddb.leveldb since it was missing.
+2021/05/28-15:45:08.815 1be8ab Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.sky.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/28-15:45:13.125 1be8ab Level-0 table #5: started
+2021/05/28-15:45:13.151 1be8ab Level-0 table #5: 1464 bytes OK
+2021/05/28-15:45:13.197 1be8ab Delete type=0 #3
+2021/05/28-15:45:13.198 1be8ab Manual compaction at level-0 from (begin) .. (end); will stop at (end)

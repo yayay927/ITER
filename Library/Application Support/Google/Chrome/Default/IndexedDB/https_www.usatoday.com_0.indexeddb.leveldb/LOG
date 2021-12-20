@@ -1,0 +1,5 @@
+2020/10/16-10:40:20.873 61e77 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.usatoday.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/16-10:40:28.963 4412f Level-0 table #5: started
+2020/10/16-10:40:28.976 4412f Level-0 table #5: 342 bytes OK
+2020/10/16-10:40:29.010 4412f Delete type=0 #3
+2020/10/16-10:40:29.010 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

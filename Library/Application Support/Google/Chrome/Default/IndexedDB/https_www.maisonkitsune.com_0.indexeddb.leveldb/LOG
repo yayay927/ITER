@@ -1,0 +1,5 @@
+2021/03/30-17:04:47.407 1742b7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.maisonkitsune.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/30-17:04:52.480 15e4a3 Level-0 table #5: started
+2021/03/30-17:04:52.506 15e4a3 Level-0 table #5: 3943 bytes OK
+2021/03/30-17:04:52.557 15e4a3 Delete type=0 #3
+2021/03/30-17:04:52.557 15e4a3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

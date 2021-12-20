@@ -1,0 +1,6 @@
+2021/05/19-14:39:18.913 d7737 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.bloomberg.com_0.indexeddb.leveldb since it was missing.
+2021/05/19-14:39:18.995 d7737 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.bloomberg.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/19-14:39:52.083 afc7f Level-0 table #5: started
+2021/05/19-14:39:52.110 afc7f Level-0 table #5: 837 bytes OK
+2021/05/19-14:39:52.157 afc7f Delete type=0 #3
+2021/05/19-14:39:52.158 afc7f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

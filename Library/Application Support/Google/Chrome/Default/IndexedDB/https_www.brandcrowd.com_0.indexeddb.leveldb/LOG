@@ -1,0 +1,6 @@
+2021/06/07-17:45:55.542 2e704f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.brandcrowd.com_0.indexeddb.leveldb since it was missing.
+2021/06/07-17:45:55.622 2e704f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.brandcrowd.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/08-11:29:19.867 2bb89f Level-0 table #5: started
+2021/06/08-11:29:19.894 2bb89f Level-0 table #5: 4751 bytes OK
+2021/06/08-11:29:19.939 2bb89f Delete type=0 #3
+2021/06/08-11:29:19.941 2bb89f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

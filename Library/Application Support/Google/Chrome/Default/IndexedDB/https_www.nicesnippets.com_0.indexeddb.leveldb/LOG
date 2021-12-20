@@ -1,0 +1,15 @@
+2021/06/05-02:03:57.525 293f5f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.nicesnippets.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/05-02:03:57.525 293f5f Recovering log #11
+2021/06/05-02:03:57.525 293f5f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.nicesnippets.com_0.indexeddb.leveldb/000011.log 
+2021/06/05-02:30:12.158 27ae6f Level-0 table #16: started
+2021/06/05-02:30:12.187 27ae6f Level-0 table #16: 6850 bytes OK
+2021/06/05-02:30:12.260 27ae6f Delete type=0 #11
+2021/06/05-02:30:12.262 27ae6f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/05-02:30:12.262 27ae6f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 2786 : 1
+2021/06/05-02:30:12.262 27ae6f Compacting 1@1 + 1@2 files
+2021/06/05-02:30:12.289 27ae6f Generated table #17@1: 94 keys, 2049 bytes
+2021/06/05-02:30:12.289 27ae6f Compacted 1@1 + 1@2 files => 2049 bytes
+2021/06/05-02:30:12.355 27ae6f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/05-02:30:12.355 27ae6f Delete type=2 #16
+2021/06/05-02:30:12.356 27ae6f Delete type=2 #13
+2021/06/05-02:30:12.359 27ae6f Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 2786 : 1 .. (end); will stop at (end)

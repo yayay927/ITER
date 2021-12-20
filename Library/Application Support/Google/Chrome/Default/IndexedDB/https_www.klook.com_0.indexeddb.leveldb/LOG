@@ -1,0 +1,15 @@
+2021/11/12-23:35:27.678 286563 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.klook.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/12-23:35:27.679 286563 Recovering log #14
+2021/11/12-23:35:27.679 286563 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.klook.com_0.indexeddb.leveldb/000014.log 
+2021/11/14-00:09:50.293 28d993 Level-0 table #19: started
+2021/11/14-00:09:50.317 28d993 Level-0 table #19: 190 bytes OK
+2021/11/14-00:09:50.368 28d993 Delete type=0 #14
+2021/11/14-00:09:50.370 28d993 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/14-00:09:50.370 28d993 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 585 : 1
+2021/11/14-00:09:50.370 28d993 Compacting 1@1 + 1@2 files
+2021/11/14-00:09:50.392 28d993 Generated table #20@1: 28 keys, 724 bytes
+2021/11/14-00:09:50.392 28d993 Compacted 1@1 + 1@2 files => 724 bytes
+2021/11/14-00:09:50.438 28d993 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/14-00:09:50.446 28d993 Delete type=2 #16
+2021/11/14-00:09:50.446 28d993 Delete type=2 #19
+2021/11/14-00:09:50.449 28d993 Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 585 : 1 .. (end); will stop at (end)

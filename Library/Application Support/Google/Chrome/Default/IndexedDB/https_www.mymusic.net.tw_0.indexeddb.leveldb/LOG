@@ -1,0 +1,15 @@
+2021/06/12-15:26:46.614 8ab13 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mymusic.net.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/12-15:26:46.614 8ab13 Recovering log #4
+2021/06/12-15:26:46.614 8ab13 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mymusic.net.tw_0.indexeddb.leveldb/000004.log 
+2021/06/12-15:27:16.638 8df57 Level-0 table #8: started
+2021/06/12-15:27:16.664 8df57 Level-0 table #8: 209 bytes OK
+2021/06/12-15:27:16.713 8df57 Delete type=0 #4
+2021/06/12-15:27:16.713 8df57 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/12-15:27:16.714 8df57 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 129 : 1
+2021/06/12-15:27:16.714 8df57 Compacting 1@1 + 1@2 files
+2021/06/12-15:27:16.739 8df57 Generated table #9@1: 39 keys, 1111 bytes
+2021/06/12-15:27:16.739 8df57 Compacted 1@1 + 1@2 files => 1111 bytes
+2021/06/12-15:27:16.785 8df57 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/12-15:27:16.786 8df57 Delete type=2 #5
+2021/06/12-15:27:16.786 8df57 Delete type=2 #8
+2021/06/12-15:27:16.787 8df57 Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 129 : 1 .. (end); will stop at (end)

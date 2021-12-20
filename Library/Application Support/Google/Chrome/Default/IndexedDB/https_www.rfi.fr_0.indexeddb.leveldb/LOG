@@ -1,0 +1,6 @@
+2021/09/16-02:31:59.869 15668f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.rfi.fr_0.indexeddb.leveldb since it was missing.
+2021/09/16-02:31:59.938 15668f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.rfi.fr_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/16-02:43:58.652 169913 Level-0 table #5: started
+2021/09/16-02:43:58.675 169913 Level-0 table #5: 2230 bytes OK
+2021/09/16-02:43:58.718 169913 Delete type=0 #3
+2021/09/16-02:43:58.720 169913 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,6 @@
+2021/09/30-15:59:06.388 207f5f Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mintscan.io_0.indexeddb.leveldb since it was missing.
+2021/09/30-15:59:06.458 207f5f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mintscan.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/09/30-16:16:45.907 204eab Level-0 table #5: started
+2021/09/30-16:16:45.933 204eab Level-0 table #5: 181660 bytes OK
+2021/09/30-16:16:45.980 204eab Delete type=0 #3
+2021/09/30-16:16:45.980 204eab Manual compaction at level-0 from (begin) .. (end); will stop at (end)

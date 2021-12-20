@@ -1,0 +1,25 @@
+2021/11/22-14:00:21.708 32e96b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.farfetch.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/22-14:00:21.709 32e96b Recovering log #19
+2021/11/22-14:00:21.709 32e96b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.farfetch.com_0.indexeddb.leveldb/000019.log 
+2021/11/22-14:00:21.710 32e96b Delete type=2 #18
+2021/11/22-14:00:28.200 31eb2f Level-0 table #24: started
+2021/11/22-14:00:28.244 31eb2f Level-0 table #24: 618 bytes OK
+2021/11/22-14:00:28.313 31eb2f Delete type=0 #19
+2021/11/22-14:00:28.313 31eb2f Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at '\x00\x07\x00\x00\x05' @ 109 : 1
+2021/11/22-14:00:28.314 31eb2f Compacting 1@0 + 1@1 files
+2021/11/22-14:00:28.336 31eb2f Generated table #25@0: 7 keys, 389 bytes
+2021/11/22-14:00:28.336 31eb2f Compacted 1@0 + 1@1 files => 389 bytes
+2021/11/22-14:00:28.394 31eb2f compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/22-14:00:28.396 31eb2f Delete type=2 #24
+2021/11/22-14:00:28.396 31eb2f Manual compaction at level-0 from '\x00\x07\x00\x00\x05' @ 109 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/11/22-14:00:28.397 338463 Level-0 table #27: started
+2021/11/22-14:00:28.418 338463 Level-0 table #27: 491 bytes OK
+2021/11/22-14:00:28.460 338463 Delete type=2 #21
+2021/11/22-14:00:28.460 338463 Delete type=0 #23
+2021/11/22-14:00:28.461 338463 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at '\x00\x07\x00\x00\x05' @ 136 : 0
+2021/11/22-14:00:28.461 338463 Compacting 1@0 + 1@1 files
+2021/11/22-14:00:28.482 338463 Generated table #28@0: 4 keys, 259 bytes
+2021/11/22-14:00:28.483 338463 Compacted 1@0 + 1@1 files => 259 bytes
+2021/11/22-14:00:28.543 338463 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/11/22-14:00:28.544 338463 Delete type=2 #27
+2021/11/22-14:00:28.544 338463 Manual compaction at level-0 from '\x00\x07\x00\x00\x05' @ 136 : 0 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)

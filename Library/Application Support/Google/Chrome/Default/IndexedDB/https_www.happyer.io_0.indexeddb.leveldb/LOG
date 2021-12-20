@@ -1,0 +1,15 @@
+2021/07/05-22:37:11.280 21654f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.happyer.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/05-22:37:11.281 21654f Recovering log #4
+2021/07/05-22:37:11.281 21654f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.happyer.io_0.indexeddb.leveldb/000004.log 
+2021/07/05-22:39:17.401 20240f Level-0 table #8: started
+2021/07/05-22:39:17.427 20240f Level-0 table #8: 1671 bytes OK
+2021/07/05-22:39:17.484 20240f Delete type=0 #4
+2021/07/05-22:39:17.487 20240f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/07/05-22:39:17.490 20240f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x007\x007\x007\x009\x003\x003\x009\x008' @ 121 : 1
+2021/07/05-22:39:17.490 20240f Compacting 1@1 + 1@2 files
+2021/07/05-22:39:17.520 20240f Generated table #9@1: 19 keys, 568 bytes
+2021/07/05-22:39:17.520 20240f Compacted 1@1 + 1@2 files => 568 bytes
+2021/07/05-22:39:17.577 20240f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/07/05-22:39:17.578 20240f Delete type=2 #5
+2021/07/05-22:39:17.578 20240f Delete type=2 #8
+2021/07/05-22:39:17.590 20240f Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x007\x007\x007\x009\x003\x003\x009\x008' @ 121 : 1 .. (end); will stop at (end)

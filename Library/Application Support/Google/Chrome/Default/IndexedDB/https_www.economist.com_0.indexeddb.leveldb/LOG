@@ -1,0 +1,15 @@
+2021/01/14-11:21:48.068 bbea7 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.economist.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/14-11:21:48.069 bbea7 Recovering log #7
+2021/01/14-11:21:48.070 bbea7 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.economist.com_0.indexeddb.leveldb/000007.log 
+2021/01/25-23:22:55.286 145703 Level-0 table #12: started
+2021/01/25-23:22:55.318 145703 Level-0 table #12: 6892 bytes OK
+2021/01/25-23:22:55.340 145703 Delete type=0 #7
+2021/01/25-23:22:55.359 145703 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/25-23:22:55.359 145703 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01\x16\x00p\x00e\x00r\x00m\x00u\x00t\x00i\x00v\x00e\x00-\x00e\x00v\x00e\x00n\x00t\x00s\x00-\x00c\x00a\x00c\x00h\x00e' @ 945 : 0
+2021/01/25-23:22:55.359 145703 Compacting 1@1 + 1@2 files
+2021/01/25-23:22:55.371 145703 Generated table #13@1: 34 keys, 965 bytes
+2021/01/25-23:22:55.371 145703 Compacted 1@1 + 1@2 files => 965 bytes
+2021/01/25-23:22:55.387 145703 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/01/25-23:22:55.388 145703 Delete type=2 #12
+2021/01/25-23:22:55.390 145703 Delete type=2 #9
+2021/01/25-23:22:55.392 145703 Manual compaction at level-1 from '\x00\x01\x01\x03\x01\x16\x00p\x00e\x00r\x00m\x00u\x00t\x00i\x00v\x00e\x00-\x00e\x00v\x00e\x00n\x00t\x00s\x00-\x00c\x00a\x00c\x00h\x00e' @ 945 : 0 .. (end); will stop at (end)

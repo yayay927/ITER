@@ -1,0 +1,6 @@
+2021/06/28-23:35:56.035 117887 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.techritual.com_0.indexeddb.leveldb since it was missing.
+2021/06/28-23:35:56.142 117887 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.techritual.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/29-00:03:05.313 105c63 Level-0 table #5: started
+2021/06/29-00:03:05.340 105c63 Level-0 table #5: 32576 bytes OK
+2021/06/29-00:03:05.386 105c63 Delete type=0 #3
+2021/06/29-00:03:05.387 105c63 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/05/18-23:46:21.019 b6597 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.kingstone.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/18-23:46:21.019 b6597 Recovering log #4
+2021/05/18-23:46:21.019 b6597 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.kingstone.com.tw_0.indexeddb.leveldb/000004.log 
+2021/05/18-23:46:37.455 e6fef Level-0 table #8: started
+2021/05/18-23:46:37.482 e6fef Level-0 table #8: 203 bytes OK
+2021/05/18-23:46:37.530 e6fef Delete type=0 #4
+2021/05/18-23:46:37.531 e6fef Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/18-23:46:37.532 e6fef Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 129 : 1
+2021/05/18-23:46:37.532 e6fef Compacting 1@1 + 1@2 files
+2021/05/18-23:46:37.558 e6fef Generated table #9@1: 38 keys, 1095 bytes
+2021/05/18-23:46:37.558 e6fef Compacted 1@1 + 1@2 files => 1095 bytes
+2021/05/18-23:46:37.604 e6fef compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/18-23:46:37.606 e6fef Delete type=2 #5
+2021/05/18-23:46:37.606 e6fef Delete type=2 #8
+2021/05/18-23:46:37.607 e6fef Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 129 : 1 .. (end); will stop at (end)

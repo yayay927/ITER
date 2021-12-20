@@ -1,0 +1,15 @@
+2021/06/09-09:53:33.660 312757 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.coinbase.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/09-09:53:33.661 312757 Recovering log #4
+2021/06/09-09:53:33.661 312757 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.coinbase.com_0.indexeddb.leveldb/000004.log 
+2021/06/09-10:14:54.465 2d0e53 Level-0 table #8: started
+2021/06/09-10:14:54.493 2d0e53 Level-0 table #8: 29031 bytes OK
+2021/06/09-10:14:54.543 2d0e53 Delete type=0 #4
+2021/06/09-10:14:54.545 2d0e53 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/09-10:14:54.545 2d0e53 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x016\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00w\x00w\x00.\x00g\x00o\x00o\x00g\x00l\x00e\x00t\x00a\x00g\x00m\x00a\x00n\x00a\x00g\x00e\x00r\x00.\x00c\x00o\x00m\x00/\x00g\x00t\x00m\x00.\x00j\x00s\x00?\x00i\x00d\x00=\x00G\x00T\x00M\x00-\x00M\x003\x00H\x00V\x00L\x00B\x00C' @ 1751 : 1
+2021/06/09-10:14:54.545 2d0e53 Compacting 1@1 + 1@2 files
+2021/06/09-10:14:54.573 2d0e53 Generated table #9@1: 172 keys, 14467 bytes
+2021/06/09-10:14:54.573 2d0e53 Compacted 1@1 + 1@2 files => 14467 bytes
+2021/06/09-10:14:54.618 2d0e53 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/09-10:14:54.620 2d0e53 Delete type=2 #5
+2021/06/09-10:14:54.620 2d0e53 Delete type=2 #8
+2021/06/09-10:14:54.623 2d0e53 Manual compaction at level-1 from '\x00\x02\x01\x02\x016\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00w\x00w\x00.\x00g\x00o\x00o\x00g\x00l\x00e\x00t\x00a\x00g\x00m\x00a\x00n\x00a\x00g\x00e\x00r\x00.\x00c\x00o\x00m\x00/\x00g\x00t\x00m\x00.\x00j\x00s\x00?\x00i\x00d\x00=\x00G\x00T\x00M\x00-\x00M\x003\x00H\x00V\x00L\x00B\x00C' @ 1751 : 1 .. (end); will stop at (end)

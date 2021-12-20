@@ -1,0 +1,5 @@
+2020/11/02-14:26:13.705 2134d3 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.how-living.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/02-14:31:12.377 4412f Level-0 table #5: started
+2020/11/02-14:31:12.407 4412f Level-0 table #5: 1982 bytes OK
+2020/11/02-14:31:12.460 4412f Delete type=0 #3
+2020/11/02-14:31:12.460 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

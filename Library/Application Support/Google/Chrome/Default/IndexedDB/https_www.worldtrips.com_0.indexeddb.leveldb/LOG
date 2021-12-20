@@ -1,0 +1,18 @@
+2021/05/16-18:57:05.374 a9b13 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.worldtrips.com_0.indexeddb.leveldb since it was missing.
+2021/05/16-18:57:05.453 a9b13 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.worldtrips.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/16-18:57:09.494 a9b13 Level-0 table #5: started
+2021/05/16-18:57:09.524 a9b13 Level-0 table #5: 567 bytes OK
+2021/05/16-18:57:09.574 a9b13 Delete type=0 #3
+2021/05/16-18:57:09.575 a9b13 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/05/16-18:57:11.494 a201f Level-0 table #7: started
+2021/05/16-18:57:11.521 a201f Level-0 table #7: 218 bytes OK
+2021/05/16-18:57:11.568 a201f Delete type=0 #4
+2021/05/16-18:57:11.568 a201f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/05/16-18:57:11.569 a201f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 21 : 0
+2021/05/16-18:57:11.569 a201f Compacting 1@1 + 1@2 files
+2021/05/16-18:57:11.595 a201f Generated table #8@1: 4 keys, 221 bytes
+2021/05/16-18:57:11.595 a201f Compacted 1@1 + 1@2 files => 221 bytes
+2021/05/16-18:57:11.642 a201f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/05/16-18:57:11.642 a201f Delete type=2 #7
+2021/05/16-18:57:11.643 a201f Delete type=2 #5
+2021/05/16-18:57:11.643 a201f Manual compaction at level-1 from '\x00\x00\x00\x002\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00' @ 21 : 0 .. (end); will stop at (end)

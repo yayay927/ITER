@@ -1,0 +1,15 @@
+2021/11/10-16:52:46.347 1c3e5b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.parenting.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/10-16:52:46.348 1c3e5b Recovering log #19
+2021/11/10-16:52:46.348 1c3e5b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.parenting.com.tw_0.indexeddb.leveldb/000019.log 
+2021/11/10-16:54:18.956 239477 Level-0 table #24: started
+2021/11/10-16:54:18.980 239477 Level-0 table #24: 7694 bytes OK
+2021/11/10-16:54:19.024 239477 Delete type=0 #19
+2021/11/10-16:54:19.029 239477 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/10-16:54:19.029 239477 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01!\x04\x02\x01\x07\x00v\x00i\x00s\x00i\x00t\x00e\x00d\x03\x00\x00\x80\x17\xe2b\xd8A\x00\x01$\x001\x00d\x006\x004\x001\x00e\x00d\x007\x00-\x008\x00b\x00f\x00f\x00-\x004\x00b\x004\x003\x00-\x009\x00d\x002\x007\x00-\x00c\x00e\x004\x002\x00f\x005\x009\x004\x001\x00b\x001\x002' @ 1454 : 1
+2021/11/10-16:54:19.029 239477 Compacting 1@1 + 1@2 files
+2021/11/10-16:54:19.052 239477 Generated table #25@1: 159 keys, 8229 bytes
+2021/11/10-16:54:19.052 239477 Compacted 1@1 + 1@2 files => 8229 bytes
+2021/11/10-16:54:19.094 239477 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/10-16:54:19.095 239477 Delete type=2 #21
+2021/11/10-16:54:19.095 239477 Delete type=2 #24
+2021/11/10-16:54:19.103 239477 Manual compaction at level-1 from '\x00\x03\x01!\x04\x02\x01\x07\x00v\x00i\x00s\x00i\x00t\x00e\x00d\x03\x00\x00\x80\x17\xe2b\xd8A\x00\x01$\x001\x00d\x006\x004\x001\x00e\x00d\x007\x00-\x008\x00b\x00f\x00f\x00-\x004\x00b\x004\x003\x00-\x009\x00d\x002\x007\x00-\x00c\x00e\x004\x002\x00f\x005\x009\x004\x001\x00b\x001\x002' @ 1454 : 1 .. (end); will stop at (end)

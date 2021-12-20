@@ -1,0 +1,15 @@
+2021/10/26-23:00:08.850 8f253 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.nownews.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/26-23:00:08.851 8f253 Recovering log #4
+2021/10/26-23:00:08.851 8f253 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.nownews.com_0.indexeddb.leveldb/000004.log 
+2021/10/26-23:01:10.815 ba3c7 Level-0 table #8: started
+2021/10/26-23:01:10.842 ba3c7 Level-0 table #8: 76988 bytes OK
+2021/10/26-23:01:10.885 ba3c7 Delete type=0 #4
+2021/10/26-23:01:10.887 ba3c7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/10/26-23:01:10.887 ba3c7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01 \x03\x00\xd0\xa9\xdf\xd1\xcbwB\x00\x019\x00n\x00o\x00w\x00n\x00e\x00w\x00s\x00-\x00i\x00m\x00a\x00g\x00e\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00w\x00w\x00.\x00n\x00o\x00w\x00n\x00e\x00w\x00s\x00.\x00c\x00o\x00m\x00/\x00i\x00c\x00o\x00n\x00/\x00i\x00c\x00o\x00n\x00-\x004\x008\x00x\x004\x008\x00.\x00p\x00n\x00g' @ 1702 : 1
+2021/10/26-23:01:10.887 ba3c7 Compacting 1@1 + 1@2 files
+2021/10/26-23:01:10.911 ba3c7 Generated table #9@1: 355 keys, 45295 bytes
+2021/10/26-23:01:10.911 ba3c7 Compacted 1@1 + 1@2 files => 45295 bytes
+2021/10/26-23:01:10.953 ba3c7 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/26-23:01:10.954 ba3c7 Delete type=2 #5
+2021/10/26-23:01:10.954 ba3c7 Delete type=2 #8
+2021/10/26-23:01:10.955 ba3c7 Manual compaction at level-1 from '\x00\x01\x01 \x03\x00\xd0\xa9\xdf\xd1\xcbwB\x00\x019\x00n\x00o\x00w\x00n\x00e\x00w\x00s\x00-\x00i\x00m\x00a\x00g\x00e\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00w\x00w\x00w\x00.\x00n\x00o\x00w\x00n\x00e\x00w\x00s\x00.\x00c\x00o\x00m\x00/\x00i\x00c\x00o\x00n\x00/\x00i\x00c\x00o\x00n\x00-\x004\x008\x00x\x004\x008\x00.\x00p\x00n\x00g' @ 1702 : 1 .. (end); will stop at (end)

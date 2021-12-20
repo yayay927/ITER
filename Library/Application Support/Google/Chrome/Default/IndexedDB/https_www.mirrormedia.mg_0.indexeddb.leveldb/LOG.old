@@ -1,0 +1,15 @@
+2021/12/01-17:27:19.904 2c2dab Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mirrormedia.mg_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/01-17:27:19.905 2c2dab Recovering log #15
+2021/12/01-17:27:19.905 2c2dab Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.mirrormedia.mg_0.indexeddb.leveldb/000015.log 
+2021/12/01-17:29:40.025 3f3e5f Level-0 table #20: started
+2021/12/01-17:29:40.048 3f3e5f Level-0 table #20: 3627 bytes OK
+2021/12/01-17:29:40.114 3f3e5f Delete type=0 #15
+2021/12/01-17:29:40.115 3f3e5f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/12/01-17:29:40.115 3f3e5f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x00\x00\xc8\x18\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00-\x00m\x00e\x00s\x00s\x00a\x00g\x00i\x00n\x00g\x00-\x00s\x00t\x00o\x00r\x00e' @ 458 : 1
+2021/12/01-17:29:40.115 3f3e5f Compacting 1@1 + 1@2 files
+2021/12/01-17:29:40.137 3f3e5f Generated table #21@1: 54 keys, 1058 bytes
+2021/12/01-17:29:40.137 3f3e5f Compacted 1@1 + 1@2 files => 1058 bytes
+2021/12/01-17:29:40.181 3f3e5f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/12/01-17:29:40.182 3f3e5f Delete type=2 #17
+2021/12/01-17:29:40.182 3f3e5f Delete type=2 #20
+2021/12/01-17:29:40.187 3f3e5f Manual compaction at level-1 from '\x00\x03\x00\x00\xc8\x18\x00f\x00i\x00r\x00e\x00b\x00a\x00s\x00e\x00-\x00m\x00e\x00s\x00s\x00a\x00g\x00i\x00n\x00g\x00-\x00s\x00t\x00o\x00r\x00e' @ 458 : 1 .. (end); will stop at (end)

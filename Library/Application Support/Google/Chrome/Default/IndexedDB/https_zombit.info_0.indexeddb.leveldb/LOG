@@ -1,0 +1,7 @@
+2021/07/22-16:53:20.516 3f5f2f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_zombit.info_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/22-16:53:20.517 3f5f2f Recovering log #6
+2021/07/22-16:53:20.517 3f5f2f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_zombit.info_0.indexeddb.leveldb/000006.log 
+2021/07/22-16:53:23.112 3fc1b7 Level-0 table #11: started
+2021/07/22-16:53:23.140 3fc1b7 Level-0 table #11: 530 bytes OK
+2021/07/22-16:53:23.186 3fc1b7 Delete type=0 #6
+2021/07/22-16:53:23.186 3fc1b7 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

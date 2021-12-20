@@ -1,0 +1,15 @@
+2021/11/16-13:41:41.700 2a72ab Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.popdaily.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/11/16-13:41:41.701 2a72ab Recovering log #27
+2021/11/16-13:41:41.701 2a72ab Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.popdaily.com.tw_0.indexeddb.leveldb/000027.log 
+2021/11/16-13:46:24.545 2c0733 Level-0 table #32: started
+2021/11/16-13:46:24.568 2c0733 Level-0 table #32: 9410 bytes OK
+2021/11/16-13:46:24.614 2c0733 Delete type=0 #27
+2021/11/16-13:46:24.616 2c0733 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/11/16-13:46:24.616 2c0733 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 4315 : 1
+2021/11/16-13:46:24.616 2c0733 Compacting 1@1 + 1@2 files
+2021/11/16-13:46:24.639 2c0733 Generated table #33@1: 97 keys, 2205 bytes
+2021/11/16-13:46:24.639 2c0733 Compacted 1@1 + 1@2 files => 2205 bytes
+2021/11/16-13:46:24.682 2c0733 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/11/16-13:46:24.683 2c0733 Delete type=2 #29
+2021/11/16-13:46:24.683 2c0733 Delete type=2 #32
+2021/11/16-13:46:24.686 2c0733 Manual compaction at level-1 from '\x00\x01\x03\x02\x01\x1f\x00w\x00e\x00b\x00h\x00o\x00o\x00k\x00s\x00.\x00n\x00o\x00t\x00i\x00f\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00.\x00d\x00i\x00s\x00p\x00l\x00a\x00y\x00e\x00d' @ 4315 : 1 .. (end); will stop at (end)

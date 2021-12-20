@@ -1,0 +1,15 @@
+2021/04/27-21:37:32.147 12f48f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.zalora.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/27-21:37:32.148 12f48f Recovering log #4
+2021/04/27-21:37:32.148 12f48f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.zalora.com.tw_0.indexeddb.leveldb/000004.log 
+2021/04/27-21:44:26.677 12dc33 Level-0 table #8: started
+2021/04/27-21:44:26.703 12dc33 Level-0 table #8: 1025 bytes OK
+2021/04/27-21:44:26.755 12dc33 Delete type=0 #4
+2021/04/27-21:44:26.757 12dc33 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/27-21:44:26.757 12dc33 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 217 : 1
+2021/04/27-21:44:26.757 12dc33 Compacting 1@1 + 1@2 files
+2021/04/27-21:44:26.782 12dc33 Generated table #9@1: 67 keys, 1334 bytes
+2021/04/27-21:44:26.782 12dc33 Compacted 1@1 + 1@2 files => 1334 bytes
+2021/04/27-21:44:26.826 12dc33 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/27-21:44:26.827 12dc33 Delete type=2 #5
+2021/04/27-21:44:26.827 12dc33 Delete type=2 #8
+2021/04/27-21:44:26.829 12dc33 Manual compaction at level-1 from '\x00\x02\x01\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 217 : 1 .. (end); will stop at (end)

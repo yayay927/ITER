@@ -1,0 +1,7 @@
+2021/12/03-16:08:45.683 43ac57 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/12/03-16:08:45.683 43ac57 Recovering log #3
+2021/12/03-16:08:45.684 43ac57 Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000003.log 
+2021/12/03-16:09:50.616 41d64b Level-0 table #5: started
+2021/12/03-16:09:50.640 41d64b Level-0 table #5: 5326 bytes OK
+2021/12/03-16:09:50.684 41d64b Delete type=0 #3
+2021/12/03-16:09:50.688 41d64b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

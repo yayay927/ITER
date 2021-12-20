@@ -1,0 +1,15 @@
+2021/03/14-16:21:46.914 6725f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/14-16:21:46.914 6725f Recovering log #18
+2021/03/14-16:21:46.915 6725f Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/000018.log 
+2021/03/14-16:21:48.972 4cf57 Level-0 table #23: started
+2021/03/14-16:21:48.997 4cf57 Level-0 table #23: 203 bytes OK
+2021/03/14-16:21:49.044 4cf57 Delete type=0 #18
+2021/03/14-16:21:49.044 4cf57 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/14-16:21:49.044 4cf57 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 80 : 1
+2021/03/14-16:21:49.044 4cf57 Compacting 1@1 + 1@2 files
+2021/03/14-16:21:49.070 4cf57 Generated table #24@1: 21 keys, 604 bytes
+2021/03/14-16:21:49.070 4cf57 Compacted 1@1 + 1@2 files => 604 bytes
+2021/03/14-16:21:49.116 4cf57 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/14-16:21:49.117 4cf57 Delete type=2 #20
+2021/03/14-16:21:49.117 4cf57 Delete type=2 #23
+2021/03/14-16:21:49.120 4cf57 Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 80 : 1 .. (end); will stop at (end)

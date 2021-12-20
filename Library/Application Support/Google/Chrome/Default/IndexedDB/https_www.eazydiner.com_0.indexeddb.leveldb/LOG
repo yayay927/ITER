@@ -1,0 +1,6 @@
+2021/05/30-20:56:53.830 1b2e13 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.eazydiner.com_0.indexeddb.leveldb since it was missing.
+2021/05/30-20:56:53.905 1b2e13 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.eazydiner.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/30-20:57:25.914 1d0827 Level-0 table #5: started
+2021/05/30-20:57:25.941 1d0827 Level-0 table #5: 1113 bytes OK
+2021/05/30-20:57:25.987 1d0827 Delete type=0 #3
+2021/05/30-20:57:25.987 1d0827 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

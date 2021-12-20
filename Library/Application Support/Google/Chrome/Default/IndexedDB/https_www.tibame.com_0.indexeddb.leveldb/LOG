@@ -1,0 +1,5 @@
+2020/11/25-12:32:11.849 39fa1f Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.tibame.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/25-12:33:05.435 4412f Level-0 table #5: started
+2020/11/25-12:33:05.446 4412f Level-0 table #5: 18714 bytes OK
+2020/11/25-12:33:05.461 4412f Delete type=0 #3
+2020/11/25-12:33:05.462 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

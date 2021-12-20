@@ -1,0 +1,6 @@
+2021/05/14-21:03:07.090 57c23 Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.ftvnews.com.tw_0.indexeddb.leveldb since it was missing.
+2021/05/14-21:03:07.206 57c23 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.ftvnews.com.tw_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/14-21:23:46.840 6751b Level-0 table #5: started
+2021/05/14-21:23:46.867 6751b Level-0 table #5: 7929 bytes OK
+2021/05/14-21:23:46.916 6751b Delete type=0 #3
+2021/05/14-21:23:46.918 6751b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

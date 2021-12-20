@@ -1,0 +1,15 @@
+2021/06/21-18:16:58.062 1b402b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.reviversoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/06/21-18:16:58.062 1b402b Recovering log #4
+2021/06/21-18:16:58.062 1b402b Reusing old log /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.reviversoft.com_0.indexeddb.leveldb/000004.log 
+2021/06/21-18:17:30.089 1c071f Level-0 table #8: started
+2021/06/21-18:17:30.116 1c071f Level-0 table #8: 190 bytes OK
+2021/06/21-18:17:30.163 1c071f Delete type=0 #4
+2021/06/21-18:17:30.164 1c071f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/06/21-18:17:30.164 1c071f Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 44 : 1
+2021/06/21-18:17:30.164 1c071f Compacting 1@1 + 1@2 files
+2021/06/21-18:17:30.190 1c071f Generated table #9@1: 18 keys, 516 bytes
+2021/06/21-18:17:30.191 1c071f Compacted 1@1 + 1@2 files => 516 bytes
+2021/06/21-18:17:30.236 1c071f compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/06/21-18:17:30.238 1c071f Delete type=2 #5
+2021/06/21-18:17:30.238 1c071f Delete type=2 #8
+2021/06/21-18:17:30.238 1c071f Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 44 : 1 .. (end); will stop at (end)

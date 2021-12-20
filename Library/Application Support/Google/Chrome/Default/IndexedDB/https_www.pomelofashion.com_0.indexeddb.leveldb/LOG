@@ -1,0 +1,5 @@
+2021/03/02-23:35:38.550 42987 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.pomelofashion.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/02-23:41:22.889 5dedf Level-0 table #5: started
+2021/03/02-23:41:22.964 5dedf Level-0 table #5: 8091 bytes OK
+2021/03/02-23:41:23.013 5dedf Delete type=0 #3
+2021/03/02-23:41:23.014 5dedf Manual compaction at level-0 from (begin) .. (end); will stop at (end)

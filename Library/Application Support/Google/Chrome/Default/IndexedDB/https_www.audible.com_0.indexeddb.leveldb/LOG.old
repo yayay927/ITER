@@ -1,0 +1,5 @@
+2020/11/25-13:37:23.446 38b01b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.audible.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/25-13:37:29.780 4412f Level-0 table #5: started
+2020/11/25-13:37:29.793 4412f Level-0 table #5: 1339 bytes OK
+2020/11/25-13:37:29.808 4412f Delete type=0 #3
+2020/11/25-13:37:29.809 4412f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

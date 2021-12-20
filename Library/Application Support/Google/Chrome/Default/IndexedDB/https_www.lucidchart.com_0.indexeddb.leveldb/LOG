@@ -1,0 +1,5 @@
+2021/04/25-19:47:01.491 106b47 Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.lucidchart.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/25-19:47:04.059 e8a4f Level-0 table #5: started
+2021/04/25-19:47:04.097 e8a4f Level-0 table #5: 825 bytes OK
+2021/04/25-19:47:04.160 e8a4f Delete type=0 #3
+2021/04/25-19:47:04.162 e8a4f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

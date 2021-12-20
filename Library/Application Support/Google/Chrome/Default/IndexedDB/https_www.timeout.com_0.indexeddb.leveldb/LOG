@@ -1,0 +1,6 @@
+2021/05/30-14:09:53.512 1b3a3b Creating DB /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.timeout.com_0.indexeddb.leveldb since it was missing.
+2021/05/30-14:09:53.594 1b3a3b Reusing MANIFEST /Users/ellieyang/Library/Application Support/Google/Chrome/Default/IndexedDB/https_www.timeout.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/05/30-14:10:32.069 1c223b Level-0 table #5: started
+2021/05/30-14:10:32.116 1c223b Level-0 table #5: 427510 bytes OK
+2021/05/30-14:10:32.162 1c223b Delete type=0 #3
+2021/05/30-14:10:32.164 1c223b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
